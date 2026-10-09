@@ -1,6 +1,8 @@
 # Quiz-Abend – Projektbeschreibung
 
 Diese Datei beschreibt das Projekt. Lies sie bei jedem Start komplett.
+**Danach `HANDOFF.md` lesen** – dort stehen der aktuelle Stand und der nächste
+Schritt. Am Ende jeder Sitzung `HANDOFF.md` aktualisieren.
 
 > **Oberste Regeln – gelten für jede Änderung:**
 > 1. **Sicherheit hat höchste Priorität.** Keine Geheimnisse im Repo oder im
@@ -80,6 +82,7 @@ host.html ──Thema──► Edge Function ──► Gemini API
 Quiz_Game/
 ├─ CLAUDE.md               Diese Projektbeschreibung.
 ├─ README.md               Kurzanleitung: lokal testen und online stellen.
+├─ HANDOFF.md              Übergabe zwischen Sitzungen: aktueller Stand, nächste Schritte.
 ├─ .gitignore              Dateien, die nicht ins Repo gehören (.env, config.js, …).
 ├─ .githooks/
 │  └─ pre-commit           Bricht Commits ab, die Schlüssel oder Geheim-Dateien enthalten.
