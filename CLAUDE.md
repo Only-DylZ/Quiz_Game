@@ -85,12 +85,15 @@ Quiz_Game/
 │  └─ pre-commit           Bricht Commits ab, die Schlüssel oder Geheim-Dateien enthalten.
 ├─ docs/                   Die Website – GitHub Pages liefert diesen Ordner aus.
 │  ├─ index.html           Startseite mit den Knöpfen „Spiel leiten“ und „Mitspielen“.
-│  ├─ host.html            Host-Bildschirm: Paket wählen, Raum öffnen, Fragen zeigen, Rangliste.
-│  ├─ play.html            Handy-Seite: Raumcode eingeben, Fragen beantworten.
+│  ├─ host.html            Host-Bildschirm (nur Aufbau der Seite).
+│  ├─ host.js              Host-Logik: Raum öffnen, Paket laden, Fragen stellen, auflösen.
+│  ├─ play.html            Handy-Seite (nur Aufbau der Seite).
+│  ├─ play.js              Handy-Logik: beitreten, Fragen anzeigen, Antwort senden.
 │  ├─ style.css            Gemeinsames Aussehen aller Seiten.
 │  ├─ config.example.js    Vorlage für Supabase-URL und anon key (kopieren nach config.js).
 │  ├─ realtime.js          Verbindung zu Supabase: Raum anlegen/beitreten, Nachrichten senden.
 │  ├─ engine/
+│  │  ├─ hilfen.js         Kleine Hilfsfunktionen für alle Modi (sicheres Erzeugen von Elementen).
 │  │  ├─ auswahl.js        Anzeige und Auswertung von Multiple-Choice-Fragen.
 │  │  ├─ schaetzen.js      Anzeige und Auswertung von Schätzfragen.
 │  │  ├─ grafik.js         Anzeige und Auswertung von Grafikfragen (Balken, Zeitleiste, Karte).
@@ -302,7 +305,25 @@ Tabellen. Alle Nachrichten haben die Form `{ typ: "...", daten: {...} }`.
 Der Host misst die Antwortzeit selbst und rechnet die Punkte aus; Spieler
 schicken nur ihre Antwort.
 
-**Aktueller Stand:** Schritt 1a (Lobby) ist gebaut.
+Nachrichten:
+| typ          | von → an       | daten |
+|--------------|----------------|-------|
+| `frage`      | Host → Handys  | `nummer, gesamt, modus, text, restzeit, daten` (daten = `oeffentlicheDaten()`, **ohne Lösung**) |
+| `antwort`    | Handy → Host   | `id, nummer, antwort` |
+| `aufloesung` | Host → Handys  | `nummer, loesungText, ergebnisse: [{ id, richtig }]` |
+| `ende`       | Host → Handys  | – |
+
+**Modus-Module** (`engine/*.js`) haben alle dieselben Funktionen:
+`pruefeFrage, oeffentlicheDaten, zeigeFrage, zeigeEingabe, antwortGueltig,
+istRichtig, loesungAlsText, zeigeAufloesung` (Beschreibung oben in `auswahl.js`).
+Ein neuer Modus wird in `MODI` in `host.js` **und** `play.js` eingetragen.
+
+**Bekannte Grenze:** Broadcast-Nachrichten haben keinen geprüften Absender.
+Ein technisch versierter Spieler könnte über die Browser-Konsole falsche
+Nachrichten an andere Handys schicken. Lösungen erfährt er dadurch aber nicht.
+Für Spiele unter Freunden akzeptiert; echte Absicherung bräuchte Supabase-Auth.
+
+**Aktueller Stand:** Schritt 1a (Lobby) und 1b (Multiple Choice) sind gebaut.
 
 ### Offener Punkt
 `docs/config.js` steht in `.gitignore`, GitHub Pages braucht die Datei aber online.

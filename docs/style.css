@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+/* Versteckte Elemente wirklich verstecken – auch wenn sie z. B. display: flex haben */
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -95,6 +100,99 @@ input {
   padding: 8px 16px;
   border-radius: 8px;
   background: var(--flaeche);
+}
+
+/* ---------- Während einer Frage ---------- */
+
+/* Kopfzeile: "Frage 1 von 6" links, Countdown rechts */
+.kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--akzent);
+}
+
+.fragetext {
+  font-size: 1.4rem;
+  margin: 16px 0 24px;
+}
+
+.host .fragetext {
+  font-size: 2.4rem;
+}
+
+/* Antwortmöglichkeiten im 2×2-Raster */
+.optionen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 90px;
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.host .option {
+  min-height: 120px;
+  font-size: 1.8rem;
+}
+
+/* Kahoot-ähnliche Farben, eine pro Antwort */
+.option-0 { background: #e21b3c; }
+.option-1 { background: #1368ce; }
+.option-2 { background: #d89e00; }
+.option-3 { background: #26890c; }
+
+.option .symbol {
+  font-size: 1.5em;
+}
+
+/* Anzahl der Stimmen bei der Auflösung, rechts in der Kachel */
+.option .anzahl {
+  margin-left: auto;
+  font-size: 1.5em;
+}
+
+/* Handy: gewählte Antwort hervorheben, die anderen ausgrauen */
+.option:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.option.gewaehlt:disabled {
+  opacity: 1;
+  outline: 4px solid white;
+}
+
+/* Host-Auflösung: richtig hell mit Rahmen, falsch abgedunkelt */
+.option.richtig {
+  outline: 6px solid white;
+}
+
+.option.falsch {
+  opacity: 0.3;
+}
+
+/* Großes "Richtig!" / "Leider falsch" auf dem Handy */
+.ergebnis-gross {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .hinweis {
