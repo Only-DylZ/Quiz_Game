@@ -48,6 +48,18 @@ die IP-Adresse des PCs eingeben (z. B. `http://192.168.0.23:5500/docs/play.html`
 Hinweis: `docs/config.js` ist in `.gitignore` und wird deshalb nicht hochgeladen.
 Siehe „Offener Punkt“ in [CLAUDE.md](CLAUDE.md).
 
+## Code prüfen (Node.js)
+
+Vor jedem Commit im Projektordner ausführen:
+
+```bash
+node tools/pruefen.mjs
+```
+
+Prüft alle JavaScript-Dateien auf Tippfehler und testet Punkte-Regeln,
+Zahlen-Eingabe und dass die Handys nie die Lösung vorab bekommen.
+Am Ende muss „Alles in Ordnung ✔“ stehen.
+
 ## Python-Werkzeuge
 
 ```bash

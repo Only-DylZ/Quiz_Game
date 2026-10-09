@@ -6,10 +6,12 @@
 //   "ende"       → Spielende anzeigen
 
 import { raumBetreten, raumcodePruefen, neueId } from "./realtime.js";
+import { zahlText } from "./engine/hilfen.js";
 import * as auswahl from "./engine/auswahl.js";
+import * as schaetzen from "./engine/schaetzen.js";
 
 // Alle Modi, die wir schon können (muss zu host.js passen)
-const MODI = { auswahl };
+const MODI = { auswahl, schaetzen };
 
 // Wie lange wir nach dem Verbinden auf den Host warten (Millisekunden)
 const HOST_WARTEZEIT = 4000;
@@ -111,7 +113,7 @@ function beiNachricht(nachricht) {
 
   if (nachricht.typ === "frage") frageAnzeigen(daten);
   else if (nachricht.typ === "aufloesung") ergebnisAnzeigen(daten);
-  else if (nachricht.typ === "ende") spielEnde();
+  else if (nachricht.typ === "ende") spielEnde(daten);
   // Andere Nachrichten (z. B. Antworten anderer Spieler) ignorieren wir.
 }
 
@@ -131,11 +133,17 @@ function frageAnzeigen(daten) {
   $("fragetext").textContent = daten.text;
   $("status").textContent = "";
 
-  // Der Modus zeichnet die Eingabe. Beim Antworten wird senden() aufgerufen.
-  modul.zeigeEingabe($("eingabe"), daten.daten, (antwort) => {
+  // Der Modus zeichnet die Eingabe.
+  // - senden(antwort): endgültige Antwort
+  // - entwurfSenden(antwort): Zwischenstand, zählt bei Zeitablauf ohne Senden
+  const senden = (antwort) => {
     raum.senden("antwort", { id: ich.id, nummer: daten.nummer, antwort });
     $("status").textContent = "Antwort gesendet – warte auf die Auflösung …";
-  });
+  };
+  const entwurfSenden = (antwort) => {
+    raum.senden("entwurf", { id: ich.id, nummer: daten.nummer, antwort });
+  };
+  modul.zeigeEingabe($("eingabe"), daten.daten, senden, entwurfSenden);
 
   countdownStarten(daten.restzeit);
   zeige("frage");
@@ -163,16 +171,27 @@ function ergebnisAnzeigen(daten) {
   const meins = ergebnisse.find((e) => e.id === ich.id);
 
   let text;
-  if (!meins) text = "Keine Antwort 😴";
-  else if (meins.richtig) text = "Richtig! 🎉";
-  else text = "Leider falsch";
+  if (!meins || !meins.beantwortet) text = "Keine Antwort 😴";
+  else if (meins.punkte > 0) text = "+" + zahlText(meins.punkte) + " Punkte 🎉";
+  else text = "Leider 0 Punkte";
 
   $("ergebnisText").textContent = text;
   $("loesungText").textContent = "Lösung: " + daten.loesungText;
+  $("standText").textContent = meins
+    ? "Gesamt: " + zahlText(meins.gesamt) + " Punkte · Platz " + meins.platz
+    : "";
   zeige("ergebnis");
 }
 
-function spielEnde() {
+function spielEnde(daten) {
   clearInterval(uhr);
+
+  const rangliste = Array.isArray(daten.rangliste) ? daten.rangliste : [];
+  const meins = rangliste.find((r) => r.id === ich.id);
+
+  $("endeText").textContent = meins
+    ? "Platz " + meins.platz + " von " + rangliste.length +
+      " mit " + zahlText(meins.punkte) + " Punkten"
+    : "";
   zeige("ende");
 }

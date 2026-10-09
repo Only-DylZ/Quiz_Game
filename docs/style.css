@@ -189,6 +189,107 @@ input {
   opacity: 0.3;
 }
 
+/* ---------- Schätzen ---------- */
+
+.gross-hinweis {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--akzent);
+}
+
+/* Handy: Zahlenfeld mit Einheit dahinter */
+.eingabezeile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eingabezeile input {
+  flex: 1;
+  min-width: 0;
+}
+
+.einheit {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ---------- Listen: Schätzungen und Rangliste ---------- */
+
+.schaetzliste,
+.rangliste {
+  max-width: 600px;
+  margin: 16px auto;
+  padding: 0;
+  list-style: none;
+}
+
+.schaetzliste li,
+.rangliste li {
+  display: flex;
+  gap: 16px;
+  margin: 6px 0;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--flaeche);
+  font-size: 1.3rem;
+}
+
+/* Letzte Spalte (Punkte) rechtsbündig */
+.schaetzliste li span:last-child,
+.rangliste li span:last-child {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.rangliste .platz {
+  width: 2.5em;
+  text-align: right;
+  opacity: 0.7;
+}
+
+.plus {
+  color: var(--akzent);
+}
+
+/* ---------- Siegertreppchen ---------- */
+
+.treppchen {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+  margin: 32px 0;
+}
+
+.stufe {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  width: 200px;
+  padding: 12px;
+  border-radius: 10px 10px 0 0;
+  background: var(--flaeche);
+}
+
+.stufe .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stufe .platz {
+  margin-top: auto;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Unterschiedliche Höhen: 1. Platz am höchsten */
+.stufe-1 { height: 260px; background: #b8860b; }
+.stufe-2 { height: 200px; background: #6b7280; }
+.stufe-3 { height: 160px; background: #92400e; }
+
 /* Großes "Richtig!" / "Leider falsch" auf dem Handy */
 .ergebnis-gross {
   font-size: 2.5rem;

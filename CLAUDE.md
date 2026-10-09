@@ -102,6 +102,8 @@ Quiz_Game/
 │     ├─ index.json        Liste aller verfügbaren Themenpakete.
 │     └─ raumfahrt.json    Beispielpaket mit je 2 Fragen pro Modus.
 ├─ tools/
+│  ├─ pruefen.mjs          Prüft alles mit einem Befehl: Syntax + Tests (Node.js).
+│  ├─ spiel.test.mjs       Tests: Punkte, Zahlen-Eingabe, Lösungsschutz, Beispielpaket.
 │  ├─ prompt.md            Prompt-Vorlage, um mit NotebookLM/Claude neue Pakete zu erzeugen.
 │  ├─ validate.py          Prüft Fragenpakete auf das richtige Format.
 │  └─ requirements.txt     Python-Abhängigkeiten der Werkzeuge.
@@ -275,6 +277,12 @@ Alles im Repo und alles im Browser-Code ist für jeden lesbar.
 - `docs/config.js` und `.env` stehen in `.gitignore`; eingecheckt wird nur
   `config.example.js` (siehe aber „Offener Punkt“ unten).
 - **Python-Werkzeuge** liegen nur in `/tools` und laufen in einer `.venv`.
+- **Vor jedem Commit `node tools/pruefen.mjs` ausführen** – muss „Alles in
+  Ordnung“ melden. Neue Rechenregeln und neue Modi bekommen Tests in
+  `tools/spiel.test.mjs`; jeder Modus wird im Test „oeffentlicheDaten enthält
+  nie die Lösung“ mitgeprüft. Achtung: `node --check datei.js` findet Fehler
+  in ES-Modulen nicht – deshalb immer `pruefen.mjs` benutzen.
+  Node.js ist nur ein Werkzeug auf dem PC, die Website braucht es nicht.
 - Schritt für Schritt bauen: immer nur die aktuelle Bauphase umsetzen.
 
 ---
@@ -309,13 +317,17 @@ Nachrichten:
 | typ          | von → an       | daten |
 |--------------|----------------|-------|
 | `frage`      | Host → Handys  | `nummer, gesamt, modus, text, restzeit, daten` (daten = `oeffentlicheDaten()`, **ohne Lösung**) |
-| `antwort`    | Handy → Host   | `id, nummer, antwort` |
-| `aufloesung` | Host → Handys  | `nummer, loesungText, ergebnisse: [{ id, richtig }]` |
-| `ende`       | Host → Handys  | – |
+| `antwort`    | Handy → Host   | `id, nummer, antwort` (endgültig, mit Zeitmessung) |
+| `entwurf`    | Handy → Host   | `id, nummer, antwort` – Zwischenstand beim Tippen (`null` = Feld leer). Zählt bei Zeitablauf, wenn nicht gesendet wurde, dann ohne Tempo-Bonus. Beendet die Frage nicht vorzeitig. |
+| `aufloesung` | Host → Handys  | `nummer, loesungText, ergebnisse: [{ id, beantwortet, punkte, gesamt, platz }]` |
+| `ende`       | Host → Handys  | `rangliste: [{ id, name, punkte, platz }]` |
+
+Host-Ablauf: Lobby → Frage → Auflösung → Zwischenstand → … → Siegertreppchen.
 
 **Modus-Module** (`engine/*.js`) haben alle dieselben Funktionen:
 `pruefeFrage, oeffentlicheDaten, zeigeFrage, zeigeEingabe, antwortGueltig,
-istRichtig, loesungAlsText, zeigeAufloesung` (Beschreibung oben in `auswahl.js`).
+bewerte, loesungAlsText, zeigeAufloesung` (Beschreibung oben in `auswahl.js`).
+`bewerte()` gibt Punkte zurück und ruft dafür die Regeln aus `punkte.js` auf.
 Ein neuer Modus wird in `MODI` in `host.js` **und** `play.js` eingetragen.
 
 **Bekannte Grenze:** Broadcast-Nachrichten haben keinen geprüften Absender.
@@ -323,7 +335,12 @@ Ein technisch versierter Spieler könnte über die Browser-Konsole falsche
 Nachrichten an andere Handys schicken. Lösungen erfährt er dadurch aber nicht.
 Für Spiele unter Freunden akzeptiert; echte Absicherung bräuchte Supabase-Auth.
 
-**Aktueller Stand:** Schritt 1a (Lobby) und 1b (Multiple Choice) sind gebaut.
+**Bekannte Grenze 2:** Lädt ein Spieler die Seite neu, bekommt er eine neue
+Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
+
+**Aktueller Stand:** Phase 1 (1a Lobby, 1b Multiple Choice, 1c Schätzen,
+Punkte, Rangliste) ist gebaut. Als Nächstes: Online-Stellen (config.js über
+GitHub Actions, siehe „Offener Punkt“), danach Phase 2.
 
 ### Offener Punkt
 `docs/config.js` steht in `.gitignore`, GitHub Pages braucht die Datei aber online.

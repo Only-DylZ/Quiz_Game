@@ -1,24 +1,32 @@
 // host.js – Logik des Host-Bildschirms.
 //
-// Ablauf: Lobby → Frage (Countdown) → Auflösung → Frage → … → Ende
+// Ablauf: Lobby → Frage (Countdown) → Auflösung → Zwischenstand → Frage → …
+//         → Siegertreppchen
 //
 // Der Host ist der "Chef" des Spiels:
 // - nur er kennt das Fragenpaket mit den Lösungen,
 // - er schickt den Handys die Fragen OHNE Lösung,
 // - er nimmt die Antworten an und misst die Zeit,
-// - erst nach Ablauf der Zeit schickt er die Auflösung.
+// - erst nach Ablauf der Zeit schickt er die Auflösung,
+// - er rechnet die Punkte aus und führt die Rangliste.
 
 import { neuerRaumcode, raumBetreten, neueId } from "./realtime.js";
+import { neu } from "./engine/hilfen.js";
+import { anteilRestzeit, ranglisteBerechnen } from "./engine/punkte.js";
 import * as auswahl from "./engine/auswahl.js";
+import * as schaetzen from "./engine/schaetzen.js";
 
-// Alle Modi, die wir schon können. In Schritt 1c kommt "schaetzen" dazu.
-const MODI = { auswahl };
+// Alle Modi, die wir schon können. In Phase 2 kommt "grafik" dazu.
+const MODI = { auswahl, schaetzen };
 
 // Welches Paket gespielt wird (Themenauswahl kommt in Phase 4)
 const PAKET_DATEI = "packs/raumfahrt.json";
 
 // Antwortzeit in Sekunden, wenn die Frage keine eigene "zeit" hat
 const STANDARD_ZEIT = 20;
+
+// So viele Plätze zeigt der Zwischenstand
+const ZWISCHENSTAND_PLAETZE = 10;
 
 // Kurzschreibweise, um Elemente per id zu finden
 const $ = (id) => document.getElementById(id);
@@ -28,12 +36,15 @@ const $ = (id) => document.getElementById(id);
 // ---------------------------------------------------------------------------
 let fragen = [];            // die spielbaren Fragen aus dem Paket
 let nummer = -1;            // Index der aktuellen Frage (-1 = noch nicht gestartet)
-let frageOffen = false;     // läuft gerade der Countdown?
+let schritt = "lobby";      // "lobby" | "frage" | "aufloesung" | "zwischenstand" | "ende"
 let restzeit = 0;           // Sekunden bis zur Auflösung
+let gesamtzeit = 0;         // Antwortzeit der aktuellen Frage in Sekunden
 let uhr = null;             // der Countdown-Zeitgeber
 let startZeit = 0;          // wann die aktuelle Frage gestartet wurde (ms)
-let antworten = new Map();  // Spieler-id → { antwort, zeitMs }
+let antworten = new Map();  // Spieler-id → { antwort, zeitMs }  (endgültig gesendet)
+let entwuerfe = new Map();  // Spieler-id → antwort  (getippt, aber noch nicht gesendet)
 let anwesend = [];          // Spieler, die gerade im Raum sind: [{ id, name }]
+let spielstand = new Map(); // Spieler-id → { id, name, punkte } – alle, die je da waren
 
 // ---------------------------------------------------------------------------
 // 1. Raum öffnen
@@ -101,18 +112,23 @@ function beiTeilnehmern(teilnehmer) {
     .filter((t) => t.rolle === "spieler" && idGueltig(t.id))
     .map((t) => ({ id: t.id, name: String(t.name || "?").slice(0, 16) }));
 
+  // Neue Spieler mit 0 Punkten in den Spielstand aufnehmen
+  for (const s of anwesend) {
+    if (!spielstand.has(s.id)) {
+      spielstand.set(s.id, { id: s.id, name: s.name, punkte: 0 });
+    }
+  }
+
   // Spielerliste in der Lobby neu anzeigen
   const liste = $("spielerliste");
   liste.replaceChildren();
   for (const s of anwesend) {
-    const eintrag = document.createElement("li");
-    eintrag.textContent = s.name; // textContent: Namen nie als HTML einfügen!
-    liste.appendChild(eintrag);
+    liste.append(neu("li", "", s.name)); // neu() nutzt textContent – sicher
   }
   $("anzahl").textContent = anwesend.length;
   startKnopfAktualisieren();
 
-  if (frageOffen) {
+  if (schritt === "frage") {
     // Kommt jemand während einer Frage (neu oder nach Verbindungsabbruch),
     // schicken wir die Frage nochmal. Wer sie schon hat, ignoriert sie.
     frageSenden();
@@ -137,7 +153,11 @@ $("start").addEventListener("click", () => {
   naechsteFrage();
 });
 
-$("weiter").addEventListener("click", naechsteFrage);
+// Der Weiter-Knopf macht je nach Schritt etwas anderes
+$("weiter").addEventListener("click", () => {
+  if (schritt === "aufloesung") zwischenstandZeigen();
+  else if (schritt === "zwischenstand") naechsteFrage();
+});
 
 // ---------------------------------------------------------------------------
 // 4. Eine Frage stellen
@@ -153,18 +173,21 @@ function naechsteFrage() {
   const modul = MODI[frage.modus];
 
   antworten = new Map();
-  restzeit = Number.isInteger(frage.zeit) && frage.zeit > 0 ? frage.zeit : STANDARD_ZEIT;
+  entwuerfe = new Map();
+  gesamtzeit = Number.isInteger(frage.zeit) && frage.zeit > 0 ? frage.zeit : STANDARD_ZEIT;
+  restzeit = gesamtzeit;
 
   // Anzeige auf dem großen Bildschirm
   $("fortschritt").textContent = "Frage " + (nummer + 1) + " von " + fragen.length;
   $("fragetext").textContent = frage.frage;
   modul.zeigeFrage($("bereich"), modul.oeffentlicheDaten(frage));
   $("infos").hidden = true;
+  $("antwortZaehler").hidden = false;
   $("countdown").textContent = restzeit;
   zaehlerAktualisieren();
 
   // Frage an die Handys schicken und Countdown starten
-  frageOffen = true;
+  schritt = "frage";
   startZeit = performance.now();
   frageSenden();
   uhr = setInterval(sekundeVergangen, 1000);
@@ -195,29 +218,50 @@ function sekundeVergangen() {
 function beiNachricht(nachricht) {
   if (nachricht.typ === "antwort") {
     antwortAnnehmen(nachricht.daten || {});
+  } else if (nachricht.typ === "entwurf") {
+    entwurfAnnehmen(nachricht.daten || {});
   }
 }
 
-function antwortAnnehmen({ id, nummer: antwortNummer, antwort }) {
-  // Alles prüfen – eine Nachricht könnte auch manipuliert sein
-  if (!frageOffen) return;                            // Zeit schon um
-  if (antwortNummer !== nummer) return;               // Antwort auf eine alte Frage
-  if (!anwesend.some((s) => s.id === id)) return;     // unbekannter Spieler
-  if (antworten.has(id)) return;                      // hat schon geantwortet
+// Darf dieser Spieler zur aktuellen Frage gerade (noch) etwas schicken?
+// Alles prüfen – eine Nachricht könnte auch manipuliert sein.
+function darfAntworten(id, antwortNummer) {
+  return (
+    schritt === "frage" &&                    // Zeit noch nicht um
+    antwortNummer === nummer &&               // keine alte Frage
+    anwesend.some((s) => s.id === id) &&      // bekannter Spieler
+    !antworten.has(id)                        // noch nicht endgültig geantwortet
+  );
+}
 
+function antwortIstGueltig(antwort) {
   const frage = fragen[nummer];
   const modul = MODI[frage.modus];
-  if (!modul.antwortGueltig(modul.oeffentlicheDaten(frage), antwort)) return;
+  return modul.antwortGueltig(modul.oeffentlicheDaten(frage), antwort);
+}
+
+function antwortAnnehmen({ id, nummer: antwortNummer, antwort }) {
+  if (!darfAntworten(id, antwortNummer)) return;
+  if (!antwortIstGueltig(antwort)) return;
 
   // Zeit misst der Host selbst – so kann niemand schummeln
   antworten.set(id, { antwort, zeitMs: performance.now() - startZeit });
+  entwuerfe.delete(id);
   zaehlerAktualisieren();
   alleFertigPruefen();
 }
 
+// Entwurf = was gerade im Eingabefeld steht. null heißt: Feld wurde geleert.
+function entwurfAnnehmen({ id, nummer: antwortNummer, antwort }) {
+  if (!darfAntworten(id, antwortNummer)) return;
+
+  if (antwort === null) entwuerfe.delete(id);
+  else if (antwortIstGueltig(antwort)) entwuerfe.set(id, antwort);
+}
+
 // Haben alle anwesenden Spieler geantwortet? Dann nicht weiter warten.
 function alleFertigPruefen() {
-  if (frageOffen && anwesend.every((s) => antworten.has(s.id))) aufloesen();
+  if (schritt === "frage" && anwesend.every((s) => antworten.has(s.id))) aufloesen();
 }
 
 function zaehlerAktualisieren() {
@@ -229,19 +273,44 @@ function zaehlerAktualisieren() {
 // 6. Auflösung – erst jetzt erfahren die Handys die Lösung
 // ---------------------------------------------------------------------------
 function aufloesen() {
-  if (!frageOffen) return; // nicht doppelt auflösen
-  frageOffen = false;
+  if (schritt !== "frage") return; // nicht doppelt auflösen
+  schritt = "aufloesung";
   clearInterval(uhr);
   $("countdown").textContent = "";
 
   const frage = fragen[nummer];
   const modul = MODI[frage.modus];
 
-  // Ergebnis pro Spieler (ab 1c kommen hier Punkte dazu)
-  const ergebnisse = [];
-  for (const [id, eintrag] of antworten) {
-    ergebnisse.push({ id, richtig: modul.istRichtig(frage, eintrag.antwort) });
+  // Wer nicht gesendet hat, aber etwas eingetippt hatte: Entwurf zählt.
+  // Als Antwortzeit gilt dann die volle Zeit (kein Tempo-Bonus).
+  for (const [id, entwurf] of entwuerfe) {
+    if (!antworten.has(id)) {
+      antworten.set(id, { antwort: entwurf, zeitMs: gesamtzeit * 1000 });
+    }
   }
+
+  // Punkte für jede Antwort berechnen und zum Spielstand addieren
+  const punkteDieseRunde = new Map(); // id → Punkte
+  const fuerAnzeige = [];             // [{ name, antwort, punkte }]
+
+  for (const [id, eintrag] of antworten) {
+    const anteil = anteilRestzeit(eintrag.zeitMs, gesamtzeit);
+    const punkte = modul.bewerte(frage, eintrag.antwort, anteil);
+    const spieler = spielstand.get(id);
+
+    spieler.punkte += punkte;
+    punkteDieseRunde.set(id, punkte);
+    fuerAnzeige.push({ name: spieler.name, antwort: eintrag.antwort, punkte });
+  }
+
+  // Jedes Handy bekommt: eigene Punkte dieser Runde, Gesamtpunkte, Platz
+  const ergebnisse = ranglisteBerechnen([...spielstand.values()]).map((r) => ({
+    id: r.id,
+    beantwortet: antworten.has(r.id),
+    punkte: punkteDieseRunde.get(r.id) || 0,
+    gesamt: r.punkte,
+    platz: r.platz,
+  }));
 
   raum.senden("aufloesung", {
     nummer: nummer,
@@ -250,11 +319,11 @@ function aufloesen() {
   });
 
   // Großer Bildschirm: Lösung, Erklärung, Quelle
-  const alleAntworten = [...antworten.values()].map((e) => e.antwort);
-  modul.zeigeAufloesung($("bereich"), frage, alleAntworten);
+  modul.zeigeAufloesung($("bereich"), frage, fuerAnzeige);
+  $("antwortZaehler").hidden = true;
   $("erklaerung").textContent = frage.erklaerung || "";
   quelleAnzeigen(frage.quelle);
-  $("weiter").textContent = nummer + 1 < fragen.length ? "Nächste Frage" : "Zum Ergebnis";
+  $("weiter").textContent = "Zwischenstand";
   $("infos").hidden = false;
 }
 
@@ -264,9 +333,8 @@ function quelleAnzeigen(quelle) {
   ziel.replaceChildren("Quelle: ");
 
   if (typeof quelle.url === "string" && /^https?:\/\//.test(quelle.url)) {
-    const link = document.createElement("a");
+    const link = neu("a", "", quelle.titel);
     link.href = quelle.url;
-    link.textContent = quelle.titel;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     ziel.append(link);
@@ -276,10 +344,65 @@ function quelleAnzeigen(quelle) {
 }
 
 // ---------------------------------------------------------------------------
-// 7. Spielende
+// 7. Zwischenstand nach jeder Frage
+// ---------------------------------------------------------------------------
+function zwischenstandZeigen() {
+  schritt = "zwischenstand";
+  $("fragetext").textContent = "Zwischenstand";
+  $("erklaerung").textContent = "";
+  $("quelle").replaceChildren();
+
+  const rangliste = ranglisteBerechnen([...spielstand.values()]);
+  $("bereich").replaceChildren(ranglisteElement(rangliste.slice(0, ZWISCHENSTAND_PLAETZE)));
+
+  const letzteFrage = nummer + 1 >= fragen.length;
+  $("weiter").textContent = letzteFrage ? "Zum Siegertreppchen" : "Nächste Frage";
+}
+
+// Baut eine nummerierte Liste: "1. Anna – 1.840"
+function ranglisteElement(rangliste) {
+  const liste = neu("ol", "rangliste");
+  for (const r of rangliste) {
+    const eintrag = neu("li");
+    eintrag.append(
+      neu("span", "platz", r.platz + "."),
+      neu("span", "", r.name),
+      neu("span", "punkte", r.punkte)
+    );
+    liste.append(eintrag);
+  }
+  return liste;
+}
+
+// ---------------------------------------------------------------------------
+// 8. Spielende mit Siegertreppchen
 // ---------------------------------------------------------------------------
 function spielEnde() {
+  schritt = "ende";
   $("spiel").hidden = true;
   $("ende").hidden = false;
-  raum.senden("ende", {});
+
+  const rangliste = ranglisteBerechnen([...spielstand.values()]);
+
+  // Treppchen: Platz 2 links, Platz 1 in der Mitte, Platz 3 rechts
+  const treppchen = $("treppchen");
+  treppchen.replaceChildren();
+  for (const index of [1, 0, 2]) {
+    const r = rangliste[index];
+    if (!r) continue; // weniger als 3 Spieler
+    const stufe = neu("div", "stufe stufe-" + (index + 1));
+    stufe.append(
+      neu("span", "name", r.name),
+      neu("span", "punkte", r.punkte),
+      neu("span", "platz", r.platz)
+    );
+    treppchen.append(stufe);
+  }
+
+  // Alle weiteren Plätze darunter
+  $("endliste").replaceChildren(ranglisteElement(rangliste.slice(3)));
+
+  raum.senden("ende", {
+    rangliste: rangliste.map((r) => ({ id: r.id, name: r.name, punkte: r.punkte, platz: r.platz })),
+  });
 }
