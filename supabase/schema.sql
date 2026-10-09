@@ -1,0 +1,5 @@
+-- Platzhalter: Tabellen für Supabase.
+--   rooms   – ein Raum pro Spiel (Raumcode, Status, aktuelle Frage)
+--   players – Spieler in einem Raum (Name, Punkte)
+--   answers – Antworten der Spieler pro Frage
+-- Wird in Phase 1 im Supabase SQL-Editor ausgeführt.

@@ -1,0 +1,58 @@
+#!/bin/sh
+# Pre-commit-Hook: Schutz vor Geheimnissen im öffentlichen Repo.
+#
+# Läuft automatisch vor jedem "git commit" und bricht den Commit ab, wenn
+#   1. eine verbotene Datei dabei ist (z. B. .env, docs/config.js), oder
+#   2. in den geänderten Zeilen etwas wie ein API-Key oder Passwort steht.
+#
+# Einmalig pro Rechner aktivieren (im Projektordner):
+#   git config core.hooksPath .githooks
+#
+# Den Hook NIEMALS mit "git commit --no-verify" umgehen.
+# Bei einem Fehlalarm: Zeile prüfen und Muster hier gezielt anpassen.
+
+fehler=0
+
+# --- 1. Verbotene Dateien ---------------------------------------------------
+# Dateinamen, die nie ins Repo dürfen (regulärer Ausdruck).
+verbotene_dateien='(^|/)\.env$|(^|/)\.env\.(local|development|production)$|^docs/config\.js$|\.pem$|\.key$|\.p12$|\.pfx$|service[-_]?account.*\.json$|credentials.*\.json$'
+
+treffer=$(git diff --cached --name-only --diff-filter=ACMR | grep -E "$verbotene_dateien")
+if [ -n "$treffer" ]; then
+  echo "STOPP: Diese Datei(en) dürfen nicht ins Repo:"
+  echo "$treffer" | sed 's/^/   - /'
+  echo "   Aus dem Commit nehmen mit: git rm --cached <datei>"
+  fehler=1
+fi
+
+# --- 2. Verdächtige Inhalte -------------------------------------------------
+# Muster für typische Schlüssel. Groß-/Kleinschreibung wird ignoriert.
+muster='AIza[0-9a-z_-]{35}'                                         # Google / Gemini API-Key
+muster="$muster"'|eyJ[0-9a-z_-]{10,}\.eyJ[0-9a-z_-]{10,}'           # JWT (z. B. Supabase-Keys)
+muster="$muster"'|sb_(secret|publishable)_[0-9a-z_-]{10,}'          # neue Supabase-Keys
+muster="$muster"'|gh[pousr]_[0-9a-z]{30,}|github_pat_[0-9a-z_]{20,}' # GitHub-Tokens
+muster="$muster"'|sk-[0-9a-z_-]{20,}'                               # OpenAI / Anthropic u. a.
+muster="$muster"'|-----BEGIN [a-z ]*PRIVATE KEY-----'               # private Schlüssel
+# Allgemein: password = "...", api_key: '...', token = "..." usw.
+muster="$muster"'|(api[_-]?key|secret|passwor[dt]|token)["'"'"']?[[:space:]]*[:=][[:space:]]*["'"'"'][^"'"'"']{8,}'
+
+# Jede geänderte Datei einzeln prüfen (außer diesem Hook selbst).
+git diff --cached --name-only --diff-filter=ACMR | grep -v '^\.githooks/' > .git/geheim-check.tmp
+while IFS= read -r datei; do
+  zeilen=$(git diff --cached -U0 -- "$datei" | grep '^+' | grep -v '^+++' | grep -iE "$muster")
+  if [ -n "$zeilen" ]; then
+    echo "STOPP: Möglicher Schlüssel/Passwort in $datei:"
+    # Nur den Anfang der Zeile zeigen, damit der Schlüssel nicht komplett im Terminal landet.
+    echo "$zeilen" | cut -c1-40 | sed 's/^/   /; s/$/.../'
+    fehler=1
+  fi
+done < .git/geheim-check.tmp
+rm -f .git/geheim-check.tmp
+
+if [ "$fehler" -ne 0 ]; then
+  echo ""
+  echo "Commit abgebrochen. Geheimnisse gehören in .env oder in Supabase-Secrets."
+  exit 1
+fi
+
+exit 0

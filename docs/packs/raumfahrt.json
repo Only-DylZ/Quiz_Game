@@ -1,0 +1,88 @@
+{
+  "thema": "Raumfahrt",
+  "version": 1,
+  "beschreibung": "Beispielpaket mit je zwei Fragen pro Modus.",
+  "fragen": [
+    {
+      "id": "rf-01",
+      "modus": "auswahl",
+      "frage": "Welcher Planet ist der größte im Sonnensystem?",
+      "optionen": ["Saturn", "Jupiter", "Neptun", "Erde"],
+      "loesung": 1,
+      "quelle": {
+        "titel": "NASA Science – Jupiter",
+        "url": "https://science.nasa.gov/jupiter/"
+      }
+    },
+    {
+      "id": "rf-02",
+      "modus": "auswahl",
+      "frage": "Wer war der erste Mensch im Weltall?",
+      "optionen": ["Neil Armstrong", "Alan Shepard", "Juri Gagarin", "Walentina Tereschkowa"],
+      "loesung": 2,
+      "erklaerung": "Juri Gagarin umkreiste am 12. April 1961 mit Wostok 1 die Erde.",
+      "quelle": {
+        "titel": "Wikipedia – Juri Gagarin",
+        "url": "https://de.wikipedia.org/wiki/Juri_Alexejewitsch_Gagarin"
+      }
+    },
+    {
+      "id": "rf-03",
+      "modus": "schaetzen",
+      "frage": "Wie weit ist der Mond im Durchschnitt von der Erde entfernt?",
+      "einheit": "km",
+      "loesung": 384400,
+      "quelle": {
+        "titel": "NASA Science – Earth's Moon",
+        "url": "https://science.nasa.gov/moon/"
+      }
+    },
+    {
+      "id": "rf-04",
+      "modus": "schaetzen",
+      "frage": "Wie viele Menschen haben bisher den Mond betreten?",
+      "einheit": "",
+      "loesung": 12,
+      "erklaerung": "Zwölf Astronauten der Missionen Apollo 11 bis Apollo 17 (1969–1972).",
+      "quelle": {
+        "titel": "Wikipedia – Apollo-Programm",
+        "url": "https://de.wikipedia.org/wiki/Apollo-Programm"
+      }
+    },
+    {
+      "id": "rf-05",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie groß ist der Durchmesser des Mars?",
+      "daten": {
+        "einheit": "km",
+        "balken": [
+          { "name": "Merkur", "wert": 4879 },
+          { "name": "Venus", "wert": 12104 },
+          { "name": "Erde", "wert": 12756 },
+          { "name": "Mars", "wert": null }
+        ]
+      },
+      "loesung": 6792,
+      "quelle": {
+        "titel": "NASA – Planetary Fact Sheet",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+      }
+    },
+    {
+      "id": "rf-06",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Kosmodrom Baikonur, von dem Gagarin startete?",
+      "daten": {
+        "mitte": [45, 60],
+        "zoom": 3
+      },
+      "loesung": { "lat": 45.96, "lng": 63.31 },
+      "quelle": {
+        "titel": "Wikipedia – Kosmodrom Baikonur",
+        "url": "https://de.wikipedia.org/wiki/Kosmodrom_Baikonur"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Geheime Einstellungen – niemals hochladen
+.env
+.env.*
+!.env.example
+docs/config.js
+*.pem
+*.key
+*.p12
+*.pfx
+*service-account*.json
+*credentials*.json
+supabase/.temp/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Editor und Betriebssystem
+.vscode/
+.DS_Store
+Thumbs.db

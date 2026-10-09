@@ -1,0 +1,9 @@
+{
+  "pakete": [
+    {
+      "datei": "raumfahrt.json",
+      "thema": "Raumfahrt",
+      "anzahl_fragen": 6
+    }
+  ]
+}
