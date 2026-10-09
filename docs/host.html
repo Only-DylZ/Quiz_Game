@@ -1,3 +1,91 @@
-<!-- Platzhalter: Host-Bildschirm (TV / Discord-Stream).
-     Später: Themenpaket wählen, Raumcode anzeigen, Fragen und Countdown zeigen,
-     Lösung nach Zeitablauf senden, Rangliste anzeigen. -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz-Abend – Host</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="host">
+  <!-- Host-Bildschirm (TV / Discord-Stream).
+       Schritt 1a: Raum öffnen, Raumcode zeigen, beitretende Spieler anzeigen. -->
+  <main>
+    <h1>Quiz-Abend</h1>
+
+    <!-- Lobby: wird angezeigt, solange das Spiel noch nicht läuft -->
+    <section id="lobby">
+      <p>Geht auf <strong id="adresse"></strong> und gebt diesen Code ein:</p>
+      <!-- Nur beim lokalen Testen sichtbar -->
+      <p class="hinweis" id="lokalHinweis" hidden>
+        Lokaler Test: Auf dem Handy statt 127.0.0.1 die WLAN-IP dieses PCs eingeben
+        (PowerShell: <code>ipconfig</code> → IPv4-Adresse).
+      </p>
+      <p class="raumcode" id="raumcode">····</p>
+
+      <h2>Spieler (<span id="anzahl">0</span>)</h2>
+      <ul class="spielerliste" id="spielerliste"></ul>
+
+      <!-- Kommt in Schritt 1b -->
+      <button id="start" disabled>Spiel starten</button>
+    </section>
+
+    <!-- Hier erscheinen Fehlermeldungen -->
+    <p class="meldung" id="meldung"></p>
+  </main>
+
+  <script type="module">
+    import { neuerRaumcode, raumBetreten, neueId } from "./realtime.js";
+
+    // Kurzschreibweise, um Elemente per id zu finden
+    const $ = (id) => document.getElementById(id);
+
+    // 1. Raumcode erzeugen und anzeigen
+    const raumcode = neuerRaumcode();
+    $("raumcode").textContent = raumcode;
+
+    // Adresse der Spieler-Seite anzeigen (gleicher Ordner wie diese Seite)
+    const spielerAdresse = new URL("play.html", location.href);
+    $("adresse").textContent = spielerAdresse.host + spielerAdresse.pathname;
+
+    // 127.0.0.1 / localhost bedeutet "dieses Gerät" – auf dem Handy nutzlos.
+    // Dann einen Hinweis zeigen.
+    if (location.hostname === "127.0.0.1" || location.hostname === "localhost") {
+      $("lokalHinweis").hidden = false;
+    }
+
+    // 2. Den Raum als Host betreten
+    const ich = { id: neueId(), name: "Host", rolle: "host" };
+
+    const raum = raumBetreten(
+      raumcode,
+      ich,
+      beiNachricht,
+      zeigeSpieler
+    );
+
+    raum.bereit.catch((fehler) => {
+      $("meldung").textContent = "Fehler: " + fehler.message;
+    });
+
+    // Wird aufgerufen, wenn eine Nachricht von einem Handy kommt.
+    // In Schritt 1a gibt es noch keine Nachrichten.
+    function beiNachricht(nachricht) {
+      console.log("Nachricht erhalten:", nachricht);
+    }
+
+    // Spielerliste neu anzeigen (wird bei jedem Kommen/Gehen aufgerufen)
+    function zeigeSpieler(teilnehmer) {
+      const spieler = teilnehmer.filter((t) => t.rolle === "spieler");
+      const liste = $("spielerliste");
+      liste.replaceChildren(); // Liste leeren
+
+      for (const s of spieler) {
+        const eintrag = document.createElement("li");
+        eintrag.textContent = s.name; // textContent: Namen nie als HTML einfügen!
+        liste.appendChild(eintrag);
+      }
+      $("anzahl").textContent = spieler.length;
+    }
+  </script>
+</body>
+</html>

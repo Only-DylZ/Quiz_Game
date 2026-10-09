@@ -228,6 +228,10 @@ Alles im Repo und alles im Browser-Code ist für jeden lesbar.
 - **Lösungen nie vorab an die Spieler.** Nur der Host lädt das Paket; die
   Lösung wird erst nach Zeitablauf gesendet. Die Spieler-Seite lädt niemals
   Dateien aus `packs/`.
+  *Bewusste Entscheidung:* Die Pakete liegen trotzdem öffentlich in
+  `docs/packs/` – wer die URL kennt, könnte sie abrufen. Für Spiele unter
+  Freunden ist das akzeptiert. Die Spieler-Seite darf aber nie selbst
+  Lösungen kennen oder laden.
 - **Eingaben nie vertrauen.** Spielernamen, Antworten und KI-Antworten werden
   geprüft (Länge, Typ, erlaubte Werte). Texte immer mit `textContent` einfügen,
   **nie mit `innerHTML`** (sonst kann jemand über seinen Namen Code einschleusen).
@@ -287,7 +291,18 @@ Alles im Repo und alles im Browser-Code ist für jeden lesbar.
    Gratis-Tarif ohne Billing. KI-Fragen können Fehler enthalten – Quelle
    immer mit anzeigen.
 
-**Aktueller Stand:** Projektstruktur angelegt, noch keine Spiellogik. Als Nächstes: Phase 1.
+**Phase 1 in Schritten:**
+- 1a: Lobby – Host öffnet Raum mit Code, Handys treten bei, Host sieht die Namen.
+- 1b: Fragen im Modus `auswahl` mit Countdown und Auflösung.
+- 1c: Modus `schaetzen`, Punkte und Rangliste.
+
+**Technik der Räume (Phase 1):** Nur Supabase Realtime *Broadcast* (Nachrichten)
+und *Presence* (wer ist im Raum) auf dem Kanal `quiz-<RAUMCODE>` – noch keine
+Tabellen. Alle Nachrichten haben die Form `{ typ: "...", daten: {...} }`.
+Der Host misst die Antwortzeit selbst und rechnet die Punkte aus; Spieler
+schicken nur ihre Antwort.
+
+**Aktueller Stand:** Schritt 1a (Lobby) ist gebaut.
 
 ### Offener Punkt
 `docs/config.js` steht in `.gitignore`, GitHub Pages braucht die Datei aber online.

@@ -1,2 +1,121 @@
-<!-- Platzhalter: Spieler-Seite fürs Handy.
-     Später: Raumcode und Namen eingeben, Fragen beantworten, eigene Punkte sehen. -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz-Abend – Mitspielen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="spieler">
+  <!-- Spieler-Seite fürs Handy.
+       Schritt 1a: Raumcode und Namen eingeben, dem Raum beitreten. -->
+  <main>
+    <h1>Mitspielen</h1>
+
+    <!-- Beitreten -->
+    <form id="beitreten">
+      <label for="code">Raumcode</label>
+      <input id="code" maxlength="4" autocomplete="off" autocapitalize="characters"
+             placeholder="z. B. KX7Q" required>
+
+      <label for="name">Dein Name</label>
+      <input id="name" maxlength="16" autocomplete="nickname" required>
+
+      <button type="submit">Beitreten</button>
+    </form>
+
+    <!-- Warten auf den Spielstart -->
+    <section id="warten" hidden>
+      <p>Du bist drin, <strong id="meinName"></strong>!</p>
+      <p>Warte, bis der Host das Spiel startet …</p>
+    </section>
+
+    <!-- Hier erscheinen Fehlermeldungen -->
+    <p class="meldung" id="meldung"></p>
+  </main>
+
+  <script type="module">
+    import { raumBetreten, raumcodePruefen, neueId } from "./realtime.js";
+
+    const $ = (id) => document.getElementById(id);
+
+    // Wie lange wir nach dem Verbinden auf den Host warten (Millisekunden)
+    const HOST_WARTEZEIT = 4000;
+
+    let raum = null;           // die Verbindung zum Raum
+    let hostGefunden = false;  // ist der Host im Raum?
+    let warteTimer = null;     // Zeitgeber für "Raum nicht gefunden"
+
+    // Falls der Link schon einen Code enthält (play.html?raum=KX7Q), eintragen
+    const codeAusLink = new URLSearchParams(location.search).get("raum");
+    if (codeAusLink) $("code").value = codeAusLink;
+
+    $("beitreten").addEventListener("submit", async (ereignis) => {
+      ereignis.preventDefault(); // Seite nicht neu laden
+      $("meldung").textContent = "";
+
+      // 1. Eingaben prüfen
+      const raumcode = raumcodePruefen($("code").value);
+      const name = $("name").value.trim();
+
+      if (!raumcode) {
+        $("meldung").textContent = "Der Raumcode hat 4 Zeichen (Buchstaben/Ziffern).";
+        return;
+      }
+      if (name.length < 1 || name.length > 16) {
+        $("meldung").textContent = "Bitte einen Namen mit 1 bis 16 Zeichen eingeben.";
+        return;
+      }
+
+      // 2. Raum betreten
+      $("beitreten").querySelector("button").disabled = true;
+      const ich = { id: neueId(), name, rolle: "spieler" };
+      raum = raumBetreten(raumcode, ich, beiNachricht, beiTeilnehmern);
+
+      try {
+        await raum.bereit;
+      } catch (fehler) {
+        abbrechen("Verbindung fehlgeschlagen. Bitte nochmal versuchen.");
+        return;
+      }
+
+      // 3. Kurz warten, ob ein Host im Raum ist – sonst war der Code falsch
+      warteTimer = setTimeout(() => {
+        if (!hostGefunden) {
+          abbrechen("Diesen Raum gibt es nicht. Code richtig eingegeben?");
+        }
+      }, HOST_WARTEZEIT);
+    });
+
+    // Wird aufgerufen, wenn jemand den Raum betritt oder verlässt
+    function beiTeilnehmern(teilnehmer) {
+      const host = teilnehmer.find((t) => t.rolle === "host");
+
+      if (host && !hostGefunden) {
+        // Host gefunden: wir sind drin
+        hostGefunden = true;
+        $("meinName").textContent = $("name").value.trim();
+        $("beitreten").hidden = true;
+        $("warten").hidden = false;
+      } else if (!host && hostGefunden) {
+        // Host ist weg (z. B. Seite geschlossen)
+        $("meldung").textContent = "Der Host hat den Raum verlassen.";
+      }
+    }
+
+    // Nachrichten vom Host – kommen ab Schritt 1b
+    function beiNachricht(nachricht) {
+      console.log("Nachricht erhalten:", nachricht);
+    }
+
+    // Verbindung trennen und Formular wieder freigeben
+    function abbrechen(text) {
+      clearTimeout(warteTimer);
+      if (raum) raum.verlassen();
+      raum = null;
+      $("meldung").textContent = text;
+      $("beitreten").querySelector("button").disabled = false;
+    }
+  </script>
+</body>
+</html>
