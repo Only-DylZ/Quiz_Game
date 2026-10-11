@@ -39,7 +39,7 @@
     {
       "id": "geo-003",
       "modus": "auswahl",
-      "frage": "In welchem Land liegt die Inka-Ruinenstadt Machu Picchu?",
+      "frage": "In welchem Land liegt die Ruinenstadt Machu Picchu?",
       "optionen": [
         "Chile",
         "Bolivien",
@@ -656,12 +656,6 @@
       ],
       "oben": "höchster",
       "unten": "niedrigster",
-      "werte": [
-        "8849 m",
-        "8611 m",
-        "8586 m",
-        "8516 m"
-      ],
       "quelle": {
         "titel": "Wikipedia – Achttausender",
         "url": "https://de.wikipedia.org/wiki/Achttausender"
@@ -670,19 +664,507 @@
     {
       "id": "geo-037",
       "modus": "reihenfolge",
-      "frage": "Ordne die Ozeane nach ihrer Fläche!",
+      "frage": "Ordne die Kontinente nach ihrer Fläche!",
       "loesung": [
-        "Pazifischer Ozean",
-        "Atlantischer Ozean",
-        "Indischer Ozean",
-        "Südlicher Ozean",
-        "Arktischer Ozean"
+        "Asien",
+        "Afrika",
+        "Nordamerika",
+        "Südamerika",
+        "Antarktika"
       ],
       "oben": "größter",
       "unten": "kleinster",
       "quelle": {
-        "titel": "Wikipedia – Ozean",
-        "url": "https://de.wikipedia.org/wiki/Ozean"
+        "titel": "Wikipedia – Kontinent",
+        "url": "https://de.wikipedia.org/wiki/Kontinent"
+      }
+    },
+    {
+      "id": "geo-038",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Neuseeland?",
+      "optionen": [
+        "Queenstown",
+        "Wellington",
+        "Auckland",
+        "Christchurch"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Wellington",
+        "url": "https://de.wikipedia.org/wiki/Wellington"
+      }
+    },
+    {
+      "id": "geo-039",
+      "modus": "auswahl",
+      "frage": "Welcher Fluss fließt durch Kairo?",
+      "optionen": [
+        "Niger",
+        "Euphrat",
+        "Kongo",
+        "Nil"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Nil",
+        "url": "https://de.wikipedia.org/wiki/Nil"
+      }
+    },
+    {
+      "id": "geo-040",
+      "modus": "auswahl",
+      "frage": "Welches Land hat seit 2023 die meisten Einwohner?",
+      "optionen": [
+        "Indonesien",
+        "Indien",
+        "China",
+        "USA"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Indien",
+        "url": "https://de.wikipedia.org/wiki/Indien"
+      },
+      "erklaerung": "Indien hat China laut UN-Schätzung 2023 überholt."
+    },
+    {
+      "id": "geo-041",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Argentinien?",
+      "optionen": [
+        "Santiago de Chile",
+        "Buenos Aires",
+        "Montevideo",
+        "Asunción"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Buenos Aires",
+        "url": "https://de.wikipedia.org/wiki/Buenos_Aires"
+      }
+    },
+    {
+      "id": "geo-042",
+      "modus": "auswahl",
+      "frage": "Welche Millionenstadt liegt auf zwei Kontinenten – Europa und Asien?",
+      "optionen": [
+        "Istanbul",
+        "Moskau",
+        "Baku",
+        "Athen"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Istanbul",
+        "url": "https://de.wikipedia.org/wiki/Istanbul"
+      }
+    },
+    {
+      "id": "geo-043",
+      "modus": "auswahl",
+      "frage": "Wie heißt der größte See Afrikas?",
+      "optionen": [
+        "Victoriasee",
+        "Tschadsee",
+        "Malawisee",
+        "Tanganjikasee"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Victoriasee",
+        "url": "https://de.wikipedia.org/wiki/Victoriasee"
+      }
+    },
+    {
+      "id": "geo-044",
+      "modus": "auswahl",
+      "frage": "Welches Land hat ungefähr die Form eines Stiefels?",
+      "optionen": [
+        "Portugal",
+        "Griechenland",
+        "Kroatien",
+        "Italien"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Italien",
+        "url": "https://de.wikipedia.org/wiki/Italien"
+      }
+    },
+    {
+      "id": "geo-045",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt der Türkei?",
+      "optionen": [
+        "Izmir",
+        "Bursa",
+        "Antalya",
+        "Ankara"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Ankara",
+        "url": "https://de.wikipedia.org/wiki/Ankara"
+      }
+    },
+    {
+      "id": "geo-046",
+      "modus": "auswahl",
+      "frage": "Welches Meer liegt zwischen Europa und Afrika?",
+      "optionen": [
+        "Mittelmeer",
+        "Rotes Meer",
+        "Schwarzes Meer",
+        "Kaspisches Meer"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Mittelmeer",
+        "url": "https://de.wikipedia.org/wiki/Mittelmeer"
+      }
+    },
+    {
+      "id": "geo-047",
+      "modus": "auswahl",
+      "frage": "Welches ist der kleinste Staat der Welt?",
+      "optionen": [
+        "Vatikanstadt",
+        "San Marino",
+        "Liechtenstein",
+        "Monaco"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Vatikanstadt",
+        "url": "https://de.wikipedia.org/wiki/Vatikanstadt"
+      }
+    },
+    {
+      "id": "geo-048",
+      "modus": "auswahl",
+      "frage": "In welchem Land liegt der Uluru (Ayers Rock)?",
+      "optionen": [
+        "Australien",
+        "Neuseeland",
+        "Südafrika",
+        "USA"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Uluru",
+        "url": "https://de.wikipedia.org/wiki/Uluru"
+      }
+    },
+    {
+      "id": "geo-049",
+      "modus": "auswahl",
+      "frage": "Welche Wasserfälle liegen an der Grenze zwischen Kanada und den USA?",
+      "optionen": [
+        "Victoriafälle",
+        "Niagarafälle",
+        "Salto Ángel",
+        "Iguazú-Wasserfälle"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Niagarafälle",
+        "url": "https://de.wikipedia.org/wiki/Niagarafälle"
+      }
+    },
+    {
+      "id": "geo-050",
+      "modus": "schaetzen",
+      "frage": "Wie viele Millionen Einwohner hat Deutschland?",
+      "einheit": "Millionen",
+      "loesung": 83.3,
+      "quelle": {
+        "titel": "Wikipedia – Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Deutschland"
+      },
+      "erklaerung": "Stand Mitte 2026: rund 83,3 Millionen."
+    },
+    {
+      "id": "geo-051",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist die Donau?",
+      "einheit": "km",
+      "loesung": 2857,
+      "quelle": {
+        "titel": "Wikipedia – Donau",
+        "url": "https://de.wikipedia.org/wiki/Donau"
+      }
+    },
+    {
+      "id": "geo-052",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist Deutschland (Fläche)?",
+      "einheit": "km²",
+      "loesung": 357684,
+      "quelle": {
+        "titel": "Wikipedia – Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Deutschland"
+      }
+    },
+    {
+      "id": "geo-053",
+      "modus": "schaetzen",
+      "frage": "An wie viele Staaten grenzt die Schweiz?",
+      "einheit": "Staaten",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Schweiz",
+        "url": "https://de.wikipedia.org/wiki/Schweiz"
+      },
+      "erklaerung": "Deutschland, Frankreich, Italien, Österreich und Liechtenstein."
+    },
+    {
+      "id": "geo-054",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bundesstaaten haben die USA?",
+      "einheit": "Bundesstaaten",
+      "loesung": 50,
+      "quelle": {
+        "titel": "Wikipedia – Vereinigte Staaten",
+        "url": "https://de.wikipedia.org/wiki/Vereinigte_Staaten"
+      }
+    },
+    {
+      "id": "geo-055",
+      "modus": "schaetzen",
+      "frage": "Wie viele Landessprachen hat die Schweiz?",
+      "einheit": "Sprachen",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Schweiz",
+        "url": "https://de.wikipedia.org/wiki/Schweiz"
+      },
+      "erklaerung": "Deutsch, Französisch, Italienisch und Rätoromanisch."
+    },
+    {
+      "id": "geo-056",
+      "modus": "schaetzen",
+      "frage": "Wie viele Provinzen hat Kanada (ohne die Territorien)?",
+      "einheit": "Provinzen",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Kanada",
+        "url": "https://de.wikipedia.org/wiki/Kanada"
+      }
+    },
+    {
+      "id": "geo-057",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Großglockner, der höchste Berg Österreichs?",
+      "einheit": "m",
+      "loesung": 3798,
+      "quelle": {
+        "titel": "Wikipedia – Großglockner",
+        "url": "https://de.wikipedia.org/wiki/Großglockner"
+      }
+    },
+    {
+      "id": "geo-058",
+      "modus": "schaetzen",
+      "frage": "Wie viele unabhängige Staaten liegen in Südamerika?",
+      "einheit": "Staaten",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Südamerika",
+        "url": "https://de.wikipedia.org/wiki/Südamerika"
+      }
+    },
+    {
+      "id": "geo-059",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Kairo?",
+      "daten": {
+        "mitte": [
+          20,
+          20
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": 30.044,
+        "lng": 31.236
+      },
+      "quelle": {
+        "titel": "Wikipedia – Kairo",
+        "url": "https://de.wikipedia.org/wiki/Kairo"
+      }
+    },
+    {
+      "id": "geo-060",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Rio de Janeiro?",
+      "daten": {
+        "mitte": [
+          0,
+          -40
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": -22.907,
+        "lng": -43.173
+      },
+      "quelle": {
+        "titel": "Wikipedia – Rio de Janeiro",
+        "url": "https://de.wikipedia.org/wiki/Rio_de_Janeiro"
+      }
+    },
+    {
+      "id": "geo-061",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der Stadtstaat Singapur?",
+      "daten": {
+        "mitte": [
+          15,
+          100
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 1.352,
+        "lng": 103.82
+      },
+      "quelle": {
+        "titel": "Wikipedia – Singapur",
+        "url": "https://de.wikipedia.org/wiki/Singapur"
+      }
+    },
+    {
+      "id": "geo-062",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie hoch ist der Burj Khalifa in Dubai, das höchste Gebäude der Welt?",
+      "daten": {
+        "einheit": "m",
+        "balken": [
+          {
+            "name": "Eiffelturm",
+            "wert": 330
+          },
+          {
+            "name": "Empire State Building",
+            "wert": 443
+          },
+          {
+            "name": "Burj Khalifa",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 828,
+      "quelle": {
+        "titel": "Wikipedia – Burj Khalifa",
+        "url": "https://de.wikipedia.org/wiki/Burj_Khalifa"
+      }
+    },
+    {
+      "id": "geo-063",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde die Golden Gate Bridge in San Francisco eröffnet?",
+      "daten": {
+        "von": 1900,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Modell T von Ford",
+            "jahr": 1908
+          },
+          {
+            "name": "Erste Farbfernsehsendung in Deutschland",
+            "jahr": 1967
+          }
+        ]
+      },
+      "loesung": 1937,
+      "quelle": {
+        "titel": "Wikipedia – Golden Gate Bridge",
+        "url": "https://de.wikipedia.org/wiki/Golden_Gate_Bridge"
+      }
+    },
+    {
+      "id": "geo-064",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde Brasília die Hauptstadt Brasiliens?",
+      "daten": {
+        "von": 1900,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1960,
+      "quelle": {
+        "titel": "Wikipedia – Brasília",
+        "url": "https://de.wikipedia.org/wiki/Brasília"
+      }
+    },
+    {
+      "id": "geo-065",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Länder nach ihrer Fläche!",
+      "loesung": [
+        "Frankreich",
+        "Spanien",
+        "Deutschland",
+        "Italien"
+      ],
+      "oben": "größtes",
+      "unten": "kleinstes",
+      "quelle": {
+        "titel": "Wikipedia – Liste der Staaten Europas",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Staaten_Europas"
+      }
+    },
+    {
+      "id": "geo-066",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Städte von Nord nach Süd!",
+      "loesung": [
+        "Oslo",
+        "Hamburg",
+        "München",
+        "Rom",
+        "Athen"
+      ],
+      "oben": "nördlichste",
+      "unten": "südlichste",
+      "quelle": {
+        "titel": "Wikipedia – Geographische Breite",
+        "url": "https://de.wikipedia.org/wiki/Geographische_Breite"
+      }
+    },
+    {
+      "id": "geo-067",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Flüsse nach ihrer Länge!",
+      "loesung": [
+        "Donau",
+        "Rhein",
+        "Elbe",
+        "Mosel"
+      ],
+      "oben": "längster",
+      "unten": "kürzester",
+      "quelle": {
+        "titel": "Wikipedia – Liste von Flüssen in Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Liste_von_Flüssen_in_Deutschland"
       }
     }
   ],
@@ -707,6 +1189,39 @@
       "quelle": {
         "titel": "Wikipedia – Bodensee",
         "url": "https://de.wikipedia.org/wiki/Bodensee"
+      }
+    },
+    {
+      "id": "geo-s03",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist die Fläche des Bodensees?",
+      "einheit": "km²",
+      "loesung": 536,
+      "quelle": {
+        "titel": "Wikipedia – Bodensee",
+        "url": "https://de.wikipedia.org/wiki/Bodensee"
+      }
+    },
+    {
+      "id": "geo-s04",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist die Elbe?",
+      "einheit": "km",
+      "loesung": 1094,
+      "quelle": {
+        "titel": "Wikipedia – Elbe",
+        "url": "https://de.wikipedia.org/wiki/Elbe"
+      }
+    },
+    {
+      "id": "geo-s05",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Suezkanal heute?",
+      "einheit": "km",
+      "loesung": 193.3,
+      "quelle": {
+        "titel": "Wikipedia – Suezkanal",
+        "url": "https://de.wikipedia.org/wiki/Suezkanal"
       }
     }
   ]
