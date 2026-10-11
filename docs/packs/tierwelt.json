@@ -415,12 +415,12 @@
         "bis": 2020,
         "ereignisse": [
           {
-            "name": "Entdeckung der DNA-Struktur",
-            "jahr": 1953
-          },
-          {
             "name": "Erstes Retortenbaby",
             "jahr": 1978
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
           }
         ]
       },
@@ -460,10 +460,10 @@
       "modus": "reihenfolge",
       "frage": "Ordne die Tiere nach ihrem Gewicht!",
       "loesung": [
-        "Blauwal",
         "Afrikanischer Elefant",
         "Flusspferd",
-        "Eisbär"
+        "Eisbär",
+        "Mensch"
       ],
       "oben": "schwerstes",
       "unten": "leichtestes",
@@ -478,9 +478,9 @@
       "frage": "Ordne nach der Höchstgeschwindigkeit!",
       "loesung": [
         "Wanderfalke (Sturzflug)",
-        "Gepard",
         "Pferd",
-        "Mensch"
+        "Mensch",
+        "Weinbergschnecke"
       ],
       "oben": "schnellstes",
       "unten": "langsamstes",
@@ -606,6 +606,495 @@
           "url": "https://commons.wikimedia.org/wiki/File:Wild_aye_aye.jpg"
         }
       }
+    },
+    {
+      "id": "tier-035",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein weibliches Pferd?",
+      "optionen": [
+        "Fohlen",
+        "Hengst",
+        "Wallach",
+        "Stute"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Hauspferd",
+        "url": "https://de.wikipedia.org/wiki/Hauspferd"
+      }
+    },
+    {
+      "id": "tier-036",
+      "modus": "auswahl",
+      "frage": "Welches ist der größte lebende Vogel?",
+      "optionen": [
+        "Emu",
+        "Kasuar",
+        "Strauß",
+        "Wanderalbatros"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Afrikanischer Strauß",
+        "url": "https://de.wikipedia.org/wiki/Afrikanischer_Strauß"
+      }
+    },
+    {
+      "id": "tier-037",
+      "modus": "auswahl",
+      "frage": "Womit atmen Fische?",
+      "optionen": [
+        "Lunge",
+        "Kiemen",
+        "Haut",
+        "Tracheen"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Kieme",
+        "url": "https://de.wikipedia.org/wiki/Kieme"
+      }
+    },
+    {
+      "id": "tier-038",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Larve eines Frosches?",
+      "optionen": [
+        "Nymphe",
+        "Raupe",
+        "Kaulquappe",
+        "Made"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Kaulquappe",
+        "url": "https://de.wikipedia.org/wiki/Kaulquappe"
+      }
+    },
+    {
+      "id": "tier-039",
+      "modus": "auswahl",
+      "frage": "Wie heißt der größte Fisch der Welt?",
+      "optionen": [
+        "Walhai",
+        "Mondfisch",
+        "Riesenmanta",
+        "Weißer Hai"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Walhai",
+        "url": "https://de.wikipedia.org/wiki/Walhai"
+      },
+      "erklaerung": "Er wird über 12 Meter lang – und frisst vor allem Plankton."
+    },
+    {
+      "id": "tier-040",
+      "modus": "auswahl",
+      "frage": "Welcher Vogel ist das Wappentier der USA?",
+      "optionen": [
+        "Truthahn",
+        "Rotschwanzbussard",
+        "Weißkopfseeadler",
+        "Steinadler"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Weißkopfseeadler",
+        "url": "https://de.wikipedia.org/wiki/Weißkopfseeadler"
+      }
+    },
+    {
+      "id": "tier-041",
+      "modus": "auswahl",
+      "frage": "Was ist ein Wal?",
+      "optionen": [
+        "Ein Fisch",
+        "Eine Amphibie",
+        "Ein Säugetier",
+        "Ein Reptil"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Wale",
+        "url": "https://de.wikipedia.org/wiki/Wale"
+      }
+    },
+    {
+      "id": "tier-042",
+      "modus": "auswahl",
+      "frage": "Wie heißt ein männliches Huhn?",
+      "optionen": [
+        "Küken",
+        "Hahn",
+        "Henne",
+        "Kapaun"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Haushuhn",
+        "url": "https://de.wikipedia.org/wiki/Haushuhn"
+      },
+      "erklaerung": "Ein Kapaun ist ein kastrierter Hahn."
+    },
+    {
+      "id": "tier-043",
+      "modus": "auswahl",
+      "frage": "Wie viele Flügel hat ein Marienkäfer?",
+      "optionen": [
+        "2",
+        "8",
+        "6",
+        "4"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Marienkäfer",
+        "url": "https://de.wikipedia.org/wiki/Marienkäfer"
+      },
+      "erklaerung": "Zwei harte Deckflügel schützen die zwei dünnen Hautflügel darunter."
+    },
+    {
+      "id": "tier-044",
+      "modus": "auswahl",
+      "frage": "Welches dieser Tiere ist ein Beuteltier?",
+      "optionen": [
+        "Faultier",
+        "Koala",
+        "Waschbär",
+        "Großer Panda"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Koala",
+        "url": "https://de.wikipedia.org/wiki/Koala"
+      }
+    },
+    {
+      "id": "tier-045",
+      "modus": "auswahl",
+      "frage": "Was ist das lange „Horn“ eines Narwals eigentlich?",
+      "optionen": [
+        "Verhornte Haut",
+        "Ein Haarbüschel",
+        "Ein Knochen",
+        "Ein Zahn"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Narwal",
+        "url": "https://de.wikipedia.org/wiki/Narwal"
+      }
+    },
+    {
+      "id": "tier-046",
+      "modus": "auswahl",
+      "frage": "Welches Tier ist für seinen Farbwechsel bekannt?",
+      "optionen": [
+        "Chamäleon",
+        "Leguan",
+        "Gecko",
+        "Waran"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Chamäleons",
+        "url": "https://de.wikipedia.org/wiki/Chamäleons"
+      }
+    },
+    {
+      "id": "tier-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele Wochen ist eine Hauskatze trächtig?",
+      "einheit": "Wochen",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Hauskatze",
+        "url": "https://de.wikipedia.org/wiki/Hauskatze"
+      },
+      "erklaerung": "Etwa 63 bis 65 Tage."
+    },
+    {
+      "id": "tier-048",
+      "modus": "schaetzen",
+      "frage": "Wie hoch können Giraffenbullen werden?",
+      "einheit": "m",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Giraffen",
+        "url": "https://de.wikipedia.org/wiki/Giraffen"
+      }
+    },
+    {
+      "id": "tier-049",
+      "modus": "schaetzen",
+      "frage": "Wie viele Fangarme hat ein Kalmar insgesamt?",
+      "einheit": "Arme",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Kalmare",
+        "url": "https://de.wikipedia.org/wiki/Kalmare"
+      },
+      "erklaerung": "Acht kürzere Arme und zwei lange Tentakel."
+    },
+    {
+      "id": "tier-050",
+      "modus": "schaetzen",
+      "frage": "Wie viele Hörner hat ein Breitmaulnashorn?",
+      "einheit": "Hörner",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Breitmaulnashorn",
+        "url": "https://de.wikipedia.org/wiki/Breitmaulnashorn"
+      }
+    },
+    {
+      "id": "tier-051",
+      "modus": "schaetzen",
+      "frage": "Wie viele Augen haben die meisten Spinnen?",
+      "einheit": "Augen",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Webspinnen",
+        "url": "https://de.wikipedia.org/wiki/Webspinnen"
+      }
+    },
+    {
+      "id": "tier-052",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zitzen hat das Euter einer Kuh?",
+      "einheit": "Zitzen",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Euter",
+        "url": "https://de.wikipedia.org/wiki/Euter"
+      }
+    },
+    {
+      "id": "tier-053",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zehen hat eine Katze an jeder Vorderpfote?",
+      "einheit": "Zehen",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Hauskatze",
+        "url": "https://de.wikipedia.org/wiki/Hauskatze"
+      },
+      "erklaerung": "Hinten sind es nur vier."
+    },
+    {
+      "id": "tier-054",
+      "modus": "schaetzen",
+      "frage": "Auf wie vielen Zehen pro Bein läuft ein Pferd?",
+      "einheit": "Zehen",
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Unpaarhufer",
+        "url": "https://de.wikipedia.org/wiki/Unpaarhufer"
+      },
+      "erklaerung": "Der Huf ist eine einzige, stark vergrößerte Zehe."
+    },
+    {
+      "id": "tier-055",
+      "modus": "schaetzen",
+      "frage": "Wie viele Flügel hat eine Stubenfliege?",
+      "einheit": "Flügel",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Zweiflügler",
+        "url": "https://de.wikipedia.org/wiki/Zweiflügler"
+      },
+      "erklaerung": "Das zweite Flügelpaar ist zu kleinen „Schwingkölbchen“ umgebildet."
+    },
+    {
+      "id": "tier-056",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Provinz Sichuan, Heimat der meisten wild lebenden Großen Pandas?",
+      "daten": {
+        "mitte": [
+          25,
+          60
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": 30.6,
+        "lng": 103.0
+      },
+      "quelle": {
+        "titel": "Wikipedia – Sichuan",
+        "url": "https://de.wikipedia.org/wiki/Sichuan"
+      }
+    },
+    {
+      "id": "tier-057",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der Krüger-Nationalpark?",
+      "daten": {
+        "mitte": [
+          0,
+          20
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": -23.99,
+        "lng": 31.55
+      },
+      "quelle": {
+        "titel": "Wikipedia – Krüger-Nationalpark",
+        "url": "https://de.wikipedia.org/wiki/Krüger-Nationalpark"
+      }
+    },
+    {
+      "id": "tier-058",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Great Barrier Reef, das größte Korallenriff der Erde?",
+      "daten": {
+        "mitte": [
+          0,
+          130
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": -18.29,
+        "lng": 147.7
+      },
+      "quelle": {
+        "titel": "Wikipedia – Great Barrier Reef",
+        "url": "https://de.wikipedia.org/wiki/Great_Barrier_Reef"
+      }
+    },
+    {
+      "id": "tier-059",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde die Naturschutzorganisation WWF gegründet?",
+      "daten": {
+        "von": 1920,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1961,
+      "quelle": {
+        "titel": "Wikipedia – World Wide Fund For Nature",
+        "url": "https://de.wikipedia.org/wiki/World_Wide_Fund_For_Nature"
+      }
+    },
+    {
+      "id": "tier-060",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr starb der letzte bekannte Beutelwolf („Tasmanischer Tiger“)?",
+      "daten": {
+        "von": 1900,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Modell T von Ford",
+            "jahr": 1908
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1936,
+      "quelle": {
+        "titel": "Wikipedia – Beutelwolf",
+        "url": "https://de.wikipedia.org/wiki/Beutelwolf"
+      }
+    },
+    {
+      "id": "tier-061",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Yellowstone-Nationalpark gegründet – der erste Nationalpark der Welt?",
+      "daten": {
+        "von": 1800,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1872,
+      "quelle": {
+        "titel": "Wikipedia – Yellowstone-Nationalpark",
+        "url": "https://de.wikipedia.org/wiki/Yellowstone-Nationalpark"
+      }
+    },
+    {
+      "id": "tier-062",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Tiere nach ihrer Körperhöhe!",
+      "loesung": [
+        "Giraffe",
+        "Afrikanischer Elefant",
+        "Mensch",
+        "Hauskatze"
+      ],
+      "oben": "größtes",
+      "unten": "kleinstes",
+      "quelle": {
+        "titel": "Wikipedia – Giraffen",
+        "url": "https://de.wikipedia.org/wiki/Giraffen"
+      }
+    },
+    {
+      "id": "tier-063",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Anzahl der Beine!",
+      "loesung": [
+        "Tausendfüßer",
+        "Ameise",
+        "Kuh",
+        "Huhn",
+        "Schlange"
+      ],
+      "oben": "meiste",
+      "unten": "wenigste",
+      "quelle": {
+        "titel": "Wikipedia – Gliederfüßer",
+        "url": "https://de.wikipedia.org/wiki/Gliederfüßer"
+      }
+    },
+    {
+      "id": "tier-064",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Tragzeit!",
+      "loesung": [
+        "Afrikanischer Elefant",
+        "Mensch",
+        "Hund",
+        "Hamster"
+      ],
+      "oben": "längste",
+      "unten": "kürzeste",
+      "quelle": {
+        "titel": "Wikipedia – Tragzeit",
+        "url": "https://de.wikipedia.org/wiki/Tragzeit"
+      }
     }
   ],
   "stechfragen": [
@@ -629,6 +1118,39 @@
       "quelle": {
         "titel": "Wikipedia – Hauskatze",
         "url": "https://de.wikipedia.org/wiki/Hauskatze"
+      }
+    },
+    {
+      "id": "tier-s03",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde der Zoo Berlin eröffnet – der älteste bestehende Zoo Deutschlands?",
+      "einheit": "",
+      "loesung": 1844,
+      "quelle": {
+        "titel": "Wikipedia – Zoologischer Garten Berlin",
+        "url": "https://de.wikipedia.org/wiki/Zoologischer_Garten_Berlin"
+      }
+    },
+    {
+      "id": "tier-s04",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde Eisbär Knut im Zoo Berlin geboren?",
+      "einheit": "",
+      "loesung": 2006,
+      "quelle": {
+        "titel": "Wikipedia – Knut (Eisbär)",
+        "url": "https://de.wikipedia.org/wiki/Knut_(Eisbär)"
+      }
+    },
+    {
+      "id": "tier-s05",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde der Nationalpark Bayerischer Wald gegründet – der erste Nationalpark Deutschlands?",
+      "einheit": "",
+      "loesung": 1970,
+      "quelle": {
+        "titel": "Wikipedia – Nationalpark Bayerischer Wald",
+        "url": "https://de.wikipedia.org/wiki/Nationalpark_Bayerischer_Wald"
       }
     }
   ]

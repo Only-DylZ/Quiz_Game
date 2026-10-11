@@ -627,9 +627,9 @@
       "daten": {
         "mitte": [
           30,
-          -90
+          -40
         ],
-        "zoom": 3
+        "zoom": 2
       },
       "loesung": {
         "lat": 28.573,

@@ -1023,10 +1023,10 @@
       "frage": "Wo liegt der Stadtstaat Singapur?",
       "daten": {
         "mitte": [
-          15,
-          100
+          20,
+          60
         ],
-        "zoom": 3
+        "zoom": 2
       },
       "loesung": {
         "lat": 1.352,
