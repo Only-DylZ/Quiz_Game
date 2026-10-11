@@ -1,8 +1,11 @@
 // play.js – Logik der Spieler-Seite (Handy).
 //
 // Das Handy kennt nie die Lösungen. Es zeigt nur, was der Host schickt:
+//   "themenwahl" → "Runde 2 – das Thema wird gewählt"
 //   "frage"      → Eingabe anzeigen, Antwort an den Host senden
+//                  (Stechfrage: nur die Spieler mit Gleichstand)
 //   "aufloesung" → richtig/falsch und die Lösung anzeigen
+//   "rundenende" → wer den Gewinnpunkt (GP) bekommt
 //   "ende"       → Spielende anzeigen
 
 import { raumBetreten, raumcodePruefen, neueId } from "./realtime.js";
@@ -30,7 +33,7 @@ let uhr = null;            // Countdown-Zeitgeber
 // ---------------------------------------------------------------------------
 // Anzeige: immer nur einen Abschnitt zeigen
 // ---------------------------------------------------------------------------
-const ABSCHNITTE = ["beitreten", "warten", "frage", "ergebnis", "ende"];
+const ABSCHNITTE = ["beitreten", "warten", "frage", "ergebnis", "rundenende", "ende"];
 
 function zeige(name) {
   for (const abschnitt of ABSCHNITTE) {
@@ -113,10 +116,24 @@ function abbrechen(text) {
 function beiNachricht(nachricht) {
   const daten = nachricht.daten || {};
 
-  if (nachricht.typ === "frage") frageAnzeigen(daten);
+  if (nachricht.typ === "themenwahl") themenwahlAnzeigen(daten);
+  else if (nachricht.typ === "frage") frageAnzeigen(daten);
   else if (nachricht.typ === "aufloesung") ergebnisAnzeigen(daten);
+  else if (nachricht.typ === "rundenende") rundenendeAnzeigen(daten);
   else if (nachricht.typ === "ende") spielEnde(daten);
   // Andere Nachrichten (z. B. Antworten anderer Spieler) ignorieren wir.
+}
+
+// Texte aus Nachrichten: nur echte Texte, gekürzt (angezeigt wird mit textContent)
+function text(wert, laenge = 80) {
+  return typeof wert === "string" ? wert.slice(0, laenge) : "";
+}
+
+function themenwahlAnzeigen(daten) {
+  clearInterval(uhr);
+  const runde = Number.isInteger(daten.runde) ? "Runde " + daten.runde + " – " : "";
+  $("wartenText").textContent = runde + "das Thema wird gewählt …";
+  zeige("warten");
 }
 
 function frageAnzeigen(daten) {
@@ -131,7 +148,17 @@ function frageAnzeigen(daten) {
 
   aktuelleNummer = daten.nummer;
   $("meldung").textContent = "";
-  $("fortschritt").textContent = "Frage " + (daten.nummer + 1) + " von " + daten.gesamt;
+
+  // Stechfrage, bei der wir nicht dabei sind: nur zuschauen
+  if (Array.isArray(daten.teilnehmer) && !daten.teilnehmer.includes(ich.id)) {
+    clearInterval(uhr);
+    $("wartenText").textContent =
+      "Stechfrage! Die Besten der Runde schätzen – schau auf den großen Bildschirm.";
+    zeige("warten");
+    return;
+  }
+
+  $("fortschritt").textContent = text(daten.titel);
   $("fragetext").textContent = daten.text;
   bildZeigen($("bild"), daten.bild); // prüft selbst, ob der Pfad erlaubt ist
   $("status").textContent = "";
@@ -169,21 +196,50 @@ function countdownStarten(sekunden) {
 function ergebnisAnzeigen(daten) {
   if (daten.nummer !== aktuelleNummer) return; // gehört nicht zu unserer Frage
   clearInterval(uhr);
+  $("loesungText").textContent = "Lösung: " + text(daten.loesungText);
+
+  // Stechfrage: keine Punkte – wer gewonnen hat, zeigt gleich das Rundenende
+  if (daten.stechen) {
+    $("ergebnisText").textContent = "Stechfrage vorbei";
+    $("standText").textContent = "Wer war näher dran? Schau auf den großen Bildschirm!";
+    zeige("ergebnis");
+    return;
+  }
 
   const ergebnisse = Array.isArray(daten.ergebnisse) ? daten.ergebnisse : [];
   const meins = ergebnisse.find((e) => e.id === ich.id);
 
-  let text;
-  if (!meins || !meins.beantwortet) text = "Keine Antwort 😴";
-  else if (meins.punkte > 0) text = "+" + zahlText(meins.punkte) + " Punkte 🎉";
-  else text = "Leider 0 Punkte";
+  let ergebnis;
+  if (!meins || !meins.beantwortet) ergebnis = "Keine Antwort 😴";
+  else if (meins.punkte > 0) ergebnis = "+" + zahlText(meins.punkte) + " Punkte 🎉";
+  else ergebnis = "Leider 0 Punkte";
 
-  $("ergebnisText").textContent = text;
-  $("loesungText").textContent = "Lösung: " + daten.loesungText;
+  $("ergebnisText").textContent = ergebnis;
   $("standText").textContent = meins
-    ? "Gesamt: " + zahlText(meins.gesamt) + " Punkte · Platz " + meins.platz
+    ? "In dieser Runde: " + zahlText(meins.gesamt) + " Punkte · Platz " + meins.platz
     : "";
   zeige("ergebnis");
+}
+
+function rundenendeAnzeigen(daten) {
+  clearInterval(uhr);
+  const ziel = Number(daten.ziel);
+  const thema = "„" + text(daten.thema, 40) + "“";
+
+  $("rundenSieger").textContent = daten.siegerId === ich.id
+    ? "Du gewinnst das Thema " + thema + "! 🏆"
+    : text(daten.siegerName, 16) + " gewinnt das Thema " + thema;
+
+  const stand = Array.isArray(daten.stand) ? daten.stand : [];
+  const meins = stand.find((s) => s.id === ich.id);
+  $("meineGp").textContent = meins ? "Du hast " + meins.gp + " von " + ziel + " GP" : "";
+
+  // Hat jemand das Ziel erreicht, ist das Spiel gleich vorbei
+  const vorbei = stand.some((s) => s.gp >= ziel);
+  $("rundenHinweis").textContent = vorbei
+    ? "Das war die letzte Runde!"
+    : "Gleich geht's mit dem nächsten Thema weiter …";
+  zeige("rundenende");
 }
 
 function spielEnde(daten) {
@@ -193,8 +249,7 @@ function spielEnde(daten) {
   const meins = rangliste.find((r) => r.id === ich.id);
 
   $("endeText").textContent = meins
-    ? "Platz " + meins.platz + " von " + rangliste.length +
-      " mit " + zahlText(meins.punkte) + " Punkten"
+    ? "Platz " + meins.platz + " von " + rangliste.length + " mit " + meins.gp + " GP"
     : "";
   zeige("ende");
 }

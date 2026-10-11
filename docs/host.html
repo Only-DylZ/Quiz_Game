@@ -30,11 +30,28 @@
       <h2>Spieler (<span id="anzahl">0</span>)</h2>
       <ul class="spielerliste" id="spielerliste"></ul>
 
-      <p class="hinweis" id="paketInfo">Lade Fragen …</p>
+      <!-- Einstellungen fürs ganze Spiel -->
+      <div class="einstellungen">
+        <label for="gpZiel">Gewinnpunkte (GP) zum Sieg</label>
+        <input id="gpZiel" type="number" min="1" max="10" value="3">
+      </div>
+
+      <p class="hinweis" id="themenInfo">Lade Themen …</p>
       <button id="start" disabled>Spiel starten</button>
     </section>
 
-    <!-- 2. Spiel: Frage, Countdown, danach Auflösung -->
+    <!-- 2. Vor jeder Runde: Thema wählen (ab Phase 4b: Glücksrad) -->
+    <section id="themenwahl" hidden>
+      <h1 id="rundeTitel"></h1>
+      <div class="einstellungen">
+        <label for="thema">Thema dieser Runde</label>
+        <select id="thema"></select>
+      </div>
+      <button id="rundeStarten">Runde starten</button>
+      <div id="themenwahlStand"></div>
+    </section>
+
+    <!-- 3. Spiel: Frage, Countdown, danach Auflösung -->
     <section id="spiel" hidden>
       <p class="kopf">
         <span id="fortschritt"></span>
@@ -58,7 +75,15 @@
       </div>
     </section>
 
-    <!-- 3. Spielende mit Siegertreppchen -->
+    <!-- 4. Ende einer Runde: wer bekommt den GP? -->
+    <section id="rundenende" hidden>
+      <p class="hinweis" id="rundenInfo"></p>
+      <h1 id="rundenSieger"></h1>
+      <div id="gpListe"></div>
+      <button id="nachRunde">Weiter</button>
+    </section>
+
+    <!-- 5. Spielende mit Siegertreppchen (nach GP) -->
     <section id="ende" hidden>
       <h1>Siegertreppchen</h1>
       <div class="treppchen" id="treppchen"></div>

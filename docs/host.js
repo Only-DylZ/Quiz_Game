@@ -1,18 +1,22 @@
 // host.js – Logik des Host-Bildschirms.
 //
-// Ablauf: Lobby → Frage (Countdown) → Auflösung → Zwischenstand → Frage → …
-//         → Siegertreppchen
+// Ablauf eines Spiels (Regeln: CLAUDE.md, Abschnitt 1 „Spielregeln“):
+//   Lobby → Themenwahl → Frage → Auflösung → Zwischenstand → Frage → …
+//         → (bei Gleichstand: Stechfrage) → Rundenende (1 GP für den Sieger)
+//         → Themenwahl → … → wer das GP-Ziel erreicht: Siegertreppchen
 //
 // Der Host ist der "Chef" des Spiels:
 // - nur er kennt das Fragenpaket mit den Lösungen,
 // - er schickt den Handys die Fragen OHNE Lösung,
 // - er nimmt die Antworten an und misst die Zeit,
 // - erst nach Ablauf der Zeit schickt er die Auflösung,
-// - er rechnet die Punkte aus und führt die Rangliste.
+// - er rechnet die Punkte aus und führt Rangliste und Gewinnpunkte (GP).
 
 import { neuerRaumcode, raumBetreten, neueId } from "./realtime.js";
-import { neu, bildGueltig, bildZeigen } from "./engine/hilfen.js";
-import { anteilRestzeit, ranglisteBerechnen } from "./engine/punkte.js";
+import { neu, zahlText, bildGueltig, bildZeigen } from "./engine/hilfen.js";
+import {
+  anteilRestzeit, ranglisteBerechnen, rundenSpitze, stechfrageSieger,
+} from "./engine/punkte.js";
 import { rundeZusammenstellen, kennung } from "./engine/runde.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
@@ -22,14 +26,13 @@ import * as reihenfolge from "./engine/reihenfolge.js";
 // Alle Modi, die wir können
 const MODI = { auswahl, schaetzen, grafik, reihenfolge };
 
-// Welches Paket gespielt wird (Themenauswahl kommt in Phase 4).
-// Zum Testen: host.html?paket=geographie lädt packs/geographie.json.
-// Nur Kleinbuchstaben, Ziffern und "-" erlaubt – so kann niemand über die
-// Adresse andere Dateien laden lassen (z. B. "../irgendwas").
-const PAKET_NAME = new URLSearchParams(location.search).get("paket") || "raumfahrt";
-const PAKET_DATEI = /^[a-z0-9-]{1,40}$/.test(PAKET_NAME)
-  ? "packs/" + PAKET_NAME + ".json"
-  : "packs/raumfahrt.json";
+// Dateinamen von Paketen: nur Kleinbuchstaben, Ziffern und "-" plus ".json".
+// So kann niemand über index.json oder die Adresse andere Dateien laden lassen
+// (z. B. "../irgendwas").
+const DATEI_MUSTER = /^[a-z0-9-]{1,40}\.json$/;
+
+// Zum Testen: host.html?paket=geographie wählt dieses Thema für Runde 1 vor.
+const PAKET_AUS_LINK = (new URLSearchParams(location.search).get("paket") || "") + ".json";
 
 // Antwortzeit in Sekunden, wenn die Frage keine eigene "zeit" hat
 const STANDARD_ZEIT = 20;
@@ -37,15 +40,42 @@ const STANDARD_ZEIT = 20;
 // So viele Plätze zeigt der Zwischenstand
 const ZWISCHENSTAND_PLAETZE = 10;
 
+// Grenzen für die Einstellung "GPs zum Sieg"
+const GP_ZIEL_MIN = 1;
+const GP_ZIEL_MAX = 10;
+
 // Kurzschreibweise, um Elemente per id zu finden
 const $ = (id) => document.getElementById(id);
+
+// Abschnitte der Seite – es ist immer genau einer sichtbar
+const ABSCHNITTE = ["lobby", "themenwahl", "spiel", "rundenende", "ende"];
+
+function zeige(name) {
+  for (const abschnitt of ABSCHNITTE) {
+    $(abschnitt).hidden = abschnitt !== name;
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Spielzustand
 // ---------------------------------------------------------------------------
+let schritt = "lobby";      // "lobby" | "themenwahl" | "frage" | "aufloesung"
+                            // | "zwischenstand" | "rundenende" | "ende"
+let themen = [];            // alle Themen aus packs/index.json: [{ datei, thema }]
+let gespielteThemen = new Set(); // Dateien, die in diesem Spiel schon dran waren
+let gpZiel = 3;             // so viele GP braucht man zum Sieg
+let rundenNummer = 0;       // die wievielte Runde gerade läuft (1, 2, …)
+let aktuellesThema = null;  // { datei, thema } der laufenden Runde
+
 let fragen = [];            // die 10 Fragen dieser Runde (zufällig aus dem Pool)
-let nummer = -1;            // Index der aktuellen Frage (-1 = noch nicht gestartet)
-let schritt = "lobby";      // "lobby" | "frage" | "aufloesung" | "zwischenstand" | "ende"
+let stechfragen = [];       // Stechfragen des Pakets (nur bei Gleichstand)
+let nummer = -1;            // Index der aktuellen Frage in "fragen"
+let frageZaehler = 0;       // zählt alle Fragen des Spiels – eindeutige Nummer für die Handys
+let aktuelleFrage = null;   // die gerade gestellte Frage (auch eine Stechfrage)
+let stechen = null;         // während einer Stechfrage: Set mit den ids der Teilnehmer
+let stechSiegerId = null;   // wer die Stechfrage gewonnen hat
+let stechInfo = "";         // kurzer Text, wie die Stechfrage entschieden wurde
+
 let restzeit = 0;           // Sekunden bis zur Auflösung
 let gesamtzeit = 0;         // Antwortzeit der aktuellen Frage in Sekunden
 let uhr = null;             // der Countdown-Zeitgeber
@@ -53,7 +83,8 @@ let startZeit = 0;          // wann die aktuelle Frage gestartet wurde (ms)
 let antworten = new Map();  // Spieler-id → { antwort, zeitMs }  (endgültig gesendet)
 let entwuerfe = new Map();  // Spieler-id → antwort  (getippt, aber noch nicht gesendet)
 let anwesend = [];          // Spieler, die gerade im Raum sind: [{ id, name }]
-let spielstand = new Map(); // Spieler-id → { id, name, punkte } – alle, die je da waren
+let spielstand = new Map(); // Spieler-id → { id, name, punkte, gp } – alle, die je da waren
+                            // punkte = Punkte der laufenden Runde, gp = Gewinnpunkte
 
 // ---------------------------------------------------------------------------
 // 1. Raum öffnen
@@ -78,72 +109,49 @@ raum.bereit.catch((fehler) => {
 });
 
 // ---------------------------------------------------------------------------
-// 2. Fragenpaket laden
+// 2. Themenliste laden (packs/index.json)
 // ---------------------------------------------------------------------------
-paketLaden();
+themenLaden();
 
-async function paketLaden() {
+async function themenLaden() {
   try {
-    const antwort = await fetch(PAKET_DATEI);
-    const paket = await antwort.json();
+    const antwort = await fetch("packs/index.json");
+    const liste = await antwort.json();
+    const pakete = Array.isArray(liste.pakete) ? liste.pakete : [];
 
-    // Nur Fragen übernehmen, deren Modus wir kennen und die gültig sind
-    const alle = Array.isArray(paket.fragen) ? paket.fragen : [];
-    const pool = alle.filter(frageSpielbar);
+    // Nur Einträge mit erlaubtem Dateinamen und einem Thema übernehmen
+    themen = pakete
+      .filter((p) => typeof p.datei === "string" && DATEI_MUSTER.test(p.datei))
+      .filter((p) => typeof p.thema === "string" && p.thema !== "")
+      .map((p) => ({ datei: p.datei, thema: p.thema.slice(0, 40) }));
 
-    // Aus dem Pool 10 zufällige Fragen ziehen – bisher ungespielte zuerst
-    const gespielt = gedaechtnisLaden(pool);
-    fragen = rundeZusammenstellen(pool, gespielt);
-
-    const neue = pool.filter((f) => !gespielt.has(kennung(f))).length;
-    $("paketInfo").textContent =
-      "Paket „" + paket.thema + "“: " + pool.length + " Fragen im Pool, " +
-      neue + " davon noch nie gespielt";
+    $("themenInfo").textContent = themen.length + " Themen bereit";
   } catch (fehler) {
-    $("paketInfo").textContent = "Fragenpaket konnte nicht geladen werden.";
+    $("themenInfo").textContent = "Themenliste konnte nicht geladen werden.";
     console.error(fehler);
   }
   startKnopfAktualisieren();
 }
 
 // ---------------------------------------------------------------------------
-// Gedächtnis: welche Fragen dieses Pakets schon gespielt wurden
+// 3. Ein Fragenpaket für die Runde laden
 // ---------------------------------------------------------------------------
-// Liegt im Browser des Hosts (localStorage), bleibt also auch über mehrere
-// Spielabende erhalten. Enthält nur Kennungen wie "rf-03", keine Lösungen.
-const GEDAECHTNIS_SCHLUESSEL = "quiz-gespielt:" + PAKET_DATEI;
+async function paketLaden(eintrag) {
+  const antwort = await fetch("packs/" + eintrag.datei);
+  if (!antwort.ok) throw new Error("Paket nicht gefunden (" + antwort.status + ")");
+  const paket = await antwort.json();
 
-function gedaechtnisLaden(pool) {
-  let gespielt = new Set();
-  try {
-    const gespeichert = JSON.parse(localStorage.getItem(GEDAECHTNIS_SCHLUESSEL) || "[]");
-    if (Array.isArray(gespeichert)) gespielt = new Set(gespeichert.filter((k) => typeof k === "string"));
-  } catch {
-    // Kein Speicher verfügbar (z. B. privates Fenster) – dann eben ohne Gedächtnis
-  }
+  // Nur Fragen übernehmen, deren Modus wir kennen und die gültig sind
+  const alle = Array.isArray(paket.fragen) ? paket.fragen : [];
+  const pool = alle.filter(frageSpielbar);
+  if (pool.length === 0) throw new Error("Das Paket enthält keine spielbaren Fragen.");
 
-  // Alle Fragen schon gespielt? Dann beginnt das Gedächtnis von vorne.
-  if (pool.every((f) => gespielt.has(kennung(f)))) {
-    gespielt = new Set();
-    try {
-      localStorage.removeItem(GEDAECHTNIS_SCHLUESSEL);
-    } catch {
-      // ohne Speicher geht es auch
-    }
-  }
-  return gespielt;
-}
+  // Aus dem Pool 10 zufällige Fragen ziehen – bisher ungespielte zuerst
+  fragen = rundeZusammenstellen(pool, gedaechtnisLaden(eintrag.datei, pool));
 
-// Merkt sich eine Frage als gespielt (wird beim Zeigen der Frage aufgerufen)
-function alsGespieltMerken(frage) {
-  try {
-    const gespeichert = JSON.parse(localStorage.getItem(GEDAECHTNIS_SCHLUESSEL) || "[]");
-    const liste = Array.isArray(gespeichert) ? gespeichert : [];
-    if (!liste.includes(kennung(frage))) liste.push(kennung(frage));
-    localStorage.setItem(GEDAECHTNIS_SCHLUESSEL, JSON.stringify(liste));
-  } catch {
-    // ohne Speicher geht es auch
-  }
+  // Stechfragen sind immer Schätzfragen
+  const stech = Array.isArray(paket.stechfragen) ? paket.stechfragen : [];
+  stechfragen = stech.filter((f) => f.modus === "schaetzen" && frageSpielbar(f));
 }
 
 // Prüft eine Frage aus dem Paket: gemeinsame Pflichtfelder + Modus-Regeln
@@ -159,17 +167,60 @@ function frageSpielbar(frage) {
 }
 
 // ---------------------------------------------------------------------------
-// 3. Spieler kommen und gehen
+// Gedächtnis: welche Fragen eines Pakets schon gespielt wurden
+// ---------------------------------------------------------------------------
+// Liegt im Browser des Hosts (localStorage), bleibt also auch über mehrere
+// Spielabende erhalten. Enthält nur Kennungen wie "rf-03", keine Lösungen.
+function gedaechtnisSchluessel(datei) {
+  return "quiz-gespielt:packs/" + datei;
+}
+
+function gedaechtnisLaden(datei, pool) {
+  let gespielt = new Set();
+  try {
+    const gespeichert = JSON.parse(localStorage.getItem(gedaechtnisSchluessel(datei)) || "[]");
+    if (Array.isArray(gespeichert)) gespielt = new Set(gespeichert.filter((k) => typeof k === "string"));
+  } catch {
+    // Kein Speicher verfügbar (z. B. privates Fenster) – dann eben ohne Gedächtnis
+  }
+
+  // Alle Fragen schon gespielt? Dann beginnt das Gedächtnis von vorne.
+  if (pool.every((f) => gespielt.has(kennung(f)))) {
+    gespielt = new Set();
+    try {
+      localStorage.removeItem(gedaechtnisSchluessel(datei));
+    } catch {
+      // ohne Speicher geht es auch
+    }
+  }
+  return gespielt;
+}
+
+// Merkt sich eine Frage als gespielt (wird beim Zeigen der Frage aufgerufen)
+function alsGespieltMerken(datei, frage) {
+  try {
+    const schluessel = gedaechtnisSchluessel(datei);
+    const gespeichert = JSON.parse(localStorage.getItem(schluessel) || "[]");
+    const liste = Array.isArray(gespeichert) ? gespeichert : [];
+    if (!liste.includes(kennung(frage))) liste.push(kennung(frage));
+    localStorage.setItem(schluessel, JSON.stringify(liste));
+  } catch {
+    // ohne Speicher geht es auch
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 4. Spieler kommen und gehen
 // ---------------------------------------------------------------------------
 function beiTeilnehmern(teilnehmer) {
   anwesend = teilnehmer
     .filter((t) => t.rolle === "spieler" && idGueltig(t.id))
     .map((t) => ({ id: t.id, name: String(t.name || "?").slice(0, 16) }));
 
-  // Neue Spieler mit 0 Punkten in den Spielstand aufnehmen
+  // Neue Spieler mit 0 Punkten und 0 GP in den Spielstand aufnehmen
   for (const s of anwesend) {
     if (!spielstand.has(s.id)) {
-      spielstand.set(s.id, { id: s.id, name: s.name, punkte: 0 });
+      spielstand.set(s.id, { id: s.id, name: s.name, punkte: 0, gp: 0 });
     }
   }
 
@@ -198,34 +249,126 @@ function idGueltig(id) {
 }
 
 function startKnopfAktualisieren() {
-  $("start").disabled = !(fragen.length > 0 && anwesend.length > 0);
+  $("start").disabled = !(themen.length > 0 && anwesend.length > 0);
 }
 
+// ---------------------------------------------------------------------------
+// 5. Knöpfe
+// ---------------------------------------------------------------------------
 $("start").addEventListener("click", () => {
-  $("lobby").hidden = true;
-  $("spiel").hidden = false;
-  naechsteFrage();
+  // Einstellung prüfen: ganze Zahl zwischen GP_ZIEL_MIN und GP_ZIEL_MAX
+  const wert = Number.parseInt($("gpZiel").value, 10);
+  gpZiel = Number.isInteger(wert) ? Math.min(GP_ZIEL_MAX, Math.max(GP_ZIEL_MIN, wert)) : 3;
+  themenwahlZeigen();
 });
 
-// Der Weiter-Knopf macht je nach Schritt etwas anderes
+$("rundeStarten").addEventListener("click", rundeStarten);
+
+// Der Weiter-Knopf während des Spiels macht je nach Schritt etwas anderes
 $("weiter").addEventListener("click", () => {
-  if (schritt === "aufloesung") zwischenstandZeigen();
+  if (schritt === "aufloesung" && stechen) rundeAbschliessen(stechSiegerId, stechInfo);
+  else if (schritt === "aufloesung") zwischenstandZeigen();
+  else if (schritt === "zwischenstand" && nummer + 1 >= fragen.length) rundeAuswerten();
   else if (schritt === "zwischenstand") naechsteFrage();
 });
 
+// Nach dem Rundenende: nächstes Thema oder Siegertreppchen
+$("nachRunde").addEventListener("click", () => {
+  if (schritt !== "rundenende") return;
+  const gewonnen = [...spielstand.values()].some((s) => s.gp >= gpZiel);
+  if (gewonnen) spielEnde();
+  else themenwahlZeigen();
+});
+
 // ---------------------------------------------------------------------------
-// 4. Eine Frage stellen
+// 6. Themenwahl vor jeder Runde
 // ---------------------------------------------------------------------------
-function naechsteFrage() {
-  nummer++;
-  if (nummer >= fragen.length) {
-    spielEnde();
+// Vorläufig wählt der Host das Thema selbst aus. In Phase 4b ersetzt das
+// Glücksrad mit den Kandidaten der Spieler diesen Schritt.
+function themenwahlZeigen() {
+  schritt = "themenwahl";
+  zeige("themenwahl");
+  $("rundeTitel").textContent = "Runde " + (rundenNummer + 1);
+  $("rundeStarten").disabled = false;
+
+  // Nur Themen, die in diesem Spiel noch nicht dran waren.
+  // Sind alle durch, dürfen alle wieder gewählt werden.
+  let offen = themen.filter((t) => !gespielteThemen.has(t.datei));
+  if (offen.length === 0) {
+    gespielteThemen = new Set();
+    offen = themen;
+  }
+
+  const auswahlListe = $("thema");
+  auswahlListe.replaceChildren();
+  for (const t of offen) {
+    const option = neu("option", "", t.thema);
+    option.value = t.datei;
+    auswahlListe.append(option);
+  }
+
+  // Vorauswahl: in Runde 1 das Thema aus dem Link (?paket=…), sonst zufällig
+  const ausLink = offen.find((t) => t.datei === PAKET_AUS_LINK);
+  const vorschlag = rundenNummer === 0 && ausLink
+    ? ausLink
+    : offen[Math.floor(Math.random() * offen.length)];
+  auswahlListe.value = vorschlag.datei;
+
+  // Ab Runde 2: aktuellen GP-Stand zeigen
+  $("themenwahlStand").replaceChildren();
+  if (rundenNummer > 0) {
+    $("themenwahlStand").append(
+      neu("h2", "", "Stand (Ziel: " + gpZiel + " GP)"),
+      ranglisteElement(gpRangliste(), " GP")
+    );
+  }
+
+  raum.senden("themenwahl", { runde: rundenNummer + 1 });
+}
+
+async function rundeStarten() {
+  if (schritt !== "themenwahl") return;
+  const eintrag = themen.find((t) => t.datei === $("thema").value);
+  if (!eintrag) return;
+
+  $("rundeStarten").disabled = true; // nicht doppelt klicken
+  $("meldung").textContent = "";
+  try {
+    await paketLaden(eintrag);
+  } catch (fehler) {
+    $("meldung").textContent = "Thema „" + eintrag.thema + "“ konnte nicht geladen werden: " + fehler.message;
+    $("rundeStarten").disabled = false;
     return;
   }
 
+  // Neue Runde: Punkte aller Spieler zurück auf 0
+  aktuellesThema = eintrag;
+  gespielteThemen.add(eintrag.datei);
+  rundenNummer++;
+  for (const s of spielstand.values()) s.punkte = 0;
+  nummer = -1;
+
+  zeige("spiel");
+  naechsteFrage();
+}
+
+// ---------------------------------------------------------------------------
+// 7. Eine Frage stellen
+// ---------------------------------------------------------------------------
+function naechsteFrage() {
+  nummer++;
   const frage = fragen[nummer];
+  alsGespieltMerken(aktuellesThema.datei, frage);
+  $("fortschritt").textContent =
+    aktuellesThema.thema + " · Frage " + (nummer + 1) + " von " + fragen.length;
+  frageStellen(frage);
+}
+
+// Zeigt eine Frage (normal oder Stechfrage) und startet den Countdown
+function frageStellen(frage) {
   const modul = MODI[frage.modus];
-  alsGespieltMerken(frage);
+  aktuelleFrage = frage;
+  frageZaehler++;
 
   antworten = new Map();
   entwuerfe = new Map();
@@ -233,7 +376,6 @@ function naechsteFrage() {
   restzeit = gesamtzeit;
 
   // Anzeige auf dem großen Bildschirm
-  $("fortschritt").textContent = "Frage " + (nummer + 1) + " von " + fragen.length;
   $("fragetext").textContent = frage.frage;
   bildZeigen($("bild"), frage.bild ? frage.bild.datei : null);
   modul.zeigeFrage($("bereich"), modul.oeffentlicheDaten(frage));
@@ -251,15 +393,16 @@ function naechsteFrage() {
 
 // Schickt die aktuelle Frage an alle Handys – OHNE Lösung
 function frageSenden() {
-  const frage = fragen[nummer];
+  const frage = aktuelleFrage;
   raum.senden("frage", {
-    nummer: nummer,
-    gesamt: fragen.length,
+    nummer: frageZaehler,                     // eindeutig im ganzen Spiel
+    titel: $("fortschritt").textContent,      // z. B. "Sport · Frage 3 von 10"
     modus: frage.modus,
     text: frage.frage,
     restzeit: restzeit,
     daten: MODI[frage.modus].oeffentlicheDaten(frage),
     bild: frage.bild ? frage.bild.datei : null, // nur der neutrale Dateiname
+    teilnehmer: stechen ? [...stechen] : null,  // bei der Stechfrage: wer antworten darf
   });
 }
 
@@ -270,7 +413,7 @@ function sekundeVergangen() {
 }
 
 // ---------------------------------------------------------------------------
-// 5. Antworten von den Handys annehmen
+// 8. Antworten von den Handys annehmen
 // ---------------------------------------------------------------------------
 function beiNachricht(nachricht) {
   if (nachricht.typ === "antwort") {
@@ -280,21 +423,26 @@ function beiNachricht(nachricht) {
   }
 }
 
+// Wer muss bei dieser Frage antworten? Normal alle, bei der Stechfrage nur
+// die Spieler mit Gleichstand.
+function sollenAntworten() {
+  return stechen ? anwesend.filter((s) => stechen.has(s.id)) : anwesend;
+}
+
 // Darf dieser Spieler zur aktuellen Frage gerade (noch) etwas schicken?
 // Alles prüfen – eine Nachricht könnte auch manipuliert sein.
 function darfAntworten(id, antwortNummer) {
   return (
-    schritt === "frage" &&                    // Zeit noch nicht um
-    antwortNummer === nummer &&               // keine alte Frage
-    anwesend.some((s) => s.id === id) &&      // bekannter Spieler
-    !antworten.has(id)                        // noch nicht endgültig geantwortet
+    schritt === "frage" &&                      // Zeit noch nicht um
+    antwortNummer === frageZaehler &&           // keine alte Frage
+    sollenAntworten().some((s) => s.id === id) && // bekannter (und bei Stechfrage: beteiligter) Spieler
+    !antworten.has(id)                          // noch nicht endgültig geantwortet
   );
 }
 
 function antwortIstGueltig(antwort) {
-  const frage = fragen[nummer];
-  const modul = MODI[frage.modus];
-  return modul.antwortGueltig(modul.oeffentlicheDaten(frage), antwort);
+  const modul = MODI[aktuelleFrage.modus];
+  return modul.antwortGueltig(modul.oeffentlicheDaten(aktuelleFrage), antwort);
 }
 
 function antwortAnnehmen({ id, nummer: antwortNummer, antwort }) {
@@ -316,27 +464,24 @@ function entwurfAnnehmen({ id, nummer: antwortNummer, antwort }) {
   else if (antwortIstGueltig(antwort)) entwuerfe.set(id, antwort);
 }
 
-// Haben alle anwesenden Spieler geantwortet? Dann nicht weiter warten.
+// Haben alle, die antworten sollen, geantwortet? Dann nicht weiter warten.
 function alleFertigPruefen() {
-  if (schritt === "frage" && anwesend.every((s) => antworten.has(s.id))) aufloesen();
+  if (schritt === "frage" && sollenAntworten().every((s) => antworten.has(s.id))) aufloesen();
 }
 
 function zaehlerAktualisieren() {
   $("antwortZaehler").textContent =
-    antworten.size + " von " + anwesend.length + " haben geantwortet";
+    antworten.size + " von " + sollenAntworten().length + " haben geantwortet";
 }
 
 // ---------------------------------------------------------------------------
-// 6. Auflösung – erst jetzt erfahren die Handys die Lösung
+// 9. Auflösung – erst jetzt erfahren die Handys die Lösung
 // ---------------------------------------------------------------------------
 function aufloesen() {
   if (schritt !== "frage") return; // nicht doppelt auflösen
   schritt = "aufloesung";
   clearInterval(uhr);
   $("countdown").textContent = "";
-
-  const frage = fragen[nummer];
-  const modul = MODI[frage.modus];
 
   // Wer nicht gesendet hat, aber etwas eingetippt hatte: Entwurf zählt.
   // Als Antwortzeit gilt dann die volle Zeit (kein Tempo-Bonus).
@@ -346,8 +491,23 @@ function aufloesen() {
     }
   }
 
-  // Punkte für jede Antwort berechnen und zum Spielstand addieren
-  const punkteDieseRunde = new Map(); // id → Punkte
+  if (stechen) stechfrageAuswerten();
+  else frageAuswerten();
+
+  // Großer Bildschirm: Erklärung und Quelle
+  const frage = aktuelleFrage;
+  $("antwortZaehler").hidden = true;
+  $("erklaerung").textContent = frage.erklaerung || "";
+  quelleAnzeigen(frage.quelle);
+  bildQuelleAnzeigen(frage.bild);
+  $("infos").hidden = false;
+}
+
+// Normale Frage: Punkte vergeben, Ergebnis an die Handys
+function frageAuswerten() {
+  const frage = aktuelleFrage;
+  const modul = MODI[frage.modus];
+  const punkteDieseFrage = new Map(); // id → Punkte
   const fuerAnzeige = [];             // [{ name, antwort, punkte }]
 
   for (const [id, eintrag] of antworten) {
@@ -356,33 +516,27 @@ function aufloesen() {
     const spieler = spielstand.get(id);
 
     spieler.punkte += punkte;
-    punkteDieseRunde.set(id, punkte);
+    punkteDieseFrage.set(id, punkte);
     fuerAnzeige.push({ name: spieler.name, antwort: eintrag.antwort, punkte });
   }
 
-  // Jedes Handy bekommt: eigene Punkte dieser Runde, Gesamtpunkte, Platz
+  // Jedes Handy bekommt: eigene Punkte dieser Frage, Rundenpunkte, Platz
   const ergebnisse = ranglisteBerechnen([...spielstand.values()]).map((r) => ({
     id: r.id,
     beantwortet: antworten.has(r.id),
-    punkte: punkteDieseRunde.get(r.id) || 0,
+    punkte: punkteDieseFrage.get(r.id) || 0,
     gesamt: r.punkte,
     platz: r.platz,
   }));
 
   raum.senden("aufloesung", {
-    nummer: nummer,
+    nummer: frageZaehler,
     loesungText: modul.loesungAlsText(frage),
     ergebnisse: ergebnisse,
   });
 
-  // Großer Bildschirm: Lösung, Erklärung, Quelle
   modul.zeigeAufloesung($("bereich"), frage, fuerAnzeige);
-  $("antwortZaehler").hidden = true;
-  $("erklaerung").textContent = frage.erklaerung || "";
-  quelleAnzeigen(frage.quelle);
-  bildQuelleAnzeigen(frage.bild);
   $("weiter").textContent = "Zwischenstand";
-  $("infos").hidden = false;
 }
 
 // Quelle als Text und – nur bei echten http(s)-Adressen – als Link
@@ -419,11 +573,11 @@ function bildQuelleAnzeigen(bild) {
 }
 
 // ---------------------------------------------------------------------------
-// 7. Zwischenstand nach jeder Frage
+// 10. Zwischenstand nach jeder Frage
 // ---------------------------------------------------------------------------
 function zwischenstandZeigen() {
   schritt = "zwischenstand";
-  $("fragetext").textContent = "Zwischenstand";
+  $("fragetext").textContent = "Zwischenstand – " + aktuellesThema.thema;
   $("erklaerung").textContent = "";
   $("quelle").replaceChildren();
   $("bildQuelle").replaceChildren();
@@ -433,33 +587,140 @@ function zwischenstandZeigen() {
   $("bereich").replaceChildren(ranglisteElement(rangliste.slice(0, ZWISCHENSTAND_PLAETZE)));
 
   const letzteFrage = nummer + 1 >= fragen.length;
-  $("weiter").textContent = letzteFrage ? "Zum Siegertreppchen" : "Nächste Frage";
+  $("weiter").textContent = letzteFrage ? "Rundenende" : "Nächste Frage";
 }
 
-// Baut eine nummerierte Liste: "1. Anna – 1.840"
-function ranglisteElement(rangliste) {
+// Baut eine nummerierte Liste: "1. Anna – 1840" (bzw. "2 GP" mit einheit " GP")
+function ranglisteElement(rangliste, einheit = "") {
   const liste = neu("ol", "rangliste");
   for (const r of rangliste) {
     const eintrag = neu("li");
     eintrag.append(
       neu("span", "platz", r.platz + "."),
       neu("span", "", r.name),
-      neu("span", "punkte", r.punkte)
+      neu("span", "punkte", r.punkte + einheit)
     );
     liste.append(eintrag);
   }
   return liste;
 }
 
+// Rangliste nach Gewinnpunkten (nutzt dieselbe Rechnung wie die Punkte-Rangliste)
+function gpRangliste() {
+  const nachGp = [...spielstand.values()].map((s) => ({ id: s.id, name: s.name, punkte: s.gp }));
+  return ranglisteBerechnen(nachGp);
+}
+
 // ---------------------------------------------------------------------------
-// 8. Spielende mit Siegertreppchen
+// 11. Rundenende: wer bekommt den GP? Bei Gleichstand: Stechfrage
+// ---------------------------------------------------------------------------
+function rundeAuswerten() {
+  const spitze = rundenSpitze([...spielstand.values()]);
+  if (spitze.length === 1) rundeAbschliessen(spitze[0].id, "");
+  else stechfrageStarten(spitze);
+}
+
+function stechfrageStarten(spitze) {
+  // Nur wer noch im Raum ist, kann die Stechfrage beantworten
+  const dabei = spitze.filter((s) => anwesend.some((a) => a.id === s.id));
+
+  if (dabei.length === 1) {
+    rundeAbschliessen(dabei[0].id, "Gleichstand – die anderen sind nicht mehr da");
+    return;
+  }
+  if (dabei.length === 0 || stechfragen.length === 0) {
+    // Kommt praktisch nie vor (Paket ohne Stechfrage o. Ä.)
+    rundeAbschliessen(zufaelligEiner(spitze).id, "Gleichstand – das Los hat entschieden");
+    return;
+  }
+
+  stechen = new Set(dabei.map((s) => s.id));
+  $("fortschritt").textContent = "Stechfrage: " + dabei.map((s) => s.name).join(" gegen ");
+  frageStellen(zufaelligEiner(stechfragen));
+}
+
+// Stechfrage auswerten: keine Punkte, nur wer näher dran ist (siehe punkte.js)
+function stechfrageAuswerten() {
+  const frage = aktuelleFrage;
+  const liste = [...antworten].map(([id, e]) => ({ id, antwort: e.antwort, zeitMs: e.zeitMs }));
+
+  stechSiegerId = stechfrageSieger(liste, frage.loesung);
+  stechInfo = "nach Stechfrage";
+  if (stechSiegerId === null) {
+    // Niemand hat geantwortet – dann entscheidet das Los
+    stechSiegerId = zufaelligEiner([...stechen]);
+    stechInfo = "Stechfrage ohne Antworten – das Los hat entschieden";
+  }
+
+  raum.senden("aufloesung", {
+    nummer: frageZaehler,
+    loesungText: schaetzen.loesungAlsText(frage),
+    ergebnisse: [],
+    stechen: true,
+  });
+
+  // Großer Bildschirm: Lösung und alle Schätzungen, die beste zuerst
+  const abstand = (a) => Math.abs(a.antwort - frage.loesung);
+  const sortiert = [...liste].sort((a, b) => abstand(a) - abstand(b) || a.zeitMs - b.zeitMs);
+  const tabelle = neu("ol", "schaetzliste");
+  for (const a of sortiert) {
+    const eintrag = neu("li");
+    eintrag.append(
+      neu("span", "", spielstand.get(a.id).name),
+      neu("span", "", zahlText(a.antwort) + " " + frage.einheit),
+      neu("span", "plus", zahlText(abstand(a)) + " daneben")
+    );
+    tabelle.append(eintrag);
+  }
+  $("bereich").replaceChildren(
+    neu("p", "gross-hinweis", "Lösung: " + schaetzen.loesungAlsText(frage)),
+    tabelle
+  );
+  $("weiter").textContent = "Rundensieger";
+}
+
+// Der Sieger der Runde bekommt 1 GP – Anzeige und Nachricht an die Handys
+function rundeAbschliessen(siegerId, info) {
+  stechen = null;
+  schritt = "rundenende";
+  zeige("rundenende");
+
+  const sieger = spielstand.get(siegerId);
+  sieger.gp++;
+  const stand = gpRangliste();
+  const gewonnen = sieger.gp >= gpZiel;
+
+  $("rundenInfo").textContent =
+    "Runde " + rundenNummer + " · " + aktuellesThema.thema + (info ? " · " + info : "");
+  $("rundenSieger").textContent = "🏆 " + sieger.name + " gewinnt das Thema!";
+  $("gpListe").replaceChildren(
+    ranglisteElement(stand, " GP"),
+    neu("p", "hinweis", "Ziel: " + gpZiel + " GP")
+  );
+  $("nachRunde").textContent = gewonnen ? "Zum Siegertreppchen" : "Nächstes Thema";
+
+  raum.senden("rundenende", {
+    thema: aktuellesThema.thema,
+    siegerId: sieger.id,
+    siegerName: sieger.name,
+    ziel: gpZiel,
+    stand: stand.map((r) => ({ id: r.id, gp: r.punkte, platz: r.platz })),
+  });
+}
+
+// Wählt zufällig ein Element aus einer Liste
+function zufaelligEiner(liste) {
+  return liste[Math.floor(Math.random() * liste.length)];
+}
+
+// ---------------------------------------------------------------------------
+// 12. Spielende mit Siegertreppchen (nach GP)
 // ---------------------------------------------------------------------------
 function spielEnde() {
   schritt = "ende";
-  $("spiel").hidden = true;
-  $("ende").hidden = false;
+  zeige("ende");
 
-  const rangliste = ranglisteBerechnen([...spielstand.values()]);
+  const rangliste = gpRangliste();
 
   // Treppchen: Platz 2 links, Platz 1 in der Mitte, Platz 3 rechts
   const treppchen = $("treppchen");
@@ -470,16 +731,16 @@ function spielEnde() {
     const stufe = neu("div", "stufe stufe-" + (index + 1));
     stufe.append(
       neu("span", "name", r.name),
-      neu("span", "punkte", r.punkte),
+      neu("span", "punkte", r.punkte + " GP"),
       neu("span", "platz", r.platz)
     );
     treppchen.append(stufe);
   }
 
   // Alle weiteren Plätze darunter
-  $("endliste").replaceChildren(ranglisteElement(rangliste.slice(3)));
+  $("endliste").replaceChildren(ranglisteElement(rangliste.slice(3), " GP"));
 
   raum.senden("ende", {
-    rangliste: rangliste.map((r) => ({ id: r.id, name: r.name, punkte: r.punkte, platz: r.platz })),
+    rangliste: rangliste.map((r) => ({ id: r.id, name: r.name, gp: r.punkte, platz: r.platz })),
   });
 }

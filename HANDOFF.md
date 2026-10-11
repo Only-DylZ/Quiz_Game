@@ -49,12 +49,26 @@ CLAUDE.md entsprechend angepasst.
 - Werkstatt-Skripte (Baukasten zum Schreiben der Pakete) lagen nur im Scratchpad;
   die Pakete selbst (JSON) sind die Quelle der Wahrheit.
 
-## Nächster Schritt: Phase 4 – Themenrunden
+## Phase 4a – gebaut (wartet auf Test durch den Nutzer)
 
-Regeln stehen in CLAUDE.md Abschnitt 1 („Spielregeln“). Vorschlag zur Reihenfolge:
-- 4a: Runden (10 Fragen pro Thema), Punkte pro Runde, 1 GP für den Rundensieger,
-  Stechfrage bei Gleichstand, GP-Ziel beim Start einstellbar, Siegertreppchen nach GP.
-- 4b: Kandidatenwahl auf dem Handy (3 zufällige ungespielte Themen) + Glücksrad.
+- Lobby: Einstellung „Gewinnpunkte (GP) zum Sieg“ (1–10, Standard 3).
+- Vor jeder Runde: Themenwahl – **vorläufig** wählt der Host aus einer Liste
+  der in diesem Spiel noch nicht gespielten Themen (zufällig vorausgewählt,
+  in Runde 1 per `?paket=<name>` vorwählbar). Wird in 4b durch Kandidaten + Glücksrad ersetzt.
+- Runde = 10 Fragen, Punkte starten bei 0. Danach `rundenSpitze` (punkte.js):
+  ein Bester → 1 GP; Gleichstand → Stechfrage (zufällig aus `stechfragen`) nur
+  für die Gleichstand-Spieler, `stechfrageSieger`: näher dran, sonst schneller.
+  Sonderfälle: nur einer der Gleichstand-Spieler noch da → er gewinnt;
+  niemand antwortet / keine Stechfrage → Los.
+- Rundenende-Bildschirm mit GP-Stand; wer das Ziel erreicht → Siegertreppchen nach GP.
+- Neue Nachrichten `themenwahl`, `rundenende`; `frage` hat jetzt `titel` und
+  `teilnehmer` (siehe Tabelle in CLAUDE.md). Tests für die GP-Regeln ergänzt.
+
+## Nächster Schritt
+
+- Nutzer testet 4a (z. B. GP-Ziel 2, mit zwei Fenstern Gleichstand provozieren:
+  beide gar nicht antworten → beide 0 Punkte → Stechfrage).
+- Dann 4b: Kandidatenwahl auf dem Handy (3 zufällige ungespielte Themen) + Glücksrad.
 - 4c: Booster-Joker (Themenjoker erst mit Phase 5).
 - Später: Pools in Blöcken à 30 erweitern (Ziel 150), Raumfahrt zuerst (nur 12).
 

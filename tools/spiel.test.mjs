@@ -9,7 +9,7 @@ import { readFileSync } from "node:fs";
 
 import {
   anteilRestzeit, punkteAuswahl, punkteSchaetzen, punkteZeitleiste, punkteKarte, entfernungKm,
-  punkteReihenfolge, ranglisteBerechnen,
+  punkteReihenfolge, ranglisteBerechnen, rundenSpitze, stechfrageSieger,
 } from "../docs/engine/punkte.js";
 import { zahlLesen, zahlText, bildPfadGueltig, bildGueltig } from "../docs/engine/hilfen.js";
 import * as auswahl from "../docs/engine/auswahl.js";
@@ -187,6 +187,43 @@ test("rangliste: sortiert, gleiche Punkte = gleicher Platz", () => {
   assert.deepEqual(ergebnis.map((r) => [r.name, r.platz]), [
     ["Ben", 1], ["Anna", 2], ["Cem", 2], ["Dana", 4],
   ]);
+});
+
+// ---------------------------------------------------------------------------
+// Themenrunden: Rundensieger und Stechfrage
+// ---------------------------------------------------------------------------
+test("rundenSpitze: ein Sieger oder Gleichstand", () => {
+  const eindeutig = rundenSpitze([
+    { id: "a", punkte: 900 }, { id: "b", punkte: 1200 }, { id: "c", punkte: 300 },
+  ]);
+  assert.deepEqual(eindeutig.map((s) => s.id), ["b"]);
+
+  const gleich = rundenSpitze([
+    { id: "a", punkte: 1200 }, { id: "b", punkte: 1200 }, { id: "c", punkte: 300 },
+  ]);
+  assert.deepEqual(gleich.map((s) => s.id), ["a", "b"]);
+
+  // Niemand hat Punkte: alle sind gleichauf
+  assert.equal(rundenSpitze([{ id: "a", punkte: 0 }, { id: "b", punkte: 0 }]).length, 2);
+  assert.deepEqual(rundenSpitze([]), []);
+});
+
+test("stechfrageSieger: näher dran gewinnt, bei Gleichstand der Schnellere", () => {
+  // Lösung 100: Ben ist mit 103 näher dran als Anna mit 90
+  assert.equal(stechfrageSieger([
+    { id: "anna", antwort: 90, zeitMs: 1000 },
+    { id: "ben", antwort: 103, zeitMs: 9000 },
+  ], 100), "ben");
+
+  // Beide 5 daneben (95 und 105) → wer schneller war
+  assert.equal(stechfrageSieger([
+    { id: "anna", antwort: 105, zeitMs: 4000 },
+    { id: "ben", antwort: 95, zeitMs: 2000 },
+  ], 100), "ben");
+
+  // Niemand (gültig) geantwortet → null, dann entscheidet im Spiel das Los
+  assert.equal(stechfrageSieger([], 100), null);
+  assert.equal(stechfrageSieger([{ id: "a", antwort: "viel", zeitMs: 1 }], 100), null);
 });
 
 // ---------------------------------------------------------------------------

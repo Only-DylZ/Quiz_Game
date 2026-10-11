@@ -32,7 +32,7 @@
     <!-- 2. Warten auf den Spielstart oder die nächste Frage -->
     <section id="warten" hidden>
       <p>Du bist drin, <strong id="meinName"></strong>!</p>
-      <p>Warte auf die nächste Frage …</p>
+      <p id="wartenText">Warte auf den Spielstart …</p>
     </section>
 
     <!-- 3. Frage beantworten -->
@@ -57,7 +57,14 @@
       <p class="hinweis">Warte auf die nächste Frage …</p>
     </section>
 
-    <!-- 5. Spielende -->
+    <!-- 5. Ende einer Themenrunde: wer bekommt den Gewinnpunkt (GP)? -->
+    <section id="rundenende" hidden>
+      <p class="ergebnis-gross" id="rundenSieger"></p>
+      <p id="meineGp"></p>
+      <p class="hinweis" id="rundenHinweis"></p>
+    </section>
+
+    <!-- 6. Spielende -->
     <section id="ende" hidden>
       <h1>Ende!</h1>
       <p class="ergebnis-gross" id="endeText"></p>

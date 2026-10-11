@@ -72,6 +72,28 @@ input {
   font-size: 1.2rem;
 }
 
+/* Host: Einstellungen (GPs zum Sieg) und Themenauswahl */
+.einstellungen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.einstellungen input {
+  width: 5em;
+  text-align: center;
+}
+
+select {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
 #code {
   text-transform: uppercase;
   letter-spacing: 0.3em;

@@ -111,6 +111,38 @@ export function ranglisteBerechnen(spieler) {
   return ergebnis;
 }
 
+// ---------------------------------------------------------------------------
+// Themenrunden: wer bekommt den Gewinnpunkt (GP)?
+// ---------------------------------------------------------------------------
+
+// Alle Spieler mit den meisten Punkten der Runde.
+// Einer → er bekommt den GP. Mehrere → Gleichstand, es gibt eine Stechfrage.
+//   spieler – Liste von { id, name, punkte }
+export function rundenSpitze(spieler) {
+  if (spieler.length === 0) return [];
+  const beste = Math.max(...spieler.map((s) => s.punkte));
+  return spieler.filter((s) => s.punkte === beste);
+}
+
+// Wer gewinnt die Stechfrage? Näher an der Lösung gewinnt; bei exakt gleich
+// weit daneben gewinnt, wer schneller geantwortet hat.
+//   antworten – Liste von { id, antwort, zeitMs }
+//   loesung   – die richtige Zahl
+//   Ergebnis  – id des Siegers oder null, wenn niemand gültig geantwortet hat
+export function stechfrageSieger(antworten, loesung) {
+  let bester = null;
+  for (const a of antworten) {
+    if (!Number.isFinite(a.antwort)) continue;
+    const abstand = Math.abs(a.antwort - loesung);
+    const besser =
+      bester === null ||
+      abstand < bester.abstand ||
+      (abstand === bester.abstand && a.zeitMs < bester.zeitMs);
+    if (besser) bester = { id: a.id, abstand, zeitMs: a.zeitMs };
+  }
+  return bester ? bester.id : null;
+}
+
 // Hält einen Wert zwischen min und max. Ungültige Werte (NaN) werden zu min.
 function begrenzen(wert, min, max) {
   if (!Number.isFinite(wert)) return min;

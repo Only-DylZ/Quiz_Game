@@ -453,13 +453,17 @@ schicken nur ihre Antwort.
 Nachrichten:
 | typ          | von → an       | daten |
 |--------------|----------------|-------|
-| `frage`      | Host → Handys  | `nummer, gesamt, modus, text, restzeit, daten` (daten = `oeffentlicheDaten()`, **ohne Lösung**) |
+| `themenwahl` | Host → Handys  | `runde` – vor jeder Runde („das Thema wird gewählt“) |
+| `frage`      | Host → Handys  | `nummer` (zählt im ganzen Spiel hoch), `titel` (z. B. „Sport · Frage 3 von 10“), `modus, text, restzeit, bild, daten` (daten = `oeffentlicheDaten()`, **ohne Lösung**), `teilnehmer` (nur bei der Stechfrage: ids der Spieler mit Gleichstand, sonst `null`) |
 | `antwort`    | Handy → Host   | `id, nummer, antwort` (endgültig, mit Zeitmessung) |
 | `entwurf`    | Handy → Host   | `id, nummer, antwort` – Zwischenstand beim Tippen (`null` = Feld leer). Zählt bei Zeitablauf, wenn nicht gesendet wurde, dann ohne Tempo-Bonus. Beendet die Frage nicht vorzeitig. |
-| `aufloesung` | Host → Handys  | `nummer, loesungText, ergebnisse: [{ id, beantwortet, punkte, gesamt, platz }]` |
-| `ende`       | Host → Handys  | `rangliste: [{ id, name, punkte, platz }]` |
+| `aufloesung` | Host → Handys  | `nummer, loesungText, ergebnisse: [{ id, beantwortet, punkte, gesamt, platz }]` (gesamt = Punkte der Runde); bei der Stechfrage `stechen: true` und leere `ergebnisse` |
+| `rundenende` | Host → Handys  | `thema, siegerId, siegerName, ziel, stand: [{ id, gp, platz }]` |
+| `ende`       | Host → Handys  | `rangliste: [{ id, name, gp, platz }]` |
 
-Host-Ablauf: Lobby → Frage → Auflösung → Zwischenstand → … → Siegertreppchen.
+Host-Ablauf: Lobby → Themenwahl → Frage → Auflösung → Zwischenstand → … (10 Fragen)
+→ ggf. Stechfrage → Rundenende (1 GP) → Themenwahl → … → Siegertreppchen (nach GP).
+Die Regeln „wer bekommt den GP“ (`rundenSpitze`, `stechfrageSieger`) stehen in `punkte.js`.
 
 **Modus-Module** (`engine/*.js`) haben alle dieselben Funktionen:
 `pruefeFrage, oeffentlicheDaten, zeigeFrage, zeigeEingabe, antwortGueltig,
@@ -483,7 +487,9 @@ Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
 Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Phase 3 ist fertig:
 `validate.py`, `prompt.md`, Fragen-Pools mit Zufallsauswahl + Gedächtnis,
 Bildfragen, Modus `reihenfolge` und 13 Themenpakete à ca. 30 Fragen (Pools
-wachsen später Richtung 150). Als Nächstes: Phase 4 (Themenrunden).
+wachsen später Richtung 150). Phase 4a ist fertig: Themenrunden, GP-Ziel
+(Einstellung in der Lobby), Stechfrage, Siegertreppchen nach GP – das Thema
+wählt vorläufig der Host aus einer Liste. Als Nächstes: 4b (Kandidaten + Glücksrad).
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`
