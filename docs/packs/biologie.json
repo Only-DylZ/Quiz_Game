@@ -1,0 +1,528 @@
+{
+  "thema": "Biologie",
+  "version": 1,
+  "beschreibung": "Der menschliche Körper, Zellen, Gene und Leben.",
+  "fragen": [
+    {
+      "id": "bio-001",
+      "modus": "auswahl",
+      "frage": "Welches ist das größte Organ des Menschen?",
+      "optionen": [
+        "Leber",
+        "Haut",
+        "Lunge",
+        "Darm"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Haut",
+        "url": "https://de.wikipedia.org/wiki/Haut"
+      }
+    },
+    {
+      "id": "bio-002",
+      "modus": "auswahl",
+      "frage": "Wo im Körper wird Insulin gebildet?",
+      "optionen": [
+        "Leber",
+        "Bauchspeicheldrüse",
+        "Niere",
+        "Milz"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Insulin",
+        "url": "https://de.wikipedia.org/wiki/Insulin"
+      }
+    },
+    {
+      "id": "bio-003",
+      "modus": "auswahl",
+      "frage": "Welche Blutgruppe gilt bei roten Blutkörperchen als Universalspender?",
+      "optionen": [
+        "AB positiv",
+        "A negativ",
+        "0 negativ",
+        "B positiv"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Blutgruppe",
+        "url": "https://de.wikipedia.org/wiki/Blutgruppe"
+      }
+    },
+    {
+      "id": "bio-004",
+      "modus": "auswahl",
+      "frage": "Welches Zellorganell nennt man das „Kraftwerk der Zelle“?",
+      "optionen": [
+        "Zellkern",
+        "Ribosom",
+        "Mitochondrium",
+        "Golgi-Apparat"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Mitochondrium",
+        "url": "https://de.wikipedia.org/wiki/Mitochondrium"
+      }
+    },
+    {
+      "id": "bio-005",
+      "modus": "auswahl",
+      "frage": "Wie heißt der kleinste Knochen des Menschen?",
+      "optionen": [
+        "Amboss",
+        "Steigbügel",
+        "Hammer",
+        "Steißbein"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Steigbügel (Anatomie)",
+        "url": "https://de.wikipedia.org/wiki/Steigbügel_(Anatomie)"
+      },
+      "erklaerung": "Er sitzt im Mittelohr und ist nur etwa 3 mm groß."
+    },
+    {
+      "id": "bio-006",
+      "modus": "auswahl",
+      "frage": "Welcher Stoff transportiert den Sauerstoff im Blut?",
+      "optionen": [
+        "Insulin",
+        "Hämoglobin",
+        "Melanin",
+        "Keratin"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Hämoglobin",
+        "url": "https://de.wikipedia.org/wiki/Hämoglobin"
+      }
+    },
+    {
+      "id": "bio-007",
+      "modus": "auswahl",
+      "frage": "Welche Base kommt in der DNA NICHT vor?",
+      "optionen": [
+        "Adenin",
+        "Guanin",
+        "Uracil",
+        "Thymin"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Desoxyribonukleinsäure",
+        "url": "https://de.wikipedia.org/wiki/Desoxyribonukleinsäure"
+      },
+      "erklaerung": "Uracil gibt es nur in der RNA."
+    },
+    {
+      "id": "bio-008",
+      "modus": "auswahl",
+      "frage": "Wer gilt als Begründer der Vererbungslehre (mit Versuchen an Erbsen)?",
+      "optionen": [
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Louis Pasteur",
+        "Robert Koch"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Gregor Mendel",
+        "url": "https://de.wikipedia.org/wiki/Gregor_Mendel"
+      }
+    },
+    {
+      "id": "bio-009",
+      "modus": "auswahl",
+      "frage": "Was geben Pflanzen bei der Photosynthese an die Luft ab?",
+      "optionen": [
+        "Stickstoff",
+        "Sauerstoff",
+        "Kohlendioxid",
+        "Methan"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Photosynthese",
+        "url": "https://de.wikipedia.org/wiki/Photosynthese"
+      }
+    },
+    {
+      "id": "bio-010",
+      "modus": "auswahl",
+      "frage": "Welches Vitamin bildet der Körper mithilfe von Sonnenlicht?",
+      "optionen": [
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin K"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Vitamin D",
+        "url": "https://de.wikipedia.org/wiki/Vitamin_D"
+      }
+    },
+    {
+      "id": "bio-011",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Farbstoff, der Pflanzen grün macht?",
+      "optionen": [
+        "Carotin",
+        "Chlorophyll",
+        "Anthocyan",
+        "Melanin"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Chlorophyll",
+        "url": "https://de.wikipedia.org/wiki/Chlorophyll"
+      }
+    },
+    {
+      "id": "bio-012",
+      "modus": "auswahl",
+      "frage": "Wer entdeckte 1928 das Penicillin?",
+      "optionen": [
+        "Robert Koch",
+        "Alexander Fleming",
+        "Louis Pasteur",
+        "Edward Jenner"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Alexander Fleming",
+        "url": "https://de.wikipedia.org/wiki/Alexander_Fleming"
+      }
+    },
+    {
+      "id": "bio-013",
+      "modus": "schaetzen",
+      "frage": "Wie viele Knochen hat ein erwachsener Mensch?",
+      "einheit": "Knochen",
+      "loesung": 206,
+      "quelle": {
+        "titel": "Wikipedia – Skelett des Menschen",
+        "url": "https://de.wikipedia.org/wiki/Skelett_des_Menschen"
+      }
+    },
+    {
+      "id": "bio-014",
+      "modus": "schaetzen",
+      "frage": "Wie viele Chromosomen hat eine menschliche Körperzelle?",
+      "einheit": "Chromosomen",
+      "loesung": 46,
+      "quelle": {
+        "titel": "Wikipedia – Chromosom",
+        "url": "https://de.wikipedia.org/wiki/Chromosom"
+      }
+    },
+    {
+      "id": "bio-015",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zähne hat ein vollständiges Erwachsenengebiss mit Weisheitszähnen?",
+      "einheit": "Zähne",
+      "loesung": 32,
+      "quelle": {
+        "titel": "Wikipedia – Gebiss",
+        "url": "https://de.wikipedia.org/wiki/Gebiss"
+      }
+    },
+    {
+      "id": "bio-016",
+      "modus": "schaetzen",
+      "frage": "Wie viele Milchzähne hat ein Kind?",
+      "einheit": "Zähne",
+      "loesung": 20,
+      "quelle": {
+        "titel": "Wikipedia – Milchzahn",
+        "url": "https://de.wikipedia.org/wiki/Milchzahn"
+      }
+    },
+    {
+      "id": "bio-017",
+      "modus": "schaetzen",
+      "frage": "Wie viele Liter Blut hat ein erwachsener Mensch ungefähr?",
+      "einheit": "Liter",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Blut",
+        "url": "https://de.wikipedia.org/wiki/Blut"
+      }
+    },
+    {
+      "id": "bio-018",
+      "modus": "schaetzen",
+      "frage": "Wie viele Rippenpaare hat der Mensch normalerweise?",
+      "einheit": "Paare",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Rippe",
+        "url": "https://de.wikipedia.org/wiki/Rippe"
+      }
+    },
+    {
+      "id": "bio-019",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist die normale Körpertemperatur des Menschen ungefähr?",
+      "einheit": "°C",
+      "loesung": 37,
+      "quelle": {
+        "titel": "Wikipedia – Körpertemperatur",
+        "url": "https://de.wikipedia.org/wiki/Körpertemperatur"
+      }
+    },
+    {
+      "id": "bio-020",
+      "modus": "schaetzen",
+      "frage": "Wie viel Luft atmet ein Erwachsener in Ruhe pro Atemzug ein?",
+      "einheit": "Liter",
+      "loesung": 0.5,
+      "quelle": {
+        "titel": "Wikipedia – Atemzugvolumen",
+        "url": "https://de.wikipedia.org/wiki/Atemzugvolumen"
+      }
+    },
+    {
+      "id": "bio-021",
+      "modus": "schaetzen",
+      "frage": "Wie viele Grundgeschmacksrichtungen kann die Zunge unterscheiden?",
+      "einheit": "",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Geschmack (Sinneseindruck)",
+        "url": "https://de.wikipedia.org/wiki/Geschmack_(Sinneseindruck)"
+      },
+      "erklaerung": "Süß, sauer, salzig, bitter und umami."
+    },
+    {
+      "id": "bio-022",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Chromosomen hat ein Hund?",
+      "daten": {
+        "einheit": "Chromosomen",
+        "balken": [
+          {
+            "name": "Katze",
+            "wert": 38
+          },
+          {
+            "name": "Pferd",
+            "wert": 64
+          },
+          {
+            "name": "Hund",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 78,
+      "quelle": {
+        "titel": "Wikipedia – Haushund",
+        "url": "https://de.wikipedia.org/wiki/Haushund"
+      }
+    },
+    {
+      "id": "bio-023",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Brünn, wo Gregor Mendel seine Erbsenversuche machte?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 49.19,
+        "lng": 16.61
+      },
+      "quelle": {
+        "titel": "Wikipedia – Brünn",
+        "url": "https://de.wikipedia.org/wiki/Brünn"
+      }
+    },
+    {
+      "id": "bio-024",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Great Barrier Reef, das größte Korallenriff der Erde?",
+      "daten": {
+        "mitte": [
+          -10,
+          130
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -18.29,
+        "lng": 147.7
+      },
+      "quelle": {
+        "titel": "Wikipedia – Great Barrier Reef",
+        "url": "https://de.wikipedia.org/wiki/Great_Barrier_Reef"
+      }
+    },
+    {
+      "id": "bio-025",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde die Doppelhelix-Struktur der DNA veröffentlicht?",
+      "daten": {
+        "von": 1900,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Entdeckung des Penicillins",
+            "jahr": 1928
+          },
+          {
+            "name": "Klonschaf Dolly",
+            "jahr": 1996
+          }
+        ]
+      },
+      "loesung": 1953,
+      "quelle": {
+        "titel": "Wikipedia – Desoxyribonukleinsäure",
+        "url": "https://de.wikipedia.org/wiki/Desoxyribonukleinsäure"
+      }
+    },
+    {
+      "id": "bio-026",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr veröffentlichte Charles Darwin „Über die Entstehung der Arten“?",
+      "daten": {
+        "von": 1750,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Erste Pockenimpfung durch Jenner",
+            "jahr": 1796
+          },
+          {
+            "name": "Entdeckung des Penicillins",
+            "jahr": 1928
+          }
+        ]
+      },
+      "loesung": 1859,
+      "quelle": {
+        "titel": "Wikipedia – Über die Entstehung der Arten",
+        "url": "https://de.wikipedia.org/wiki/Über_die_Entstehung_der_Arten"
+      }
+    },
+    {
+      "id": "bio-027",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde das Humangenomprojekt für abgeschlossen erklärt?",
+      "daten": {
+        "von": 1950,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Erstes Retortenbaby",
+            "jahr": 1978
+          },
+          {
+            "name": "Klonschaf Dolly",
+            "jahr": 1996
+          }
+        ]
+      },
+      "loesung": 2003,
+      "quelle": {
+        "titel": "Wikipedia – Humangenomprojekt",
+        "url": "https://de.wikipedia.org/wiki/Humangenomprojekt"
+      }
+    },
+    {
+      "id": "bio-028",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach Größe!",
+      "loesung": [
+        "Menschliche Eizelle",
+        "Rotes Blutkörperchen",
+        "Bakterium (E. coli)",
+        "Grippevirus"
+      ],
+      "oben": "größtes",
+      "unten": "kleinstes",
+      "werte": [
+        "ca. 0,1 mm",
+        "ca. 7,5 µm",
+        "ca. 2 µm",
+        "ca. 0,1 µm"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Eizelle",
+        "url": "https://de.wikipedia.org/wiki/Eizelle"
+      }
+    },
+    {
+      "id": "bio-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Organe nach ihrem Gewicht!",
+      "loesung": [
+        "Haut",
+        "Leber",
+        "Herz",
+        "Niere"
+      ],
+      "oben": "schwerstes",
+      "unten": "leichtestes",
+      "quelle": {
+        "titel": "Wikipedia – Organ (Biologie)",
+        "url": "https://de.wikipedia.org/wiki/Organ_(Biologie)"
+      }
+    },
+    {
+      "id": "bio-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Stufen der biologischen Systematik – von der größten Gruppe zur kleinsten!",
+      "loesung": [
+        "Reich",
+        "Stamm",
+        "Klasse",
+        "Ordnung",
+        "Familie"
+      ],
+      "oben": "größte Gruppe",
+      "unten": "kleinste Gruppe",
+      "quelle": {
+        "titel": "Wikipedia – Systematik (Biologie)",
+        "url": "https://de.wikipedia.org/wiki/Systematik_(Biologie)"
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "bio-s01",
+      "modus": "schaetzen",
+      "frage": "Wie viele Knochen hat eine menschliche Hand?",
+      "einheit": "Knochen",
+      "loesung": 27,
+      "quelle": {
+        "titel": "Wikipedia – Hand",
+        "url": "https://de.wikipedia.org/wiki/Hand"
+      }
+    },
+    {
+      "id": "bio-s02",
+      "modus": "schaetzen",
+      "frage": "Wie viele Knochen hat ein menschlicher Fuß?",
+      "einheit": "Knochen",
+      "loesung": 26,
+      "quelle": {
+        "titel": "Wikipedia – Fuß",
+        "url": "https://de.wikipedia.org/wiki/Fuß"
+      }
+    }
+  ]
+}
