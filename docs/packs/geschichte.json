@@ -403,8 +403,8 @@
       "frage": "Wo liegt Waterloo, wo Napoleon endgültig geschlagen wurde?",
       "daten": {
         "mitte": [
-          48,
-          5
+          45,
+          15
         ],
         "zoom": 4
       },
@@ -594,6 +594,490 @@
           "url": "https://commons.wikimedia.org/wiki/File:Berlin_-_Altes_Museum_7922.jpg"
         }
       }
+    },
+    {
+      "id": "gesch-035",
+      "modus": "auswahl",
+      "frage": "Wo trafen sich Truman, Stalin und Churchill 1945 zur Konferenz über Deutschlands Zukunft?",
+      "optionen": [
+        "Casablanca",
+        "Teheran",
+        "Versailles",
+        "Potsdam"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Potsdamer Konferenz",
+        "url": "https://de.wikipedia.org/wiki/Potsdamer_Konferenz"
+      }
+    },
+    {
+      "id": "gesch-036",
+      "modus": "auswahl",
+      "frage": "Welches Volk gründete die Stadt Karthago?",
+      "optionen": [
+        "Ägypter",
+        "Phönizier",
+        "Römer",
+        "Griechen"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Karthago",
+        "url": "https://de.wikipedia.org/wiki/Karthago"
+      }
+    },
+    {
+      "id": "gesch-037",
+      "modus": "auswahl",
+      "frage": "Wer war der erste Präsident der USA?",
+      "optionen": [
+        "John Adams",
+        "Benjamin Franklin",
+        "Thomas Jefferson",
+        "George Washington"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – George Washington",
+        "url": "https://de.wikipedia.org/wiki/George_Washington"
+      }
+    },
+    {
+      "id": "gesch-038",
+      "modus": "auswahl",
+      "frage": "In welchem Land begann die Industrielle Revolution?",
+      "optionen": [
+        "USA",
+        "Deutschland",
+        "Großbritannien",
+        "Frankreich"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Industrielle Revolution",
+        "url": "https://de.wikipedia.org/wiki/Industrielle_Revolution"
+      }
+    },
+    {
+      "id": "gesch-039",
+      "modus": "auswahl",
+      "frage": "Wie hieß der erste römische Kaiser?",
+      "optionen": [
+        "Trajan",
+        "Konstantin",
+        "Nero",
+        "Augustus"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Augustus",
+        "url": "https://de.wikipedia.org/wiki/Augustus"
+      }
+    },
+    {
+      "id": "gesch-040",
+      "modus": "auswahl",
+      "frage": "Wer schrieb zusammen mit Friedrich Engels das „Kommunistische Manifest“?",
+      "optionen": [
+        "Lenin",
+        "Karl Marx",
+        "August Bebel",
+        "Leo Trotzki"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Manifest der Kommunistischen Partei",
+        "url": "https://de.wikipedia.org/wiki/Manifest_der_Kommunistischen_Partei"
+      }
+    },
+    {
+      "id": "gesch-041",
+      "modus": "auswahl",
+      "frage": "Wer leitete die erste Weltumsegelung, die 1519 aufbrach?",
+      "optionen": [
+        "Ferdinand Magellan",
+        "James Cook",
+        "Vasco da Gama",
+        "Francis Drake"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Ferdinand Magellan",
+        "url": "https://de.wikipedia.org/wiki/Ferdinand_Magellan"
+      },
+      "erklaerung": "Er selbst starb unterwegs – nur eines seiner fünf Schiffe kam zurück."
+    },
+    {
+      "id": "gesch-042",
+      "modus": "auswahl",
+      "frage": "Wie heißt das westliche Verteidigungsbündnis aus der Zeit des Kalten Kriegs?",
+      "optionen": [
+        "NATO",
+        "UNO",
+        "OPEC",
+        "Warschauer Pakt"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – NATO",
+        "url": "https://de.wikipedia.org/wiki/NATO"
+      }
+    },
+    {
+      "id": "gesch-043",
+      "modus": "auswahl",
+      "frage": "Welche britische Königin gab einer ganzen Epoche des 19. Jahrhunderts ihren Namen?",
+      "optionen": [
+        "Anne",
+        "Elisabeth I.",
+        "Maria I.",
+        "Victoria"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Victoria (Vereinigtes Königreich)",
+        "url": "https://de.wikipedia.org/wiki/Victoria_(Vereinigtes_Königreich)"
+      },
+      "erklaerung": "Man spricht vom „Viktorianischen Zeitalter“."
+    },
+    {
+      "id": "gesch-044",
+      "modus": "auswahl",
+      "frage": "In welcher Stadt wurde die Unabhängigkeitserklärung der USA unterzeichnet?",
+      "optionen": [
+        "Boston",
+        "New York",
+        "Washington",
+        "Philadelphia"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Unabhängigkeitserklärung der Vereinigten Staaten",
+        "url": "https://de.wikipedia.org/wiki/Unabhängigkeitserklärung_der_Vereinigten_Staaten"
+      }
+    },
+    {
+      "id": "gesch-045",
+      "modus": "auswahl",
+      "frage": "Welches Reich begründete Dschingis Khan?",
+      "optionen": [
+        "Das Mongolische Reich",
+        "Das Kaiserreich China",
+        "Das Osmanische Reich",
+        "Das Perserreich"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Mongolisches Reich",
+        "url": "https://de.wikipedia.org/wiki/Mongolisches_Reich"
+      }
+    },
+    {
+      "id": "gesch-046",
+      "modus": "auswahl",
+      "frage": "Was war die Hanse?",
+      "optionen": [
+        "Ein Königsgeschlecht",
+        "Ein Bund von Kaufleuten und Städten",
+        "Ein Ritterorden",
+        "Ein Mönchsorden"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Hanse",
+        "url": "https://de.wikipedia.org/wiki/Hanse"
+      }
+    },
+    {
+      "id": "gesch-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre dauerte der Zweite Weltkrieg in Europa?",
+      "einheit": "Jahre",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Zweiter Weltkrieg",
+        "url": "https://de.wikipedia.org/wiki/Zweiter_Weltkrieg"
+      }
+    },
+    {
+      "id": "gesch-048",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre war Karl der Große Kaiser?",
+      "einheit": "Jahre",
+      "loesung": 14,
+      "quelle": {
+        "titel": "Wikipedia – Karl der Große",
+        "url": "https://de.wikipedia.org/wiki/Karl_der_Große"
+      }
+    },
+    {
+      "id": "gesch-049",
+      "modus": "schaetzen",
+      "frage": "Wie lang war der Hadrianswall in Britannien?",
+      "einheit": "km",
+      "loesung": 117.5,
+      "quelle": {
+        "titel": "Wikipedia – Hadrianswall",
+        "url": "https://de.wikipedia.org/wiki/Hadrianswall"
+      }
+    },
+    {
+      "id": "gesch-050",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre dauerte die Herrschaft der Nationalsozialisten in Deutschland?",
+      "einheit": "Jahre",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Zeit des Nationalsozialismus",
+        "url": "https://de.wikipedia.org/wiki/Zeit_des_Nationalsozialismus"
+      }
+    },
+    {
+      "id": "gesch-051",
+      "modus": "schaetzen",
+      "frage": "Wie alt wurde Johann Sebastian Bach?",
+      "einheit": "Jahre",
+      "loesung": 65,
+      "quelle": {
+        "titel": "Wikipedia – Johann Sebastian Bach",
+        "url": "https://de.wikipedia.org/wiki/Johann_Sebastian_Bach"
+      }
+    },
+    {
+      "id": "gesch-052",
+      "modus": "schaetzen",
+      "frage": "Wie viele US-Präsidenten wurden im Amt ermordet?",
+      "einheit": "Präsidenten",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Liste der Präsidenten der Vereinigten Staaten",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Präsidenten_der_Vereinigten_Staaten"
+      }
+    },
+    {
+      "id": "gesch-053",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauerte die Belagerung Leningrads im Zweiten Weltkrieg?",
+      "einheit": "Tage",
+      "loesung": 872,
+      "quelle": {
+        "titel": "Wikipedia – Leningrader Blockade",
+        "url": "https://de.wikipedia.org/wiki/Leningrader_Blockade"
+      }
+    },
+    {
+      "id": "gesch-054",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre dauerte der Peloponnesische Krieg zwischen Athen und Sparta?",
+      "einheit": "Jahre",
+      "loesung": 27,
+      "quelle": {
+        "titel": "Wikipedia – Peloponnesischer Krieg",
+        "url": "https://de.wikipedia.org/wiki/Peloponnesischer_Krieg"
+      }
+    },
+    {
+      "id": "gesch-055",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kinder bekam Kaiserin Maria Theresia?",
+      "einheit": "Kinder",
+      "loesung": 16,
+      "quelle": {
+        "titel": "Wikipedia – Maria Theresia",
+        "url": "https://de.wikipedia.org/wiki/Maria_Theresia"
+      }
+    },
+    {
+      "id": "gesch-056",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde in England die Magna Carta besiegelt?",
+      "daten": {
+        "von": 1000,
+        "bis": 1500,
+        "ereignisse": [
+          {
+            "name": "Beginn des Ersten Kreuzzugs",
+            "jahr": 1096
+          },
+          {
+            "name": "Kolumbus erreicht Amerika",
+            "jahr": 1492
+          }
+        ]
+      },
+      "loesung": 1215,
+      "quelle": {
+        "titel": "Wikipedia – Magna Carta",
+        "url": "https://de.wikipedia.org/wiki/Magna_Carta"
+      }
+    },
+    {
+      "id": "gesch-057",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr begann der Zweite Weltkrieg?",
+      "daten": {
+        "von": 1900,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Börsencrash in New York",
+            "jahr": 1929
+          },
+          {
+            "name": "Tschernobyl-Katastrophe",
+            "jahr": 1986
+          }
+        ]
+      },
+      "loesung": 1939,
+      "quelle": {
+        "titel": "Wikipedia – Zweiter Weltkrieg",
+        "url": "https://de.wikipedia.org/wiki/Zweiter_Weltkrieg"
+      }
+    },
+    {
+      "id": "gesch-058",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Vertrag von Versailles unterzeichnet?",
+      "daten": {
+        "von": 1850,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Kaiserreichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Börsencrash in New York",
+            "jahr": 1929
+          }
+        ]
+      },
+      "loesung": 1919,
+      "quelle": {
+        "titel": "Wikipedia – Friedensvertrag von Versailles",
+        "url": "https://de.wikipedia.org/wiki/Friedensvertrag_von_Versailles"
+      }
+    },
+    {
+      "id": "gesch-059",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Hastings, Schauplatz einer berühmten Schlacht im Mittelalter?",
+      "daten": {
+        "mitte": [
+          45,
+          15
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 50.86,
+        "lng": 0.57
+      },
+      "quelle": {
+        "titel": "Wikipedia – Schlacht bei Hastings",
+        "url": "https://de.wikipedia.org/wiki/Schlacht_bei_Hastings"
+      }
+    },
+    {
+      "id": "gesch-060",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo lag die antike Stadt Karthago?",
+      "daten": {
+        "mitte": [
+          44,
+          20
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 36.85,
+        "lng": 10.32
+      },
+      "quelle": {
+        "titel": "Wikipedia – Karthago",
+        "url": "https://de.wikipedia.org/wiki/Karthago"
+      }
+    },
+    {
+      "id": "gesch-061",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Aachen, die Lieblingspfalz Karls des Großen?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 50.78,
+        "lng": 6.08
+      },
+      "quelle": {
+        "titel": "Wikipedia – Aachen",
+        "url": "https://de.wikipedia.org/wiki/Aachen"
+      }
+    },
+    {
+      "id": "gesch-062",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Epochen in der richtigen Reihenfolge!",
+      "loesung": [
+        "Steinzeit",
+        "Bronzezeit",
+        "Eisenzeit",
+        "Antike",
+        "Mittelalter",
+        "Neuzeit"
+      ],
+      "oben": "früheste",
+      "unten": "späteste",
+      "quelle": {
+        "titel": "Wikipedia – Epoche",
+        "url": "https://de.wikipedia.org/wiki/Epoche"
+      }
+    },
+    {
+      "id": "gesch-063",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Herrscher chronologisch!",
+      "loesung": [
+        "Ramses II.",
+        "Alexander der Große",
+        "Karl der Große",
+        "Friedrich der Große"
+      ],
+      "oben": "früheste",
+      "unten": "späteste",
+      "quelle": {
+        "titel": "Wikipedia – Herrscher",
+        "url": "https://de.wikipedia.org/wiki/Herrscher"
+      }
+    },
+    {
+      "id": "gesch-064",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Bauwerke nach ihrem Alter!",
+      "loesung": [
+        "Stonehenge",
+        "Kolosseum",
+        "Kölner Dom",
+        "Eiffelturm"
+      ],
+      "oben": "ältestes",
+      "unten": "jüngstes",
+      "quelle": {
+        "titel": "Wikipedia – Bauwerk",
+        "url": "https://de.wikipedia.org/wiki/Bauwerk"
+      }
     }
   ],
   "stechfragen": [
@@ -617,6 +1101,39 @@
       "quelle": {
         "titel": "Wikipedia – Franz Joseph I.",
         "url": "https://de.wikipedia.org/wiki/Franz_Joseph_I."
+      }
+    },
+    {
+      "id": "gesch-s03",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr fand die Schlacht bei Hastings statt?",
+      "einheit": "",
+      "loesung": 1066,
+      "quelle": {
+        "titel": "Wikipedia – Schlacht bei Hastings",
+        "url": "https://de.wikipedia.org/wiki/Schlacht_bei_Hastings"
+      }
+    },
+    {
+      "id": "gesch-s04",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde die Universität Heidelberg gegründet – die älteste Deutschlands?",
+      "einheit": "",
+      "loesung": 1386,
+      "quelle": {
+        "titel": "Wikipedia – Universität Heidelberg",
+        "url": "https://de.wikipedia.org/wiki/Universität_Heidelberg"
+      }
+    },
+    {
+      "id": "gesch-s05",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr plünderten die Westgoten die Stadt Rom?",
+      "einheit": "",
+      "loesung": 410,
+      "quelle": {
+        "titel": "Wikipedia – Plünderung Roms (410)",
+        "url": "https://de.wikipedia.org/wiki/Plünderung_Roms_(410)"
       }
     }
   ]
