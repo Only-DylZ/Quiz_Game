@@ -3,7 +3,6 @@
 // Hier wird nur gerechnet, nichts angezeigt. Deshalb lassen sich die Regeln
 // automatisch testen:  node tools/pruefen.mjs
 //
-// Die Regeln für den Grafik-Modus (Zeitleiste, Karte) kommen in Phase 2.
 
 export const MAX_PUNKTE = 1000;
 
@@ -30,6 +29,18 @@ export function punkteSchaetzen(antwort, loesung) {
   if (loesung === 0) return antwort === 0 ? MAX_PUNKTE : 0;
 
   const abweichung = Math.abs(antwort - loesung) / Math.abs(loesung);
+  return Math.round(MAX_PUNKTE * Math.max(0, 1 - abweichung));
+}
+
+// zeitleiste: wie schaetzen, aber die Abweichung wird auf die Spanne der
+// Zeitleiste bezogen (bis − von), nicht auf die Jahreszahl. Sonst wäre
+// 1959 statt 1969 nur 0,5 % daneben. Beispiel Spanne 50 Jahre:
+// genau = 1000, 5 Jahre daneben = 900, 50 Jahre oder mehr daneben = 0.
+export function punkteZeitleiste(antwort, loesung, von, bis) {
+  const spanne = bis - von;
+  if (!Number.isFinite(antwort) || !Number.isFinite(loesung) || !(spanne > 0)) return 0;
+
+  const abweichung = Math.abs(antwort - loesung) / spanne;
   return Math.round(MAX_PUNKTE * Math.max(0, 1 - abweichung));
 }
 

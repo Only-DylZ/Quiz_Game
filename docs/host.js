@@ -15,9 +15,10 @@ import { neu } from "./engine/hilfen.js";
 import { anteilRestzeit, ranglisteBerechnen } from "./engine/punkte.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
+import * as grafik from "./engine/grafik.js";
 
 // Alle Modi, die wir schon können. In Phase 2 kommt "grafik" dazu.
-const MODI = { auswahl, schaetzen };
+const MODI = { auswahl, schaetzen, grafik };
 
 // Welches Paket gespielt wird (Themenauswahl kommt in Phase 4)
 const PAKET_DATEI = "packs/raumfahrt.json";

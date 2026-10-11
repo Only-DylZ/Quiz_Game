@@ -9,9 +9,10 @@ import { raumBetreten, raumcodePruefen, neueId } from "./realtime.js";
 import { zahlText } from "./engine/hilfen.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
+import * as grafik from "./engine/grafik.js";
 
 // Alle Modi, die wir schon können (muss zu host.js passen)
-const MODI = { auswahl, schaetzen };
+const MODI = { auswahl, schaetzen, grafik };
 
 // Wie lange wir nach dem Verbinden auf den Host warten (Millisekunden)
 const HOST_WARTEZEIT = 4000;

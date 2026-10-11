@@ -4,72 +4,63 @@
 > am Ende jeder Sitzung aktualisieren. Sie beschreibt nur den **aktuellen Stand**
 > und die **nächsten Schritte** – alles Dauerhafte steht in CLAUDE.md.
 
-**Letzte Sitzung:** 09.10.2026
-**Letzter Commit:** `9c7ec20` – Phase 1c (auf GitHub: Only-DylZ/Quiz_Game, Branch `main`)
+**Letzte Sitzung:** 11.10.2026
+
+---
+
+## ⚠️ Erinnerung an den Nutzer
+
+Am 11.10.2026 wurde eine Windows-Firewall-Regel angelegt, damit das Handy im
+WLAN Live Server erreicht (WLAN-Profil ist „Privat“, VS Code hatte nur Regeln
+für „Öffentlich“). Der Nutzer möchte daran erinnert werden, sie wieder zu
+entfernen, wenn das lokale Testen vorbei ist – in einer **Admin-PowerShell**:
+
+```powershell
+Remove-NetFirewallRule -DisplayName "Quiz Live Server (nur WLAN privat)"
+```
+
+Diesen Abschnitt löschen, sobald der Nutzer das erledigt hat.
 
 ---
 
 ## Stand
 
-**Phase 1 ist fertig und im Browser getestet** (PC + Handy im WLAN):
-- 1a Lobby mit Raumcode, 1b Multiple Choice, 1c Schätzen + Punkte + Zwischenstand
-  + Siegertreppchen.
-- Schätzen: Ohne Senden zählt bei Zeitablauf, was im Feld steht (Nachricht `entwurf`).
-- `node tools/pruefen.mjs` → Syntaxprüfung + 11 Tests, alle grün.
-- Das Raumfahrt-Paket hat 4 spielbare Fragen (2 Grafik-Fragen warten auf Phase 2).
+- **Phase 1** fertig, **online** unter https://only-dylz.github.io/Quiz_Game/
+  (GitHub Actions, `.github/workflows/pages.yml`). Erstes Online-Probespiel hat geklappt.
+- **Phase 2a** fertig und vom Nutzer getestet (PC + Handy):
+  `engine/grafik.js` mit den Arten `balken` (Zahlenfeld wie Schätzen) und
+  `zeitleiste` (Schieberegler + −1/+1). Grafiken als SVG über `svgNeu()` in
+  `hilfen.js`, auf dem Handy klein über der Eingabe. Punkteregel
+  `punkteZeitleiste` in `punkte.js`. Raumfahrt-Paket hat eine neue
+  Zeitleisten-Frage (rf-07, Mondlandung). 14 Tests grün.
+- `karte`: `pruefeFrage` gibt noch `false` zurück → die Frage wird übersprungen.
+  In den Tests wird `art === "karte"` bis 2b übersprungen.
 
-**Die Seite ist online** (seit 11.10.2026): https://only-dylz.github.io/Quiz_Game/
-Veröffentlicht per GitHub Actions (`pages.yml`), Secrets und Pages-Source vom Nutzer
-eingerichtet, erster Lauf erfolgreich. Noch nicht online mit Freunden getestet.
+## Nächster Schritt: Phase 2b – Karte
 
----
-
-## Erledigt: Online stellen per GitHub Actions
-
-**Nächster Schritt:** Probespiel online (Punkt 5), dann Phase 2.
-
-Ziel: Freunde können von überall mitspielen → erstes echtes Probespiel.
-Mit dem Nutzer schon besprochen und als Weg gewählt (Option A):
-
-1. ✅ **Erledigt (11.10.2026, noch nicht committet):** `.github/workflows/pages.yml`
-   gebaut, README + CLAUDE.md angepasst. Workflow prüft zusätzlich, dass der Key
-   wirklich ein anon key ist (bricht bei service_role/sb_secret ab).
-   - läuft bei jedem Push auf `main`,
-   - erzeugt `docs/config.js` aus zwei **Repository Secrets**
-     (`SUPABASE_URL`, `SUPABASE_ANON_KEY`),
-   - stellt `docs/` per offizieller Pages-Action online
-     (`actions/configure-pages`, `actions/upload-pages-artifact`, `actions/deploy-pages`,
-     feste Versionen).
-   - Vorher `node tools/pruefen.mjs` im Workflow laufen lassen (Node per `actions/setup-node`).
-2. **Der Nutzer macht auf GitHub:**
-   - *Settings → Secrets and variables → Actions*: die zwei Secrets anlegen.
-   - *Settings → Pages → Source*: **„GitHub Actions“** wählen (nicht „Deploy from a branch“).
-   - *Settings → Code security*: Secret Scanning + Push Protection prüfen (noch nicht bestätigt).
-3. **Vorher prüfen:** In Supabase sicherstellen, dass nur der anon key verwendet wird
-   und keine Tabellen ohne RLS existieren (bisher gibt es gar keine Tabellen).
-4. README-Abschnitt „Online stellen“ anpassen (Actions statt Branch `/docs`) und
-   den „Offenen Punkt“ in CLAUDE.md schließen.
-5. Probespiel mit Freunden über `https://only-dylz.github.io/Quiz_Game/`.
-
-Hinweis an den Nutzer: Der anon key ist im ausgelieferten `config.js` für jeden
-Besucher sichtbar – so gedacht, Schutz über RLS + Gratis-Tarif ohne Kreditkarte.
-Er steht aber nie im Repo, und der pre-commit-Hook bleibt unverändert.
+1. **Vorher klären und dem Nutzer sagen:** Leaflet (Open Source, per CDN mit
+   fester Version + SRI-Hash) und OpenStreetMap-Kacheln – Nutzungsrichtlinie
+   (Tile Usage Policy) prüfen: Namensnennung nötig, kein Massenabruf. Für ein
+   paar Spieler ok, kostenlos, kein Schlüssel.
+2. `karte` in `grafik.js`: Host zeigt Karte (`daten.mitte`, `daten.zoom`),
+   Handy tippt einen Punkt an (Marker) + Senden. Antwort `{ lat, lng }`,
+   prüfen: Zahlen, lat −90…90, lng −180…180.
+3. `punkteKarte` in `punkte.js` (Haversine, 2000-km-Grenze), Tests ergänzen,
+   Ausnahmen für `karte` in den Tests entfernen.
+4. Auflösung: Lösung + Tipps der Spieler als Marker auf der Host-Karte.
 
 ## Danach
 
-- **Phase 2:** Grafik-Modus (`balken`, `zeitleiste` als SVG, `karte` mit Leaflet).
-  Neues Modul `engine/grafik.js` mit derselben Schnittstelle wie `auswahl.js`,
-  in `MODI` in host.js **und** play.js eintragen, Tests ergänzen
-  (Punkte Zeitleiste/Karte, Lösungsschutz). Leaflet per CDN mit fester Version,
-  OSM-Kacheln – vorher prüfen, dass das kostenlos und erlaubt ist.
+- Phase 3 (Python-Validator), Phase 4 (Themenauswahl, Highscores).
 - **Mögliche Verbesserung:** Spieler-Kennung in `sessionStorage` merken, damit
   ein Neuladen nicht alle Punkte kostet (siehe „Bekannte Grenze 2“ in CLAUDE.md).
 
 ---
 
+
 ## Umgebung des Nutzers
 
-- Windows 11, VS Code mit Live Server (`.vscode/settings.json`: `useLocalIp: true`,
+- Windows 11, VS Code mit Live Server (Port 5500, `.vscode/settings.json`: `useLocalIp: true`,
   nicht im Repo). Handy-Test im WLAN funktioniert.
 - Node.js v24 installiert (nur fürs Prüfen, nicht für die Website).
 - Git: `core.hooksPath = .githooks` aktiv, `user.email` lokal auf die

@@ -36,3 +36,15 @@ export function zahlLesen(eingabe) {
 export function zahlText(zahl) {
   return Number(zahl).toLocaleString("de-DE", { maximumFractionDigits: 2 });
 }
+
+// Erzeugt ein SVG-Element (für selbst gezeichnete Grafiken), z. B.
+//   svgNeu("rect", { x: 10, y: 20, width: 30, height: 40, class: "balken" })
+// Text kommt wie bei neu() nur über textContent hinein, nie als HTML.
+export function svgNeu(tag, eigenschaften = {}, text = "") {
+  const element = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  for (const [name, wert] of Object.entries(eigenschaften)) {
+    element.setAttribute(name, String(wert));
+  }
+  if (text !== "") element.textContent = String(text);
+  return element;
+}

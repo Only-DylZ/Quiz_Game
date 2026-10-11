@@ -1,7 +1,7 @@
 {
   "thema": "Raumfahrt",
   "version": 1,
-  "beschreibung": "Beispielpaket mit je zwei Fragen pro Modus.",
+  "beschreibung": "Beispielpaket mit Fragen zu allen Modi.",
   "fragen": [
     {
       "id": "rf-01",
@@ -67,6 +67,27 @@
       "quelle": {
         "titel": "NASA – Planetary Fact Sheet",
         "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+      }
+    },
+    {
+      "id": "rf-07",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr landeten zum ersten Mal Menschen auf dem Mond?",
+      "daten": {
+        "von": 1950,
+        "bis": 2000,
+        "ereignisse": [
+          { "name": "Sputnik 1", "jahr": 1957 },
+          { "name": "Gagarin im All", "jahr": 1961 },
+          { "name": "Start der ISS", "jahr": 1998 }
+        ]
+      },
+      "loesung": 1969,
+      "erklaerung": "Apollo 11 landete am 20. Juli 1969 – Neil Armstrong betrat als Erster den Mond.",
+      "quelle": {
+        "titel": "NASA – Apollo 11",
+        "url": "https://www.nasa.gov/mission/apollo-11/"
       }
     },
     {

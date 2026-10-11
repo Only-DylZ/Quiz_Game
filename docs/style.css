@@ -214,6 +214,73 @@ input {
   font-weight: bold;
 }
 
+/* ---------- Grafik (Balken, Zeitleiste) ---------- */
+
+.grafik {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 8px 0;
+}
+
+/* Auf dem Handy etwas kleiner über der Eingabe */
+.grafik-klein {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.grafik text {
+  fill: var(--text);
+  font-family: system-ui, sans-serif;
+  text-anchor: middle; /* Text mittig über dem Punkt/Balken */
+}
+
+.grafik-name { font-size: 22px; }
+.grafik-rand { font-size: 20px; opacity: 0.7; } /* Anfang und Ende der Zeitleiste */
+.grafik-wert { font-size: 22px; font-weight: bold; }
+.grafik-einheit { font-size: 20px; text-anchor: start !important; opacity: 0.7; }
+
+/* Auf dem schmalen Handy wird alles kleiner gerechnet – deshalb größere Schrift */
+.grafik-klein .grafik-name,
+.grafik-klein .grafik-wert,
+.grafik-klein .grafik-einheit { font-size: 30px; }
+.grafik-frage { font-size: 90px; font-weight: bold; fill: var(--akzent) !important; }
+
+.grafik-linie {
+  stroke: var(--text);
+  stroke-width: 3;
+}
+
+.balken,
+.punkt { fill: #818cf8; }
+.balken-loesung { fill: var(--akzent); }
+
+.grafik-loesung {
+  stroke: var(--akzent);
+  stroke-width: 6;
+}
+.grafik .grafik-loesung-text { fill: var(--akzent); font-size: 26px; }
+
+/* Handy: Jahr groß über dem Schieberegler */
+.jahr-anzeige {
+  margin: 4px 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--akzent);
+}
+
+.jahr-regler {
+  flex: 1;
+  min-width: 0;
+  height: 40px; /* gut mit dem Daumen zu treffen */
+}
+
+button.klein {
+  margin: 0;
+  padding: 10px 14px;
+}
+
 /* ---------- Listen: Schätzungen und Rangliste ---------- */
 
 .schaetzliste,

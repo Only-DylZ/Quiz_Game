@@ -343,9 +343,12 @@ Für Spiele unter Freunden akzeptiert; echte Absicherung bräuchte Supabase-Auth
 **Bekannte Grenze 2:** Lädt ein Spieler die Seite neu, bekommt er eine neue
 Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
 
-**Aktueller Stand:** Phase 1 (1a Lobby, 1b Multiple Choice, 1c Schätzen,
-Punkte, Rangliste) ist gebaut. Online-Stellen per GitHub Actions ist vorbereitet
-(siehe „Online-Stellen“ unten). Als Nächstes: Probespiel, danach Phase 2.
+**Phase 2 in Schritten:**
+- 2a: `balken` und `zeitleiste` als SVG (Handy: Zahlenfeld bzw. Schieberegler).
+- 2b: `karte` mit Leaflet + OpenStreetMap.
+
+**Aktueller Stand:** Phase 1 ist fertig und online (siehe „Online-Stellen“ unten).
+Phase 2a (Balken, Zeitleiste) ist gebaut. Als Nächstes: 2b Karte.
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`
