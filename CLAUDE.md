@@ -86,6 +86,8 @@ Quiz_Game/
 ├─ .gitignore              Dateien, die nicht ins Repo gehören (.env, config.js, …).
 ├─ .githooks/
 │  └─ pre-commit           Bricht Commits ab, die Schlüssel oder Geheim-Dateien enthalten.
+├─ .github/workflows/
+│  └─ pages.yml            Prüft den Code, erzeugt config.js aus Secrets, stellt docs/ online.
 ├─ docs/                   Die Website – GitHub Pages liefert diesen Ordner aus.
 │  ├─ index.html           Startseite mit den Knöpfen „Spiel leiten“ und „Mitspielen“.
 │  ├─ host.html            Host-Bildschirm (nur Aufbau der Seite).
@@ -342,13 +344,13 @@ Für Spiele unter Freunden akzeptiert; echte Absicherung bräuchte Supabase-Auth
 Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
 
 **Aktueller Stand:** Phase 1 (1a Lobby, 1b Multiple Choice, 1c Schätzen,
-Punkte, Rangliste) ist gebaut. Als Nächstes: Online-Stellen (config.js über
-GitHub Actions, siehe „Offener Punkt“), danach Phase 2.
+Punkte, Rangliste) ist gebaut. Online-Stellen per GitHub Actions ist vorbereitet
+(siehe „Online-Stellen“ unten). Als Nächstes: Probespiel, danach Phase 2.
 
-### Offener Punkt
-`docs/config.js` steht in `.gitignore`, GitHub Pages braucht die Datei aber online.
-Der Supabase-**anon key** ist dafür gedacht, öffentlich zu sein (Schutz über
-Row Level Security). Vor dem ersten Online-Stellen entscheiden: `config.js`
-doch einchecken (mit RLS) oder anders bereitstellen.
-Achtung: Der pre-commit-Hook blockiert `docs/config.js` und jeden JWT-artigen
-Key – auch den anon key. Eine Änderung daran nur nach ausdrücklicher Absprache.
+### Online-Stellen (entschieden)
+`docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`
+erzeugt sie bei jedem Push auf `main` aus den Repository-Secrets `SUPABASE_URL`
+und `SUPABASE_ANON_KEY` und veröffentlicht `docs/` über GitHub Pages
+(Source: „GitHub Actions“). Er bricht ab, wenn der Key kein anon key ist.
+Der anon key ist online für Besucher sichtbar – so gedacht, Schutz über RLS.
+Der pre-commit-Hook bleibt unverändert und blockiert weiter jeden Key im Repo.

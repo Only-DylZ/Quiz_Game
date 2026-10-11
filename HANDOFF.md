@@ -28,7 +28,9 @@ weil `docs/config.js` (Supabase-URL + anon key) absichtlich nicht im Repo ist.
 Ziel: Freunde können von überall mitspielen → erstes echtes Probespiel.
 Mit dem Nutzer schon besprochen und als Weg gewählt (Option A):
 
-1. **Claude baut** `.github/workflows/pages.yml`:
+1. ✅ **Erledigt (11.10.2026, noch nicht committet):** `.github/workflows/pages.yml`
+   gebaut, README + CLAUDE.md angepasst. Workflow prüft zusätzlich, dass der Key
+   wirklich ein anon key ist (bricht bei service_role/sb_secret ab).
    - läuft bei jedem Push auf `main`,
    - erzeugt `docs/config.js` aus zwei **Repository Secrets**
      (`SUPABASE_URL`, `SUPABASE_ANON_KEY`),

@@ -1,0 +1,101 @@
+# Stellt die Website (Ordner docs/) bei jedem Push auf "main" online.
+#
+# Ablauf:
+#   1. Code prüfen (node tools/pruefen.mjs) – bei Fehlern wird nichts veröffentlicht.
+#   2. docs/config.js aus zwei Repository-Secrets erzeugen
+#      (SUPABASE_URL, SUPABASE_ANON_KEY). Die Datei landet NIE im Repo,
+#      nur in der ausgelieferten Website.
+#   3. docs/ per offizieller GitHub-Pages-Action veröffentlichen.
+#
+# Kostenlos: GitHub Actions ist für öffentliche Repos gratis.
+
+name: Website online stellen
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # erlaubt auch einen Start per Knopf unter "Actions"
+
+# Nur die Rechte, die wirklich gebraucht werden.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Nie zwei Veröffentlichungen gleichzeitig.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code holen
+        uses: actions/checkout@v4
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Code prüfen
+        run: node tools/pruefen.mjs
+
+      - name: config.js erzeugen
+        # Die Secrets kommen als Umgebungsvariablen herein (nicht direkt im
+        # Skript eingesetzt), damit ihr Inhalt nie als Befehl ausgeführt wird.
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          # Prüfen: beide Secrets vorhanden und in erwarteter Form.
+          if ! printf '%s' "$SUPABASE_URL" | grep -Eq '^https://[a-z0-9]+\.supabase\.co$'; then
+            echo "FEHLER: Secret SUPABASE_URL fehlt oder hat nicht die Form https://xxxx.supabase.co"
+            exit 1
+          fi
+          if ! printf '%s' "$SUPABASE_ANON_KEY" | grep -Eq '^[A-Za-z0-9._-]+$'; then
+            echo "FEHLER: Secret SUPABASE_ANON_KEY fehlt oder enthält ungültige Zeichen"
+            exit 1
+          fi
+
+          # Sicherheitsnetz: Niemals den geheimen service_role-Key veröffentlichen.
+          case "$SUPABASE_ANON_KEY" in
+            sb_secret_*)
+              echo "FEHLER: Das ist ein geheimer Key (sb_secret_...). Bitte den anon/publishable Key nehmen!"
+              exit 1 ;;
+            eyJ*)
+              # Alter JWT-Key: im Mittelteil steht die Rolle, sie muss "anon" sein.
+              mitte=$(printf '%s' "$SUPABASE_ANON_KEY" | cut -d. -f2 | tr '_-' '/+')
+              while [ $(( ${#mitte} % 4 )) -ne 0 ]; do mitte="$mitte="; done
+              if ! printf '%s' "$mitte" | base64 -d 2>/dev/null | grep -q '"role":"anon"'; then
+                echo "FEHLER: Der Key hat nicht die Rolle 'anon'. Bitte den anon Key nehmen, NIE service_role!"
+                exit 1
+              fi ;;
+          esac
+
+          {
+            echo '// Automatisch erzeugt von .github/workflows/pages.yml – nicht im Repo.'
+            echo "export const SUPABASE_URL = \"$SUPABASE_URL\";"
+            echo "export const SUPABASE_ANON_KEY = \"$SUPABASE_ANON_KEY\";"
+          } > docs/config.js
+          echo "config.js erzeugt."
+
+      - name: Pages einrichten
+        uses: actions/configure-pages@v5
+
+      - name: Website einpacken
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  veroeffentlichen:
+    needs: bauen
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Auf GitHub Pages veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v4

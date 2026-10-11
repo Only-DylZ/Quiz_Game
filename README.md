@@ -39,14 +39,24 @@ die IP-Adresse des PCs eingeben (z. B. `http://192.168.0.23:5500/docs/play.html`
 
 ## Online stellen (GitHub Pages)
 
-1. Projekt in ein GitHub-Repository hochladen.
-2. Im Repository: **Settings → Pages**.
-3. Bei *Source* „Deploy from a branch“ wählen, Branch `main`, Ordner **`/docs`**.
-4. Speichern. Nach ein bis zwei Minuten ist die Seite erreichbar unter
+Die Seite wird automatisch von GitHub Actions veröffentlicht
+(`.github/workflows/pages.yml`), bei jedem Push auf `main`.
+`docs/config.js` bleibt dabei aus dem Repo heraus – der Workflow erzeugt sie
+beim Veröffentlichen aus zwei Secrets.
+
+Einmalig einrichten im Repository auf GitHub:
+
+1. **Settings → Secrets and variables → Actions → New repository secret**:
+   - `SUPABASE_URL` = `https://DEIN-PROJEKT.supabase.co`
+   - `SUPABASE_ANON_KEY` = der **anon / publishable** Key
+     (niemals `service_role` – der Workflow bricht dann absichtlich ab).
+2. **Settings → Pages → Source**: **„GitHub Actions“** wählen.
+3. Einen Push auf `main` machen (oder unter *Actions* den Workflow per
+   „Run workflow“ starten). Nach ein bis zwei Minuten ist die Seite erreichbar unter
    `https://<dein-name>.github.io/<repo-name>/`.
 
-Hinweis: `docs/config.js` ist in `.gitignore` und wird deshalb nicht hochgeladen.
-Siehe „Offener Punkt“ in [CLAUDE.md](CLAUDE.md).
+Hinweis: Der anon key ist in der veröffentlichten `config.js` für jeden Besucher
+sichtbar. Das ist bei Supabase so gedacht – geschützt wird über Row Level Security.
 
 ## Code prüfen (Node.js)
 
