@@ -329,7 +329,7 @@
       "id": "bio-023",
       "modus": "grafik",
       "art": "karte",
-      "frage": "Wo liegt Brünn, wo Gregor Mendel seine Erbsenversuche machte?",
+      "frage": "Wo liegt die Stadt Brünn (Brno)?",
       "daten": {
         "mitte": [
           50,
@@ -381,8 +381,8 @@
             "jahr": 1928
           },
           {
-            "name": "Klonschaf Dolly",
-            "jahr": 1996
+            "name": "Erster Game Boy",
+            "jahr": 1989
           }
         ]
       },
@@ -431,8 +431,8 @@
             "jahr": 1978
           },
           {
-            "name": "Klonschaf Dolly",
-            "jahr": 1996
+            "name": "Erster Game Boy",
+            "jahr": 1989
           }
         ]
       },
@@ -470,10 +470,10 @@
       "modus": "reihenfolge",
       "frage": "Ordne die Organe nach ihrem Gewicht!",
       "loesung": [
-        "Haut",
         "Leber",
         "Herz",
-        "Niere"
+        "Niere",
+        "Schilddrüse"
       ],
       "oben": "schwerstes",
       "unten": "leichtestes",
@@ -499,6 +499,496 @@
         "titel": "Wikipedia – Systematik (Biologie)",
         "url": "https://de.wikipedia.org/wiki/Systematik_(Biologie)"
       }
+    },
+    {
+      "id": "bio-031",
+      "modus": "auswahl",
+      "frage": "Welcher ist der größte Muskel des Menschen?",
+      "optionen": [
+        "Zwerchfell",
+        "Wadenmuskel",
+        "Großer Gesäßmuskel",
+        "Bizeps"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Musculus gluteus maximus",
+        "url": "https://de.wikipedia.org/wiki/Musculus_gluteus_maximus"
+      }
+    },
+    {
+      "id": "bio-032",
+      "modus": "auswahl",
+      "frage": "Welche Blutzellen bekämpfen Krankheitserreger?",
+      "optionen": [
+        "Blutplasma",
+        "Blutplättchen",
+        "Rote Blutkörperchen",
+        "Weiße Blutkörperchen"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Leukozyt",
+        "url": "https://de.wikipedia.org/wiki/Leukozyt"
+      }
+    },
+    {
+      "id": "bio-033",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Verwandlung einer Raupe in einen Schmetterling?",
+      "optionen": [
+        "Mutation",
+        "Mitose",
+        "Metamorphose",
+        "Photosynthese"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Metamorphose (Zoologie)",
+        "url": "https://de.wikipedia.org/wiki/Metamorphose_(Zoologie)"
+      }
+    },
+    {
+      "id": "bio-034",
+      "modus": "auswahl",
+      "frage": "Welches Organ filtert das Blut und bildet Urin?",
+      "optionen": [
+        "Lunge",
+        "Leber",
+        "Milz",
+        "Niere"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Niere",
+        "url": "https://de.wikipedia.org/wiki/Niere"
+      }
+    },
+    {
+      "id": "bio-035",
+      "modus": "auswahl",
+      "frage": "Mit welchem Teil nimmt eine Pflanze Wasser aus dem Boden auf?",
+      "optionen": [
+        "Blatt",
+        "Wurzel",
+        "Stängel",
+        "Blüte"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Wurzel (Pflanze)",
+        "url": "https://de.wikipedia.org/wiki/Wurzel_(Pflanze)"
+      }
+    },
+    {
+      "id": "bio-036",
+      "modus": "auswahl",
+      "frage": "Wo liegt bei Tieren und Pflanzen der größte Teil der DNA?",
+      "optionen": [
+        "Im Zellkern",
+        "In der Zellmembran",
+        "In der Vakuole",
+        "Im Ribosom"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Zellkern",
+        "url": "https://de.wikipedia.org/wiki/Zellkern"
+      }
+    },
+    {
+      "id": "bio-037",
+      "modus": "auswahl",
+      "frage": "Welches Organ bildet die Gallenflüssigkeit?",
+      "optionen": [
+        "Magen",
+        "Leber",
+        "Bauchspeicheldrüse",
+        "Gallenblase"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Galle",
+        "url": "https://de.wikipedia.org/wiki/Galle"
+      },
+      "erklaerung": "Die Gallenblase speichert sie nur."
+    },
+    {
+      "id": "bio-038",
+      "modus": "auswahl",
+      "frage": "Wie nennt man Botenstoffe des Körpers wie Insulin oder Adrenalin?",
+      "optionen": [
+        "Enzyme",
+        "Antikörper",
+        "Vitamine",
+        "Hormone"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Hormon",
+        "url": "https://de.wikipedia.org/wiki/Hormon"
+      }
+    },
+    {
+      "id": "bio-039",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Farbstoff, der unsere Haut bräunt?",
+      "optionen": [
+        "Keratin",
+        "Carotin",
+        "Kollagen",
+        "Melanin"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Melanin",
+        "url": "https://de.wikipedia.org/wiki/Melanin"
+      }
+    },
+    {
+      "id": "bio-040",
+      "modus": "auswahl",
+      "frage": "Welcher Teil des Auges bestimmt die Augenfarbe?",
+      "optionen": [
+        "Iris",
+        "Linse",
+        "Pupille",
+        "Netzhaut"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Iris (Auge)",
+        "url": "https://de.wikipedia.org/wiki/Iris_(Auge)"
+      }
+    },
+    {
+      "id": "bio-041",
+      "modus": "auswahl",
+      "frage": "Welche Krankheit entsteht durch schweren Mangel an Vitamin C?",
+      "optionen": [
+        "Gicht",
+        "Skorbut",
+        "Beriberi",
+        "Rachitis"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Skorbut",
+        "url": "https://de.wikipedia.org/wiki/Skorbut"
+      },
+      "erklaerung": "Früher eine gefürchtete Seefahrerkrankheit."
+    },
+    {
+      "id": "bio-042",
+      "modus": "auswahl",
+      "frage": "Wie nennt man Tiere, die sich nur von Pflanzen ernähren?",
+      "optionen": [
+        "Destruenten",
+        "Omnivoren",
+        "Karnivoren",
+        "Herbivoren"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Pflanzenfresser",
+        "url": "https://de.wikipedia.org/wiki/Pflanzenfresser"
+      }
+    },
+    {
+      "id": "bio-043",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm wiegt ein menschliches Herz im Durchschnitt?",
+      "einheit": "g",
+      "loesung": 300,
+      "quelle": {
+        "titel": "Wikipedia – Herz",
+        "url": "https://de.wikipedia.org/wiki/Herz"
+      }
+    },
+    {
+      "id": "bio-044",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sinne hat der Mensch nach der klassischen Einteilung?",
+      "einheit": "Sinne",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Sinn (Wahrnehmung)",
+        "url": "https://de.wikipedia.org/wiki/Sinn_(Wahrnehmung)"
+      },
+      "erklaerung": "Sehen, Hören, Riechen, Schmecken und Tasten."
+    },
+    {
+      "id": "bio-045",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage lebt ein rotes Blutkörperchen ungefähr?",
+      "einheit": "Tage",
+      "loesung": 120,
+      "quelle": {
+        "titel": "Wikipedia – Erythrozyt",
+        "url": "https://de.wikipedia.org/wiki/Erythrozyt"
+      }
+    },
+    {
+      "id": "bio-046",
+      "modus": "schaetzen",
+      "frage": "Wie viele Wochen dauert eine Schwangerschaft beim Menschen (ab der letzten Periode)?",
+      "einheit": "Wochen",
+      "loesung": 40,
+      "quelle": {
+        "titel": "Wikipedia – Schwangerschaft",
+        "url": "https://de.wikipedia.org/wiki/Schwangerschaft"
+      }
+    },
+    {
+      "id": "bio-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele äußere Muskeln bewegen jedes Auge?",
+      "einheit": "Muskeln",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Augenmuskeln",
+        "url": "https://de.wikipedia.org/wiki/Augenmuskeln"
+      }
+    },
+    {
+      "id": "bio-048",
+      "modus": "schaetzen",
+      "frage": "Wie viele Herzklappen hat das menschliche Herz?",
+      "einheit": "Klappen",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Herzklappe",
+        "url": "https://de.wikipedia.org/wiki/Herzklappe"
+      }
+    },
+    {
+      "id": "bio-049",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bogengänge hat das Gleichgewichtsorgan in jedem Innenohr?",
+      "einheit": "Bogengänge",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Bogengang",
+        "url": "https://de.wikipedia.org/wiki/Bogengang"
+      }
+    },
+    {
+      "id": "bio-050",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Lappen besteht die rechte Lunge?",
+      "einheit": "Lappen",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Lunge",
+        "url": "https://de.wikipedia.org/wiki/Lunge"
+      },
+      "erklaerung": "Die linke Lunge hat nur zwei – dort braucht das Herz Platz."
+    },
+    {
+      "id": "bio-051",
+      "modus": "schaetzen",
+      "frage": "Wie viele Blutgruppen gibt es im AB0-System?",
+      "einheit": "Blutgruppen",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – AB0-System",
+        "url": "https://de.wikipedia.org/wiki/AB0-System"
+      }
+    },
+    {
+      "id": "bio-052",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr entdeckte Karl Landsteiner die Blutgruppen?",
+      "daten": {
+        "von": 1830,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1901,
+      "quelle": {
+        "titel": "Wikipedia – Karl Landsteiner",
+        "url": "https://de.wikipedia.org/wiki/Karl_Landsteiner"
+      }
+    },
+    {
+      "id": "bio-053",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Manaus, mitten im Amazonas-Regenwald?",
+      "daten": {
+        "mitte": [
+          10,
+          -30
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": -3.12,
+        "lng": -60.02
+      },
+      "quelle": {
+        "titel": "Wikipedia – Manaus",
+        "url": "https://de.wikipedia.org/wiki/Manaus"
+      }
+    },
+    {
+      "id": "bio-054",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Uppsala, wo Carl von Linné die Pflanzen und Tiere ordnete?",
+      "daten": {
+        "mitte": [
+          48,
+          5
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 59.86,
+        "lng": 17.64
+      },
+      "quelle": {
+        "titel": "Wikipedia – Uppsala",
+        "url": "https://de.wikipedia.org/wiki/Uppsala"
+      }
+    },
+    {
+      "id": "bio-055",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr gelang die erste Herztransplantation von Mensch zu Mensch?",
+      "daten": {
+        "von": 1900,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Modell T von Ford",
+            "jahr": 1908
+          },
+          {
+            "name": "Euro wird Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1967,
+      "quelle": {
+        "titel": "Wikipedia – Herztransplantation",
+        "url": "https://de.wikipedia.org/wiki/Herztransplantation"
+      },
+      "erklaerung": "Christiaan Barnard operierte am 3. Dezember 1967 in Kapstadt."
+    },
+    {
+      "id": "bio-056",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr entdeckte Robert Koch den Erreger der Tuberkulose?",
+      "daten": {
+        "von": 1800,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1882,
+      "quelle": {
+        "titel": "Wikipedia – Robert Koch",
+        "url": "https://de.wikipedia.org/wiki/Robert_Koch"
+      }
+    },
+    {
+      "id": "bio-057",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der erste Impfstoff gegen Kinderlähmung (von Jonas Salk) zugelassen?",
+      "daten": {
+        "von": 1900,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1955,
+      "quelle": {
+        "titel": "Wikipedia – Jonas Salk",
+        "url": "https://de.wikipedia.org/wiki/Jonas_Salk"
+      }
+    },
+    {
+      "id": "bio-058",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Knochen nach ihrer Länge!",
+      "loesung": [
+        "Oberschenkelknochen",
+        "Schienbein",
+        "Oberarmknochen",
+        "Elle"
+      ],
+      "oben": "längster",
+      "unten": "kürzester",
+      "quelle": {
+        "titel": "Wikipedia – Femur",
+        "url": "https://de.wikipedia.org/wiki/Femur"
+      }
+    },
+    {
+      "id": "bio-059",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Stationen, die die Nahrung durchläuft!",
+      "loesung": [
+        "Mund",
+        "Speiseröhre",
+        "Magen",
+        "Dünndarm",
+        "Dickdarm"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Verdauung",
+        "url": "https://de.wikipedia.org/wiki/Verdauung"
+      }
+    },
+    {
+      "id": "bio-060",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Entwicklungsstufen eines Schmetterlings!",
+      "loesung": [
+        "Ei",
+        "Raupe",
+        "Puppe",
+        "Falter"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Schmetterlinge",
+        "url": "https://de.wikipedia.org/wiki/Schmetterlinge"
+      }
     }
   ],
   "stechfragen": [
@@ -522,6 +1012,39 @@
       "quelle": {
         "titel": "Wikipedia – Fuß",
         "url": "https://de.wikipedia.org/wiki/Fuß"
+      }
+    },
+    {
+      "id": "bio-s03",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr erhielten Watson und Crick den Nobelpreis für ihre DNA-Forschung?",
+      "einheit": "",
+      "loesung": 1962,
+      "quelle": {
+        "titel": "Wikipedia – James Watson",
+        "url": "https://de.wikipedia.org/wiki/James_Watson"
+      }
+    },
+    {
+      "id": "bio-s04",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr erhielt Robert Koch den Nobelpreis für Medizin?",
+      "einheit": "",
+      "loesung": 1905,
+      "quelle": {
+        "titel": "Wikipedia – Robert Koch",
+        "url": "https://de.wikipedia.org/wiki/Robert_Koch"
+      }
+    },
+    {
+      "id": "bio-s05",
+      "modus": "schaetzen",
+      "frage": "Wie alt wurde die Französin Jeanne Calment – der älteste Mensch mit belegtem Alter?",
+      "einheit": "Jahre",
+      "loesung": 122,
+      "quelle": {
+        "titel": "Wikipedia – Jeanne Calment",
+        "url": "https://de.wikipedia.org/wiki/Jeanne_Calment"
       }
     }
   ]
