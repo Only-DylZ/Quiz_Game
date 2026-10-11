@@ -1,0 +1,531 @@
+{
+  "thema": "Filme & Serien",
+  "version": 1,
+  "beschreibung": "Kino-Klassiker, Blockbuster und Kultserien.",
+  "fragen": [
+    {
+      "id": "film-001",
+      "modus": "auswahl",
+      "frage": "Welcher Film gewann bei der Oscarverleihung 1998 die meisten Preise?",
+      "optionen": [
+        "Forrest Gump",
+        "Braveheart",
+        "Gladiator",
+        "Titanic"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Titanic (1997)",
+        "url": "https://de.wikipedia.org/wiki/Titanic_(1997)"
+      }
+    },
+    {
+      "id": "film-002",
+      "modus": "auswahl",
+      "frage": "In welchem Hogwarts-Haus ist Harry Potter?",
+      "optionen": [
+        "Hufflepuff",
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Hogwarts",
+        "url": "https://de.wikipedia.org/wiki/Hogwarts"
+      }
+    },
+    {
+      "id": "film-003",
+      "modus": "auswahl",
+      "frage": "In welcher Stadt spielt die Serie „Breaking Bad“?",
+      "optionen": [
+        "El Paso",
+        "Las Vegas",
+        "Phoenix",
+        "Albuquerque"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Breaking Bad",
+        "url": "https://de.wikipedia.org/wiki/Breaking_Bad"
+      }
+    },
+    {
+      "id": "film-004",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Café, in dem sich die Clique in „Friends“ trifft?",
+      "optionen": [
+        "Central Perk",
+        "Monk's Café",
+        "Luke's Diner",
+        "The Coffee Bean"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Friends",
+        "url": "https://de.wikipedia.org/wiki/Friends"
+      }
+    },
+    {
+      "id": "film-005",
+      "modus": "auswahl",
+      "frage": "Welche Farbe hat die Pille, die Neo in „Matrix“ schluckt?",
+      "optionen": [
+        "Grün",
+        "Blau",
+        "Rot",
+        "Gelb"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Matrix (Film)",
+        "url": "https://de.wikipedia.org/wiki/Matrix_(Film)"
+      }
+    },
+    {
+      "id": "film-006",
+      "modus": "auswahl",
+      "frage": "Wer spielt Captain Jack Sparrow in „Fluch der Karibik“?",
+      "optionen": [
+        "Orlando Bloom",
+        "Brad Pitt",
+        "Keanu Reeves",
+        "Johnny Depp"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Fluch der Karibik",
+        "url": "https://de.wikipedia.org/wiki/Fluch_der_Karibik"
+      }
+    },
+    {
+      "id": "film-007",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Sohn von Darth Vader?",
+      "optionen": [
+        "Han Solo",
+        "Kylo Ren",
+        "Obi-Wan Kenobi",
+        "Luke Skywalker"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Luke Skywalker",
+        "url": "https://de.wikipedia.org/wiki/Luke_Skywalker"
+      }
+    },
+    {
+      "id": "film-008",
+      "modus": "auswahl",
+      "frage": "In welcher Serie kämpfen Adelshäuser in Westeros um den Eisernen Thron?",
+      "optionen": [
+        "Die Ringe der Macht",
+        "The Witcher",
+        "Game of Thrones",
+        "Vikings"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Game of Thrones",
+        "url": "https://de.wikipedia.org/wiki/Game_of_Thrones"
+      }
+    },
+    {
+      "id": "film-009",
+      "modus": "auswahl",
+      "frage": "Wie heißt der sprechende Schneemann in „Die Eiskönigin“?",
+      "optionen": [
+        "Sven",
+        "Kristoff",
+        "Hans",
+        "Olaf"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Die Eiskönigin – Völlig unverfroren",
+        "url": "https://de.wikipedia.org/wiki/Die_Eiskönigin_–_Völlig_unverfroren"
+      }
+    },
+    {
+      "id": "film-010",
+      "modus": "auswahl",
+      "frage": "Welcher deutsche Film gewann 2023 den Oscar als bester internationaler Film?",
+      "optionen": [
+        "Systemsprenger",
+        "Toni Erdmann",
+        "Das Lehrerzimmer",
+        "Im Westen nichts Neues"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Im Westen nichts Neues (2022)",
+        "url": "https://de.wikipedia.org/wiki/Im_Westen_nichts_Neues_(2022)"
+      }
+    },
+    {
+      "id": "film-011",
+      "modus": "auswahl",
+      "frage": "In welcher Serie gibt es die Schattenwelt „Upside Down“?",
+      "optionen": [
+        "Wednesday",
+        "Dark",
+        "Stranger Things",
+        "The OA"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Stranger Things",
+        "url": "https://de.wikipedia.org/wiki/Stranger_Things"
+      }
+    },
+    {
+      "id": "film-012",
+      "modus": "auswahl",
+      "frage": "In welcher Stadt leben die Simpsons?",
+      "optionen": [
+        "Springfield",
+        "Quahog",
+        "Shelbyville",
+        "South Park"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Die Simpsons",
+        "url": "https://de.wikipedia.org/wiki/Die_Simpsons"
+      }
+    },
+    {
+      "id": "film-013",
+      "modus": "schaetzen",
+      "frage": "Wie viele Oscars gewann „Der Herr der Ringe: Die Rückkehr des Königs“?",
+      "einheit": "Oscars",
+      "loesung": 11,
+      "quelle": {
+        "titel": "Wikipedia – Der Herr der Ringe: Die Rückkehr des Königs",
+        "url": "https://de.wikipedia.org/wiki/Der_Herr_der_Ringe:_Die_Rückkehr_des_Königs"
+      }
+    },
+    {
+      "id": "film-014",
+      "modus": "schaetzen",
+      "frage": "Wie viele Staffeln hat die Serie „Friends“?",
+      "einheit": "Staffeln",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Friends",
+        "url": "https://de.wikipedia.org/wiki/Friends"
+      }
+    },
+    {
+      "id": "film-015",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bände hat die Harry-Potter-Hauptreihe?",
+      "einheit": "Bände",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Harry Potter",
+        "url": "https://de.wikipedia.org/wiki/Harry_Potter"
+      }
+    },
+    {
+      "id": "film-016",
+      "modus": "schaetzen",
+      "frage": "Wie viele Folgen hat „Breaking Bad“ insgesamt?",
+      "einheit": "Folgen",
+      "loesung": 62,
+      "quelle": {
+        "titel": "Wikipedia – Breaking Bad",
+        "url": "https://de.wikipedia.org/wiki/Breaking_Bad"
+      }
+    },
+    {
+      "id": "film-017",
+      "modus": "schaetzen",
+      "frage": "Wie viele Staffeln hat „The Big Bang Theory“?",
+      "einheit": "Staffeln",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – The Big Bang Theory",
+        "url": "https://de.wikipedia.org/wiki/The_Big_Bang_Theory"
+      }
+    },
+    {
+      "id": "film-018",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Film „Avatar – Aufbruch nach Pandora“ (2009)?",
+      "einheit": "Minuten",
+      "loesung": 162,
+      "quelle": {
+        "titel": "Wikipedia – Avatar – Aufbruch nach Pandora",
+        "url": "https://de.wikipedia.org/wiki/Avatar_–_Aufbruch_nach_Pandora"
+      }
+    },
+    {
+      "id": "film-019",
+      "modus": "schaetzen",
+      "frage": "Wie viele Filme hat die Episoden-Hauptreihe von Star Wars?",
+      "einheit": "Filme",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Star Wars",
+        "url": "https://de.wikipedia.org/wiki/Star_Wars"
+      }
+    },
+    {
+      "id": "film-020",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zwerge begleiten Bilbo Beutlin in „Der Hobbit“?",
+      "einheit": "Zwerge",
+      "loesung": 13,
+      "quelle": {
+        "titel": "Wikipedia – Der Hobbit",
+        "url": "https://de.wikipedia.org/wiki/Der_Hobbit"
+      }
+    },
+    {
+      "id": "film-021",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre reist Marty McFly in „Zurück in die Zukunft“ in die Vergangenheit?",
+      "einheit": "Jahre",
+      "loesung": 30,
+      "quelle": {
+        "titel": "Wikipedia – Zurück in die Zukunft",
+        "url": "https://de.wikipedia.org/wiki/Zurück_in_die_Zukunft"
+      },
+      "erklaerung": "Von 1985 zurück ins Jahr 1955."
+    },
+    {
+      "id": "film-022",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie lang ist der Film „Oppenheimer“ (2023)?",
+      "daten": {
+        "einheit": "Minuten",
+        "balken": [
+          {
+            "name": "Barbie",
+            "wert": 114
+          },
+          {
+            "name": "Der Pate",
+            "wert": 175
+          },
+          {
+            "name": "Oppenheimer",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 180,
+      "quelle": {
+        "titel": "Wikipedia – Oppenheimer (2023)",
+        "url": "https://de.wikipedia.org/wiki/Oppenheimer_(2023)"
+      }
+    },
+    {
+      "id": "film-023",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr lief die erste Folge „Tatort“?",
+      "daten": {
+        "von": 1950,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Erster Star-Wars-Film",
+            "jahr": 1977
+          },
+          {
+            "name": "Erste Folge „Die Simpsons“",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1970,
+      "quelle": {
+        "titel": "Wikipedia – Tatort (Fernsehreihe)",
+        "url": "https://de.wikipedia.org/wiki/Tatort_(Fernsehreihe)"
+      }
+    },
+    {
+      "id": "film-024",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam der Zeichentrickfilm „Der König der Löwen“ ins Kino?",
+      "daten": {
+        "von": 1930,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Schneewittchen und die sieben Zwerge",
+            "jahr": 1937
+          },
+          {
+            "name": "Die Eiskönigin",
+            "jahr": 2013
+          }
+        ]
+      },
+      "loesung": 1994,
+      "quelle": {
+        "titel": "Wikipedia – Der König der Löwen",
+        "url": "https://de.wikipedia.org/wiki/Der_König_der_Löwen"
+      }
+    },
+    {
+      "id": "film-025",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam der erste Harry-Potter-Film ins Kino?",
+      "daten": {
+        "von": 1980,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Matrix",
+            "jahr": 1999
+          },
+          {
+            "name": "Avatar",
+            "jahr": 2009
+          }
+        ]
+      },
+      "loesung": 2001,
+      "quelle": {
+        "titel": "Wikipedia – Harry Potter und der Stein der Weisen (Film)",
+        "url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Stein_der_Weisen_(Film)"
+      }
+    },
+    {
+      "id": "film-026",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Filmset von Hobbingen aus „Der Herr der Ringe“?",
+      "daten": {
+        "mitte": [
+          -30,
+          150
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -37.86,
+        "lng": 175.68
+      },
+      "quelle": {
+        "titel": "Wikipedia – Matamata",
+        "url": "https://de.wikipedia.org/wiki/Matamata"
+      }
+    },
+    {
+      "id": "film-027",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Hollywood?",
+      "daten": {
+        "mitte": [
+          40,
+          -95
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 34.1,
+        "lng": -118.33
+      },
+      "quelle": {
+        "titel": "Wikipedia – Hollywood",
+        "url": "https://de.wikipedia.org/wiki/Hollywood"
+      }
+    },
+    {
+      "id": "film-028",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Filme nach ihrem Erscheinungsjahr!",
+      "loesung": [
+        "Der Zauberer von Oz",
+        "Der weiße Hai",
+        "Jurassic Park",
+        "Avatar"
+      ],
+      "oben": "ältester",
+      "unten": "neuester",
+      "werte": [
+        "1939",
+        "1975",
+        "1993",
+        "2009"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Filmgeschichte",
+        "url": "https://de.wikipedia.org/wiki/Filmgeschichte"
+      }
+    },
+    {
+      "id": "film-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne die James-Bond-Darsteller nach ihrem ersten Bond-Film!",
+      "loesung": [
+        "Sean Connery",
+        "Roger Moore",
+        "Pierce Brosnan",
+        "Daniel Craig"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "werte": [
+        "1962",
+        "1973",
+        "1995",
+        "2006"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – James Bond",
+        "url": "https://de.wikipedia.org/wiki/James_Bond"
+      }
+    },
+    {
+      "id": "film-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Harry-Potter-Bände in der richtigen Reihenfolge!",
+      "loesung": [
+        "Stein der Weisen",
+        "Kammer des Schreckens",
+        "Gefangene von Askaban",
+        "Feuerkelch"
+      ],
+      "oben": "Band 1",
+      "unten": "Band 4",
+      "quelle": {
+        "titel": "Wikipedia – Harry Potter",
+        "url": "https://de.wikipedia.org/wiki/Harry_Potter"
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "film-s01",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten dauert die Kinofassung von „Der Herr der Ringe: Die Rückkehr des Königs“?",
+      "einheit": "Minuten",
+      "loesung": 201,
+      "quelle": {
+        "titel": "Wikipedia – Der Herr der Ringe: Die Rückkehr des Königs",
+        "url": "https://de.wikipedia.org/wiki/Der_Herr_der_Ringe:_Die_Rückkehr_des_Königs"
+      }
+    },
+    {
+      "id": "film-s02",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr kam „Casablanca“ ins Kino?",
+      "einheit": "",
+      "loesung": 1942,
+      "quelle": {
+        "titel": "Wikipedia – Casablanca (Film)",
+        "url": "https://de.wikipedia.org/wiki/Casablanca_(Film)"
+      }
+    }
+  ]
+}

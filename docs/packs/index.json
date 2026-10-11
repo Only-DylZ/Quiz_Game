@@ -39,6 +39,10 @@
     {
       "datei": "das-ist-deutsch.json",
       "thema": "Das ist Deutsch"
+    },
+    {
+      "datei": "filme-serien.json",
+      "thema": "Filme & Serien"
     }
   ]
 }
