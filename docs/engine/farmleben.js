@@ -11,7 +11,9 @@
 //   const farm = farmlebenStarten(document.body, katalog);
 //   farm.spielerSetzen([{ id, name, avatar }, …]);   // wer gerade da ist
 //   farm.sagen(id, "Hallo!");                          // Sprechblase
-//   farm.zumRadSchauen(true);  farm.jubeln(id);        // Glücksrad
+//   farm.zumRadSchauen({ x, y });  farm.jubeln(id);    // Glücksrad
+//   farm.modus("reihe");   // alle stehen in einer Reihe unten (Auflösung, andere Bilder)
+//   farm.sichtbar(false);  // ausblenden (z. B. während einer Frage)
 //
 // Alle Positionen sind in Pixeln des Hintergrundbilds (640 × 360). Weil das Bild
 // den Bildschirm mit "object-fit: cover" füllt, rechnen wir genauso um.
@@ -102,6 +104,8 @@ export function farmlebenStarten(behaelter, katalog) {
 
   const figuren = new Map(); // id → Figur
   let radZiel = null;        // { x, y } in Bildschirm-Pixeln, solange das Rad dreht
+  let modus = "farm";        // "farm" = auf den Wegen laufen, "reihe" = unten aufgereiht
+  let zeigen = true;         // ausgeblendet wird nichts gezeichnet
   let letzteZeit = performance.now();
   let laeuft = true;
 
@@ -174,6 +178,19 @@ export function farmlebenStarten(behaelter, katalog) {
   function bewegen(figur, sekunden) {
     figur.zeit += sekunden;
 
+    // Reihe: nebeneinander am unteren Rand stehen, zum Publikum schauen
+    if (modus === "reihe") {
+      if (figur.zustand !== "jubeln" && figur.zustand !== "springen") {
+        figur.zustand = "stehen";
+        figur.richtung = "unten";
+      } else if (figur.zustand === "springen" && figur.zeit >= figur.dauer) {
+        figur.zustand = "stehen";
+      }
+      if (figur.zustand === "jubeln" && performance.now() > figur.jubelBis) figur.zustand = "stehen";
+      figur.weg = [];
+      return;
+    }
+
     // Rad dreht: stehen bleiben und hinschauen (der Gewinner jubelt trotzdem)
     if (radZiel && figur.zustand !== "jubeln") {
       const { s, ox, oy } = massstab();
@@ -238,6 +255,17 @@ export function farmlebenStarten(behaelter, katalog) {
     stift.textBaseline = "top";
     stift.lineJoin = "round";
 
+    // Reihe: gleichmäßig über die Breite verteilt, Füße kurz über dem unteren Rand
+    if (modus === "reihe") {
+      const alle = [...figuren.values()];
+      alle.forEach((f, i) => {
+        const bx = window.innerWidth * ((i + 1) / (alle.length + 1));
+        const by = window.innerHeight - 24;
+        f.x = (bx - ox) / s;
+        f.y = (by - oy) / s;
+      });
+    }
+
     // Wer weiter unten steht, wird später (also davor) gezeichnet
     const sortiert = [...figuren.values()].sort((a, b) => a.y - b.y);
     for (const f of sortiert) {
@@ -287,8 +315,10 @@ export function farmlebenStarten(behaelter, katalog) {
     if (!laeuft) return;
     const sekunden = Math.min(0.1, (jetzt - letzteZeit) / 1000); // nach Tab-Wechsel nicht springen
     letzteZeit = jetzt;
-    for (const f of figuren.values()) bewegen(f, sekunden);
-    zeichnen();
+    if (zeigen) {
+      for (const f of figuren.values()) bewegen(f, sekunden);
+      zeichnen();
+    }
     requestAnimationFrame(schleife);
   }
   requestAnimationFrame(schleife);
@@ -340,6 +370,43 @@ export function farmlebenStarten(behaelter, katalog) {
     // ziel = { x, y } in Bildschirm-Pixeln (z. B. Mitte des Rads) oder null = weitermachen
     zumRadSchauen(ziel) {
       radZiel = ziel;
+    },
+
+    // "farm" oder "reihe". Zurück auf der Farm stellt sich jeder auf einen Weg.
+    modus(neu) {
+      if (neu === modus) return;
+      modus = neu;
+      if (modus === "farm") {
+        for (const f of figuren.values()) {
+          f.punkt = zufallsPunkt();
+          [f.x, f.y] = PUNKTE[f.punkt];
+          f.zustand = "stehen";
+          f.zeit = 0;
+          f.dauer = zufallZwischen(0.5, 3);
+        }
+      }
+    },
+
+    sichtbar(an) {
+      zeigen = Boolean(an);
+      if (!zeigen) {
+        // Alte Sprechblasen weg – sonst tauchen sie beim nächsten Einblenden wieder auf
+        for (const f of figuren.values()) {
+          if (f.blase) f.blase.element.remove();
+          f.blase = null;
+        }
+      }
+      leinwand.hidden = !zeigen;
+      blasen.hidden = !zeigen;
+    },
+
+    // Einmal hüpfen (z. B. bei vielen Punkten)
+    springen(id) {
+      const figur = figuren.get(id);
+      if (!figur || figur.zustand === "jubeln") return;
+      figur.zustand = "springen";
+      figur.zeit = 0;
+      figur.dauer = 5 / BILDER_PRO_SEKUNDE + 0.1;
     },
 
     jubeln(id, dauerMs = 5000) {

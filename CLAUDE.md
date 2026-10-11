@@ -148,6 +148,7 @@ Quiz_Game/
 │  ├─ style.css            Gemeinsames Aussehen aller Seiten (Pixel-Stil, Farben als Variablen).
 │  ├─ probe.html/.js/.css  Optik-Probe (nur zum Anschauen, keine Spiellogik).
 │  ├─ avatar-probe.html/.js  Avatar-Probe: Baukasten + Figuren auf der Farm (ohne Spiellogik).
+│  ├─ credits.html         Urheber/Lizenzen (Avatare, Schrift, Karten) – Pflicht, nicht entfernen.
 │  ├─ config.example.js    Vorlage für Supabase-URL und anon key (kopieren nach config.js).
 │  ├─ realtime.js          Verbindung zu Supabase: Raum anlegen/beitreten, Nachrichten senden.
 │  ├─ engine/
@@ -480,6 +481,10 @@ und *Presence* (wer ist im Raum) auf dem Kanal `quiz-<RAUMCODE>` – noch keine
 Tabellen. Alle Nachrichten haben die Form `{ typ: "...", daten: {...} }`.
 Der Host misst die Antwortzeit selbst und rechnet die Punkte aus; Spieler
 schicken nur ihre Antwort.
+
+**Presence** (wer im Raum ist): `{ id, name, rolle }`, bei Spielern dazu `avatar`
+(nur Zahlen, siehe `engine/avatar.js`). Der Host prüft ihn mit `avatarPruefen`; ist er
+ungültig, bekommt der Spieler einen festen Zufalls-Avatar (`avatarAusId`).
 
 Nachrichten:
 | typ          | von → an       | daten |

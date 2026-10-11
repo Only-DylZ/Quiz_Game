@@ -68,6 +68,20 @@ export function zufallsAvatar(katalog, zufall = Math.random) {
   return avatar;
 }
 
+// Immer derselbe "zufällige" Avatar für eine Spieler-Kennung (16 Zeichen 0-9/a-f) –
+// für Spieler ohne (gültigen) Avatar, damit er nicht bei jeder Änderung wechselt.
+export function avatarAusId(katalog, id) {
+  let zustand = parseInt(String(id).slice(0, 8), 16) || 1;
+  const zufall = () => {
+    // kleiner Zufallsgenerator mit festem Startwert (xorshift)
+    zustand ^= zustand << 13;
+    zustand ^= zustand >>> 17;
+    zustand ^= zustand << 5;
+    return (zustand >>> 0) / 4294967296;
+  };
+  return zufallsAvatar(katalog, zufall);
+}
+
 // Welche Farbtabelle kann eine Kategorie haben? (die erste, die ein Teil benutzt)
 export function farbtabelleVon(katalog, kategorieId) {
   const k = kategorie(katalog, kategorieId);

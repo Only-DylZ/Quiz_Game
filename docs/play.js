@@ -16,6 +16,8 @@ import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
 import * as reihenfolge from "./engine/reihenfolge.js";
 import { hintergrundSetzen, STANDARD_SZENE } from "./engine/uifarben.js";
+import { katalogLaden } from "./engine/avatar.js";
+import { avatarwahlErstellen } from "./engine/avatarwahl.js";
 
 // Alle Modi, die wir schon können (muss zu host.js passen)
 const MODI = { auswahl, schaetzen, grafik, reihenfolge };
@@ -53,6 +55,13 @@ zeige("beitreten");
 // 1. Beitreten
 // ---------------------------------------------------------------------------
 
+// Avatar-Baukasten. Klappt das Laden nicht, geht es ohne (der Host gibt dann einen zufälligen).
+let avatarWahl = null;
+katalogLaden()
+  .then((katalog) => avatarwahlErstellen($("baukasten"), katalog))
+  .then((wahl) => { avatarWahl = wahl; })
+  .catch(() => { $("baukasten").hidden = true; });
+
 // Falls der Link schon einen Code enthält (play.html?raum=KX7Q), eintragen
 const codeAusLink = new URLSearchParams(location.search).get("raum");
 if (codeAusLink) $("code").value = codeAusLink;
@@ -76,7 +85,7 @@ $("beitreten").addEventListener("submit", async (ereignis) => {
 
   // Raum betreten
   $("beitreten").querySelector("button").disabled = true;
-  ich = { id: neueId(), name, rolle: "spieler" };
+  ich = { id: neueId(), name, rolle: "spieler", avatar: avatarWahl ? avatarWahl.avatar : null };
   raum = raumBetreten(raumcode, ich, beiNachricht, beiTeilnehmern);
 
   try {

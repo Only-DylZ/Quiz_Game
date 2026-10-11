@@ -799,7 +799,7 @@ button.pixel-option.gewaehlt:disabled {
   justify-content: center;
   align-items: flex-end;
   gap: 12px;
-  margin: 24px 0;
+  margin: 130px 0 24px; /* oben Platz für die Figur auf Platz 1 */
 }
 
 .stufe {
@@ -981,4 +981,53 @@ main {
   height: 32px;
   image-rendering: pixelated;
   vertical-align: middle;
+}
+
+/* Kopf neben dem Namen in Ranglisten (Platz bleibt frei, falls es keinen Avatar gibt) */
+.kopf-platz {
+  display: inline-block;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  margin: -6px 0;
+}
+
+.kopf-platz .avatar-kopf {
+  width: 40px;
+  height: 40px;
+}
+
+/* Figur steht oben auf ihrer Stufe des Treppchens */
+.treppchen-figur {
+  width: 128px;
+  height: 128px;
+  margin-top: -118px;
+  image-rendering: pixelated;
+}
+
+/* Handy: Baukasten im Beitreten-Formular */
+.avatar-baukasten {
+  margin: 8px 0;
+  text-align: center;
+}
+
+/* Credits-Seite: lange Liste lesbar umbrechen */
+.credits {
+  max-height: 60vh;
+  overflow: auto;
+  padding: 10px;
+  background: var(--pergament-hell);
+  border: 3px solid var(--holz-dunkel);
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Zwischenstand: Punkte der letzten Frage hinter der Gesamtzahl ("1840 +620") */
+.dazu {
+  margin-left: 10px;
+  color: var(--akzent);
+  font-size: 0.85em;
 }

@@ -27,7 +27,7 @@ import {
   avatarPruefen, zufallsAvatar, ebenenListe, farbenTauschen, farbtabelleVon,
 } from "../docs/engine/avatar.js";
 import { wegFinden, richtungNach } from "../docs/engine/farmleben.js";
-import { SPRUECHE, spruch } from "../docs/engine/sprueche.js";
+import { SPRUECHE, spruch, THEMEN_SPRUECHE, ALLGEMEINE_RUNDEN_SPRUECHE, rundenSpruch } from "../docs/engine/sprueche.js";
 
 // ---------------------------------------------------------------------------
 // Punkte: auswahl
@@ -510,4 +510,24 @@ test("sprueche: alle Listen gefüllt, kurz genug", () => {
   }
   assert.equal(spruch("rad", () => 0), SPRUECHE.rad[0]);
   assert.ok(SPRUECHE.warten.includes(spruch("gibtsnicht")));
+});
+
+test("sprueche: Runden-Sprüche passen zu allen Themen", () => {
+  const index = JSON.parse(readFileSync(new URL("../docs/packs/index.json", import.meta.url), "utf8"));
+  for (const { datei } of index.pakete) {
+    const thema = datei.replace(/\.json$/, "");
+    assert.ok(THEMEN_SPRUECHE[thema], "Sprüche fehlen für " + thema);
+    for (const art of ["gut", "schlecht"]) {
+      assert.ok(THEMEN_SPRUECHE[thema][art].length >= 3, thema + " " + art);
+      for (const s of THEMEN_SPRUECHE[thema][art]) assert.ok(s.length <= 60, s);
+    }
+  }
+  for (const s of [...ALLGEMEINE_RUNDEN_SPRUECHE.gut, ...ALLGEMEINE_RUNDEN_SPRUECHE.schlecht]) {
+    assert.ok(s.length <= 60, s);
+  }
+  // Themenspruch (Zufall < 0,65) bzw. allgemein; eigene Themen (null) immer allgemein
+  assert.equal(rundenSpruch("mathe", false, () => 0), THEMEN_SPRUECHE.mathe.schlecht[0]);
+  assert.equal(rundenSpruch("mathe", true, () => 0.9), ALLGEMEINE_RUNDEN_SPRUECHE.gut[6]);
+  assert.ok(ALLGEMEINE_RUNDEN_SPRUECHE.schlecht.includes(rundenSpruch(null, false)));
+  assert.ok(ALLGEMEINE_RUNDEN_SPRUECHE.gut.includes(rundenSpruch("__proto__", true)));
 });

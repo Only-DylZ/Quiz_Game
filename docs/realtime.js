@@ -37,7 +37,8 @@ export function raumcodePruefen(eingabe) {
 
 // Betritt einen Raum.
 //   raumcode  – z. B. "KX7Q"
-//   ich       – { id, name, rolle } mit rolle "host" oder "spieler"
+//   ich       – { id, name, rolle } mit rolle "host" oder "spieler",
+//               bei Spielern dazu avatar (nur Zahlen, siehe engine/avatar.js)
 //   beiNachricht(nachricht)  – wird bei jeder eingehenden Nachricht aufgerufen
 //   beiTeilnehmern(liste)    – wird aufgerufen, wenn jemand kommt oder geht
 //
@@ -77,7 +78,9 @@ export function raumBetreten(raumcode, ich, beiNachricht, beiTeilnehmern) {
   const bereit = new Promise((erfuellt, abgelehnt) => {
     kanal.subscribe(async (status) => {
       if (status === "SUBSCRIBED") {
-        await kanal.track({ id: ich.id, name: ich.name, rolle: ich.rolle });
+        const eintrag = { id: ich.id, name: ich.name, rolle: ich.rolle };
+        if (ich.avatar) eintrag.avatar = ich.avatar; // der Host prüft ihn mit avatarPruefen
+        await kanal.track(eintrag);
         erfuellt();
       } else if (status === "CHANNEL_ERROR" || status === "TIMED_OUT") {
         abgelehnt(new Error("Verbindung zu Supabase fehlgeschlagen (" + status + ")"));

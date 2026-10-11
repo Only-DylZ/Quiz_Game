@@ -21,6 +21,11 @@ import { rundeZusammenstellen, kennung } from "./engine/runde.js";
 import { angeboteErstellen, FARBEN } from "./engine/rad.js";
 import { jahrmarktErstellen } from "./engine/jahrmarkt.js";
 import { hintergrundSetzen, szeneZuDatei, STANDARD_SZENE } from "./engine/uifarben.js";
+import {
+  katalogLaden, avatarPruefen, avatarAusId, blattZeichnen, bildZeichnen, kopfZeichnen,
+} from "./engine/avatar.js";
+import { farmlebenStarten } from "./engine/farmleben.js";
+import { spruch, rundenSpruch } from "./engine/sprueche.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
@@ -67,8 +72,9 @@ function zeige(name) {
   for (const abschnitt of ABSCHNITTE) {
     $(abschnitt).hidden = abschnitt !== name;
   }
-  // Während der Fragen das Bild zum Thema, sonst die Farm
+  // Während der Fragen das Bild zum Thema, sonst die Farm (mit den Avataren)
   hintergrundSetzen(name === "spiel" ? aktuelleSzene() : STANDARD_SZENE);
+  farmAnsicht(name === "spiel" ? null : "farm");
 }
 
 // Hintergrund der laufenden Runde: Paketname, bei KI-Themen "joker"
@@ -117,6 +123,91 @@ let anwesend = [];          // Spieler, die gerade im Raum sind: [{ id, name }]
 let spielstand = new Map(); // Spieler-id → { id, name, punkte, gp, booster, joker, farbe }
                             // – alle, die je da waren. punkte = Punkte der laufenden Runde,
                             // gp = Gewinnpunkte, booster/joker = noch übrig, farbe = Index in FARBEN
+
+// ---------------------------------------------------------------------------
+// Avatare: laufen über die Farm, stehen bei der Auflösung in einer Reihe
+// ---------------------------------------------------------------------------
+let katalog = null;         // Avatar-Teile (avatare/teile.json), null = noch nicht geladen
+let farm = null;            // die Figuren auf dem Bildschirm (engine/farmleben.js)
+let farmModus = "farm";     // "farm", "reihe" oder null (ausgeblendet)
+let letztePunkte = new Map(); // Spieler-id → Punkte der letzten Frage (für "+620" im Zwischenstand)
+
+katalogLaden()
+  .then((geladen) => {
+    katalog = geladen;
+    farm = farmlebenStarten(document.body, katalog);
+    figurenAktualisieren();
+    farmAnsicht(farmModus);
+  })
+  .catch(() => {
+    // Ohne Avatare geht das Spiel genauso – nur ohne Figuren
+  });
+
+// Figuren ein-/ausblenden: "farm" (laufen), "reihe" (unten nebeneinander) oder null
+function farmAnsicht(modus) {
+  farmModus = modus;
+  if (!farm) return;
+  farm.sichtbar(modus !== null);
+  if (modus) farm.modus(modus);
+}
+
+// Avatar eines Spielers (schon geprüft, siehe figurenAktualisieren) oder null
+function avatarVon(id) {
+  const spieler = spielstand.get(id);
+  return spieler && spieler.avatar ? spieler.avatar : null;
+}
+
+// Avatare der Anwesenden prüfen und die Figuren auf der Farm anpassen.
+// Ungültiger oder fehlender Avatar → fester Zufalls-Avatar aus der Kennung.
+function figurenAktualisieren() {
+  if (!katalog) return;
+  for (const s of anwesend) {
+    const spieler = spielstand.get(s.id);
+    spieler.avatar = avatarPruefen(katalog, s.avatarRoh) || avatarAusId(katalog, s.id);
+  }
+  if (farm) farm.spielerSetzen(anwesend.map((s) => ({ id: s.id, name: s.name, avatar: avatarVon(s.id) })));
+}
+
+// Sprechblase mit einem Spruch zur Situation (leicht zeitversetzt, wirkt natürlicher)
+function sprechen(id, situation, verzoegerung = Math.random() * 1500) {
+  if (!farm) return;
+  setTimeout(() => farm.sagen(id, spruch(situation)), verzoegerung);
+}
+
+// Kleiner Kopf für Ranglisten (wird gezeichnet, sobald das Avatar-Bild fertig ist)
+function kopfElement(id) {
+  const platz = neu("span", "kopf-platz");
+  const avatar = avatarVon(id);
+  if (katalog && avatar) {
+    blattZeichnen(katalog, avatar).then((blatt) => platz.append(kopfZeichnen(blatt, 40)));
+  }
+  return platz;
+}
+
+// Ganze Figur fürs Treppchen: kleine Leinwand mit Animation
+function figurElement(id, animation) {
+  const leinwand = neu("canvas", "treppchen-figur");
+  leinwand.width = 128;
+  leinwand.height = 128;
+  const avatar = avatarVon(id);
+  if (!katalog || !avatar) return leinwand;
+  blattZeichnen(katalog, avatar).then((blatt) => {
+    const stift = leinwand.getContext("2d");
+    let bild = 0;
+    const zeitgeber = setInterval(() => {
+      if (!leinwand.isConnected) {
+        clearInterval(zeitgeber);
+        return;
+      }
+      bild++;
+      stift.clearRect(0, 0, 128, 128);
+      // Jubeln: Arme hoch (Bild 2), zwischendurch wieder runter; Stehen: langsam atmen
+      const nummer = animation === "jubeln" ? (bild % 6 < 3 ? bild % 3 : 2) : Math.floor(bild / 4);
+      bildZeichnen(stift, blatt, animation, "unten", nummer, 0, 0, 128);
+    }, 150);
+  });
+  return leinwand;
+}
 
 // ---------------------------------------------------------------------------
 // 1. Raum öffnen
@@ -254,7 +345,7 @@ function alsGespieltMerken(datei, frage) {
 function beiTeilnehmern(teilnehmer) {
   anwesend = teilnehmer
     .filter((t) => t.rolle === "spieler" && idGueltig(t.id))
-    .map((t) => ({ id: t.id, name: String(t.name || "?").slice(0, 16) }));
+    .map((t) => ({ id: t.id, name: String(t.name || "?").slice(0, 16), avatarRoh: t.avatar }));
 
   // Neue Spieler mit 0 Punkten und 0 GP in den Spielstand aufnehmen
   for (const s of anwesend) {
@@ -265,6 +356,8 @@ function beiTeilnehmern(teilnehmer) {
       });
     }
   }
+
+  figurenAktualisieren();
 
   // Spielerliste in der Lobby neu anzeigen
   const liste = $("spielerliste");
@@ -537,7 +630,26 @@ $("drehen").addEventListener("click", async () => {
   raum.senden("rad", {});
 
   await rad.kartenSetzen(karten); // von vorne losdrehen
+
+  // Alle Figuren schauen zum Rad und fiebern mit
+  if (farm) {
+    const kasten = $("jahrmarkt").getBoundingClientRect();
+    farm.zumRadSchauen({ x: kasten.left + kasten.width / 2, y: kasten.top + kasten.height * 0.38 });
+    farm.alleSagen("rad");
+  }
   await rad.drehen(gewinner);
+
+  // Wessen Karte gewonnen hat, der jubelt
+  if (farm) {
+    farm.zumRadSchauen(null);
+    for (const s of anwesend) {
+      const wahl = kandidaten.get(s.id);
+      if (wahl && kartenSchluessel(s.id, wahl) === karten[gewinner].schluessel) {
+        farm.jubeln(s.id);
+        sprechen(s.id, "radGewonnen", 0);
+      }
+    }
+  }
   setTimeout(() => themaFestlegen(karten[gewinner]), 300);
 });
 
@@ -594,6 +706,7 @@ async function rundeStarten() {
   if (karte.datei) gespielteThemen.add(karte.datei);
   rundenNummer++;
   for (const s of spielstand.values()) s.punkte = 0;
+  letztePunkte = new Map();
   nummer = -1;
 
   zeige("spiel");
@@ -623,7 +736,8 @@ function frageStellen(frage) {
   gesamtzeit = (Number.isInteger(frage.zeit) && frage.zeit > 0 ? frage.zeit : STANDARD_ZEIT) + ZUSATZ_ZEIT;
   restzeit = gesamtzeit;
 
-  // Anzeige auf dem großen Bildschirm
+  // Anzeige auf dem großen Bildschirm (Figuren währenddessen ausgeblendet)
+  farmAnsicht(null);
   $("fragetext").textContent = frage.frage;
   bildZeigen($("bild"), frage.bild ? frage.bild.datei : null);
   modul.zeigeFrage($("bereich"), modul.oeffentlicheDaten(frage));
@@ -788,6 +902,26 @@ function frageAuswerten() {
 
   modul.zeigeAufloesung($("bereich"), frage, fuerAnzeige);
   $("weiter").textContent = "Zwischenstand";
+
+  letztePunkte = punkteDieseFrage; // für den Zwischenstand
+
+  // Figuren stehen unten in einer Reihe und kommentieren ihre Punkte
+  farmAnsicht("reihe");
+  if (farm) {
+    for (const s of anwesend) {
+      const punkte = punkteDieseFrage.get(s.id);
+      if (punkte === undefined) {
+        sprechen(s.id, "falsch"); // keine Antwort
+      } else if (punkte >= 700) {
+        farm.springen(s.id);
+        sprechen(s.id, "richtig");
+      } else if (punkte >= 400) {
+        if (Math.random() < 0.5) sprechen(s.id, "richtig");
+      } else {
+        sprechen(s.id, "falsch");
+      }
+    }
+  }
 }
 
 // Quelle als Text und – nur bei echten http(s)-Adressen – als Link
@@ -837,21 +971,27 @@ function zwischenstandZeigen() {
   bildZeigen($("bild"), null);
 
   const rangliste = ranglisteBerechnen([...spielstand.values()]);
-  $("bereich").replaceChildren(ranglisteElement(rangliste.slice(0, ZWISCHENSTAND_PLAETZE)));
+  $("bereich").replaceChildren(
+    ranglisteElement(rangliste.slice(0, ZWISCHENSTAND_PLAETZE), "", letztePunkte)
+  );
 
   const letzteFrage = nummer + 1 >= fragen.length;
   $("weiter").textContent = letzteFrage ? "Rundenende" : "Nächste Frage";
 }
 
-// Baut eine nummerierte Liste: "1. Anna – 1840" (bzw. "2 GP" mit einheit " GP")
-function ranglisteElement(rangliste, einheit = "") {
+// Baut eine nummerierte Liste: "1. Anna – 1840" (bzw. "2 GP" mit einheit " GP").
+// dazu (freiwillig): Map id → Punkte der letzten Frage, wird als "+620" angehängt.
+function ranglisteElement(rangliste, einheit = "", dazu = null) {
   const liste = neu("ol", "rangliste");
   for (const r of rangliste) {
     const eintrag = neu("li");
+    const punkte = neu("span", "punkte", r.punkte + einheit);
+    if (dazu) punkte.append(neu("span", "dazu", "+" + zahlText(dazu.get(r.id) || 0)));
     eintrag.append(
       neu("span", "platz", r.platz + "."),
+      kopfElement(r.id),
       neu("span", "", r.name),
-      neu("span", "punkte", r.punkte + einheit)
+      punkte
     );
     liste.append(eintrag);
   }
@@ -930,6 +1070,7 @@ function stechfrageAuswerten() {
     tabelle
   );
   $("weiter").textContent = "Rundensieger";
+  farmAnsicht("reihe");
 }
 
 // Der Sieger der Runde bekommt 1 GP – Anzeige und Nachricht an die Handys
@@ -959,6 +1100,28 @@ function rundeAbschliessen(siegerId, info) {
     ziel: gpZiel,
     stand: stand.map((r) => ({ id: r.id, gp: r.punkte, platz: r.platz })),
   });
+
+  // Auf der Farm: der Sieger jubelt, alle sagen etwas zum Thema – je nachdem,
+  // wie viele Punkte sie in dieser Runde geholt haben
+  if (farm) {
+    farm.jubeln(sieger.id, 6000);
+    const thema = aktuellesThema.ki ? null : szeneZuDatei(aktuellesThema.datei);
+    const moeglich = Math.max(1, fragen.length * 1000); // höchstens 1000 pro Frage
+    for (const s of anwesend) {
+      const anteil = spielstand.get(s.id).punkte / moeglich;
+      let text;
+      if (s.id === sieger.id) {
+        text = gewonnen ? spruch("spielGewonnen") : rundenSpruch(thema, true);
+      } else if (anteil >= 0.5) {
+        text = rundenSpruch(thema, true);
+      } else if (anteil < 0.3) {
+        text = rundenSpruch(thema, false);
+      } else {
+        text = spruch("rundeVerloren");
+      }
+      setTimeout(() => farm.sagen(s.id, text), s.id === sieger.id ? 300 : 800 + Math.random() * 2500);
+    }
+  }
 }
 
 // Wählt zufällig ein Element aus einer Liste
@@ -983,6 +1146,7 @@ function spielEnde() {
     if (!r) continue; // weniger als 3 Spieler
     const stufe = neu("div", "stufe stufe-" + (index + 1));
     stufe.append(
+      figurElement(r.id, index === 0 ? "jubeln" : "stehen"),
       neu("span", "name", r.name),
       neu("span", "punkte", r.punkte + " GP"),
       neu("span", "platz", r.platz)
@@ -992,6 +1156,13 @@ function spielEnde() {
 
   // Alle weiteren Plätze darunter
   $("endliste").replaceChildren(ranglisteElement(rangliste.slice(3), " GP"));
+
+  // Farm: Platz 1 jubelt lange, die anderen sagen noch etwas
+  if (farm && rangliste[0]) {
+    farm.jubeln(rangliste[0].id, 15000);
+    sprechen(rangliste[0].id, "spielGewonnen", 500);
+    for (const r of rangliste.slice(1)) sprechen(r.id, "spielVerloren");
+  }
 
   raum.senden("ende", {
     rangliste: rangliste.map((r) => ({ id: r.id, name: r.name, gp: r.punkte, platz: r.platz })),

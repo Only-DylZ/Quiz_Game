@@ -4,7 +4,7 @@
 > am Ende jeder Sitzung aktualisieren. Sie beschreibt nur den **aktuellen Stand**
 > und die **nächsten Schritte** – alles Dauerhafte steht in CLAUDE.md.
 
-**Letzte Sitzung:** 11.10.2026
+**Letzte Sitzung:** 12.10.2026
 
 ---
 
@@ -16,38 +16,29 @@
 - **Fragen-Pools:** 13 Themen mit 42–67 Fragen und je 5 Stechfragen (Ziel 150).
 - **Optik-Umbau im Pixel-Stil** ist committet und online (11.10.2026), im ganzen Spiel
   aber noch nicht getestet.
-- **In Arbeit: Avatare** – Probe-Seite fertig, noch nicht im Spiel, nicht committet.
+- **Avatare** (LPC-Figuren, Farmleben, Sprüche, Credits-Seite) sind im Spiel und online (12.10.2026).
 
 ---
 
-## Jetzt dran: Avatare (Probe fertig, nicht committet)
+## Avatare im Spiel (committet + online am 12.10.2026, vom Nutzer getestet)
 
-Nutzerwunsch: Avatare mit Kopf, Frisur, Ober-/Unterteil, Accessoires; Auswahl beim
-Beitreten mit ◀ ▶ wie skribbl.io; Köpfe neben den Punkten im Zwischenstand; ganze
-Figuren auf dem Treppchen; im Hauptmenü laufen sie auf den Farmwegen, stehen, springen,
-reden (Sprechblasen je nach Situation, Jugend-/Gamersprache, Fakten). Dreht das Rad,
-schauen alle hin; der Gewinner jubelt.
+Avatar-Probe `2b09d13`, danach eingebaut:
+- Handy: Baukasten im Beitreten-Formular; Avatar geht als Zahlen in die Presence.
+- Host: prüft mit `avatarPruefen` (sonst `avatarAusId`), `farmleben` läuft in Lobby,
+  Themenwahl, Rundenende, Ende. Beim Drehen schauen alle zum Rad, wessen Karte gewinnt,
+  jubelt. Während der Frage ausgeblendet; bei Auflösung/Zwischenstand stehen alle unten in
+  einer Reihe und kommentieren ihre Punkte (≥ 700 springen + „richtig“, < 400 „falsch“).
+  Ranglisten mit Köpfen, Treppchen mit Figuren (Platz 1 jubelt). Rundenende: Sieger jubelt.
+- `credits.html` (verlinkt auf Startseite, Lobby, Beitreten).
+- Rundenende: jeder sagt einen Runden-Spruch passend zum Thema (`THEMEN_SPRUECHE` in
+  `sprueche.js`, 13 Themen × gut/schlecht, dazu allgemeine; ≥ 50 % der möglichen Punkte =
+  gut, < 30 % = schlecht). Sprüche dürfen keine Quiz-Antwort verraten (geprüft, 3 ersetzt).
+- Zwischenstand: hinter den Punkten „+620“ = Punkte der letzten Frage.
+- Vorher gewünscht und umgesetzt: Figuren 10 % kleiner, Sprechblasen 20 % größer + 5 s,
+  Handy schmal nur beim Beitreten, jede Frage +10 s (`ZUSATZ_ZEIT`).
 
-**Stand (lokal, nicht committet):** `avatar-probe.html` zeigt Baukasten + 6 Figuren auf der
-Farm + Testknöpfe (`#rad` dreht automatisch). Selbst per Screenshot geprüft.
-- Grafiken: LPC (Universal LPC Spritesheet Character Generator), nur Teile mit CC0/CC-BY/
-  CC-BY-SA/OGA-BY. `tools/avatar_teile.py` lädt sie, packt walk/idle/jump/emote in ein Bild
-  pro Teil (576×1024) und schreibt `docs/avatare/teile.json` + `CREDITS.txt`. 74 Bilder, 1,1 MB.
-- Farben per Farbtabelle (Haut/Haar/Stoff) im Browser umgefärbt (`farbenTauschen`).
-- Übers Netz soll nur der Avatar als Zahlen gehen; `avatarPruefen` prüft streng (Tests).
-- Wegenetz der Farm: `PUNKTE`/`WEGE` in `farmleben.js` (Koordinaten im 640×360-Bild).
-
-**Nächste Schritte:**
-1. Nutzer testet die Probe (Stil, Größe der Figuren, Sprüche).
-2. Einbau ins Spiel: Avatar beim Beitreten (play.html, Baukasten über dem Namen), Avatar
-   in Presence/`beitreten` mitschicken, Host prüft mit `avatarPruefen`. Host: `farmleben`
-   in Lobby und Themenwahl, `zumRadSchauen` beim Drehen, `jubeln` für den Spieler, dessen
-   Karte gewonnen hat. Zwischenstand: `kopfZeichnen` neben den Namen. Treppchen: Figuren
-   (jubelnd für Platz 1). Sprechblasen nach Punkten (Situationen in `sprueche.js`).
-   CLAUDE.md-Nachrichtentabelle ergänzen.
-3. Credits-Seite (Link von Startseite) mit Inhalt von `avatare/CREDITS.txt` – Pflicht, sobald online.
-4. Danach Optik-Test im echten Spiel (Optik-Umbau ist online, aber noch nicht im
-   ganzen Spiel getestet: Rad, Karte, Stechfrage, Treppchen).
+**Nächste Schritte:** offen – Nutzer fragen. Mögliche Ideen: eigener Avatar auf dem Handy-Wartebildschirm, Gesichter (LPC
+`head/faces`: happy/sad) bei Gewinn/Verlust.
 
 ### Optik-Umbau (committet + online am 11.10.2026)
 Pixel-Stil, Hintergrund je Thema, UI-Farben aus dem Bild (`uifarben.js`), A–D-Antworten,

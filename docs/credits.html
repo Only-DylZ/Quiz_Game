@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz-Abend – Credits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Urheber und Lizenzen der verwendeten Grafiken und Schriften.
+       Pflicht laut CC-BY-SA / OGA-BY / OFL – diese Seite nicht entfernen. -->
+  <img id="szene" class="szene" alt="" hidden>
+
+  <main>
+    <section class="holz">
+      <h1 class="titel">Credits</h1>
+
+      <h2>Avatare</h2>
+      <p>
+        Figuren aus dem <a href="https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator">Universal
+        LPC Spritesheet Character Generator</a> (Liberated Pixel Cup und Nachfolger).
+        Lizenzen: CC-BY-SA 3.0, OGA-BY 3.0, CC-BY, CC0 – je Teil unten aufgeführt.
+        Die zusammengesetzten Avatar-Bilder stehen ebenfalls unter CC-BY-SA 3.0.
+      </p>
+      <pre class="credits" id="avatarCredits">Lade …</pre>
+
+      <h2>Schrift</h2>
+      <p>„Jersey 15“, © 2023 The Soft Type Project Authors, SIL Open Font License 1.1
+        (<a href="schrift/OFL-Jersey15.txt">Lizenztext</a>).</p>
+
+      <h2>Karten</h2>
+      <p>Weltkarte ohne Namen: Natural Earth (gemeinfrei). Kartenansicht bei der Auflösung:
+        © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende, mit Leaflet.</p>
+
+      <h2>Bilder zu Fragen</h2>
+      <p>Urheber und Lizenz stehen bei jeder Bildfrage in der Auflösung.</p>
+
+      <a class="pixel-knopf" href="index.html">Zurück</a>
+    </section>
+  </main>
+
+  <script type="module">
+    import { hintergrundSetzen } from "./engine/uifarben.js";
+    hintergrundSetzen("farm");
+    // Liste der Avatar-Urheber (erzeugt von tools/avatar_teile.py) – nur als Text anzeigen
+    fetch("avatare/CREDITS.txt")
+      .then((antwort) => antwort.text())
+      .then((text) => { document.getElementById("avatarCredits").textContent = text; })
+      .catch(() => { document.getElementById("avatarCredits").textContent = "Siehe avatare/CREDITS.txt"; });
+  </script>
+</body>
+</html>
