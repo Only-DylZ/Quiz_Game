@@ -461,7 +461,7 @@
       "modus": "reihenfolge",
       "frage": "Ordne die Zahlen nach ihrer Größe!",
       "loesung": [
-        "Googol",
+        "Eine Billion",
         "Eine Milliarde",
         "Zwei hoch 20",
         "Hundert"
@@ -506,6 +506,511 @@
         "titel": "Wikipedia – Mathematische Konstante",
         "url": "https://de.wikipedia.org/wiki/Mathematische_Konstante"
       }
+    },
+    {
+      "id": "mathe-031",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein Dreieck mit drei gleich langen Seiten?",
+      "optionen": [
+        "Gleichschenklig",
+        "Gleichseitig",
+        "Rechtwinklig",
+        "Stumpfwinklig"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Gleichseitiges Dreieck",
+        "url": "https://de.wikipedia.org/wiki/Gleichseitiges_Dreieck"
+      }
+    },
+    {
+      "id": "mathe-032",
+      "modus": "auswahl",
+      "frage": "Wie viel sind 15 % von 200?",
+      "optionen": [
+        "15",
+        "30",
+        "35",
+        "25"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Prozentrechnung",
+        "url": "https://de.wikipedia.org/wiki/Prozentrechnung"
+      }
+    },
+    {
+      "id": "mathe-033",
+      "modus": "auswahl",
+      "frage": "Welche dieser Zahlen ist eine Primzahl?",
+      "optionen": [
+        "51",
+        "87",
+        "91",
+        "97"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Primzahl",
+        "url": "https://de.wikipedia.org/wiki/Primzahl"
+      },
+      "erklaerung": "91 = 7 × 13, 87 = 3 × 29 und 51 = 3 × 17."
+    },
+    {
+      "id": "mathe-034",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Ergebnis einer Multiplikation?",
+      "optionen": [
+        "Produkt",
+        "Quotient",
+        "Differenz",
+        "Summe"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Multiplikation",
+        "url": "https://de.wikipedia.org/wiki/Multiplikation"
+      }
+    },
+    {
+      "id": "mathe-035",
+      "modus": "auswahl",
+      "frage": "Welche römische Zahl steht für 2000?",
+      "optionen": [
+        "CC",
+        "MM",
+        "MC",
+        "XX"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Römische Zahlschrift",
+        "url": "https://de.wikipedia.org/wiki/Römische_Zahlschrift"
+      }
+    },
+    {
+      "id": "mathe-036",
+      "modus": "auswahl",
+      "frage": "Wie viele Grad hat ein rechter Winkel?",
+      "optionen": [
+        "120°",
+        "45°",
+        "90°",
+        "100°"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Rechter Winkel",
+        "url": "https://de.wikipedia.org/wiki/Rechter_Winkel"
+      }
+    },
+    {
+      "id": "mathe-037",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Zahl unter dem Bruchstrich?",
+      "optionen": [
+        "Teiler",
+        "Faktor",
+        "Zähler",
+        "Nenner"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Bruchrechnung",
+        "url": "https://de.wikipedia.org/wiki/Bruchrechnung"
+      }
+    },
+    {
+      "id": "mathe-038",
+      "modus": "auswahl",
+      "frage": "Was ist die Wurzel aus 144?",
+      "optionen": [
+        "16",
+        "11",
+        "12",
+        "14"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Quadratwurzel",
+        "url": "https://de.wikipedia.org/wiki/Quadratwurzel"
+      }
+    },
+    {
+      "id": "mathe-039",
+      "modus": "auswahl",
+      "frage": "Welcher griechische Gelehrte soll in der Badewanne „Heureka!“ gerufen haben?",
+      "optionen": [
+        "Pythagoras",
+        "Platon",
+        "Thales",
+        "Archimedes"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Heureka",
+        "url": "https://de.wikipedia.org/wiki/Heureka"
+      }
+    },
+    {
+      "id": "mathe-040",
+      "modus": "auswahl",
+      "frage": "Wie heißt ein Viereck mit vier gleich langen Seiten, aber ohne rechte Winkel?",
+      "optionen": [
+        "Trapez",
+        "Rechteck",
+        "Quadrat",
+        "Raute"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Raute",
+        "url": "https://de.wikipedia.org/wiki/Raute"
+      }
+    },
+    {
+      "id": "mathe-041",
+      "modus": "auswahl",
+      "frage": "Wie viele Nullen hat eine Milliarde?",
+      "optionen": [
+        "6",
+        "12",
+        "9",
+        "10"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Milliarde",
+        "url": "https://de.wikipedia.org/wiki/Milliarde"
+      }
+    },
+    {
+      "id": "mathe-042",
+      "modus": "auswahl",
+      "frage": "Was ist größer: 2³ oder 3²?",
+      "optionen": [
+        "2³",
+        "3²",
+        "Beide sind gleich groß",
+        "Das kommt darauf an"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Potenz (Mathematik)",
+        "url": "https://de.wikipedia.org/wiki/Potenz_(Mathematik)"
+      },
+      "erklaerung": "2³ = 8, aber 3² = 9."
+    },
+    {
+      "id": "mathe-043",
+      "modus": "schaetzen",
+      "frage": "Kopfrechnen: Wie viel ist 25 × 25?",
+      "einheit": "",
+      "loesung": 625,
+      "quelle": {
+        "titel": "Wikipedia – Quadratzahl",
+        "url": "https://de.wikipedia.org/wiki/Quadratzahl"
+      }
+    },
+    {
+      "id": "mathe-044",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten hat eine Woche?",
+      "einheit": "Minuten",
+      "loesung": 10080,
+      "quelle": {
+        "titel": "Wikipedia – Woche",
+        "url": "https://de.wikipedia.org/wiki/Woche"
+      }
+    },
+    {
+      "id": "mathe-045",
+      "modus": "schaetzen",
+      "frage": "Wie viele Grad hat ein Vollkreis?",
+      "einheit": "°",
+      "loesung": 360,
+      "quelle": {
+        "titel": "Wikipedia – Vollwinkel",
+        "url": "https://de.wikipedia.org/wiki/Vollwinkel"
+      }
+    },
+    {
+      "id": "mathe-046",
+      "modus": "schaetzen",
+      "frage": "Wie viel ist 7! (7 Fakultät)?",
+      "einheit": "",
+      "loesung": 5040,
+      "quelle": {
+        "titel": "Wikipedia – Fakultät (Mathematik)",
+        "url": "https://de.wikipedia.org/wiki/Fakultät_(Mathematik)"
+      },
+      "erklaerung": "7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040"
+    },
+    {
+      "id": "mathe-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kanten hat eine Pyramide mit quadratischer Grundfläche?",
+      "einheit": "Kanten",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Pyramide (Geometrie)",
+        "url": "https://de.wikipedia.org/wiki/Pyramide_(Geometrie)"
+      },
+      "erklaerung": "Vier unten an der Grundfläche, vier zur Spitze."
+    },
+    {
+      "id": "mathe-048",
+      "modus": "schaetzen",
+      "frage": "Wie viele Diagonalen hat ein Fünfeck?",
+      "einheit": "Diagonalen",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Fünfeck",
+        "url": "https://de.wikipedia.org/wiki/Fünfeck"
+      }
+    },
+    {
+      "id": "mathe-049",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent sind drei Viertel?",
+      "einheit": "%",
+      "loesung": 75,
+      "quelle": {
+        "titel": "Wikipedia – Prozent",
+        "url": "https://de.wikipedia.org/wiki/Prozent"
+      }
+    },
+    {
+      "id": "mathe-050",
+      "modus": "schaetzen",
+      "frage": "Wie viele Schaltjahre gibt es von 2001 bis 2100?",
+      "einheit": "Schaltjahre",
+      "loesung": 24,
+      "quelle": {
+        "titel": "Wikipedia – Schaltjahr",
+        "url": "https://de.wikipedia.org/wiki/Schaltjahr"
+      },
+      "erklaerung": "Jedes vierte Jahr – aber 2100 ist (als volles Jahrhundert) keins."
+    },
+    {
+      "id": "mathe-051",
+      "modus": "schaetzen",
+      "frage": "Wie viel ist 11.111 × 11.111?",
+      "einheit": "",
+      "loesung": 123454321,
+      "quelle": {
+        "titel": "Wikipedia – Schnapszahl",
+        "url": "https://de.wikipedia.org/wiki/Schnapszahl"
+      },
+      "erklaerung": "Ergibt 123.454.321 – ein Zahlenpalindrom."
+    },
+    {
+      "id": "mathe-052",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Schnittpunkte (Spielpunkte) hat ein Go-Brett?",
+      "daten": {
+        "einheit": "Punkte",
+        "balken": [
+          {
+            "name": "Tic-Tac-Toe",
+            "wert": 9
+          },
+          {
+            "name": "Sudoku",
+            "wert": 81
+          },
+          {
+            "name": "Go",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 361,
+      "quelle": {
+        "titel": "Wikipedia – Go (Spiel)",
+        "url": "https://de.wikipedia.org/wiki/Go_(Spiel)"
+      },
+      "erklaerung": "19 × 19 = 361"
+    },
+    {
+      "id": "mathe-053",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde die Kreiszahl erstmals mit dem Buchstaben π bezeichnet?",
+      "daten": {
+        "von": 1600,
+        "bis": 1900,
+        "ereignisse": [
+          {
+            "name": "Ende des Dreißigjährigen Kriegs",
+            "jahr": 1648
+          },
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          }
+        ]
+      },
+      "loesung": 1706,
+      "quelle": {
+        "titel": "Wikipedia – Kreiszahl",
+        "url": "https://de.wikipedia.org/wiki/Kreiszahl"
+      },
+      "erklaerung": "Der Waliser William Jones benutzte das Zeichen als Erster."
+    },
+    {
+      "id": "mathe-054",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erfand Ernő Rubik seinen Zauberwürfel?",
+      "daten": {
+        "von": 1950,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          },
+          {
+            "name": "Euro wird Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1974,
+      "quelle": {
+        "titel": "Wikipedia – Zauberwürfel",
+        "url": "https://de.wikipedia.org/wiki/Zauberwürfel"
+      }
+    },
+    {
+      "id": "mathe-055",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Insel Samos, die Heimat des Pythagoras?",
+      "daten": {
+        "mitte": [
+          42,
+          15
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 37.75,
+        "lng": 26.97
+      },
+      "quelle": {
+        "titel": "Wikipedia – Samos",
+        "url": "https://de.wikipedia.org/wiki/Samos"
+      }
+    },
+    {
+      "id": "mathe-056",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Bagdad, wo im Mittelalter die Algebra ihren Namen bekam?",
+      "daten": {
+        "mitte": [
+          30,
+          20
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 33.31,
+        "lng": 44.36
+      },
+      "quelle": {
+        "titel": "Wikipedia – Bagdad",
+        "url": "https://de.wikipedia.org/wiki/Bagdad"
+      }
+    },
+    {
+      "id": "mathe-057",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Cambridge, wo Isaac Newton studierte und lehrte?",
+      "daten": {
+        "mitte": [
+          46,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 52.2,
+        "lng": 0.12
+      },
+      "quelle": {
+        "titel": "Wikipedia – Cambridge",
+        "url": "https://de.wikipedia.org/wiki/Cambridge"
+      }
+    },
+    {
+      "id": "mathe-058",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Brüche nach ihrer Größe!",
+      "loesung": [
+        "3/4",
+        "2/3",
+        "1/2",
+        "1/3"
+      ],
+      "oben": "größter",
+      "unten": "kleinster",
+      "quelle": {
+        "titel": "Wikipedia – Bruchrechnung",
+        "url": "https://de.wikipedia.org/wiki/Bruchrechnung"
+      }
+    },
+    {
+      "id": "mathe-059",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Längeneinheiten nach ihrer Größe!",
+      "loesung": [
+        "Seemeile",
+        "Meile",
+        "Kilometer",
+        "Yard",
+        "Fuß"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "werte": [
+        "1852 m",
+        "1609 m",
+        "1000 m",
+        "0,91 m",
+        "0,30 m"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Angloamerikanisches Maßsystem",
+        "url": "https://de.wikipedia.org/wiki/Angloamerikanisches_Maßsystem"
+      }
+    },
+    {
+      "id": "mathe-060",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach dem Ergebnis!",
+      "loesung": [
+        "2 hoch 5",
+        "5 hoch 2",
+        "10 mal 2",
+        "4 hoch 2"
+      ],
+      "oben": "größtes",
+      "unten": "kleinstes",
+      "werte": [
+        "32",
+        "25",
+        "20",
+        "16"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Potenz (Mathematik)",
+        "url": "https://de.wikipedia.org/wiki/Potenz_(Mathematik)"
+      }
     }
   ],
   "stechfragen": [
@@ -529,6 +1034,39 @@
       "quelle": {
         "titel": "Wikipedia – Kombination (Kombinatorik)",
         "url": "https://de.wikipedia.org/wiki/Kombination_(Kombinatorik)"
+      }
+    },
+    {
+      "id": "mathe-s03",
+      "modus": "schaetzen",
+      "frage": "Wie viel ist 2 hoch 20?",
+      "einheit": "",
+      "loesung": 1048576,
+      "quelle": {
+        "titel": "Wikipedia – Zweierpotenz",
+        "url": "https://de.wikipedia.org/wiki/Zweierpotenz"
+      }
+    },
+    {
+      "id": "mathe-s04",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sekunden hat ein Jahr mit 365 Tagen?",
+      "einheit": "Sekunden",
+      "loesung": 31536000,
+      "quelle": {
+        "titel": "Wikipedia – Jahr",
+        "url": "https://de.wikipedia.org/wiki/Jahr"
+      }
+    },
+    {
+      "id": "mathe-s05",
+      "modus": "schaetzen",
+      "frage": "Auf wie viele Arten kann man 10 Personen in eine Reihe stellen?",
+      "einheit": "",
+      "loesung": 3628800,
+      "quelle": {
+        "titel": "Wikipedia – Fakultät (Mathematik)",
+        "url": "https://de.wikipedia.org/wiki/Fakultät_(Mathematik)"
       }
     }
   ]
