@@ -155,7 +155,7 @@
       "modus": "auswahl",
       "frage": "Welcher Brauch gehört zum 1. Mai?",
       "optionen": [
-        "Blei gießen",
+        "Kürbisse schnitzen",
         "Einen Maibaum aufstellen",
         "Laternen basteln",
         "Eier färben"
@@ -373,8 +373,8 @@
         "bis": 1900,
         "ereignisse": [
           {
-            "name": "Sturm auf die Bastille",
-            "jahr": 1789
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
           },
           {
             "name": "Gründung des Kaiserreichs",
@@ -399,7 +399,7 @@
         "bis": 2020,
         "ereignisse": [
           {
-            "name": "Mauerfall",
+            "name": "Erster Game Boy",
             "jahr": 1989
           },
           {
@@ -428,8 +428,8 @@
             "jahr": 1871
           },
           {
-            "name": "Beginn des Ersten Weltkriegs",
-            "jahr": 1914
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
           }
         ]
       },
@@ -526,19 +526,13 @@
       "modus": "reihenfolge",
       "frage": "Ordne die deutschen Berge nach ihrer Höhe!",
       "loesung": [
-        "Zugspitze",
         "Watzmann",
         "Feldberg",
+        "Fichtelberg",
         "Brocken"
       ],
       "oben": "höchster",
       "unten": "niedrigster",
-      "werte": [
-        "2962 m",
-        "2713 m",
-        "1493 m",
-        "1141 m"
-      ],
       "quelle": {
         "titel": "Wikipedia – Liste der höchsten Berge in Deutschland",
         "url": "https://de.wikipedia.org/wiki/Liste_der_höchsten_Berge_in_Deutschland"
@@ -643,6 +637,494 @@
           "url": "https://commons.wikimedia.org/wiki/File:2022-11-13_K%C3%B6nigsberger_Klopse_Restaurant_Dicke_Paula_Berlin_anagoria.jpg"
         }
       }
+    },
+    {
+      "id": "dd-037",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das Wort für „reflektieren, genau abbilden“ richtig?",
+      "optionen": [
+        "wiederspiegeln",
+        "wiederspigeln",
+        "widerspiegeln",
+        "widderspiegeln"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wiktionary – widerspiegeln",
+        "url": "https://de.wiktionary.org/wiki/widerspiegeln"
+      },
+      "erklaerung": "„wider“ heißt „gegen“ – „wieder“ dagegen „noch einmal“."
+    },
+    {
+      "id": "dd-038",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das Tischspiel mit Kugeln und Queue richtig?",
+      "optionen": [
+        "Billiard",
+        "Biljard",
+        "Billard",
+        "Bilard"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wiktionary – Billard",
+        "url": "https://de.wiktionary.org/wiki/Billard"
+      }
+    },
+    {
+      "id": "dd-039",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man die Wirbelsäule (auch im Sinn von „Mut“) richtig?",
+      "optionen": [
+        "Rückgrad",
+        "Rückgrat",
+        "Rückrad",
+        "Rückrat"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wiktionary – Rückgrat",
+        "url": "https://de.wiktionary.org/wiki/Rückgrat"
+      }
+    },
+    {
+      "id": "dd-040",
+      "modus": "auswahl",
+      "frage": "Welcher Satz ist richtig geschrieben?",
+      "optionen": [
+        "Ihr seit seid Stunden hier.",
+        "Ihr seid seid Stunden hier.",
+        "Ihr seit seit Stunden hier.",
+        "Ihr seid seit Stunden hier."
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wiktionary – seit",
+        "url": "https://de.wiktionary.org/wiki/seit"
+      },
+      "erklaerung": "„seid“ kommt von „sein“, „seit“ gibt die Zeit an."
+    },
+    {
+      "id": "dd-041",
+      "modus": "auswahl",
+      "frage": "Welches Tier bringt in Deutschland traditionell die Ostereier?",
+      "optionen": [
+        "Der Osterhase",
+        "Der Osterstorch",
+        "Das Osterlamm",
+        "Das Osterküken"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Osterhase",
+        "url": "https://de.wikipedia.org/wiki/Osterhase"
+      }
+    },
+    {
+      "id": "dd-042",
+      "modus": "auswahl",
+      "frage": "Was gießt man an Silvester traditionell, um die Zukunft vorherzusagen?",
+      "optionen": [
+        "Eisen",
+        "Blei",
+        "Kupfer",
+        "Silber"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Bleigießen",
+        "url": "https://de.wikipedia.org/wiki/Bleigießen"
+      },
+      "erklaerung": "Heute nimmt man meist Wachs oder Zinn – Blei ist giftig."
+    },
+    {
+      "id": "dd-043",
+      "modus": "auswahl",
+      "frage": "Welcher Tag ist der Höhepunkt des rheinischen Karnevals mit den großen Umzügen?",
+      "optionen": [
+        "Karfreitag",
+        "Rosenmontag",
+        "Aschermittwoch",
+        "Weiberfastnacht"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Rosenmontag",
+        "url": "https://de.wikipedia.org/wiki/Rosenmontag"
+      }
+    },
+    {
+      "id": "dd-044",
+      "modus": "auswahl",
+      "frage": "Was bekommen Kinder in Deutschland zum ersten Schultag?",
+      "optionen": [
+        "Einen Glücksstein",
+        "Einen Adventskalender",
+        "Ein Osternest",
+        "Eine Schultüte"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Schultüte",
+        "url": "https://de.wikipedia.org/wiki/Schultüte"
+      }
+    },
+    {
+      "id": "dd-045",
+      "modus": "auswahl",
+      "frage": "Wer erfand in Mainz den Buchdruck mit beweglichen Lettern?",
+      "optionen": [
+        "Johannes Gutenberg",
+        "Johannes Kepler",
+        "Philipp Melanchthon",
+        "Martin Luther"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Johannes Gutenberg",
+        "url": "https://de.wikipedia.org/wiki/Johannes_Gutenberg"
+      }
+    },
+    {
+      "id": "dd-046",
+      "modus": "auswahl",
+      "frage": "Wer schrieb die Dramen „Die Räuber“ und „Wilhelm Tell“?",
+      "optionen": [
+        "Theodor Fontane",
+        "Gotthold Ephraim Lessing",
+        "Heinrich Heine",
+        "Friedrich Schiller"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Friedrich Schiller",
+        "url": "https://de.wikipedia.org/wiki/Friedrich_Schiller"
+      }
+    },
+    {
+      "id": "dd-047",
+      "modus": "auswahl",
+      "frage": "Wer erfand 1817 die „Laufmaschine“, den Vorläufer des Fahrrads?",
+      "optionen": [
+        "Werner von Siemens",
+        "Nikolaus Otto",
+        "Gottlieb Daimler",
+        "Karl Drais"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Karl Drais",
+        "url": "https://de.wikipedia.org/wiki/Karl_Drais"
+      }
+    },
+    {
+      "id": "dd-048",
+      "modus": "auswahl",
+      "frage": "Welcher Nürnberger Maler schuf das berühmte „Selbstbildnis im Pelzrock“?",
+      "optionen": [
+        "Hans Holbein",
+        "Albrecht Dürer",
+        "Caspar David Friedrich",
+        "Lucas Cranach"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Albrecht Dürer",
+        "url": "https://de.wikipedia.org/wiki/Albrecht_Dürer"
+      }
+    },
+    {
+      "id": "dd-049",
+      "modus": "schaetzen",
+      "frage": "Wie oft kommt der Buchstabe f im Wort „Schifffahrt“ vor?",
+      "einheit": "",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wiktionary – Schifffahrt",
+        "url": "https://de.wiktionary.org/wiki/Schifffahrt"
+      },
+      "erklaerung": "Seit der Rechtschreibreform werden drei gleiche Buchstaben alle geschrieben."
+    },
+    {
+      "id": "dd-050",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist die Autobahn A7 von Flensburg nach Füssen?",
+      "einheit": "km",
+      "loesung": 962.2,
+      "quelle": {
+        "titel": "Wikipedia – Bundesautobahn 7",
+        "url": "https://de.wikipedia.org/wiki/Bundesautobahn_7"
+      }
+    },
+    {
+      "id": "dd-051",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zeilen hat die dritte Strophe des „Lieds der Deutschen“?",
+      "einheit": "Zeilen",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Das Lied der Deutschen",
+        "url": "https://de.wikipedia.org/wiki/Das_Lied_der_Deutschen"
+      }
+    },
+    {
+      "id": "dd-052",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sterne hat die Flagge der Europäischen Union?",
+      "einheit": "Sterne",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Europaflagge",
+        "url": "https://de.wikipedia.org/wiki/Europaflagge"
+      }
+    },
+    {
+      "id": "dd-053",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bundeskanzler (einschließlich Kanzlerin) hatte die Bundesrepublik bis heute?",
+      "einheit": "",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Bundeskanzler (Deutschland)",
+        "url": "https://de.wikipedia.org/wiki/Bundeskanzler_(Deutschland)"
+      }
+    },
+    {
+      "id": "dd-054",
+      "modus": "schaetzen",
+      "frage": "Wie viele Säulen hat das Brandenburger Tor?",
+      "einheit": "Säulen",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Brandenburger Tor",
+        "url": "https://de.wikipedia.org/wiki/Brandenburger_Tor"
+      },
+      "erklaerung": "Zwei Reihen mit je sechs Säulen."
+    },
+    {
+      "id": "dd-055",
+      "modus": "schaetzen",
+      "frage": "Mit wie vielen Figuren startet jeder Spieler bei „Mensch ärgere Dich nicht“?",
+      "einheit": "Figuren",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Mensch ärgere Dich nicht",
+        "url": "https://de.wikipedia.org/wiki/Mensch_ärgere_Dich_nicht"
+      }
+    },
+    {
+      "id": "dd-056",
+      "modus": "schaetzen",
+      "frage": "Wie viele der 16 Bundesländer sind Stadtstaaten?",
+      "einheit": "",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Stadtstaat",
+        "url": "https://de.wikipedia.org/wiki/Stadtstaat"
+      },
+      "erklaerung": "Berlin, Hamburg und Bremen."
+    },
+    {
+      "id": "dd-057",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten dauert „Dinner for One“, das an Silvester im Fernsehen läuft?",
+      "einheit": "Minuten",
+      "loesung": 18,
+      "quelle": {
+        "titel": "Wikipedia – Dinner for One",
+        "url": "https://de.wikipedia.org/wiki/Dinner_for_One"
+      }
+    },
+    {
+      "id": "dd-058",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Rothenburg ob der Tauber?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 49.38,
+        "lng": 10.18
+      },
+      "quelle": {
+        "titel": "Wikipedia – Rothenburg ob der Tauber",
+        "url": "https://de.wikipedia.org/wiki/Rothenburg_ob_der_Tauber"
+      }
+    },
+    {
+      "id": "dd-059",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Insel Rügen?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 54.42,
+        "lng": 13.4
+      },
+      "quelle": {
+        "titel": "Wikipedia – Rügen",
+        "url": "https://de.wikipedia.org/wiki/Rügen"
+      }
+    },
+    {
+      "id": "dd-060",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo steht die Wartburg?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 50.97,
+        "lng": 10.31
+      },
+      "quelle": {
+        "titel": "Wikipedia – Wartburg",
+        "url": "https://de.wikipedia.org/wiki/Wartburg"
+      }
+    },
+    {
+      "id": "dd-061",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde die erste deutsche Autobahn (Köln–Bonn) eröffnet?",
+      "daten": {
+        "von": 1900,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Modell T von Ford",
+            "jahr": 1908
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1932,
+      "quelle": {
+        "titel": "Wikipedia – Bundesautobahn 555",
+        "url": "https://de.wikipedia.org/wiki/Bundesautobahn_555"
+      }
+    },
+    {
+      "id": "dd-062",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr lief „Die Sendung mit der Maus“ zum ersten Mal?",
+      "daten": {
+        "von": 1950,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1971,
+      "quelle": {
+        "titel": "Wikipedia – Die Sendung mit der Maus",
+        "url": "https://de.wikipedia.org/wiki/Die_Sendung_mit_der_Maus"
+      }
+    },
+    {
+      "id": "dd-063",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde Ludwig II. König von Bayern?",
+      "daten": {
+        "von": 1800,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1864,
+      "quelle": {
+        "titel": "Wikipedia – Ludwig II. (Bayern)",
+        "url": "https://de.wikipedia.org/wiki/Ludwig_II._(Bayern)"
+      }
+    },
+    {
+      "id": "dd-064",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Bundesländer nach ihrer Fläche!",
+      "loesung": [
+        "Bayern",
+        "Niedersachsen",
+        "Hessen",
+        "Saarland",
+        "Bremen"
+      ],
+      "oben": "größtes",
+      "unten": "kleinstes",
+      "quelle": {
+        "titel": "Wikipedia – Land (Deutschland)",
+        "url": "https://de.wikipedia.org/wiki/Land_(Deutschland)"
+      }
+    },
+    {
+      "id": "dd-065",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Städte nach ihrem Alter!",
+      "loesung": [
+        "Trier",
+        "Köln",
+        "Berlin",
+        "Wolfsburg"
+      ],
+      "oben": "älteste",
+      "unten": "jüngste",
+      "quelle": {
+        "titel": "Wikipedia – Trier",
+        "url": "https://de.wikipedia.org/wiki/Trier"
+      }
+    },
+    {
+      "id": "dd-066",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Bundesländer nach ihrer Einwohnerzahl!",
+      "loesung": [
+        "Nordrhein-Westfalen",
+        "Bayern",
+        "Baden-Württemberg",
+        "Niedersachsen",
+        "Bremen"
+      ],
+      "oben": "meiste",
+      "unten": "wenigste",
+      "quelle": {
+        "titel": "Wikipedia – Land (Deutschland)",
+        "url": "https://de.wikipedia.org/wiki/Land_(Deutschland)"
+      }
     }
   ],
   "stechfragen": [
@@ -666,6 +1148,39 @@
       "quelle": {
         "titel": "Wikipedia – Brandenburger Tor",
         "url": "https://de.wikipedia.org/wiki/Brandenburger_Tor"
+      }
+    },
+    {
+      "id": "dd-s03",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde die Deutsche Bahn AG gegründet?",
+      "einheit": "",
+      "loesung": 1994,
+      "quelle": {
+        "titel": "Wikipedia – Deutsche Bahn",
+        "url": "https://de.wikipedia.org/wiki/Deutsche_Bahn"
+      }
+    },
+    {
+      "id": "dd-s04",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Nord-Ostsee-Kanal?",
+      "einheit": "km",
+      "loesung": 98.26,
+      "quelle": {
+        "titel": "Wikipedia – Nord-Ostsee-Kanal",
+        "url": "https://de.wikipedia.org/wiki/Nord-Ostsee-Kanal"
+      }
+    },
+    {
+      "id": "dd-s05",
+      "modus": "schaetzen",
+      "frage": "Seit welchem Jahr feiert Hamburg seinen Hafengeburtstag (Datum des Freibriefs)?",
+      "einheit": "",
+      "loesung": 1189,
+      "quelle": {
+        "titel": "Wikipedia – Hafengeburtstag",
+        "url": "https://de.wikipedia.org/wiki/Hafengeburtstag"
       }
     }
   ]
