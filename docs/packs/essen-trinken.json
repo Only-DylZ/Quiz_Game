@@ -1,0 +1,622 @@
+{
+  "thema": "Essen & Trinken",
+  "version": 1,
+  "beschreibung": "Gerichte, Getränke und Lebensmittel aus aller Welt.",
+  "fragen": [
+    {
+      "id": "essen-001",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land stammt Sushi?",
+      "optionen": [
+        "China",
+        "Korea",
+        "Japan",
+        "Thailand"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Sushi",
+        "url": "https://de.wikipedia.org/wiki/Sushi"
+      }
+    },
+    {
+      "id": "essen-002",
+      "modus": "auswahl",
+      "frage": "Welches Gewürz ist nach Gewicht das teuerste der Welt?",
+      "optionen": [
+        "Vanille",
+        "Safran",
+        "Kardamom",
+        "Zimt"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Safran",
+        "url": "https://de.wikipedia.org/wiki/Safran"
+      }
+    },
+    {
+      "id": "essen-003",
+      "modus": "auswahl",
+      "frage": "Aus welcher Pflanze wird Tequila hergestellt?",
+      "optionen": [
+        "Kaktus",
+        "Agave",
+        "Zuckerrohr",
+        "Mais"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Tequila",
+        "url": "https://de.wikipedia.org/wiki/Tequila"
+      }
+    },
+    {
+      "id": "essen-004",
+      "modus": "auswahl",
+      "frage": "Was ist die Hauptzutat von Guacamole?",
+      "optionen": [
+        "Avocado",
+        "Erbse",
+        "Gurke",
+        "Limette"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Guacamole",
+        "url": "https://de.wikipedia.org/wiki/Guacamole"
+      }
+    },
+    {
+      "id": "essen-005",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land stammt der Käse Gouda?",
+      "optionen": [
+        "Belgien",
+        "Niederlande",
+        "Schweiz",
+        "Dänemark"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Gouda (Käse)",
+        "url": "https://de.wikipedia.org/wiki/Gouda_(Käse)"
+      }
+    },
+    {
+      "id": "essen-006",
+      "modus": "auswahl",
+      "frage": "Welche dieser Früchte ist botanisch gesehen eine Beere?",
+      "optionen": [
+        "Erdbeere",
+        "Banane",
+        "Himbeere",
+        "Kirsche"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Beere",
+        "url": "https://de.wikipedia.org/wiki/Beere"
+      },
+      "erklaerung": "Die Erdbeere ist dagegen eine Sammelnussfrucht."
+    },
+    {
+      "id": "essen-007",
+      "modus": "auswahl",
+      "frage": "Woraus wird Tofu hergestellt?",
+      "optionen": [
+        "Reis",
+        "Sojabohnen",
+        "Kichererbsen",
+        "Weizen"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Tofu",
+        "url": "https://de.wikipedia.org/wiki/Tofu"
+      }
+    },
+    {
+      "id": "essen-008",
+      "modus": "auswahl",
+      "frage": "Welches Getränk entsteht durch Gärung von gesüßtem Tee?",
+      "optionen": [
+        "Kefir",
+        "Kombucha",
+        "Kwass",
+        "Lassi"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Kombucha",
+        "url": "https://de.wikipedia.org/wiki/Kombucha"
+      }
+    },
+    {
+      "id": "essen-009",
+      "modus": "auswahl",
+      "frage": "Welche Pizza wird nur mit Tomate, Mozzarella und Basilikum belegt?",
+      "optionen": [
+        "Margherita",
+        "Marinara",
+        "Diavola",
+        "Quattro Stagioni"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Pizza Margherita",
+        "url": "https://de.wikipedia.org/wiki/Pizza_Margherita"
+      }
+    },
+    {
+      "id": "essen-010",
+      "modus": "auswahl",
+      "frage": "Welche „Nuss“ ist eigentlich eine Hülsenfrucht?",
+      "optionen": [
+        "Walnuss",
+        "Erdnuss",
+        "Haselnuss",
+        "Cashew"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Erdnuss",
+        "url": "https://de.wikipedia.org/wiki/Erdnuss"
+      }
+    },
+    {
+      "id": "essen-011",
+      "modus": "auswahl",
+      "frage": "Welches Land produziert seit Jahrzehnten den meisten Kaffee?",
+      "optionen": [
+        "Kolumbien",
+        "Vietnam",
+        "Brasilien",
+        "Äthiopien"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Kaffee",
+        "url": "https://de.wikipedia.org/wiki/Kaffee"
+      }
+    },
+    {
+      "id": "essen-012",
+      "modus": "auswahl",
+      "frage": "Mit welcher Skala misst man die Schärfe von Chilis?",
+      "optionen": [
+        "Scoville-Skala",
+        "Richter-Skala",
+        "Mohs-Skala",
+        "Kelvin-Skala"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Scoville-Skala",
+        "url": "https://de.wikipedia.org/wiki/Scoville-Skala"
+      }
+    },
+    {
+      "id": "essen-013",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zutaten erlaubte das Bayerische Reinheitsgebot ursprünglich für Bier?",
+      "einheit": "Zutaten",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Reinheitsgebot",
+        "url": "https://de.wikipedia.org/wiki/Reinheitsgebot"
+      },
+      "erklaerung": "Gerste, Hopfen und Wasser – die Hefe war noch unbekannt."
+    },
+    {
+      "id": "essen-014",
+      "modus": "schaetzen",
+      "frage": "Wie viel Zucker steckt in einer 330-ml-Dose Cola?",
+      "einheit": "g",
+      "loesung": 35,
+      "quelle": {
+        "titel": "Wikipedia – Coca-Cola",
+        "url": "https://de.wikipedia.org/wiki/Coca-Cola"
+      }
+    },
+    {
+      "id": "essen-015",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent einer Gurke sind Wasser?",
+      "einheit": "%",
+      "loesung": 96,
+      "quelle": {
+        "titel": "Wikipedia – Gurke",
+        "url": "https://de.wikipedia.org/wiki/Gurke"
+      }
+    },
+    {
+      "id": "essen-016",
+      "modus": "schaetzen",
+      "frage": "Wie viele Michelin-Sterne kann ein Restaurant höchstens bekommen?",
+      "einheit": "Sterne",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Guide Michelin",
+        "url": "https://de.wikipedia.org/wiki/Guide_Michelin"
+      }
+    },
+    {
+      "id": "essen-017",
+      "modus": "schaetzen",
+      "frage": "Wie viele Monate muss ein Parmigiano Reggiano mindestens reifen?",
+      "einheit": "Monate",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Parmesan",
+        "url": "https://de.wikipedia.org/wiki/Parmesan"
+      }
+    },
+    {
+      "id": "essen-018",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bohnen stecken normalerweise in einer Kaffeekirsche?",
+      "einheit": "Bohnen",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Kaffeekirsche",
+        "url": "https://de.wikipedia.org/wiki/Kaffeekirsche"
+      }
+    },
+    {
+      "id": "essen-019",
+      "modus": "schaetzen",
+      "frage": "Wie viel Salz pro Tag empfiehlt die WHO für Erwachsene höchstens?",
+      "einheit": "g",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Speisesalz",
+        "url": "https://de.wikipedia.org/wiki/Speisesalz"
+      }
+    },
+    {
+      "id": "essen-020",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Celsius siedet Trinkalkohol (Ethanol)?",
+      "einheit": "°C",
+      "loesung": 78,
+      "quelle": {
+        "titel": "Wikipedia – Ethanol",
+        "url": "https://de.wikipedia.org/wiki/Ethanol"
+      }
+    },
+    {
+      "id": "essen-021",
+      "modus": "schaetzen",
+      "frage": "Wie viel gemahlenen Kaffee nimmt man für einen einfachen Espresso?",
+      "einheit": "g",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Espresso",
+        "url": "https://de.wikipedia.org/wiki/Espresso"
+      },
+      "erklaerung": "So legt es das italienische Espresso-Institut fest."
+    },
+    {
+      "id": "essen-022",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Kilokalorien liefert ein Gramm Fett?",
+      "daten": {
+        "einheit": "kcal pro g",
+        "balken": [
+          {
+            "name": "Eiweiß",
+            "wert": 4
+          },
+          {
+            "name": "Kohlenhydrate",
+            "wert": 4
+          },
+          {
+            "name": "Alkohol",
+            "wert": 7
+          },
+          {
+            "name": "Fett",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Physiologischer Brennwert",
+        "url": "https://de.wikipedia.org/wiki/Physiologischer_Brennwert"
+      }
+    },
+    {
+      "id": "essen-023",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Champagne, die Heimat des Champagners?",
+      "daten": {
+        "mitte": [
+          48,
+          8
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 49.25,
+        "lng": 4.03
+      },
+      "quelle": {
+        "titel": "Wikipedia – Champagne",
+        "url": "https://de.wikipedia.org/wiki/Champagne"
+      }
+    },
+    {
+      "id": "essen-024",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Parma, Heimat von Parmesan und Parmaschinken?",
+      "daten": {
+        "mitte": [
+          46,
+          6
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 44.8,
+        "lng": 10.33
+      },
+      "quelle": {
+        "titel": "Wikipedia – Parma",
+        "url": "https://de.wikipedia.org/wiki/Parma"
+      }
+    },
+    {
+      "id": "essen-025",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Stadt Tequila, die dem Getränk ihren Namen gab?",
+      "daten": {
+        "mitte": [
+          30,
+          -100
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 20.88,
+        "lng": -103.84
+      },
+      "quelle": {
+        "titel": "Wikipedia – Tequila (Jalisco)",
+        "url": "https://de.wikipedia.org/wiki/Tequila_(Jalisco)"
+      }
+    },
+    {
+      "id": "essen-026",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde Coca-Cola erfunden?",
+      "daten": {
+        "von": 1800,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Patent auf die Konservendose",
+            "jahr": 1810
+          },
+          {
+            "name": "Gründung von Haribo",
+            "jahr": 1920
+          }
+        ]
+      },
+      "loesung": 1886,
+      "quelle": {
+        "titel": "Wikipedia – Coca-Cola",
+        "url": "https://de.wikipedia.org/wiki/Coca-Cola"
+      }
+    },
+    {
+      "id": "essen-027",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erfand Herta Heuwer in Berlin die Currywurst?",
+      "daten": {
+        "von": 1900,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Erstes McDonald's-Restaurant",
+            "jahr": 1940
+          },
+          {
+            "name": "Erste Mondlandung",
+            "jahr": 1969
+          }
+        ]
+      },
+      "loesung": 1949,
+      "quelle": {
+        "titel": "Wikipedia – Currywurst",
+        "url": "https://de.wikipedia.org/wiki/Currywurst"
+      }
+    },
+    {
+      "id": "essen-028",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach Schärfe!",
+      "loesung": [
+        "Carolina Reaper",
+        "Habanero",
+        "Jalapeño",
+        "Gemüsepaprika"
+      ],
+      "oben": "schärfste",
+      "unten": "mildeste",
+      "quelle": {
+        "titel": "Wikipedia – Scoville-Skala",
+        "url": "https://de.wikipedia.org/wiki/Scoville-Skala"
+      }
+    },
+    {
+      "id": "essen-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach dem typischen Alkoholgehalt!",
+      "loesung": [
+        "Wodka",
+        "Wein",
+        "Bier",
+        "Radler"
+      ],
+      "oben": "stärkstes",
+      "unten": "schwächstes",
+      "quelle": {
+        "titel": "Wikipedia – Alkoholgehalt",
+        "url": "https://de.wikipedia.org/wiki/Alkoholgehalt"
+      }
+    },
+    {
+      "id": "essen-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach Kalorien pro 100 Gramm!",
+      "loesung": [
+        "Butter",
+        "Vollmilchschokolade",
+        "Brot",
+        "Apfel"
+      ],
+      "oben": "meiste",
+      "unten": "wenigste",
+      "quelle": {
+        "titel": "Wikipedia – Butter",
+        "url": "https://de.wikipedia.org/wiki/Butter"
+      }
+    },
+    {
+      "id": "essen-031",
+      "modus": "auswahl",
+      "frage": "Wie heißt dieses Gericht?",
+      "optionen": [
+        "Risotto",
+        "Paella",
+        "Jambalaya",
+        "Biryani"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Paella",
+        "url": "https://de.wikipedia.org/wiki/Paella"
+      },
+      "bild": {
+        "datei": "bilder/essen-031.jpg",
+        "urheber": "Jan Harenburg",
+        "lizenz": "CC BY 4.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Paella_carne.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Paella_carne.jpg"
+        }
+      }
+    },
+    {
+      "id": "essen-032",
+      "modus": "auswahl",
+      "frage": "Wie heißt dieses Gericht?",
+      "optionen": [
+        "Shakshuka",
+        "Huevos rancheros",
+        "Menemen",
+        "Frittata"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Shakshuka",
+        "url": "https://de.wikipedia.org/wiki/Shakshuka"
+      },
+      "bild": {
+        "datei": "bilder/essen-032.jpg",
+        "urheber": "Calliopejen1",
+        "lizenz": "CC BY-SA 3.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Shakshuka_by_Calliopejen1.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Shakshuka_by_Calliopejen1.jpg"
+        }
+      }
+    },
+    {
+      "id": "essen-033",
+      "modus": "auswahl",
+      "frage": "Wie heißt dieses Gericht?",
+      "optionen": [
+        "Ramen",
+        "Pho",
+        "Udon",
+        "Laksa"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Phở",
+        "url": "https://de.wikipedia.org/wiki/Phở"
+      },
+      "bild": {
+        "datei": "bilder/essen-033.jpg",
+        "urheber": "Nowforever",
+        "lizenz": "CC BY-SA 4.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Vietnamese_Pho.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Vietnamese_Pho.jpg"
+        }
+      }
+    },
+    {
+      "id": "essen-034",
+      "modus": "auswahl",
+      "frage": "Wie heißt dieses Gericht?",
+      "optionen": [
+        "Poke",
+        "Sashimi",
+        "Ceviche",
+        "Carpaccio"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Ceviche",
+        "url": "https://de.wikipedia.org/wiki/Ceviche"
+      },
+      "bild": {
+        "datei": "bilder/essen-034.jpg",
+        "urheber": "Picanteria karol",
+        "lizenz": "CC BY-SA 4.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Cebiche_de_corvina.JPG",
+          "url": "https://commons.wikimedia.org/wiki/File:Cebiche_de_corvina.JPG"
+        }
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "essen-s01",
+      "modus": "schaetzen",
+      "frage": "Wie viele Liter Wasser werden im weltweiten Mittel für 1 kg Rindfleisch benötigt?",
+      "einheit": "Liter",
+      "loesung": 15415,
+      "quelle": {
+        "titel": "Wikipedia – Virtuelles Wasser",
+        "url": "https://de.wikipedia.org/wiki/Virtuelles_Wasser"
+      },
+      "erklaerung": "Mit Futteranbau, Tränke und Verarbeitung."
+    },
+    {
+      "id": "essen-s02",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde das Bayerische Reinheitsgebot erlassen?",
+      "einheit": "",
+      "loesung": 1516,
+      "quelle": {
+        "titel": "Wikipedia – Reinheitsgebot",
+        "url": "https://de.wikipedia.org/wiki/Reinheitsgebot"
+      }
+    }
+  ]
+}

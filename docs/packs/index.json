@@ -11,6 +11,10 @@
     {
       "datei": "tierwelt.json",
       "thema": "Tierwelt"
+    },
+    {
+      "datei": "essen-trinken.json",
+      "thema": "Essen & Trinken"
     }
   ]
 }
