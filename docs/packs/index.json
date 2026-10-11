@@ -7,6 +7,10 @@
     {
       "datei": "geographie.json",
       "thema": "Geographie"
+    },
+    {
+      "datei": "tierwelt.json",
+      "thema": "Tierwelt"
     }
   ]
 }

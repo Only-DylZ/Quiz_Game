@@ -1,0 +1,635 @@
+{
+  "thema": "Tierwelt",
+  "version": 1,
+  "beschreibung": "Rekorde, Kuriositäten und erstaunliche Tiere.",
+  "fragen": [
+    {
+      "id": "tier-001",
+      "modus": "auswahl",
+      "frage": "Welches ist das größte Tier der Erde?",
+      "optionen": [
+        "Afrikanischer Elefant",
+        "Blauwal",
+        "Pottwal",
+        "Walhai"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Blauwal",
+        "url": "https://de.wikipedia.org/wiki/Blauwal"
+      }
+    },
+    {
+      "id": "tier-002",
+      "modus": "auswahl",
+      "frage": "Wie viele Herzen hat ein Krake?",
+      "optionen": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Kraken",
+        "url": "https://de.wikipedia.org/wiki/Kraken"
+      },
+      "erklaerung": "Zwei Kiemenherzen und ein Körperherz."
+    },
+    {
+      "id": "tier-003",
+      "modus": "auswahl",
+      "frage": "Welches dieser Säugetiere kann aktiv fliegen?",
+      "optionen": [
+        "Gleithörnchen",
+        "Fledermaus",
+        "Riesengleiter",
+        "Kurzkopfgleitbeutler"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Fledertiere",
+        "url": "https://de.wikipedia.org/wiki/Fledertiere"
+      },
+      "erklaerung": "Die anderen können nur gleiten."
+    },
+    {
+      "id": "tier-004",
+      "modus": "auswahl",
+      "frage": "Was frisst ein Großer Panda hauptsächlich?",
+      "optionen": [
+        "Bambus",
+        "Eukalyptus",
+        "Fisch",
+        "Insekten"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Großer Panda",
+        "url": "https://de.wikipedia.org/wiki/Großer_Panda"
+      }
+    },
+    {
+      "id": "tier-005",
+      "modus": "auswahl",
+      "frage": "Welcher Vogel kann rückwärts fliegen?",
+      "optionen": [
+        "Kolibri",
+        "Spatz",
+        "Turmfalke",
+        "Rauchschwalbe"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kolibris",
+        "url": "https://de.wikipedia.org/wiki/Kolibris"
+      }
+    },
+    {
+      "id": "tier-006",
+      "modus": "auswahl",
+      "frage": "Zu welcher Tiergruppe gehören Schildkröten?",
+      "optionen": [
+        "Amphibien",
+        "Reptilien",
+        "Säugetiere",
+        "Weichtiere"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Schildkröten",
+        "url": "https://de.wikipedia.org/wiki/Schildkröten"
+      }
+    },
+    {
+      "id": "tier-007",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein männliches Schwein?",
+      "optionen": [
+        "Eber",
+        "Bulle",
+        "Hengst",
+        "Bock"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Hausschwein",
+        "url": "https://de.wikipedia.org/wiki/Hausschwein"
+      }
+    },
+    {
+      "id": "tier-008",
+      "modus": "auswahl",
+      "frage": "Welches ist das schnellste Landtier?",
+      "optionen": [
+        "Gepard",
+        "Löwe",
+        "Gabelbock",
+        "Springbock"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Gepard",
+        "url": "https://de.wikipedia.org/wiki/Gepard"
+      }
+    },
+    {
+      "id": "tier-009",
+      "modus": "auswahl",
+      "frage": "Welche Farbe hat die Haut eines Eisbären unter dem Fell?",
+      "optionen": [
+        "Weiß",
+        "Rosa",
+        "Schwarz",
+        "Grau"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Eisbär",
+        "url": "https://de.wikipedia.org/wiki/Eisbär"
+      }
+    },
+    {
+      "id": "tier-010",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein junges Känguru?",
+      "optionen": [
+        "Joey",
+        "Kitz",
+        "Fohlen",
+        "Welpe"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kängurus",
+        "url": "https://de.wikipedia.org/wiki/Kängurus"
+      }
+    },
+    {
+      "id": "tier-011",
+      "modus": "auswahl",
+      "frage": "Welches Säugetier legt Eier?",
+      "optionen": [
+        "Schnabeltier",
+        "Gürteltier",
+        "Erdferkel",
+        "Igel"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Schnabeltier",
+        "url": "https://de.wikipedia.org/wiki/Schnabeltier"
+      }
+    },
+    {
+      "id": "tier-012",
+      "modus": "auswahl",
+      "frage": "Wie viele Beine hat eine Spinne?",
+      "optionen": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Webspinnen",
+        "url": "https://de.wikipedia.org/wiki/Webspinnen"
+      }
+    },
+    {
+      "id": "tier-013",
+      "modus": "schaetzen",
+      "frage": "Wie viele Augen hat eine Honigbiene insgesamt?",
+      "einheit": "Augen",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Westliche Honigbiene",
+        "url": "https://de.wikipedia.org/wiki/Westliche_Honigbiene"
+      },
+      "erklaerung": "Zwei große Facettenaugen und drei kleine Punktaugen."
+    },
+    {
+      "id": "tier-014",
+      "modus": "schaetzen",
+      "frage": "Wie viele Halswirbel hat eine Giraffe?",
+      "einheit": "Wirbel",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Giraffen",
+        "url": "https://de.wikipedia.org/wiki/Giraffen"
+      },
+      "erklaerung": "Genauso viele wie der Mensch – sie sind nur viel länger."
+    },
+    {
+      "id": "tier-015",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage brütet ein Huhn, bis das Küken schlüpft?",
+      "einheit": "Tage",
+      "loesung": 21,
+      "quelle": {
+        "titel": "Wikipedia – Haushuhn",
+        "url": "https://de.wikipedia.org/wiki/Haushuhn"
+      }
+    },
+    {
+      "id": "tier-016",
+      "modus": "schaetzen",
+      "frage": "Wie viele Eier legt eine Bienenkönigin in der Hauptsaison bis zu – pro Tag?",
+      "einheit": "Eier",
+      "loesung": 2000,
+      "quelle": {
+        "titel": "Wikipedia – Westliche Honigbiene",
+        "url": "https://de.wikipedia.org/wiki/Westliche_Honigbiene"
+      }
+    },
+    {
+      "id": "tier-017",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Abschnitten besteht der Magen einer Kuh?",
+      "einheit": "Abschnitte",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Hausrind",
+        "url": "https://de.wikipedia.org/wiki/Hausrind"
+      },
+      "erklaerung": "Pansen, Netzmagen, Blättermagen und Labmagen."
+    },
+    {
+      "id": "tier-018",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kammern hat das Herz eines Krokodils?",
+      "einheit": "Kammern",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Krokodile",
+        "url": "https://de.wikipedia.org/wiki/Krokodile"
+      },
+      "erklaerung": "Anders als andere Reptilien haben Krokodile ein vierkammeriges Herz."
+    },
+    {
+      "id": "tier-019",
+      "modus": "schaetzen",
+      "frage": "Wie viele Monate kann der Winterschlaf eines Siebenschläfers dauern?",
+      "einheit": "Monate",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Siebenschläfer",
+        "url": "https://de.wikipedia.org/wiki/Siebenschläfer"
+      },
+      "erklaerung": "Bis zu acht Monate – länger als der Name verspricht."
+    },
+    {
+      "id": "tier-020",
+      "modus": "schaetzen",
+      "frage": "Wie viele Arten von Großkatzen der Gattung Panthera gibt es?",
+      "einheit": "Arten",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Eigentliche Großkatzen",
+        "url": "https://de.wikipedia.org/wiki/Eigentliche_Großkatzen"
+      },
+      "erklaerung": "Löwe, Tiger, Leopard, Jaguar und Schneeleopard."
+    },
+    {
+      "id": "tier-021",
+      "modus": "schaetzen",
+      "frage": "Wie viele Arme hat ein Gemeiner Seestern?",
+      "einheit": "Arme",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Gemeiner Seestern",
+        "url": "https://de.wikipedia.org/wiki/Gemeiner_Seestern"
+      }
+    },
+    {
+      "id": "tier-022",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie lange dauert die Tragzeit beim Pferd?",
+      "daten": {
+        "einheit": "Tage",
+        "balken": [
+          {
+            "name": "Mensch",
+            "wert": 280
+          },
+          {
+            "name": "Hund",
+            "wert": 63
+          },
+          {
+            "name": "Pferd",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 330,
+      "quelle": {
+        "titel": "Wikipedia – Hauspferd",
+        "url": "https://de.wikipedia.org/wiki/Hauspferd"
+      }
+    },
+    {
+      "id": "tier-023",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Beine hat ein Hummer?",
+      "daten": {
+        "einheit": "Beine",
+        "balken": [
+          {
+            "name": "Mensch",
+            "wert": 2
+          },
+          {
+            "name": "Insekt",
+            "wert": 6
+          },
+          {
+            "name": "Spinne",
+            "wert": 8
+          },
+          {
+            "name": "Hummer",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Hummer",
+        "url": "https://de.wikipedia.org/wiki/Hummer"
+      },
+      "erklaerung": "Hummer gehören zu den Zehnfußkrebsen."
+    },
+    {
+      "id": "tier-024",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegen die Galápagos-Inseln, berühmt durch Darwins Forschungen?",
+      "daten": {
+        "mitte": [
+          0,
+          -60
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": -0.5,
+        "lng": -90.5
+      },
+      "quelle": {
+        "titel": "Wikipedia – Galápagos-Inseln",
+        "url": "https://de.wikipedia.org/wiki/Galápagos-Inseln"
+      }
+    },
+    {
+      "id": "tier-025",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Insel, auf der Lemuren in freier Wildbahn leben?",
+      "daten": {
+        "mitte": [
+          0,
+          30
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": -19.0,
+        "lng": 46.7
+      },
+      "quelle": {
+        "titel": "Wikipedia – Madagaskar",
+        "url": "https://de.wikipedia.org/wiki/Madagaskar"
+      }
+    },
+    {
+      "id": "tier-026",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde das Klonschaf Dolly geboren?",
+      "daten": {
+        "von": 1950,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Entdeckung der DNA-Struktur",
+            "jahr": 1953
+          },
+          {
+            "name": "Erstes Retortenbaby",
+            "jahr": 1978
+          }
+        ]
+      },
+      "loesung": 1996,
+      "quelle": {
+        "titel": "Wikipedia – Dolly (Schaf)",
+        "url": "https://de.wikipedia.org/wiki/Dolly_(Schaf)"
+      }
+    },
+    {
+      "id": "tier-027",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr landeten Niederländer auf Mauritius – der Anfang vom Ende des Dodos?",
+      "daten": {
+        "von": 1450,
+        "bis": 1700,
+        "ereignisse": [
+          {
+            "name": "Kolumbus erreicht Amerika",
+            "jahr": 1492
+          },
+          {
+            "name": "Ende des Dreißigjährigen Kriegs",
+            "jahr": 1648
+          }
+        ]
+      },
+      "loesung": 1598,
+      "quelle": {
+        "titel": "Wikipedia – Dodo",
+        "url": "https://de.wikipedia.org/wiki/Dodo"
+      }
+    },
+    {
+      "id": "tier-028",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Tiere nach ihrem Gewicht!",
+      "loesung": [
+        "Blauwal",
+        "Afrikanischer Elefant",
+        "Flusspferd",
+        "Eisbär"
+      ],
+      "oben": "schwerstes",
+      "unten": "leichtestes",
+      "quelle": {
+        "titel": "Wikipedia – Blauwal",
+        "url": "https://de.wikipedia.org/wiki/Blauwal"
+      }
+    },
+    {
+      "id": "tier-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Höchstgeschwindigkeit!",
+      "loesung": [
+        "Wanderfalke (Sturzflug)",
+        "Gepard",
+        "Pferd",
+        "Mensch"
+      ],
+      "oben": "schnellstes",
+      "unten": "langsamstes",
+      "quelle": {
+        "titel": "Wikipedia – Wanderfalke",
+        "url": "https://de.wikipedia.org/wiki/Wanderfalke"
+      }
+    },
+    {
+      "id": "tier-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Lebenserwartung!",
+      "loesung": [
+        "Grönlandwal",
+        "Mensch",
+        "Hund",
+        "Hausmaus"
+      ],
+      "oben": "ältestes",
+      "unten": "kürzestes Leben",
+      "quelle": {
+        "titel": "Wikipedia – Grönlandwal",
+        "url": "https://de.wikipedia.org/wiki/Grönlandwal"
+      },
+      "erklaerung": "Grönlandwale können über 200 Jahre alt werden."
+    },
+    {
+      "id": "tier-031",
+      "modus": "auswahl",
+      "frage": "Welches Tier ist das?",
+      "optionen": [
+        "Zebra",
+        "Okapi",
+        "Antilope",
+        "Tapir"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Okapi",
+        "url": "https://de.wikipedia.org/wiki/Okapi"
+      },
+      "bild": {
+        "datei": "bilder/tier-031.jpg",
+        "urheber": "Daniel Jolivet",
+        "lizenz": "CC BY 2.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Saint-Aignan_(Loir-et-Cher)._Okapi.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Saint-Aignan_(Loir-et-Cher)._Okapi.jpg"
+        }
+      }
+    },
+    {
+      "id": "tier-032",
+      "modus": "auswahl",
+      "frage": "Welches Tier ist das?",
+      "optionen": [
+        "Axolotl",
+        "Feuersalamander",
+        "Kammmolch",
+        "Grottenolm"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Axolotl",
+        "url": "https://de.wikipedia.org/wiki/Axolotl"
+      },
+      "bild": {
+        "datei": "bilder/tier-032.jpg",
+        "urheber": "Faldrian",
+        "lizenz": "CC BY-SA 3.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Axolotl_Uni_Konstanz.JPG",
+          "url": "https://commons.wikimedia.org/wiki/File:Axolotl_Uni_Konstanz.JPG"
+        }
+      }
+    },
+    {
+      "id": "tier-033",
+      "modus": "auswahl",
+      "frage": "Welches Tier ist das?",
+      "optionen": [
+        "Graureiher",
+        "Marabu",
+        "Schuhschnabel",
+        "Pelikan"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Schuhschnabel",
+        "url": "https://de.wikipedia.org/wiki/Schuhschnabel"
+      },
+      "bild": {
+        "datei": "bilder/tier-033.jpg",
+        "urheber": "Quartl",
+        "lizenz": "CC BY-SA 3.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Balaeniceps_rex_qtl2.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Balaeniceps_rex_qtl2.jpg"
+        }
+      }
+    },
+    {
+      "id": "tier-034",
+      "modus": "auswahl",
+      "frage": "Welches Tier ist das?",
+      "optionen": [
+        "Koboldmaki",
+        "Plumplori",
+        "Fingertier",
+        "Galago"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Fingertier",
+        "url": "https://de.wikipedia.org/wiki/Fingertier"
+      },
+      "bild": {
+        "datei": "bilder/tier-034.jpg",
+        "urheber": "nomis-simon",
+        "lizenz": "CC BY 2.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Wild_aye_aye.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Wild_aye_aye.jpg"
+        }
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "tier-s01",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zähne hat ein erwachsener Hund?",
+      "einheit": "Zähne",
+      "loesung": 42,
+      "quelle": {
+        "titel": "Wikipedia – Haushund",
+        "url": "https://de.wikipedia.org/wiki/Haushund"
+      }
+    },
+    {
+      "id": "tier-s02",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zähne hat eine erwachsene Hauskatze?",
+      "einheit": "Zähne",
+      "loesung": 30,
+      "quelle": {
+        "titel": "Wikipedia – Hauskatze",
+        "url": "https://de.wikipedia.org/wiki/Hauskatze"
+      }
+    }
+  ]
+}
