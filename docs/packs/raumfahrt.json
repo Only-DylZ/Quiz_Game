@@ -426,16 +426,16 @@
       "erklaerung": "Sie heißen Phobos und Deimos."
     },
     {
-      "id": "rf-26",
       "modus": "schaetzen",
-      "frage": "Wie viele Sekunden braucht das Licht von der Sonne bis zur Erde?",
-      "einheit": "Sekunden",
-      "loesung": 499,
+      "frage": "Wie viele Stunden dauert ein Tag auf dem Jupiter?",
+      "einheit": "Stunden",
+      "loesung": 9.9,
+      "erklaerung": "Er dreht sich so schnell wie kein anderer Planet.",
       "quelle": {
-        "titel": "Wikipedia – Astronomische Einheit",
-        "url": "https://de.wikipedia.org/wiki/Astronomische_Einheit"
+        "titel": "Wikipedia – Jupiter (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Jupiter_(Planet)"
       },
-      "erklaerung": "Etwa 8 Minuten und 19 Sekunden."
+      "id": "rf-26"
     },
     {
       "id": "rf-27",
@@ -495,15 +495,15 @@
       "erklaerung": "Rund ein Sechstel – deshalb hüpften die Astronauten so leicht."
     },
     {
-      "id": "rf-32",
       "modus": "schaetzen",
-      "frage": "Wie viele Kilometer legt das Licht in einer Sekunde zurück?",
-      "einheit": "km",
-      "loesung": 299792,
+      "frage": "Wie viele Millionen Kilometer ist die Sonne im Mittel von der Erde entfernt?",
+      "einheit": "Millionen km",
+      "loesung": 149.6,
       "quelle": {
-        "titel": "Wikipedia – Lichtgeschwindigkeit",
-        "url": "https://de.wikipedia.org/wiki/Lichtgeschwindigkeit"
-      }
+        "titel": "Wikipedia – Astronomische Einheit",
+        "url": "https://de.wikipedia.org/wiki/Astronomische_Einheit"
+      },
+      "id": "rf-32"
     },
     {
       "id": "rf-33",

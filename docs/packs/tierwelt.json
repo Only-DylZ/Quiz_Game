@@ -949,25 +949,25 @@
       }
     },
     {
-      "id": "tier-058",
       "modus": "grafik",
       "art": "karte",
-      "frage": "Wo liegt das Great Barrier Reef, das größte Korallenriff der Erde?",
+      "frage": "Wo liegt die Insel Borneo, eine der letzten Heimaten der Orang-Utans?",
       "daten": {
         "mitte": [
-          0,
-          130
+          20,
+          80
         ],
         "zoom": 2
       },
       "loesung": {
-        "lat": -18.29,
-        "lng": 147.7
+        "lat": 0.8,
+        "lng": 114.0
       },
       "quelle": {
-        "titel": "Wikipedia – Great Barrier Reef",
-        "url": "https://de.wikipedia.org/wiki/Great_Barrier_Reef"
-      }
+        "titel": "Wikipedia – Borneo",
+        "url": "https://de.wikipedia.org/wiki/Borneo"
+      },
+      "id": "tier-058"
     },
     {
       "id": "tier-059",
