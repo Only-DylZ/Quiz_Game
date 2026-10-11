@@ -378,6 +378,28 @@ button.klein {
   font-weight: bold;
 }
 
+/* Handy: einsortierte Elemente lassen sich ziehen */
+.reihe-liste li.ziehbar {
+  cursor: grab;
+  user-select: none;
+  touch-action: none; /* beim Ziehen nicht die Seite scrollen */
+  transition: transform 0.15s;
+}
+
+.reihe-liste li.wird-gezogen {
+  position: relative;
+  z-index: 1;
+  cursor: grabbing;
+  transition: none; /* folgt direkt dem Finger */
+  background: #4f46e5;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.griff {
+  margin-right: 10px;
+  opacity: 0.6;
+}
+
 .reihe-liste li.leer {
   opacity: 0.4;
   font-weight: normal;
@@ -510,4 +532,74 @@ button.klein {
 
 .meldung {
   color: var(--fehler);
+}
+
+/* ---------- Themenwahl und Glücksrad ---------- */
+
+/* Handy: die 3 Themen untereinander */
+.themen-knoepfe {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.thema-knopf.gewaehlt {
+  outline: 4px solid white;
+  background: #fde68a;
+}
+
+.thema-knopf.gewaehlt:disabled {
+  opacity: 1;
+}
+
+/* Host: wer hat schon gewählt? */
+.spielerliste li.fertig {
+  background: #26890c;
+}
+
+/* Das Rad mit dem Zeiger oben in der Mitte */
+.rad-rahmen {
+  position: relative;
+  width: min(60vh, 90vw);
+  margin: 16px auto;
+}
+
+.rad {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: 50% 50%;
+}
+
+.rad-zeiger {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 32px solid var(--akzent);
+}
+
+.rad-feld {
+  stroke: var(--hintergrund);
+  stroke-width: 1;
+}
+
+.rad-leer {
+  fill: var(--flaeche);
+}
+
+.rad-text {
+  fill: white;
+  font-family: system-ui, sans-serif;
+  font-size: 8px;
+  font-weight: bold;
+  text-anchor: middle;
+}
+
+.rad-mitte {
+  fill: var(--akzent);
 }

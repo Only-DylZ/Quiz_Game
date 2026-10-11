@@ -40,14 +40,21 @@
       <button id="start" disabled>Spiel starten</button>
     </section>
 
-    <!-- 2. Vor jeder Runde: Thema wählen (ab Phase 4b: Glücksrad) -->
+    <!-- 2. Vor jeder Runde: Kandidaten wählen, Glücksrad drehen -->
     <section id="themenwahl" hidden>
       <h1 id="rundeTitel"></h1>
-      <div class="einstellungen">
-        <label for="thema">Thema dieser Runde</label>
-        <select id="thema"></select>
+      <p id="themenwahlText">Wählt auf dem Handy euren Kandidaten!</p>
+      <ul class="spielerliste" id="kandidatenListe"></ul>
+
+      <!-- Glücksrad: das Rad dreht sich, der Zeiger oben bleibt stehen -->
+      <div class="rad-rahmen">
+        <div class="rad-zeiger"></div>
+        <div id="rad"></div>
       </div>
-      <button id="rundeStarten">Runde starten</button>
+      <h2 class="gross-hinweis" id="radErgebnis"></h2>
+
+      <button id="drehen" disabled>Glücksrad drehen</button>
+      <button id="rundeStarten" hidden>Runde starten</button>
       <div id="themenwahlStand"></div>
     </section>
 

@@ -73,8 +73,17 @@ export function zeigeFrage(bereich, daten) {
 }
 
 // ---------------------------------------------------------------------------
-// Handy: Elemente der Reihe nach antippen
+// Handy: Elemente der Reihe nach antippen, danach per Ziehen umsortieren
 // ---------------------------------------------------------------------------
+
+// Verschiebt ein Element einer Liste von Platz "von" auf Platz "nach"
+// (gibt eine neue Liste zurück). Beispiel: [A, B, C, D], von 3 nach 1 → [A, D, B, C]
+export function verschieben(liste, von, nach) {
+  const kopie = [...liste];
+  const [element] = kopie.splice(von, 1);
+  kopie.splice(nach, 0, element);
+  return kopie;
+}
 
 export function zeigeEingabe(bereich, daten, senden, entwurfSenden) {
   let reihe = []; // bisher angetippte Elemente, in dieser Reihenfolge
@@ -85,13 +94,28 @@ export function zeigeEingabe(bereich, daten, senden, entwurfSenden) {
   const zuruecksetzen = neu("button", "klein", "Zurücksetzen");
   zuruecksetzen.type = "button";
   const knopf = neu("button", "", "Senden");
-  const info = neu("p", "hinweis", "Tippe die Elemente der Reihe nach an – zuerst das oberste.");
+  const info = neu("p", "hinweis",
+    "Tippe die Elemente der Reihe nach an – zuerst das oberste. " +
+    "Mit ☰ kannst du sie danach noch verschieben.");
+
+  // Sind alle Elemente einsortiert, zählt die Reihenfolge auch ohne Senden
+  function entwurfPruefen() {
+    if (reihe.length === daten.elemente.length) entwurfSenden([...reihe]);
+  }
 
   function neuZeichnen() {
-    // Liste: belegte Plätze + leere Plätze
+    // Liste: belegte Plätze (ziehbar) + leere Plätze
     const eintraege = [];
     for (let i = 0; i < daten.elemente.length; i++) {
-      eintraege.push(neu("li", reihe[i] ? "" : "leer", reihe[i] || "…"));
+      if (i < reihe.length) {
+        const eintrag = neu("li", fertig ? "" : "ziehbar");
+        if (!fertig) eintrag.append(neu("span", "griff", "☰"));
+        eintrag.append(neu("span", "", reihe[i]));
+        if (!fertig) ziehbarMachen(eintrag, i);
+        eintraege.push(eintrag);
+      } else {
+        eintraege.push(neu("li", "leer", "…"));
+      }
     }
     liste.replaceChildren(...eintraege);
 
@@ -103,8 +127,7 @@ export function zeigeEingabe(bereich, daten, senden, entwurfSenden) {
       taste.disabled = fertig;
       taste.addEventListener("click", () => {
         reihe.push(element);
-        // Alle gewählt? Dann zählt die Reihenfolge auch ohne Senden bei Zeitablauf.
-        if (reihe.length === daten.elemente.length) entwurfSenden([...reihe]);
+        entwurfPruefen();
         neuZeichnen();
       });
       return taste;
@@ -112,6 +135,64 @@ export function zeigeEingabe(bereich, daten, senden, entwurfSenden) {
 
     knopf.disabled = fertig || reihe.length !== daten.elemente.length;
     zuruecksetzen.disabled = fertig || reihe.length === 0;
+  }
+
+  // Ziehen mit Finger oder Maus ("Pointer-Events" können beides).
+  // Während des Ziehens wird nur verschoben angezeigt (CSS transform);
+  // erst beim Loslassen ändert sich "reihe" und die Liste wird neu gezeichnet.
+  function ziehbarMachen(eintrag, von) {
+    eintrag.addEventListener("pointerdown", (ereignis) => {
+      if (fertig) return;
+      ereignis.preventDefault();
+      eintrag.setPointerCapture(ereignis.pointerId); // Bewegungen kommen weiter hier an
+
+      // Positionen aller belegten Plätze zu Beginn merken
+      const plaetze = [...liste.children].slice(0, reihe.length);
+      const mitten = plaetze.map((p) => {
+        const r = p.getBoundingClientRect();
+        return r.top + r.height / 2;
+      });
+      // Abstand von einem Platz zum nächsten (Höhe + Lücke)
+      const abstand = plaetze.length > 1
+        ? mitten[1] - mitten[0]
+        : eintrag.getBoundingClientRect().height;
+      const startY = ereignis.clientY;
+      let nach = von;
+      eintrag.classList.add("wird-gezogen");
+
+      function bewegen(e) {
+        const dy = e.clientY - startY;
+        eintrag.style.transform = "translateY(" + dy + "px)";
+
+        // Neuer Platz = wie viele andere Plätze liegen über der gezogenen Mitte?
+        const mitte = mitten[von] + dy;
+        nach = mitten.filter((m, j) => j !== von && m < mitte).length;
+
+        // Die anderen rücken auseinander, um Platz zu machen
+        plaetze.forEach((p, j) => {
+          if (j === von) return;
+          let verschiebung = 0;
+          if (von < nach && j > von && j <= nach) verschiebung = -abstand;
+          if (nach < von && j >= nach && j < von) verschiebung = abstand;
+          p.style.transform = verschiebung ? "translateY(" + verschiebung + "px)" : "";
+        });
+      }
+
+      function loslassen(e) {
+        eintrag.removeEventListener("pointermove", bewegen);
+        eintrag.removeEventListener("pointerup", loslassen);
+        eintrag.removeEventListener("pointercancel", loslassen);
+        if (e.type === "pointerup" && nach !== von) {
+          reihe = verschieben(reihe, von, nach);
+          entwurfPruefen();
+        }
+        neuZeichnen(); // zeichnet alles ohne Verschiebungen neu
+      }
+
+      eintrag.addEventListener("pointermove", bewegen);
+      eintrag.addEventListener("pointerup", loslassen);
+      eintrag.addEventListener("pointercancel", loslassen);
+    });
   }
 
   zuruecksetzen.addEventListener("click", () => {

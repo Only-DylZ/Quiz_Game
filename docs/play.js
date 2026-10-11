@@ -1,7 +1,8 @@
 // play.js – Logik der Spieler-Seite (Handy).
 //
 // Das Handy kennt nie die Lösungen. Es zeigt nur, was der Host schickt:
-//   "themenwahl" → "Runde 2 – das Thema wird gewählt"
+//   "themenwahl" → eigene 3 Themen zeigen, Kandidat an den Host senden
+//   "rad" / "radErgebnis" → Glücksrad dreht sich / gewähltes Thema
 //   "frage"      → Eingabe anzeigen, Antwort an den Host senden
 //                  (Stechfrage: nur die Spieler mit Gleichstand)
 //   "aufloesung" → richtig/falsch und die Lösung anzeigen
@@ -9,7 +10,7 @@
 //   "ende"       → Spielende anzeigen
 
 import { raumBetreten, raumcodePruefen, neueId } from "./realtime.js";
-import { zahlText, bildZeigen } from "./engine/hilfen.js";
+import { neu, zahlText, bildZeigen } from "./engine/hilfen.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
@@ -28,12 +29,13 @@ let ich = null;            // { id, name, rolle }
 let hostGefunden = false;  // ist der Host im Raum?
 let warteTimer = null;     // Zeitgeber für "Raum nicht gefunden"
 let aktuelleNummer = -1;   // welche Frage gerade angezeigt wird
+let themenRunde = 0;       // für welche Runde die Themenwahl gerade angezeigt wird
 let uhr = null;            // Countdown-Zeitgeber
 
 // ---------------------------------------------------------------------------
 // Anzeige: immer nur einen Abschnitt zeigen
 // ---------------------------------------------------------------------------
-const ABSCHNITTE = ["beitreten", "warten", "frage", "ergebnis", "rundenende", "ende"];
+const ABSCHNITTE = ["beitreten", "warten", "themenwahl", "frage", "ergebnis", "rundenende", "ende"];
 
 function zeige(name) {
   for (const abschnitt of ABSCHNITTE) {
@@ -117,6 +119,8 @@ function beiNachricht(nachricht) {
   const daten = nachricht.daten || {};
 
   if (nachricht.typ === "themenwahl") themenwahlAnzeigen(daten);
+  else if (nachricht.typ === "rad") radDreht();
+  else if (nachricht.typ === "radErgebnis") radErgebnisAnzeigen(daten);
   else if (nachricht.typ === "frage") frageAnzeigen(daten);
   else if (nachricht.typ === "aufloesung") ergebnisAnzeigen(daten);
   else if (nachricht.typ === "rundenende") rundenendeAnzeigen(daten);
@@ -129,10 +133,47 @@ function text(wert, laenge = 80) {
   return typeof wert === "string" ? wert.slice(0, laenge) : "";
 }
 
+// Vor jeder Runde: eigene 3 Themen als Knöpfe – eins antippen = Kandidat.
+// Umentscheiden ist erlaubt, bis das Glücksrad sich dreht.
 function themenwahlAnzeigen(daten) {
+  if (!Number.isInteger(daten.runde)) return;
+  // Dieselbe Themenwahl kann mehrmals kommen (wenn jemand Neues beitritt) –
+  // dann die schon getroffene Wahl nicht verwerfen
+  if (daten.runde === themenRunde) return;
+
+  const angebote = Array.isArray(daten.angebote) ? daten.angebote : [];
+  const meins = angebote.find((a) => a && a.id === ich.id);
+  if (!meins || !Array.isArray(meins.themen)) return; // noch kein Angebot für uns
+
+  themenRunde = daten.runde;
   clearInterval(uhr);
-  const runde = Number.isInteger(daten.runde) ? "Runde " + daten.runde + " – " : "";
-  $("wartenText").textContent = runde + "das Thema wird gewählt …";
+  $("themenwahlTitel").textContent = "Runde " + daten.runde;
+  $("kandidatStatus").textContent = "";
+
+  const knoepfe = $("themenKnoepfe");
+  knoepfe.replaceChildren();
+  for (const thema of meins.themen.slice(0, 3)) {
+    if (!thema || typeof thema.datei !== "string") continue;
+    const knopf = neu("button", "thema-knopf", text(thema.thema, 40));
+    knopf.addEventListener("click", () => {
+      for (const k of knoepfe.children) k.classList.remove("gewaehlt");
+      knopf.classList.add("gewaehlt");
+      raum.senden("kandidat", { id: ich.id, runde: daten.runde, datei: thema.datei });
+      $("kandidatStatus").textContent = "Dein Kandidat: " + knopf.textContent;
+    });
+    knoepfe.append(knopf);
+  }
+  zeige("themenwahl");
+}
+
+// Das Glücksrad dreht sich: ab jetzt keine Änderung mehr
+function radDreht() {
+  for (const knopf of $("themenKnoepfe").children) knopf.disabled = true;
+  $("kandidatStatus").textContent = "Das Glücksrad dreht sich … 🎡";
+}
+
+function radErgebnisAnzeigen(daten) {
+  $("wartenText").textContent = "Gewählt: „" + text(daten.thema, 40) + "“ – gleich geht's los!";
   zeige("warten");
 }
 

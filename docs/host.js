@@ -18,6 +18,7 @@ import {
   anteilRestzeit, ranglisteBerechnen, rundenSpitze, stechfrageSieger,
 } from "./engine/punkte.js";
 import { rundeZusammenstellen, kennung } from "./engine/runde.js";
+import { angeboteErstellen, radDrehung, radZeichnen } from "./engine/rad.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
@@ -31,7 +32,8 @@ const MODI = { auswahl, schaetzen, grafik, reihenfolge };
 // (z. B. "../irgendwas").
 const DATEI_MUSTER = /^[a-z0-9-]{1,40}\.json$/;
 
-// Zum Testen: host.html?paket=geographie wählt dieses Thema für Runde 1 vor.
+// Zum Testen: host.html?paket=geographie spielt in Runde 1 direkt dieses Thema
+// (ohne Kandidaten und Glücksrad).
 const PAKET_AUS_LINK = (new URLSearchParams(location.search).get("paket") || "") + ".json";
 
 // Antwortzeit in Sekunden, wenn die Frage keine eigene "zeit" hat
@@ -59,13 +61,19 @@ function zeige(name) {
 // ---------------------------------------------------------------------------
 // Spielzustand
 // ---------------------------------------------------------------------------
-let schritt = "lobby";      // "lobby" | "themenwahl" | "frage" | "aufloesung"
+let schritt = "lobby";      // "lobby" | "themenwahl" | "rad" | "frage" | "aufloesung"
                             // | "zwischenstand" | "rundenende" | "ende"
 let themen = [];            // alle Themen aus packs/index.json: [{ datei, thema }]
 let gespielteThemen = new Set(); // Dateien, die in diesem Spiel schon dran waren
 let gpZiel = 3;             // so viele GP braucht man zum Sieg
 let rundenNummer = 0;       // die wievielte Runde gerade läuft (1, 2, …)
 let aktuellesThema = null;  // { datei, thema } der laufenden Runde
+
+let themenOffen = [];       // Themen, die bei dieser Themenwahl angeboten werden dürfen
+let angebote = new Map();   // Spieler-id → seine 3 Themen [{ datei, thema }]
+let kandidaten = new Map(); // Spieler-id → Datei seines Kandidaten
+let ausgeschlossen = new Set(); // Themen, die sich nicht laden ließen (nur diese Themenwahl)
+let gewaehltesThema = null; // was das Glücksrad ausgewählt hat
 
 let fragen = [];            // die 10 Fragen dieser Runde (zufällig aus dem Pool)
 let stechfragen = [];       // Stechfragen des Pakets (nur bei Gleichstand)
@@ -233,6 +241,9 @@ function beiTeilnehmern(teilnehmer) {
   $("anzahl").textContent = anwesend.length;
   startKnopfAktualisieren();
 
+  // Kommt jemand während der Themenwahl, bekommt er auch 3 Themen
+  if (schritt === "themenwahl") angeboteErgaenzen();
+
   if (schritt === "frage") {
     // Kommt jemand während einer Frage (neu oder nach Verbindungsabbruch),
     // schicken wir die Frage nochmal. Wer sie schon hat, ignoriert sie.
@@ -281,38 +292,29 @@ $("nachRunde").addEventListener("click", () => {
 });
 
 // ---------------------------------------------------------------------------
-// 6. Themenwahl vor jeder Runde
+// 6. Themenwahl vor jeder Runde: Kandidaten + Glücksrad
 // ---------------------------------------------------------------------------
-// Vorläufig wählt der Host das Thema selbst aus. In Phase 4b ersetzt das
-// Glücksrad mit den Kandidaten der Spieler diesen Schritt.
+// Jeder Spieler bekommt eigene 3 zufällige Themen und wählt eines als
+// Kandidaten. Jeder Kandidat ist eine Karte auf dem Glücksrad. Der Host dreht,
+// das Rad bleibt zufällig stehen – dieses Thema wird gespielt.
 function themenwahlZeigen() {
   schritt = "themenwahl";
   zeige("themenwahl");
   $("rundeTitel").textContent = "Runde " + (rundenNummer + 1);
-  $("rundeStarten").disabled = false;
+  $("radErgebnis").textContent = "";
+  $("drehen").hidden = false;
+  $("rundeStarten").hidden = true;
+  kandidaten = new Map();
+  ausgeschlossen = new Set();
+  gewaehltesThema = null;
 
   // Nur Themen, die in diesem Spiel noch nicht dran waren.
   // Sind alle durch, dürfen alle wieder gewählt werden.
-  let offen = themen.filter((t) => !gespielteThemen.has(t.datei));
-  if (offen.length === 0) {
+  themenOffen = themen.filter((t) => !gespielteThemen.has(t.datei));
+  if (themenOffen.length === 0) {
     gespielteThemen = new Set();
-    offen = themen;
+    themenOffen = themen;
   }
-
-  const auswahlListe = $("thema");
-  auswahlListe.replaceChildren();
-  for (const t of offen) {
-    const option = neu("option", "", t.thema);
-    option.value = t.datei;
-    auswahlListe.append(option);
-  }
-
-  // Vorauswahl: in Runde 1 das Thema aus dem Link (?paket=…), sonst zufällig
-  const ausLink = offen.find((t) => t.datei === PAKET_AUS_LINK);
-  const vorschlag = rundenNummer === 0 && ausLink
-    ? ausLink
-    : offen[Math.floor(Math.random() * offen.length)];
-  auswahlListe.value = vorschlag.datei;
 
   // Ab Runde 2: aktuellen GP-Stand zeigen
   $("themenwahlStand").replaceChildren();
@@ -323,21 +325,132 @@ function themenwahlZeigen() {
     );
   }
 
-  raum.senden("themenwahl", { runde: rundenNummer + 1 });
+  // Testmodus: host.html?paket=sport spielt in Runde 1 direkt dieses Thema
+  const ausLink = themenOffen.find((t) => t.datei === PAKET_AUS_LINK);
+  if (rundenNummer === 0 && ausLink) {
+    $("themenwahlText").textContent = "Testmodus: Thema aus dem Link";
+    $("kandidatenListe").replaceChildren();
+    $("rad").replaceChildren();
+    themaFestlegen(ausLink);
+    return;
+  }
+
+  $("themenwahlText").textContent = "Wählt auf dem Handy euren Kandidaten!";
+  angebote = angeboteErstellen(anwesend.map((s) => s.id), themenOffen);
+  themenwahlSenden();
+  kandidatenAnzeigen();
+}
+
+// Schickt allen Handys ihre Themen-Angebote (Themen sind kein Geheimnis)
+function themenwahlSenden() {
+  raum.senden("themenwahl", {
+    runde: rundenNummer + 1,
+    angebote: [...angebote].map(([id, liste]) => ({ id, themen: liste })),
+  });
+}
+
+// Kommt jemand während der Themenwahl dazu, bekommt er auch ein Angebot
+function angeboteErgaenzen() {
+  let neue = false;
+  for (const s of anwesend) {
+    if (!angebote.has(s.id)) {
+      angebote.set(s.id, angeboteErstellen([s.id], themenOffen).get(s.id));
+      neue = true;
+    }
+  }
+  if (neue) themenwahlSenden();
+  kandidatenAnzeigen();
+}
+
+// Ein Handy hat einen Kandidaten gewählt (darf sich bis zum Drehen umentscheiden)
+function kandidatAnnehmen({ id, runde, datei }) {
+  if (schritt !== "themenwahl" || runde !== rundenNummer + 1) return;
+  if (!anwesend.some((s) => s.id === id)) return;
+  // Nur Themen aus dem eigenen Angebot sind erlaubt
+  const angebot = angebote.get(id) || [];
+  if (!angebot.some((t) => t.datei === datei)) return;
+
+  kandidaten.set(id, datei);
+  kandidatenAnzeigen();
+}
+
+// Die Karten auf dem Rad: ein Kandidat pro anwesendem Spieler
+function radKarten() {
+  const karten = [];
+  for (const s of anwesend) {
+    const datei = kandidaten.get(s.id);
+    const eintrag = themen.find((t) => t.datei === datei);
+    if (eintrag && !ausgeschlossen.has(datei)) karten.push({ datei, thema: eintrag.thema });
+  }
+  return karten;
+}
+
+// Host-Bildschirm: wer hat schon gewählt? Dazu das Rad mit den bisherigen Karten.
+function kandidatenAnzeigen() {
+  if (schritt !== "themenwahl") return;
+  const liste = $("kandidatenListe");
+  liste.replaceChildren();
+  for (const s of anwesend) {
+    const fertig = kandidaten.has(s.id);
+    liste.append(neu("li", fertig ? "fertig" : "", s.name + (fertig ? " ✓" : " …")));
+  }
+  const karten = radKarten();
+  $("rad").replaceChildren(radZeichnen(karten));
+  $("drehen").disabled = karten.length === 0;
+}
+
+// So lange dreht sich das Rad (Millisekunden)
+const DREHDAUER_MS = 5000;
+
+$("drehen").addEventListener("click", () => {
+  const karten = radKarten();
+  if (schritt !== "themenwahl" || karten.length === 0) return;
+  schritt = "rad";
+  $("drehen").disabled = true;
+
+  // Zuerst wird zufällig gezogen – das Rad dreht sich dann genau dorthin
+  const gewinner = Math.floor(Math.random() * karten.length);
+  const svg = radZeichnen(karten);
+  $("rad").replaceChildren(svg);
+  raum.senden("rad", {});
+
+  // Drehung erst im übernächsten Bild starten, sonst sieht man die Animation nicht
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    svg.style.transition = "transform " + DREHDAUER_MS + "ms cubic-bezier(0.15, 0.85, 0.25, 1)";
+    svg.style.transform = "rotate(" + radDrehung(karten.length, gewinner) + "deg)";
+  }));
+  setTimeout(() => themaFestlegen(karten[gewinner]), DREHDAUER_MS + 300);
+});
+
+// Das Thema der Runde steht fest
+function themaFestlegen(karte) {
+  schritt = "rad";
+  gewaehltesThema = themen.find((t) => t.datei === karte.datei);
+  $("radErgebnis").textContent = "Thema: " + gewaehltesThema.thema;
+  $("drehen").hidden = true;
+  $("rundeStarten").hidden = false;
+  $("rundeStarten").disabled = false;
+  raum.senden("radErgebnis", { thema: gewaehltesThema.thema });
 }
 
 async function rundeStarten() {
-  if (schritt !== "themenwahl") return;
-  const eintrag = themen.find((t) => t.datei === $("thema").value);
-  if (!eintrag) return;
+  if (schritt !== "rad" || !gewaehltesThema) return;
+  const eintrag = gewaehltesThema;
 
   $("rundeStarten").disabled = true; // nicht doppelt klicken
   $("meldung").textContent = "";
   try {
     await paketLaden(eintrag);
   } catch (fehler) {
-    $("meldung").textContent = "Thema „" + eintrag.thema + "“ konnte nicht geladen werden: " + fehler.message;
-    $("rundeStarten").disabled = false;
+    // Thema nicht ladbar: Karte entfernen, Rad ohne sie noch einmal drehen
+    $("meldung").textContent = "Thema „" + eintrag.thema + "“ konnte nicht geladen werden (" +
+      fehler.message + ") – bitte das Rad noch einmal drehen.";
+    ausgeschlossen.add(eintrag.datei);
+    schritt = "themenwahl";
+    $("radErgebnis").textContent = "";
+    $("rundeStarten").hidden = true;
+    $("drehen").hidden = false;
+    kandidatenAnzeigen();
     return;
   }
 
@@ -420,6 +533,8 @@ function beiNachricht(nachricht) {
     antwortAnnehmen(nachricht.daten || {});
   } else if (nachricht.typ === "entwurf") {
     entwurfAnnehmen(nachricht.daten || {});
+  } else if (nachricht.typ === "kandidat") {
+    kandidatAnnehmen(nachricht.daten || {});
   }
 }
 

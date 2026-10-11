@@ -17,6 +17,9 @@ import * as schaetzen from "../docs/engine/schaetzen.js";
 import * as grafik from "../docs/engine/grafik.js";
 import * as reihenfolge from "../docs/engine/reihenfolge.js";
 import { rundeZusammenstellen, kennung, MIX, FRAGEN_PRO_RUNDE } from "../docs/engine/runde.js";
+import {
+  angeboteErstellen, radDrehung, feldNachDrehung, THEMEN_PRO_SPIELER, VOLLE_RUNDEN,
+} from "../docs/engine/rad.js";
 
 // ---------------------------------------------------------------------------
 // Punkte: auswahl
@@ -374,4 +377,39 @@ test("runde: fehlt ein Modus, wird mit anderen aufgefüllt", () => {
   assert.equal(runde.length, FRAGEN_PRO_RUNDE);
   // kleiner Pool → so viele wie da sind
   assert.equal(rundeZusammenstellen(pool.slice(0, 5), new Set()).length, 5);
+});
+
+// ---------------------------------------------------------------------------
+// Themenwahl: Angebote und Glücksrad
+// ---------------------------------------------------------------------------
+test("angebote: jeder bekommt 3 verschiedene offene Themen", () => {
+  const offen = ["a", "b", "c", "d", "e"].map((x) => ({ datei: x + ".json", thema: x }));
+  const angebote = angeboteErstellen(["s1", "s2"], offen);
+  for (const id of ["s1", "s2"]) {
+    const liste = angebote.get(id);
+    assert.equal(liste.length, THEMEN_PRO_SPIELER);
+    assert.equal(new Set(liste.map((t) => t.datei)).size, liste.length); // keins doppelt
+    assert.ok(liste.every((t) => offen.includes(t)));                    // nur offene Themen
+  }
+  // Nur noch 2 Themen offen → 2 Angebote
+  assert.equal(angeboteErstellen(["s1"], offen.slice(0, 2)).get("s1").length, 2);
+});
+
+test("glücksrad: das Rad bleibt immer auf dem gezogenen Feld stehen", () => {
+  for (const anzahl of [1, 2, 3, 5, 8, 13]) {
+    for (let gewinner = 0; gewinner < anzahl; gewinner++) {
+      for (const z of [0, 0.5, 0.999]) {
+        const grad = radDrehung(anzahl, gewinner, () => z);
+        assert.equal(feldNachDrehung(anzahl, grad), gewinner, anzahl + "/" + gewinner + "/" + z);
+        assert.ok(grad > 360 * (VOLLE_RUNDEN - 1)); // ein paar volle Runden
+      }
+    }
+  }
+});
+
+test("reihenfolge: Verschieben beim Ziehen", () => {
+  const { verschieben } = reihenfolge;
+  assert.deepEqual(verschieben(["A", "B", "C", "D"], 3, 1), ["A", "D", "B", "C"]); // nach oben
+  assert.deepEqual(verschieben(["A", "B", "C", "D"], 0, 2), ["B", "C", "A", "D"]); // nach unten
+  assert.deepEqual(verschieben(["A", "B", "C"], 1, 1), ["A", "B", "C"]);           // gleicher Platz
 });

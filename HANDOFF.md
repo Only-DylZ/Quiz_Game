@@ -49,27 +49,33 @@ CLAUDE.md entsprechend angepasst.
 - Werkstatt-Skripte (Baukasten zum Schreiben der Pakete) lagen nur im Scratchpad;
   die Pakete selbst (JSON) sind die Quelle der Wahrheit.
 
-## Phase 4a – gebaut (wartet auf Test durch den Nutzer)
+## Phase 4a – fertig (vom Nutzer getestet)
 
-- Lobby: Einstellung „Gewinnpunkte (GP) zum Sieg“ (1–10, Standard 3).
-- Vor jeder Runde: Themenwahl – **vorläufig** wählt der Host aus einer Liste
-  der in diesem Spiel noch nicht gespielten Themen (zufällig vorausgewählt,
-  in Runde 1 per `?paket=<name>` vorwählbar). Wird in 4b durch Kandidaten + Glücksrad ersetzt.
-- Runde = 10 Fragen, Punkte starten bei 0. Danach `rundenSpitze` (punkte.js):
-  ein Bester → 1 GP; Gleichstand → Stechfrage (zufällig aus `stechfragen`) nur
-  für die Gleichstand-Spieler, `stechfrageSieger`: näher dran, sonst schneller.
-  Sonderfälle: nur einer der Gleichstand-Spieler noch da → er gewinnt;
-  niemand antwortet / keine Stechfrage → Los.
-- Rundenende-Bildschirm mit GP-Stand; wer das Ziel erreicht → Siegertreppchen nach GP.
-- Neue Nachrichten `themenwahl`, `rundenende`; `frage` hat jetzt `titel` und
-  `teilnehmer` (siehe Tabelle in CLAUDE.md). Tests für die GP-Regeln ergänzt.
+- Lobby-Einstellung „GPs zum Sieg“ (1–10), Runden à 10 Fragen, 1 GP für den
+  Rundensieger (`rundenSpitze`), Stechfrage bei Gleichstand (`stechfrageSieger`),
+  Rundenende-Bildschirm, Siegertreppchen nach GP.
+
+## Phase 4b – fertig (vom Nutzer getestet)
+
+- `engine/rad.js`: `angeboteErstellen` (3 zufällige, in diesem Spiel noch nicht
+  gespielte Themen pro Spieler), `radDrehung`/`feldNachDrehung` (Rad landet
+  auf der vorher gezogenen Karte), `radZeichnen` (SVG).
+- Handy: 3 Themen-Knöpfe, Kandidat antippen (umentscheiden bis zum Drehen).
+- Host: Liste „wer hat gewählt ✓“, Rad wächst mit jedem Kandidaten, Knopf
+  „Glücksrad drehen“ (ab 1 Kandidat), 5 s Drehung, dann „Runde starten“.
+  Lässt sich das Paket nicht laden: Karte fliegt raus, nochmal drehen.
+- Wer während der Themenwahl beitritt, bekommt auch ein Angebot.
+- `?paket=<name>`: Runde 1 direkt mit diesem Thema (Testmodus, ohne Rad).
+- Dazu (Wunsch des Nutzers): Reihenfolge-Fragen – einsortierte Elemente lassen
+  sich am Griff ☰ ziehen und zwischen andere schieben (Pointer-Events, gehen mit
+  Finger und Maus; HTML-Drag-and-Drop geht auf Handys nicht). `verschieben()` getestet.
 
 ## Nächster Schritt
 
-- Nutzer testet 4a (z. B. GP-Ziel 2, mit zwei Fenstern Gleichstand provozieren:
-  beide gar nicht antworten → beide 0 Punkte → Stechfrage).
-- Dann 4b: Kandidatenwahl auf dem Handy (3 zufällige ungespielte Themen) + Glücksrad.
-- 4c: Booster-Joker (Themenjoker erst mit Phase 5).
+
+- Dann 4c: Booster-Joker (Einstellung in der Lobby: Anzahl Booster pro Spieler
+  und Runde; jeder Booster = eine weitere Karte des eigenen Kandidaten).
+  Themenjoker-Einstellung schon mit anlegen, aber gesperrt bis Phase 5.
 - Später: Pools in Blöcken à 30 erweitern (Ziel 150), Raumfahrt zuerst (nur 12).
 
 ## Danach

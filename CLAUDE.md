@@ -153,6 +153,7 @@ Quiz_Game/
 │  │  ├─ reihenfolge.js    Modus „reihenfolge“: Elemente in die richtige Reihenfolge bringen.
 │  │  ├─ karte.js          Die Art „karte“: Leaflet-Karte anzeigen, Ort antippen, Auflösung.
 │  │  ├─ runde.js          Zieht pro Runde 10 zufällige Fragen aus dem Pool (ungespielte zuerst).
+│  │  ├─ rad.js            Themenwahl: 3 Themen pro Spieler, Glücksrad (Rechnung + SVG).
 │  │  └─ punkte.js         Alle Punkteregeln an einer Stelle.
 │  ├─ packs/
 │  │  ├─ index.json        Liste aller verfügbaren Themenpakete.
@@ -453,7 +454,10 @@ schicken nur ihre Antwort.
 Nachrichten:
 | typ          | von → an       | daten |
 |--------------|----------------|-------|
-| `themenwahl` | Host → Handys  | `runde` – vor jeder Runde („das Thema wird gewählt“) |
+| `themenwahl` | Host → Handys  | `runde, angebote: [{ id, themen: [{ datei, thema }] }]` – jeder Spieler bekommt eigene 3 Themen |
+| `kandidat`   | Handy → Host   | `id, runde, datei` – gewählter Kandidat (nur aus dem eigenen Angebot; umentscheiden bis zum Drehen) |
+| `rad`        | Host → Handys  | `{}` – das Glücksrad dreht sich, Wahl ist gesperrt |
+| `radErgebnis`| Host → Handys  | `thema` – dieses Thema wird gespielt |
 | `frage`      | Host → Handys  | `nummer` (zählt im ganzen Spiel hoch), `titel` (z. B. „Sport · Frage 3 von 10“), `modus, text, restzeit, bild, daten` (daten = `oeffentlicheDaten()`, **ohne Lösung**), `teilnehmer` (nur bei der Stechfrage: ids der Spieler mit Gleichstand, sonst `null`) |
 | `antwort`    | Handy → Host   | `id, nummer, antwort` (endgültig, mit Zeitmessung) |
 | `entwurf`    | Handy → Host   | `id, nummer, antwort` – Zwischenstand beim Tippen (`null` = Feld leer). Zählt bei Zeitablauf, wenn nicht gesendet wurde, dann ohne Tempo-Bonus. Beendet die Frage nicht vorzeitig. |
@@ -461,7 +465,7 @@ Nachrichten:
 | `rundenende` | Host → Handys  | `thema, siegerId, siegerName, ziel, stand: [{ id, gp, platz }]` |
 | `ende`       | Host → Handys  | `rangliste: [{ id, name, gp, platz }]` |
 
-Host-Ablauf: Lobby → Themenwahl → Frage → Auflösung → Zwischenstand → … (10 Fragen)
+Host-Ablauf: Lobby → Themenwahl (Kandidaten + Glücksrad) → Frage → Auflösung → Zwischenstand → … (10 Fragen)
 → ggf. Stechfrage → Rundenende (1 GP) → Themenwahl → … → Siegertreppchen (nach GP).
 Die Regeln „wer bekommt den GP“ (`rundenSpitze`, `stechfrageSieger`) stehen in `punkte.js`.
 
@@ -488,8 +492,9 @@ Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Phase 3 ist fertig:
 `validate.py`, `prompt.md`, Fragen-Pools mit Zufallsauswahl + Gedächtnis,
 Bildfragen, Modus `reihenfolge` und 13 Themenpakete à ca. 30 Fragen (Pools
 wachsen später Richtung 150). Phase 4a ist fertig: Themenrunden, GP-Ziel
-(Einstellung in der Lobby), Stechfrage, Siegertreppchen nach GP – das Thema
-wählt vorläufig der Host aus einer Liste. Als Nächstes: 4b (Kandidaten + Glücksrad).
+(Einstellung in der Lobby), Stechfrage, Siegertreppchen nach GP. Phase 4b:
+Kandidatenwahl auf dem Handy + Glücksrad (`engine/rad.js`); `host.html?paket=<name>`
+spielt zum Testen in Runde 1 direkt dieses Thema. Als Nächstes: 4c (Booster-Joker).
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`
