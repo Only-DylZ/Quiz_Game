@@ -1,0 +1,379 @@
+Avatar-Grafiken: Liberated Pixel Cup (LPC) und Nachfolger
+über den Universal LPC Spritesheet Character Generator
+https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator
+Für die Avatar-Bilder in diesem Ordner gilt die Lizenz CC-BY-SA 3.0 (bzw. die unten genannten).
+
+Figur (body/bodies/male)
+  Urheber: bluecarrot16, JaidynReiman, Benjamin K. Smith (BenCreating), Evert, Eliza Wyatt (ElizaWy), TheraHedwig, MuffinElZangano, Durrani, Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-medieval-fantasy-character-sprites https://opengameart.org/content/lpc-male-jumping-animation-by-durrani https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle https://opengameart.org/content/lpc-revised-character-basics https://opengameart.org/content/lpc-be-seated https://opengameart.org/content/lpc-runcycle-for-male-muscular-and-pregnant-character-bases-with-modular-heads https://opengameart.org/content/lpc-jump-expanded https://opengameart.org/content/lpc-character-bases
+
+Figur (body/bodies/female)
+  Urheber: Benjamin K. Smith (BenCreating), bluecarrot16, TheraHedwig, Evert, MuffinElZangano, Durrani, Pierre Vigier (pvigier), ElizaWy, Matthew Krohn (makrohn), Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-medieval-fantasy-character-sprites https://opengameart.org/content/lpc-ladies https://opengameart.org/content/lpc-7-womens-shirts https://opengameart.org/content/lpc-jump-expanded https://opengameart.org/content/lpc-be-seated https://opengameart.org/content/lpc-revised-character-basics https://gitlab.com/vagabondgame/lpc-characters https://opengameart.org/content/lpc-male-jumping-animation-by-durrani https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle
+
+Figur (body/bodies/muscular)
+  Urheber: bluecarrot16, JaidynReiman, Evert, TheraHedwig, MuffinElZangano, Durrani, Sander Frenken (castelonia), Benjamin K. Smith (BenCreating), Eliza Wyatt (ElizaWy), dalonedrau, Stephen Challener (Redshrike)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-barbarian-sprite-base https://opengameart.org/content/lpc-muscular-swing-animation https://opengameart.org/content/lpc-muscular-hurt-animation https://opengameart.org/content/lpc-jump-expanded https://opengameart.org/content/lpc-revised-character-basics https://opengameart.org/content/lpc-be-seated https://opengameart.org/content/lpc-jump-expanded https://opengameart.org/content/lpc-character-bases https://opengameart.org/content/lpc-male-jumping-animation-by-durrani
+
+Figur (body/bodies/teen)
+  Urheber: bluecarrot16, Evert, TheraHedwig, Benjamin K. Smith (BenCreating), MuffinElZangano, Durrani, Pierre Vigier (pvigier), Eliza Wyatt (ElizaWy), Matthew Krohn (makrohn), Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-medieval-fantasy-character-sprites https://opengameart.org/content/lpc-ladies https://opengameart.org/content/lpc-teen-unisex-base-clothes https://opengameart.org/content/lpc-jump-expanded https://opengameart.org/content/lpc-revised-character-basics https://opengameart.org/content/lpc-be-seated https://gitlab.com/vagabondgame/lpc-characters https://opengameart.org/content/lpc-male-jumping-animation-by-durrani https://opengameart.org/content/lpc-jump-expanded
+
+Figur (body/bodies/pregnant)
+  Urheber: bluecarrot16, JaidynReiman, Evert, TheraHedwig, MuffinElZangano, Durrani, Benjamin K. Smith (BenCreating), Pierre Vigier (pvigier), Eliza Wyatt (ElizaWy), Matthew Krohn (makrohn), Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-medieval-fantasy-character-sprites https://opengameart.org/content/lpc-ladies https://opengameart.org/content/lpc-pregnancy-bases-maternity-wear https://opengameart.org/content/lpc-7-womens-shirts https://opengameart.org/content/lpc-jump-expanded https://gitlab.com/vagabondgame/lpc-characters https://opengameart.org/content/lpc-jump-expanded https://opengameart.org/content/lpc-male-jumping-animation-by-durrani https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle
+
+Figur (body/bodies/child)
+  Urheber: bluecarrot16, Benjamin K. Smith (BenCreating), ElizaWy, MuffinElZangano, Durrani, Nila122, kheftel, Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-child-standing-template https://opengameart.org/content/lpc-children-walk-animation https://opengameart.org/content/lpc-male-jumping-animation-by-durrani https://opengameart.org/content/lpc-male-jumping-animation-by-durrani https://opengameart.org/content/lpc-jump-expanded https://opengameart.org/content/lpc-jump-expanded
+
+Mensch 1 (head/heads/human/male)
+  Urheber: bluecarrot16, Benjamin K. Smith (BenCreating), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-character-bases
+
+Mensch 2 (head/heads/human/female)
+  Urheber: bluecarrot16, Benjamin K. Smith (BenCreating), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/ https://opengameart.org/content/lpc-character-bases
+
+Pausbacke (head/heads/human/male_plump)
+  Urheber: Stephen Challener (Redshrike), ??
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-folk
+
+Opa (head/heads/human/male_elderly)
+  Urheber: Benjamin K. Smith (BenCreating), Eliza Wyatt (ElizaWy), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-revised-elders https://opengameart.org/content/lpc-character-bases
+
+Oma (head/heads/human/female_elderly)
+  Urheber: Benjamin K. Smith (BenCreating), Eliza Wyatt (ElizaWy), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-revised-elders https://opengameart.org/content/lpc-character-bases
+
+Skelett (head/heads/skeleton)
+  Urheber: bluecarrot16, Napsio, JaidynReiman, Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-medieval-fantasy-character-sprites https://opengameart.org/content/lpc-skeleton https://opengameart.org/content/lpc-character-bases
+
+Zombie (head/heads/zombie)
+  Urheber: bluecarrot16, Benjamin K. Smith (BenCreating), Sander Frenken (castelonia), Stephen Challener (Redshrike)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-zombie https://opengameart.org/content/lpc-character-bases
+
+Vampir (head/heads/vampire)
+  Urheber: Stephen Challener (Redshrike), bluecarrot16
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-folk
+
+Frankenstein (head/heads/frankenstein)
+  Urheber: Stephen Challener (Redshrike), bluecarrot16
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-folk
+
+Kürbis (head/heads/jack)
+  Urheber: bluecarrot16, Joshua Taylor
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/fruit-and-veggie-inventory https://opengameart.org/content/lpc-folk
+
+Ork (head/heads/orc/male)
+  Urheber: bluecarrot16, Matthew Krohn (makrohn), Stephen Challener (Redshrike), Zi Ye
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/four-characters-my-lpc-entries https://opengameart.org/content/sinbad-the-ogre https://opengameart.org/content/lpc-male-sheets https://opengameart.org/content/lpc-character-bases
+
+Goblin (head/heads/goblin)
+  Urheber: bluecarrot16, Stephen Challener (Redshrike), William.Thomsponj
+  Lizenzen: OGA-BY 3.0, CC-BY 4.0, GPL 2.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-goblin https://opengameart.org/content/lpc-folk
+
+Troll (head/heads/troll)
+  Urheber: bluecarrot16, AntumDeluge, Tuomo Untinen (reemax)
+  Lizenzen: CC-BY 3.0
+  Quellen: https://opengameart.org/content/musclemanogreminotaur https://opengameart.org/content/trolls-0 https://opengameart.org/content/lpc-folk
+
+Verwuschelt (hair/messy1)
+  Urheber: JaidynReiman, Manuel Riecke (MrBeast)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-expanded-hair
+
+Aufgestanden (hair/bedhead)
+  Urheber: JaidynReiman, Manuel Riecke (MrBeast)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-expanded-hair
+
+Pony (hair/bangs)
+  Urheber: JaidynReiman, Manuel Riecke (MrBeast)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-expanded-hair
+
+Mittelscheitel (hair/curtains)
+  Urheber: Mandi Paugh, bluecarrot16
+  Lizenzen: GPL 2.0, GPL 3.0, CC-BY 3.0
+  Quellen: https://opengameart.org/content/star-overland https://opengameart.org/content/lpc-hair
+
+Pixie (hair/pixie)
+  Urheber: JaidynReiman, Manuel Riecke (MrBeast)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-expanded-hair
+
+Tolle (hair/swoop)
+  Urheber: JaidynReiman, Manuel Riecke (MrBeast)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-expanded-hair
+
+Stacheln (hair/spiked)
+  Urheber: kcilds/Rocetti/Eredah
+  Lizenzen: CC-BY 4.0
+  Quellen: https://opengameart.org/content/eredah-rpg-character-base-48x64-ongoing https://opengameart.org/content/lpc-hair
+
+Buzzcut (hair/buzzcut)
+  Urheber: ElizaWy
+  Lizenzen: OGA-BY 3.0
+  Quellen: https://opengameart.org/content/lpc-hair
+
+Irokese (hair/shorthawk)
+  Urheber: JaidynReiman, Manuel Riecke (MrBeast)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-expanded-hair
+
+Locken (hair/curly_short)
+  Urheber: ElizaWy
+  Lizenzen: OGA-BY 3.0
+  Quellen: https://opengameart.org/content/lpc-hair https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+Afro (hair/afro)
+  Urheber: bluecarrot16
+  Lizenzen: CC0
+  Quellen: https://opengameart.org/content/lpc-hair
+
+Dreads (hair/dreadlocks_short)
+  Urheber: ElizaWy, bluecarrot16
+  Lizenzen: CC0
+  Quellen: https://opengameart.org/content/lpc-hair https://github.com/ElizaWy/LPC/blob/main/Characters/Hair https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+Bob (hair/bob)
+  Urheber: ElizaWy, bluecarrot16
+  Lizenzen: CC0
+  Quellen: https://opengameart.org/content/lpc-hair https://github.com/ElizaWy/LPC/blob/main/Characters/Hair https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+Lang (hair/long)
+  Urheber: JaidynReiman, Manuel Riecke (MrBeast)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-expanded-hair
+
+Pferdeschwanz (hair/ponytail)
+  Urheber: JaidynReiman, Manuel Riecke (MrBeast)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-expanded-hair
+
+Hoher Zopf (hair/high_ponytail)
+  Urheber: JaidynReiman, ElizaWy, bluecarrot16
+  Lizenzen: OGA-BY 3.0
+  Quellen: https://opengameart.org/content/lpc-hair https://opengameart.org/content/lpc-expanded-hair
+
+Zöpfe (hair/pigtails)
+  Urheber: Radomir Dopieralski, bluecarrot16
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/one-more-lpc-alternate-character https://opengameart.org/content/lpc-hair
+
+T-Shirt (torso/clothes/shortsleeve/shortsleeve/male)
+  Urheber: bluecarrot16, ElizaWy, JaidynReiman, Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles http://opengameart.org/content/lpc-revised-character-basics http://opengameart.org/content/lpc-clothing-updates https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+T-Shirt (torso/clothes/shortsleeve/shortsleeve/female)
+  Urheber: bluecarrot16, ElizaWy, JaidynReiman, Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-7-womens-shirts http://opengameart.org/content/lpc-revised-character-basics http://opengameart.org/content/lpc-clothing-updates https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+T-Shirt (torso/clothes/shortsleeve/shortsleeve/teen)
+  Urheber: Nyom, bluecarrot16, ElizaWy, JaidynReiman, Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-7-womens-shirts http://opengameart.org/content/lpc-revised-character-basics http://opengameart.org/content/lpc-clothing-updates https://opengameart.org/content/lpc-teen-androgynous-short-sleeve-shirt https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+T-Shirt (torso/clothes/shortsleeve/shortsleeve/pregnant)
+  Urheber: bluecarrot16, ElizaWy, Stephen Challener (Redshrike), Johannes Sjölund (wulax)
+  Lizenzen: OGA-BY 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-pregnancy-bases-maternity-wear https://opengameart.org/content/lpc-revised-character-basics http://opengameart.org/content/lpc-clothing-updates
+
+Polo (torso/clothes/shortsleeve/shortsleeve_polo)
+  Urheber: ElizaWy, JaidynReiman, Stephen Challener (Redshrike), Johannes Sjölund (wulax)
+  Lizenzen: OGA-BY 3.0
+  Quellen: http://opengameart.org/content/lpc-revised-character-basics https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+Langarm (torso/clothes/longsleeve/longsleeve/male)
+  Urheber: JaidynReiman, Johannes Sjölund (wulax)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-medieval-fantasy-character-sprites http://opengameart.org/content/lpc-clothing-updates https://opengameart.org/content/lpc-revised-character-basics https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+Langarm (torso/clothes/longsleeve/longsleeve/female)
+  Urheber: bluecarrot16, ElizaWy, JaidynReiman, Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-7-womens-shirts http://opengameart.org/content/lpc-clothing-updates https://opengameart.org/content/lpc-revised-character-basics https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+Langarm (torso/clothes/longsleeve/longsleeve/teen)
+  Urheber: bluecarrot16, ElizaWy, JaidynReiman, Stephen Challener (Redshrike), Johannes Sjölund (wulax)
+  Lizenzen: OGA-BY 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-teen-unisex-base-clothes http://opengameart.org/content/lpc-clothing-updates https://opengameart.org/content/lpc-revised-character-basics https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+Langarm (torso/clothes/longsleeve/longsleeve/pregnant)
+  Urheber: bluecarrot16, ElizaWy, Stephen Challener (Redshrike), Johannes Sjölund (wulax)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-7-womens-shirts http://opengameart.org/content/lpc-clothing-updates https://opengameart.org/content/lpc-revised-character-basics https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+V-Ausschnitt (torso/clothes/longsleeve/longsleeve2_vneck)
+  Urheber: ElizaWy, JaidynReiman, Stephen Challener (Redshrike), Johannes Sjölund (wulax)
+  Lizenzen: OGA-BY 3.0
+  Quellen: http://opengameart.org/content/lpc-revised-character-basics https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+Strickjacke (torso/clothes/longsleeve/longsleeve2_cardigan)
+  Urheber: ElizaWy, JaidynReiman, Stephen Challener (Redshrike), Johannes Sjölund (wulax)
+  Lizenzen: OGA-BY 3.0
+  Quellen: http://opengameart.org/content/lpc-revised-character-basics https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+Ärmellos (torso/clothes/sleeveless/sleeveless2)
+  Urheber: ElizaWy, JaidynReiman, Stephen Challener (Redshrike), Johannes Sjölund (wulax)
+  Lizenzen: OGA-BY 3.0
+  Quellen: http://opengameart.org/content/lpc-revised-character-basics https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-simple-shirts
+
+Hose (legs/pants/male)
+  Urheber: bluecarrot16, JaidynReiman, ElizaWy, Matthew Krohn (makrohn), Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, GPL 3.0, CC-BY-SA 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-medieval-fantasy-character-sprites https://opengameart.org/content/lpc-expanded-pants
+
+Hose (legs/pants/thin)
+  Urheber: bluecarrot16, JaidynReiman, ElizaWy, Joe White, Matthew Krohn (makrohn), Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, GPL 3.0, CC-BY-SA 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-medieval-fantasy-character-sprites http://opengameart.org/content/lpc-clothing-updates https://opengameart.org/content/lpc-expanded-pants
+
+Krempelhose (legs/cuffed/male)
+  Urheber: JaidynReiman, ElizaWy, Bluecarrot16, Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, GPL 3.0
+  Quellen: https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-pants
+
+Krempelhose (legs/cuffed)
+  Urheber: ElizaWy, JaidynReiman, Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0
+  Quellen: https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-pants
+
+Shorts (legs/shorts/shorts/male)
+  Urheber: JaidynReiman, ElizaWy, Bluecarrot16, Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, GPL 3.0
+  Quellen: https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-pants
+
+Shorts (legs/shorts/shorts)
+  Urheber: ElizaWy, JaidynReiman, Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0
+  Quellen: https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-pants
+
+Hotpants (legs/shorts/short_shorts/male)
+  Urheber: JaidynReiman, ElizaWy, Bluecarrot16, Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0, GPL 3.0
+  Quellen: https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-pants
+
+Hotpants (legs/shorts/short_shorts)
+  Urheber: ElizaWy, JaidynReiman, Johannes Sjölund (wulax), Stephen Challener (Redshrike)
+  Lizenzen: OGA-BY 3.0
+  Quellen: https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing https://opengameart.org/content/lpc-expanded-sit-run-jump-more https://opengameart.org/content/lpc-expanded-pants
+
+Rock (legs/skirts/plain)
+  Urheber: bluecarrot16, Pierre Vigier (pvigier), Johannes Sjölund (wulax), Ahmad3366, JaidynReiman
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+Schuhe (feet/shoes)
+  Urheber: JaidynReiman, bluecarrot16, Johannes Sjölund (wulax)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-medieval-fantasy-character-sprites http://opengameart.org/content/lpc-clothing-updates https://opengameart.org/content/lpc-expanded-socks-shoes
+
+Schuhe (feet/shoes/basic/thin)
+  Urheber: JaidynReiman, Joe White, Johannes Sjölund (wulax)
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-medieval-fantasy-character-sprites http://opengameart.org/content/lpc-clothing-updates https://opengameart.org/content/lpc-expanded-socks-shoes
+
+Ballerinas (feet/shoes/sara/thin)
+  Urheber: JaidynReiman, Bluecarrot16, Mandi Paugh, Stephen Challener (Redshrike), William.Thompsonj
+  Lizenzen: OGA-BY 3.0, CC-BY 3.0+, GPL 2.0, GPL 3.0
+  Quellen: http://opengameart.org/content/sara-wizard https://opengameart.org/content/lpc-sara https://opengameart.org/content/lpc-expanded-socks-shoes
+
+Ballerinas (feet/shoes/sara/male)
+  Urheber: JaidynReiman, Bluecarrot16, Mandi Paugh, Stephen Challener (Redshrike), William.Thompsonj
+  Lizenzen: OGA-BY 3.0, CC-BY 3.0+, GPL 2.0, GPL 3.0
+  Quellen: http://opengameart.org/content/sara-wizard https://opengameart.org/content/lpc-sara https://opengameart.org/content/lpc-expanded-socks-shoes
+
+Stiefel (feet/boots/basic)
+  Urheber: JaidynReiman, bluecarrot16, Nila122
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 2.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-clothes-and-hair https://opengameart.org/content/lpc-expanded-socks-shoes
+
+Stiefel (feet/boots/basic/thin)
+  Urheber: JaidynReiman, bluecarrot16, Nila122
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 2.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-clothes-and-hair https://opengameart.org/content/lpc-expanded-socks-shoes
+
+Kappe (hat/cloth/leather_cap)
+  Urheber: Johannes Sjölund (wulax), Matthew Krohn (Makrohn), JaidynReiman
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-medieval-fantasy-character-sprites https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+Zylinder (hat/formal/tophat)
+  Urheber: bluecarrot16
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-gentleman https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+Melone (hat/formal/bowler)
+  Urheber: bluecarrot16
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-gentleman https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+Krone (hat/formal/crown)
+  Urheber: DarkwallLKE, Charles Sanchez (CharlesGabriel)
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-crown https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+Zauberhut (hat/magic/wizard)
+  Urheber: Michael Whitlock (bigbeargames), Tuomo Untinen (reemax), JaidynReiman
+  Lizenzen: CC-BY-SA 3.0, GPL 2.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-items-and-game-effects https://opengameart.org/content/lpc-pointed-hats https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+Weihnachtsmütze (hat/holiday/christmas)
+  Urheber: bluecarrot16, JaidynReiman
+  Lizenzen: OGA-BY 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-santa https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+Bandana (hat/cloth/bandana)
+  Urheber: Matthew Krohn (makrohn), JaidynReiman, Marcel van de Steeg (MadMarcel), JaidynReiman
+  Lizenzen: OGA-BY 3.0, CC-BY-SA 3.0
+  Quellen: https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle https://github.com/makrohn/Universal-LPC-spritesheet/commit/f50007cb47c235d8896cafae7a613f0b6a9a09a8?short_path=02b86d4#diff-02b86d45789a3e3e8e79519c7d17d15c9e6ecc9b4ddecb1bcd8dfbbaef430b75 https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+Sonnenbrille (facial/glasses/sunglasses)
+  Urheber: Michael Whitlock (bigbeargames), Thane Brimhall (pennomi), laetissima
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-base-character-expressions https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+Shades (facial/glasses/shades)
+  Urheber: JaidynReiman, Thane Brimhall (pennomi), laetissima
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-base-character-expressions
+
+Nerdbrille (facial/glasses/nerd)
+  Urheber: JaidynReiman, Thane Brimhall (pennomi), laetissima
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-base-character-expressions
+
+Runde Brille (facial/glasses/round)
+  Urheber: bluecarrot16, Thane Brimhall (pennomi), laetissima
+  Lizenzen: CC-BY-SA 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/clothing-facial-features-and-ui-elements https://opengameart.org/content/lpc-gentleman
+
+Augenklappe (facial/patches/eyepatch)
+  Urheber: bluecarrot16
+  Lizenzen: OGA-BY 3.0, GPL 3.0
+  Quellen: https://opengameart.org/content/lpc-pirates https://opengameart.org/content/lpc-expanded-hats-facial-helmets

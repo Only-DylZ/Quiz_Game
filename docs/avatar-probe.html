@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz-Abend – Avatar-Probe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Avatar-Probe: Baukasten links, Figuren laufen über die Farm. Keine Spiellogik. -->
+  <img id="szene" class="szene" alt="" hidden>
+
+  <main>
+    <section class="menue">
+      <div class="holz menue-tafel avatar-probe-tafel">
+        <h1>Dein Avatar</h1>
+        <div id="baukasten"></div>
+        <h2>Testen</h2>
+        <button class="klein" id="rad">Rad dreht</button>
+        <button class="klein" id="gewinner">Gewinner jubelt</button>
+        <button class="klein" id="richtig">Alle: richtig</button>
+        <button class="klein" id="falsch">Alle: falsch</button>
+        <button class="klein" id="mehr">+ Figur</button>
+        <p class="hinweis">Grafiken: LPC (CC-BY-SA u. a.), siehe <a href="avatare/CREDITS.txt">Credits</a></p>
+      </div>
+      <!-- Platzhalter fürs Glücksrad (rechts) -->
+      <div class="jahrmarkt" id="radPlatz"></div>
+    </section>
+  </main>
+
+  <script type="module" src="avatar-probe.js"></script>
+</body>
+</html>

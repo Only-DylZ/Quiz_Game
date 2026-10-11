@@ -147,6 +147,7 @@ Quiz_Game/
 │  ├─ play.js              Handy-Logik: beitreten, Fragen anzeigen, Antwort senden.
 │  ├─ style.css            Gemeinsames Aussehen aller Seiten (Pixel-Stil, Farben als Variablen).
 │  ├─ probe.html/.js/.css  Optik-Probe (nur zum Anschauen, keine Spiellogik).
+│  ├─ avatar-probe.html/.js  Avatar-Probe: Baukasten + Figuren auf der Farm (ohne Spiellogik).
 │  ├─ config.example.js    Vorlage für Supabase-URL und anon key (kopieren nach config.js).
 │  ├─ realtime.js          Verbindung zu Supabase: Raum anlegen/beitreten, Nachrichten senden.
 │  ├─ engine/
@@ -161,6 +162,10 @@ Quiz_Game/
 │  │  ├─ jahrmarkt.js      Glücksrad als Jahrmarkt-Rad im Pixel-Stil (Canvas, grobe Pixel).
 │  │  ├─ uifarben.js       Hintergrundbild wechseln; UI-Farben aus dessen Hauptfarbe (lesbar).
 │  │  ├─ szenen.js         Alte, per Code gezeichnete Szenen – nur noch Ersatz in der Probe.
+│  │  ├─ avatar.js         Avatare: Teile laden, umfärben, zusammensetzen, prüfen (avatarPruefen).
+│  │  ├─ avatarwahl.js     Baukasten „◀ Frisur ▶“ wie skribbl.io, merkt sich die Wahl.
+│  │  ├─ farmleben.js      Figuren laufen auf den Wegen der Farm, Sprechblasen, Rad, Jubeln.
+│  │  └─ sprueche.js       Sprüche pro Situation (Jugend-/Gamersprache, Fakten ohne Quiz-Antworten).
 │  │  └─ punkte.js         Alle Punkteregeln an einer Stelle.
 │  ├─ packs/
 │  │  ├─ index.json        Liste aller verfügbaren Themenpakete.
@@ -169,6 +174,8 @@ Quiz_Game/
 │  │  └─ szenen/           Pixel-Hintergründe 640×360: farm (Menü), joker (KI-Themen),
 │  │                       sonst Name = Paketdatei ohne .json (sport.png …).
 │  ├─ schrift/             Schrift „Jersey 15“ (SIL OFL) – im Repo statt Google Fonts.
+│  ├─ avatare/             LPC-Figurenteile (erzeugt von tools/avatar_teile.py), teile.json,
+│  │                       CREDITS.txt (Urheber – Pflicht laut CC-BY-SA/OGA-BY, nie löschen).
 │  └─ karten/
 │     └─ welt.json         Weltkarte ohne Namen (Natural Earth, gemeinfrei) für Kartenfragen.
 ├─ tools/
@@ -180,6 +187,7 @@ Quiz_Game/
 │  ├─ lecks.py            Sucht über alle Pakete, ob eine Frage die Antwort einer anderen zeigt.
 │  ├─ pixel_bild.py        KI-Bild → Pixel-Hintergrund 640×360 mit begrenzter Palette (Pillow).
 │  ├─ bild_prompts.md      Prompts für die Hintergrundbilder (Gemini-App / Adobe Firefly).
+│  ├─ avatar_teile.py      Holt Avatar-Teile aus dem LPC-Generator (nur freie Lizenzen) → docs/avatare/.
 │  └─ requirements.txt     Python-Abhängigkeiten (keine Pflicht; Pillow optional für bild_holen.py).
 └─ supabase/
    ├─ schema.sql           Tabelle themenjoker_aufrufe (Limits für die KI, RLS ohne Regeln).
@@ -212,7 +220,7 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
 | `loesung`   | ja      | je nach Modus | Die richtige Antwort (siehe unten)                    |
 | `quelle`    | ja      | Objekt | `{ "titel": "...", "url": "..." }` – `titel` Pflicht, `url` empfohlen |
 | `id`        | ja      | Text   | Eindeutige Kennung im Paket, z. B. `"rf-01"` (fürs Gedächtnis) |
-| `zeit`      | nein    | Zahl   | Antwortzeit in Sekunden (Standard: 20)                       |
+| `zeit`      | nein    | Zahl   | Antwortzeit in Sekunden (Standard: 20); der Host gibt immer 10 s dazu (`ZUSATZ_ZEIT`)|
 | `erklaerung`| nein    | Text   | Kurzer Satz, der nach der Auflösung gezeigt wird             |
 | `bild`      | nein    | Objekt | Bild zur Frage, siehe „Bildfragen“ unten                     |
 

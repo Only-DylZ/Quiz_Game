@@ -1,0 +1,1203 @@
+{
+ "hinweis": "Erzeugt von tools/avatar_teile.py – nicht von Hand ändern.",
+ "feld": 64,
+ "animationen": [
+  {
+   "name": "walk",
+   "bilder": 9,
+   "zeile": 0
+  },
+  {
+   "name": "idle",
+   "bilder": 2,
+   "zeile": 4
+  },
+  {
+   "name": "jump",
+   "bilder": 5,
+   "zeile": 8
+  },
+  {
+   "name": "emote",
+   "bilder": 3,
+   "zeile": 12
+  }
+ ],
+ "figuren": [
+  "male",
+  "female"
+ ],
+ "farben": {
+  "haut": {
+   "quelle": [
+    "#271920",
+    "#99423c",
+    "#cc8665",
+    "#E4A47C",
+    "#F9D5BA",
+    "#FAECE7"
+   ],
+   "varianten": [
+    {
+     "name": "light",
+     "farben": [
+      "#271920",
+      "#99423c",
+      "#cc8665",
+      "#E4A47C",
+      "#F9D5BA",
+      "#FAECE7"
+     ]
+    },
+    {
+     "name": "amber",
+     "farben": [
+      "#281716",
+      "#9E3E37",
+      "#D28144",
+      "#EA9F54",
+      "#FDD082",
+      "#FBE7A4"
+     ]
+    },
+    {
+     "name": "olive",
+     "farben": [
+      "#271920",
+      "#442725",
+      "#7F4C31",
+      "#AE6B3F",
+      "#D38B59",
+      "#E4A47C"
+     ]
+    },
+    {
+     "name": "taupe",
+     "farben": [
+      "#271920",
+      "#503734",
+      "#785946",
+      "#936849",
+      "#BA8454",
+      "#C7935F"
+     ]
+    },
+    {
+     "name": "bronze",
+     "farben": [
+      "#1A1213",
+      "#442725",
+      "#644133",
+      "#7F4C31",
+      "#AE6B3F",
+      "#D38B59"
+     ]
+    },
+    {
+     "name": "brown",
+     "farben": [
+      "#120E10",
+      "#412B29",
+      "#5F4539",
+      "#76513A",
+      "#9C663E",
+      "#B8773F"
+     ]
+    },
+    {
+     "name": "black",
+     "farben": [
+      "#000000",
+      "#1A1213",
+      "#2E1F1C",
+      "#442725",
+      "#603429",
+      "#7F4C31"
+     ]
+    },
+    {
+     "name": "green",
+     "farben": [
+      "#140C09",
+      "#09320B",
+      "#19541D",
+      "#228236",
+      "#39AA4E",
+      "#53BF71"
+     ]
+    },
+    {
+     "name": "blue",
+     "farben": [
+      "#16171B",
+      "#46425D",
+      "#586B90",
+      "#748DA4",
+      "#A9C9CA",
+      "#C8E8E8"
+     ]
+    },
+    {
+     "name": "lavender",
+     "farben": [
+      "#16171B",
+      "#393B44",
+      "#787C8F",
+      "#A0A5BC",
+      "#C9D0EE",
+      "#FBECE6"
+     ]
+    }
+   ]
+  },
+  "haar": {
+   "quelle": [
+    "#260D14",
+    "#6A1108",
+    "#A42600",
+    "#BF4000",
+    "#E55600",
+    "#FF8A00"
+   ],
+   "varianten": [
+    {
+     "name": "black",
+     "farben": [
+      "#000000",
+      "#080A0A",
+      "#101414",
+      "#1C2222",
+      "#31313E",
+      "#4A5057"
+     ]
+    },
+    {
+     "name": "dark_brown",
+     "farben": [
+      "#050100",
+      "#160701",
+      "#290E02",
+      "#421603",
+      "#5F1F04",
+      "#792806"
+     ]
+    },
+    {
+     "name": "chestnut",
+     "farben": [
+      "#200C0D",
+      "#3A130E",
+      "#63200B",
+      "#81310A",
+      "#B6550E",
+      "#D28102"
+     ]
+    },
+    {
+     "name": "light_brown",
+     "farben": [
+      "#1A0E04",
+      "#301B07",
+      "#60350F",
+      "#7D4513",
+      "#AE682A",
+      "#C88D58"
+     ]
+    },
+    {
+     "name": "blonde",
+     "farben": [
+      "#331313",
+      "#552B15",
+      "#AC5D1F",
+      "#E09E2B",
+      "#FCCF56",
+      "#FFE67D"
+     ]
+    },
+    {
+     "name": "platinum",
+     "farben": [
+      "#1C0E06",
+      "#7D5D5D",
+      "#A87D52",
+      "#C0AB81",
+      "#EDDF95",
+      "#F6F6F3"
+     ]
+    },
+    {
+     "name": "gray",
+     "farben": [
+      "#0E0E0E",
+      "#292929",
+      "#4B4B4B",
+      "#777777",
+      "#AAAAAA",
+      "#D9D9D9"
+     ]
+    },
+    {
+     "name": "redhead",
+     "farben": [
+      "#260D14",
+      "#3E111A",
+      "#73171E",
+      "#9E1F1F",
+      "#C7341B",
+      "#E74716"
+     ]
+    },
+    {
+     "name": "orange",
+     "farben": [
+      "#260D14",
+      "#6A1108",
+      "#A42600",
+      "#BF4000",
+      "#E55600",
+      "#FF8A00"
+     ]
+    },
+    {
+     "name": "pink",
+     "farben": [
+      "#330410",
+      "#71043A",
+      "#B60A68",
+      "#E941AA",
+      "#E976C4",
+      "#EA95D5"
+     ]
+    },
+    {
+     "name": "purple",
+     "farben": [
+      "#13112D",
+      "#2B225A",
+      "#402E82",
+      "#7141B2",
+      "#A966DD",
+      "#D085ED"
+     ]
+    },
+    {
+     "name": "blue",
+     "farben": [
+      "#000027",
+      "#00005E",
+      "#000091",
+      "#0041B4",
+      "#0074CB",
+      "#1E85EF"
+     ]
+    },
+    {
+     "name": "green",
+     "farben": [
+      "#000400",
+      "#001400",
+      "#002D00",
+      "#005000",
+      "#007C00",
+      "#00A700"
+     ]
+    }
+   ]
+  },
+  "stoff": {
+   "quelle": [
+    "#281820",
+    "#4D4A5D",
+    "#958080",
+    "#C4B59F",
+    "#E5E6C7",
+    "#FFFFFF"
+   ],
+   "varianten": [
+    {
+     "name": "black",
+     "farben": [
+      "#000000",
+      "#101414",
+      "#1C2222",
+      "#22282A",
+      "#2A3034",
+      "#4A5057"
+     ]
+    },
+    {
+     "name": "charcoal",
+     "farben": [
+      "#000000",
+      "#130D14",
+      "#1C2222",
+      "#2A3034",
+      "#4A5057",
+      "#6E7675"
+     ]
+    },
+    {
+     "name": "white",
+     "farben": [
+      "#281820",
+      "#4D4A5D",
+      "#958080",
+      "#C4B59F",
+      "#E5E6C7",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "red",
+     "farben": [
+      "#1d131e",
+      "#400B1F",
+      "#651117",
+      "#82171C",
+      "#AB1E1E",
+      "#CD2429"
+     ]
+    },
+    {
+     "name": "maroon",
+     "farben": [
+      "#1d131e",
+      "#400B1F",
+      "#551C22",
+      "#682121",
+      "#832121",
+      "#AE424A"
+     ]
+    },
+    {
+     "name": "orange",
+     "farben": [
+      "#301723",
+      "#5F1D1B",
+      "#9C3F23",
+      "#D75B1A",
+      "#EF7E19",
+      "#FFA749"
+     ]
+    },
+    {
+     "name": "yellow",
+     "farben": [
+      "#301723",
+      "#5F2F25",
+      "#BA5B23",
+      "#D99431",
+      "#F3C03F",
+      "#FFE360"
+     ]
+    },
+    {
+     "name": "green",
+     "farben": [
+      "#101820",
+      "#192832",
+      "#0B5C2F",
+      "#214437",
+      "#2F8136",
+      "#64A42C"
+     ]
+    },
+    {
+     "name": "forest",
+     "farben": [
+      "#09131d",
+      "#07391D",
+      "#0B1F25",
+      "#0B2B28",
+      "#134507",
+      "#1B5502"
+     ]
+    },
+    {
+     "name": "teal",
+     "farben": [
+      "#180716",
+      "#1B2B47",
+      "#0E4E72",
+      "#156C99",
+      "#0098B2",
+      "#00CFDF"
+     ]
+    },
+    {
+     "name": "sky",
+     "farben": [
+      "#1a0d18",
+      "#313148",
+      "#586B90",
+      "#9FBBCB",
+      "#C6EEFD",
+      "#FFFFFF"
+     ]
+    },
+    {
+     "name": "blue",
+     "farben": [
+      "#180716",
+      "#281E41",
+      "#322D6A",
+      "#3C49AD",
+      "#466AC9",
+      "#61A0EF"
+     ]
+    },
+    {
+     "name": "navy",
+     "farben": [
+      "#180716",
+      "#20102B",
+      "#281E41",
+      "#322D6A",
+      "#3C49AD",
+      "#466AC9"
+     ]
+    },
+    {
+     "name": "purple",
+     "farben": [
+      "#180716",
+      "#13112D",
+      "#261044",
+      "#411357",
+      "#621E78",
+      "#813089"
+     ]
+    },
+    {
+     "name": "pink",
+     "farben": [
+      "#1d131e",
+      "#54242E",
+      "#6C3536",
+      "#AE424A",
+      "#C36072",
+      "#E08080"
+     ]
+    },
+    {
+     "name": "brown",
+     "farben": [
+      "#1d131e",
+      "#411E05",
+      "#4B2B13",
+      "#62351C",
+      "#744B30",
+      "#996B4A"
+     ]
+    },
+    {
+     "name": "tan",
+     "farben": [
+      "#3e2613",
+      "#684415",
+      "#986A20",
+      "#B78C41",
+      "#B7996A",
+      "#CFC587"
+     ]
+    }
+   ]
+  }
+ },
+ "kategorien": [
+  {
+   "id": "figur",
+   "name": "Figur",
+   "freiwillig": false,
+   "teile": [
+    {
+     "name": "Figur",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 10,
+       "male": "figur/body_bodies_male.png",
+       "female": "figur/body_bodies_female.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kopf",
+   "name": "Kopf",
+   "freiwillig": false,
+   "teile": [
+    {
+     "name": "Mensch 1",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_human_male.png",
+       "female": "kopf/head_heads_human_male.png"
+      }
+     ]
+    },
+    {
+     "name": "Mensch 2",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_human_female.png",
+       "female": "kopf/head_heads_human_female.png"
+      }
+     ]
+    },
+    {
+     "name": "Pausbacke",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_human_male_plump.png",
+       "female": "kopf/head_heads_human_male_plump.png"
+      }
+     ]
+    },
+    {
+     "name": "Opa",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_human_male_elderly.png",
+       "female": "kopf/head_heads_human_male_elderly.png"
+      }
+     ]
+    },
+    {
+     "name": "Oma",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_human_female_elderly.png",
+       "female": "kopf/head_heads_human_female_elderly.png"
+      }
+     ]
+    },
+    {
+     "name": "Skelett",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_skeleton_adult.png",
+       "female": "kopf/head_heads_skeleton_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Zombie",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_zombie_adult.png",
+       "female": "kopf/head_heads_zombie_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Vampir",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_vampire_adult.png",
+       "female": "kopf/head_heads_vampire_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Frankenstein",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_frankenstein_adult.png",
+       "female": "kopf/head_heads_frankenstein_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Kürbis",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_jack_adult.png",
+       "female": "kopf/head_heads_jack_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Ork",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_orc_male.png",
+       "female": "kopf/head_heads_orc_male.png"
+      }
+     ]
+    },
+    {
+     "name": "Goblin",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_goblin_adult.png",
+       "female": "kopf/head_heads_goblin_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Troll",
+     "farbe": "haut",
+     "ebenen": [
+      {
+       "z": 100,
+       "male": "kopf/head_heads_troll_adult.png",
+       "female": "kopf/head_heads_troll_adult.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frisur",
+   "name": "Frisur",
+   "freiwillig": true,
+   "teile": [
+    {
+     "name": "Verwuschelt",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_messy1_adult.png",
+       "female": "frisur/hair_messy1_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Aufgestanden",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_bedhead_adult.png",
+       "female": "frisur/hair_bedhead_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Pony",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_bangs_adult.png",
+       "female": "frisur/hair_bangs_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Mittelscheitel",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_curtains_adult.png",
+       "female": "frisur/hair_curtains_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Pixie",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_pixie_adult.png",
+       "female": "frisur/hair_pixie_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Tolle",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_swoop_adult.png",
+       "female": "frisur/hair_swoop_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Stacheln",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_spiked_adult.png",
+       "female": "frisur/hair_spiked_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Buzzcut",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_buzzcut_adult.png",
+       "female": "frisur/hair_buzzcut_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Irokese",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_shorthawk_adult.png",
+       "female": "frisur/hair_shorthawk_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Locken",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_curly_short_adult.png",
+       "female": "frisur/hair_curly_short_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Afro",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_afro_adult.png",
+       "female": "frisur/hair_afro_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Dreads",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_dreadlocks_short_adult.png",
+       "female": "frisur/hair_dreadlocks_short_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Bob",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_bob_adult.png",
+       "female": "frisur/hair_bob_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Lang",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_long_adult.png",
+       "female": "frisur/hair_long_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Pferdeschwanz",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_ponytail_adult_fg.png",
+       "female": "frisur/hair_ponytail_adult_fg.png"
+      },
+      {
+       "z": 9,
+       "male": "frisur/hair_ponytail_adult_bg.png",
+       "female": "frisur/hair_ponytail_adult_bg.png"
+      }
+     ]
+    },
+    {
+     "name": "Hoher Zopf",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_high_ponytail_adult_fg.png",
+       "female": "frisur/hair_high_ponytail_adult_fg.png"
+      },
+      {
+       "z": 9,
+       "male": "frisur/hair_high_ponytail_adult_bg.png",
+       "female": "frisur/hair_high_ponytail_adult_bg.png"
+      }
+     ]
+    },
+    {
+     "name": "Zöpfe",
+     "farbe": "haar",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "frisur/hair_pigtails_adult.png",
+       "female": "frisur/hair_pigtails_adult.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oberteil",
+   "name": "Oberteil",
+   "freiwillig": false,
+   "teile": [
+    {
+     "name": "T-Shirt",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 35,
+       "male": "oberteil/torso_clothes_shortsleeve_shortsleeve_male.png",
+       "female": "oberteil/torso_clothes_shortsleeve_shortsleeve_female.png"
+      }
+     ]
+    },
+    {
+     "name": "Polo",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 35,
+       "male": "oberteil/torso_clothes_shortsleeve_shortsleeve_polo_male.png",
+       "female": "oberteil/torso_clothes_shortsleeve_shortsleeve_polo_female.png"
+      }
+     ]
+    },
+    {
+     "name": "Langarm",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 35,
+       "male": "oberteil/torso_clothes_longsleeve_longsleeve_male.png",
+       "female": "oberteil/torso_clothes_longsleeve_longsleeve_female.png"
+      }
+     ]
+    },
+    {
+     "name": "V-Ausschnitt",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 35,
+       "male": "oberteil/torso_clothes_longsleeve_longsleeve2_vneck_male.png",
+       "female": "oberteil/torso_clothes_longsleeve_longsleeve2_vneck_female.png"
+      }
+     ]
+    },
+    {
+     "name": "Strickjacke",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 35,
+       "male": "oberteil/torso_clothes_longsleeve_longsleeve2_cardigan_male.png",
+       "female": "oberteil/torso_clothes_longsleeve_longsleeve2_cardigan_female.png"
+      }
+     ]
+    },
+    {
+     "name": "Ärmellos",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 35,
+       "male": "oberteil/torso_clothes_sleeveless_sleeveless2_male.png",
+       "female": "oberteil/torso_clothes_sleeveless_sleeveless2_female.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "unterteil",
+   "name": "Unterteil",
+   "freiwillig": false,
+   "teile": [
+    {
+     "name": "Hose",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 20,
+       "male": "unterteil/legs_pants_male.png",
+       "female": "unterteil/legs_pants_thin.png"
+      }
+     ]
+    },
+    {
+     "name": "Krempelhose",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 20,
+       "male": "unterteil/legs_cuffed_male.png",
+       "female": "unterteil/legs_cuffed_thin.png"
+      }
+     ]
+    },
+    {
+     "name": "Shorts",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 20,
+       "male": "unterteil/legs_shorts_shorts_male.png",
+       "female": "unterteil/legs_shorts_shorts_thin.png"
+      }
+     ]
+    },
+    {
+     "name": "Hotpants",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 20,
+       "male": "unterteil/legs_shorts_short_shorts_male.png",
+       "female": "unterteil/legs_shorts_short_shorts_thin.png"
+      }
+     ]
+    },
+    {
+     "name": "Rock",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 20,
+       "male": "unterteil/legs_skirts_plain_male.png",
+       "female": "unterteil/legs_skirts_plain_thin.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "schuhe",
+   "name": "Schuhe",
+   "freiwillig": false,
+   "teile": [
+    {
+     "name": "Schuhe",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 15,
+       "male": "schuhe/feet_shoes_basic_male.png",
+       "female": "schuhe/feet_shoes_basic_thin.png"
+      }
+     ]
+    },
+    {
+     "name": "Ballerinas",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 15,
+       "male": "schuhe/feet_shoes_sara_male.png",
+       "female": "schuhe/feet_shoes_sara_thin.png"
+      }
+     ]
+    },
+    {
+     "name": "Stiefel",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 25,
+       "male": "schuhe/feet_boots_basic_male.png",
+       "female": "schuhe/feet_boots_basic_thin.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hut",
+   "name": "Hut",
+   "freiwillig": true,
+   "teile": [
+    {
+     "name": "Kappe",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 130,
+       "male": "hut/hat_cloth_leather_cap_adult_red.png",
+       "female": "hut/hat_cloth_leather_cap_adult_red.png"
+      }
+     ]
+    },
+    {
+     "name": "Zylinder",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 130,
+       "male": "hut/hat_formal_tophat_adult.png",
+       "female": "hut/hat_formal_tophat_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Melone",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 130,
+       "male": "hut/hat_formal_bowler_adult.png",
+       "female": "hut/hat_formal_bowler_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Krone",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 130,
+       "male": "hut/hat_formal_crown_adult.png",
+       "female": "hut/hat_formal_crown_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Zauberhut",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 130,
+       "male": "hut/hat_magic_wizard_base_adult.png",
+       "female": "hut/hat_magic_wizard_base_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Weihnachtsmütze",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 130,
+       "male": "hut/hat_holiday_christmas_adult.png",
+       "female": "hut/hat_holiday_christmas_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Bandana",
+     "farbe": "stoff",
+     "ebenen": [
+      {
+       "z": 120,
+       "male": "hut/hat_cloth_bandana_adult.png",
+       "female": "hut/hat_cloth_bandana_adult.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "brille",
+   "name": "Brille",
+   "freiwillig": true,
+   "teile": [
+    {
+     "name": "Sonnenbrille",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 115,
+       "male": "brille/facial_glasses_sunglasses_adult.png",
+       "female": "brille/facial_glasses_sunglasses_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Shades",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 115,
+       "male": "brille/facial_glasses_shades_adult.png",
+       "female": "brille/facial_glasses_shades_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Nerdbrille",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 115,
+       "male": "brille/facial_glasses_nerd_adult.png",
+       "female": "brille/facial_glasses_nerd_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Runde Brille",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 115,
+       "male": "brille/facial_glasses_round_adult.png",
+       "female": "brille/facial_glasses_round_adult.png"
+      }
+     ]
+    },
+    {
+     "name": "Augenklappe",
+     "farbe": null,
+     "ebenen": [
+      {
+       "z": 115,
+       "male": "brille/facial_patches_eyepatch_left_adult.png",
+       "female": "brille/facial_patches_eyepatch_left_adult.png"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

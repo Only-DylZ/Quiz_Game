@@ -14,47 +14,45 @@
   Grundspiel, Grafik/Karte, Werkzeuge + 13 Themen, Themenrunden mit GP/Stechfrage/
   Glücksrad/Booster, Themenjoker mit Gemini (Supabase Edge Function).
 - **Fragen-Pools:** 13 Themen mit 42–67 Fragen und je 5 Stechfragen (Ziel 150).
-- **In Arbeit: Optik-Umbau im Pixel-Stil** (Stardew-Valley-artig). Probe war vom
-  Nutzer abgenommen. **Echte Seiten sind umgebaut und committet (11.10.2026), aber noch
-  nicht gepusht und noch nicht vom Nutzer im echten Spiel getestet.**
+- **Optik-Umbau im Pixel-Stil** ist committet und online (11.10.2026), im ganzen Spiel
+  aber noch nicht getestet.
+- **In Arbeit: Avatare** – Probe-Seite fertig, noch nicht im Spiel, nicht committet.
 
 ---
 
-## Jetzt dran: Optik-Umbau im echten Spiel testen, dann pushen
+## Jetzt dran: Avatare (Probe fertig, nicht committet)
 
-### Stand (committet, noch nicht gepusht)
+Nutzerwunsch: Avatare mit Kopf, Frisur, Ober-/Unterteil, Accessoires; Auswahl beim
+Beitreten mit ◀ ▶ wie skribbl.io; Köpfe neben den Punkten im Zwischenstand; ganze
+Figuren auf dem Treppchen; im Hauptmenü laufen sie auf den Farmwegen, stehen, springen,
+reden (Sprechblasen je nach Situation, Jugend-/Gamersprache, Fakten). Dreht das Rad,
+schauen alle hin; der Gewinner jubelt.
 
-| Was | Wo |
-|---|---|
-| Neuer Stil (Rahmen/Pergament, Jersey 15, Pixel-Knöpfe, A–D-Kacheln) | `docs/style.css` |
-| **UI-Farben passen sich dem Hintergrund an:** häufigster Farbton des Bildes (Canvas, graue/dunkle Pixel zählen nicht) → Palette mit garantiertem Kontrast (Tinte ≥ 7, Knöpfe/Akzent ≥ 4,5). Test über alle Farbtöne in `spiel.test.mjs` | `docs/engine/uifarben.js` (`hintergrundSetzen(name)`, `paletteAus`) |
-| Host: Hintergrund farm (Lobby, Themenwahl, Rundenende, Ende) bzw. Thema/joker (Fragen); Jahrmarkt-Rad statt SVG-Rad | `host.html`, `host.js` |
-| Handy: gleicher Stil, Themenbild bei Frage/Ergebnis (neues Feld `szene` in der `frage`-Nachricht), Auflösung zeigt „Deine Antwort: B – Giraffe ✗“ + „Richtig: …“ | `play.html`, `play.js`, `antwortAlsText` in auswahl/schaetzen/grafik |
-| Startseite mit Farm und Pixel-Knöpfen | `index.html` |
-| Layout: Host-Lobby und Themenwahl über volle Breite – Tafel ganz links, Rad ganz rechts, Mitte frei für spätere Avatare. Handy-Seite schmale Spalte (max. 480 px) | `style.css` (`.menue`, `.spieler main`) |
-| Bilder, Schrift, Jahrmarkt-Rad, Werkzeuge | `docs/bilder/szenen/`, `docs/schrift/`, `engine/jahrmarkt.js`, `tools/pixel_bild.py`, `tools/bild_prompts.md` |
+**Stand (lokal, nicht committet):** `avatar-probe.html` zeigt Baukasten + 6 Figuren auf der
+Farm + Testknöpfe (`#rad` dreht automatisch). Selbst per Screenshot geprüft.
+- Grafiken: LPC (Universal LPC Spritesheet Character Generator), nur Teile mit CC0/CC-BY/
+  CC-BY-SA/OGA-BY. `tools/avatar_teile.py` lädt sie, packt walk/idle/jump/emote in ein Bild
+  pro Teil (576×1024) und schreibt `docs/avatare/teile.json` + `CREDITS.txt`. 74 Bilder, 1,1 MB.
+- Farben per Farbtabelle (Haut/Haar/Stoff) im Browser umgefärbt (`farbenTauschen`).
+- Übers Netz soll nur der Avatar als Zahlen gehen; `avatarPruefen` prüft streng (Tests).
+- Wegenetz der Farm: `PUNKTE`/`WEGE` in `farmleben.js` (Koordinaten im 640×360-Bild).
 
-Selbst geprüft per Screenshot: Startseite, Lobby, Handy-Beitreten, Auswahl-Frage/
--Auflösung, Zeitleiste, Reihenfolge, Schätzen am Handy, Ergebnis am Handy.
-**Nicht** per Screenshot geprüft (braucht echte Spieler): Themenwahl mit
-Jahrmarkt-Rad im Host, Karte, Stechfrage, Rundenende, Siegertreppchen.
+**Nächste Schritte:**
+1. Nutzer testet die Probe (Stil, Größe der Figuren, Sprüche).
+2. Einbau ins Spiel: Avatar beim Beitreten (play.html, Baukasten über dem Namen), Avatar
+   in Presence/`beitreten` mitschicken, Host prüft mit `avatarPruefen`. Host: `farmleben`
+   in Lobby und Themenwahl, `zumRadSchauen` beim Drehen, `jubeln` für den Spieler, dessen
+   Karte gewonnen hat. Zwischenstand: `kopfZeichnen` neben den Namen. Treppchen: Figuren
+   (jubelnd für Platz 1). Sprechblasen nach Punkten (Situationen in `sprueche.js`).
+   CLAUDE.md-Nachrichtentabelle ergänzen.
+3. Credits-Seite (Link von Startseite) mit Inhalt von `avatare/CREDITS.txt` – Pflicht, sobald online.
+4. Danach Optik-Test im echten Spiel (Optik-Umbau ist online, aber noch nicht im
+   ganzen Spiel getestet: Rad, Karte, Stechfrage, Treppchen).
 
-### Nächste Schritte
-1. Nutzer testet ein ganzes Spiel (PC + Handy): besonders Themenwahl/Rad,
-   Kartenfrage, Treppchen, Lesbarkeit bei allen Themen.
-2. Danach pushen (`git push` → GitHub Actions stellt online). Probe-Dateien
-   (`probe.*`) und `engine/szenen.js` sind vorerst als Vorschau mit committet –
-   später ggf. löschen (nur die Probe nutzt szenen.js).
-3. Kleinigkeit: Im Raumfahrt-Bild weht eine Piratenflagge – Nutzer entscheidet, ob neu erzeugen.
-4. Später: Avatare (Vorschlag LPC-Figuren, CC BY-SA → Credits-Seite nötig), die in
-   der Lobby herumlaufen; Sprechblasen mit Antworten bei der Auflösung.
-
-### Vom Nutzer festgelegt
-- Holz-/Pergament-Oberfläche, Schrift Jersey 15 (Pixelify war zu schwer lesbar).
-- Jedes Thema eigener Hintergrund, KI-Themen → `joker.png`, Menü → `farm.png`.
-- Antworten einheitlich (Pergament-Knopf mit Schild A–D), Handy ebenfalls A–D.
-- Rad passend zum Hintergrund (grobe Pixel, Holzfarben, Spielerfarben erdig).
-- UI-Farbe = dominierende Farbe des Hintergrunds, Schrift immer gut lesbar.
+### Optik-Umbau (committet + online am 11.10.2026)
+Pixel-Stil, Hintergrund je Thema, UI-Farben aus dem Bild (`uifarben.js`), A–D-Antworten,
+Jahrmarkt-Rad, Tafel links/Rad rechts, Handy schmale Spalte. Probe-Dateien (`probe.*`,
+`szenen.js`) vorerst behalten.
 
 ---
 

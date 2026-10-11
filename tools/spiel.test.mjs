@@ -23,6 +23,11 @@ import {
 import {
   paletteAus, kontrast, hslZuHex, rgbZuHsl, KONTRAST_TEXT, KONTRAST_GROSS,
 } from "../docs/engine/uifarben.js";
+import {
+  avatarPruefen, zufallsAvatar, ebenenListe, farbenTauschen, farbtabelleVon,
+} from "../docs/engine/avatar.js";
+import { wegFinden, richtungNach } from "../docs/engine/farmleben.js";
+import { SPRUECHE, spruch } from "../docs/engine/sprueche.js";
 
 // ---------------------------------------------------------------------------
 // Punkte: auswahl
@@ -442,4 +447,67 @@ test("uifarben: jede Palette ist gut lesbar – bei jedem Farbton", () => {
       for (const wert of Object.values(p)) assert.match(wert, /^#[0-9a-f]{6}$/);
     }
   }
+});
+
+// ---------------------------------------------------------------------------
+// Avatare (engine/avatar.js, farmleben.js, sprueche.js)
+// ---------------------------------------------------------------------------
+const avatarKatalog = JSON.parse(readFileSync(new URL("../docs/avatare/teile.json", import.meta.url), "utf8"));
+
+test("avatar: Zufalls-Avatare sind immer gültig und haben Bilder", () => {
+  for (let i = 0; i < 200; i++) {
+    const avatar = zufallsAvatar(avatarKatalog);
+    assert.deepEqual(avatarPruefen(avatarKatalog, avatar), avatar);
+    const ebenen = ebenenListe(avatarKatalog, avatar);
+    assert.ok(ebenen.length >= 4, "Körper, Kopf, Kleidung …");
+    for (const e of ebenen) {
+      assert.match(e.datei, /^[a-z]+\/[a-z0-9_]+\.png$/);
+      assert.ok(readFileSync(new URL("../docs/avatare/" + e.datei, import.meta.url)).length > 0);
+    }
+  }
+});
+
+test("avatar: kaputte oder manipulierte Avatare werden abgelehnt", () => {
+  const gut = zufallsAvatar(avatarKatalog, () => 0);
+  assert.ok(avatarPruefen(avatarKatalog, gut));
+  assert.equal(avatarPruefen(avatarKatalog, null), null);
+  assert.equal(avatarPruefen(avatarKatalog, "Hallo"), null);
+  assert.equal(avatarPruefen(avatarKatalog, { ...gut, figur: 99 }), null);
+  assert.equal(avatarPruefen(avatarKatalog, { ...gut, figur: "0" }), null);
+  assert.equal(avatarPruefen(avatarKatalog, { ...gut, teile: { ...gut.teile, kopf: 999 } }), null);
+  assert.equal(avatarPruefen(avatarKatalog, { ...gut, teile: { ...gut.teile, kopf: -1 } }), null); // Kopf ist Pflicht
+  assert.equal(avatarPruefen(avatarKatalog, { ...gut, teile: { ...gut.teile, frisur: 1.5 } }), null);
+  assert.equal(avatarPruefen(avatarKatalog, { ...gut, farben: { ...gut.farben, frisur: -3 } }), null);
+  // Fremde Felder fliegen raus
+  const sauber = avatarPruefen(avatarKatalog, { ...gut, boese: "<script>", teile: { ...gut.teile, x: 1 } });
+  assert.equal(sauber.boese, undefined);
+  assert.equal(sauber.teile.x, undefined);
+});
+
+test("avatar: Farben werden richtig getauscht", () => {
+  const pixel = new Uint8ClampedArray([255, 0, 0, 255, 0, 0, 255, 255, 255, 0, 0, 0]);
+  farbenTauschen(pixel, ["#ff0000"], ["#00ff00"]);
+  assert.deepEqual([...pixel], [0, 255, 0, 255, 0, 0, 255, 255, 255, 0, 0, 0]); // durchsichtig bleibt
+  assert.equal(farbtabelleVon(avatarKatalog, "frisur"), "haar");
+  for (const tabelle of Object.values(avatarKatalog.farben)) {
+    for (const v of tabelle.varianten) assert.equal(v.farben.length, tabelle.quelle.length);
+  }
+});
+
+test("farmleben: Wege und Blickrichtung", () => {
+  assert.deepEqual(wegFinden("tor", "teich"), ["tor", "kreuzung", "links", "teich"]);
+  assert.deepEqual(wegFinden("tor", "tor"), ["tor"]);
+  assert.equal(richtungNach(0, 0, 10, 2), "rechts");
+  assert.equal(richtungNach(0, 0, -10, 2), "links");
+  assert.equal(richtungNach(0, 0, 1, -10), "oben");
+  assert.equal(richtungNach(0, 0, 4, -10, 3), "rechts"); // lieber seitlich
+});
+
+test("sprueche: alle Listen gefüllt, kurz genug", () => {
+  for (const [situation, liste] of Object.entries(SPRUECHE)) {
+    assert.ok(liste.length >= 3, situation);
+    for (const s of liste) assert.ok(s.length <= 60, s);
+  }
+  assert.equal(spruch("rad", () => 0), SPRUECHE.rad[0]);
+  assert.ok(SPRUECHE.warten.includes(spruch("gibtsnicht")));
 });

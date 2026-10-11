@@ -40,6 +40,8 @@ const PAKET_AUS_LINK = (new URLSearchParams(location.search).get("paket") || "")
 
 // Antwortzeit in Sekunden, wenn die Frage keine eigene "zeit" hat
 const STANDARD_ZEIT = 20;
+// So viele Sekunden gibt es bei jeder Frage zusätzlich (Zeit zum Lesen, v. a. bei KI-Fragen)
+const ZUSATZ_ZEIT = 10;
 
 // So viele Plätze zeigt der Zwischenstand
 const ZWISCHENSTAND_PLAETZE = 10;
@@ -618,7 +620,7 @@ function frageStellen(frage) {
 
   antworten = new Map();
   entwuerfe = new Map();
-  gesamtzeit = Number.isInteger(frage.zeit) && frage.zeit > 0 ? frage.zeit : STANDARD_ZEIT;
+  gesamtzeit = (Number.isInteger(frage.zeit) && frage.zeit > 0 ? frage.zeit : STANDARD_ZEIT) + ZUSATZ_ZEIT;
   restzeit = gesamtzeit;
 
   // Anzeige auf dem großen Bildschirm
