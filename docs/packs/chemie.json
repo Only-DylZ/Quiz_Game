@@ -8,12 +8,12 @@
       "modus": "auswahl",
       "frage": "Welches chemische Symbol hat Gold?",
       "optionen": [
-        "Gd",
+        "Au",
         "Ag",
-        "Go",
-        "Au"
+        "Gd",
+        "Go"
       ],
-      "loesung": 3,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Gold",
         "url": "https://de.wikipedia.org/wiki/Gold"
@@ -24,12 +24,12 @@
       "modus": "auswahl",
       "frage": "Für welches Element steht das Symbol Na?",
       "optionen": [
-        "Natrium",
         "Nickel",
-        "Stickstoff",
-        "Neon"
+        "Natrium",
+        "Neon",
+        "Stickstoff"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Natrium",
         "url": "https://de.wikipedia.org/wiki/Natrium"
@@ -56,12 +56,12 @@
       "modus": "auswahl",
       "frage": "Welches Element hat die Ordnungszahl 1?",
       "optionen": [
-        "Lithium",
-        "Helium",
         "Wasserstoff",
-        "Sauerstoff"
+        "Sauerstoff",
+        "Lithium",
+        "Helium"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Wasserstoff",
         "url": "https://de.wikipedia.org/wiki/Wasserstoff"
@@ -72,9 +72,9 @@
       "modus": "auswahl",
       "frage": "Welcher pH-Wert gilt als neutral?",
       "optionen": [
-        "10",
         "0",
         "14",
+        "10",
         "7"
       ],
       "loesung": 3,
@@ -89,11 +89,11 @@
       "frage": "Wer stellte das erste Periodensystem der Elemente auf (zeitgleich mit Lothar Meyer)?",
       "optionen": [
         "Marie Curie",
-        "Dmitri Mendelejew",
         "Niels Bohr",
-        "Antoine Lavoisier"
+        "Antoine Lavoisier",
+        "Dmitri Mendelejew"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Dmitri Mendelejew",
         "url": "https://de.wikipedia.org/wiki/Dmitri_Mendelejew"
@@ -104,12 +104,12 @@
       "modus": "auswahl",
       "frage": "Welches Metall ist bei Raumtemperatur flüssig?",
       "optionen": [
-        "Quecksilber",
         "Zinn",
+        "Quecksilber",
         "Blei",
         "Zink"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Quecksilber",
         "url": "https://de.wikipedia.org/wiki/Quecksilber"
@@ -120,12 +120,12 @@
       "modus": "auswahl",
       "frage": "Wie lautet die chemische Formel von Kochsalz?",
       "optionen": [
-        "KCl",
         "NaOH",
         "CaCO₃",
-        "NaCl"
+        "NaCl",
+        "KCl"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Natriumchlorid",
         "url": "https://de.wikipedia.org/wiki/Natriumchlorid"
@@ -136,12 +136,12 @@
       "modus": "auswahl",
       "frage": "Welches ist das härteste natürliche Material?",
       "optionen": [
-        "Quarz",
-        "Korund",
         "Diamant",
+        "Korund",
+        "Quarz",
         "Granit"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Diamant",
         "url": "https://de.wikipedia.org/wiki/Diamant"
@@ -152,12 +152,12 @@
       "modus": "auswahl",
       "frage": "Aus welchem Element bestehen Diamanten?",
       "optionen": [
-        "Kohlenstoff",
         "Silicium",
         "Stickstoff",
-        "Bor"
+        "Bor",
+        "Kohlenstoff"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Diamant",
         "url": "https://de.wikipedia.org/wiki/Diamant"
@@ -168,12 +168,12 @@
       "modus": "auswahl",
       "frage": "Welche Wissenschaftlerin erhielt als erster Mensch zwei Nobelpreise?",
       "optionen": [
-        "Marie Curie",
         "Lise Meitner",
-        "Rosalind Franklin",
-        "Dorothy Hodgkin"
+        "Dorothy Hodgkin",
+        "Marie Curie",
+        "Rosalind Franklin"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Marie Curie",
         "url": "https://de.wikipedia.org/wiki/Marie_Curie"
@@ -184,12 +184,12 @@
       "modus": "auswahl",
       "frage": "Wie nennt man den Übergang von fest direkt zu gasförmig?",
       "optionen": [
-        "Verdampfen",
-        "Resublimation",
         "Sublimation",
-        "Kondensation"
+        "Resublimation",
+        "Kondensation",
+        "Verdampfen"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Sublimation (Phasenübergang)",
         "url": "https://de.wikipedia.org/wiki/Sublimation_(Phasenübergang)"
@@ -505,12 +505,12 @@
       "modus": "auswahl",
       "frage": "Welches Element ist das?",
       "optionen": [
-        "Bismut",
         "Silber",
-        "Eisen",
-        "Blei"
+        "Bismut",
+        "Blei",
+        "Eisen"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Bismut",
         "url": "https://de.wikipedia.org/wiki/Bismut"
@@ -530,12 +530,12 @@
       "modus": "auswahl",
       "frage": "Welches Element ist das?",
       "optionen": [
+        "Gold",
         "Schwefel",
-        "Phosphor",
         "Chlor",
-        "Gold"
+        "Phosphor"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Schwefel",
         "url": "https://de.wikipedia.org/wiki/Schwefel"

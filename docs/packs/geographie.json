@@ -8,12 +8,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt die Hauptstadt von Australien?",
       "optionen": [
-        "Sydney",
-        "Melbourne",
         "Canberra",
-        "Perth"
+        "Perth",
+        "Melbourne",
+        "Sydney"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Canberra",
         "url": "https://de.wikipedia.org/wiki/Canberra"
@@ -25,12 +25,12 @@
       "modus": "auswahl",
       "frage": "Welcher ist der längste Fluss Europas?",
       "optionen": [
-        "Donau",
-        "Wolga",
+        "Dnepr",
         "Rhein",
-        "Dnepr"
+        "Donau",
+        "Wolga"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Wolga",
         "url": "https://de.wikipedia.org/wiki/Wolga"
@@ -41,12 +41,12 @@
       "modus": "auswahl",
       "frage": "In welchem Land liegt die Inka-Ruinenstadt Machu Picchu?",
       "optionen": [
-        "Bolivien",
-        "Peru",
         "Chile",
-        "Ecuador"
+        "Bolivien",
+        "Ecuador",
+        "Peru"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Machu Picchu",
         "url": "https://de.wikipedia.org/wiki/Machu_Picchu"
@@ -57,12 +57,12 @@
       "modus": "auswahl",
       "frage": "Welcher ist der größte Ozean der Erde?",
       "optionen": [
-        "Atlantischer Ozean",
+        "Arktischer Ozean",
         "Indischer Ozean",
-        "Pazifischer Ozean",
-        "Arktischer Ozean"
+        "Atlantischer Ozean",
+        "Pazifischer Ozean"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Pazifischer Ozean",
         "url": "https://de.wikipedia.org/wiki/Pazifischer_Ozean"
@@ -73,10 +73,10 @@
       "modus": "auswahl",
       "frage": "Welcher ist der höchste Berg Deutschlands?",
       "optionen": [
-        "Watzmann",
-        "Zugspitze",
         "Feldberg",
-        "Brocken"
+        "Zugspitze",
+        "Brocken",
+        "Watzmann"
       ],
       "loesung": 1,
       "quelle": {
@@ -89,12 +89,12 @@
       "modus": "auswahl",
       "frage": "Wie viele Bundesländer hat Deutschland?",
       "optionen": [
-        "14",
-        "15",
         "16",
-        "17"
+        "15",
+        "17",
+        "14"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Land (Deutschland)",
         "url": "https://de.wikipedia.org/wiki/Land_(Deutschland)"
@@ -105,12 +105,12 @@
       "modus": "auswahl",
       "frage": "Welches ist das flächenmäßig größte Land Afrikas?",
       "optionen": [
-        "Algerien",
-        "DR Kongo",
         "Sudan",
-        "Libyen"
+        "Algerien",
+        "Libyen",
+        "DR Kongo"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Algerien",
         "url": "https://de.wikipedia.org/wiki/Algerien"
@@ -122,12 +122,12 @@
       "modus": "auswahl",
       "frage": "Welche ist die größte Heißwüste der Erde?",
       "optionen": [
-        "Gobi",
-        "Kalahari",
+        "Atacama",
         "Sahara",
-        "Atacama"
+        "Gobi",
+        "Kalahari"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Sahara",
         "url": "https://de.wikipedia.org/wiki/Sahara"
@@ -138,10 +138,10 @@
       "modus": "auswahl",
       "frage": "In welchem Land liegt die Stadt Marrakesch?",
       "optionen": [
-        "Algerien",
+        "Ägypten",
         "Tunesien",
         "Marokko",
-        "Ägypten"
+        "Algerien"
       ],
       "loesung": 2,
       "quelle": {
@@ -154,12 +154,12 @@
       "modus": "auswahl",
       "frage": "Welcher dieser Staaten grenzt NICHT an Deutschland?",
       "optionen": [
-        "Belgien",
+        "Tschechien",
         "Luxemburg",
-        "Ungarn",
-        "Tschechien"
+        "Belgien",
+        "Ungarn"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Deutschland",
         "url": "https://de.wikipedia.org/wiki/Deutschland"
@@ -171,12 +171,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt die Hauptstadt von Kanada?",
       "optionen": [
-        "Toronto",
         "Ottawa",
         "Vancouver",
-        "Montreal"
+        "Montreal",
+        "Toronto"
       ],
-      "loesung": 1,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Ottawa",
         "url": "https://de.wikipedia.org/wiki/Ottawa"
@@ -187,12 +187,12 @@
       "modus": "auswahl",
       "frage": "Durch welche Hauptstadt fließt die Moldau?",
       "optionen": [
-        "Prag",
         "Wien",
         "Budapest",
+        "Prag",
         "Bratislava"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Moldau (Fluss)",
         "url": "https://de.wikipedia.org/wiki/Moldau_(Fluss)"
@@ -525,9 +525,9 @@
       "frage": "Zu welchem Land gehört diese Flagge?",
       "optionen": [
         "Kasachstan",
-        "Usbekistan",
+        "Turkmenistan",
         "Kirgisistan",
-        "Turkmenistan"
+        "Usbekistan"
       ],
       "loesung": 0,
       "quelle": {
@@ -549,10 +549,10 @@
       "modus": "auswahl",
       "frage": "Zu welchem Land gehört diese Flagge?",
       "optionen": [
-        "Bhutan",
+        "Bangladesch",
         "Nepal",
         "Sri Lanka",
-        "Bangladesch"
+        "Bhutan"
       ],
       "loesung": 1,
       "quelle": {
@@ -574,12 +574,12 @@
       "modus": "auswahl",
       "frage": "Zu welchem Land gehört diese Flagge?",
       "optionen": [
+        "Sambia",
         "Angola",
         "Mosambik",
-        "Simbabwe",
-        "Sambia"
+        "Simbabwe"
       ],
-      "loesung": 1,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Flagge Mosambiks",
         "url": "https://de.wikipedia.org/wiki/Flagge_Mosambiks"
@@ -599,12 +599,12 @@
       "modus": "auswahl",
       "frage": "Zu welchem Land gehört diese Flagge?",
       "optionen": [
-        "Japan",
         "Südkorea",
+        "Japan",
         "Taiwan",
         "Mongolei"
       ],
-      "loesung": 1,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Flagge Südkoreas",
         "url": "https://de.wikipedia.org/wiki/Flagge_Südkoreas"

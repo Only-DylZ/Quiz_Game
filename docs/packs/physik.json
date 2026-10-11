@@ -8,10 +8,10 @@
       "modus": "auswahl",
       "frage": "In welcher Einheit misst man Kraft?",
       "optionen": [
-        "Watt",
+        "Joule",
         "Newton",
         "Pascal",
-        "Joule"
+        "Watt"
       ],
       "loesung": 1,
       "quelle": {
@@ -24,12 +24,12 @@
       "modus": "auswahl",
       "frage": "Wer entwickelte die Relativitätstheorie?",
       "optionen": [
-        "Albert Einstein",
         "Isaac Newton",
-        "Max Planck",
-        "Niels Bohr"
+        "Albert Einstein",
+        "Niels Bohr",
+        "Max Planck"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Albert Einstein",
         "url": "https://de.wikipedia.org/wiki/Albert_Einstein"
@@ -40,9 +40,9 @@
       "modus": "auswahl",
       "frage": "Was kann sich im Vakuum NICHT ausbreiten?",
       "optionen": [
-        "Radiowellen",
-        "Röntgenstrahlung",
         "Licht",
+        "Röntgenstrahlung",
+        "Radiowellen",
         "Schall"
       ],
       "loesung": 3,
@@ -57,12 +57,12 @@
       "modus": "auswahl",
       "frage": "Welche Farbe hat sichtbares Licht mit der größten Wellenlänge?",
       "optionen": [
+        "Blau",
         "Grün",
         "Rot",
-        "Blau",
         "Violett"
       ],
-      "loesung": 1,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Licht",
         "url": "https://de.wikipedia.org/wiki/Licht"
@@ -73,12 +73,12 @@
       "modus": "auswahl",
       "frage": "In welcher Einheit misst man den elektrischen Widerstand?",
       "optionen": [
+        "Watt",
         "Ampere",
         "Volt",
-        "Ohm",
-        "Watt"
+        "Ohm"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Elektrischer Widerstand",
         "url": "https://de.wikipedia.org/wiki/Elektrischer_Widerstand"
@@ -89,12 +89,12 @@
       "modus": "auswahl",
       "frage": "Welches Teilchen ist negativ geladen?",
       "optionen": [
-        "Photon",
         "Elektron",
-        "Proton",
-        "Neutron"
+        "Photon",
+        "Neutron",
+        "Proton"
       ],
-      "loesung": 1,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Elektron",
         "url": "https://de.wikipedia.org/wiki/Elektron"
@@ -105,12 +105,12 @@
       "modus": "auswahl",
       "frage": "Welche Kraft hält den Mond auf seiner Bahn um die Erde?",
       "optionen": [
-        "Gravitation",
         "Reibung",
-        "Magnetismus",
-        "Elektrische Kraft"
+        "Elektrische Kraft",
+        "Gravitation",
+        "Magnetismus"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Gravitation",
         "url": "https://de.wikipedia.org/wiki/Gravitation"
@@ -123,8 +123,8 @@
       "optionen": [
         "Blaues Licht wird stärker gestreut",
         "Das Meer spiegelt sich",
-        "Die Ozonschicht ist blau",
-        "Wasserdampf färbt das Licht"
+        "Wasserdampf färbt das Licht",
+        "Die Ozonschicht ist blau"
       ],
       "loesung": 0,
       "quelle": {
@@ -137,12 +137,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt das Teilchen des Lichts?",
       "optionen": [
-        "Gluon",
         "Elektron",
         "Neutrino",
-        "Photon"
+        "Photon",
+        "Gluon"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Photon",
         "url": "https://de.wikipedia.org/wiki/Photon"
@@ -153,12 +153,12 @@
       "modus": "auswahl",
       "frage": "Was misst ein Barometer?",
       "optionen": [
-        "Luftdruck",
         "Windgeschwindigkeit",
+        "Luftfeuchtigkeit",
         "Temperatur",
-        "Luftfeuchtigkeit"
+        "Luftdruck"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Barometer",
         "url": "https://de.wikipedia.org/wiki/Barometer"
@@ -169,12 +169,12 @@
       "modus": "auswahl",
       "frage": "Nach wem ist die Temperatureinheit Kelvin benannt?",
       "optionen": [
-        "Anders Celsius",
         "James Watt",
+        "Lord Kelvin (William Thomson)",
         "Daniel Fahrenheit",
-        "Lord Kelvin (William Thomson)"
+        "Anders Celsius"
       ],
-      "loesung": 3,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – William Thomson, 1. Baron Kelvin",
         "url": "https://de.wikipedia.org/wiki/William_Thomson,_1._Baron_Kelvin"
@@ -185,12 +185,12 @@
       "modus": "auswahl",
       "frage": "Was passiert mit Wasser, wenn es zu Eis gefriert?",
       "optionen": [
+        "Es dehnt sich aus",
         "Es zieht sich zusammen",
         "Sein Volumen bleibt gleich",
-        "Es dehnt sich aus",
         "Es wird schwerer"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Dichteanomalie",
         "url": "https://de.wikipedia.org/wiki/Dichteanomalie"

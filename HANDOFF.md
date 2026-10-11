@@ -31,43 +31,36 @@ Joker pro Runde (Themenjoker = eigenes Thema via Gemini, Booster = Extra-Karte).
 Paketformat: **genau 10 Fragen + `stechfrage` (schaetzen)**. Bauphasen 3–5 in
 CLAUDE.md entsprechend angepasst.
 
-## Phase 3 – Stand
+## Phase 3 – fertig
 
-- ✅ `tools/validate.py` (nur Standardbibliothek): prüft Regeln aus CLAUDE.md
-  Abschnitt 4 – **Pool-Format**: `fragen` mind. 4/3/3 pro Modus (Ziel 150),
-  `stechfragen` Liste (Ziel 5), `id` Pflicht + eindeutig, doppelte Fragetexte,
-  unbekannte Felder, index.json. `--links` ruft alle Quellen-Links auf.
-  Läuft als Schritt 3 in `node tools/pruefen.mjs` (auch in GitHub Actions).
-- ✅ `docs/engine/runde.js`: zieht pro Runde 10 Fragen (Mix 4/3/3), ungespielte
-  zuerst. Host merkt sich gespielte ids in localStorage
-  (`quiz-gespielt:<paketdatei>`), Reset wenn Pool aufgebraucht. 20 Tests grün.
-- ✅ `tools/prompt.md`: Blöcke à 30 Fragen + 2 Stechfragen, Abschnitt
-  „Weiterer Block“ zum Erweitern. ids dreistellig (`kürzel-001`, `kürzel-s01`).
-- ✅ Raumfahrt: 10 Fragen + 1 Stechfrage (alte ids `rf-01` zweistellig – ok).
-- Entschieden (11.10.2026): **Mischung** – feste Themen als Pools (Ziel 150 pro
-  Thema, in Etappen), Live-Gemini nur für den Themenjoker. Host spielt im
-  zweiten Fenster mit.
-- ✅ Kartenfragen: während der Frage **Karte ohne Namen** (`docs/karten/welt.json`,
-  Natural Earth 1:50m, gemeinfrei, ~490 KB gezippt), Zoom 1–8. Auflösung mit OSM.
-  (CARTO-Karten ohne Namen brauchen inzwischen API-Key → verworfen.)
-- ✅ **Bildfragen** (`bild`-Feld, Bilder in `docs/bilder/<id>.png`, Lizenz-Anzeige).
-  Werkstatt-Skript zum Holen von Commons-Bildern mit Lizenzdaten lag im
-  Scratchpad (`commons.py`) – bei Bedarf neu schreiben: Commons-API
-  `prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=640`, PNG-Thumbnail laden.
-- ✅ Geographie: 35 Fragen (inkl. 5 Flaggen) + 2 Stechfragen, alle Zahlen geprüft.
-  Test-Schalter: `host.html?paket=geographie`.
-- **Themenliste des Nutzers (12):** Filme/Serien, Geographie, Videospiele,
-  Essen/Trinken, Tierwelt, Biologie, Chemie, Sport, Das ist Deutsch, Zurück in
-  die Vergangenheit (Geschichte), Physik, Mathe – gern an beliebten/aktuellen
-  Themen orientiert. **„Das ist Deutsch“** = Rechtschreibung schwieriger Wörter
-  + Fakten zu Kultur/Traditionen + wichtige deutsche Personen + Gerichte (mit Bild).
-  Feedback zu Geographie: Schwierigkeit passt, Fragen passen.
-- **Nächster Schritt:** nach Test durch den Nutzer committen, dann die übrigen
-  11 Themen in Blöcken à 30 erstellen (jede Zahl/Quelle prüfen, `validate.py --links`).
+- `tools/validate.py` (Pool-Format, Bilder, Reihenfolge, Link-Check `--links`,
+  Hinweis bei schlecht gemischten Antwortpositionen). Läuft in `pruefen.mjs`.
+- `docs/engine/runde.js`: 10 Fragen pro Runde, Mix 4/3/2/1
+  (auswahl/schaetzen/grafik/reihenfolge), ungespielte zuerst (localStorage).
+- Karte ohne Namen (`docs/karten/welt.json`, Natural Earth), Bildfragen
+  (`docs/bilder/<id>.jpg|png`), Modus `reihenfolge` (Punkte nach Paaren).
+- `tools/bild_holen.py`: Commons-Bilder mit Lizenzdaten (Artikel-Hauptbild,
+  Datei oder Suche). Bilder danach immer selbst ansehen!
+- **13 Themenpakete** (je ~30 Fragen + 2 Stechfragen, viele mit Bildern):
+  Raumfahrt (12), Geographie, Tierwelt, Essen & Trinken, Biologie, Chemie,
+  Physik, Mathe, Zurück in die Vergangenheit, Das ist Deutsch, Filme & Serien,
+  Videospiele, Sport. Jede strittige Zahl per WebFetch gegen die Quelle geprüft.
+  Antwortpositionen gleichmäßig verteilt. Test: `host.html?paket=<dateiname>`.
+- Werkstatt-Skripte (Baukasten zum Schreiben der Pakete) lagen nur im Scratchpad;
+  die Pakete selbst (JSON) sind die Quelle der Wahrheit.
+
+## Nächster Schritt: Phase 4 – Themenrunden
+
+Regeln stehen in CLAUDE.md Abschnitt 1 („Spielregeln“). Vorschlag zur Reihenfolge:
+- 4a: Runden (10 Fragen pro Thema), Punkte pro Runde, 1 GP für den Rundensieger,
+  Stechfrage bei Gleichstand, GP-Ziel beim Start einstellbar, Siegertreppchen nach GP.
+- 4b: Kandidatenwahl auf dem Handy (3 zufällige ungespielte Themen) + Glücksrad.
+- 4c: Booster-Joker (Themenjoker erst mit Phase 5).
+- Später: Pools in Blöcken à 30 erweitern (Ziel 150), Raumfahrt zuerst (nur 12).
 
 ## Danach
 
-- Phase 4 (Themenrunden, Glücksrad, Joker), Phase 5 (Gemini + Themenjoker).
+- Phase 5 (Gemini + Themenjoker).
 - **Mögliche Verbesserung:** Spieler-Kennung in `sessionStorage` merken, damit
   ein Neuladen nicht alle Punkte kostet (siehe „Bekannte Grenze 2“ in CLAUDE.md).
 

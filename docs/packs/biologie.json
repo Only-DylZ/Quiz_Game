@@ -9,11 +9,11 @@
       "frage": "Welches ist das größte Organ des Menschen?",
       "optionen": [
         "Leber",
-        "Haut",
         "Lunge",
-        "Darm"
+        "Darm",
+        "Haut"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Haut",
         "url": "https://de.wikipedia.org/wiki/Haut"
@@ -24,10 +24,10 @@
       "modus": "auswahl",
       "frage": "Wo im Körper wird Insulin gebildet?",
       "optionen": [
-        "Leber",
-        "Bauchspeicheldrüse",
         "Niere",
-        "Milz"
+        "Bauchspeicheldrüse",
+        "Milz",
+        "Leber"
       ],
       "loesung": 1,
       "quelle": {
@@ -40,10 +40,10 @@
       "modus": "auswahl",
       "frage": "Welche Blutgruppe gilt bei roten Blutkörperchen als Universalspender?",
       "optionen": [
-        "AB positiv",
+        "B positiv",
         "A negativ",
         "0 negativ",
-        "B positiv"
+        "AB positiv"
       ],
       "loesung": 2,
       "quelle": {
@@ -56,12 +56,12 @@
       "modus": "auswahl",
       "frage": "Welches Zellorganell nennt man das „Kraftwerk der Zelle“?",
       "optionen": [
-        "Zellkern",
-        "Ribosom",
         "Mitochondrium",
-        "Golgi-Apparat"
+        "Golgi-Apparat",
+        "Zellkern",
+        "Ribosom"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Mitochondrium",
         "url": "https://de.wikipedia.org/wiki/Mitochondrium"
@@ -73,11 +73,11 @@
       "frage": "Wie heißt der kleinste Knochen des Menschen?",
       "optionen": [
         "Amboss",
+        "Steißbein",
         "Steigbügel",
-        "Hammer",
-        "Steißbein"
+        "Hammer"
       ],
-      "loesung": 1,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Steigbügel (Anatomie)",
         "url": "https://de.wikipedia.org/wiki/Steigbügel_(Anatomie)"
@@ -89,12 +89,12 @@
       "modus": "auswahl",
       "frage": "Welcher Stoff transportiert den Sauerstoff im Blut?",
       "optionen": [
-        "Insulin",
         "Hämoglobin",
         "Melanin",
+        "Insulin",
         "Keratin"
       ],
-      "loesung": 1,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Hämoglobin",
         "url": "https://de.wikipedia.org/wiki/Hämoglobin"
@@ -105,12 +105,12 @@
       "modus": "auswahl",
       "frage": "Welche Base kommt in der DNA NICHT vor?",
       "optionen": [
-        "Adenin",
-        "Guanin",
+        "Thymin",
         "Uracil",
-        "Thymin"
+        "Guanin",
+        "Adenin"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Desoxyribonukleinsäure",
         "url": "https://de.wikipedia.org/wiki/Desoxyribonukleinsäure"
@@ -123,11 +123,11 @@
       "frage": "Wer gilt als Begründer der Vererbungslehre (mit Versuchen an Erbsen)?",
       "optionen": [
         "Charles Darwin",
-        "Gregor Mendel",
+        "Robert Koch",
         "Louis Pasteur",
-        "Robert Koch"
+        "Gregor Mendel"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Gregor Mendel",
         "url": "https://de.wikipedia.org/wiki/Gregor_Mendel"
@@ -138,12 +138,12 @@
       "modus": "auswahl",
       "frage": "Was geben Pflanzen bei der Photosynthese an die Luft ab?",
       "optionen": [
-        "Stickstoff",
         "Sauerstoff",
+        "Stickstoff",
         "Kohlendioxid",
         "Methan"
       ],
-      "loesung": 1,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Photosynthese",
         "url": "https://de.wikipedia.org/wiki/Photosynthese"
@@ -155,9 +155,9 @@
       "frage": "Welches Vitamin bildet der Körper mithilfe von Sonnenlicht?",
       "optionen": [
         "Vitamin A",
-        "Vitamin C",
+        "Vitamin K",
         "Vitamin D",
-        "Vitamin K"
+        "Vitamin C"
       ],
       "loesung": 2,
       "quelle": {
@@ -186,12 +186,12 @@
       "modus": "auswahl",
       "frage": "Wer entdeckte 1928 das Penicillin?",
       "optionen": [
-        "Robert Koch",
-        "Alexander Fleming",
         "Louis Pasteur",
-        "Edward Jenner"
+        "Robert Koch",
+        "Edward Jenner",
+        "Alexander Fleming"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Alexander Fleming",
         "url": "https://de.wikipedia.org/wiki/Alexander_Fleming"

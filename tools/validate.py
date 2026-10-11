@@ -140,6 +140,16 @@ def pruefe_paket(paket, bericht):
     for nummer, frage in enumerate(fragen, start=1):
         pruefe_frage(frage, f"Frage {nummer}{id_text(frage)}", bericht)
 
+    # Steht die richtige Antwort bei Multiple Choice auffällig oft an derselben
+    # Stelle? Das merken aufmerksame Spieler.
+    positionen = [f["loesung"] for f in fragen
+                  if isinstance(f, dict) and f.get("modus") == "auswahl" and ist_ganzzahl(f.get("loesung"))]
+    if len(positionen) >= 8:
+        haeufigste = max(set(positionen), key=positionen.count)
+        if positionen.count(haeufigste) > len(positionen) / 2:
+            bericht.hinweis_bei("Paket", f"die richtige Antwort steht bei {positionen.count(haeufigste)} von "
+                                         f"{len(positionen)} Auswahlfragen an Stelle {haeufigste + 1} – besser mischen")
+
     # Stechfragen: Liste mit mindestens einer Frage, immer "schaetzen"
     stechfragen = paket.get("stechfragen")
     if not (isinstance(stechfragen, list) and stechfragen):

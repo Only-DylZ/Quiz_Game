@@ -8,12 +8,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt der berühmte Klempner von Nintendo mit roter Mütze?",
       "optionen": [
-        "Mario",
         "Luigi",
-        "Toad",
-        "Wario"
+        "Wario",
+        "Mario",
+        "Toad"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Mario (Computerspielfigur)",
         "url": "https://de.wikipedia.org/wiki/Mario_(Computerspielfigur)"
@@ -24,10 +24,10 @@
       "modus": "auswahl",
       "frage": "Welches Studio hat Minecraft ursprünglich entwickelt?",
       "optionen": [
+        "Ubisoft",
         "Valve",
-        "Microsoft",
         "Mojang",
-        "Ubisoft"
+        "Microsoft"
       ],
       "loesung": 2,
       "quelle": {
@@ -40,12 +40,12 @@
       "modus": "auswahl",
       "frage": "Welches Pokémon hat im Pokédex die Nummer 25?",
       "optionen": [
-        "Bisasam",
         "Evoli",
         "Pikachu",
+        "Bisasam",
         "Glumanda"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Pikachu",
         "url": "https://de.wikipedia.org/wiki/Pikachu"
@@ -58,8 +58,8 @@
       "optionen": [
         "Link",
         "Zelda",
-        "Ganon",
-        "Epona"
+        "Epona",
+        "Ganon"
       ],
       "loesung": 0,
       "quelle": {
@@ -73,11 +73,11 @@
       "frage": "Wer erfand das Spiel Tetris?",
       "optionen": [
         "Hideo Kojima",
-        "Alexei Paschitnow",
         "Shigeru Miyamoto",
-        "Markus Persson"
+        "Markus Persson",
+        "Alexei Paschitnow"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Tetris",
         "url": "https://de.wikipedia.org/wiki/Tetris"
@@ -88,12 +88,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt der blaue Igel von SEGA?",
       "optionen": [
-        "Knuckles",
-        "Shadow",
+        "Tails",
         "Sonic",
-        "Tails"
+        "Knuckles",
+        "Shadow"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Sonic the Hedgehog",
         "url": "https://de.wikipedia.org/wiki/Sonic_the_Hedgehog"
@@ -104,12 +104,12 @@
       "modus": "auswahl",
       "frage": "In welchem Spiel kämpft man um den „Victory Royale“?",
       "optionen": [
-        "PUBG",
         "Fortnite",
+        "PUBG",
         "Apex Legends",
         "Call of Duty: Warzone"
       ],
-      "loesung": 1,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Fortnite",
         "url": "https://de.wikipedia.org/wiki/Fortnite"
@@ -120,12 +120,12 @@
       "modus": "auswahl",
       "frage": "Aus welchem Land kommt das Studio CD Projekt, Entwickler von „The Witcher 3“?",
       "optionen": [
-        "Polen",
         "Tschechien",
-        "Ukraine",
-        "Ungarn"
+        "Ungarn",
+        "Polen",
+        "Ukraine"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – CD Projekt",
         "url": "https://de.wikipedia.org/wiki/CD_Projekt"
@@ -136,12 +136,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt der Schildkröten-König, der immer wieder Prinzessin Peach entführt?",
       "optionen": [
+        "Dr. Eggman",
         "King K. Rool",
         "Ganon",
-        "Bowser",
-        "Dr. Eggman"
+        "Bowser"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Bowser",
         "url": "https://de.wikipedia.org/wiki/Bowser"
@@ -168,12 +168,12 @@
       "modus": "auswahl",
       "frage": "Wie heißen in „Among Us“ die Spieler, die heimlich sabotieren?",
       "optionen": [
+        "Crewmate",
         "Impostor",
-        "Phantom",
         "Creeper",
-        "Crewmate"
+        "Phantom"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Among Us",
         "url": "https://de.wikipedia.org/wiki/Among_Us"
@@ -185,11 +185,11 @@
       "frage": "Welche Farbe hat Pac-Man?",
       "optionen": [
         "Blau",
-        "Gelb",
+        "Grün",
         "Rot",
-        "Grün"
+        "Gelb"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Pac-Man",
         "url": "https://de.wikipedia.org/wiki/Pac-Man"

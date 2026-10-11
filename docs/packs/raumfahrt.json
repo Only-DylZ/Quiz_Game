@@ -8,10 +8,10 @@
       "modus": "auswahl",
       "frage": "Welcher Planet ist der größte im Sonnensystem?",
       "optionen": [
-        "Saturn",
-        "Jupiter",
         "Neptun",
-        "Erde"
+        "Jupiter",
+        "Erde",
+        "Saturn"
       ],
       "loesung": 1,
       "quelle": {
@@ -25,9 +25,9 @@
       "frage": "Wer war der erste Mensch im Weltall?",
       "optionen": [
         "Neil Armstrong",
-        "Alan Shepard",
+        "Walentina Tereschkowa",
         "Juri Gagarin",
-        "Walentina Tereschkowa"
+        "Alan Shepard"
       ],
       "loesung": 2,
       "erklaerung": "Juri Gagarin umkreiste am 12. April 1961 mit Wostok 1 die Erde.",
@@ -147,12 +147,12 @@
       "modus": "auswahl",
       "frage": "Wie hieß der erste künstliche Satellit im Erdorbit?",
       "optionen": [
-        "Explorer 1",
         "Wostok 1",
-        "Sputnik 1",
-        "Vanguard 1"
+        "Vanguard 1",
+        "Explorer 1",
+        "Sputnik 1"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "erklaerung": "Die Sowjetunion startete Sputnik 1 am 4. Oktober 1957.",
       "quelle": {
         "titel": "Wikipedia – Sputnik 1",
@@ -176,8 +176,8 @@
       "frage": "Welche Raumsonde erreichte als erstes von Menschen gebautes Objekt den interstellaren Raum?",
       "optionen": [
         "Voyager 1",
-        "Pioneer 10",
         "New Horizons",
+        "Pioneer 10",
         "Cassini"
       ],
       "loesung": 0,

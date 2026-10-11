@@ -149,6 +149,11 @@ Regeln:
   und das Feld `bild` ergänzen (siehe CLAUDE.md, „Bildfragen“).
 - Bei Kartenfragen darf der Fragetext den Ort nicht verraten (also nicht
   „Wo liegt Reykjavík, die Hauptstadt Islands?“) – die Karte zeigt keine Namen.
+- **Keine Frage darf die Antwort einer anderen verraten** – auch nicht über
+  Fragetext, Balken, Zeitleisten-Ereignisse oder `werte` (z. B. nicht „Reinheitsgebot
+  von 1516“, wenn eine Stechfrage nach 1516 fragt).
+- Nur eindeutig belegte Zahlen; bei umstrittenen oder stark schwankenden Werten
+  lieber eine andere Frage.
 - Fragen kurz und eindeutig formulieren, auf Deutsch, für Erwachsene ohne Vorwissen
   machbar.
 - Keine Frage, deren Antwort sich bald ändern könnte (z. B. „aktuell“, „bisher“),

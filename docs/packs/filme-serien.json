@@ -8,12 +8,12 @@
       "modus": "auswahl",
       "frage": "Welcher Film gewann bei der Oscarverleihung 1998 die meisten Preise?",
       "optionen": [
-        "Forrest Gump",
         "Braveheart",
+        "Titanic",
         "Gladiator",
-        "Titanic"
+        "Forrest Gump"
       ],
-      "loesung": 3,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Titanic (1997)",
         "url": "https://de.wikipedia.org/wiki/Titanic_(1997)"
@@ -24,12 +24,12 @@
       "modus": "auswahl",
       "frage": "In welchem Hogwarts-Haus ist Harry Potter?",
       "optionen": [
-        "Hufflepuff",
-        "Ravenclaw",
+        "Gryffindor",
         "Slytherin",
-        "Gryffindor"
+        "Ravenclaw",
+        "Hufflepuff"
       ],
-      "loesung": 3,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Hogwarts",
         "url": "https://de.wikipedia.org/wiki/Hogwarts"
@@ -40,12 +40,12 @@
       "modus": "auswahl",
       "frage": "In welcher Stadt spielt die Serie „Breaking Bad“?",
       "optionen": [
-        "El Paso",
         "Las Vegas",
-        "Phoenix",
-        "Albuquerque"
+        "Albuquerque",
+        "El Paso",
+        "Phoenix"
       ],
-      "loesung": 3,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Breaking Bad",
         "url": "https://de.wikipedia.org/wiki/Breaking_Bad"
@@ -58,8 +58,8 @@
       "optionen": [
         "Central Perk",
         "Monk's Café",
-        "Luke's Diner",
-        "The Coffee Bean"
+        "The Coffee Bean",
+        "Luke's Diner"
       ],
       "loesung": 0,
       "quelle": {
@@ -72,10 +72,10 @@
       "modus": "auswahl",
       "frage": "Welche Farbe hat die Pille, die Neo in „Matrix“ schluckt?",
       "optionen": [
+        "Gelb",
         "Grün",
-        "Blau",
         "Rot",
-        "Gelb"
+        "Blau"
       ],
       "loesung": 2,
       "quelle": {
@@ -88,12 +88,12 @@
       "modus": "auswahl",
       "frage": "Wer spielt Captain Jack Sparrow in „Fluch der Karibik“?",
       "optionen": [
-        "Orlando Bloom",
         "Brad Pitt",
-        "Keanu Reeves",
-        "Johnny Depp"
+        "Johnny Depp",
+        "Orlando Bloom",
+        "Keanu Reeves"
       ],
-      "loesung": 3,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Fluch der Karibik",
         "url": "https://de.wikipedia.org/wiki/Fluch_der_Karibik"
@@ -104,9 +104,9 @@
       "modus": "auswahl",
       "frage": "Wie heißt der Sohn von Darth Vader?",
       "optionen": [
-        "Han Solo",
         "Kylo Ren",
         "Obi-Wan Kenobi",
+        "Han Solo",
         "Luke Skywalker"
       ],
       "loesung": 3,
@@ -122,10 +122,10 @@
       "optionen": [
         "Die Ringe der Macht",
         "The Witcher",
-        "Game of Thrones",
-        "Vikings"
+        "Vikings",
+        "Game of Thrones"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Game of Thrones",
         "url": "https://de.wikipedia.org/wiki/Game_of_Thrones"
@@ -136,12 +136,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt der sprechende Schneemann in „Die Eiskönigin“?",
       "optionen": [
-        "Sven",
         "Kristoff",
         "Hans",
-        "Olaf"
+        "Olaf",
+        "Sven"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Die Eiskönigin – Völlig unverfroren",
         "url": "https://de.wikipedia.org/wiki/Die_Eiskönigin_–_Völlig_unverfroren"
@@ -152,12 +152,12 @@
       "modus": "auswahl",
       "frage": "Welcher deutsche Film gewann 2023 den Oscar als bester internationaler Film?",
       "optionen": [
-        "Systemsprenger",
-        "Toni Erdmann",
         "Das Lehrerzimmer",
-        "Im Westen nichts Neues"
+        "Toni Erdmann",
+        "Im Westen nichts Neues",
+        "Systemsprenger"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Im Westen nichts Neues (2022)",
         "url": "https://de.wikipedia.org/wiki/Im_Westen_nichts_Neues_(2022)"
@@ -168,12 +168,12 @@
       "modus": "auswahl",
       "frage": "In welcher Serie gibt es die Schattenwelt „Upside Down“?",
       "optionen": [
+        "Stranger Things",
         "Wednesday",
         "Dark",
-        "Stranger Things",
         "The OA"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Stranger Things",
         "url": "https://de.wikipedia.org/wiki/Stranger_Things"
@@ -184,12 +184,12 @@
       "modus": "auswahl",
       "frage": "In welcher Stadt leben die Simpsons?",
       "optionen": [
-        "Springfield",
         "Quahog",
+        "South Park",
         "Shelbyville",
-        "South Park"
+        "Springfield"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Die Simpsons",
         "url": "https://de.wikipedia.org/wiki/Die_Simpsons"

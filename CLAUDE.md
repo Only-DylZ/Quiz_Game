@@ -165,7 +165,8 @@ Quiz_Game/
 │  ├─ spiel.test.mjs       Tests: Punkte, Zahlen-Eingabe, Lösungsschutz, Beispielpaket.
 │  ├─ prompt.md            Prompt-Vorlage, um mit NotebookLM/Claude neue Pakete zu erzeugen.
 │  ├─ validate.py          Prüft Fragenpakete (auch index.json); --links ruft Quellen-Links auf.
-│  └─ requirements.txt     Python-Abhängigkeiten (zurzeit keine – nur Standardbibliothek).
+│  ├─ bild_holen.py        Holt freie Bilder von Wikimedia Commons (mit Urheber + Lizenz).
+│  └─ requirements.txt     Python-Abhängigkeiten (keine Pflicht; Pillow optional für bild_holen.py).
 └─ supabase/
    ├─ schema.sql           Tabellen rooms, players, answers für Supabase.
    └─ functions/           (ab Phase 5) Edge Function, die mit Gemini Pakete erzeugt.
@@ -251,6 +252,19 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
 - Handy und Host zeigen nur Pfade nach dem Muster `bilder/<name>.<jpg|png|webp|svg>`
   (`bildPfadGueltig` in `hilfen.js`) – keine beliebigen Adressen.
 - Bildfragen dürfen denselben Fragetext haben („Zu welchem Land gehört diese Flagge?“).
+- Keine Filmplakate, Spiel-Screenshots o. Ä. – die sind urheberrechtlich geschützt.
+
+### Regeln für gute Pakete
+
+- **Keine Frage verrät eine andere**: weder im Fragetext („Reinheitsgebot von
+  1516“, wenn 1516 Antwort einer Stechfrage ist) noch in Balken, Ereignissen der
+  Zeitleiste oder `werte` einer Reihenfolge-Frage (die Auflösung ist für alle
+  sichtbar, bevor die nächste Frage kommt).
+- Nur Fakten, die die Quelle **eindeutig** belegt. Bei umstrittenen oder
+  schwankenden Zahlen (Gründungsjahr nach gefälschter Urkunde, „letzte Sichtung“,
+  Geschwindigkeiten mit verschiedenen Messungen) lieber eine andere Frage nehmen.
+- Die richtige Antwort bei `auswahl` gleichmäßig auf die Plätze verteilen
+  (`validate.py` gibt sonst einen Hinweis).
 
 Kurzes Beispiel:
 
@@ -466,9 +480,10 @@ Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
 - 2b: `karte` mit Leaflet + OpenStreetMap.
 
 **Aktueller Stand:** Phase 1 ist fertig und online (siehe „Online-Stellen“ unten).
-Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Phase 3: `validate.py`,
-`prompt.md`, Fragen-Pools mit Zufallsauswahl + Gedächtnis sind fertig. Als
-Nächstes: weitere Pakete (mindestens ~6 Themen), danach Phase 4.
+Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Phase 3 ist fertig:
+`validate.py`, `prompt.md`, Fragen-Pools mit Zufallsauswahl + Gedächtnis,
+Bildfragen, Modus `reihenfolge` und 13 Themenpakete à ca. 30 Fragen (Pools
+wachsen später Richtung 150). Als Nächstes: Phase 4 (Themenrunden).
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`

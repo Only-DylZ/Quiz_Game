@@ -8,12 +8,12 @@
       "modus": "auswahl",
       "frage": "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
       "optionen": [
-        "Willy Brandt",
         "Konrad Adenauer",
+        "Willy Brandt",
         "Helmut Schmidt",
         "Ludwig Erhard"
       ],
-      "loesung": 1,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Konrad Adenauer",
         "url": "https://de.wikipedia.org/wiki/Konrad_Adenauer"
@@ -24,12 +24,12 @@
       "modus": "auswahl",
       "frage": "In welcher Stadt wurde Julius Caesar ermordet?",
       "optionen": [
-        "Konstantinopel",
-        "Alexandria",
+        "Rom",
         "Athen",
-        "Rom"
+        "Alexandria",
+        "Konstantinopel"
       ],
-      "loesung": 3,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Gaius Iulius Caesar",
         "url": "https://de.wikipedia.org/wiki/Gaius_Iulius_Caesar"
@@ -41,11 +41,11 @@
       "frage": "Wer segelte 1492 im Auftrag Spaniens nach Amerika?",
       "optionen": [
         "Vasco da Gama",
-        "Ferdinand Magellan",
         "Christoph Kolumbus",
+        "Ferdinand Magellan",
         "Amerigo Vespucci"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Christoph Kolumbus",
         "url": "https://de.wikipedia.org/wiki/Christoph_Kolumbus"
@@ -56,12 +56,12 @@
       "modus": "auswahl",
       "frage": "Welches der sieben antiken Weltwunder steht heute noch?",
       "optionen": [
-        "Hängende Gärten der Semiramis",
-        "Leuchtturm von Alexandria",
+        "Pyramiden von Gizeh",
         "Koloss von Rhodos",
-        "Pyramiden von Gizeh"
+        "Leuchtturm von Alexandria",
+        "Hängende Gärten der Semiramis"
       ],
-      "loesung": 3,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Sieben Weltwunder der Antike",
         "url": "https://de.wikipedia.org/wiki/Sieben_Weltwunder_der_Antike"
@@ -72,12 +72,12 @@
       "modus": "auswahl",
       "frage": "Wer wurde 1871 der erste Kaiser des Deutschen Kaiserreichs?",
       "optionen": [
-        "Otto von Bismarck",
-        "Friedrich III.",
+        "Wilhelm I.",
         "Wilhelm II.",
-        "Wilhelm I."
+        "Friedrich III.",
+        "Otto von Bismarck"
       ],
-      "loesung": 3,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Wilhelm I. (Deutsches Reich)",
         "url": "https://de.wikipedia.org/wiki/Wilhelm_I._(Deutsches_Reich)"
@@ -88,12 +88,12 @@
       "modus": "auswahl",
       "frage": "Welches Schiff sank 1912 nach der Kollision mit einem Eisberg?",
       "optionen": [
+        "Lusitania",
         "Titanic",
-        "Britannic",
         "Queen Mary",
-        "Lusitania"
+        "Britannic"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Titanic (Schiff)",
         "url": "https://de.wikipedia.org/wiki/Titanic_(Schiff)"
@@ -104,12 +104,12 @@
       "modus": "auswahl",
       "frage": "Wessen fast unberührtes Grab wurde 1922 im Tal der Könige entdeckt?",
       "optionen": [
-        "Echnaton",
-        "Cheops",
         "Ramses II.",
-        "Tutanchamun"
+        "Tutanchamun",
+        "Cheops",
+        "Echnaton"
       ],
-      "loesung": 3,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Tutanchamun",
         "url": "https://de.wikipedia.org/wiki/Tutanchamun"
@@ -136,12 +136,12 @@
       "modus": "auswahl",
       "frage": "Wer veröffentlichte 1517 die 95 Thesen?",
       "optionen": [
-        "Thomas Müntzer",
-        "Huldrych Zwingli",
         "Johannes Calvin",
-        "Martin Luther"
+        "Huldrych Zwingli",
+        "Martin Luther",
+        "Thomas Müntzer"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – 95 Thesen",
         "url": "https://de.wikipedia.org/wiki/95_Thesen"
@@ -152,12 +152,12 @@
       "modus": "auswahl",
       "frage": "Welches Volk erbaute Machu Picchu?",
       "optionen": [
-        "Olmeken",
         "Maya",
-        "Inka",
-        "Azteken"
+        "Azteken",
+        "Olmeken",
+        "Inka"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Machu Picchu",
         "url": "https://de.wikipedia.org/wiki/Machu_Picchu"
@@ -168,10 +168,10 @@
       "modus": "auswahl",
       "frage": "Welcher Feldherr überquerte mit Kriegselefanten die Alpen?",
       "optionen": [
+        "Alexander der Große",
         "Dschingis Khan",
-        "Julius Caesar",
         "Hannibal",
-        "Alexander der Große"
+        "Julius Caesar"
       ],
       "loesung": 2,
       "quelle": {
@@ -500,12 +500,12 @@
       "modus": "auswahl",
       "frage": "Wer ist auf diesem Bild zu sehen?",
       "optionen": [
-        "Paul von Hindenburg",
-        "Helmuth von Moltke",
+        "Friedrich Ebert",
         "Otto von Bismarck",
-        "Friedrich Ebert"
+        "Paul von Hindenburg",
+        "Helmuth von Moltke"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Otto von Bismarck",
         "url": "https://de.wikipedia.org/wiki/Otto_von_Bismarck"
@@ -525,9 +525,9 @@
       "modus": "auswahl",
       "frage": "Wer ist auf diesem Bild zu sehen?",
       "optionen": [
-        "Maximilien de Robespierre",
         "Ludwig XVI.",
         "Charles de Gaulle",
+        "Maximilien de Robespierre",
         "Napoleon Bonaparte"
       ],
       "loesung": 3,
@@ -550,12 +550,12 @@
       "modus": "auswahl",
       "frage": "Wer ist auf diesem Bild zu sehen?",
       "optionen": [
-        "Thomas Jefferson",
-        "Abraham Lincoln",
         "Ulysses S. Grant",
-        "George Washington"
+        "George Washington",
+        "Thomas Jefferson",
+        "Abraham Lincoln"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Abraham Lincoln",
         "url": "https://de.wikipedia.org/wiki/Abraham_Lincoln"
@@ -575,9 +575,9 @@
       "modus": "auswahl",
       "frage": "Wer ist auf diesem Bild zu sehen?",
       "optionen": [
-        "Hatschepsut",
-        "Julia (Tochter des Augustus)",
         "Nofretete",
+        "Julia (Tochter des Augustus)",
+        "Hatschepsut",
         "Kleopatra"
       ],
       "loesung": 3,

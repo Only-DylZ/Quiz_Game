@@ -8,10 +8,10 @@
       "modus": "auswahl",
       "frage": "Aus welchem Land stammt Sushi?",
       "optionen": [
-        "China",
         "Korea",
+        "Thailand",
         "Japan",
-        "Thailand"
+        "China"
       ],
       "loesung": 2,
       "quelle": {
@@ -24,12 +24,12 @@
       "modus": "auswahl",
       "frage": "Welches Gewürz ist nach Gewicht das teuerste der Welt?",
       "optionen": [
-        "Vanille",
-        "Safran",
         "Kardamom",
-        "Zimt"
+        "Vanille",
+        "Zimt",
+        "Safran"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Safran",
         "url": "https://de.wikipedia.org/wiki/Safran"
@@ -40,12 +40,12 @@
       "modus": "auswahl",
       "frage": "Aus welcher Pflanze wird Tequila hergestellt?",
       "optionen": [
-        "Kaktus",
         "Agave",
         "Zuckerrohr",
-        "Mais"
+        "Mais",
+        "Kaktus"
       ],
-      "loesung": 1,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Tequila",
         "url": "https://de.wikipedia.org/wiki/Tequila"
@@ -56,12 +56,12 @@
       "modus": "auswahl",
       "frage": "Was ist die Hauptzutat von Guacamole?",
       "optionen": [
-        "Avocado",
-        "Erbse",
         "Gurke",
-        "Limette"
+        "Avocado",
+        "Limette",
+        "Erbse"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Guacamole",
         "url": "https://de.wikipedia.org/wiki/Guacamole"
@@ -72,10 +72,10 @@
       "modus": "auswahl",
       "frage": "Aus welchem Land stammt der Käse Gouda?",
       "optionen": [
-        "Belgien",
+        "Dänemark",
         "Niederlande",
-        "Schweiz",
-        "Dänemark"
+        "Belgien",
+        "Schweiz"
       ],
       "loesung": 1,
       "quelle": {
@@ -88,12 +88,12 @@
       "modus": "auswahl",
       "frage": "Welche dieser Früchte ist botanisch gesehen eine Beere?",
       "optionen": [
+        "Kirsche",
         "Erdbeere",
         "Banane",
-        "Himbeere",
-        "Kirsche"
+        "Himbeere"
       ],
-      "loesung": 1,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Beere",
         "url": "https://de.wikipedia.org/wiki/Beere"
@@ -105,10 +105,10 @@
       "modus": "auswahl",
       "frage": "Woraus wird Tofu hergestellt?",
       "optionen": [
-        "Reis",
-        "Sojabohnen",
         "Kichererbsen",
-        "Weizen"
+        "Sojabohnen",
+        "Weizen",
+        "Reis"
       ],
       "loesung": 1,
       "quelle": {
@@ -122,11 +122,11 @@
       "frage": "Welches Getränk entsteht durch Gärung von gesüßtem Tee?",
       "optionen": [
         "Kefir",
-        "Kombucha",
         "Kwass",
-        "Lassi"
+        "Lassi",
+        "Kombucha"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Kombucha",
         "url": "https://de.wikipedia.org/wiki/Kombucha"
@@ -154,11 +154,11 @@
       "frage": "Welche „Nuss“ ist eigentlich eine Hülsenfrucht?",
       "optionen": [
         "Walnuss",
-        "Erdnuss",
         "Haselnuss",
+        "Erdnuss",
         "Cashew"
       ],
-      "loesung": 1,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Erdnuss",
         "url": "https://de.wikipedia.org/wiki/Erdnuss"
@@ -169,12 +169,12 @@
       "modus": "auswahl",
       "frage": "Welches Land produziert seit Jahrzehnten den meisten Kaffee?",
       "optionen": [
-        "Kolumbien",
-        "Vietnam",
         "Brasilien",
-        "Äthiopien"
+        "Kolumbien",
+        "Äthiopien",
+        "Vietnam"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Kaffee",
         "url": "https://de.wikipedia.org/wiki/Kaffee"
@@ -185,12 +185,12 @@
       "modus": "auswahl",
       "frage": "Mit welcher Skala misst man die Schärfe von Chilis?",
       "optionen": [
-        "Scoville-Skala",
         "Richter-Skala",
         "Mohs-Skala",
+        "Scoville-Skala",
         "Kelvin-Skala"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Scoville-Skala",
         "url": "https://de.wikipedia.org/wiki/Scoville-Skala"
@@ -498,12 +498,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt dieses Gericht?",
       "optionen": [
+        "Biryani",
         "Risotto",
-        "Paella",
         "Jambalaya",
-        "Biryani"
+        "Paella"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Paella",
         "url": "https://de.wikipedia.org/wiki/Paella"
@@ -523,12 +523,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt dieses Gericht?",
       "optionen": [
-        "Shakshuka",
         "Huevos rancheros",
+        "Frittata",
         "Menemen",
-        "Frittata"
+        "Shakshuka"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Shakshuka",
         "url": "https://de.wikipedia.org/wiki/Shakshuka"
@@ -573,12 +573,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt dieses Gericht?",
       "optionen": [
-        "Poke",
-        "Sashimi",
         "Ceviche",
-        "Carpaccio"
+        "Poke",
+        "Carpaccio",
+        "Sashimi"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Ceviche",
         "url": "https://de.wikipedia.org/wiki/Ceviche"

@@ -8,12 +8,12 @@
       "modus": "auswahl",
       "frage": "Wie viele Ecken hat ein Würfel?",
       "optionen": [
+        "4",
         "12",
         "6",
-        "8",
-        "4"
+        "8"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Würfel (Geometrie)",
         "url": "https://de.wikipedia.org/wiki/Würfel_(Geometrie)"
@@ -25,11 +25,11 @@
       "frage": "Welches ist die einzige gerade Primzahl?",
       "optionen": [
         "6",
-        "2",
         "0",
-        "4"
+        "4",
+        "2"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Primzahl",
         "url": "https://de.wikipedia.org/wiki/Primzahl"
@@ -40,12 +40,12 @@
       "modus": "auswahl",
       "frage": "Wie nennt man ein Vieleck mit sechs Ecken?",
       "optionen": [
-        "Hexagon",
         "Heptagon",
-        "Pentagon",
-        "Oktagon"
+        "Oktagon",
+        "Hexagon",
+        "Pentagon"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Sechseck",
         "url": "https://de.wikipedia.org/wiki/Sechseck"
@@ -56,10 +56,10 @@
       "modus": "auswahl",
       "frage": "Was ergibt 0! (null Fakultät)?",
       "optionen": [
+        "unendlich",
         "0",
-        "nicht definiert",
         "1",
-        "unendlich"
+        "nicht definiert"
       ],
       "loesung": 2,
       "quelle": {
@@ -73,12 +73,12 @@
       "modus": "auswahl",
       "frage": "Satz des Pythagoras: a² + b² = …?",
       "optionen": [
+        "c",
         "(a + b)²",
         "2ab",
-        "c²",
-        "c"
+        "c²"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Satz des Pythagoras",
         "url": "https://de.wikipedia.org/wiki/Satz_des_Pythagoras"
@@ -91,8 +91,8 @@
       "optionen": [
         "15",
         "40",
-        "60",
-        "90"
+        "90",
+        "60"
       ],
       "loesung": 1,
       "quelle": {
@@ -107,8 +107,8 @@
       "optionen": [
         "1024",
         "2048",
-        "1000",
-        "512"
+        "512",
+        "1000"
       ],
       "loesung": 0,
       "quelle": {
@@ -121,12 +121,12 @@
       "modus": "auswahl",
       "frage": "Wie groß ist die Winkelsumme in einem Dreieck?",
       "optionen": [
-        "270°",
-        "360°",
         "90°",
-        "180°"
+        "180°",
+        "360°",
+        "270°"
       ],
-      "loesung": 3,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Winkelsumme",
         "url": "https://de.wikipedia.org/wiki/Winkelsumme"
@@ -137,12 +137,12 @@
       "modus": "auswahl",
       "frage": "Wer bewies den berühmten Großen Fermatschen Satz?",
       "optionen": [
-        "Grigori Perelman",
+        "Andrew Wiles",
         "John Nash",
-        "Terence Tao",
-        "Andrew Wiles"
+        "Grigori Perelman",
+        "Terence Tao"
       ],
-      "loesung": 3,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Großer Fermatscher Satz",
         "url": "https://de.wikipedia.org/wiki/Großer_Fermatscher_Satz"
@@ -153,12 +153,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt die Zahl 10 hoch 100?",
       "optionen": [
-        "Zentillion",
+        "Googol",
         "Milliarde",
-        "Googolplex",
-        "Googol"
+        "Zentillion",
+        "Googolplex"
       ],
-      "loesung": 3,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Googol",
         "url": "https://de.wikipedia.org/wiki/Googol"
@@ -170,10 +170,10 @@
       "modus": "auswahl",
       "frage": "Welcher Mathematiker soll als Schulkind die Zahlen von 1 bis 100 blitzschnell addiert haben?",
       "optionen": [
-        "Bernhard Riemann",
-        "Carl Friedrich Gauß",
         "Leonhard Euler",
-        "Gottfried Wilhelm Leibniz"
+        "Carl Friedrich Gauß",
+        "Gottfried Wilhelm Leibniz",
+        "Bernhard Riemann"
       ],
       "loesung": 1,
       "quelle": {
@@ -186,12 +186,12 @@
       "modus": "auswahl",
       "frage": "Wie groß ist die Quersumme von 2026?",
       "optionen": [
-        "10",
-        "26",
+        "8",
         "12",
-        "8"
+        "10",
+        "26"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Quersumme",
         "url": "https://de.wikipedia.org/wiki/Quersumme"

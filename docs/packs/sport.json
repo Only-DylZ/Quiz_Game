@@ -8,12 +8,12 @@
       "modus": "auswahl",
       "frage": "Welches Land wurde 2014 Fußball-Weltmeister?",
       "optionen": [
-        "Brasilien",
-        "Spanien",
+        "Deutschland",
         "Argentinien",
-        "Deutschland"
+        "Spanien",
+        "Brasilien"
       ],
-      "loesung": 3,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Fußball-Weltmeisterschaft 2014",
         "url": "https://de.wikipedia.org/wiki/Fußball-Weltmeisterschaft_2014"
@@ -24,12 +24,12 @@
       "modus": "auswahl",
       "frage": "Welches Land gewann die Fußball-WM 2022 in Katar?",
       "optionen": [
-        "Frankreich",
         "Marokko",
+        "Argentinien",
         "Kroatien",
-        "Argentinien"
+        "Frankreich"
       ],
-      "loesung": 3,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Fußball-Weltmeisterschaft 2022",
         "url": "https://de.wikipedia.org/wiki/Fußball-Weltmeisterschaft_2022"
@@ -56,12 +56,12 @@
       "modus": "auswahl",
       "frage": "Welche Farbe hat KEINER der olympischen Ringe?",
       "optionen": [
-        "Schwarz",
-        "Gelb",
         "Grün",
-        "Lila"
+        "Gelb",
+        "Lila",
+        "Schwarz"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Olympische Ringe",
         "url": "https://de.wikipedia.org/wiki/Olympische_Ringe"
@@ -73,12 +73,12 @@
       "modus": "auswahl",
       "frage": "Wer hält den Weltrekord im 100-Meter-Lauf der Männer?",
       "optionen": [
-        "Carl Lewis",
-        "Justin Gatlin",
+        "Tyson Gay",
         "Usain Bolt",
-        "Tyson Gay"
+        "Carl Lewis",
+        "Justin Gatlin"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – 100-Meter-Lauf",
         "url": "https://de.wikipedia.org/wiki/100-Meter-Lauf"
@@ -91,8 +91,8 @@
       "optionen": [
         "Eishockey",
         "Baseball",
-        "Basketball",
-        "American Football"
+        "American Football",
+        "Basketball"
       ],
       "loesung": 0,
       "quelle": {
@@ -105,12 +105,12 @@
       "modus": "auswahl",
       "frage": "Welcher deutsche Formel-1-Fahrer wurde siebenmal Weltmeister?",
       "optionen": [
-        "Sebastian Vettel",
         "Ralf Schumacher",
         "Nico Rosberg",
-        "Michael Schumacher"
+        "Michael Schumacher",
+        "Sebastian Vettel"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Michael Schumacher",
         "url": "https://de.wikipedia.org/wiki/Michael_Schumacher"
@@ -121,12 +121,12 @@
       "modus": "auswahl",
       "frage": "Wo fanden die Olympischen Sommerspiele 2024 statt?",
       "optionen": [
-        "Paris",
-        "Rom",
+        "Los Angeles",
         "Tokio",
-        "Los Angeles"
+        "Rom",
+        "Paris"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Olympische Sommerspiele 2024",
         "url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024"
@@ -137,12 +137,12 @@
       "modus": "auswahl",
       "frage": "Welche Sportart erfand James Naismith?",
       "optionen": [
-        "Baseball",
-        "Handball",
         "Basketball",
-        "Volleyball"
+        "Handball",
+        "Volleyball",
+        "Baseball"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – James Naismith",
         "url": "https://de.wikipedia.org/wiki/James_Naismith"
@@ -153,12 +153,12 @@
       "modus": "auswahl",
       "frage": "Wie nennt man beim Bowling drei Strikes hintereinander?",
       "optionen": [
-        "Hattrick",
+        "Turkey",
         "Triple",
         "Ace",
-        "Turkey"
+        "Hattrick"
       ],
-      "loesung": 3,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Bowling",
         "url": "https://de.wikipedia.org/wiki/Bowling"
@@ -169,12 +169,12 @@
       "modus": "auswahl",
       "frage": "Welcher Verein ist Rekordmeister der Fußball-Bundesliga?",
       "optionen": [
-        "FC Bayern München",
         "Borussia Dortmund",
+        "1. FC Nürnberg",
         "Hamburger SV",
-        "1. FC Nürnberg"
+        "FC Bayern München"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – FC Bayern München",
         "url": "https://de.wikipedia.org/wiki/FC_Bayern_München"
@@ -185,12 +185,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt es im Golf, wenn man ein Loch mit einem einzigen Schlag schafft?",
       "optionen": [
-        "Birdie",
         "Albatross",
-        "Hole-in-one",
-        "Eagle"
+        "Birdie",
+        "Eagle",
+        "Hole-in-one"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Hole-in-one",
         "url": "https://de.wikipedia.org/wiki/Hole-in-one"
@@ -517,12 +517,12 @@
       "modus": "auswahl",
       "frage": "Welcher Sportstar ist das?",
       "optionen": [
-        "Serena Williams",
         "Venus Williams",
-        "Naomi Osaka",
-        "Coco Gauff"
+        "Serena Williams",
+        "Coco Gauff",
+        "Naomi Osaka"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Serena Williams",
         "url": "https://de.wikipedia.org/wiki/Serena_Williams"
@@ -542,12 +542,12 @@
       "modus": "auswahl",
       "frage": "Welcher Sportstar ist das?",
       "optionen": [
-        "Dirk Nowitzki",
-        "Franz Wagner",
         "Detlef Schrempf",
+        "Franz Wagner",
+        "Dirk Nowitzki",
         "Dennis Schröder"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Dirk Nowitzki",
         "url": "https://de.wikipedia.org/wiki/Dirk_Nowitzki"

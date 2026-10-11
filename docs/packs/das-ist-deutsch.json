@@ -8,12 +8,12 @@
       "modus": "auswahl",
       "frage": "Wie schreibt man den Takt in der Musik richtig?",
       "optionen": [
-        "Rhythmuss",
         "Rhytmus",
-        "Rythmus",
-        "Rhythmus"
+        "Rhythmus",
+        "Rhythmuss",
+        "Rythmus"
       ],
-      "loesung": 3,
+      "loesung": 1,
       "quelle": {
         "titel": "Wiktionary – Rhythmus",
         "url": "https://de.wiktionary.org/wiki/Rhythmus"
@@ -24,12 +24,12 @@
       "modus": "auswahl",
       "frage": "Wie schreibt man das Wort für „üblicher Maßstab“ richtig?",
       "optionen": [
-        "Stanndard",
-        "Standart",
+        "Standdard",
         "Standard",
-        "Standdard"
+        "Stanndard",
+        "Standart"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wiktionary – Standard",
         "url": "https://de.wiktionary.org/wiki/Standard"
@@ -41,12 +41,12 @@
       "modus": "auswahl",
       "frage": "Wie schreibt man die Instandsetzung von etwas Kaputtem richtig?",
       "optionen": [
+        "Raparatur",
         "Reparartur",
         "Reperatur",
-        "Reparatur",
-        "Raparatur"
+        "Reparatur"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wiktionary – Reparatur",
         "url": "https://de.wiktionary.org/wiki/Reparatur"
@@ -57,12 +57,12 @@
       "modus": "auswahl",
       "frage": "Wie schreibt man das Wort für „Bezahlung, Vergütung“ richtig?",
       "optionen": [
-        "Endgeld",
-        "Entgeld",
         "Entgelt",
-        "Endgelt"
+        "Endgelt",
+        "Endgeld",
+        "Entgeld"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wiktionary – Entgelt",
         "url": "https://de.wiktionary.org/wiki/Entgelt"
@@ -74,12 +74,12 @@
       "modus": "auswahl",
       "frage": "Wie schreibt man den Ausstellungsraum für Kunst richtig?",
       "optionen": [
-        "Galerrie",
-        "Gallerje",
         "Gallerie",
-        "Galerie"
+        "Gallerje",
+        "Galerie",
+        "Galerrie"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wiktionary – Galerie",
         "url": "https://de.wiktionary.org/wiki/Galerie"
@@ -90,12 +90,12 @@
       "modus": "auswahl",
       "frage": "Wie schreibt man das Wort für „und zwar“ richtig?",
       "optionen": [
-        "nämlich",
-        "nähmlig",
         "nämmlich",
-        "nähmlich"
+        "nähmlig",
+        "nähmlich",
+        "nämlich"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wiktionary – nämlich",
         "url": "https://de.wiktionary.org/wiki/nämlich"
@@ -107,12 +107,12 @@
       "modus": "auswahl",
       "frage": "An welchem Tag kommt in Deutschland traditionell der Nikolaus?",
       "optionen": [
-        "6. Dezember",
         "1. Dezember",
+        "11. November",
         "24. Dezember",
-        "11. November"
+        "6. Dezember"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Nikolaustag",
         "url": "https://de.wikipedia.org/wiki/Nikolaustag"
@@ -123,12 +123,12 @@
       "modus": "auswahl",
       "frage": "Was kommt am Martinstag traditionell auf den Tisch?",
       "optionen": [
-        "Karpfen",
         "Lamm",
+        "Gans",
         "Hase",
-        "Gans"
+        "Karpfen"
       ],
-      "loesung": 3,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Martinsgans",
         "url": "https://de.wikipedia.org/wiki/Martinsgans"
@@ -141,8 +141,8 @@
       "optionen": [
         "Am 11.11. um 11:11 Uhr",
         "Am 1. Januar",
-        "Am Aschermittwoch",
-        "Am Rosenmontag"
+        "Am Rosenmontag",
+        "Am Aschermittwoch"
       ],
       "loesung": 0,
       "quelle": {
@@ -155,12 +155,12 @@
       "modus": "auswahl",
       "frage": "Welcher Brauch gehört zum 1. Mai?",
       "optionen": [
-        "Laternen basteln",
-        "Eier färben",
+        "Blei gießen",
         "Einen Maibaum aufstellen",
-        "Blei gießen"
+        "Laternen basteln",
+        "Eier färben"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Maibaum",
         "url": "https://de.wikipedia.org/wiki/Maibaum"
@@ -171,12 +171,12 @@
       "modus": "auswahl",
       "frage": "Wer schrieb den „Faust“?",
       "optionen": [
-        "Friedrich Schiller",
         "Gotthold Ephraim Lessing",
         "Heinrich Heine",
-        "Johann Wolfgang von Goethe"
+        "Johann Wolfgang von Goethe",
+        "Friedrich Schiller"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Faust. Eine Tragödie.",
         "url": "https://de.wikipedia.org/wiki/Faust._Eine_Tragödie."
@@ -187,12 +187,12 @@
       "modus": "auswahl",
       "frage": "Wer meldete 1886 das erste Automobil mit Verbrennungsmotor zum Patent an?",
       "optionen": [
-        "Wilhelm Maybach",
         "Gottlieb Daimler",
-        "Rudolf Diesel",
-        "Carl Benz"
+        "Wilhelm Maybach",
+        "Carl Benz",
+        "Rudolf Diesel"
       ],
-      "loesung": 3,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Benz Patent-Motorwagen Nummer 1",
         "url": "https://de.wikipedia.org/wiki/Benz_Patent-Motorwagen_Nummer_1"
@@ -203,12 +203,12 @@
       "modus": "auswahl",
       "frage": "Welcher berühmte Komponist wurde in Bonn geboren?",
       "optionen": [
+        "Johannes Brahms",
         "Johann Sebastian Bach",
         "Ludwig van Beethoven",
-        "Wolfgang Amadeus Mozart",
-        "Johannes Brahms"
+        "Wolfgang Amadeus Mozart"
       ],
-      "loesung": 1,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Ludwig van Beethoven",
         "url": "https://de.wikipedia.org/wiki/Ludwig_van_Beethoven"
@@ -219,9 +219,9 @@
       "modus": "auswahl",
       "frage": "Welcher Auswanderer aus Franken brachte die Jeans auf den Markt?",
       "optionen": [
-        "Hugo Boss",
         "Adolf Dassler",
         "Karl Lagerfeld",
+        "Hugo Boss",
         "Levi Strauss"
       ],
       "loesung": 3,
@@ -549,12 +549,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt dieses deutsche Gericht?",
       "optionen": [
-        "Rouladen",
-        "Gulasch",
         "Sauerbraten",
-        "Schweinebraten"
+        "Gulasch",
+        "Schweinebraten",
+        "Rouladen"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Sauerbraten",
         "url": "https://de.wikipedia.org/wiki/Sauerbraten"
@@ -574,12 +574,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt dieses deutsche Gericht?",
       "optionen": [
-        "Labskaus",
         "Bauernfrühstück",
-        "Hoppelpoppel",
-        "Strammer Max"
+        "Labskaus",
+        "Strammer Max",
+        "Hoppelpoppel"
       ],
-      "loesung": 0,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Labskaus",
         "url": "https://de.wikipedia.org/wiki/Labskaus"
@@ -624,12 +624,12 @@
       "modus": "auswahl",
       "frage": "Wie heißt dieses deutsche Gericht?",
       "optionen": [
+        "Königsberger Klopse",
         "Frikadellen",
         "Fleischküchle",
-        "Königsberger Klopse",
         "Knödel"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Königsberger Klopse",
         "url": "https://de.wikipedia.org/wiki/Königsberger_Klopse"

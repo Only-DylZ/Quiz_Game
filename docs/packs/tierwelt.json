@@ -8,10 +8,10 @@
       "modus": "auswahl",
       "frage": "Welches ist das größte Tier der Erde?",
       "optionen": [
-        "Afrikanischer Elefant",
+        "Walhai",
         "Blauwal",
-        "Pottwal",
-        "Walhai"
+        "Afrikanischer Elefant",
+        "Pottwal"
       ],
       "loesung": 1,
       "quelle": {
@@ -25,11 +25,11 @@
       "frage": "Wie viele Herzen hat ein Krake?",
       "optionen": [
         "1",
-        "2",
         "3",
-        "4"
+        "4",
+        "2"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Kraken",
         "url": "https://de.wikipedia.org/wiki/Kraken"
@@ -41,12 +41,12 @@
       "modus": "auswahl",
       "frage": "Welches dieser Säugetiere kann aktiv fliegen?",
       "optionen": [
-        "Gleithörnchen",
         "Fledermaus",
-        "Riesengleiter",
-        "Kurzkopfgleitbeutler"
+        "Gleithörnchen",
+        "Kurzkopfgleitbeutler",
+        "Riesengleiter"
       ],
-      "loesung": 1,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Fledertiere",
         "url": "https://de.wikipedia.org/wiki/Fledertiere"
@@ -58,12 +58,12 @@
       "modus": "auswahl",
       "frage": "Was frisst ein Großer Panda hauptsächlich?",
       "optionen": [
-        "Bambus",
-        "Eukalyptus",
         "Fisch",
+        "Eukalyptus",
+        "Bambus",
         "Insekten"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Großer Panda",
         "url": "https://de.wikipedia.org/wiki/Großer_Panda"
@@ -74,12 +74,12 @@
       "modus": "auswahl",
       "frage": "Welcher Vogel kann rückwärts fliegen?",
       "optionen": [
-        "Kolibri",
         "Spatz",
-        "Turmfalke",
-        "Rauchschwalbe"
+        "Rauchschwalbe",
+        "Kolibri",
+        "Turmfalke"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Kolibris",
         "url": "https://de.wikipedia.org/wiki/Kolibris"
@@ -90,12 +90,12 @@
       "modus": "auswahl",
       "frage": "Zu welcher Tiergruppe gehören Schildkröten?",
       "optionen": [
+        "Säugetiere",
         "Amphibien",
         "Reptilien",
-        "Säugetiere",
         "Weichtiere"
       ],
-      "loesung": 1,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Schildkröten",
         "url": "https://de.wikipedia.org/wiki/Schildkröten"
@@ -107,9 +107,9 @@
       "frage": "Wie nennt man ein männliches Schwein?",
       "optionen": [
         "Eber",
+        "Bock",
         "Bulle",
-        "Hengst",
-        "Bock"
+        "Hengst"
       ],
       "loesung": 0,
       "quelle": {
@@ -122,12 +122,12 @@
       "modus": "auswahl",
       "frage": "Welches ist das schnellste Landtier?",
       "optionen": [
-        "Gepard",
         "Löwe",
-        "Gabelbock",
-        "Springbock"
+        "Springbock",
+        "Gepard",
+        "Gabelbock"
       ],
-      "loesung": 0,
+      "loesung": 2,
       "quelle": {
         "titel": "Wikipedia – Gepard",
         "url": "https://de.wikipedia.org/wiki/Gepard"
@@ -138,12 +138,12 @@
       "modus": "auswahl",
       "frage": "Welche Farbe hat die Haut eines Eisbären unter dem Fell?",
       "optionen": [
-        "Weiß",
         "Rosa",
-        "Schwarz",
-        "Grau"
+        "Grau",
+        "Weiß",
+        "Schwarz"
       ],
-      "loesung": 2,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Eisbär",
         "url": "https://de.wikipedia.org/wiki/Eisbär"
@@ -154,12 +154,12 @@
       "modus": "auswahl",
       "frage": "Wie nennt man ein junges Känguru?",
       "optionen": [
-        "Joey",
         "Kitz",
         "Fohlen",
-        "Welpe"
+        "Welpe",
+        "Joey"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Kängurus",
         "url": "https://de.wikipedia.org/wiki/Kängurus"
@@ -171,9 +171,9 @@
       "frage": "Welches Säugetier legt Eier?",
       "optionen": [
         "Schnabeltier",
-        "Gürteltier",
+        "Igel",
         "Erdferkel",
-        "Igel"
+        "Gürteltier"
       ],
       "loesung": 0,
       "quelle": {
@@ -512,12 +512,12 @@
       "modus": "auswahl",
       "frage": "Welches Tier ist das?",
       "optionen": [
-        "Zebra",
-        "Okapi",
         "Antilope",
-        "Tapir"
+        "Tapir",
+        "Zebra",
+        "Okapi"
       ],
-      "loesung": 1,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Okapi",
         "url": "https://de.wikipedia.org/wiki/Okapi"
@@ -537,12 +537,12 @@
       "modus": "auswahl",
       "frage": "Welches Tier ist das?",
       "optionen": [
-        "Axolotl",
-        "Feuersalamander",
         "Kammmolch",
-        "Grottenolm"
+        "Feuersalamander",
+        "Grottenolm",
+        "Axolotl"
       ],
-      "loesung": 0,
+      "loesung": 3,
       "quelle": {
         "titel": "Wikipedia – Axolotl",
         "url": "https://de.wikipedia.org/wiki/Axolotl"
@@ -562,12 +562,12 @@
       "modus": "auswahl",
       "frage": "Welches Tier ist das?",
       "optionen": [
-        "Graureiher",
-        "Marabu",
+        "Pelikan",
         "Schuhschnabel",
-        "Pelikan"
+        "Marabu",
+        "Graureiher"
       ],
-      "loesung": 2,
+      "loesung": 1,
       "quelle": {
         "titel": "Wikipedia – Schuhschnabel",
         "url": "https://de.wikipedia.org/wiki/Schuhschnabel"
@@ -587,12 +587,12 @@
       "modus": "auswahl",
       "frage": "Welches Tier ist das?",
       "optionen": [
-        "Koboldmaki",
-        "Plumplori",
         "Fingertier",
-        "Galago"
+        "Koboldmaki",
+        "Galago",
+        "Plumplori"
       ],
-      "loesung": 2,
+      "loesung": 0,
       "quelle": {
         "titel": "Wikipedia – Fingertier",
         "url": "https://de.wikipedia.org/wiki/Fingertier"

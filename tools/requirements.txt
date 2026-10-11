@@ -1,1 +1,3 @@
-# Keine Abhängigkeiten nötig – tools/validate.py nutzt nur die Python-Standardbibliothek.
+# Keine Pflicht-Abhängigkeiten – validate.py nutzt nur die Python-Standardbibliothek.
+# Optional für tools/bild_holen.py (Fotos verkleinern):
+# pillow
