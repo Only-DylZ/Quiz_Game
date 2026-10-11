@@ -377,8 +377,8 @@
             "jahr": 1895
           },
           {
-            "name": "Erste Kernspaltung",
-            "jahr": 1938
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
           }
         ]
       },
@@ -423,12 +423,12 @@
         "bis": 2025,
         "ereignisse": [
           {
-            "name": "Erste Mondlandung",
-            "jahr": 1969
-          },
-          {
             "name": "Erste Messung von Gravitationswellen",
             "jahr": 2015
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
           }
         ]
       },
@@ -488,6 +488,495 @@
         "titel": "Wikipedia – Temperatur",
         "url": "https://de.wikipedia.org/wiki/Temperatur"
       }
+    },
+    {
+      "id": "phys-031",
+      "modus": "auswahl",
+      "frage": "In welcher Einheit misst man elektrische Leistung?",
+      "optionen": [
+        "Ampere",
+        "Volt",
+        "Joule",
+        "Watt"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Watt (Einheit)",
+        "url": "https://de.wikipedia.org/wiki/Watt_(Einheit)"
+      }
+    },
+    {
+      "id": "phys-032",
+      "modus": "auswahl",
+      "frage": "Mit welchem Gerät misst man die elektrische Stromstärke?",
+      "optionen": [
+        "Amperemeter",
+        "Voltmeter",
+        "Ohmmeter",
+        "Thermometer"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Amperemeter",
+        "url": "https://de.wikipedia.org/wiki/Amperemeter"
+      }
+    },
+    {
+      "id": "phys-033",
+      "modus": "auswahl",
+      "frage": "Welche Farbe entsteht, wenn man alle Farben des Lichts mischt?",
+      "optionen": [
+        "Weiß",
+        "Schwarz",
+        "Braun",
+        "Grau"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Additive Farbmischung",
+        "url": "https://de.wikipedia.org/wiki/Additive_Farbmischung"
+      }
+    },
+    {
+      "id": "phys-034",
+      "modus": "auswahl",
+      "frage": "In welcher Einheit gibt man den Schallpegel (Lautstärke) an?",
+      "optionen": [
+        "Hertz",
+        "Candela",
+        "Lumen",
+        "Dezibel"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Dezibel",
+        "url": "https://de.wikipedia.org/wiki/Dezibel"
+      }
+    },
+    {
+      "id": "phys-035",
+      "modus": "auswahl",
+      "frage": "Welches Gerät wandelt Bewegung in elektrischen Strom um?",
+      "optionen": [
+        "Elektromotor",
+        "Transformator",
+        "Kondensator",
+        "Generator"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Elektrischer Generator",
+        "url": "https://de.wikipedia.org/wiki/Elektrischer_Generator"
+      }
+    },
+    {
+      "id": "phys-036",
+      "modus": "auswahl",
+      "frage": "Wonach richtet sich eine Kompassnadel?",
+      "optionen": [
+        "Nach dem Magnetfeld der Erde",
+        "Nach der Schwerkraft",
+        "Nach dem Stand der Sonne",
+        "Nach der Windrichtung"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kompass",
+        "url": "https://de.wikipedia.org/wiki/Kompass"
+      }
+    },
+    {
+      "id": "phys-037",
+      "modus": "auswahl",
+      "frage": "Warum sieht ein Strohhalm im Wasserglas geknickt aus?",
+      "optionen": [
+        "Beugung",
+        "Spiegelung",
+        "Lichtbrechung",
+        "Streuung"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Brechung (Physik)",
+        "url": "https://de.wikipedia.org/wiki/Brechung_(Physik)"
+      }
+    },
+    {
+      "id": "phys-038",
+      "modus": "auswahl",
+      "frage": "Welches Teilchen im Atomkern ist elektrisch neutral?",
+      "optionen": [
+        "Quark",
+        "Proton",
+        "Neutron",
+        "Positron"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Neutron",
+        "url": "https://de.wikipedia.org/wiki/Neutron"
+      }
+    },
+    {
+      "id": "phys-039",
+      "modus": "auswahl",
+      "frage": "Wovon hängt die Schwingungsdauer eines Pendels hauptsächlich ab?",
+      "optionen": [
+        "Von seiner Masse",
+        "Von der Farbe",
+        "Von seiner Länge",
+        "Vom Material"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Fadenpendel",
+        "url": "https://de.wikipedia.org/wiki/Fadenpendel"
+      }
+    },
+    {
+      "id": "phys-040",
+      "modus": "auswahl",
+      "frage": "Welcher Spiegel zeigt Gegenstände vergrößert – etwa beim Schminkspiegel?",
+      "optionen": [
+        "Planspiegel",
+        "Halbspiegel",
+        "Hohlspiegel",
+        "Wölbspiegel"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Hohlspiegel",
+        "url": "https://de.wikipedia.org/wiki/Hohlspiegel"
+      }
+    },
+    {
+      "id": "phys-041",
+      "modus": "auswahl",
+      "frage": "Warum schwimmt ein Schiff aus Stahl?",
+      "optionen": [
+        "Es verdrängt viel Wasser (Auftrieb)",
+        "Wegen des Luftdrucks",
+        "Wegen der Oberflächenspannung",
+        "Stahl ist leichter als Wasser"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Statischer Auftrieb",
+        "url": "https://de.wikipedia.org/wiki/Statischer_Auftrieb"
+      }
+    },
+    {
+      "id": "phys-042",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Effekt, durch den die Sirene eines vorbeifahrenden Krankenwagens die Tonhöhe ändert?",
+      "optionen": [
+        "Tyndall-Effekt",
+        "Peltier-Effekt",
+        "Treibhauseffekt",
+        "Doppler-Effekt"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Doppler-Effekt",
+        "url": "https://de.wikipedia.org/wiki/Doppler-Effekt"
+      }
+    },
+    {
+      "id": "phys-043",
+      "modus": "schaetzen",
+      "frage": "Wie viel Volt liefert eine normale AA-Batterie (Mignon)?",
+      "einheit": "V",
+      "loesung": 1.5,
+      "quelle": {
+        "titel": "Wikipedia – Mignon (Batterie)",
+        "url": "https://de.wikipedia.org/wiki/Mignon_(Batterie)"
+      }
+    },
+    {
+      "id": "phys-044",
+      "modus": "schaetzen",
+      "frage": "Wie viele Farben hat ein Regenbogen nach der klassischen Einteilung?",
+      "einheit": "Farben",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Regenbogen",
+        "url": "https://de.wikipedia.org/wiki/Regenbogen"
+      },
+      "erklaerung": "Rot, Orange, Gelb, Grün, Blau, Indigo und Violett."
+    },
+    {
+      "id": "phys-045",
+      "modus": "schaetzen",
+      "frage": "Wie viele km/h sind 1 Meter pro Sekunde?",
+      "einheit": "km/h",
+      "loesung": 3.6,
+      "quelle": {
+        "titel": "Wikipedia – Meter pro Sekunde",
+        "url": "https://de.wikipedia.org/wiki/Meter_pro_Sekunde"
+      }
+    },
+    {
+      "id": "phys-046",
+      "modus": "schaetzen",
+      "frage": "Wie viele PS sind 1 Kilowatt?",
+      "einheit": "PS",
+      "loesung": 1.36,
+      "quelle": {
+        "titel": "Wikipedia – Pferdestärke",
+        "url": "https://de.wikipedia.org/wiki/Pferdestärke"
+      }
+    },
+    {
+      "id": "phys-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilometer sind es von der Erdoberfläche bis zum Erdmittelpunkt?",
+      "einheit": "km",
+      "loesung": 6371,
+      "quelle": {
+        "titel": "Wikipedia – Erdradius",
+        "url": "https://de.wikipedia.org/wiki/Erdradius"
+      }
+    },
+    {
+      "id": "phys-048",
+      "modus": "schaetzen",
+      "frage": "Bei welcher Temperatur zeigen Celsius und Fahrenheit dieselbe Zahl?",
+      "einheit": "°C",
+      "loesung": -40,
+      "quelle": {
+        "titel": "Wikipedia – Grad Fahrenheit",
+        "url": "https://de.wikipedia.org/wiki/Grad_Fahrenheit"
+      }
+    },
+    {
+      "id": "phys-049",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sekunden braucht das Licht vom Mond zur Erde?",
+      "einheit": "Sekunden",
+      "loesung": 1.3,
+      "quelle": {
+        "titel": "Wikipedia – Mond",
+        "url": "https://de.wikipedia.org/wiki/Mond"
+      }
+    },
+    {
+      "id": "phys-050",
+      "modus": "schaetzen",
+      "frage": "Wie viel Volt hat eine Autobatterie?",
+      "einheit": "V",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Starterbatterie",
+        "url": "https://de.wikipedia.org/wiki/Starterbatterie"
+      }
+    },
+    {
+      "id": "phys-051",
+      "modus": "schaetzen",
+      "frage": "Wie heiß kann ein Blitz werden?",
+      "einheit": "°C",
+      "loesung": 30000,
+      "quelle": {
+        "titel": "Wikipedia – Blitz",
+        "url": "https://de.wikipedia.org/wiki/Blitz"
+      }
+    },
+    {
+      "id": "phys-052",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Pisa mit seinem Schiefen Turm?",
+      "daten": {
+        "mitte": [
+          46,
+          5
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 43.72,
+        "lng": 10.4
+      },
+      "quelle": {
+        "titel": "Wikipedia – Pisa",
+        "url": "https://de.wikipedia.org/wiki/Pisa"
+      }
+    },
+    {
+      "id": "phys-053",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Greenwich, durch das der Nullmeridian verläuft?",
+      "daten": {
+        "mitte": [
+          45,
+          15
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 51.48,
+        "lng": 0.0
+      },
+      "quelle": {
+        "titel": "Wikipedia – Greenwich",
+        "url": "https://de.wikipedia.org/wiki/Greenwich"
+      }
+    },
+    {
+      "id": "phys-054",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Ulm, die Geburtsstadt von Albert Einstein?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 48.4,
+        "lng": 9.99
+      },
+      "quelle": {
+        "titel": "Wikipedia – Ulm",
+        "url": "https://de.wikipedia.org/wiki/Ulm"
+      }
+    },
+    {
+      "id": "phys-055",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr entdeckte Ernest Rutherford den Atomkern?",
+      "daten": {
+        "von": 1850,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1911,
+      "quelle": {
+        "titel": "Wikipedia – Ernest Rutherford",
+        "url": "https://de.wikipedia.org/wiki/Ernest_Rutherford"
+      }
+    },
+    {
+      "id": "phys-056",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr ging das erste Kernkraftwerk der Welt ans Stromnetz?",
+      "daten": {
+        "von": 1900,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Modell T von Ford",
+            "jahr": 1908
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1954,
+      "quelle": {
+        "titel": "Wikipedia – Kernkraftwerk Obninsk",
+        "url": "https://de.wikipedia.org/wiki/Kernkraftwerk_Obninsk"
+      }
+    },
+    {
+      "id": "phys-057",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr ließ Benjamin Franklin einen Drachen in ein Gewitter steigen?",
+      "daten": {
+        "von": 1600,
+        "bis": 1900,
+        "ereignisse": [
+          {
+            "name": "Ende des Dreißigjährigen Kriegs",
+            "jahr": 1648
+          },
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          }
+        ]
+      },
+      "loesung": 1752,
+      "quelle": {
+        "titel": "Wikipedia – Benjamin Franklin",
+        "url": "https://de.wikipedia.org/wiki/Benjamin_Franklin"
+      }
+    },
+    {
+      "id": "phys-058",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Vorsätze für Einheiten nach ihrer Größe!",
+      "loesung": [
+        "Giga",
+        "Mega",
+        "Kilo",
+        "Milli",
+        "Nano"
+      ],
+      "oben": "größter",
+      "unten": "kleinster",
+      "werte": [
+        "Milliarde",
+        "Million",
+        "Tausend",
+        "Tausendstel",
+        "Milliardstel"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Vorsätze für Maßeinheiten",
+        "url": "https://de.wikipedia.org/wiki/Vorsätze_für_Maßeinheiten"
+      }
+    },
+    {
+      "id": "phys-059",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Lautstärke!",
+      "loesung": [
+        "Düsenjet beim Start",
+        "Rockkonzert",
+        "Gespräch",
+        "Flüstern"
+      ],
+      "oben": "am lautesten",
+      "unten": "am leisesten",
+      "quelle": {
+        "titel": "Wikipedia – Schalldruckpegel",
+        "url": "https://de.wikipedia.org/wiki/Schalldruckpegel"
+      }
+    },
+    {
+      "id": "phys-060",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Leistung!",
+      "loesung": [
+        "Windkraftanlage",
+        "Auto",
+        "Wasserkocher",
+        "LED-Lampe"
+      ],
+      "oben": "am stärksten",
+      "unten": "am schwächsten",
+      "quelle": {
+        "titel": "Wikipedia – Leistung (Physik)",
+        "url": "https://de.wikipedia.org/wiki/Leistung_(Physik)"
+      }
     }
   ],
   "stechfragen": [
@@ -511,6 +1000,39 @@
       "quelle": {
         "titel": "Wikipedia – Normdruck",
         "url": "https://de.wikipedia.org/wiki/Normdruck"
+      }
+    },
+    {
+      "id": "phys-s03",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr erhielt Alexander Graham Bell das Patent auf das Telefon?",
+      "einheit": "",
+      "loesung": 1876,
+      "quelle": {
+        "titel": "Wikipedia – Alexander Graham Bell",
+        "url": "https://de.wikipedia.org/wiki/Alexander_Graham_Bell"
+      }
+    },
+    {
+      "id": "phys-s04",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilogramm wiegt ein Kubikmeter Luft (bei 20 °C, Normaldruck)?",
+      "einheit": "kg",
+      "loesung": 1.2,
+      "quelle": {
+        "titel": "Wikipedia – Luftdichte",
+        "url": "https://de.wikipedia.org/wiki/Luftdichte"
+      }
+    },
+    {
+      "id": "phys-s05",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde der erste funktionierende Laser gebaut?",
+      "einheit": "",
+      "loesung": 1960,
+      "quelle": {
+        "titel": "Wikipedia – Laser",
+        "url": "https://de.wikipedia.org/wiki/Laser"
       }
     }
   ]
