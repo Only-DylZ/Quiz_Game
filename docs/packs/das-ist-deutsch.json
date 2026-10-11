@@ -1,0 +1,672 @@
+{
+  "thema": "Das ist Deutsch",
+  "version": 1,
+  "beschreibung": "Rechtschreibung, Bräuche, berühmte Deutsche und Gerichte.",
+  "fragen": [
+    {
+      "id": "dd-001",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man den Takt in der Musik richtig?",
+      "optionen": [
+        "Rhythmuss",
+        "Rhytmus",
+        "Rythmus",
+        "Rhythmus"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wiktionary – Rhythmus",
+        "url": "https://de.wiktionary.org/wiki/Rhythmus"
+      }
+    },
+    {
+      "id": "dd-002",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das Wort für „üblicher Maßstab“ richtig?",
+      "optionen": [
+        "Stanndard",
+        "Standart",
+        "Standard",
+        "Standdard"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wiktionary – Standard",
+        "url": "https://de.wiktionary.org/wiki/Standard"
+      },
+      "erklaerung": "„Standarte“ ist dagegen eine Fahne."
+    },
+    {
+      "id": "dd-003",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man die Instandsetzung von etwas Kaputtem richtig?",
+      "optionen": [
+        "Reparartur",
+        "Reperatur",
+        "Reparatur",
+        "Raparatur"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wiktionary – Reparatur",
+        "url": "https://de.wiktionary.org/wiki/Reparatur"
+      }
+    },
+    {
+      "id": "dd-004",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das Wort für „Bezahlung, Vergütung“ richtig?",
+      "optionen": [
+        "Endgeld",
+        "Entgeld",
+        "Entgelt",
+        "Endgelt"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wiktionary – Entgelt",
+        "url": "https://de.wiktionary.org/wiki/Entgelt"
+      },
+      "erklaerung": "Es kommt von „entgelten“, nicht von „Geld“."
+    },
+    {
+      "id": "dd-005",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man den Ausstellungsraum für Kunst richtig?",
+      "optionen": [
+        "Galerrie",
+        "Gallerje",
+        "Gallerie",
+        "Galerie"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wiktionary – Galerie",
+        "url": "https://de.wiktionary.org/wiki/Galerie"
+      }
+    },
+    {
+      "id": "dd-006",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das Wort für „und zwar“ richtig?",
+      "optionen": [
+        "nämlich",
+        "nähmlig",
+        "nämmlich",
+        "nähmlich"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wiktionary – nämlich",
+        "url": "https://de.wiktionary.org/wiki/nämlich"
+      },
+      "erklaerung": "Wer „nämlich“ mit h schreibt, ist dämlich!"
+    },
+    {
+      "id": "dd-007",
+      "modus": "auswahl",
+      "frage": "An welchem Tag kommt in Deutschland traditionell der Nikolaus?",
+      "optionen": [
+        "6. Dezember",
+        "1. Dezember",
+        "24. Dezember",
+        "11. November"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Nikolaustag",
+        "url": "https://de.wikipedia.org/wiki/Nikolaustag"
+      }
+    },
+    {
+      "id": "dd-008",
+      "modus": "auswahl",
+      "frage": "Was kommt am Martinstag traditionell auf den Tisch?",
+      "optionen": [
+        "Karpfen",
+        "Lamm",
+        "Hase",
+        "Gans"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Martinsgans",
+        "url": "https://de.wikipedia.org/wiki/Martinsgans"
+      }
+    },
+    {
+      "id": "dd-009",
+      "modus": "auswahl",
+      "frage": "Wann beginnt traditionell die Karnevalssession?",
+      "optionen": [
+        "Am 11.11. um 11:11 Uhr",
+        "Am 1. Januar",
+        "Am Aschermittwoch",
+        "Am Rosenmontag"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Karneval, Fastnacht und Fasching",
+        "url": "https://de.wikipedia.org/wiki/Karneval,_Fastnacht_und_Fasching"
+      }
+    },
+    {
+      "id": "dd-010",
+      "modus": "auswahl",
+      "frage": "Welcher Brauch gehört zum 1. Mai?",
+      "optionen": [
+        "Laternen basteln",
+        "Eier färben",
+        "Einen Maibaum aufstellen",
+        "Blei gießen"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Maibaum",
+        "url": "https://de.wikipedia.org/wiki/Maibaum"
+      }
+    },
+    {
+      "id": "dd-011",
+      "modus": "auswahl",
+      "frage": "Wer schrieb den „Faust“?",
+      "optionen": [
+        "Friedrich Schiller",
+        "Gotthold Ephraim Lessing",
+        "Heinrich Heine",
+        "Johann Wolfgang von Goethe"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Faust. Eine Tragödie.",
+        "url": "https://de.wikipedia.org/wiki/Faust._Eine_Tragödie."
+      }
+    },
+    {
+      "id": "dd-012",
+      "modus": "auswahl",
+      "frage": "Wer meldete 1886 das erste Automobil mit Verbrennungsmotor zum Patent an?",
+      "optionen": [
+        "Wilhelm Maybach",
+        "Gottlieb Daimler",
+        "Rudolf Diesel",
+        "Carl Benz"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Benz Patent-Motorwagen Nummer 1",
+        "url": "https://de.wikipedia.org/wiki/Benz_Patent-Motorwagen_Nummer_1"
+      }
+    },
+    {
+      "id": "dd-013",
+      "modus": "auswahl",
+      "frage": "Welcher berühmte Komponist wurde in Bonn geboren?",
+      "optionen": [
+        "Johann Sebastian Bach",
+        "Ludwig van Beethoven",
+        "Wolfgang Amadeus Mozart",
+        "Johannes Brahms"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Ludwig van Beethoven",
+        "url": "https://de.wikipedia.org/wiki/Ludwig_van_Beethoven"
+      }
+    },
+    {
+      "id": "dd-014",
+      "modus": "auswahl",
+      "frage": "Welcher Auswanderer aus Franken brachte die Jeans auf den Markt?",
+      "optionen": [
+        "Hugo Boss",
+        "Adolf Dassler",
+        "Karl Lagerfeld",
+        "Levi Strauss"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Levi Strauss",
+        "url": "https://de.wikipedia.org/wiki/Levi_Strauss"
+      }
+    },
+    {
+      "id": "dd-015",
+      "modus": "schaetzen",
+      "frage": "Wie viele Buchstaben hat das deutsche Alphabet – ohne Umlaute und ß?",
+      "einheit": "Buchstaben",
+      "loesung": 26,
+      "quelle": {
+        "titel": "Wikipedia – Deutsches Alphabet",
+        "url": "https://de.wikipedia.org/wiki/Deutsches_Alphabet"
+      }
+    },
+    {
+      "id": "dd-016",
+      "modus": "schaetzen",
+      "frage": "Wie viele Strophen hat das „Lied der Deutschen“?",
+      "einheit": "Strophen",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Das Lied der Deutschen",
+        "url": "https://de.wikipedia.org/wiki/Das_Lied_der_Deutschen"
+      },
+      "erklaerung": "Nur die dritte Strophe ist heute die Nationalhymne."
+    },
+    {
+      "id": "dd-017",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre dauerte der Bau des Kölner Doms?",
+      "einheit": "Jahre",
+      "loesung": 632,
+      "quelle": {
+        "titel": "Wikipedia – Kölner Dom",
+        "url": "https://de.wikipedia.org/wiki/Kölner_Dom"
+      },
+      "erklaerung": "Von 1248 bis 1880 – mit einer langen Pause dazwischen."
+    },
+    {
+      "id": "dd-018",
+      "modus": "schaetzen",
+      "frage": "Wie viele Buchstaben hat das Wort „Donaudampfschifffahrtsgesellschaft“?",
+      "einheit": "Buchstaben",
+      "loesung": 34,
+      "quelle": {
+        "titel": "Wikipedia – Donaudampfschiffahrtsgesellschaft",
+        "url": "https://de.wikipedia.org/wiki/Donaudampfschiffahrtsgesellschaft"
+      }
+    },
+    {
+      "id": "dd-019",
+      "modus": "schaetzen",
+      "frage": "Wie viele Türchen hat ein klassischer Adventskalender?",
+      "einheit": "Türchen",
+      "loesung": 24,
+      "quelle": {
+        "titel": "Wikipedia – Adventskalender",
+        "url": "https://de.wikipedia.org/wiki/Adventskalender"
+      }
+    },
+    {
+      "id": "dd-020",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kerzen hat ein klassischer Adventskranz?",
+      "einheit": "Kerzen",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Adventskranz",
+        "url": "https://de.wikipedia.org/wiki/Adventskranz"
+      }
+    },
+    {
+      "id": "dd-021",
+      "modus": "schaetzen",
+      "frage": "Wie viele Märchen enthält die Sammlung der Brüder Grimm (Ausgabe letzter Hand)?",
+      "einheit": "Märchen",
+      "loesung": 200,
+      "quelle": {
+        "titel": "Wikipedia – Kinder- und Hausmärchen",
+        "url": "https://de.wikipedia.org/wiki/Kinder-_und_Hausmärchen"
+      }
+    },
+    {
+      "id": "dd-022",
+      "modus": "schaetzen",
+      "frage": "An wie viele Staaten grenzt Deutschland?",
+      "einheit": "Staaten",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Deutschland"
+      }
+    },
+    {
+      "id": "dd-023",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sitze hat der Deutsche Bundestag seit der Wahlrechtsreform?",
+      "einheit": "Sitze",
+      "loesung": 630,
+      "quelle": {
+        "titel": "Wikipedia – Deutscher Bundestag",
+        "url": "https://de.wikipedia.org/wiki/Deutscher_Bundestag"
+      }
+    },
+    {
+      "id": "dd-024",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie hoch ist der Kölner Dom?",
+      "daten": {
+        "einheit": "m",
+        "balken": [
+          {
+            "name": "Brandenburger Tor",
+            "wert": 26
+          },
+          {
+            "name": "Ulmer Münster",
+            "wert": 162
+          },
+          {
+            "name": "Fernsehturm Berlin",
+            "wert": 368
+          },
+          {
+            "name": "Kölner Dom",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 157,
+      "quelle": {
+        "titel": "Wikipedia – Kölner Dom",
+        "url": "https://de.wikipedia.org/wiki/Kölner_Dom"
+      }
+    },
+    {
+      "id": "dd-025",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr fand das erste Oktoberfest statt?",
+      "daten": {
+        "von": 1700,
+        "bis": 1900,
+        "ereignisse": [
+          {
+            "name": "Sturm auf die Bastille",
+            "jahr": 1789
+          },
+          {
+            "name": "Gründung des Kaiserreichs",
+            "jahr": 1871
+          }
+        ]
+      },
+      "loesung": 1810,
+      "quelle": {
+        "titel": "Wikipedia – Oktoberfest",
+        "url": "https://de.wikipedia.org/wiki/Oktoberfest"
+      },
+      "erklaerung": "Anlass war die Hochzeit von Kronprinz Ludwig und Therese."
+    },
+    {
+      "id": "dd-026",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde die Reform der deutschen Rechtschreibung beschlossen?",
+      "daten": {
+        "von": 1950,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Mauerfall",
+            "jahr": 1989
+          },
+          {
+            "name": "Euro wird Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1996,
+      "quelle": {
+        "titel": "Wikipedia – Reform der deutschen Rechtschreibung von 1996",
+        "url": "https://de.wikipedia.org/wiki/Reform_der_deutschen_Rechtschreibung_von_1996"
+      }
+    },
+    {
+      "id": "dd-027",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien der erste Duden?",
+      "daten": {
+        "von": 1800,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Gründung des Kaiserreichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Beginn des Ersten Weltkriegs",
+            "jahr": 1914
+          }
+        ]
+      },
+      "loesung": 1880,
+      "quelle": {
+        "titel": "Wikipedia – Duden",
+        "url": "https://de.wikipedia.org/wiki/Duden"
+      }
+    },
+    {
+      "id": "dd-028",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo steht Schloss Neuschwanstein?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 47.56,
+        "lng": 10.75
+      },
+      "quelle": {
+        "titel": "Wikipedia – Schloss Neuschwanstein",
+        "url": "https://de.wikipedia.org/wiki/Schloss_Neuschwanstein"
+      }
+    },
+    {
+      "id": "dd-029",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Insel Sylt?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 54.9,
+        "lng": 8.32
+      },
+      "quelle": {
+        "titel": "Wikipedia – Sylt",
+        "url": "https://de.wikipedia.org/wiki/Sylt"
+      }
+    },
+    {
+      "id": "dd-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Städte nach ihrer Einwohnerzahl!",
+      "loesung": [
+        "Berlin",
+        "Hamburg",
+        "München",
+        "Köln"
+      ],
+      "oben": "meiste",
+      "unten": "wenigste",
+      "quelle": {
+        "titel": "Wikipedia – Liste der Großstädte in Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Großstädte_in_Deutschland"
+      }
+    },
+    {
+      "id": "dd-035",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach dem Datum im Jahr!",
+      "loesung": [
+        "Heilige Drei Könige",
+        "Tag der Arbeit",
+        "Tag der Deutschen Einheit",
+        "Martinstag"
+      ],
+      "oben": "früh im Jahr",
+      "unten": "spät im Jahr",
+      "werte": [
+        "6. Januar",
+        "1. Mai",
+        "3. Oktober",
+        "11. November"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Gesetzliche Feiertage in Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Gesetzliche_Feiertage_in_Deutschland"
+      }
+    },
+    {
+      "id": "dd-036",
+      "modus": "reihenfolge",
+      "frage": "Ordne die deutschen Berge nach ihrer Höhe!",
+      "loesung": [
+        "Zugspitze",
+        "Watzmann",
+        "Feldberg",
+        "Brocken"
+      ],
+      "oben": "höchster",
+      "unten": "niedrigster",
+      "werte": [
+        "2962 m",
+        "2713 m",
+        "1493 m",
+        "1141 m"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Liste der höchsten Berge in Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_höchsten_Berge_in_Deutschland"
+      }
+    },
+    {
+      "id": "dd-031",
+      "modus": "auswahl",
+      "frage": "Wie heißt dieses deutsche Gericht?",
+      "optionen": [
+        "Rouladen",
+        "Gulasch",
+        "Sauerbraten",
+        "Schweinebraten"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Sauerbraten",
+        "url": "https://de.wikipedia.org/wiki/Sauerbraten"
+      },
+      "bild": {
+        "datei": "bilder/dd-031.jpg",
+        "urheber": "Brücke-Osteuropa",
+        "lizenz": "CC0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Sächsischer_Sauerbraten.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:S%C3%A4chsischer_Sauerbraten.jpg"
+        }
+      }
+    },
+    {
+      "id": "dd-032",
+      "modus": "auswahl",
+      "frage": "Wie heißt dieses deutsche Gericht?",
+      "optionen": [
+        "Labskaus",
+        "Bauernfrühstück",
+        "Hoppelpoppel",
+        "Strammer Max"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Labskaus",
+        "url": "https://de.wikipedia.org/wiki/Labskaus"
+      },
+      "bild": {
+        "datei": "bilder/dd-032.jpg",
+        "urheber": "Pemba.mpimaji",
+        "lizenz": "CC BY-SA 3.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Labskaus_in_Friedrichstadt.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Labskaus_in_Friedrichstadt.jpg"
+        }
+      }
+    },
+    {
+      "id": "dd-033",
+      "modus": "auswahl",
+      "frage": "Wie heißt dieses deutsche Gericht?",
+      "optionen": [
+        "Maultaschen",
+        "Ravioli",
+        "Spätzle",
+        "Pierogi"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Maultasche",
+        "url": "https://de.wikipedia.org/wiki/Maultasche"
+      },
+      "bild": {
+        "datei": "bilder/dd-033.jpg",
+        "urheber": "Nikinator86",
+        "lizenz": "CC0",
+        "quelle": {
+          "titel": "Wikimedia Commons – MaultascheEissele.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:MaultascheEissele.jpg"
+        }
+      }
+    },
+    {
+      "id": "dd-034",
+      "modus": "auswahl",
+      "frage": "Wie heißt dieses deutsche Gericht?",
+      "optionen": [
+        "Frikadellen",
+        "Fleischküchle",
+        "Königsberger Klopse",
+        "Knödel"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Königsberger Klopse",
+        "url": "https://de.wikipedia.org/wiki/Königsberger_Klopse"
+      },
+      "bild": {
+        "datei": "bilder/dd-034.jpg",
+        "urheber": "Anagoria",
+        "lizenz": "CC BY 3.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – 2022-11-13_Königsberger_Klopse_Restaurant_Dicke_Paula_Berlin_anagoria.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:2022-11-13_K%C3%B6nigsberger_Klopse_Restaurant_Dicke_Paula_Berlin_anagoria.jpg"
+        }
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "dd-s01",
+      "modus": "schaetzen",
+      "frage": "Wie viele Buchstaben hat „Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz“?",
+      "einheit": "Buchstaben",
+      "loesung": 63,
+      "quelle": {
+        "titel": "Wikipedia – Rinderkennzeichnungs- und Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz",
+        "url": "https://de.wikipedia.org/wiki/Rinderkennzeichnungs-_und_Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz"
+      }
+    },
+    {
+      "id": "dd-s02",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde das Brandenburger Tor fertiggestellt?",
+      "einheit": "",
+      "loesung": 1791,
+      "quelle": {
+        "titel": "Wikipedia – Brandenburger Tor",
+        "url": "https://de.wikipedia.org/wiki/Brandenburger_Tor"
+      }
+    }
+  ]
+}

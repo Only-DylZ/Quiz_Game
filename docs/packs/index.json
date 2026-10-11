@@ -35,6 +35,10 @@
     {
       "datei": "geschichte.json",
       "thema": "Zurück in die Vergangenheit"
+    },
+    {
+      "datei": "das-ist-deutsch.json",
+      "thema": "Das ist Deutsch"
     }
   ]
 }
