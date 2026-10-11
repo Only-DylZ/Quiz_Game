@@ -44,6 +44,31 @@ export function punkteZeitleiste(antwort, loesung, von, bis) {
   return Math.round(MAX_PUNKTE * Math.max(0, 1 - abweichung));
 }
 
+// karte: nach Entfernung zur Lösung.
+// 0 km = 1000, 500 km = 750, ab KARTE_NULL_KM km = 0 Punkte.
+export const KARTE_NULL_KM = 2000;
+
+export function punkteKarte(antwort, loesung) {
+  const km = entfernungKm(antwort, loesung);
+  if (!Number.isFinite(km)) return 0;
+  return Math.round(MAX_PUNKTE * Math.max(0, 1 - km / KARTE_NULL_KM));
+}
+
+// Entfernung zwischen zwei Orten { lat, lng } in km – "Haversine-Formel".
+// Sie rechnet auf einer Kugel (der Erde) statt auf einer flachen Karte.
+export function entfernungKm(a, b) {
+  const ERDRADIUS_KM = 6371;
+  const rad = (grad) => (grad * Math.PI) / 180;
+
+  const dLat = rad(b.lat - a.lat);
+  const dLng = rad(b.lng - a.lng);
+  const h =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
+
+  return 2 * ERDRADIUS_KM * Math.asin(Math.min(1, Math.sqrt(h)));
+}
+
 // Rangliste: sortiert nach Punkten, gleiche Punkte = gleicher Platz.
 //   spieler – Liste von { id, name, punkte }
 //   Ergebnis – neue Liste, jeder Eintrag zusätzlich mit "platz"

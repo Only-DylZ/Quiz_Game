@@ -102,6 +102,7 @@ Quiz_Game/
 │  │  ├─ auswahl.js        Anzeige und Auswertung von Multiple-Choice-Fragen.
 │  │  ├─ schaetzen.js      Anzeige und Auswertung von Schätzfragen.
 │  │  ├─ grafik.js         Anzeige und Auswertung von Grafikfragen (Balken, Zeitleiste, Karte).
+│  │  ├─ karte.js          Die Art „karte“: Leaflet-Karte anzeigen, Ort antippen, Auflösung.
 │  │  └─ punkte.js         Alle Punkteregeln an einer Stelle.
 │  └─ packs/
 │     ├─ index.json        Liste aller verfügbaren Themenpakete.
@@ -348,7 +349,7 @@ Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
 - 2b: `karte` mit Leaflet + OpenStreetMap.
 
 **Aktueller Stand:** Phase 1 ist fertig und online (siehe „Online-Stellen“ unten).
-Phase 2a (Balken, Zeitleiste) ist gebaut. Als Nächstes: 2b Karte.
+Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Als Nächstes: Phase 3.
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`

@@ -8,7 +8,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 import {
-  anteilRestzeit, punkteAuswahl, punkteSchaetzen, punkteZeitleiste, ranglisteBerechnen,
+  anteilRestzeit, punkteAuswahl, punkteSchaetzen, punkteZeitleiste, punkteKarte, entfernungKm, ranglisteBerechnen,
 } from "../docs/engine/punkte.js";
 import { zahlLesen, zahlText } from "../docs/engine/hilfen.js";
 import * as auswahl from "../docs/engine/auswahl.js";
@@ -66,6 +66,26 @@ test("zeitleiste: Abweichung zählt im Verhältnis zur Spanne", () => {
 });
 
 // ---------------------------------------------------------------------------
+// Punkte: karte (Entfernung in km, ab 2000 km = 0 Punkte)
+// ---------------------------------------------------------------------------
+test("karte: Entfernung mit der Haversine-Formel", () => {
+  const berlin = { lat: 52.52, lng: 13.405 };
+  const paris = { lat: 48.8566, lng: 2.3522 };
+  const km = entfernungKm(berlin, paris);
+  assert.ok(km > 870 && km < 890, "Berlin–Paris sind etwa 878 km, gerechnet: " + km);
+  assert.equal(entfernungKm(berlin, berlin), 0);
+});
+
+test("karte: Punkte nach Entfernung (Beispiele aus CLAUDE.md)", () => {
+  const ort = { lat: 0, lng: 0 };
+  assert.equal(punkteKarte(ort, ort), 1000);                  // 0 km
+  // 1 Längengrad am Äquator ≈ 111,19 km → 500 km ≈ 4,4966°
+  assert.equal(punkteKarte({ lat: 0, lng: 500 / 111.195 }, ort), 750);
+  assert.equal(punkteKarte({ lat: 0, lng: 90 }, ort), 0);     // ~10.000 km → nie negativ
+  assert.equal(punkteKarte({ lat: NaN, lng: 0 }, ort), 0);
+});
+
+// ---------------------------------------------------------------------------
 // Grafik: Prüfregeln für Fragen und Antworten
 // ---------------------------------------------------------------------------
 const balkenFrage = {
@@ -75,6 +95,11 @@ const balkenFrage = {
 const zeitFrage = {
   modus: "grafik", art: "zeitleiste", loesung: 1969,
   daten: { von: 1950, bis: 2000, ereignisse: [{ name: "X", jahr: 1957 }] },
+};
+
+const kartenFrage = {
+  modus: "grafik", art: "karte", loesung: { lat: 45.96, lng: 63.31 },
+  daten: { mitte: [45, 60], zoom: 3 },
 };
 
 test("grafik: kaputte Fragen werden erkannt", () => {
@@ -90,6 +115,10 @@ test("grafik: kaputte Fragen werden erkannt", () => {
   assert.ok(!grafik.pruefeFrage({ ...zeitFrage, daten: { von: 2000, bis: 1950, ereignisse: [] } }));
   // unbekannte Art
   assert.ok(!grafik.pruefeFrage({ ...zeitFrage, art: "torte" }));
+  // Karte: gültig, Lösung außerhalb der Erde, Zoom kaputt
+  assert.ok(grafik.pruefeFrage(kartenFrage));
+  assert.ok(!grafik.pruefeFrage({ ...kartenFrage, loesung: { lat: 95, lng: 0 } }));
+  assert.ok(!grafik.pruefeFrage({ ...kartenFrage, daten: { mitte: [45, 60], zoom: 0 } }));
 });
 
 test("grafik: nur passende Antworten werden angenommen", () => {
@@ -102,6 +131,12 @@ test("grafik: nur passende Antworten werden angenommen", () => {
   assert.ok(grafik.antwortGueltig(b, 42.5));
   assert.ok(!grafik.antwortGueltig(b, Infinity));
   assert.ok(!grafik.antwortGueltig(b, null));
+  const k = grafik.oeffentlicheDaten(kartenFrage);
+  assert.ok(grafik.antwortGueltig(k, { lat: 10, lng: -20 }));
+  assert.ok(!grafik.antwortGueltig(k, { lat: 100, lng: 0 }));   // gibt es nicht
+  assert.ok(!grafik.antwortGueltig(k, { lat: "10", lng: 0 }));  // Text statt Zahl
+  assert.ok(!grafik.antwortGueltig(k, null));
+  assert.ok(!grafik.antwortGueltig(k, 42));
 });
 
 // ---------------------------------------------------------------------------
@@ -154,7 +189,6 @@ test("oeffentlicheDaten enthält nie die Lösung", () => {
   for (const frage of paket.fragen) {
     const modul = MODI[frage.modus];
     if (!modul) continue; // Modus kommt erst später
-    if (frage.art === "karte") continue; // kommt in Phase 2b
 
     const daten = modul.oeffentlicheDaten(frage);
     const alsText = JSON.stringify(daten);
@@ -162,7 +196,11 @@ test("oeffentlicheDaten enthält nie die Lösung", () => {
     assert.ok(!("loesung" in daten), frage.id + ": Feld 'loesung' wird mitgeschickt!");
     assert.ok(!alsText.includes("erklaerung"), frage.id + ": Erklärung wird mitgeschickt!");
     // Beim Schätzen und bei Grafiken darf auch die Zahl selbst nirgends auftauchen
-    if (frage.modus === "schaetzen" || frage.modus === "grafik") {
+    if (frage.art === "karte") {
+      // Bei der Karte: weder Breite noch Länge der Lösung
+      assert.ok(!alsText.includes(String(frage.loesung.lat)), frage.id + ": Lösungs-Breite im Text!");
+      assert.ok(!alsText.includes(String(frage.loesung.lng)), frage.id + ": Lösungs-Länge im Text!");
+    } else if (frage.modus === "schaetzen" || frage.modus === "grafik") {
       assert.ok(!alsText.includes(String(frage.loesung)), frage.id + ": Lösungszahl im Text!");
     }
   }
@@ -172,7 +210,6 @@ test("Beispielpaket: alle Fragen der bekannten Modi sind gültig", () => {
   for (const frage of paket.fragen) {
     const modul = MODI[frage.modus];
     if (!modul) continue;
-    if (frage.art === "karte") continue; // kommt in Phase 2b
     assert.ok(modul.pruefeFrage(frage), frage.id + " ist ungültig");
     // Die richtige Antwort muss selbst als gültige Antwort durchgehen
     assert.ok(modul.antwortGueltig(modul.oeffentlicheDaten(frage), frage.loesung), frage.id);

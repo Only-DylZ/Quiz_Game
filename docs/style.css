@@ -281,6 +281,27 @@ button.klein {
   padding: 10px 14px;
 }
 
+/* ---------- Karte (Leaflet) ---------- */
+
+.karte {
+  height: 60vh;
+  min-height: 300px;
+  margin: 8px 0;
+  border-radius: 10px;
+}
+
+/* Auf dem Handy etwas kleiner, damit der Senden-Knopf noch sichtbar ist */
+.karte-handy {
+  height: 55vh;
+  min-height: 250px;
+}
+
+/* Namen der Spieler auf der Auflösungs-Karte */
+.karte .leaflet-tooltip {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
 /* ---------- Listen: Schätzungen und Rangliste ---------- */
 
 .schaetzliste,

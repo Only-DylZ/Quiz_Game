@@ -3,16 +3,17 @@
 // Es gibt drei Arten (Feld "art" in der Frage):
 //   balken      – ein Balkendiagramm, bei dem ein Balken fehlt. Man schätzt seinen Wert.
 //   zeitleiste  – eine Zeitleiste mit Ereignissen. Man schätzt das Jahr eines weiteren.
-//   karte       – (kommt in Phase 2b) einen Ort auf der Karte antippen.
+//   karte       – eine Landkarte. Man tippt den gesuchten Ort an.
 //
-// Die Grafiken werden als SVG selbst gezeichnet – auf dem Host groß,
-// auf dem Handy klein über der Eingabe.
+// Balken und Zeitleiste werden als SVG selbst gezeichnet – auf dem Host groß,
+// auf dem Handy klein über der Eingabe. Die Karte steckt in karte.js (Leaflet).
 //
 // Die Funktionen sind dieselben wie in auswahl.js – Beschreibung siehe dort.
 
 import { neu, svgNeu, zahlText } from "./hilfen.js";
-import { punkteSchaetzen, punkteZeitleiste } from "./punkte.js";
+import { punkteSchaetzen, punkteZeitleiste, punkteKarte } from "./punkte.js";
 import * as schaetzen from "./schaetzen.js";
+import * as karte from "./karte.js";
 
 // Höchstens so viele Antworten zeigt der Host bei der Auflösung an
 const MAX_ANZEIGE = 10;
@@ -62,8 +63,19 @@ export function pruefeFrage(frage) {
     );
   }
 
-  // "karte" kommt in Phase 2b – bis dahin wird die Frage übersprungen
-  return false;
+  if (frage.art === "karte") {
+    return (
+      Array.isArray(d.mitte) &&
+      d.mitte.length === 2 &&
+      karte.ortGueltig({ lat: d.mitte[0], lng: d.mitte[1] }) &&
+      Number.isInteger(d.zoom) &&
+      d.zoom >= 1 &&
+      d.zoom <= 18 &&
+      karte.ortGueltig(frage.loesung)
+    );
+  }
+
+  return false; // unbekannte Art
 }
 
 // Was die Handys sehen dürfen – OHNE Lösung.
@@ -77,6 +89,10 @@ export function oeffentlicheDaten(frage) {
       einheit: d.einheit,
       balken: d.balken.map((b) => ({ name: b.name, wert: b.wert })),
     };
+  }
+
+  if (frage.art === "karte") {
+    return { art: "karte", mitte: [d.mitte[0], d.mitte[1]], zoom: d.zoom };
   }
 
   // zeitleiste
@@ -93,6 +109,7 @@ export function oeffentlicheDaten(frage) {
 // ---------------------------------------------------------------------------
 
 export function zeigeFrage(bereich, daten) {
+  if (daten.art === "karte") return karte.zeigeFrage(bereich, daten);
   bereich.replaceChildren(zeichne(daten, null));
 }
 
@@ -101,6 +118,8 @@ export function zeigeFrage(bereich, daten) {
 // ---------------------------------------------------------------------------
 
 export function zeigeEingabe(bereich, daten, senden, entwurfSenden) {
+  if (daten.art === "karte") return karte.zeigeEingabe(bereich, daten, senden, entwurfSenden);
+
   const grafik = neu("div", "grafik-klein");
   grafik.append(zeichne(daten, null));
   const eingabe = neu("div");
@@ -180,6 +199,7 @@ export function antwortGueltig(daten, antwort) {
   if (daten.art === "balken") {
     return Number.isFinite(antwort) && Math.abs(antwort) < 1e15;
   }
+  if (daten.art === "karte") return karte.ortGueltig(antwort);
   // zeitleiste: ganzes Jahr innerhalb der Zeitleiste
   return Number.isInteger(antwort) && antwort >= daten.von && antwort <= daten.bis;
 }
@@ -187,6 +207,7 @@ export function antwortGueltig(daten, antwort) {
 // Die Zeit (anteil) spielt hier keine Rolle – nur die Genauigkeit
 export function bewerte(frage, antwort, anteil) {
   if (frage.art === "balken") return punkteSchaetzen(antwort, frage.loesung);
+  if (frage.art === "karte") return punkteKarte(antwort, frage.loesung);
   return punkteZeitleiste(antwort, frage.loesung, frage.daten.von, frage.daten.bis);
 }
 
@@ -194,11 +215,14 @@ export function loesungAlsText(frage) {
   if (frage.art === "balken") {
     return (zahlText(frage.loesung) + " " + frage.daten.einheit).trim();
   }
+  if (frage.art === "karte") return karte.ortAlsText(frage.loesung);
   return String(frage.loesung); // Jahr ohne Tausenderpunkt
 }
 
 // Host: Grafik mit eingetragener Lösung, darunter die besten Antworten
 export function zeigeAufloesung(bereich, frage, antworten) {
+  if (frage.art === "karte") return karte.zeigeAufloesung(bereich, frage, antworten);
+
   const grafik = zeichne(oeffentlicheDaten(frage), frage.loesung);
   const loesung = neu("p", "gross-hinweis", "Lösung: " + loesungAlsText(frage));
 

@@ -27,31 +27,26 @@ Diesen Abschnitt löschen, sobald der Nutzer das erledigt hat.
 
 - **Phase 1** fertig, **online** unter https://only-dylz.github.io/Quiz_Game/
   (GitHub Actions, `.github/workflows/pages.yml`). Erstes Online-Probespiel hat geklappt.
-- **Phase 2a** fertig und vom Nutzer getestet (PC + Handy):
-  `engine/grafik.js` mit den Arten `balken` (Zahlenfeld wie Schätzen) und
-  `zeitleiste` (Schieberegler + −1/+1). Grafiken als SVG über `svgNeu()` in
-  `hilfen.js`, auf dem Handy klein über der Eingabe. Punkteregel
-  `punkteZeitleiste` in `punkte.js`. Raumfahrt-Paket hat eine neue
-  Zeitleisten-Frage (rf-07, Mondlandung). 14 Tests grün.
-- `karte`: `pruefeFrage` gibt noch `false` zurück → die Frage wird übersprungen.
-  In den Tests wird `art === "karte"` bis 2b übersprungen.
+- **Phase 2** fertig und vom Nutzer getestet (PC + Handy):
+  - 2a: `engine/grafik.js` mit `balken` (Zahlenfeld wie Schätzen) und
+    `zeitleiste` (Schieberegler + −1/+1), SVG über `svgNeu()` in `hilfen.js`.
+  - 2b: `engine/karte.js` (von grafik.js aufgerufen): Leaflet 1.9.4 per unpkg mit
+    SRI-Hash in host.html/play.html, OSM-Kacheln mit Namensnennung. Handy tippt Ort,
+    Antwort `{ lat, lng }`. Auflösung: Lösung + Tipps mit Namen (Tooltip als
+    DOM-Element, nie als HTML-String!) + Liste „km daneben“.
+  - Punkte: `punkteZeitleiste`, `punkteKarte`, `entfernungKm` (Haversine) in `punkte.js`.
+  - Raumfahrt-Paket: alle 7 Fragen spielbar. 16 Tests grün.
 
-## Nächster Schritt: Phase 2b – Karte
+## Nächster Schritt: Phase 3 – Werkzeuge
 
-1. **Vorher klären und dem Nutzer sagen:** Leaflet (Open Source, per CDN mit
-   fester Version + SRI-Hash) und OpenStreetMap-Kacheln – Nutzungsrichtlinie
-   (Tile Usage Policy) prüfen: Namensnennung nötig, kein Massenabruf. Für ein
-   paar Spieler ok, kostenlos, kein Schlüssel.
-2. `karte` in `grafik.js`: Host zeigt Karte (`daten.mitte`, `daten.zoom`),
-   Handy tippt einen Punkt an (Marker) + Senden. Antwort `{ lat, lng }`,
-   prüfen: Zahlen, lat −90…90, lng −180…180.
-3. `punkteKarte` in `punkte.js` (Haversine, 2000-km-Grenze), Tests ergänzen,
-   Ausnahmen für `karte` in den Tests entfernen.
-4. Auflösung: Lösung + Tipps der Spieler als Marker auf der Host-Karte.
+- `tools/validate.py`: prüft Pakete auf das Format aus CLAUDE.md Abschnitt 4
+  (dieselben Regeln wie die `pruefeFrage`-Funktionen der Modi), läuft in `.venv`.
+- `tools/prompt.md`: Vorlage für NotebookLM/Claude, um neue Pakete zu erzeugen.
+- Danach ein zweites Themenpaket damit erzeugen und prüfen.
 
 ## Danach
 
-- Phase 3 (Python-Validator), Phase 4 (Themenauswahl, Highscores).
+- Phase 4 (Themenauswahl aus `packs/index.json`, Highscores), Phase 5 (Gemini).
 - **Mögliche Verbesserung:** Spieler-Kennung in `sessionStorage` merken, damit
   ein Neuladen nicht alle Punkte kostet (siehe „Bekannte Grenze 2“ in CLAUDE.md).
 
