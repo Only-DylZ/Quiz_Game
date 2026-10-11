@@ -561,6 +561,488 @@
           "url": "https://commons.wikimedia.org/wiki/File:Dirk_Nowitzki_-_2019202181209_2019-07-21_Champions_for_Charity_-_1829_-_B70I1864.jpg"
         }
       }
+    },
+    {
+      "id": "sport-034",
+      "modus": "auswahl",
+      "frage": "Welches Land gewann die allererste Fußball-Weltmeisterschaft?",
+      "optionen": [
+        "Uruguay",
+        "Argentinien",
+        "Brasilien",
+        "Italien"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Fußball-Weltmeisterschaft 1930",
+        "url": "https://de.wikipedia.org/wiki/Fußball-Weltmeisterschaft_1930"
+      }
+    },
+    {
+      "id": "sport-035",
+      "modus": "auswahl",
+      "frage": "In welcher Sportart springt man einen „Axel“?",
+      "optionen": [
+        "Skispringen",
+        "Turnen",
+        "Eiskunstlauf",
+        "Trampolinturnen"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Axel (Eiskunstlauf)",
+        "url": "https://de.wikipedia.org/wiki/Axel_(Eiskunstlauf)"
+      }
+    },
+    {
+      "id": "sport-036",
+      "modus": "auswahl",
+      "frage": "Wie heißt der „Ball“ beim Badminton?",
+      "optionen": [
+        "Federball",
+        "Puck",
+        "Squashball",
+        "Pingpongball"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Federball",
+        "url": "https://de.wikipedia.org/wiki/Federball"
+      }
+    },
+    {
+      "id": "sport-037",
+      "modus": "auswahl",
+      "frage": "Welcher Tennisspieler hat die meisten Grand-Slam-Titel im Herren-Einzel?",
+      "optionen": [
+        "Pete Sampras",
+        "Novak Đoković",
+        "Roger Federer",
+        "Rafael Nadal"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Novak Đoković",
+        "url": "https://de.wikipedia.org/wiki/Novak_Đoković"
+      },
+      "erklaerung": "24 Titel – Nadal folgt mit 22."
+    },
+    {
+      "id": "sport-038",
+      "modus": "auswahl",
+      "frage": "In welchem Land wurde Judo erfunden?",
+      "optionen": [
+        "Japan",
+        "China",
+        "Korea",
+        "Thailand"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Judo",
+        "url": "https://de.wikipedia.org/wiki/Judo"
+      }
+    },
+    {
+      "id": "sport-039",
+      "modus": "auswahl",
+      "frage": "Wie viele Spieler einer Mannschaft stehen beim Fußball auf dem Feld?",
+      "optionen": [
+        "10",
+        "9",
+        "12",
+        "11"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Fußball",
+        "url": "https://de.wikipedia.org/wiki/Fußball"
+      }
+    },
+    {
+      "id": "sport-040",
+      "modus": "auswahl",
+      "frage": "Welcher Deutsche wurde von 2010 bis 2013 viermal in Folge Formel-1-Weltmeister?",
+      "optionen": [
+        "Sebastian Vettel",
+        "Nico Rosberg",
+        "Nico Hülkenberg",
+        "Michael Schumacher"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Sebastian Vettel",
+        "url": "https://de.wikipedia.org/wiki/Sebastian_Vettel"
+      }
+    },
+    {
+      "id": "sport-041",
+      "modus": "auswahl",
+      "frage": "Welches Land hat die meisten Fußball-WM-Titel gewonnen?",
+      "optionen": [
+        "Deutschland",
+        "Brasilien",
+        "Italien",
+        "Argentinien"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Fußball-Weltmeisterschaft",
+        "url": "https://de.wikipedia.org/wiki/Fußball-Weltmeisterschaft"
+      },
+      "erklaerung": "Fünf Titel."
+    },
+    {
+      "id": "sport-042",
+      "modus": "auswahl",
+      "frage": "Wie heißt der wichtigste Mannschaftswettbewerb im Herren-Tennis?",
+      "optionen": [
+        "Davis Cup",
+        "Walker Cup",
+        "America’s Cup",
+        "Ryder Cup"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Davis Cup",
+        "url": "https://de.wikipedia.org/wiki/Davis_Cup"
+      }
+    },
+    {
+      "id": "sport-043",
+      "modus": "auswahl",
+      "frage": "Welche Farbe hat das Trikot des Gesamtführenden bei der Tour de France?",
+      "optionen": [
+        "Grün",
+        "Gelb",
+        "Weiß",
+        "Rot gepunktet"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Gelbes Trikot",
+        "url": "https://de.wikipedia.org/wiki/Gelbes_Trikot"
+      }
+    },
+    {
+      "id": "sport-044",
+      "modus": "auswahl",
+      "frage": "Wie heißt beim Boxen ein Sieg, bei dem der Gegner nicht mehr aufsteht?",
+      "optionen": [
+        "K. o.",
+        "Punktsieg",
+        "Remis",
+        "Disqualifikation"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Knockout",
+        "url": "https://de.wikipedia.org/wiki/Knockout"
+      }
+    },
+    {
+      "id": "sport-045",
+      "modus": "auswahl",
+      "frage": "In welcher Stadt steht das Wembley-Stadion?",
+      "optionen": [
+        "Liverpool",
+        "London",
+        "Manchester",
+        "Birmingham"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Wembley-Stadion",
+        "url": "https://de.wikipedia.org/wiki/Wembley-Stadion"
+      }
+    },
+    {
+      "id": "sport-046",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist ein olympisches Schwimmbecken?",
+      "einheit": "m",
+      "loesung": 50,
+      "quelle": {
+        "titel": "Wikipedia – Schwimmbecken",
+        "url": "https://de.wikipedia.org/wiki/Schwimmbecken"
+      }
+    },
+    {
+      "id": "sport-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten dauert ein Fußballspiel ohne Nachspielzeit?",
+      "einheit": "Minuten",
+      "loesung": 90,
+      "quelle": {
+        "titel": "Wikipedia – Fußballregeln",
+        "url": "https://de.wikipedia.org/wiki/Fußballregeln"
+      }
+    },
+    {
+      "id": "sport-048",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler einer Mannschaft stehen beim Handball auf dem Feld (mit Torwart)?",
+      "einheit": "Spieler",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Handball",
+        "url": "https://de.wikipedia.org/wiki/Handball"
+      }
+    },
+    {
+      "id": "sport-049",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilogramm wiegt die Hantelstange der Männer beim Gewichtheben?",
+      "einheit": "kg",
+      "loesung": 20,
+      "quelle": {
+        "titel": "Wikipedia – Gewichtheben",
+        "url": "https://de.wikipedia.org/wiki/Gewichtheben"
+      }
+    },
+    {
+      "id": "sport-050",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Weltrekord im Hochsprung der Männer?",
+      "einheit": "m",
+      "loesung": 2.45,
+      "quelle": {
+        "titel": "Wikipedia – Hochsprung",
+        "url": "https://de.wikipedia.org/wiki/Hochsprung"
+      },
+      "erklaerung": "Javier Sotomayor sprang 1993 über 2,45 m."
+    },
+    {
+      "id": "sport-051",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zahlenfelder hat eine Dartscheibe?",
+      "einheit": "Felder",
+      "loesung": 20,
+      "quelle": {
+        "titel": "Wikipedia – Darts",
+        "url": "https://de.wikipedia.org/wiki/Darts"
+      }
+    },
+    {
+      "id": "sport-052",
+      "modus": "schaetzen",
+      "frage": "Wie viele Pins stehen beim Bowling?",
+      "einheit": "Pins",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Bowling",
+        "url": "https://de.wikipedia.org/wiki/Bowling"
+      }
+    },
+    {
+      "id": "sport-053",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler einer Mannschaft stehen beim Baseball auf dem Feld?",
+      "einheit": "Spieler",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Baseball",
+        "url": "https://de.wikipedia.org/wiki/Baseball"
+      }
+    },
+    {
+      "id": "sport-054",
+      "modus": "schaetzen",
+      "frage": "Wie viele Punkte gibt es im American Football für einen Touchdown?",
+      "einheit": "Punkte",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Touchdown",
+        "url": "https://de.wikipedia.org/wiki/Touchdown"
+      }
+    },
+    {
+      "id": "sport-055",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr gewann Boris Becker als 17-Jähriger Wimbledon?",
+      "daten": {
+        "von": 1950,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1985,
+      "quelle": {
+        "titel": "Wikipedia – Boris Becker",
+        "url": "https://de.wikipedia.org/wiki/Boris_Becker"
+      }
+    },
+    {
+      "id": "sport-056",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr fanden Olympische Sommerspiele in Berlin statt?",
+      "daten": {
+        "von": 1880,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Modell T von Ford",
+            "jahr": 1908
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1936,
+      "quelle": {
+        "titel": "Wikipedia – Olympische Sommerspiele 1936",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1936"
+      }
+    },
+    {
+      "id": "sport-057",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr bekam der Europapokal der Landesmeister den Namen „Champions League“?",
+      "daten": {
+        "von": 1950,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Farbfernsehsendung in Deutschland",
+            "jahr": 1967
+          },
+          {
+            "name": "Euro wird Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1992,
+      "quelle": {
+        "titel": "Wikipedia – UEFA Champions League",
+        "url": "https://de.wikipedia.org/wiki/UEFA_Champions_League"
+      }
+    },
+    {
+      "id": "sport-058",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt St Andrews, die Heimat des Golfsports?",
+      "daten": {
+        "mitte": [
+          48,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 56.34,
+        "lng": -2.8
+      },
+      "quelle": {
+        "titel": "Wikipedia – St Andrews",
+        "url": "https://de.wikipedia.org/wiki/St_Andrews"
+      }
+    },
+    {
+      "id": "sport-059",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Kitzbühel mit der berühmten Streif-Abfahrt?",
+      "daten": {
+        "mitte": [
+          48,
+          2
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 47.45,
+        "lng": 12.39
+      },
+      "quelle": {
+        "titel": "Wikipedia – Kitzbühel",
+        "url": "https://de.wikipedia.org/wiki/Kitzbühel"
+      }
+    },
+    {
+      "id": "sport-060",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Melbourne, Austragungsort der Australian Open?",
+      "daten": {
+        "mitte": [
+          0,
+          100
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": -37.81,
+        "lng": 144.96
+      },
+      "quelle": {
+        "titel": "Wikipedia – Melbourne",
+        "url": "https://de.wikipedia.org/wiki/Melbourne"
+      }
+    },
+    {
+      "id": "sport-061",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Olympischen Sommerspiele chronologisch!",
+      "loesung": [
+        "München",
+        "Barcelona",
+        "Sydney",
+        "London"
+      ],
+      "oben": "früheste",
+      "unten": "späteste",
+      "quelle": {
+        "titel": "Wikipedia – Olympische Sommerspiele",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele"
+      }
+    },
+    {
+      "id": "sport-062",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Triathlon-Disziplinen in der Reihenfolge des Wettkampfs!",
+      "loesung": [
+        "Schwimmen",
+        "Radfahren",
+        "Laufen"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Triathlon",
+        "url": "https://de.wikipedia.org/wiki/Triathlon"
+      }
+    },
+    {
+      "id": "sport-063",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Schwimmstile nach dem Weltrekord über 100 m!",
+      "loesung": [
+        "Freistil",
+        "Schmetterling",
+        "Rücken",
+        "Brust"
+      ],
+      "oben": "am schnellsten",
+      "unten": "am langsamsten",
+      "quelle": {
+        "titel": "Wikipedia – Liste der Schwimmweltrekorde",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Schwimmweltrekorde"
+      }
     }
   ],
   "stechfragen": [
@@ -584,6 +1066,39 @@
       "quelle": {
         "titel": "Wikipedia – Kugelstoßen",
         "url": "https://de.wikipedia.org/wiki/Kugelstoßen"
+      }
+    },
+    {
+      "id": "sport-s03",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde Borussia Dortmund gegründet?",
+      "einheit": "",
+      "loesung": 1909,
+      "quelle": {
+        "titel": "Wikipedia – Borussia Dortmund",
+        "url": "https://de.wikipedia.org/wiki/Borussia_Dortmund"
+      }
+    },
+    {
+      "id": "sport-s04",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zentimeter hoch ist ein Fußballtor (Unterkante der Latte)?",
+      "einheit": "cm",
+      "loesung": 244,
+      "quelle": {
+        "titel": "Wikipedia – Fußballtor",
+        "url": "https://de.wikipedia.org/wiki/Fußballtor"
+      }
+    },
+    {
+      "id": "sport-s05",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bundesliga-Tore schoss Robert Lewandowski in der Rekordsaison 2020/21?",
+      "einheit": "Tore",
+      "loesung": 41,
+      "quelle": {
+        "titel": "Wikipedia – Robert Lewandowski",
+        "url": "https://de.wikipedia.org/wiki/Robert_Lewandowski"
       }
     }
   ]
