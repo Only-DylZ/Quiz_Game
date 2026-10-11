@@ -125,9 +125,9 @@
       "daten": {
         "mitte": [
           45,
-          60
+          45
         ],
-        "zoom": 3
+        "zoom": 2
       },
       "loesung": {
         "lat": 45.96,
