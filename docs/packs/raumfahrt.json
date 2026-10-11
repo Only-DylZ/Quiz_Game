@@ -53,7 +53,7 @@
       "frage": "Wie viele Menschen haben bisher den Mond betreten?",
       "einheit": "",
       "loesung": 12,
-      "erklaerung": "Zwölf Astronauten der Missionen Apollo 11 bis Apollo 17 (1969–1972).",
+      "erklaerung": "Zwölf Astronauten der Missionen Apollo 11 bis Apollo 17.",
       "quelle": {
         "titel": "Wikipedia – Apollo-Programm",
         "url": "https://de.wikipedia.org/wiki/Apollo-Programm"
@@ -101,12 +101,8 @@
         "bis": 2000,
         "ereignisse": [
           {
-            "name": "Sputnik 1",
-            "jahr": 1957
-          },
-          {
-            "name": "Gagarin im All",
-            "jahr": 1961
+            "name": "Fußball-WM in Deutschland",
+            "jahr": 1974
           },
           {
             "name": "Start der ISS",
@@ -210,19 +206,13 @@
       "modus": "reihenfolge",
       "frage": "Was geschah zuerst? Ordne nach dem Jahr!",
       "loesung": [
-        "Sputnik 1 im All",
-        "Erste Mondlandung",
+        "Erster Satellit im All",
+        "Erste Frau im All",
         "Erster Space-Shuttle-Flug",
         "Erstes ISS-Modul im All"
       ],
       "oben": "frühestes",
       "unten": "spätestes",
-      "werte": [
-        "1957",
-        "1969",
-        "1981",
-        "1998"
-      ],
       "quelle": {
         "titel": "Wikipedia – Geschichte der Raumfahrt",
         "url": "https://de.wikipedia.org/wiki/Geschichte_der_Raumfahrt"
@@ -611,15 +601,15 @@
       "frage": "In welchem Jahr landete die US-Sonde Viking 1 auf dem Mars?",
       "daten": {
         "von": 1950,
-        "bis": 2000,
+        "bis": 2010,
         "ereignisse": [
           {
-            "name": "Bau der Berliner Mauer",
-            "jahr": 1961
+            "name": "Erster Game Boy",
+            "jahr": 1989
           },
           {
-            "name": "Mauerfall",
-            "jahr": 1989
+            "name": "Erstes iPhone",
+            "jahr": 2007
           }
         ]
       },
