@@ -1,0 +1,623 @@
+{
+  "thema": "Zurück in die Vergangenheit",
+  "version": 1,
+  "beschreibung": "Antike, Mittelalter, Neuzeit – Geschichte zum Raten.",
+  "fragen": [
+    {
+      "id": "gesch-001",
+      "modus": "auswahl",
+      "frage": "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
+      "optionen": [
+        "Willy Brandt",
+        "Konrad Adenauer",
+        "Helmut Schmidt",
+        "Ludwig Erhard"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Konrad Adenauer",
+        "url": "https://de.wikipedia.org/wiki/Konrad_Adenauer"
+      }
+    },
+    {
+      "id": "gesch-002",
+      "modus": "auswahl",
+      "frage": "In welcher Stadt wurde Julius Caesar ermordet?",
+      "optionen": [
+        "Konstantinopel",
+        "Alexandria",
+        "Athen",
+        "Rom"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Gaius Iulius Caesar",
+        "url": "https://de.wikipedia.org/wiki/Gaius_Iulius_Caesar"
+      }
+    },
+    {
+      "id": "gesch-003",
+      "modus": "auswahl",
+      "frage": "Wer segelte 1492 im Auftrag Spaniens nach Amerika?",
+      "optionen": [
+        "Vasco da Gama",
+        "Ferdinand Magellan",
+        "Christoph Kolumbus",
+        "Amerigo Vespucci"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Christoph Kolumbus",
+        "url": "https://de.wikipedia.org/wiki/Christoph_Kolumbus"
+      }
+    },
+    {
+      "id": "gesch-004",
+      "modus": "auswahl",
+      "frage": "Welches der sieben antiken Weltwunder steht heute noch?",
+      "optionen": [
+        "Hängende Gärten der Semiramis",
+        "Leuchtturm von Alexandria",
+        "Koloss von Rhodos",
+        "Pyramiden von Gizeh"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Sieben Weltwunder der Antike",
+        "url": "https://de.wikipedia.org/wiki/Sieben_Weltwunder_der_Antike"
+      }
+    },
+    {
+      "id": "gesch-005",
+      "modus": "auswahl",
+      "frage": "Wer wurde 1871 der erste Kaiser des Deutschen Kaiserreichs?",
+      "optionen": [
+        "Otto von Bismarck",
+        "Friedrich III.",
+        "Wilhelm II.",
+        "Wilhelm I."
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Wilhelm I. (Deutsches Reich)",
+        "url": "https://de.wikipedia.org/wiki/Wilhelm_I._(Deutsches_Reich)"
+      }
+    },
+    {
+      "id": "gesch-006",
+      "modus": "auswahl",
+      "frage": "Welches Schiff sank 1912 nach der Kollision mit einem Eisberg?",
+      "optionen": [
+        "Titanic",
+        "Britannic",
+        "Queen Mary",
+        "Lusitania"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Titanic (Schiff)",
+        "url": "https://de.wikipedia.org/wiki/Titanic_(Schiff)"
+      }
+    },
+    {
+      "id": "gesch-007",
+      "modus": "auswahl",
+      "frage": "Wessen fast unberührtes Grab wurde 1922 im Tal der Könige entdeckt?",
+      "optionen": [
+        "Echnaton",
+        "Cheops",
+        "Ramses II.",
+        "Tutanchamun"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Tutanchamun",
+        "url": "https://de.wikipedia.org/wiki/Tutanchamun"
+      }
+    },
+    {
+      "id": "gesch-008",
+      "modus": "auswahl",
+      "frage": "Welche römische Stadt wurde beim Ausbruch des Vesuvs verschüttet?",
+      "optionen": [
+        "Ostia",
+        "Rom",
+        "Pompeji",
+        "Karthago"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Pompeji",
+        "url": "https://de.wikipedia.org/wiki/Pompeji"
+      }
+    },
+    {
+      "id": "gesch-009",
+      "modus": "auswahl",
+      "frage": "Wer veröffentlichte 1517 die 95 Thesen?",
+      "optionen": [
+        "Thomas Müntzer",
+        "Huldrych Zwingli",
+        "Johannes Calvin",
+        "Martin Luther"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – 95 Thesen",
+        "url": "https://de.wikipedia.org/wiki/95_Thesen"
+      }
+    },
+    {
+      "id": "gesch-010",
+      "modus": "auswahl",
+      "frage": "Welches Volk erbaute Machu Picchu?",
+      "optionen": [
+        "Olmeken",
+        "Maya",
+        "Inka",
+        "Azteken"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Machu Picchu",
+        "url": "https://de.wikipedia.org/wiki/Machu_Picchu"
+      }
+    },
+    {
+      "id": "gesch-011",
+      "modus": "auswahl",
+      "frage": "Welcher Feldherr überquerte mit Kriegselefanten die Alpen?",
+      "optionen": [
+        "Dschingis Khan",
+        "Julius Caesar",
+        "Hannibal",
+        "Alexander der Große"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Hannibal",
+        "url": "https://de.wikipedia.org/wiki/Hannibal"
+      }
+    },
+    {
+      "id": "gesch-012",
+      "modus": "auswahl",
+      "frage": "Wer regierte als Monarch am längsten über Großbritannien?",
+      "optionen": [
+        "Georg III.",
+        "Victoria",
+        "Elisabeth II.",
+        "Elisabeth I."
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Elisabeth II.",
+        "url": "https://de.wikipedia.org/wiki/Elisabeth_II."
+      }
+    },
+    {
+      "id": "gesch-013",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre dauerte der Hundertjährige Krieg wirklich?",
+      "einheit": "Jahre",
+      "loesung": 116,
+      "quelle": {
+        "titel": "Wikipedia – Hundertjähriger Krieg",
+        "url": "https://de.wikipedia.org/wiki/Hundertjähriger_Krieg"
+      },
+      "erklaerung": "Von 1337 bis 1453."
+    },
+    {
+      "id": "gesch-014",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre stand die Berliner Mauer?",
+      "einheit": "Jahre",
+      "loesung": 28,
+      "quelle": {
+        "titel": "Wikipedia – Berliner Mauer",
+        "url": "https://de.wikipedia.org/wiki/Berliner_Mauer"
+      }
+    },
+    {
+      "id": "gesch-015",
+      "modus": "schaetzen",
+      "frage": "Wie alt wurde Wolfgang Amadeus Mozart?",
+      "einheit": "Jahre",
+      "loesung": 35,
+      "quelle": {
+        "titel": "Wikipedia – Wolfgang Amadeus Mozart",
+        "url": "https://de.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart"
+      }
+    },
+    {
+      "id": "gesch-016",
+      "modus": "schaetzen",
+      "frage": "Wie viele Ehefrauen hatte König Heinrich VIII. von England?",
+      "einheit": "Ehefrauen",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Heinrich VIII. (England)",
+        "url": "https://de.wikipedia.org/wiki/Heinrich_VIII._(England)"
+      }
+    },
+    {
+      "id": "gesch-017",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre regierte der „Sonnenkönig“ Ludwig XIV. von Frankreich?",
+      "einheit": "Jahre",
+      "loesung": 72,
+      "quelle": {
+        "titel": "Wikipedia – Ludwig XIV.",
+        "url": "https://de.wikipedia.org/wiki/Ludwig_XIV."
+      }
+    },
+    {
+      "id": "gesch-018",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist die Cheops-Pyramide heute?",
+      "einheit": "m",
+      "loesung": 139,
+      "quelle": {
+        "titel": "Wikipedia – Cheops-Pyramide",
+        "url": "https://de.wikipedia.org/wiki/Cheops-Pyramide"
+      },
+      "erklaerung": "Ursprünglich war sie rund 147 m hoch."
+    },
+    {
+      "id": "gesch-019",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr vor Christus wurde Rom der Legende nach gegründet?",
+      "einheit": "v. Chr.",
+      "loesung": 753,
+      "quelle": {
+        "titel": "Wikipedia – Gründung Roms",
+        "url": "https://de.wikipedia.org/wiki/Gründung_Roms"
+      }
+    },
+    {
+      "id": "gesch-020",
+      "modus": "schaetzen",
+      "frage": "Wie lang war die Mauer rund um West-Berlin?",
+      "einheit": "km",
+      "loesung": 155,
+      "quelle": {
+        "titel": "Wikipedia – Berliner Mauer",
+        "url": "https://de.wikipedia.org/wiki/Berliner_Mauer"
+      }
+    },
+    {
+      "id": "gesch-021",
+      "modus": "schaetzen",
+      "frage": "Wie alt wurde Alexander der Große?",
+      "einheit": "Jahre",
+      "loesung": 32,
+      "quelle": {
+        "titel": "Wikipedia – Alexander der Große",
+        "url": "https://de.wikipedia.org/wiki/Alexander_der_Große"
+      }
+    },
+    {
+      "id": "gesch-022",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr fiel die Berliner Mauer?",
+      "daten": {
+        "von": 1950,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Tschernobyl-Katastrophe",
+            "jahr": 1986
+          },
+          {
+            "name": "Euro wird Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1989,
+      "quelle": {
+        "titel": "Wikipedia – Berliner Mauer",
+        "url": "https://de.wikipedia.org/wiki/Berliner_Mauer"
+      }
+    },
+    {
+      "id": "gesch-023",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr begann der Erste Weltkrieg?",
+      "daten": {
+        "von": 1850,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Kaiserreichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Börsencrash in New York",
+            "jahr": 1929
+          }
+        ]
+      },
+      "loesung": 1914,
+      "quelle": {
+        "titel": "Wikipedia – Erster Weltkrieg",
+        "url": "https://de.wikipedia.org/wiki/Erster_Weltkrieg"
+      }
+    },
+    {
+      "id": "gesch-024",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde in Paris die Bastille gestürmt?",
+      "daten": {
+        "von": 1600,
+        "bis": 1900,
+        "ereignisse": [
+          {
+            "name": "Unabhängigkeitserklärung der USA",
+            "jahr": 1776
+          },
+          {
+            "name": "Schlacht bei Waterloo",
+            "jahr": 1815
+          }
+        ]
+      },
+      "loesung": 1789,
+      "quelle": {
+        "titel": "Wikipedia – Sturm auf die Bastille",
+        "url": "https://de.wikipedia.org/wiki/Sturm_auf_die_Bastille"
+      }
+    },
+    {
+      "id": "gesch-025",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr endete das Weströmische Reich?",
+      "daten": {
+        "von": 1,
+        "bis": 1000,
+        "ereignisse": [
+          {
+            "name": "Ausbruch des Vesuvs",
+            "jahr": 79
+          },
+          {
+            "name": "Kaiserkrönung Karls des Großen",
+            "jahr": 800
+          }
+        ]
+      },
+      "loesung": 476,
+      "quelle": {
+        "titel": "Wikipedia – Weströmisches Reich",
+        "url": "https://de.wikipedia.org/wiki/Weströmisches_Reich"
+      }
+    },
+    {
+      "id": "gesch-026",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Waterloo, wo Napoleon endgültig geschlagen wurde?",
+      "daten": {
+        "mitte": [
+          48,
+          5
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 50.71,
+        "lng": 4.4
+      },
+      "quelle": {
+        "titel": "Wikipedia – Schlacht bei Waterloo",
+        "url": "https://de.wikipedia.org/wiki/Schlacht_bei_Waterloo"
+      }
+    },
+    {
+      "id": "gesch-027",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo lag das antike Troja?",
+      "daten": {
+        "mitte": [
+          40,
+          20
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 39.96,
+        "lng": 26.24
+      },
+      "quelle": {
+        "titel": "Wikipedia – Troja",
+        "url": "https://de.wikipedia.org/wiki/Troja"
+      }
+    },
+    {
+      "id": "gesch-028",
+      "modus": "reihenfolge",
+      "frage": "Was geschah zuerst? Ordne chronologisch!",
+      "loesung": [
+        "Bau der Cheops-Pyramide",
+        "Gründung Roms (Legende)",
+        "Tod Caesars",
+        "Kaiserkrönung Karls des Großen"
+      ],
+      "oben": "am frühesten",
+      "unten": "am spätesten",
+      "quelle": {
+        "titel": "Wikipedia – Weltgeschichte",
+        "url": "https://de.wikipedia.org/wiki/Weltgeschichte"
+      }
+    },
+    {
+      "id": "gesch-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Erfindungen nach ihrem Alter!",
+      "loesung": [
+        "Rad",
+        "Buchdruck mit beweglichen Lettern",
+        "Dampfmaschine",
+        "Telefon"
+      ],
+      "oben": "älteste",
+      "unten": "jüngste",
+      "quelle": {
+        "titel": "Wikipedia – Liste von Erfindern",
+        "url": "https://de.wikipedia.org/wiki/Liste_von_Erfindern"
+      }
+    },
+    {
+      "id": "gesch-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Bundeskanzler nach ihrem Amtsantritt!",
+      "loesung": [
+        "Ludwig Erhard",
+        "Willy Brandt",
+        "Helmut Kohl",
+        "Angela Merkel"
+      ],
+      "oben": "am frühesten",
+      "unten": "am spätesten",
+      "werte": [
+        "1963",
+        "1969",
+        "1982",
+        "2005"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Bundeskanzler (Deutschland)",
+        "url": "https://de.wikipedia.org/wiki/Bundeskanzler_(Deutschland)"
+      }
+    },
+    {
+      "id": "gesch-031",
+      "modus": "auswahl",
+      "frage": "Wer ist auf diesem Bild zu sehen?",
+      "optionen": [
+        "Paul von Hindenburg",
+        "Helmuth von Moltke",
+        "Otto von Bismarck",
+        "Friedrich Ebert"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Otto von Bismarck",
+        "url": "https://de.wikipedia.org/wiki/Otto_von_Bismarck"
+      },
+      "bild": {
+        "datei": "bilder/gesch-031.jpg",
+        "urheber": "Franz von Lenbach",
+        "lizenz": "Public domain",
+        "quelle": {
+          "titel": "Wikimedia Commons – Otto-von-Bismarck.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Otto-von-Bismarck.jpg"
+        }
+      }
+    },
+    {
+      "id": "gesch-032",
+      "modus": "auswahl",
+      "frage": "Wer ist auf diesem Bild zu sehen?",
+      "optionen": [
+        "Maximilien de Robespierre",
+        "Ludwig XVI.",
+        "Charles de Gaulle",
+        "Napoleon Bonaparte"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Napoleon Bonaparte",
+        "url": "https://de.wikipedia.org/wiki/Napoleon_Bonaparte"
+      },
+      "bild": {
+        "datei": "bilder/gesch-032.jpg",
+        "urheber": "Jacques-Louis David",
+        "lizenz": "Public domain",
+        "quelle": {
+          "titel": "Wikimedia Commons – Jacques-Louis David - The Emperor Napoleon in His Study at the Tuileries - Google Art Project (cropped).jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project_(cropped).jpg"
+        }
+      }
+    },
+    {
+      "id": "gesch-033",
+      "modus": "auswahl",
+      "frage": "Wer ist auf diesem Bild zu sehen?",
+      "optionen": [
+        "Thomas Jefferson",
+        "Abraham Lincoln",
+        "Ulysses S. Grant",
+        "George Washington"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Abraham Lincoln",
+        "url": "https://de.wikipedia.org/wiki/Abraham_Lincoln"
+      },
+      "bild": {
+        "datei": "bilder/gesch-033.jpg",
+        "urheber": "Alexander Gardner",
+        "lizenz": "Public domain",
+        "quelle": {
+          "titel": "Wikimedia Commons – Abraham_Lincoln_O-77_matte_collodion_print.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+        }
+      }
+    },
+    {
+      "id": "gesch-034",
+      "modus": "auswahl",
+      "frage": "Wer ist auf diesem Bild zu sehen?",
+      "optionen": [
+        "Hatschepsut",
+        "Julia (Tochter des Augustus)",
+        "Nofretete",
+        "Kleopatra"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Kleopatra VII.",
+        "url": "https://de.wikipedia.org/wiki/Kleopatra_VII."
+      },
+      "bild": {
+        "datei": "bilder/gesch-034.jpg",
+        "urheber": "Phyrexian",
+        "lizenz": "Public domain",
+        "quelle": {
+          "titel": "Wikimedia Commons – Berlin_-_Altes_Museum_7922.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Berlin_-_Altes_Museum_7922.jpg"
+        }
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "gesch-s01",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde die Bundesrepublik Deutschland gegründet?",
+      "einheit": "",
+      "loesung": 1949,
+      "quelle": {
+        "titel": "Wikipedia – Gründung der Bundesrepublik Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Gründung_der_Bundesrepublik_Deutschland"
+      }
+    },
+    {
+      "id": "gesch-s02",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre regierte Kaiser Franz Joseph I. von Österreich?",
+      "einheit": "Jahre",
+      "loesung": 68,
+      "quelle": {
+        "titel": "Wikipedia – Franz Joseph I.",
+        "url": "https://de.wikipedia.org/wiki/Franz_Joseph_I."
+      }
+    }
+  ]
+}

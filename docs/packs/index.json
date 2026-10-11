@@ -31,6 +31,10 @@
     {
       "datei": "mathe.json",
       "thema": "Mathe"
+    },
+    {
+      "datei": "geschichte.json",
+      "thema": "Zurück in die Vergangenheit"
     }
   ]
 }
