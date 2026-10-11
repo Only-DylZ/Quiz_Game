@@ -502,6 +502,493 @@
         "titel": "Wikipedia – Harry Potter",
         "url": "https://de.wikipedia.org/wiki/Harry_Potter"
       }
+    },
+    {
+      "id": "film-031",
+      "modus": "auswahl",
+      "frage": "Welcher Zauberer ruft in „Der Herr der Ringe“: „Du kannst nicht vorbei!“?",
+      "optionen": [
+        "Saruman",
+        "Elrond",
+        "Gandalf",
+        "Radagast"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Gandalf",
+        "url": "https://de.wikipedia.org/wiki/Gandalf"
+      }
+    },
+    {
+      "id": "film-032",
+      "modus": "auswahl",
+      "frage": "Wer spielte Iron Man im Marvel-Kinouniversum?",
+      "optionen": [
+        "Chris Hemsworth",
+        "Chris Evans",
+        "Mark Ruffalo",
+        "Robert Downey Jr."
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Robert Downey Jr.",
+        "url": "https://de.wikipedia.org/wiki/Robert_Downey_Jr."
+      }
+    },
+    {
+      "id": "film-033",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Clownfisch-Vater in „Findet Nemo“?",
+      "optionen": [
+        "Marlin",
+        "Dorie",
+        "Bruce",
+        "Gill"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Findet Nemo",
+        "url": "https://de.wikipedia.org/wiki/Findet_Nemo"
+      }
+    },
+    {
+      "id": "film-034",
+      "modus": "auswahl",
+      "frage": "Welches Raumschiff kommandiert Captain James T. Kirk?",
+      "optionen": [
+        "Serenity",
+        "Nostromo",
+        "Millennium Falcon",
+        "USS Enterprise"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Raumschiff Enterprise",
+        "url": "https://de.wikipedia.org/wiki/Raumschiff_Enterprise"
+      }
+    },
+    {
+      "id": "film-035",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Haustier der Familie Feuerstein?",
+      "optionen": [
+        "Garfield",
+        "Snoopy",
+        "Scooby",
+        "Dino"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Familie Feuerstein",
+        "url": "https://de.wikipedia.org/wiki/Familie_Feuerstein"
+      }
+    },
+    {
+      "id": "film-036",
+      "modus": "auswahl",
+      "frage": "Wer spielte den Terminator?",
+      "optionen": [
+        "Sylvester Stallone",
+        "Bruce Willis",
+        "Dolph Lundgren",
+        "Arnold Schwarzenegger"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Terminator (Film)",
+        "url": "https://de.wikipedia.org/wiki/Terminator_(Film)"
+      }
+    },
+    {
+      "id": "film-037",
+      "modus": "auswahl",
+      "frage": "Wie heißt der junge Löwe in „Der König der Löwen“?",
+      "optionen": [
+        "Mufasa",
+        "Simba",
+        "Scar",
+        "Nala"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Der König der Löwen",
+        "url": "https://de.wikipedia.org/wiki/Der_König_der_Löwen"
+      }
+    },
+    {
+      "id": "film-038",
+      "modus": "auswahl",
+      "frage": "In welcher Serie überfällt eine Bande die spanische Banknotendruckerei?",
+      "optionen": [
+        "Élite",
+        "Haus des Geldes",
+        "Dark",
+        "Narcos"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Haus des Geldes",
+        "url": "https://de.wikipedia.org/wiki/Haus_des_Geldes"
+      }
+    },
+    {
+      "id": "film-039",
+      "modus": "auswahl",
+      "frage": "Wer führte Regie bei „Jurassic Park“?",
+      "optionen": [
+        "George Lucas",
+        "Steven Spielberg",
+        "James Cameron",
+        "Ridley Scott"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Steven Spielberg",
+        "url": "https://de.wikipedia.org/wiki/Steven_Spielberg"
+      }
+    },
+    {
+      "id": "film-040",
+      "modus": "auswahl",
+      "frage": "Welcher Hobbit trägt den Einen Ring nach Mordor?",
+      "optionen": [
+        "Pippin",
+        "Frodo",
+        "Bilbo",
+        "Merry"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Frodo Beutlin",
+        "url": "https://de.wikipedia.org/wiki/Frodo_Beutlin"
+      }
+    },
+    {
+      "id": "film-041",
+      "modus": "auswahl",
+      "frage": "Welcher deutsche Regisseur drehte den U-Boot-Film „Das Boot“?",
+      "optionen": [
+        "Roland Emmerich",
+        "Wolfgang Petersen",
+        "Werner Herzog",
+        "Tom Tykwer"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Das Boot (Film)",
+        "url": "https://de.wikipedia.org/wiki/Das_Boot_(Film)"
+      }
+    },
+    {
+      "id": "film-042",
+      "modus": "auswahl",
+      "frage": "Welche Hautfarbe hat der Oger Shrek?",
+      "optionen": [
+        "Lila",
+        "Blau",
+        "Grau",
+        "Grün"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Shrek – Der tollkühne Held",
+        "url": "https://de.wikipedia.org/wiki/Shrek_–_Der_tollkühne_Held"
+      }
+    },
+    {
+      "id": "film-043",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kinofilme hat die Reihe „Fluch der Karibik“?",
+      "einheit": "Filme",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Fluch der Karibik",
+        "url": "https://de.wikipedia.org/wiki/Fluch_der_Karibik"
+      }
+    },
+    {
+      "id": "film-044",
+      "modus": "schaetzen",
+      "frage": "Wie viele Dalmatiner gibt es im berühmten Disney-Filmtitel?",
+      "einheit": "Dalmatiner",
+      "loesung": 101,
+      "quelle": {
+        "titel": "Wikipedia – 101 Dalmatiner",
+        "url": "https://de.wikipedia.org/wiki/101_Dalmatiner"
+      }
+    },
+    {
+      "id": "film-045",
+      "modus": "schaetzen",
+      "frage": "Wie viele Infinity-Steine gibt es im Marvel-Kinouniversum?",
+      "einheit": "Steine",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Marvel Cinematic Universe",
+        "url": "https://de.wikipedia.org/wiki/Marvel_Cinematic_Universe"
+      }
+    },
+    {
+      "id": "film-046",
+      "modus": "schaetzen",
+      "frage": "Wie viele Folgen hat „Friends“ insgesamt?",
+      "einheit": "Folgen",
+      "loesung": 236,
+      "quelle": {
+        "titel": "Wikipedia – Friends",
+        "url": "https://de.wikipedia.org/wiki/Friends"
+      }
+    },
+    {
+      "id": "film-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kinofilme hat die „Harry Potter“-Reihe (ohne „Phantastische Tierwesen“)?",
+      "einheit": "Filme",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Harry Potter (Filmreihe)",
+        "url": "https://de.wikipedia.org/wiki/Harry_Potter_(Filmreihe)"
+      }
+    },
+    {
+      "id": "film-048",
+      "modus": "schaetzen",
+      "frage": "In wie vielen James-Bond-Filmen spielte Daniel Craig den Agenten?",
+      "einheit": "Filme",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Daniel Craig",
+        "url": "https://de.wikipedia.org/wiki/Daniel_Craig"
+      }
+    },
+    {
+      "id": "film-049",
+      "modus": "schaetzen",
+      "frage": "Wie viele Oscars gewann „Oppenheimer“?",
+      "einheit": "Oscars",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Oppenheimer (2023)",
+        "url": "https://de.wikipedia.org/wiki/Oppenheimer_(2023)"
+      }
+    },
+    {
+      "id": "film-050",
+      "modus": "schaetzen",
+      "frage": "Wie viele Folgen hat die deutsche Netflix-Serie „Dark“?",
+      "einheit": "Folgen",
+      "loesung": 26,
+      "quelle": {
+        "titel": "Wikipedia – Dark (Fernsehserie)",
+        "url": "https://de.wikipedia.org/wiki/Dark_(Fernsehserie)"
+      }
+    },
+    {
+      "id": "film-051",
+      "modus": "schaetzen",
+      "frage": "Wie viele Distrikte gibt es in „Die Tribute von Panem“ (ohne das Kapitol)?",
+      "einheit": "Distrikte",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Die Tribute von Panem",
+        "url": "https://de.wikipedia.org/wiki/Die_Tribute_von_Panem"
+      }
+    },
+    {
+      "id": "film-052",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie lang ist die Kinofassung von „Der Herr der Ringe: Die Gefährten“?",
+      "daten": {
+        "einheit": "Minuten",
+        "balken": [
+          {
+            "name": "Barbie",
+            "wert": 114
+          },
+          {
+            "name": "Der Pate",
+            "wert": 175
+          },
+          {
+            "name": "Die Gefährten",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 171,
+      "quelle": {
+        "titel": "Wikipedia – Der Herr der Ringe: Die Gefährten (Film)",
+        "url": "https://de.wikipedia.org/wiki/Der_Herr_der_Ringe:_Die_Gefährten_(Film)"
+      }
+    },
+    {
+      "id": "film-053",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam „Toy Story“, der erste komplett computeranimierte Kinofilm, heraus?",
+      "daten": {
+        "von": 1950,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1995,
+      "quelle": {
+        "titel": "Wikipedia – Toy Story",
+        "url": "https://de.wikipedia.org/wiki/Toy_Story"
+      }
+    },
+    {
+      "id": "film-054",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr lief die erste Folge der „Lindenstraße“?",
+      "daten": {
+        "von": 1950,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Farbfernsehsendung in Deutschland",
+            "jahr": 1967
+          },
+          {
+            "name": "Euro wird Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1985,
+      "quelle": {
+        "titel": "Wikipedia – Lindenstraße",
+        "url": "https://de.wikipedia.org/wiki/Lindenstraße"
+      }
+    },
+    {
+      "id": "film-055",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam „E.T. – Der Außerirdische“ ins Kino?",
+      "daten": {
+        "von": 1950,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Farbfernsehsendung in Deutschland",
+            "jahr": 1967
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1982,
+      "quelle": {
+        "titel": "Wikipedia – E.T. – Der Außerirdische",
+        "url": "https://de.wikipedia.org/wiki/E.T._–_Der_Außerirdische"
+      }
+    },
+    {
+      "id": "film-056",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Mumbai, die Heimat der Filmindustrie „Bollywood“?",
+      "daten": {
+        "mitte": [
+          25,
+          60
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 19.08,
+        "lng": 72.88
+      },
+      "quelle": {
+        "titel": "Wikipedia – Bollywood",
+        "url": "https://de.wikipedia.org/wiki/Bollywood"
+      }
+    },
+    {
+      "id": "film-057",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Babelsberg mit einem der ältesten Filmstudios der Welt?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 52.38,
+        "lng": 13.12
+      },
+      "quelle": {
+        "titel": "Wikipedia – Studio Babelsberg",
+        "url": "https://de.wikipedia.org/wiki/Studio_Babelsberg"
+      }
+    },
+    {
+      "id": "film-058",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Disney-Filme nach ihrem Erscheinungsjahr!",
+      "loesung": [
+        "Bambi",
+        "Das Dschungelbuch",
+        "Aladdin",
+        "Vaiana"
+      ],
+      "oben": "ältester",
+      "unten": "neuester",
+      "quelle": {
+        "titel": "Wikipedia – Walt Disney Animation Studios",
+        "url": "https://de.wikipedia.org/wiki/Walt_Disney_Animation_Studios"
+      }
+    },
+    {
+      "id": "film-059",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Superhelden nach ihrem ersten Comic-Auftritt!",
+      "loesung": [
+        "Superman",
+        "Batman",
+        "Spider-Man",
+        "Black Panther"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Superheld",
+        "url": "https://de.wikipedia.org/wiki/Superheld"
+      }
+    },
+    {
+      "id": "film-060",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Serien nach ihrem Start!",
+      "loesung": [
+        "Die Simpsons",
+        "Friends",
+        "Breaking Bad",
+        "Squid Game"
+      ],
+      "oben": "älteste",
+      "unten": "neueste",
+      "quelle": {
+        "titel": "Wikipedia – Fernsehserie",
+        "url": "https://de.wikipedia.org/wiki/Fernsehserie"
+      }
     }
   ],
   "stechfragen": [
@@ -525,6 +1012,39 @@
       "quelle": {
         "titel": "Wikipedia – Casablanca (Film)",
         "url": "https://de.wikipedia.org/wiki/Casablanca_(Film)"
+      }
+    },
+    {
+      "id": "film-s03",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurden die ersten Oscars verliehen?",
+      "einheit": "",
+      "loesung": 1929,
+      "quelle": {
+        "titel": "Wikipedia – Oscarverleihung 1929",
+        "url": "https://de.wikipedia.org/wiki/Oscarverleihung_1929"
+      }
+    },
+    {
+      "id": "film-s04",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr kam Fritz Langs Stummfilm „Metropolis“ ins Kino?",
+      "einheit": "",
+      "loesung": 1927,
+      "quelle": {
+        "titel": "Wikipedia – Metropolis (Film)",
+        "url": "https://de.wikipedia.org/wiki/Metropolis_(Film)"
+      }
+    },
+    {
+      "id": "film-s05",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr fand die Berlinale zum ersten Mal statt?",
+      "einheit": "",
+      "loesung": 1951,
+      "quelle": {
+        "titel": "Wikipedia – Internationale Filmfestspiele Berlin",
+        "url": "https://de.wikipedia.org/wiki/Internationale_Filmfestspiele_Berlin"
       }
     }
   ]
