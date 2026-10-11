@@ -1,2 +1,1 @@
-requests
-pydantic
+# Keine Abhängigkeiten nötig – tools/validate.py nutzt nur die Python-Standardbibliothek.

@@ -149,11 +149,11 @@ Quiz_Game/
 │     ├─ index.json        Liste aller verfügbaren Themenpakete.
 │     └─ raumfahrt.json    Beispielpaket mit je 2 Fragen pro Modus.
 ├─ tools/
-│  ├─ pruefen.mjs          Prüft alles mit einem Befehl: Syntax + Tests (Node.js).
+│  ├─ pruefen.mjs          Prüft alles mit einem Befehl: Syntax + Tests + Pakete (Node.js).
 │  ├─ spiel.test.mjs       Tests: Punkte, Zahlen-Eingabe, Lösungsschutz, Beispielpaket.
 │  ├─ prompt.md            Prompt-Vorlage, um mit NotebookLM/Claude neue Pakete zu erzeugen.
-│  ├─ validate.py          Prüft Fragenpakete auf das richtige Format.
-│  └─ requirements.txt     Python-Abhängigkeiten der Werkzeuge.
+│  ├─ validate.py          Prüft Fragenpakete (auch index.json); --links ruft Quellen-Links auf.
+│  └─ requirements.txt     Python-Abhängigkeiten (zurzeit keine – nur Standardbibliothek).
 └─ supabase/
    ├─ schema.sql           Tabellen rooms, players, answers für Supabase.
    └─ functions/           (ab Phase 5) Edge Function, die mit Gemini Pakete erzeugt.
@@ -324,7 +324,11 @@ Alles im Repo und alles im Browser-Code ist für jeden lesbar.
 - **Grafiken** als selbst gezeichnetes SVG, **Karten** mit Leaflet + OpenStreetMap.
 - `docs/config.js` und `.env` stehen in `.gitignore`; eingecheckt wird nur
   `config.example.js` (siehe aber „Offener Punkt“ unten).
-- **Python-Werkzeuge** liegen nur in `/tools` und laufen in einer `.venv`.
+- **Python-Werkzeuge** liegen nur in `/tools`. Solange sie nur die
+  Standardbibliothek nutzen (wie `validate.py`), brauchen sie keine `.venv`;
+  kommen Pakete aus `requirements.txt` dazu, dann in einer `.venv`.
+- **Prüfregeln doppelt:** `validate.py` und die `pruefeFrage`-Funktionen in
+  `docs/engine/*.js` prüfen dieselben Regeln. Ändert sich eine, beide anpassen.
 - **Vor jedem Commit `node tools/pruefen.mjs` ausführen** – muss „Alles in
   Ordnung“ melden. Neue Rechenregeln und neue Modi bekommen Tests in
   `tools/spiel.test.mjs`; jeder Modus wird im Test „oeffentlicheDaten enthält
@@ -410,7 +414,9 @@ Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
 - 2b: `karte` mit Leaflet + OpenStreetMap.
 
 **Aktueller Stand:** Phase 1 ist fertig und online (siehe „Online-Stellen“ unten).
-Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Als Nächstes: Phase 3.
+Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Phase 3: `validate.py` und
+`prompt.md` sind fertig, Raumfahrt hat 10 Fragen + Stechfrage. Als Nächstes:
+weitere Pakete (mindestens ~6), danach Phase 4.
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`

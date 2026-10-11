@@ -4,6 +4,7 @@
 //
 // 1. Syntax: Hat eine JavaScript-Datei in docs/ einen Tippfehler?
 // 2. Tests:  Stimmen Punkte, Zahlen-Eingabe und Lösungsschutz? (tools/*.test.mjs)
+// 3. Pakete: Sind alle Fragenpakete gültig? (ruft tools/validate.py mit Python auf)
 //
 // Läuft nur auf dem eigenen PC mit Node.js – gehört nicht zur Website.
 
@@ -47,6 +48,21 @@ const tests = readdirSync(import.meta.dirname)
 
 const lauf = spawnSync(process.execPath, ["--test", ...tests], { stdio: "inherit" });
 if (lauf.status !== 0) fehler++;
+
+// ---------------------------------------------------------------------------
+// 3. Fragenpakete prüfen (Python)
+// ---------------------------------------------------------------------------
+console.log("\n3. Fragenpakete prüfen …");
+// Unter Windows heißt Python meist "python", unter Linux (GitHub Actions) "python3"
+const validator = join(import.meta.dirname, "validate.py");
+let python = spawnSync("python", [validator], { stdio: "inherit" });
+if (python.error) python = spawnSync("python3", [validator], { stdio: "inherit" });
+if (python.error) {
+  // Python nicht installiert: nur Hinweis, die Website braucht Python nicht
+  console.log("   Hinweis: Python nicht gefunden – Pakete wurden nicht geprüft.");
+} else if (python.status !== 0) {
+  fehler++;
+}
 
 // ---------------------------------------------------------------------------
 console.log(fehler === 0 ? "\nAlles in Ordnung ✔" : "\nEs gibt Fehler ✘");

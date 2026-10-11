@@ -217,3 +217,11 @@ test("Beispielpaket: alle Fragen der bekannten Modi sind gültig", () => {
     assert.equal(modul.bewerte(frage, frage.loesung, 1), 1000, frage.id);
   }
 });
+
+test("Beispielpaket: 10 Fragen + gültige Stechfrage ohne Lösung für die Handys", () => {
+  assert.equal(paket.fragen.length, 10);
+  const stech = paket.stechfrage;
+  assert.equal(stech.modus, "schaetzen");
+  assert.ok(schaetzen.pruefeFrage(stech));
+  assert.ok(!JSON.stringify(schaetzen.oeffentlicheDaten(stech)).includes(String(stech.loesung)));
+});

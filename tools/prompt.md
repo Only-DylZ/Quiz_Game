@@ -3,11 +3,19 @@
 So geht's:
 1. In NotebookLM (oder Claude) die Quellen zum Thema hochladen
    (Artikel, PDFs, Wikipedia-Seiten …).
-2. Den Text unten ab „--- PROMPT ---“ kopieren, `[THEMA]` und die Anzahlen anpassen.
-3. Die Antwort als `docs/packs/<thema>.json` speichern (Dateiname klein, ohne Umlaute).
-4. Mit `python tools/validate.py docs/packs/<thema>.json` prüfen (ab Phase 3).
-5. Das Paket in `docs/packs/index.json` eintragen.
+2. Den Text unten ab „--- PROMPT ---“ kopieren und `[THEMA]` ersetzen.
+   Die Aufteilung auf die Modi darf man ändern – es müssen aber **genau 10** bleiben.
+3. Die Antwort als `docs/packs/<thema>.json` speichern (Dateiname klein, ohne
+   Umlaute und Leerzeichen, z. B. `antikes-rom.json`).
+4. Prüfen (im Projektordner):
+   `python tools/validate.py docs/packs/<thema>.json --links`
+   Fehler korrigieren – oder die Fehlermeldung an die KI zurückgeben
+   („Korrigiere bitte: …“). `--links` ruft alle Quellen-Links auf und findet
+   erfundene Links.
+5. Das Paket in `docs/packs/index.json` eintragen:
+   `{ "datei": "<thema>.json", "thema": "<Thema>" }`
 6. Fakten stichprobenartig selbst nachprüfen – auch KI-Antworten können falsch sein.
+7. Zum Schluss `node tools/pruefen.mjs` – muss „Alles in Ordnung“ melden.
 
 --- PROMPT ---
 
@@ -15,10 +23,14 @@ Erstelle ein Quiz-Fragenpaket zum Thema **[THEMA]** ausschließlich auf Basis
 der bereitgestellten Quellen. Erfinde keine Fakten. Jede Frage braucht eine
 Quelle, aus der die Lösung eindeutig hervorgeht.
 
-Erzeuge:
-- [4] Fragen im Modus `auswahl`
-- [4] Fragen im Modus `schaetzen`
-- [2] Fragen im Modus `grafik` (Arten: `balken`, `zeitleiste` oder `karte`)
+Erzeuge **genau 10 Fragen** im Feld `fragen`:
+- 4 Fragen im Modus `auswahl`
+- 3 Fragen im Modus `schaetzen`
+- 3 Fragen im Modus `grafik` (möglichst verschiedene Arten: `balken`, `zeitleiste`, `karte`)
+
+Dazu **eine Stechfrage** im Feld `stechfrage`: immer Modus `schaetzen`, mit einer
+eindeutigen Zahl als Lösung (keine „ungefähr“-Werte, bei denen Quellen sich
+widersprechen). Sie wird nur bei Gleichstand gespielt.
 
 Gib **nur gültiges JSON** aus, ohne Erklärtext davor oder danach,
 in genau diesem Format:
@@ -83,7 +95,15 @@ in genau diesem Format:
       "loesung": { "lat": 48.14, "lng": 11.58 },
       "quelle": { "titel": "...", "url": "https://..." }
     }
-  ]
+  ],
+  "stechfrage": {
+    "id": "kurz-s1",
+    "modus": "schaetzen",
+    "frage": "Wie viele ...?",
+    "einheit": "",
+    "loesung": 42,
+    "quelle": { "titel": "...", "url": "https://..." }
+  }
 }
 ```
 
@@ -93,9 +113,14 @@ Regeln:
 - `schaetzen`: `loesung` ist eine Zahl (ohne Tausenderpunkte), `einheit` angeben
   (leerer Text `""` bei reinen Anzahlen).
 - `grafik` / `balken`: genau ein Balken hat `"wert": null`; `loesung` ist dessen Wert.
+- `grafik` / `balken`: 2–8 Balken, Namen kurz (höchstens 16 Zeichen).
 - `grafik` / `zeitleiste`: 2–4 Hilfsereignisse; das gesuchte Ereignis nicht in der Liste.
+  `von` und `bis` sind ganze Jahre, die Lösung liegt dazwischen.
 - `grafik` / `karte`: `loesung` mit Breitengrad `lat` und Längengrad `lng`
-  (Dezimalgrad, 2 Nachkommastellen).
+  (Dezimalgrad, 2 Nachkommastellen). `mitte` zeigt die Region, aber nicht genau
+  auf die Lösung; `zoom` 2–6.
+- Jede `id` nur einmal, z. B. `rom-01` … `rom-10` und `rom-s1` für die Stechfrage.
+- Antworttexte kurz halten (höchstens ca. 60 Zeichen), Fragetexte unter 200 Zeichen.
 - Fragen kurz und eindeutig formulieren, auf Deutsch, für Erwachsene ohne Vorwissen
   machbar.
 - Keine Frage, deren Antwort sich bald ändern könnte (z. B. „aktuell“, „bisher“),

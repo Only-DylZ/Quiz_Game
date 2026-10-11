@@ -31,17 +31,17 @@ Joker pro Runde (Themenjoker = eigenes Thema via Gemini, Booster = Extra-Karte).
 Paketformat: **genau 10 Fragen + `stechfrage` (schaetzen)**. Bauphasen 3–5 in
 CLAUDE.md entsprechend angepasst.
 
-## Nächster Schritt: Phase 3 – Werkzeuge
+## Phase 3 – Stand
 
-- `tools/validate.py`: prüft Pakete auf das Format aus CLAUDE.md Abschnitt 4
-  (inkl. genau 10 Fragen + Stechfrage)
-  (dieselben Regeln wie die `pruefeFrage`-Funktionen der Modi), läuft in `.venv`.
-- `tools/prompt.md`: Vorlage für NotebookLM/Claude, um neue Pakete zu erzeugen.
-- Raumfahrt-Paket auf 10 Fragen + Stechfrage bringen, dann weitere Pakete
-  erzeugen (mindestens ~6 für die Themenwahl).
-- **Weg für Phase 5 ist entschieden** (siehe CLAUDE.md, Phase 5): Gemini
-  Flash-Lite über Supabase Edge Function, Anbieter austauschbar. Phase 3 zuerst,
-  weil der Validator später auch die KI-Antworten prüfen soll.
+- ✅ `tools/validate.py` (nur Standardbibliothek, keine .venv nötig): prüft alle
+  Regeln aus CLAUDE.md Abschnitt 4 inkl. genau 10 Fragen + Stechfrage, doppelte
+  ids, unbekannte Felder, index.json. `--links` ruft alle Quellen-Links auf.
+  Läuft auch als Schritt 3 in `node tools/pruefen.mjs` (also auch in GitHub Actions).
+- ✅ `tools/prompt.md` auf 10 Fragen (4 auswahl, 3 schaetzen, 3 grafik) + Stechfrage.
+- ✅ Raumfahrt: 10 Fragen + Stechfrage (rf-s1, Mondradius 1740 km laut NASA).
+  `index.json` ohne `anzahl_fragen` (immer 10).
+- **Nächster Schritt:** weitere Pakete erzeugen – mindestens ~6 insgesamt, damit
+  jeder Spieler 3 Themen zur Wahl hat. Themen mit dem Nutzer absprechen.
 
 ## Danach
 

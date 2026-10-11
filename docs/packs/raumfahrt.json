@@ -7,7 +7,12 @@
       "id": "rf-01",
       "modus": "auswahl",
       "frage": "Welcher Planet ist der größte im Sonnensystem?",
-      "optionen": ["Saturn", "Jupiter", "Neptun", "Erde"],
+      "optionen": [
+        "Saturn",
+        "Jupiter",
+        "Neptun",
+        "Erde"
+      ],
       "loesung": 1,
       "quelle": {
         "titel": "NASA Science – Jupiter",
@@ -18,7 +23,12 @@
       "id": "rf-02",
       "modus": "auswahl",
       "frage": "Wer war der erste Mensch im Weltall?",
-      "optionen": ["Neil Armstrong", "Alan Shepard", "Juri Gagarin", "Walentina Tereschkowa"],
+      "optionen": [
+        "Neil Armstrong",
+        "Alan Shepard",
+        "Juri Gagarin",
+        "Walentina Tereschkowa"
+      ],
       "loesung": 2,
       "erklaerung": "Juri Gagarin umkreiste am 12. April 1961 mit Wostok 1 die Erde.",
       "quelle": {
@@ -57,10 +67,22 @@
       "daten": {
         "einheit": "km",
         "balken": [
-          { "name": "Merkur", "wert": 4879 },
-          { "name": "Venus", "wert": 12104 },
-          { "name": "Erde", "wert": 12756 },
-          { "name": "Mars", "wert": null }
+          {
+            "name": "Merkur",
+            "wert": 4879
+          },
+          {
+            "name": "Venus",
+            "wert": 12104
+          },
+          {
+            "name": "Erde",
+            "wert": 12756
+          },
+          {
+            "name": "Mars",
+            "wert": null
+          }
         ]
       },
       "loesung": 6792,
@@ -78,9 +100,18 @@
         "von": 1950,
         "bis": 2000,
         "ereignisse": [
-          { "name": "Sputnik 1", "jahr": 1957 },
-          { "name": "Gagarin im All", "jahr": 1961 },
-          { "name": "Start der ISS", "jahr": 1998 }
+          {
+            "name": "Sputnik 1",
+            "jahr": 1957
+          },
+          {
+            "name": "Gagarin im All",
+            "jahr": 1961
+          },
+          {
+            "name": "Start der ISS",
+            "jahr": 1998
+          }
         ]
       },
       "loesung": 1969,
@@ -96,14 +127,77 @@
       "art": "karte",
       "frage": "Wo liegt das Kosmodrom Baikonur, von dem Gagarin startete?",
       "daten": {
-        "mitte": [45, 60],
+        "mitte": [
+          45,
+          60
+        ],
         "zoom": 3
       },
-      "loesung": { "lat": 45.96, "lng": 63.31 },
+      "loesung": {
+        "lat": 45.96,
+        "lng": 63.31
+      },
       "quelle": {
         "titel": "Wikipedia – Kosmodrom Baikonur",
         "url": "https://de.wikipedia.org/wiki/Kosmodrom_Baikonur"
       }
+    },
+    {
+      "id": "rf-08",
+      "modus": "auswahl",
+      "frage": "Wie hieß der erste künstliche Satellit im Erdorbit?",
+      "optionen": [
+        "Explorer 1",
+        "Wostok 1",
+        "Sputnik 1",
+        "Vanguard 1"
+      ],
+      "loesung": 2,
+      "erklaerung": "Die Sowjetunion startete Sputnik 1 am 4. Oktober 1957.",
+      "quelle": {
+        "titel": "Wikipedia – Sputnik 1",
+        "url": "https://de.wikipedia.org/wiki/Sputnik_1"
+      }
+    },
+    {
+      "id": "rf-09",
+      "modus": "schaetzen",
+      "frage": "Wie viele Erdtage dauert ein Jahr auf dem Mars?",
+      "einheit": "Tage",
+      "loesung": 687,
+      "quelle": {
+        "titel": "NASA Science – Mars Facts",
+        "url": "https://science.nasa.gov/mars/facts/"
+      }
+    },
+    {
+      "id": "rf-10",
+      "modus": "auswahl",
+      "frage": "Welche Raumsonde erreichte als erstes von Menschen gebautes Objekt den interstellaren Raum?",
+      "optionen": [
+        "Voyager 1",
+        "Pioneer 10",
+        "New Horizons",
+        "Cassini"
+      ],
+      "loesung": 0,
+      "erklaerung": "Voyager 1 verließ 2012 die Heliosphäre.",
+      "quelle": {
+        "titel": "NASA Science – Voyager 1",
+        "url": "https://science.nasa.gov/mission/voyager/voyager-1/"
+      }
     }
-  ]
+  ],
+  "stechfrage": {
+    "id": "rf-s1",
+    "modus": "schaetzen",
+    "frage": "Wie groß ist der Radius des Mondes – vom Mittelpunkt bis zur Oberfläche?",
+    "einheit": "km",
+    "loesung": 1740,
+    "erklaerung": "Der Mond ist damit weniger als ein Drittel so breit wie die Erde.",
+    "quelle": {
+      "titel": "NASA Science – Moon Facts",
+      "url": "https://science.nasa.gov/moon/facts/"
+    }
+  }
 }
