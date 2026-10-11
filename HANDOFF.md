@@ -8,162 +8,117 @@
 
 ---
 
-## Stand
+## Kurzfassung
 
-- **Phase 1** fertig, **online** unter https://only-dylz.github.io/Quiz_Game/
-  (GitHub Actions, `.github/workflows/pages.yml`). Erstes Online-Probespiel hat geklappt.
-- **Phase 2** fertig und vom Nutzer getestet (PC + Handy):
-  - 2a: `engine/grafik.js` mit `balken` (Zahlenfeld wie Schätzen) und
-    `zeitleiste` (Schieberegler + −1/+1), SVG über `svgNeu()` in `hilfen.js`.
-  - 2b: `engine/karte.js` (von grafik.js aufgerufen): Leaflet 1.9.4 per unpkg mit
-    SRI-Hash in host.html/play.html, OSM-Kacheln mit Namensnennung. Handy tippt Ort,
-    Antwort `{ lat, lng }`. Auflösung: Lösung + Tipps mit Namen (Tooltip als
-    DOM-Element, nie als HTML-String!) + Liste „km daneben“.
-  - Punkte: `punkteZeitleiste`, `punkteKarte`, `entfernungKm` (Haversine) in `punkte.js`.
-  - Raumfahrt-Paket: alle 7 Fragen spielbar. 16 Tests grün.
-
-## Neu festgelegt: Spielregeln mit Themenrunden
-
-Mit dem Nutzer ausführlich besprochen, steht in CLAUDE.md Abschnitt 1
-(„Spielregeln“): Themenrunden à 10 Fragen, 1 GP pro Runde, Stechfrage bei
-Gleichstand, GP-Ziel einstellbar, Themenwahl per Kandidaten + Glücksrad,
-Joker pro Runde (Themenjoker = eigenes Thema via Gemini, Booster = Extra-Karte).
-Paketformat: **genau 10 Fragen + `stechfrage` (schaetzen)**. Bauphasen 3–5 in
-CLAUDE.md entsprechend angepasst.
-
-## Phase 3 – fertig
-
-- `tools/validate.py` (Pool-Format, Bilder, Reihenfolge, Link-Check `--links`,
-  Hinweis bei schlecht gemischten Antwortpositionen). Läuft in `pruefen.mjs`.
-- `docs/engine/runde.js`: 10 Fragen pro Runde, Mix 4/3/2/1
-  (auswahl/schaetzen/grafik/reihenfolge), ungespielte zuerst (localStorage).
-- Karte ohne Namen (`docs/karten/welt.json`, Natural Earth), Bildfragen
-  (`docs/bilder/<id>.jpg|png`), Modus `reihenfolge` (Punkte nach Paaren).
-- `tools/bild_holen.py`: Commons-Bilder mit Lizenzdaten (Artikel-Hauptbild,
-  Datei oder Suche). Bilder danach immer selbst ansehen!
-- **13 Themenpakete** (je ~30 Fragen + 2 Stechfragen, viele mit Bildern):
-  Raumfahrt (12), Geographie, Tierwelt, Essen & Trinken, Biologie, Chemie,
-  Physik, Mathe, Zurück in die Vergangenheit, Das ist Deutsch, Filme & Serien,
-  Videospiele, Sport. Jede strittige Zahl per WebFetch gegen die Quelle geprüft.
-  Antwortpositionen gleichmäßig verteilt. Test: `host.html?paket=<dateiname>`.
-- Werkstatt-Skripte (Baukasten zum Schreiben der Pakete) lagen nur im Scratchpad;
-  die Pakete selbst (JSON) sind die Quelle der Wahrheit.
-
-## Phase 4a – fertig (vom Nutzer getestet)
-
-- Lobby-Einstellung „GPs zum Sieg“ (1–10), Runden à 10 Fragen, 1 GP für den
-  Rundensieger (`rundenSpitze`), Stechfrage bei Gleichstand (`stechfrageSieger`),
-  Rundenende-Bildschirm, Siegertreppchen nach GP.
-
-## Phase 4b – fertig (vom Nutzer getestet)
-
-- `engine/rad.js`: `angeboteErstellen` (3 zufällige, in diesem Spiel noch nicht
-  gespielte Themen pro Spieler), `radDrehung`/`feldNachDrehung` (Rad landet
-  auf der vorher gezogenen Karte), `radZeichnen` (SVG).
-- Handy: 3 Themen-Knöpfe, Kandidat antippen (umentscheiden bis zum Drehen).
-- Host: Liste „wer hat gewählt ✓“, Rad wächst mit jedem Kandidaten, Knopf
-  „Glücksrad drehen“ (ab 1 Kandidat), 5 s Drehung, dann „Runde starten“.
-  Lässt sich das Paket nicht laden: Karte fliegt raus, nochmal drehen.
-- Wer während der Themenwahl beitritt, bekommt auch ein Angebot.
-- `?paket=<name>`: Runde 1 direkt mit diesem Thema (Testmodus, ohne Rad).
-- Dazu (Wunsch des Nutzers): Reihenfolge-Fragen – einsortierte Elemente lassen
-  sich am Griff ☰ ziehen und zwischen andere schieben (Pointer-Events, gehen mit
-  Finger und Maus; HTML-Drag-and-Drop geht auf Handys nicht). `verschieben()` getestet.
-
-## Phase 4c – fertig (vom Nutzer getestet) → Phase 4 komplett
-
-- Lobby: „Booster pro Spieler und Runde“ (0–3, Standard 1), Hinweis
-  „Themenjoker kommt mit Phase 5“.
-- Handy: unter den 3 Themen eine Zeile [−] 🚀 1 von 2 [+ Booster] (erst nach
-  der Kandidatenwahl aktiv). Jeder Booster = eine weitere Karte des Kandidaten.
-- Host prüft: Booster ganze Zahl 0 … erlaubt, sonst wird die Nachricht ignoriert.
-  Liste zeigt „Anna ✓ 🚀×2“.
-
-## Phase 5 – fertig (eingerichtet und vom Nutzer getestet, 11.10.2026)
-
-- Gratis-Grenzen laut AI Studio (11.10.2026): 3.5 Flash-Lite 15 RPM / 500 RPD,
-  3.8 Flash 5 RPM / 20 RPD (2.5er gibt es für neue Konten nicht mehr). Früher notiert: 2.5 Flash-Lite 10 RPM / 20 RPD,
-  2.5 Flash 5 RPM / 20 RPD. Live-API-Modelle („Unbegrenzt“) passen nicht.
-- Secret `GEMINI_API_KEY` ist in Supabase hinterlegt (Nutzer, 11.10.2026).
-- `supabase/functions/themenjoker/index.ts` (reines JS, von pruefen.mjs mitgeprüft):
-  Host-im-Raum-Prüfung per Presence, Limits über Tabelle `themenjoker_aufrufe`
-  (RLS an, keine Policies, nur service_role), Gemini mit Google-Suche → bei
-  Fehler ohne Suche → bei 429 nächstes Modell. Antwort wird Frage für Frage
-  geprüft/umgebaut (zeitleiste/karte → grafik, Reihenfolge ggf. umgedreht,
-  nur https-Quellen). Immer Status 200 mit `{ ok, paket | fehler }`.
-- Website: Lobby „Themenjoker pro Spieler und Runde“ (0/1), Handy-Feld
-  „🃏 eigenes Thema“, Karte auf dem Rad (mit Booster kombinierbar), Erzeugung
-  erst nach dem Drehen, bei Fehler Karte raus + nochmal drehen (keine Karte
-  übrig → zufälliges festes Thema). KI-Fragen: Hinweis bei der Quelle.
-- 2.5-Modelle liefern 404 („no longer available to new users“) → umgestellt auf
-  gemini-3.5-flash-lite + gemini-3.8-flash, ohne thinkingConfig.
-- Mit Google-Suche kam 429 → jetzt bei 429 mit Suche erst ohne Suche probieren.
-  Seitdem funktioniert der Themenjoker (Test „Valorant“). Ob Suche im Gratis-Tarif
-  überhaupt geht: in den Supabase-Logs nachsehen (429 bei `true` = nein).
-- ~~Noch nicht live getestet~~ – vor allem die Presence-Prüfung in der Function
-  und ob Google-Suche im Gratis-Tarif klappt (Supabase-Logs ansehen).
-
-## Änderung 11.10.2026 (Wunsch des Nutzers)
-
-- Joker (Booster 0–5, Themenjoker 0–3) gelten **fürs ganze Spiel** statt pro Runde.
-  `spielstand` hat `booster`, `joker` (Vorrat) und `farbe`. Abgezogen wird beim
-  Drehen (`jokerVerbrauchen`, je Wahl einmal), bei Fehler zurück (`jokerZurueckgeben`).
-- Glücksrad: alle Karten eines Spielers in seiner Farbe (`FARBEN` aus rad.js),
-  dieselbe Farbe als Unterstrich in der Kandidatenliste.
-
-## Optik-Umbau (Pixel-Stil) – in Arbeit, noch nicht committet
-
-- Probe: `docs/probe.html/.js/.css`, Szenen per Code in `docs/engine/szenen.js`
-  (640×360, Licht oben links, Bayer-Dithering), Schrift `docs/schrift/` (Pixelify Sans, OFL).
-- Nutzer-Wünsche: Holz/Pergament-UI, Jahrmarkt-Rad neben Farm (Hauptmenü), pro Thema
-  eigener Hintergrund (Joker: Labor mit Fragezeichen), Tierwelt = Dschungel,
-  Antworten einheitlich mit A–D statt vier Farben.
-- Code-Szenen wirken dem Nutzer „zu perfekt“ → Plan: Hintergründe mit kostenloser
-  Bild-KI (Gemini-App / Microsoft Designer) erzeugen, mit `tools/pixel_bild.py`
-  (noch zu bauen) auf 640×360 + begrenzte Palette bringen. Rad bleibt SVG.
-- Beim Umbau der echten Seiten: Handy zeigt bei der Auflösung **eigene Antwort**
-  und **richtige Antwort** (z. B. „Deine Antwort: B – Giraffe ✗ / Richtig: D – Blauwal“).
-- Später: Avatare (LPC-Figuren vorgeschlagen, CC BY-SA → Credits nötig), laufen in
-  der Lobby, Sprechblasen mit Antworten bei der Auflösung.
-
-## Fragen-Pools erweitert (11.10.2026)
-
-- Alle 13 Themen um je 30 Fragen + 3 Stechfragen erweitert (Raumfahrt +30/+4):
-  jetzt 42–67 Fragen pro Thema und je 5 Stechfragen. Unsichere Zahlen per WebFetch
-  gegen Wikipedia geprüft, alle Links mit `validate.py --links` erreichbar.
-- Neue Prüfhilfe `tools/lecks.py` (auch Quellentitel, über alle Pakete). Damit
-  viele alte Lecks behoben (z. B. „Mauerfall 1989“/„Mondlandung 1969“ als
-  Zeitleisten-Ereignis, Everest-Höhe in `werte`, „Googol“, Blauwal/Haut/Gepard
-  in Reihenfolgen, Quellen „Scoville-Skala“/„Mojang“).
-- Doppelte Fragen über Paketgrenzen entfernt; Kartenansichten (Baikonur, Waterloo,
-  Singapur, …) starten nicht mehr an der Lösung.
-- Werkstatt-Skripte (`*2.py`, `erweitern.py`) liegen nur im Scratchpad – die Pakete
-  sind die Quelle der Wahrheit. Für den nächsten Block: `tools/prompt.md`
-  („Weiterer Block“) + `validate.py --links` + `lecks.py`.
-
-## Nächster Schritt
-
-- Wichtig: Änderungen an `supabase/functions/themenjoker/index.ts` muss der Nutzer
-  selbst im Dashboard deployen (Code ersetzen → Deploy) – GitHub Actions macht das nicht.
-- Danach: Pools in Blöcken à 30 erweitern (Ziel 150), Raumfahrt zuerst (nur 12).
-
-## Danach
-
-- Phase 5 (Gemini + Themenjoker).
-- **Mögliche Verbesserung:** Spieler-Kennung in `sessionStorage` merken, damit
-  ein Neuladen nicht alle Punkte kostet (siehe „Bekannte Grenze 2“ in CLAUDE.md).
+- **Alle 5 Bauphasen sind fertig, getestet und online** (https://only-dylz.github.io/Quiz_Game/):
+  Grundspiel, Grafik/Karte, Werkzeuge + 13 Themen, Themenrunden mit GP/Stechfrage/
+  Glücksrad/Booster, Themenjoker mit Gemini (Supabase Edge Function).
+- **Fragen-Pools:** 13 Themen mit 42–67 Fragen und je 5 Stechfragen (Ziel 150).
+- **In Arbeit: Optik-Umbau im Pixel-Stil** (Stardew-Valley-artig). Probe-Seite und
+  alle Hintergrundbilder sind fertig, **noch nicht committet**. Nächster Schritt:
+  echte Seiten (host/play) umbauen.
 
 ---
 
+## Jetzt dran: Optik-Umbau (Pixel-Stil)
+
+### Was schon da ist (lokal, nicht committet – `git status` zeigt es)
+
+| Datei | Inhalt |
+|---|---|
+| `docs/probe.html/.js/.css` | Optik-Probe: Hauptmenü (Farm + Jahrmarkt-Rad) und Fragebildschirm, oben „Frage aus: …“ für alle 13 Themen + Joker (echte Fragen aus den Paketen). Ansehen: Live Server → `docs/probe.html`, oder `probe.html#sport` |
+| `docs/bilder/szenen/*.png` | 15 Hintergründe (640×360, 64 Farben, je 52–109 KB): `farm` (Hauptmenü), 13 Themen (Name = Paketdatei ohne `.json`), `joker` (für eigene Themen) |
+| `docs/engine/jahrmarkt.js` | Glücksrad als Jahrmarkt-Rad im Pixel-Stil: wird bei jeder Drehung neu in groben Pixeln (passend zur Pixelgröße des Hintergrunds) auf `<canvas>` gezeichnet, Holzgestell, blinkende Birnen, scharfe Beschriftung auf zweiter Leinwand. API: `jahrmarktErstellen(behaelter)` → `kartenSetzen(karten)`, `drehen(gewinner)` (Promise). Für den echten Host gedacht. |
+| `docs/engine/rad.js` (geändert) | `FARBEN` jetzt erdige Töne; `radZeichnen(karten, mitText)`; Strichfarben direkt im SVG (CSS gilt in SVG-als-Bild nicht) |
+| `docs/engine/szenen.js` | Ältere, per Code gezeichnete Szenen (Farm, Raumfahrt, Dschungel, Joker). Wird nur noch als Ersatz genutzt, falls ein Bild fehlt – kann evtl. entfallen. |
+| `docs/schrift/Jersey15.ttf` + `OFL-Jersey15.txt` | Schrift „Jersey 15“ (SIL OFL), im Repo statt Google Fonts (keine Daten an Dritte). Nur eine Strichstärke → nie `bold` (`font-synthesis: none`). |
+| `tools/pixel_bild.py` | KI-Bild → 640×360, 16:9-Zuschnitt, begrenzte Palette: `python tools/pixel_bild.py ki-bilder/<datei> <name> --farben 64` (Pillow) |
+| `tools/bild_prompts.md` | Prompts (Grundteil ≤ 283 Zeichen + Szene, passt unter Fireflys 750-Zeichen-Grenze) |
+| `ki-bilder/` | Rohbilder der Bild-KI, steht in `.gitignore` (kommt nie ins Repo) |
+
+### Vom Nutzer festgelegt
+- Holz-/Pergament-Oberfläche, klare Pixel-Schrift (Jersey 15 – Pixelify war zu schwer lesbar).
+- Hauptmenü = Jahrmarkt-Rad neben einer Farm; jedes Thema eigener Hintergrund,
+  eigene Themen (Joker) → `joker.png` (magisches Labor mit Fragezeichen).
+- Antworten **einheitlich** (Pergament-Knopf mit Holzschild A–D), keine vier Farben.
+  Das Handy zeigt dann ebenfalls A–D.
+- Rad passend zum Hintergrund (grobe Pixel, Holzfarben, Spielerfarben erdig).
+- Bei der Auflösung zeigt das Handy **eigene Antwort und richtige Antwort**
+  (z. B. „Deine Antwort: B – Giraffe ✗ / Richtig: D – Blauwal“).
+- Kleinigkeit: Im Raumfahrt-Bild weht eine Piratenflagge – Nutzer entscheidet, ob neu erzeugen.
+
+### Nächste Schritte (Vorschlag)
+1. Nutzer bestätigen lassen, dass die Probe passt (letzter Stand: Schrift, Rad, alle Bilder).
+2. **`style.css` auf den neuen Stil umstellen** (Werte/Bausteine aus `probe.css`:
+   `.holz`, `.pixel-knopf`, `.pixel-option` + `.buchstabe`, Farben als Variablen,
+   `@font-face` Jersey 15, `html { font-size: 20px }`).
+3. **Host:** Hintergrund-`<img class="szene">` je Schritt: Lobby/Themenwahl/Rundenende/
+   Ende = `farm`, Frage = Thema der Runde (`aktuellesThema.datei` ohne `.json`),
+   KI-Thema = `joker`. Glücksrad in der Themenwahl durch `jahrmarktErstellen`
+   ersetzen (Karten mit `farbe` aus `spielerFarbe`). Antwort-Kacheln in `auswahl.js`
+   auf A–D umstellen (Host und Handy).
+4. **Handy:** gleicher Stil, einfarbiger/ruhiger Hintergrund oder das Themenbild
+   abgedunkelt; Auflösung mit eigener + richtiger Antwort (Handy merkt sich, was es
+   gesendet hat; `loesungText` kommt schon vom Host).
+5. Testen (PC + Handy), dann committen: Probe-Dateien entweder löschen oder als
+   Vorschau behalten, `szenen.js` ggf. entfernen. CLAUDE.md (Ordnerstruktur,
+   Bauphasen „6: Optik“) und diese Datei aktualisieren.
+6. Später: Avatare (Vorschlag LPC-Figuren, CC BY-SA → Credits-Seite nötig), die in
+   der Lobby herumlaufen; Sprechblasen mit Antworten bei der Auflösung.
+
+---
+
+## Fragen-Pools – Stand und Werkzeuge
+
+| Thema | Fragen | | Thema | Fragen |
+|---|---|---|---|---|
+| Raumfahrt | 42 | | Mathe | 60 |
+| Geographie | 67 | | Zurück in die Vergangenheit | 64 |
+| Tierwelt | 64 | | Das ist Deutsch | 66 |
+| Essen & Trinken | 64 | | Filme & Serien | 60 |
+| Biologie | 60 | | Videospiele | 60 |
+| Chemie | 62 | | Sport | 63 |
+| Physik | 60 | | | |
+
+Alle mit 5 Stechfragen. Weitere Blöcke à 30 (Ziel 150): `tools/prompt.md`
+(„Weiterer Block“), dann `python tools/validate.py docs/packs/<datei> --links`
+und `python tools/lecks.py <id-präfix>` (Lecks auch über Paketgrenzen und in
+Quellentiteln – Treffer von Hand bewerten, viele sind harmlos). Unsichere Zahlen
+immer per WebFetch gegen die Quelle prüfen. Keine doppelten Fragen über Pakete hinweg.
+
+---
+
+## Themenjoker (Phase 5) – Betrieb
+
+- Edge Function `themenjoker` (Code: `supabase/functions/themenjoker/index.ts`).
+  **Änderungen muss der Nutzer selbst im Supabase-Dashboard deployen**
+  (Edge Functions → themenjoker → Code ersetzen → Deploy) – GitHub Actions macht das nicht.
+- Modelle: `gemini-3.5-flash-lite` (Gratis 15/min, 500/Tag), Reserve `gemini-3.8-flash`
+  (20/Tag). 2.5er-Modelle gibt es für neue Konten nicht mehr.
+- Eigene Limits: 10 pro Raum/Tag, 100 insgesamt/Tag (Tabelle `themenjoker_aufrufe`).
+- Google-Suche: bei 429 versucht die Function es ohne Suche. Ob Suche im Gratis-Tarif
+  geht, steht in den Function-Logs (429 bei `true` = nein).
+- Secret `GEMINI_API_KEY` liegt in Supabase. Nie Billing aktivieren („Abrechnung einrichten“).
+
+## Offene Ideen
+
+- Spieler-Kennung in `sessionStorage` merken, damit Neuladen nicht alle Punkte kostet
+  („Bekannte Grenze 2“ in CLAUDE.md).
+
+---
 
 ## Umgebung des Nutzers
 
 - Windows 11, VS Code mit Live Server (Port 5500, `.vscode/settings.json`: `useLocalIp: true`,
   nicht im Repo). Handy-Test im WLAN funktioniert.
-- Node.js v24 installiert (nur fürs Prüfen, nicht für die Website).
-- Git: `core.hooksPath = .githooks` aktiv, `user.email` lokal auf die
-  GitHub-noreply-Adresse gesetzt. `docs/config.js` liegt lokal und ist ignoriert.
-- Supabase-Projekt existiert (Free Plan, Frankfurt), anon key in `docs/config.js`.
+- Node.js v24 (nur fürs Prüfen), Python mit Pillow 12 (für `pixel_bild.py`, `bild_holen.py`).
+- Für Screenshots zur Selbstkontrolle: `python -m http.server 8765` in `docs/` +
+  Edge headless (`msedge.exe --headless=new --screenshot=… --window-size=1600,900
+  "http://127.0.0.1:8765/probe.html#sport"`), danach Server beenden.
+- Git: `core.hooksPath = .githooks` aktiv, `user.email` = GitHub-noreply-Adresse.
+  `docs/config.js` liegt lokal und ist ignoriert.
+- Supabase-Projekt (Free Plan, Frankfurt), anon key in `docs/config.js`.
+- Bilder erzeugt der Nutzer mit Gemini-App / Adobe Firefly (kostenlos).
 
 ## Arbeitsweise, die gut funktioniert hat
 
@@ -172,3 +127,4 @@ CLAUDE.md entsprechend angepasst.
 - Vor jedem Commit: `node tools/pruefen.mjs` + pre-commit-Hook.
 - Der Nutzer ist Anfänger: Erklärungen kurz und auf Deutsch, Befehle zum Kopieren,
   Sicherheits- und Kostenfragen immer zuerst ansprechen.
+- Optik: Eigene Ergebnisse vor dem Zeigen per Screenshot selbst ansehen.
