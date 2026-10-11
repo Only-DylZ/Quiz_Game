@@ -227,6 +227,507 @@
         "titel": "Wikipedia – Geschichte der Raumfahrt",
         "url": "https://de.wikipedia.org/wiki/Geschichte_der_Raumfahrt"
       }
+    },
+    {
+      "id": "rf-13",
+      "modus": "auswahl",
+      "frage": "Welcher Planet ist der Sonne am nächsten?",
+      "optionen": [
+        "Erde",
+        "Mars",
+        "Venus",
+        "Merkur"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Merkur (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Merkur_(Planet)"
+      }
+    },
+    {
+      "id": "rf-14",
+      "modus": "auswahl",
+      "frage": "Welcher Planet ist der heißeste im Sonnensystem?",
+      "optionen": [
+        "Venus",
+        "Mars",
+        "Jupiter",
+        "Merkur"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Venus (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Venus_(Planet)"
+      },
+      "erklaerung": "Ihre dichte CO₂-Atmosphäre heizt die Oberfläche auf rund 464 °C auf."
+    },
+    {
+      "id": "rf-15",
+      "modus": "auswahl",
+      "frage": "Wie heißt der größte Mond des Saturn?",
+      "optionen": [
+        "Titan",
+        "Ganymed",
+        "Io",
+        "Europa"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Titan (Mond)",
+        "url": "https://de.wikipedia.org/wiki/Titan_(Mond)"
+      }
+    },
+    {
+      "id": "rf-16",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Galaxie, in der unser Sonnensystem liegt?",
+      "optionen": [
+        "Andromedagalaxie",
+        "Milchstraße",
+        "Sombrero-Galaxie",
+        "Große Magellansche Wolke"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Milchstraße",
+        "url": "https://de.wikipedia.org/wiki/Milchstraße"
+      }
+    },
+    {
+      "id": "rf-17",
+      "modus": "auswahl",
+      "frage": "Welcher Himmelskörper verlor 2006 seinen Status als Planet?",
+      "optionen": [
+        "Uranus",
+        "Merkur",
+        "Neptun",
+        "Pluto"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Pluto",
+        "url": "https://de.wikipedia.org/wiki/Pluto"
+      },
+      "erklaerung": "Seitdem gilt Pluto als Zwergplanet."
+    },
+    {
+      "id": "rf-18",
+      "modus": "auswahl",
+      "frage": "Wer war der erste Deutsche im Weltall?",
+      "optionen": [
+        "Thomas Reiter",
+        "Ulf Merbold",
+        "Alexander Gerst",
+        "Sigmund Jähn"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Sigmund Jähn",
+        "url": "https://de.wikipedia.org/wiki/Sigmund_Jähn"
+      },
+      "erklaerung": "Er flog 1978 zur Raumstation Saljut 6."
+    },
+    {
+      "id": "rf-19",
+      "modus": "auswahl",
+      "frage": "Welches Weltraumteleskop startete 2021 als Nachfolger von Hubble?",
+      "optionen": [
+        "Spitzer",
+        "Chandra",
+        "James Webb",
+        "Kepler"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – James-Webb-Weltraumteleskop",
+        "url": "https://de.wikipedia.org/wiki/James-Webb-Weltraumteleskop"
+      }
+    },
+    {
+      "id": "rf-20",
+      "modus": "auswahl",
+      "frage": "Welches Unternehmen baut die Rakete Falcon 9?",
+      "optionen": [
+        "Blue Origin",
+        "SpaceX",
+        "Boeing",
+        "Arianespace"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Falcon 9",
+        "url": "https://de.wikipedia.org/wiki/Falcon_9"
+      }
+    },
+    {
+      "id": "rf-21",
+      "modus": "auswahl",
+      "frage": "Wie hieß die erste Frau im Weltall?",
+      "optionen": [
+        "Walentina Tereschkowa",
+        "Eileen Collins",
+        "Swetlana Sawizkaja",
+        "Sally Ride"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Walentina Tereschkowa",
+        "url": "https://de.wikipedia.org/wiki/Walentina_Tereschkowa"
+      }
+    },
+    {
+      "id": "rf-22",
+      "modus": "auswahl",
+      "frage": "Wie hieß die Hündin, die 1957 als erstes Lebewesen die Erde umkreiste?",
+      "optionen": [
+        "Belka",
+        "Ham",
+        "Laika",
+        "Strelka"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Laika",
+        "url": "https://de.wikipedia.org/wiki/Laika"
+      }
+    },
+    {
+      "id": "rf-23",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Zone voller eisiger Kleinkörper jenseits der Neptunbahn?",
+      "optionen": [
+        "Kuipergürtel",
+        "Van-Allen-Gürtel",
+        "Asteroidengürtel",
+        "Oortsche Wolke"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kuipergürtel",
+        "url": "https://de.wikipedia.org/wiki/Kuipergürtel"
+      }
+    },
+    {
+      "id": "rf-24",
+      "modus": "auswahl",
+      "frage": "Wie heißt der NASA-Rover, der 2021 im Jezero-Krater auf dem Mars landete?",
+      "optionen": [
+        "Perseverance",
+        "Opportunity",
+        "Curiosity",
+        "Spirit"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Perseverance (Rover)",
+        "url": "https://de.wikipedia.org/wiki/Perseverance_(Rover)"
+      }
+    },
+    {
+      "id": "rf-25",
+      "modus": "schaetzen",
+      "frage": "Wie viele Monde hat der Mars?",
+      "einheit": "Monde",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Mars (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Mars_(Planet)"
+      },
+      "erklaerung": "Sie heißen Phobos und Deimos."
+    },
+    {
+      "id": "rf-26",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sekunden braucht das Licht von der Sonne bis zur Erde?",
+      "einheit": "Sekunden",
+      "loesung": 499,
+      "quelle": {
+        "titel": "Wikipedia – Astronomische Einheit",
+        "url": "https://de.wikipedia.org/wiki/Astronomische_Einheit"
+      },
+      "erklaerung": "Etwa 8 Minuten und 19 Sekunden."
+    },
+    {
+      "id": "rf-27",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage braucht der Mond für eine Umrundung der Erde (siderischer Monat)?",
+      "einheit": "Tage",
+      "loesung": 27.3,
+      "quelle": {
+        "titel": "Wikipedia – Monat",
+        "url": "https://de.wikipedia.org/wiki/Monat"
+      },
+      "erklaerung": "Bis wieder Vollmond ist, dauert es länger (29,5 Tage), weil die Erde weiterwandert."
+    },
+    {
+      "id": "rf-28",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent der Masse des Sonnensystems stecken in der Sonne?",
+      "einheit": "%",
+      "loesung": 99.86,
+      "quelle": {
+        "titel": "Wikipedia – Sonne",
+        "url": "https://de.wikipedia.org/wiki/Sonne"
+      }
+    },
+    {
+      "id": "rf-29",
+      "modus": "schaetzen",
+      "frage": "Wie alt ist das Universum ungefähr?",
+      "einheit": "Milliarden Jahre",
+      "loesung": 13.8,
+      "quelle": {
+        "titel": "Wikipedia – Universum",
+        "url": "https://de.wikipedia.org/wiki/Universum"
+      }
+    },
+    {
+      "id": "rf-30",
+      "modus": "schaetzen",
+      "frage": "Wie viele Erdjahre braucht Saturn für eine Runde um die Sonne?",
+      "einheit": "Jahre",
+      "loesung": 29.5,
+      "quelle": {
+        "titel": "Wikipedia – Saturn (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Saturn_(Planet)"
+      }
+    },
+    {
+      "id": "rf-31",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent der Erdanziehung herrschen auf dem Mond?",
+      "einheit": "%",
+      "loesung": 16.5,
+      "quelle": {
+        "titel": "Wikipedia – Mond",
+        "url": "https://de.wikipedia.org/wiki/Mond"
+      },
+      "erklaerung": "Rund ein Sechstel – deshalb hüpften die Astronauten so leicht."
+    },
+    {
+      "id": "rf-32",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilometer legt das Licht in einer Sekunde zurück?",
+      "einheit": "km",
+      "loesung": 299792,
+      "quelle": {
+        "titel": "Wikipedia – Lichtgeschwindigkeit",
+        "url": "https://de.wikipedia.org/wiki/Lichtgeschwindigkeit"
+      }
+    },
+    {
+      "id": "rf-33",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten braucht die ISS für eine Erdumrundung?",
+      "einheit": "Minuten",
+      "loesung": 93,
+      "quelle": {
+        "titel": "Wikipedia – Internationale Raumstation",
+        "url": "https://de.wikipedia.org/wiki/Internationale_Raumstation"
+      }
+    },
+    {
+      "id": "rf-34",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie hoch war die Mondrakete Saturn V?",
+      "daten": {
+        "einheit": "m",
+        "balken": [
+          {
+            "name": "Freiheitsstatue mit Sockel",
+            "wert": 93
+          },
+          {
+            "name": "Saturn V",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 110.6,
+      "quelle": {
+        "titel": "Wikipedia – Saturn (Rakete)",
+        "url": "https://de.wikipedia.org/wiki/Saturn_(Rakete)"
+      }
+    },
+    {
+      "id": "rf-35",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie lange dauert ein Tag auf der Venus (eine Drehung um sich selbst)?",
+      "daten": {
+        "einheit": "Erdtage",
+        "balken": [
+          {
+            "name": "Erde",
+            "wert": 1
+          },
+          {
+            "name": "Mars",
+            "wert": 1.03
+          },
+          {
+            "name": "Venus",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 243,
+      "quelle": {
+        "titel": "Wikipedia – Venus (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Venus_(Planet)"
+      },
+      "erklaerung": "Außerdem dreht sie sich andersherum als fast alle anderen Planeten."
+    },
+    {
+      "id": "rf-36",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde das Hubble-Weltraumteleskop ins All gebracht?",
+      "daten": {
+        "von": 1960,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Erster IBM-PC",
+            "jahr": 1981
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1990,
+      "quelle": {
+        "titel": "Wikipedia – Hubble-Weltraumteleskop",
+        "url": "https://de.wikipedia.org/wiki/Hubble-Weltraumteleskop"
+      }
+    },
+    {
+      "id": "rf-37",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr landete die US-Sonde Viking 1 auf dem Mars?",
+      "daten": {
+        "von": 1950,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Bau der Berliner Mauer",
+            "jahr": 1961
+          },
+          {
+            "name": "Mauerfall",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1976,
+      "quelle": {
+        "titel": "Wikipedia – Viking 1",
+        "url": "https://de.wikipedia.org/wiki/Viking_1"
+      }
+    },
+    {
+      "id": "rf-38",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Kennedy Space Center, von dem die Apollo-Missionen starteten?",
+      "daten": {
+        "mitte": [
+          30,
+          -90
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 28.573,
+        "lng": -80.649
+      },
+      "quelle": {
+        "titel": "Wikipedia – Kennedy Space Center",
+        "url": "https://de.wikipedia.org/wiki/Kennedy_Space_Center"
+      }
+    },
+    {
+      "id": "rf-39",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der Weltraumbahnhof Kourou, von dem die Ariane-Raketen starten?",
+      "daten": {
+        "mitte": [
+          15,
+          -40
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": 5.232,
+        "lng": -52.776
+      },
+      "quelle": {
+        "titel": "Wikipedia – Centre Spatial Guyanais",
+        "url": "https://de.wikipedia.org/wiki/Centre_Spatial_Guyanais"
+      }
+    },
+    {
+      "id": "rf-40",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Himmelskörper nach ihrem Durchmesser!",
+      "loesung": [
+        "Saturn",
+        "Uranus",
+        "Erde",
+        "Venus",
+        "Merkur"
+      ],
+      "oben": "größter",
+      "unten": "kleinster",
+      "quelle": {
+        "titel": "Wikipedia – Planet",
+        "url": "https://de.wikipedia.org/wiki/Planet"
+      }
+    },
+    {
+      "id": "rf-41",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Entfernung von der Erde!",
+      "loesung": [
+        "Mond",
+        "Sonne",
+        "Proxima Centauri",
+        "Andromedagalaxie"
+      ],
+      "oben": "am nächsten",
+      "unten": "am weitesten",
+      "quelle": {
+        "titel": "Wikipedia – Proxima Centauri",
+        "url": "https://de.wikipedia.org/wiki/Proxima_Centauri"
+      }
+    },
+    {
+      "id": "rf-42",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Raumsonden nach ihrem Startjahr!",
+      "loesung": [
+        "Pioneer 10",
+        "Galileo",
+        "Cassini-Huygens",
+        "New Horizons"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "werte": [
+        "1972",
+        "1989",
+        "1997",
+        "2006"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Raumsonde",
+        "url": "https://de.wikipedia.org/wiki/Raumsonde"
+      }
     }
   ],
   "stechfragen": [
@@ -240,6 +741,50 @@
       "quelle": {
         "titel": "NASA Science – Moon Facts",
         "url": "https://science.nasa.gov/moon/facts/"
+      }
+    },
+    {
+      "id": "rf-s2",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilometer misst der Durchmesser der Sonne?",
+      "einheit": "km",
+      "loesung": 1392684,
+      "quelle": {
+        "titel": "Wikipedia – Sonne",
+        "url": "https://de.wikipedia.org/wiki/Sonne"
+      }
+    },
+    {
+      "id": "rf-s3",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr startete die erste Ariane-Rakete?",
+      "einheit": "",
+      "loesung": 1979,
+      "quelle": {
+        "titel": "Wikipedia – Ariane (Rakete)",
+        "url": "https://de.wikipedia.org/wiki/Ariane_(Rakete)"
+      }
+    },
+    {
+      "id": "rf-s4",
+      "modus": "schaetzen",
+      "frage": "In wie vielen Kilometern Höhe beginnt laut Kármán-Linie der Weltraum?",
+      "einheit": "km",
+      "loesung": 100,
+      "quelle": {
+        "titel": "Wikipedia – Kármán-Linie",
+        "url": "https://de.wikipedia.org/wiki/Kármán-Linie"
+      }
+    },
+    {
+      "id": "rf-s5",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauert ein Jahr auf der Venus?",
+      "einheit": "Tage",
+      "loesung": 225,
+      "quelle": {
+        "titel": "Wikipedia – Venus (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Venus_(Planet)"
       }
     }
   ]
