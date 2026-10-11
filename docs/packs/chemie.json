@@ -549,6 +549,488 @@
           "url": "https://commons.wikimedia.org/wiki/File:Sulfur_-_El_Desierto_mine,_San_Pablo_de_Napa,_Daniel_Campos_Province,_Potos%C3%AD,_Bolivia.jpg"
         }
       }
+    },
+    {
+      "id": "chem-033",
+      "modus": "auswahl",
+      "frage": "Welches chemische Symbol hat Eisen?",
+      "optionen": [
+        "Es",
+        "Ei",
+        "Ir",
+        "Fe"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Eisen",
+        "url": "https://de.wikipedia.org/wiki/Eisen"
+      }
+    },
+    {
+      "id": "chem-034",
+      "modus": "auswahl",
+      "frage": "Für welches Element steht das Symbol K?",
+      "optionen": [
+        "Krypton",
+        "Kupfer",
+        "Kalium",
+        "Kohlenstoff"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Kalium",
+        "url": "https://de.wikipedia.org/wiki/Kalium"
+      }
+    },
+    {
+      "id": "chem-035",
+      "modus": "auswahl",
+      "frage": "Wie lautet die Formel von Kohlendioxid?",
+      "optionen": [
+        "CO₂",
+        "CH₄",
+        "CO",
+        "C₂O"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kohlenstoffdioxid",
+        "url": "https://de.wikipedia.org/wiki/Kohlenstoffdioxid"
+      }
+    },
+    {
+      "id": "chem-036",
+      "modus": "auswahl",
+      "frage": "Welches Edelgas lässt Leuchtreklamen rot-orange leuchten?",
+      "optionen": [
+        "Xenon",
+        "Neon",
+        "Helium",
+        "Argon"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Neon",
+        "url": "https://de.wikipedia.org/wiki/Neon"
+      }
+    },
+    {
+      "id": "chem-037",
+      "modus": "auswahl",
+      "frage": "Welches nicht brennbare Gas lässt Luftballons aufsteigen?",
+      "optionen": [
+        "Kohlendioxid",
+        "Stickstoff",
+        "Wasserstoff",
+        "Helium"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Helium",
+        "url": "https://de.wikipedia.org/wiki/Helium"
+      },
+      "erklaerung": "Wasserstoff ist zwar leichter, aber brennbar."
+    },
+    {
+      "id": "chem-038",
+      "modus": "auswahl",
+      "frage": "Welches Element ist das häufigste im Universum?",
+      "optionen": [
+        "Sauerstoff",
+        "Wasserstoff",
+        "Helium",
+        "Kohlenstoff"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Wasserstoff",
+        "url": "https://de.wikipedia.org/wiki/Wasserstoff"
+      }
+    },
+    {
+      "id": "chem-039",
+      "modus": "auswahl",
+      "frage": "Was ist Rost chemisch gesehen?",
+      "optionen": [
+        "Eisenoxid",
+        "Eisenchlorid",
+        "Kupferoxid",
+        "Eisensulfid"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Rost",
+        "url": "https://de.wikipedia.org/wiki/Rost"
+      }
+    },
+    {
+      "id": "chem-040",
+      "modus": "auswahl",
+      "frage": "Welches Metall leitet elektrischen Strom am besten?",
+      "optionen": [
+        "Aluminium",
+        "Silber",
+        "Kupfer",
+        "Gold"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Silber",
+        "url": "https://de.wikipedia.org/wiki/Silber"
+      }
+    },
+    {
+      "id": "chem-041",
+      "modus": "auswahl",
+      "frage": "Welches Element macht Knochen und Zähne hart?",
+      "optionen": [
+        "Calcium",
+        "Magnesium",
+        "Natrium",
+        "Lithium"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Calcium",
+        "url": "https://de.wikipedia.org/wiki/Calcium"
+      }
+    },
+    {
+      "id": "chem-042",
+      "modus": "auswahl",
+      "frage": "Was entsteht, wenn Wasserstoff verbrennt?",
+      "optionen": [
+        "Methan",
+        "Wasser",
+        "Ozon",
+        "Kohlendioxid"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Knallgasreaktion",
+        "url": "https://de.wikipedia.org/wiki/Knallgasreaktion"
+      }
+    },
+    {
+      "id": "chem-043",
+      "modus": "auswahl",
+      "frage": "Aus welchem Element bestehen die meisten Computerchips?",
+      "optionen": [
+        "Zinn",
+        "Blei",
+        "Silicium",
+        "Aluminium"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Silicium",
+        "url": "https://de.wikipedia.org/wiki/Silicium"
+      }
+    },
+    {
+      "id": "chem-044",
+      "modus": "auswahl",
+      "frage": "Wer erfand das Dynamit?",
+      "optionen": [
+        "Robert Bunsen",
+        "Otto Hahn",
+        "Fritz Haber",
+        "Alfred Nobel"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Dynamit",
+        "url": "https://de.wikipedia.org/wiki/Dynamit"
+      }
+    },
+    {
+      "id": "chem-045",
+      "modus": "schaetzen",
+      "frage": "Wie viele Protonen hat ein Kohlenstoffatom?",
+      "einheit": "Protonen",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Kohlenstoff",
+        "url": "https://de.wikipedia.org/wiki/Kohlenstoff"
+      }
+    },
+    {
+      "id": "chem-046",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Atomen besteht ein Wassermolekül?",
+      "einheit": "Atome",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Wasser",
+        "url": "https://de.wikipedia.org/wiki/Wasser"
+      }
+    },
+    {
+      "id": "chem-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele Elektronen passen auf die innerste Schale eines Atoms?",
+      "einheit": "Elektronen",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Schalenmodell",
+        "url": "https://de.wikipedia.org/wiki/Schalenmodell"
+      }
+    },
+    {
+      "id": "chem-048",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent der Luft sind das Edelgas Argon?",
+      "einheit": "%",
+      "loesung": 0.93,
+      "quelle": {
+        "titel": "Wikipedia – Luft",
+        "url": "https://de.wikipedia.org/wiki/Luft"
+      }
+    },
+    {
+      "id": "chem-049",
+      "modus": "schaetzen",
+      "frage": "Welche Ordnungszahl hat Sauerstoff?",
+      "einheit": "",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Sauerstoff",
+        "url": "https://de.wikipedia.org/wiki/Sauerstoff"
+      }
+    },
+    {
+      "id": "chem-050",
+      "modus": "schaetzen",
+      "frage": "Wie viel Karat hat 750er-Gold?",
+      "einheit": "Karat",
+      "loesung": 18,
+      "quelle": {
+        "titel": "Wikipedia – Karat",
+        "url": "https://de.wikipedia.org/wiki/Karat"
+      }
+    },
+    {
+      "id": "chem-051",
+      "modus": "schaetzen",
+      "frage": "Wie dicht ist Aluminium? (Wasser hat 1 g/cm³)",
+      "einheit": "g/cm³",
+      "loesung": 2.7,
+      "quelle": {
+        "titel": "Wikipedia – Aluminium",
+        "url": "https://de.wikipedia.org/wiki/Aluminium"
+      }
+    },
+    {
+      "id": "chem-052",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm Salz enthält ein Kilogramm Meerwasser im Mittel?",
+      "einheit": "g",
+      "loesung": 35,
+      "quelle": {
+        "titel": "Wikipedia – Meerwasser",
+        "url": "https://de.wikipedia.org/wiki/Meerwasser"
+      }
+    },
+    {
+      "id": "chem-053",
+      "modus": "schaetzen",
+      "frage": "Welche Ordnungszahl hat Eisen?",
+      "einheit": "",
+      "loesung": 26,
+      "quelle": {
+        "titel": "Wikipedia – Eisen",
+        "url": "https://de.wikipedia.org/wiki/Eisen"
+      }
+    },
+    {
+      "id": "chem-054",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Bei wie viel Grad Celsius schmilzt Zinn?",
+      "daten": {
+        "einheit": "°C",
+        "balken": [
+          {
+            "name": "Blei",
+            "wert": 327
+          },
+          {
+            "name": "Zinn",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 232,
+      "quelle": {
+        "titel": "Wikipedia – Zinn",
+        "url": "https://de.wikipedia.org/wiki/Zinn"
+      }
+    },
+    {
+      "id": "chem-055",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr stellte Friedrich Wöhler erstmals Harnstoff künstlich her?",
+      "daten": {
+        "von": 1800,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1828,
+      "quelle": {
+        "titel": "Wikipedia – Friedrich Wöhler",
+        "url": "https://de.wikipedia.org/wiki/Friedrich_Wöhler"
+      },
+      "erklaerung": "Damit war bewiesen: Stoffe aus Lebewesen kann man auch im Labor herstellen."
+    },
+    {
+      "id": "chem-056",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde „Aspirin“ als Marke eingetragen?",
+      "daten": {
+        "von": 1850,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1899,
+      "quelle": {
+        "titel": "Wikipedia – Acetylsalicylsäure",
+        "url": "https://de.wikipedia.org/wiki/Acetylsalicylsäure"
+      }
+    },
+    {
+      "id": "chem-057",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Tote Meer, berühmt für seinen extrem hohen Salzgehalt?",
+      "daten": {
+        "mitte": [
+          40,
+          10
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 31.5,
+        "lng": 35.5
+      },
+      "quelle": {
+        "titel": "Wikipedia – Totes Meer",
+        "url": "https://de.wikipedia.org/wiki/Totes_Meer"
+      }
+    },
+    {
+      "id": "chem-058",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Atacama-Wüste, aus der viel Lithium und Salpeter stammt?",
+      "daten": {
+        "mitte": [
+          0,
+          -40
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": -24.5,
+        "lng": -69.25
+      },
+      "quelle": {
+        "titel": "Wikipedia – Atacama-Wüste",
+        "url": "https://de.wikipedia.org/wiki/Atacama-Wüste"
+      }
+    },
+    {
+      "id": "chem-059",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Freiberg, wo die Elemente Germanium und Indium entdeckt wurden?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 50.91,
+        "lng": 13.34
+      },
+      "quelle": {
+        "titel": "Wikipedia – Freiberg",
+        "url": "https://de.wikipedia.org/wiki/Freiberg"
+      }
+    },
+    {
+      "id": "chem-060",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Zustände nach der Temperatur!",
+      "loesung": [
+        "Plasma",
+        "gasförmig",
+        "flüssig",
+        "fest"
+      ],
+      "oben": "heißester",
+      "unten": "kältester",
+      "quelle": {
+        "titel": "Wikipedia – Aggregatzustand",
+        "url": "https://de.wikipedia.org/wiki/Aggregatzustand"
+      }
+    },
+    {
+      "id": "chem-061",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Elemente nach ihrer Ordnungszahl!",
+      "loesung": [
+        "Helium",
+        "Neon",
+        "Calcium",
+        "Silber",
+        "Blei"
+      ],
+      "oben": "kleinste",
+      "unten": "größte",
+      "quelle": {
+        "titel": "Wikipedia – Periodensystem",
+        "url": "https://de.wikipedia.org/wiki/Periodensystem"
+      }
+    },
+    {
+      "id": "chem-062",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Minerale nach ihrer Härte!",
+      "loesung": [
+        "Korund",
+        "Quarz",
+        "Calcit",
+        "Talk"
+      ],
+      "oben": "härtestes",
+      "unten": "weichstes",
+      "quelle": {
+        "titel": "Wikipedia – Mohshärte",
+        "url": "https://de.wikipedia.org/wiki/Mohshärte"
+      }
     }
   ],
   "stechfragen": [
@@ -572,6 +1054,40 @@
       "quelle": {
         "titel": "Wikipedia – Aluminium",
         "url": "https://de.wikipedia.org/wiki/Aluminium"
+      }
+    },
+    {
+      "id": "chem-s03",
+      "modus": "schaetzen",
+      "frage": "Wie viele chemische Elemente sind bei Raumtemperatur gasförmig?",
+      "einheit": "Elemente",
+      "loesung": 11,
+      "quelle": {
+        "titel": "Wikipedia – Gas",
+        "url": "https://de.wikipedia.org/wiki/Gas"
+      },
+      "erklaerung": "Wasserstoff, Stickstoff, Sauerstoff, Fluor, Chlor und die sechs Edelgase."
+    },
+    {
+      "id": "chem-s04",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde das Element Darmstadtium erstmals erzeugt?",
+      "einheit": "",
+      "loesung": 1994,
+      "quelle": {
+        "titel": "Wikipedia – Darmstadtium",
+        "url": "https://de.wikipedia.org/wiki/Darmstadtium"
+      }
+    },
+    {
+      "id": "chem-s05",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Celsius schmilzt Silber?",
+      "einheit": "°C",
+      "loesung": 962,
+      "quelle": {
+        "titel": "Wikipedia – Silber",
+        "url": "https://de.wikipedia.org/wiki/Silber"
       }
     }
   ]
