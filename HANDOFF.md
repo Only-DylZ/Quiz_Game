@@ -18,12 +18,15 @@
 - `node tools/pruefen.mjs` → Syntaxprüfung + 11 Tests, alle grün.
 - Das Raumfahrt-Paket hat 4 spielbare Fragen (2 Grafik-Fragen warten auf Phase 2).
 
-**Die Seite läuft bisher nur lokal** (Live Server). Online ist sie noch nicht,
-weil `docs/config.js` (Supabase-URL + anon key) absichtlich nicht im Repo ist.
+**Die Seite ist online** (seit 11.10.2026): https://only-dylz.github.io/Quiz_Game/
+Veröffentlicht per GitHub Actions (`pages.yml`), Secrets und Pages-Source vom Nutzer
+eingerichtet, erster Lauf erfolgreich. Noch nicht online mit Freunden getestet.
 
 ---
 
-## Nächster Schritt: Online stellen per GitHub Actions
+## Erledigt: Online stellen per GitHub Actions
+
+**Nächster Schritt:** Probespiel online (Punkt 5), dann Phase 2.
 
 Ziel: Freunde können von überall mitspielen → erstes echtes Probespiel.
 Mit dem Nutzer schon besprochen und als Weg gewählt (Option A):
