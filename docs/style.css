@@ -603,3 +603,14 @@ button.klein {
 .rad-mitte {
   fill: var(--akzent);
 }
+
+/* Handy: Booster-Zeile unter den Themen */
+.booster-zeile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

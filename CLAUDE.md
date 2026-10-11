@@ -454,8 +454,8 @@ schicken nur ihre Antwort.
 Nachrichten:
 | typ          | von → an       | daten |
 |--------------|----------------|-------|
-| `themenwahl` | Host → Handys  | `runde, angebote: [{ id, themen: [{ datei, thema }] }]` – jeder Spieler bekommt eigene 3 Themen |
-| `kandidat`   | Handy → Host   | `id, runde, datei` – gewählter Kandidat (nur aus dem eigenen Angebot; umentscheiden bis zum Drehen) |
+| `themenwahl` | Host → Handys  | `runde, angebote: [{ id, themen: [{ datei, thema }] }], booster` – jeder Spieler bekommt eigene 3 Themen; `booster` = erlaubte Booster pro Spieler in dieser Runde |
+| `kandidat`   | Handy → Host   | `id, runde, datei, booster` – gewählter Kandidat (nur aus dem eigenen Angebot) und eingesetzte Booster (0 bis erlaubt); umentscheiden bis zum Drehen |
 | `rad`        | Host → Handys  | `{}` – das Glücksrad dreht sich, Wahl ist gesperrt |
 | `radErgebnis`| Host → Handys  | `thema` – dieses Thema wird gespielt |
 | `frage`      | Host → Handys  | `nummer` (zählt im ganzen Spiel hoch), `titel` (z. B. „Sport · Frage 3 von 10“), `modus, text, restzeit, bild, daten` (daten = `oeffentlicheDaten()`, **ohne Lösung**), `teilnehmer` (nur bei der Stechfrage: ids der Spieler mit Gleichstand, sonst `null`) |
@@ -494,7 +494,8 @@ Bildfragen, Modus `reihenfolge` und 13 Themenpakete à ca. 30 Fragen (Pools
 wachsen später Richtung 150). Phase 4a ist fertig: Themenrunden, GP-Ziel
 (Einstellung in der Lobby), Stechfrage, Siegertreppchen nach GP. Phase 4b:
 Kandidatenwahl auf dem Handy + Glücksrad (`engine/rad.js`); `host.html?paket=<name>`
-spielt zum Testen in Runde 1 direkt dieses Thema. Als Nächstes: 4c (Booster-Joker).
+spielt zum Testen in Runde 1 direkt dieses Thema. Phase 4c: Booster-Joker
+(Einstellung „Booster pro Spieler und Runde“ 0–3 in der Lobby). Als Nächstes: Phase 5.
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`

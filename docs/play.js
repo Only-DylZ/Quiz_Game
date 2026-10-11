@@ -148,7 +148,19 @@ function themenwahlAnzeigen(daten) {
   themenRunde = daten.runde;
   clearInterval(uhr);
   $("themenwahlTitel").textContent = "Runde " + daten.runde;
-  $("kandidatStatus").textContent = "";
+
+  // Booster: so viele darf ich in dieser Runde einsetzen (höchstens 3)
+  const maxBooster = Number.isInteger(daten.booster) ? Math.min(Math.max(daten.booster, 0), 3) : 0;
+  let gewaehlt = null; // { datei, name } meines Kandidaten
+  let booster = 0;     // eingesetzte Booster
+
+  // Wahl an den Host schicken und unten anzeigen
+  function kandidatSenden() {
+    if (!gewaehlt) return;
+    raum.senden("kandidat", { id: ich.id, runde: daten.runde, datei: gewaehlt.datei, booster });
+    $("kandidatStatus").textContent = "Dein Kandidat: " + gewaehlt.name +
+      (booster > 0 ? " – " + (booster + 1) + " Karten auf dem Rad 🚀" : "");
+  }
 
   const knoepfe = $("themenKnoepfe");
   knoepfe.replaceChildren();
@@ -158,17 +170,45 @@ function themenwahlAnzeigen(daten) {
     knopf.addEventListener("click", () => {
       for (const k of knoepfe.children) k.classList.remove("gewaehlt");
       knopf.classList.add("gewaehlt");
-      raum.senden("kandidat", { id: ich.id, runde: daten.runde, datei: thema.datei });
-      $("kandidatStatus").textContent = "Dein Kandidat: " + knopf.textContent;
+      gewaehlt = { datei: thema.datei, name: knopf.textContent };
+      kandidatSenden();
+      boosterZeichnen();
     });
     knoepfe.append(knopf);
   }
+
+  // Booster-Zeile: [−]  1 von 2 Boostern  [+]
+  const zeile = $("boosterZeile");
+  const minus = neu("button", "klein", "−");
+  const plus = neu("button", "klein", "+ Booster");
+  const anzeige = neu("span");
+  minus.addEventListener("click", () => {
+    booster = Math.max(0, booster - 1);
+    kandidatSenden();
+    boosterZeichnen();
+  });
+  plus.addEventListener("click", () => {
+    booster = Math.min(maxBooster, booster + 1);
+    kandidatSenden();
+    boosterZeichnen();
+  });
+  function boosterZeichnen() {
+    anzeige.textContent = "🚀 " + booster + " von " + maxBooster;
+    minus.disabled = booster === 0;
+    plus.disabled = booster === maxBooster || !gewaehlt; // erst Kandidat wählen
+  }
+  zeile.replaceChildren(minus, anzeige, plus);
+  zeile.hidden = maxBooster === 0;
+  boosterZeichnen();
+
+  $("kandidatStatus").textContent = "";
   zeige("themenwahl");
 }
 
 // Das Glücksrad dreht sich: ab jetzt keine Änderung mehr
 function radDreht() {
   for (const knopf of $("themenKnoepfe").children) knopf.disabled = true;
+  for (const knopf of $("boosterZeile").querySelectorAll("button")) knopf.disabled = true;
   $("kandidatStatus").textContent = "Das Glücksrad dreht sich … 🎡";
 }
 

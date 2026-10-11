@@ -46,6 +46,9 @@ const ZWISCHENSTAND_PLAETZE = 10;
 const GP_ZIEL_MIN = 1;
 const GP_ZIEL_MAX = 10;
 
+// Höchstens so viele Booster pro Spieler und Runde (Einstellung in der Lobby)
+const BOOSTER_MAX = 3;
+
 // Kurzschreibweise, um Elemente per id zu finden
 const $ = (id) => document.getElementById(id);
 
@@ -66,12 +69,13 @@ let schritt = "lobby";      // "lobby" | "themenwahl" | "rad" | "frage" | "auflo
 let themen = [];            // alle Themen aus packs/index.json: [{ datei, thema }]
 let gespielteThemen = new Set(); // Dateien, die in diesem Spiel schon dran waren
 let gpZiel = 3;             // so viele GP braucht man zum Sieg
+let boosterProRunde = 1;    // so viele Booster hat jeder Spieler in jeder Runde
 let rundenNummer = 0;       // die wievielte Runde gerade läuft (1, 2, …)
 let aktuellesThema = null;  // { datei, thema } der laufenden Runde
 
 let themenOffen = [];       // Themen, die bei dieser Themenwahl angeboten werden dürfen
 let angebote = new Map();   // Spieler-id → seine 3 Themen [{ datei, thema }]
-let kandidaten = new Map(); // Spieler-id → Datei seines Kandidaten
+let kandidaten = new Map(); // Spieler-id → { datei, booster } – sein Kandidat und eingesetzte Booster
 let ausgeschlossen = new Set(); // Themen, die sich nicht laden ließen (nur diese Themenwahl)
 let gewaehltesThema = null; // was das Glücksrad ausgewählt hat
 
@@ -267,11 +271,17 @@ function startKnopfAktualisieren() {
 // 5. Knöpfe
 // ---------------------------------------------------------------------------
 $("start").addEventListener("click", () => {
-  // Einstellung prüfen: ganze Zahl zwischen GP_ZIEL_MIN und GP_ZIEL_MAX
-  const wert = Number.parseInt($("gpZiel").value, 10);
-  gpZiel = Number.isInteger(wert) ? Math.min(GP_ZIEL_MAX, Math.max(GP_ZIEL_MIN, wert)) : 3;
+  // Einstellungen prüfen: ganze Zahlen innerhalb der Grenzen
+  gpZiel = ganzeZahl($("gpZiel").value, GP_ZIEL_MIN, GP_ZIEL_MAX, 3);
+  boosterProRunde = ganzeZahl($("boosterAnzahl").value, 0, BOOSTER_MAX, 1);
   themenwahlZeigen();
 });
+
+// Liest eine ganze Zahl aus einem Eingabefeld und hält sie zwischen min und max
+function ganzeZahl(text, min, max, standard) {
+  const wert = Number.parseInt(text, 10);
+  return Number.isInteger(wert) ? Math.min(max, Math.max(min, wert)) : standard;
+}
 
 $("rundeStarten").addEventListener("click", rundeStarten);
 
@@ -346,6 +356,7 @@ function themenwahlSenden() {
   raum.senden("themenwahl", {
     runde: rundenNummer + 1,
     angebote: [...angebote].map(([id, liste]) => ({ id, themen: liste })),
+    booster: boosterProRunde,
   });
 }
 
@@ -362,25 +373,32 @@ function angeboteErgaenzen() {
   kandidatenAnzeigen();
 }
 
-// Ein Handy hat einen Kandidaten gewählt (darf sich bis zum Drehen umentscheiden)
-function kandidatAnnehmen({ id, runde, datei }) {
+// Ein Handy hat einen Kandidaten gewählt (darf sich bis zum Drehen umentscheiden).
+// booster = wie viele Booster es einsetzt (jeder = eine Karte mehr auf dem Rad).
+function kandidatAnnehmen({ id, runde, datei, booster = 0 }) {
   if (schritt !== "themenwahl" || runde !== rundenNummer + 1) return;
   if (!anwesend.some((s) => s.id === id)) return;
   // Nur Themen aus dem eigenen Angebot sind erlaubt
   const angebot = angebote.get(id) || [];
   if (!angebot.some((t) => t.datei === datei)) return;
 
-  kandidaten.set(id, datei);
+  // Nicht mehr Booster als erlaubt
+  if (!Number.isInteger(booster) || booster < 0 || booster > boosterProRunde) return;
+
+  kandidaten.set(id, { datei, booster });
   kandidatenAnzeigen();
 }
 
-// Die Karten auf dem Rad: ein Kandidat pro anwesendem Spieler
+// Die Karten auf dem Rad: pro anwesendem Spieler sein Kandidat –
+// einmal plus einmal für jeden Booster
 function radKarten() {
   const karten = [];
   for (const s of anwesend) {
-    const datei = kandidaten.get(s.id);
-    const eintrag = themen.find((t) => t.datei === datei);
-    if (eintrag && !ausgeschlossen.has(datei)) karten.push({ datei, thema: eintrag.thema });
+    const wahl = kandidaten.get(s.id);
+    if (!wahl || ausgeschlossen.has(wahl.datei)) continue;
+    const eintrag = themen.find((t) => t.datei === wahl.datei);
+    if (!eintrag) continue;
+    for (let i = 0; i <= wahl.booster; i++) karten.push({ datei: wahl.datei, thema: eintrag.thema });
   }
   return karten;
 }
@@ -391,8 +409,10 @@ function kandidatenAnzeigen() {
   const liste = $("kandidatenListe");
   liste.replaceChildren();
   for (const s of anwesend) {
-    const fertig = kandidaten.has(s.id);
-    liste.append(neu("li", fertig ? "fertig" : "", s.name + (fertig ? " ✓" : " …")));
+    const wahl = kandidaten.get(s.id);
+    let text = s.name + " …";
+    if (wahl) text = s.name + " ✓" + (wahl.booster > 0 ? " 🚀×" + wahl.booster : "");
+    liste.append(neu("li", wahl ? "fertig" : "", text));
   }
   const karten = radKarten();
   $("rad").replaceChildren(radZeichnen(karten));

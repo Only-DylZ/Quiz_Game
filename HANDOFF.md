@@ -70,12 +70,21 @@ CLAUDE.md entsprechend angepasst.
   sich am Griff ☰ ziehen und zwischen andere schieben (Pointer-Events, gehen mit
   Finger und Maus; HTML-Drag-and-Drop geht auf Handys nicht). `verschieben()` getestet.
 
+## Phase 4c – fertig (vom Nutzer getestet) → Phase 4 komplett
+
+- Lobby: „Booster pro Spieler und Runde“ (0–3, Standard 1), Hinweis
+  „Themenjoker kommt mit Phase 5“.
+- Handy: unter den 3 Themen eine Zeile [−] 🚀 1 von 2 [+ Booster] (erst nach
+  der Kandidatenwahl aktiv). Jeder Booster = eine weitere Karte des Kandidaten.
+- Host prüft: Booster ganze Zahl 0 … erlaubt, sonst wird die Nachricht ignoriert.
+  Liste zeigt „Anna ✓ 🚀×2“.
+
 ## Nächster Schritt
 
 
-- Dann 4c: Booster-Joker (Einstellung in der Lobby: Anzahl Booster pro Spieler
-  und Runde; jeder Booster = eine weitere Karte des eigenen Kandidaten).
-  Themenjoker-Einstellung schon mit anlegen, aber gesperrt bis Phase 5.
+- Danach Phase 5 (Gemini + Themenjoker). Vorher: Nutzer prüft in Google AI
+  Studio die aktuellen Gratis-Grenzen (ohne Billing!). Key nie in den Chat –
+  direkt als Supabase-Secret.
 - Später: Pools in Blöcken à 30 erweitern (Ziel 150), Raumfahrt zuerst (nur 12).
 
 ## Danach
