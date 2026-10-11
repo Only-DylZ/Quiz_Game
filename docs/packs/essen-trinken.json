@@ -431,8 +431,8 @@
             "jahr": 1940
           },
           {
-            "name": "Erste Mondlandung",
-            "jahr": 1969
+            "name": "Erster Game Boy",
+            "jahr": 1989
           }
         ]
       },
@@ -592,6 +592,483 @@
           "url": "https://commons.wikimedia.org/wiki/File:Cebiche_de_corvina.JPG"
         }
       }
+    },
+    {
+      "id": "essen-035",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land stammt das Gericht Gulasch?",
+      "optionen": [
+        "Tschechien",
+        "Ungarn",
+        "Österreich",
+        "Polen"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Gulasch",
+        "url": "https://de.wikipedia.org/wiki/Gulasch"
+      }
+    },
+    {
+      "id": "essen-036",
+      "modus": "auswahl",
+      "frage": "Was ist die Hauptzutat von Marzipan?",
+      "optionen": [
+        "Kokosraspel",
+        "Mandeln",
+        "Haselnüsse",
+        "Erdnüsse"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Marzipan",
+        "url": "https://de.wikipedia.org/wiki/Marzipan"
+      }
+    },
+    {
+      "id": "essen-037",
+      "modus": "auswahl",
+      "frage": "Aus welchem Getreide wird schottischer Malt Whisky gebrannt?",
+      "optionen": [
+        "Roggen",
+        "Weizen",
+        "Mais",
+        "Gerste"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Scotch Whisky",
+        "url": "https://de.wikipedia.org/wiki/Scotch_Whisky"
+      }
+    },
+    {
+      "id": "essen-038",
+      "modus": "auswahl",
+      "frage": "Woraus wird Hummus hauptsächlich gemacht?",
+      "optionen": [
+        "Erbsen",
+        "Kichererbsen",
+        "Linsen",
+        "Weiße Bohnen"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Hummus",
+        "url": "https://de.wikipedia.org/wiki/Hummus"
+      }
+    },
+    {
+      "id": "essen-039",
+      "modus": "auswahl",
+      "frage": "Welches Land erntet den meisten Kakao der Welt?",
+      "optionen": [
+        "Ecuador",
+        "Elfenbeinküste",
+        "Brasilien",
+        "Ghana"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Kakao",
+        "url": "https://de.wikipedia.org/wiki/Kakao"
+      }
+    },
+    {
+      "id": "essen-040",
+      "modus": "auswahl",
+      "frage": "Wie heißt roher Fisch in Scheiben – ganz ohne Reis – in der japanischen Küche?",
+      "optionen": [
+        "Nigiri",
+        "Tempura",
+        "Sashimi",
+        "Ramen"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Sashimi",
+        "url": "https://de.wikipedia.org/wiki/Sashimi"
+      }
+    },
+    {
+      "id": "essen-041",
+      "modus": "auswahl",
+      "frage": "Aus welchem Gemüse wird Sauerkraut gemacht?",
+      "optionen": [
+        "Weißkohl",
+        "Chinakohl",
+        "Wirsing",
+        "Rotkohl"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Sauerkraut",
+        "url": "https://de.wikipedia.org/wiki/Sauerkraut"
+      }
+    },
+    {
+      "id": "essen-042",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land stammt der Cocktail Mojito?",
+      "optionen": [
+        "Mexiko",
+        "Brasilien",
+        "Kuba",
+        "Spanien"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Mojito",
+        "url": "https://de.wikipedia.org/wiki/Mojito"
+      }
+    },
+    {
+      "id": "essen-043",
+      "modus": "auswahl",
+      "frage": "Welches Gewürz gibt Currypulver seine gelbe Farbe?",
+      "optionen": [
+        "Paprika",
+        "Kurkuma",
+        "Ingwer",
+        "Safran"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Kurkuma",
+        "url": "https://de.wikipedia.org/wiki/Kurkuma"
+      }
+    },
+    {
+      "id": "essen-044",
+      "modus": "auswahl",
+      "frage": "Welcher Käse ist für seine großen Löcher bekannt?",
+      "optionen": [
+        "Mozzarella",
+        "Emmentaler",
+        "Brie",
+        "Feta"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Emmentaler",
+        "url": "https://de.wikipedia.org/wiki/Emmentaler"
+      }
+    },
+    {
+      "id": "essen-045",
+      "modus": "auswahl",
+      "frage": "Woraus wird in Deutschland der meiste Zucker gewonnen?",
+      "optionen": [
+        "Mais",
+        "Ahornsaft",
+        "Zuckerrüben",
+        "Zuckerrohr"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Zuckerrübe",
+        "url": "https://de.wikipedia.org/wiki/Zuckerrübe"
+      }
+    },
+    {
+      "id": "essen-046",
+      "modus": "auswahl",
+      "frage": "Welches Getränk entsteht durch Gärung von Apfelsaft?",
+      "optionen": [
+        "Kwas",
+        "Apfelwein",
+        "Sake",
+        "Met"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Apfelwein",
+        "url": "https://de.wikipedia.org/wiki/Apfelwein"
+      }
+    },
+    {
+      "id": "essen-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele Liter Bier passen in eine Maß?",
+      "einheit": "Liter",
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Maßkrug",
+        "url": "https://de.wikipedia.org/wiki/Maßkrug"
+      }
+    },
+    {
+      "id": "essen-048",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Fett hat Vollmilch mindestens?",
+      "einheit": "%",
+      "loesung": 3.5,
+      "quelle": {
+        "titel": "Wikipedia – Vollmilch",
+        "url": "https://de.wikipedia.org/wiki/Vollmilch"
+      }
+    },
+    {
+      "id": "essen-049",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zacken hat eine Sternfrucht (Karambole) im Querschnitt?",
+      "einheit": "Zacken",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Karambole",
+        "url": "https://de.wikipedia.org/wiki/Karambole"
+      }
+    },
+    {
+      "id": "essen-050",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Brötchenteilen besteht ein Big Mac?",
+      "einheit": "Teile",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Big Mac",
+        "url": "https://de.wikipedia.org/wiki/Big_Mac"
+      }
+    },
+    {
+      "id": "essen-051",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm wiegt ein übliches Stück Butter in Deutschland?",
+      "einheit": "g",
+      "loesung": 250,
+      "quelle": {
+        "titel": "Wikipedia – Butter",
+        "url": "https://de.wikipedia.org/wiki/Butter"
+      }
+    },
+    {
+      "id": "essen-052",
+      "modus": "schaetzen",
+      "frage": "Wie viele Liter fasst eine normale Weinflasche?",
+      "einheit": "Liter",
+      "loesung": 0.75,
+      "quelle": {
+        "titel": "Wikipedia – Weinflasche",
+        "url": "https://de.wikipedia.org/wiki/Weinflasche"
+      }
+    },
+    {
+      "id": "essen-053",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre muss Scotch Whisky mindestens im Fass reifen?",
+      "einheit": "Jahre",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Scotch Whisky",
+        "url": "https://de.wikipedia.org/wiki/Scotch_Whisky"
+      }
+    },
+    {
+      "id": "essen-054",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Fett hat Schlagsahne mindestens?",
+      "einheit": "%",
+      "loesung": 30,
+      "quelle": {
+        "titel": "Wikipedia – Sahne",
+        "url": "https://de.wikipedia.org/wiki/Sahne"
+      }
+    },
+    {
+      "id": "essen-055",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Alkohol darf „alkoholfreies“ Bier in Deutschland höchstens enthalten?",
+      "einheit": "%",
+      "loesung": 0.5,
+      "quelle": {
+        "titel": "Wikipedia – Alkoholfreies Bier",
+        "url": "https://de.wikipedia.org/wiki/Alkoholfreies_Bier"
+      }
+    },
+    {
+      "id": "essen-056",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Neapel, die Heimat der Pizza?",
+      "daten": {
+        "mitte": [
+          46,
+          5
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 40.85,
+        "lng": 14.27
+      },
+      "quelle": {
+        "titel": "Wikipedia – Neapel",
+        "url": "https://de.wikipedia.org/wiki/Neapel"
+      }
+    },
+    {
+      "id": "essen-057",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Bordeaux, Namensgeber eines berühmten Weinbaugebiets?",
+      "daten": {
+        "mitte": [
+          46,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 44.84,
+        "lng": -0.58
+      },
+      "quelle": {
+        "titel": "Wikipedia – Bordeaux",
+        "url": "https://de.wikipedia.org/wiki/Bordeaux"
+      }
+    },
+    {
+      "id": "essen-058",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Teeinsel Sri Lanka (früher Ceylon)?",
+      "daten": {
+        "mitte": [
+          20,
+          60
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": 7.87,
+        "lng": 80.77
+      },
+      "quelle": {
+        "titel": "Wikipedia – Sri Lanka",
+        "url": "https://de.wikipedia.org/wiki/Sri_Lanka"
+      }
+    },
+    {
+      "id": "essen-059",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Dijon, die Senf-Hauptstadt Frankreichs?",
+      "daten": {
+        "mitte": [
+          45,
+          15
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 47.32,
+        "lng": 5.04
+      },
+      "quelle": {
+        "titel": "Wikipedia – Dijon",
+        "url": "https://de.wikipedia.org/wiki/Dijon"
+      }
+    },
+    {
+      "id": "essen-060",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam der Brotaufstrich Nutella unter diesem Namen auf den Markt?",
+      "daten": {
+        "von": 1940,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1964,
+      "quelle": {
+        "titel": "Wikipedia – Nutella",
+        "url": "https://de.wikipedia.org/wiki/Nutella"
+      }
+    },
+    {
+      "id": "essen-061",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr eröffnete das erste McDonald's-Restaurant in Deutschland?",
+      "daten": {
+        "von": 1940,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Farbfernsehsendung in Deutschland",
+            "jahr": 1967
+          },
+          {
+            "name": "Euro wird Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1971,
+      "quelle": {
+        "titel": "Wikipedia – McDonald’s Deutschland",
+        "url": "https://de.wikipedia.org/wiki/McDonald’s_Deutschland"
+      },
+      "erklaerung": "Am 4. Dezember 1971 in München."
+    },
+    {
+      "id": "essen-062",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Größe!",
+      "loesung": [
+        "Wassermelone",
+        "Kokosnuss",
+        "Apfel",
+        "Kirsche",
+        "Heidelbeere"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "quelle": {
+        "titel": "Wikipedia – Obst",
+        "url": "https://de.wikipedia.org/wiki/Obst"
+      }
+    },
+    {
+      "id": "essen-063",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach dem Vitamin-C-Gehalt!",
+      "loesung": [
+        "Acerola",
+        "Zitrone",
+        "Apfel"
+      ],
+      "oben": "am meisten",
+      "unten": "am wenigsten",
+      "quelle": {
+        "titel": "Wikipedia – Vitamin C",
+        "url": "https://de.wikipedia.org/wiki/Vitamin_C"
+      }
+    },
+    {
+      "id": "essen-064",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Kaffeegetränke nach ihrem Milchanteil!",
+      "loesung": [
+        "Latte macchiato",
+        "Cappuccino",
+        "Espresso macchiato",
+        "Espresso"
+      ],
+      "oben": "meiste Milch",
+      "unten": "keine Milch",
+      "quelle": {
+        "titel": "Wikipedia – Latte macchiato",
+        "url": "https://de.wikipedia.org/wiki/Latte_macchiato"
+      }
     }
   ],
   "stechfragen": [
@@ -616,6 +1093,40 @@
       "quelle": {
         "titel": "Wikipedia – Reinheitsgebot",
         "url": "https://de.wikipedia.org/wiki/Reinheitsgebot"
+      }
+    },
+    {
+      "id": "essen-s03",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde Fanta erfunden?",
+      "einheit": "",
+      "loesung": 1940,
+      "quelle": {
+        "titel": "Wikipedia – Fanta",
+        "url": "https://de.wikipedia.org/wiki/Fanta"
+      },
+      "erklaerung": "In Essen – als Ersatz, weil im Krieg der Cola-Sirup fehlte."
+    },
+    {
+      "id": "essen-s04",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr ließ Melitta Bentz ihren Kaffeefilter schützen?",
+      "einheit": "",
+      "loesung": 1908,
+      "quelle": {
+        "titel": "Wikipedia – Melitta Bentz",
+        "url": "https://de.wikipedia.org/wiki/Melitta_Bentz"
+      }
+    },
+    {
+      "id": "essen-s05",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde das Unternehmen Dr. Oetker gegründet?",
+      "einheit": "",
+      "loesung": 1891,
+      "quelle": {
+        "titel": "Wikipedia – Dr. Oetker",
+        "url": "https://de.wikipedia.org/wiki/Dr._Oetker"
       }
     }
   ]
