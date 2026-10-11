@@ -27,6 +27,10 @@
     {
       "datei": "physik.json",
       "thema": "Physik"
+    },
+    {
+      "datei": "mathe.json",
+      "thema": "Mathe"
     }
   ]
 }

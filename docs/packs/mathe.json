@@ -1,0 +1,535 @@
+{
+  "thema": "Mathe",
+  "version": 1,
+  "beschreibung": "Kopfrechnen, Rätsel, Rekorde und berühmte Köpfe.",
+  "fragen": [
+    {
+      "id": "mathe-001",
+      "modus": "auswahl",
+      "frage": "Wie viele Ecken hat ein Würfel?",
+      "optionen": [
+        "12",
+        "6",
+        "8",
+        "4"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Würfel (Geometrie)",
+        "url": "https://de.wikipedia.org/wiki/Würfel_(Geometrie)"
+      }
+    },
+    {
+      "id": "mathe-002",
+      "modus": "auswahl",
+      "frage": "Welches ist die einzige gerade Primzahl?",
+      "optionen": [
+        "6",
+        "2",
+        "0",
+        "4"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Primzahl",
+        "url": "https://de.wikipedia.org/wiki/Primzahl"
+      }
+    },
+    {
+      "id": "mathe-003",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein Vieleck mit sechs Ecken?",
+      "optionen": [
+        "Hexagon",
+        "Heptagon",
+        "Pentagon",
+        "Oktagon"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Sechseck",
+        "url": "https://de.wikipedia.org/wiki/Sechseck"
+      }
+    },
+    {
+      "id": "mathe-004",
+      "modus": "auswahl",
+      "frage": "Was ergibt 0! (null Fakultät)?",
+      "optionen": [
+        "0",
+        "nicht definiert",
+        "1",
+        "unendlich"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Fakultät (Mathematik)",
+        "url": "https://de.wikipedia.org/wiki/Fakultät_(Mathematik)"
+      },
+      "erklaerung": "Das ist so festgelegt – es gibt genau eine Art, nichts anzuordnen."
+    },
+    {
+      "id": "mathe-005",
+      "modus": "auswahl",
+      "frage": "Satz des Pythagoras: a² + b² = …?",
+      "optionen": [
+        "(a + b)²",
+        "2ab",
+        "c²",
+        "c"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Satz des Pythagoras",
+        "url": "https://de.wikipedia.org/wiki/Satz_des_Pythagoras"
+      }
+    },
+    {
+      "id": "mathe-006",
+      "modus": "auswahl",
+      "frage": "Welche Zahl bedeutet die römische Zahl XL?",
+      "optionen": [
+        "15",
+        "40",
+        "60",
+        "90"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Römische Zahlschrift",
+        "url": "https://de.wikipedia.org/wiki/Römische_Zahlschrift"
+      }
+    },
+    {
+      "id": "mathe-007",
+      "modus": "auswahl",
+      "frage": "Wie viel ist 2 hoch 10?",
+      "optionen": [
+        "1024",
+        "2048",
+        "1000",
+        "512"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Zweierpotenz",
+        "url": "https://de.wikipedia.org/wiki/Zweierpotenz"
+      }
+    },
+    {
+      "id": "mathe-008",
+      "modus": "auswahl",
+      "frage": "Wie groß ist die Winkelsumme in einem Dreieck?",
+      "optionen": [
+        "270°",
+        "360°",
+        "90°",
+        "180°"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Winkelsumme",
+        "url": "https://de.wikipedia.org/wiki/Winkelsumme"
+      }
+    },
+    {
+      "id": "mathe-009",
+      "modus": "auswahl",
+      "frage": "Wer bewies den berühmten Großen Fermatschen Satz?",
+      "optionen": [
+        "Grigori Perelman",
+        "John Nash",
+        "Terence Tao",
+        "Andrew Wiles"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Großer Fermatscher Satz",
+        "url": "https://de.wikipedia.org/wiki/Großer_Fermatscher_Satz"
+      }
+    },
+    {
+      "id": "mathe-010",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Zahl 10 hoch 100?",
+      "optionen": [
+        "Zentillion",
+        "Milliarde",
+        "Googolplex",
+        "Googol"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Googol",
+        "url": "https://de.wikipedia.org/wiki/Googol"
+      },
+      "erklaerung": "Der Name stand Pate für die Suchmaschine Google."
+    },
+    {
+      "id": "mathe-011",
+      "modus": "auswahl",
+      "frage": "Welcher Mathematiker soll als Schulkind die Zahlen von 1 bis 100 blitzschnell addiert haben?",
+      "optionen": [
+        "Bernhard Riemann",
+        "Carl Friedrich Gauß",
+        "Leonhard Euler",
+        "Gottfried Wilhelm Leibniz"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Carl Friedrich Gauß",
+        "url": "https://de.wikipedia.org/wiki/Carl_Friedrich_Gauß"
+      }
+    },
+    {
+      "id": "mathe-012",
+      "modus": "auswahl",
+      "frage": "Wie groß ist die Quersumme von 2026?",
+      "optionen": [
+        "10",
+        "26",
+        "12",
+        "8"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Quersumme",
+        "url": "https://de.wikipedia.org/wiki/Quersumme"
+      }
+    },
+    {
+      "id": "mathe-013",
+      "modus": "schaetzen",
+      "frage": "Kopfrechnen: Wie viel ist 17 × 23?",
+      "einheit": "",
+      "loesung": 391,
+      "quelle": {
+        "titel": "Wikipedia – Multiplikation",
+        "url": "https://de.wikipedia.org/wiki/Multiplikation"
+      }
+    },
+    {
+      "id": "mathe-014",
+      "modus": "schaetzen",
+      "frage": "Wie viele Primzahlen gibt es zwischen 1 und 100?",
+      "einheit": "Primzahlen",
+      "loesung": 25,
+      "quelle": {
+        "titel": "Wikipedia – Primzahl",
+        "url": "https://de.wikipedia.org/wiki/Primzahl"
+      }
+    },
+    {
+      "id": "mathe-015",
+      "modus": "schaetzen",
+      "frage": "Wie viele mögliche Tipps gibt es beim Lotto „6 aus 49“ (ohne Superzahl)?",
+      "einheit": "Tipps",
+      "loesung": 13983816,
+      "quelle": {
+        "titel": "Wikipedia – Lotto",
+        "url": "https://de.wikipedia.org/wiki/Lotto"
+      }
+    },
+    {
+      "id": "mathe-016",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sekunden hat ein Tag?",
+      "einheit": "Sekunden",
+      "loesung": 86400,
+      "quelle": {
+        "titel": "Wikipedia – Tag",
+        "url": "https://de.wikipedia.org/wiki/Tag"
+      }
+    },
+    {
+      "id": "mathe-017",
+      "modus": "schaetzen",
+      "frage": "Wie viele Diagonalen hat ein Sechseck?",
+      "einheit": "Diagonalen",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Diagonale (Geometrie)",
+        "url": "https://de.wikipedia.org/wiki/Diagonale_(Geometrie)"
+      }
+    },
+    {
+      "id": "mathe-018",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist die Wurzel aus 2 (auf zwei Nachkommastellen)?",
+      "einheit": "",
+      "loesung": 1.41,
+      "quelle": {
+        "titel": "Wikipedia – Quadratwurzel aus 2",
+        "url": "https://de.wikipedia.org/wiki/Quadratwurzel_aus_2"
+      }
+    },
+    {
+      "id": "mathe-019",
+      "modus": "schaetzen",
+      "frage": "Auf wie viele Arten kann man 5 verschiedene Bücher nebeneinander ins Regal stellen?",
+      "einheit": "Arten",
+      "loesung": 120,
+      "quelle": {
+        "titel": "Wikipedia – Permutation",
+        "url": "https://de.wikipedia.org/wiki/Permutation"
+      },
+      "erklaerung": "5 × 4 × 3 × 2 × 1 = 120"
+    },
+    {
+      "id": "mathe-020",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kanten hat ein Würfel?",
+      "einheit": "Kanten",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Würfel (Geometrie)",
+        "url": "https://de.wikipedia.org/wiki/Würfel_(Geometrie)"
+      }
+    },
+    {
+      "id": "mathe-021",
+      "modus": "schaetzen",
+      "frage": "Wie viele mögliche Stellungen hat ein Zauberwürfel (Rubik's Cube)?",
+      "einheit": "Trillionen",
+      "loesung": 43,
+      "quelle": {
+        "titel": "Wikipedia – Zauberwürfel",
+        "url": "https://de.wikipedia.org/wiki/Zauberwürfel"
+      },
+      "erklaerung": "Genau 43.252.003.274.489.856.000 – aber jede ist in höchstens 20 Zügen lösbar."
+    },
+    {
+      "id": "mathe-022",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Felder hat ein Schachbrett?",
+      "daten": {
+        "einheit": "Felder",
+        "balken": [
+          {
+            "name": "Tic-Tac-Toe",
+            "wert": 9
+          },
+          {
+            "name": "Sudoku",
+            "wert": 81
+          },
+          {
+            "name": "Schach",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 64,
+      "quelle": {
+        "titel": "Wikipedia – Schachbrett",
+        "url": "https://de.wikipedia.org/wiki/Schachbrett"
+      }
+    },
+    {
+      "id": "mathe-023",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Flächen hat ein Ikosaeder?",
+      "daten": {
+        "einheit": "Flächen",
+        "balken": [
+          {
+            "name": "Tetraeder",
+            "wert": 4
+          },
+          {
+            "name": "Würfel",
+            "wert": 6
+          },
+          {
+            "name": "Oktaeder",
+            "wert": 8
+          },
+          {
+            "name": "Dodekaeder",
+            "wert": 12
+          },
+          {
+            "name": "Ikosaeder",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 20,
+      "quelle": {
+        "titel": "Wikipedia – Platonischer Körper",
+        "url": "https://de.wikipedia.org/wiki/Platonischer_Körper"
+      }
+    },
+    {
+      "id": "mathe-024",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Königsberg (heute Kaliningrad) mit seinem berühmten Brückenproblem?",
+      "daten": {
+        "mitte": [
+          50,
+          15
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 54.71,
+        "lng": 20.51
+      },
+      "quelle": {
+        "titel": "Wikipedia – Königsberger Brückenproblem",
+        "url": "https://de.wikipedia.org/wiki/Königsberger_Brückenproblem"
+      }
+    },
+    {
+      "id": "mathe-025",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Alexandria, wo der Mathematiker Euklid lehrte?",
+      "daten": {
+        "mitte": [
+          35,
+          20
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 31.2,
+        "lng": 29.92
+      },
+      "quelle": {
+        "titel": "Wikipedia – Euklid",
+        "url": "https://de.wikipedia.org/wiki/Euklid"
+      }
+    },
+    {
+      "id": "mathe-026",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr gelang der Beweis des Großen Fermatschen Satzes?",
+      "daten": {
+        "von": 1900,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Zuses Computer Z3",
+            "jahr": 1941
+          },
+          {
+            "name": "Beweis der Poincaré-Vermutung",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1994,
+      "quelle": {
+        "titel": "Wikipedia – Großer Fermatscher Satz",
+        "url": "https://de.wikipedia.org/wiki/Großer_Fermatscher_Satz"
+      },
+      "erklaerung": "Über 350 Jahre hatten Mathematiker daran geknobelt."
+    },
+    {
+      "id": "mathe-027",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien das berühmte Rechenbuch von Adam Ries?",
+      "daten": {
+        "von": 1400,
+        "bis": 1700,
+        "ereignisse": [
+          {
+            "name": "Kolumbus erreicht Amerika",
+            "jahr": 1492
+          },
+          {
+            "name": "Ende des Dreißigjährigen Kriegs",
+            "jahr": 1648
+          }
+        ]
+      },
+      "loesung": 1522,
+      "quelle": {
+        "titel": "Wikipedia – Adam Ries",
+        "url": "https://de.wikipedia.org/wiki/Adam_Ries"
+      },
+      "erklaerung": "Daher kommt der Spruch „nach Adam Riese“."
+    },
+    {
+      "id": "mathe-028",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Zahlen nach ihrer Größe!",
+      "loesung": [
+        "Googol",
+        "Eine Milliarde",
+        "Zwei hoch 20",
+        "Hundert"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "quelle": {
+        "titel": "Wikipedia – Googol",
+        "url": "https://de.wikipedia.org/wiki/Googol"
+      }
+    },
+    {
+      "id": "mathe-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Vielecke nach der Anzahl ihrer Ecken!",
+      "loesung": [
+        "Achteck",
+        "Sechseck",
+        "Fünfeck",
+        "Dreieck"
+      ],
+      "oben": "meiste Ecken",
+      "unten": "wenigste Ecken",
+      "quelle": {
+        "titel": "Wikipedia – Polygon",
+        "url": "https://de.wikipedia.org/wiki/Polygon"
+      }
+    },
+    {
+      "id": "mathe-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne die berühmten Zahlen nach ihrer Größe!",
+      "loesung": [
+        "Pi (π)",
+        "Eulersche Zahl e",
+        "Goldener Schnitt",
+        "Wurzel aus 2"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "quelle": {
+        "titel": "Wikipedia – Mathematische Konstante",
+        "url": "https://de.wikipedia.org/wiki/Mathematische_Konstante"
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "mathe-s01",
+      "modus": "schaetzen",
+      "frage": "Wie viel ist 2 hoch 16?",
+      "einheit": "",
+      "loesung": 65536,
+      "quelle": {
+        "titel": "Wikipedia – Zweierpotenz",
+        "url": "https://de.wikipedia.org/wiki/Zweierpotenz"
+      }
+    },
+    {
+      "id": "mathe-s02",
+      "modus": "schaetzen",
+      "frage": "Wie viele verschiedene vierstellige Zahlencodes von 0000 bis 9999 gibt es?",
+      "einheit": "Codes",
+      "loesung": 10000,
+      "quelle": {
+        "titel": "Wikipedia – Kombination (Kombinatorik)",
+        "url": "https://de.wikipedia.org/wiki/Kombination_(Kombinatorik)"
+      }
+    }
+  ]
+}
