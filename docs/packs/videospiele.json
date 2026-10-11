@@ -304,8 +304,8 @@
         "bis": 2000,
         "ereignisse": [
           {
-            "name": "Erste Mondlandung",
-            "jahr": 1969
+            "name": "Erste Farbfernsehsendung in Deutschland",
+            "jahr": 1967
           },
           {
             "name": "Erster Game Boy",
@@ -493,6 +493,491 @@
         "titel": "Wikipedia – Geschichte der Videospiele",
         "url": "https://de.wikipedia.org/wiki/Geschichte_der_Videospiele"
       }
+    },
+    {
+      "id": "game-031",
+      "modus": "auswahl",
+      "frage": "Wie heißt der grüne Dinosaurier, auf dem Mario reitet?",
+      "optionen": [
+        "Rex",
+        "Yoshi",
+        "Birdo",
+        "Koopa"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Yoshi",
+        "url": "https://de.wikipedia.org/wiki/Yoshi"
+      }
+    },
+    {
+      "id": "game-032",
+      "modus": "auswahl",
+      "frage": "Wer erfand die Figur Super Mario?",
+      "optionen": [
+        "Hideo Kojima",
+        "Yu Suzuki",
+        "Satoru Iwata",
+        "Shigeru Miyamoto"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Shigeru Miyamoto",
+        "url": "https://de.wikipedia.org/wiki/Shigeru_Miyamoto"
+      }
+    },
+    {
+      "id": "game-033",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Drache, den man in Minecraft am Ende besiegen kann?",
+      "optionen": [
+        "Wither",
+        "Blaze",
+        "Ghast",
+        "Enderdrache"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      }
+    },
+    {
+      "id": "game-034",
+      "modus": "auswahl",
+      "frage": "In welchem Spiel erkundet man die Unterwasserstadt Rapture?",
+      "optionen": [
+        "BioShock",
+        "Dishonored",
+        "Half-Life",
+        "Fallout 3"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – BioShock",
+        "url": "https://de.wikipedia.org/wiki/BioShock"
+      }
+    },
+    {
+      "id": "game-035",
+      "modus": "auswahl",
+      "frage": "In welcher Spielereihe ist „Master Chief“ der Held?",
+      "optionen": [
+        "Gears of War",
+        "Halo",
+        "Crysis",
+        "Destiny"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Halo (Computerspielreihe)",
+        "url": "https://de.wikipedia.org/wiki/Halo_(Computerspielreihe)"
+      }
+    },
+    {
+      "id": "game-036",
+      "modus": "auswahl",
+      "frage": "Wie heißt Marios Bruder?",
+      "optionen": [
+        "Luigi",
+        "Wario",
+        "Toad",
+        "Waluigi"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Luigi",
+        "url": "https://de.wikipedia.org/wiki/Luigi"
+      }
+    },
+    {
+      "id": "game-037",
+      "modus": "auswahl",
+      "frage": "Welches Unternehmen stellt die PlayStation her?",
+      "optionen": [
+        "Nintendo",
+        "Sony",
+        "Sega",
+        "Microsoft"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – PlayStation",
+        "url": "https://de.wikipedia.org/wiki/PlayStation"
+      }
+    },
+    {
+      "id": "game-038",
+      "modus": "auswahl",
+      "frage": "In welchem Nintendo-Spiel von 2020 richtet man eine Insel voller Tierbewohner ein?",
+      "optionen": [
+        "Stardew Valley",
+        "Die Sims 4",
+        "Animal Crossing: New Horizons",
+        "Harvest Moon"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Animal Crossing: New Horizons",
+        "url": "https://de.wikipedia.org/wiki/Animal_Crossing:_New_Horizons"
+      }
+    },
+    {
+      "id": "game-039",
+      "modus": "auswahl",
+      "frage": "Welche Farbe hat Kirby?",
+      "optionen": [
+        "Weiß",
+        "Gelb",
+        "Blau",
+        "Rosa"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Kirby (Computerspielreihe)",
+        "url": "https://de.wikipedia.org/wiki/Kirby_(Computerspielreihe)"
+      }
+    },
+    {
+      "id": "game-040",
+      "modus": "auswahl",
+      "frage": "Welchem Konzern gehört Minecraft heute?",
+      "optionen": [
+        "Sony",
+        "Tencent",
+        "Nintendo",
+        "Microsoft"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Microsoft",
+        "url": "https://de.wikipedia.org/wiki/Microsoft"
+      }
+    },
+    {
+      "id": "game-041",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Pokémon von Team Rocket mit der Münze auf der Stirn?",
+      "optionen": [
+        "Pummeluff",
+        "Evoli",
+        "Mauzi",
+        "Enton"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Pokémon",
+        "url": "https://de.wikipedia.org/wiki/Pokémon"
+      }
+    },
+    {
+      "id": "game-042",
+      "modus": "auswahl",
+      "frage": "In welchem Rennspiel wirft Mario mit Bananen und Panzern?",
+      "optionen": [
+        "Need for Speed",
+        "Crash Team Racing",
+        "F-Zero",
+        "Mario Kart"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Mario Kart",
+        "url": "https://de.wikipedia.org/wiki/Mario_Kart"
+      }
+    },
+    {
+      "id": "game-043",
+      "modus": "schaetzen",
+      "frage": "Wie viele Blöcke hoch ist das Spielfeld bei Tetris?",
+      "einheit": "Blöcke",
+      "loesung": 20,
+      "quelle": {
+        "titel": "Wikipedia – Tetris",
+        "url": "https://de.wikipedia.org/wiki/Tetris"
+      }
+    },
+    {
+      "id": "game-044",
+      "modus": "schaetzen",
+      "frage": "Wie viele verschiedene Steine (Formen) gibt es bei Tetris?",
+      "einheit": "Steine",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Tetromino",
+        "url": "https://de.wikipedia.org/wiki/Tetromino"
+      }
+    },
+    {
+      "id": "game-045",
+      "modus": "schaetzen",
+      "frage": "Wie viele Pokémon-Typen gibt es (z. B. Feuer, Wasser, Pflanze …)?",
+      "einheit": "Typen",
+      "loesung": 18,
+      "quelle": {
+        "titel": "Wikipedia – Pokémon",
+        "url": "https://de.wikipedia.org/wiki/Pokémon"
+      }
+    },
+    {
+      "id": "game-046",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler hat ein Team bei „Counter-Strike“ im Wettkampf?",
+      "einheit": "Spieler",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Counter-Strike",
+        "url": "https://de.wikipedia.org/wiki/Counter-Strike"
+      }
+    },
+    {
+      "id": "game-047",
+      "modus": "schaetzen",
+      "frage": "Wie viele Blöcke hoch ist eine Minecraft-Welt (seit Version 1.18)?",
+      "einheit": "Blöcke",
+      "loesung": 384,
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      },
+      "erklaerung": "Von Höhe −64 bis 319."
+    },
+    {
+      "id": "game-048",
+      "modus": "schaetzen",
+      "frage": "Wie viele Knöpfe hat ein klassischer NES-Controller – ohne Steuerkreuz?",
+      "einheit": "Knöpfe",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Nintendo Entertainment System",
+        "url": "https://de.wikipedia.org/wiki/Nintendo_Entertainment_System"
+      },
+      "erklaerung": "A, B, Start und Select."
+    },
+    {
+      "id": "game-049",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler hat ein Team bei „Rocket League“ im Standardmodus?",
+      "einheit": "Spieler",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Rocket League",
+        "url": "https://de.wikipedia.org/wiki/Rocket_League"
+      }
+    },
+    {
+      "id": "game-050",
+      "modus": "schaetzen",
+      "frage": "Wie viele Power-Sterne gibt es in „Super Mario 64“?",
+      "einheit": "Sterne",
+      "loesung": 120,
+      "quelle": {
+        "titel": "Wikipedia – Super Mario 64",
+        "url": "https://de.wikipedia.org/wiki/Super_Mario_64"
+      }
+    },
+    {
+      "id": "game-051",
+      "modus": "schaetzen",
+      "frage": "Wie viele Fahrer starten in einem Rennen von „Mario Kart 8“?",
+      "einheit": "Fahrer",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Mario Kart 8",
+        "url": "https://de.wikipedia.org/wiki/Mario_Kart_8"
+      }
+    },
+    {
+      "id": "game-052",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien „Super Mario Bros.“ für das NES?",
+      "daten": {
+        "von": 1970,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1985,
+      "quelle": {
+        "titel": "Wikipedia – Super Mario Bros.",
+        "url": "https://de.wikipedia.org/wiki/Super_Mario_Bros."
+      }
+    },
+    {
+      "id": "game-053",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien „Pokémon GO“?",
+      "daten": {
+        "von": 1980,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 2016,
+      "quelle": {
+        "titel": "Wikipedia – Pokémon Go",
+        "url": "https://de.wikipedia.org/wiki/Pokémon_Go"
+      }
+    },
+    {
+      "id": "game-054",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien das erste „The Legend of Zelda“ in Japan?",
+      "daten": {
+        "von": 1960,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Erste Farbfernsehsendung in Deutschland",
+            "jahr": 1967
+          },
+          {
+            "name": "Euro wird Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1986,
+      "quelle": {
+        "titel": "Wikipedia – The Legend of Zelda (Computerspiel)",
+        "url": "https://de.wikipedia.org/wiki/The_Legend_of_Zelda_(Computerspiel)"
+      }
+    },
+    {
+      "id": "game-055",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam die Nintendo Wii heraus?",
+      "daten": {
+        "von": 1980,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 2006,
+      "quelle": {
+        "titel": "Wikipedia – Wii",
+        "url": "https://de.wikipedia.org/wiki/Wii"
+      }
+    },
+    {
+      "id": "game-056",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Seoul, eine Hochburg des E-Sports?",
+      "daten": {
+        "mitte": [
+          30,
+          100
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 37.57,
+        "lng": 126.98
+      },
+      "quelle": {
+        "titel": "Wikipedia – Seoul",
+        "url": "https://de.wikipedia.org/wiki/Seoul"
+      }
+    },
+    {
+      "id": "game-057",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Helsinki, die Heimat der „Angry Birds“-Firma Rovio?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 60.17,
+        "lng": 24.94
+      },
+      "quelle": {
+        "titel": "Wikipedia – Rovio Entertainment",
+        "url": "https://de.wikipedia.org/wiki/Rovio_Entertainment"
+      }
+    },
+    {
+      "id": "game-058",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Nintendo-Konsolen nach ihrem Erscheinungsjahr!",
+      "loesung": [
+        "Game Boy",
+        "Nintendo 64",
+        "GameCube",
+        "Nintendo DS"
+      ],
+      "oben": "älteste",
+      "unten": "neueste",
+      "quelle": {
+        "titel": "Wikipedia – Nintendo",
+        "url": "https://de.wikipedia.org/wiki/Nintendo"
+      }
+    },
+    {
+      "id": "game-059",
+      "modus": "reihenfolge",
+      "frage": "Ordne diese Pflanzen-Pokémon nach ihrer Entwicklung!",
+      "loesung": [
+        "Bisasam",
+        "Bisaknosp",
+        "Bisaflor"
+      ],
+      "oben": "Basis",
+      "unten": "Endstufe",
+      "quelle": {
+        "titel": "Wikipedia – Pokémon",
+        "url": "https://de.wikipedia.org/wiki/Pokémon"
+      }
+    },
+    {
+      "id": "game-060",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Speichermedien von Spielkonsolen nach ihrem Erscheinen!",
+      "loesung": [
+        "Steckmodul",
+        "CD",
+        "DVD",
+        "Blu-ray Disc"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Spielkonsole",
+        "url": "https://de.wikipedia.org/wiki/Spielkonsole"
+      }
     }
   ],
   "stechfragen": [
@@ -516,6 +1001,39 @@
       "quelle": {
         "titel": "Wikipedia – Game Boy",
         "url": "https://de.wikipedia.org/wiki/Game_Boy"
+      }
+    },
+    {
+      "id": "game-s03",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde Nintendo gegründet – damals als Hersteller von Spielkarten?",
+      "einheit": "",
+      "loesung": 1889,
+      "quelle": {
+        "titel": "Wikipedia – Nintendo",
+        "url": "https://de.wikipedia.org/wiki/Nintendo"
+      }
+    },
+    {
+      "id": "game-s04",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr erschien das Automatenspiel „Space Invaders“?",
+      "einheit": "",
+      "loesung": 1978,
+      "quelle": {
+        "titel": "Wikipedia – Space Invaders",
+        "url": "https://de.wikipedia.org/wiki/Space_Invaders"
+      }
+    },
+    {
+      "id": "game-s05",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr fand die erste Gamescom statt?",
+      "einheit": "",
+      "loesung": 2009,
+      "quelle": {
+        "titel": "Wikipedia – Gamescom",
+        "url": "https://de.wikipedia.org/wiki/Gamescom"
       }
     }
   ]
