@@ -308,6 +308,19 @@ Alles im Repo und alles im Browser-Code ist für jeden lesbar.
    Gratis-Tarif ohne Billing. KI-Fragen können Fehler enthalten – Quelle
    immer mit anzeigen.
 
+   **Entscheidung (11.10.2026):** Gemini über Supabase Edge Function, wie oben.
+   - Standardmodell **Flash-Lite** (höhere Gratis-Grenze), Flash nur optional.
+   - **Google-Suche (Grounding)** nutzen, wo sie im Gratis-Tarif ohne Billing
+     erlaubt ist – damit Quellen echt sind statt erfunden.
+   - **Anbieter austauschbar:** Der Modell-Aufruf steckt an *einer* Stelle in
+     der Edge Function. Wird Gemini zu knapp, Wechsel z. B. zu Groq
+     (ebenfalls ohne Kreditkarte) – die Website merkt davon nichts.
+   - Gratis-Grenzen ändern sich oft: vor dem Bau aktuelle Werte in Google AI
+     Studio prüfen (Nutzer). Gratis-Eingaben nutzt Google zum Training –
+     für Quiz-Themen unkritisch, aber keine persönlichen Daten schicken.
+   - Phase 3 (Pakete vorab mit Claude/NotebookLM + `validate.py`) bleibt der
+     immer funktionierende Weg, falls ein Gratis-Tarif wegfällt.
+
 **Phase 1 in Schritten:**
 - 1a: Lobby – Host öffnet Raum mit Code, Handys treten bei, Host sieht die Namen.
 - 1b: Fragen im Modus `auswahl` mit Countdown und Auflösung.

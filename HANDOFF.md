@@ -8,21 +8,6 @@
 
 ---
 
-## ⚠️ Erinnerung an den Nutzer
-
-Am 11.10.2026 wurde eine Windows-Firewall-Regel angelegt, damit das Handy im
-WLAN Live Server erreicht (WLAN-Profil ist „Privat“, VS Code hatte nur Regeln
-für „Öffentlich“). Der Nutzer möchte daran erinnert werden, sie wieder zu
-entfernen, wenn das lokale Testen vorbei ist – in einer **Admin-PowerShell**:
-
-```powershell
-Remove-NetFirewallRule -DisplayName "Quiz Live Server (nur WLAN privat)"
-```
-
-Diesen Abschnitt löschen, sobald der Nutzer das erledigt hat.
-
----
-
 ## Stand
 
 - **Phase 1** fertig, **online** unter https://only-dylz.github.io/Quiz_Game/
@@ -43,6 +28,9 @@ Diesen Abschnitt löschen, sobald der Nutzer das erledigt hat.
   (dieselben Regeln wie die `pruefeFrage`-Funktionen der Modi), läuft in `.venv`.
 - `tools/prompt.md`: Vorlage für NotebookLM/Claude, um neue Pakete zu erzeugen.
 - Danach ein zweites Themenpaket damit erzeugen und prüfen.
+- **Weg für Phase 5 ist entschieden** (siehe CLAUDE.md, Phase 5): Gemini
+  Flash-Lite über Supabase Edge Function, Anbieter austauschbar. Phase 3 zuerst,
+  weil der Validator später auch die KI-Antworten prüfen soll.
 
 ## Danach
 
