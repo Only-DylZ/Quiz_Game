@@ -10,9 +10,10 @@ import { zahlText, bildZeigen } from "./engine/hilfen.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
+import * as reihenfolge from "./engine/reihenfolge.js";
 
 // Alle Modi, die wir schon können (muss zu host.js passen)
-const MODI = { auswahl, schaetzen, grafik };
+const MODI = { auswahl, schaetzen, grafik, reihenfolge };
 
 // Wie lange wir nach dem Verbinden auf den Host warten (Millisekunden)
 const HOST_WARTEZEIT = 4000;

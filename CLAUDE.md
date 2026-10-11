@@ -50,7 +50,8 @@ bis hinten) ist der Stand von Phase 1–3; ab Phase 4 gilt:
 **Themenrunde**
 - Eine Themenrunde = ein Paket. Ein Paket ist ein **Fragen-Pool** (Ziel: 150
   Fragen). Pro Runde zieht der Host **zufällig 10 Fragen** mit festem Mix
-  (4 `auswahl`, 3 `schaetzen`, 3 `grafik`; `docs/engine/runde.js`).
+  (4 `auswahl`, 3 `schaetzen`, 2 `grafik`, 1 `reihenfolge`; `MIX` in
+  `docs/engine/runde.js`). Fehlt ein Modus, wird mit anderen aufgefüllt.
 - **Gedächtnis:** Der Host-Browser merkt sich (localStorage) die ids gespielter
   Fragen; ungespielte kommen zuerst dran, auch über mehrere Spielabende. Ist
   der Pool aufgebraucht, beginnt das Gedächtnis von vorne. So kann auch der
@@ -149,6 +150,7 @@ Quiz_Game/
 │  │  ├─ auswahl.js        Anzeige und Auswertung von Multiple-Choice-Fragen.
 │  │  ├─ schaetzen.js      Anzeige und Auswertung von Schätzfragen.
 │  │  ├─ grafik.js         Anzeige und Auswertung von Grafikfragen (Balken, Zeitleiste, Karte).
+│  │  ├─ reihenfolge.js    Modus „reihenfolge“: Elemente in die richtige Reihenfolge bringen.
 │  │  ├─ karte.js          Die Art „karte“: Leaflet-Karte anzeigen, Ort antippen, Auflösung.
 │  │  ├─ runde.js          Zieht pro Runde 10 zufällige Fragen aus dem Pool (ungespielte zuerst).
 │  │  └─ punkte.js         Alle Punkteregeln an einer Stelle.
@@ -182,14 +184,14 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
 | `thema`        | ja      | Text   | Name des Themas, z. B. `"Raumfahrt"`        |
 | `version`      | ja      | Zahl   | Formatversion, aktuell `1`                  |
 | `beschreibung` | nein    | Text   | Ein Satz zum Paket                          |
-| `fragen`       | ja      | Liste  | **Fragen-Pool** – mindestens 4 `auswahl`, 3 `schaetzen`, 3 `grafik`; Ziel: **150** |
+| `fragen`       | ja      | Liste  | **Fragen-Pool** – mindestens 10 Fragen, möglichst alle Modi; Ziel: **150** |
 | `stechfragen`  | ja      | Liste  | Mindestens 1 (Ziel: 5) Fragen, **immer Modus `schaetzen`** – nur bei Gleichstand |
 
 ### Jede Frage (gemeinsame Felder)
 
 | Feld        | Pflicht | Typ    | Bedeutung                                                    |
 |-------------|:-------:|--------|--------------------------------------------------------------|
-| `modus`     | ja      | Text   | `"auswahl"`, `"schaetzen"` oder `"grafik"`                   |
+| `modus`     | ja      | Text   | `"auswahl"`, `"schaetzen"`, `"grafik"` oder `"reihenfolge"`  |
 | `frage`     | ja      | Text   | Der Fragetext                                                |
 | `loesung`   | ja      | je nach Modus | Die richtige Antwort (siehe unten)                    |
 | `quelle`    | ja      | Objekt | `{ "titel": "...", "url": "..." }` – `titel` Pflicht, `url` empfohlen |
@@ -207,6 +209,14 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
 **`schaetzen`**
 - `einheit` (Pflicht): z. B. `"km"`, `"Jahre"`, `""` für reine Anzahl.
 - `loesung`: Zahl.
+
+**`reihenfolge`**
+- `loesung`: Liste mit 3–6 Texten (je max. 40 Zeichen) **in richtiger Reihenfolge**.
+- `oben`, `unten` (empfohlen): Beschriftung der Enden, z. B. `"höchster"` / `"niedrigster"`.
+- `werte` (freiwillig): ein Text pro Element für die Auflösung, z. B. `["8849 m", …]`.
+- Die Handys bekommen die Elemente **alphabetisch** sortiert. Wäre das schon die
+  Lösung, ist die Frage ungültig (dann Liste umdrehen und `oben`/`unten` tauschen).
+- Antwort eines Spielers: dieselben Texte in seiner Reihenfolge.
 
 **`grafik`**
 - `art` (Pflicht): `"balken"`, `"zeitleiste"` oder `"karte"`.
@@ -279,6 +289,9 @@ Alle Regeln stehen nur in `docs/engine/punkte.js`. Maximal **1000 Punkte** pro F
   - `karte`: nach Entfernung in km (Haversine-Formel):
     `punkte = 1000 × (1 − km / 2000)`, nicht unter 0, gerundet.
     (0 km = 1000, 500 km = 750, ab 2000 km = 0.)
+- **reihenfolge:** nach richtig herum stehenden Paaren:
+  `punkte = 1000 × richtige Paare / alle Paare`, gerundet. Tempo zählt nicht.
+  (Lösung A B C D: A B D C = 5 von 6 = 833, D A B C = 3 von 6 = 500.)
 
 Die genauen Grenzwerte (2000 km usw.) dürfen wir später anpassen –
 dann nur in `punkte.js` und hier.

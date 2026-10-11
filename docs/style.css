@@ -322,6 +322,83 @@ button.klein {
   font-weight: bold;
 }
 
+/* ---------- Reihenfolge ---------- */
+
+/* Host: Elemente als Kacheln */
+.reihe-kacheln {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.reihe-kachel {
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: var(--flaeche);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Liste mit Plätzen (Handy) bzw. der Lösung (Host) */
+.reihe-liste {
+  margin: 4px 0;
+  padding-left: 2em;
+  text-align: left;
+}
+
+.reihe-liste li {
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--flaeche);
+  font-weight: bold;
+}
+
+.reihe-liste li.leer {
+  opacity: 0.4;
+  font-weight: normal;
+}
+
+.reihe-loesung {
+  max-width: 600px;
+  margin: 8px auto;
+  font-size: 1.3rem;
+}
+
+.reihe-loesung li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.reihe-wert {
+  color: var(--akzent);
+}
+
+/* "▲ höchster" / "▼ niedrigster" */
+.reihe-rand {
+  margin: 2px 0;
+  text-align: center;
+  color: var(--akzent);
+  font-weight: bold;
+}
+
+/* Handy: noch nicht gewählte Elemente */
+.reihe-tasten {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reihe-taste {
+  flex: 1 1 40%;
+  margin: 0;
+  padding: 12px 8px;
+  background: #e0e7ff;
+}
+
 /* ---------- Listen: Schätzungen und Rangliste ---------- */
 
 .schaetzliste,

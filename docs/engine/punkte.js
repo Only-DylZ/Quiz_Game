@@ -69,6 +69,30 @@ export function entfernungKm(a, b) {
   return 2 * ERDRADIUS_KM * Math.asin(Math.min(1, Math.sqrt(h)));
 }
 
+// reihenfolge: nach richtigen Paaren.
+// Für jedes Paar von Elementen wird geprüft, ob es richtig herum steht.
+// Beispiel Lösung A B C D (6 Paare): A B D C → 5 von 6 richtig → 833 Punkte.
+//   antwort – Liste der Elemente in der Reihenfolge des Spielers
+//   loesung – Liste derselben Elemente in richtiger Reihenfolge
+export function punkteReihenfolge(antwort, loesung) {
+  const n = loesung.length;
+  if (!Array.isArray(antwort) || antwort.length !== n || n < 2) return 0;
+
+  // Für jedes Element: an welcher Stelle steht es in der Lösung?
+  const richtigePosition = new Map(loesung.map((element, platz) => [element, platz]));
+  if (!antwort.every((element) => richtigePosition.has(element))) return 0;
+
+  let richtig = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      // Spieler hat antwort[i] vor antwort[j] gestellt – stimmt das?
+      if (richtigePosition.get(antwort[i]) < richtigePosition.get(antwort[j])) richtig++;
+    }
+  }
+  const paare = (n * (n - 1)) / 2;
+  return Math.round((MAX_PUNKTE * richtig) / paare);
+}
+
 // Rangliste: sortiert nach Punkten, gleiche Punkte = gleicher Platz.
 //   spieler – Liste von { id, name, punkte }
 //   Ergebnis – neue Liste, jeder Eintrag zusätzlich mit "platz"

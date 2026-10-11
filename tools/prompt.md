@@ -28,7 +28,8 @@ Quelle, aus der die Lösung eindeutig hervorgeht.
 Erzeuge **30 Fragen** im Feld `fragen`:
 - 12 Fragen im Modus `auswahl`
 - 9 Fragen im Modus `schaetzen`
-- 9 Fragen im Modus `grafik` (gemischt: `balken`, `zeitleiste`, `karte`)
+- 6 Fragen im Modus `grafik` (gemischt: `balken`, `zeitleiste`, `karte`)
+- 3 Fragen im Modus `reihenfolge`
 
 Dazu **2 Stechfragen** im Feld `stechfragen`: immer Modus `schaetzen`, mit einer
 eindeutigen Zahl als Lösung (keine „ungefähr“-Werte, bei denen Quellen sich
@@ -99,6 +100,16 @@ in genau diesem Format:
       "daten": { "mitte": [50, 10], "zoom": 4 },
       "loesung": { "lat": 48.14, "lng": 11.58 },
       "quelle": { "titel": "...", "url": "https://..." }
+    },
+    {
+      "id": "kurz-06",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Berge nach ihrer Höhe!",
+      "loesung": ["Mount Everest", "K2", "Lhotse"],
+      "oben": "höchster",
+      "unten": "niedrigster",
+      "werte": ["8849 m", "8611 m", "8516 m"],
+      "quelle": { "titel": "...", "url": "https://..." }
     }
   ],
   "stechfragen": [
@@ -126,6 +137,10 @@ Regeln:
 - `grafik` / `karte`: `loesung` mit Breitengrad `lat` und Längengrad `lng`
   (Dezimalgrad, 2 Nachkommastellen). `mitte` zeigt die Region, aber nicht genau
   auf die Lösung; `zoom` 2–6.
+- `reihenfolge`: 3–6 Elemente, `loesung` in richtiger Reihenfolge, `oben`/`unten`
+  beschriften die Enden. Nur Dinge mit eindeutigen, belegten Werten (keine
+  knappen oder umstrittenen Unterschiede). Die alphabetische Reihenfolge darf
+  nicht schon die Lösung sein.
 - Jede `id` nur einmal: `<kürzel>-001`, `<kürzel>-002` … (dreistellig, weil der
   Pool bis 150 wächst) und `<kürzel>-s01` … für Stechfragen.
 - Antworttexte kurz halten (höchstens ca. 60 Zeichen), Fragetexte unter 200 Zeichen.

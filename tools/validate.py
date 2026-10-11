@@ -30,10 +30,11 @@ PAKET_ORDNER = Path(__file__).resolve().parent.parent / "docs" / "packs"
 
 # Pool: so viele Fragen pro Modus braucht eine Runde mindestens (wie MIX in
 # docs/engine/runde.js). Das Ziel pro Thema sind ZIEL_POOL Fragen.
-MIX = {"auswahl": 4, "schaetzen": 3, "grafik": 3}
+MIX = {"auswahl": 4, "schaetzen": 3, "grafik": 2, "reihenfolge": 1}
+FRAGEN_PRO_RUNDE = 10
 ZIEL_POOL = 150
 ZIEL_STECHFRAGEN = 5
-MODI = ("auswahl", "schaetzen", "grafik")
+MODI = ("auswahl", "schaetzen", "grafik", "reihenfolge")
 GRAFIK_ARTEN = ("balken", "zeitleiste", "karte")
 MAX_BALKEN = 8
 MAX_EREIGNISSE = 8
@@ -42,7 +43,7 @@ MAX_EREIGNISSE = 8
 PAKET_FELDER = {"thema", "version", "beschreibung", "fragen", "stechfragen"}
 FRAGE_FELDER = {
     "id", "modus", "frage", "loesung", "quelle", "zeit", "erklaerung",
-    "optionen", "einheit", "art", "daten", "bild",
+    "optionen", "einheit", "art", "daten", "bild", "oben", "unten", "werte",
 }
 
 # Bilder: liegen in docs/bilder/ und heißen wie die Frage (z. B. bilder/dd-017.jpg),
@@ -121,15 +122,18 @@ def pruefe_paket(paket, bericht):
     for feld in sorted(set(paket) - PAKET_FELDER):
         bericht.hinweis_bei("Paket", f'unbekanntes Feld "{feld}" (Tippfehler?)')
 
-    # Fragen-Pool: genug Fragen pro Modus für mindestens eine Runde
+    # Fragen-Pool: mindestens eine Runde; fehlt ein Modus, füllt das Spiel mit
+    # anderen auf (deshalb dort nur ein Hinweis)
     fragen = paket.get("fragen")
     if not isinstance(fragen, list):
         bericht.fehler_bei("Paket", '"fragen" fehlt oder ist keine Liste')
         fragen = []
+    if len(fragen) < FRAGEN_PRO_RUNDE:
+        bericht.fehler_bei("Paket", f"braucht mindestens {FRAGEN_PRO_RUNDE} Fragen, hat {len(fragen)}")
     for modus, mindestens in MIX.items():
         anzahl = sum(1 for f in fragen if isinstance(f, dict) and f.get("modus") == modus)
         if anzahl < mindestens:
-            bericht.fehler_bei("Paket", f'braucht mindestens {mindestens} Fragen im Modus "{modus}", hat {anzahl}')
+            bericht.hinweis_bei("Paket", f'nur {anzahl} Fragen im Modus "{modus}" (pro Runde vorgesehen: {mindestens})')
     if 0 < len(fragen) < ZIEL_POOL:
         bericht.hinweis_bei("Paket", f"Pool hat {len(fragen)} Fragen (Ziel: {ZIEL_POOL})")
 
@@ -218,6 +222,8 @@ def pruefe_frage(frage, ort, bericht):
 
     if modus == "auswahl":
         pruefe_auswahl(frage, ort, bericht)
+    elif modus == "reihenfolge":
+        pruefe_reihenfolge(frage, ort, bericht)
     elif modus == "schaetzen":
         pruefe_schaetzen(frage, ort, bericht)
     else:
@@ -285,6 +291,36 @@ def pruefe_auswahl(frage, ort, bericht):
         bericht.fehler_bei(
             ort, f'"loesung" muss die Nummer einer Option sein (0 bis {len(optionen) - 1}), ist aber {loesung!r}'
         )
+
+
+def alphabetisch(liste):
+    """Ungefähr wie localeCompare("de") im Browser: Groß/klein egal, Ä wie A usw."""
+    ersatz = str.maketrans({"ä": "a", "ö": "o", "ü": "u", "ß": "ss"})
+    return sorted(liste, key=lambda t: t.casefold().translate(ersatz))
+
+
+def pruefe_reihenfolge(frage, ort, bericht):
+    loesung = frage["loesung"]
+    if not (isinstance(loesung, list) and 3 <= len(loesung) <= 6):
+        bericht.fehler_bei(ort, '"loesung" muss eine Liste mit 3 bis 6 Elementen in richtiger Reihenfolge sein')
+        return
+    if not all(ist_text(e) and len(e) <= 40 for e in loesung):
+        bericht.fehler_bei(ort, "jedes Element muss ein Text mit höchstens 40 Zeichen sein")
+        return
+    if len(set(loesung)) != len(loesung):
+        bericht.fehler_bei(ort, "zwei Elemente sind gleich")
+    if alphabetisch(loesung) == loesung:
+        bericht.fehler_bei(ort, "alphabetisch sortiert ist schon die Lösung – die Handys würden sie sehen! "
+                                '"oben"/"unten" tauschen und die Liste umdrehen')
+    for feld in ("oben", "unten"):
+        if feld in frage and not (isinstance(frage[feld], str) and len(frage[feld]) <= 40):
+            bericht.fehler_bei(ort, f'"{feld}" muss ein Text mit höchstens 40 Zeichen sein')
+    if "oben" not in frage or "unten" not in frage:
+        bericht.hinweis_bei(ort, '"oben" und "unten" (z. B. "höchster"/"niedrigster") helfen beim Sortieren')
+    if "werte" in frage:
+        werte = frage["werte"]
+        if not (isinstance(werte, list) and len(werte) == len(loesung) and all(isinstance(w, str) for w in werte)):
+            bericht.fehler_bei(ort, '"werte" muss eine Liste mit einem Text pro Element sein, z. B. "8849 m"')
 
 
 def pruefe_schaetzen(frage, ort, bericht):

@@ -8,8 +8,9 @@
 
 export const FRAGEN_PRO_RUNDE = 10;
 
-// So viele Fragen pro Modus enthält eine Runde (zusammen = FRAGEN_PRO_RUNDE)
-export const MIX = { auswahl: 4, schaetzen: 3, grafik: 3 };
+// So viele Fragen pro Modus enthält eine Runde (zusammen = FRAGEN_PRO_RUNDE).
+// Hat ein Paket von einem Modus zu wenige, wird mit anderen aufgefüllt.
+export const MIX = { auswahl: 4, schaetzen: 3, grafik: 2, reihenfolge: 1 };
 
 // Eindeutige Kennung einer Frage fürs Gedächtnis: die id (Pflicht im Paket),
 // zur Sicherheit sonst der Fragetext.

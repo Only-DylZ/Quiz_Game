@@ -643,6 +643,47 @@
           "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Kyrgyzstan.svg"
         }
       }
+    },
+    {
+      "id": "geo-036",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Berge nach ihrer Höhe!",
+      "loesung": [
+        "Mount Everest",
+        "K2",
+        "Kangchendzönga",
+        "Lhotse"
+      ],
+      "oben": "höchster",
+      "unten": "niedrigster",
+      "werte": [
+        "8849 m",
+        "8611 m",
+        "8586 m",
+        "8516 m"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Achttausender",
+        "url": "https://de.wikipedia.org/wiki/Achttausender"
+      }
+    },
+    {
+      "id": "geo-037",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Ozeane nach ihrer Fläche!",
+      "loesung": [
+        "Pazifischer Ozean",
+        "Atlantischer Ozean",
+        "Indischer Ozean",
+        "Südlicher Ozean",
+        "Arktischer Ozean"
+      ],
+      "oben": "größter",
+      "unten": "kleinster",
+      "quelle": {
+        "titel": "Wikipedia – Ozean",
+        "url": "https://de.wikipedia.org/wiki/Ozean"
+      }
     }
   ],
   "stechfragen": [

@@ -8,12 +8,14 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 import {
-  anteilRestzeit, punkteAuswahl, punkteSchaetzen, punkteZeitleiste, punkteKarte, entfernungKm, ranglisteBerechnen,
+  anteilRestzeit, punkteAuswahl, punkteSchaetzen, punkteZeitleiste, punkteKarte, entfernungKm,
+  punkteReihenfolge, ranglisteBerechnen,
 } from "../docs/engine/punkte.js";
 import { zahlLesen, zahlText, bildPfadGueltig, bildGueltig } from "../docs/engine/hilfen.js";
 import * as auswahl from "../docs/engine/auswahl.js";
 import * as schaetzen from "../docs/engine/schaetzen.js";
 import * as grafik from "../docs/engine/grafik.js";
+import * as reihenfolge from "../docs/engine/reihenfolge.js";
 import { rundeZusammenstellen, kennung, MIX, FRAGEN_PRO_RUNDE } from "../docs/engine/runde.js";
 
 // ---------------------------------------------------------------------------
@@ -84,6 +86,38 @@ test("karte: Punkte nach Entfernung (Beispiele aus CLAUDE.md)", () => {
   assert.equal(punkteKarte({ lat: 0, lng: 500 / 111.195 }, ort), 750);
   assert.equal(punkteKarte({ lat: 0, lng: 90 }, ort), 0);     // ~10.000 km → nie negativ
   assert.equal(punkteKarte({ lat: NaN, lng: 0 }, ort), 0);
+});
+
+// ---------------------------------------------------------------------------
+// Punkte und Regeln: reihenfolge (richtige Paare)
+// ---------------------------------------------------------------------------
+test("reihenfolge: Punkte nach richtigen Paaren", () => {
+  const l = ["A", "B", "C", "D"]; // 6 Paare
+  assert.equal(punkteReihenfolge(["A", "B", "C", "D"], l), 1000);
+  assert.equal(punkteReihenfolge(["A", "B", "D", "C"], l), 833); // 5 von 6
+  assert.equal(punkteReihenfolge(["D", "A", "B", "C"], l), 500); // 3 von 6
+  assert.equal(punkteReihenfolge(["D", "C", "B", "A"], l), 0);   // alles verkehrt
+  assert.equal(punkteReihenfolge(["A", "B", "C"], l), 0);        // unvollständig
+  assert.equal(punkteReihenfolge(["A", "B", "C", "X"], l), 0);   // fremdes Element
+});
+
+test("reihenfolge: Handys bekommen die Elemente alphabetisch, nie die Lösung", () => {
+  const frage = { modus: "reihenfolge", loesung: ["Mars", "Jupiter", "Saturn"], oben: "nah", unten: "fern" };
+  assert.ok(reihenfolge.pruefeFrage(frage));
+  const daten = reihenfolge.oeffentlicheDaten(frage);
+  assert.deepEqual(daten.elemente, ["Jupiter", "Mars", "Saturn"]);
+  assert.ok(!("loesung" in daten));
+  // Antworten: genau die Elemente, jedes einmal
+  assert.ok(reihenfolge.antwortGueltig(daten, ["Saturn", "Mars", "Jupiter"]));
+  assert.ok(!reihenfolge.antwortGueltig(daten, ["Mars", "Mars", "Jupiter"]));
+  assert.ok(!reihenfolge.antwortGueltig(daten, ["Mars", "Jupiter"]));
+  assert.ok(!reihenfolge.antwortGueltig(daten, ["Mars", "Jupiter", "<b>"]));
+  assert.ok(!reihenfolge.antwortGueltig(daten, "Mars"));
+  // kaputte Fragen
+  assert.ok(!reihenfolge.pruefeFrage({ loesung: ["A", "B"] }));          // zu wenige
+  assert.ok(!reihenfolge.pruefeFrage({ loesung: ["A", "A", "B"] }));     // doppelt
+  assert.ok(!reihenfolge.pruefeFrage({ loesung: ["Apfel", "Birne", "Kiwi"] })); // alphabetisch = Lösung
+  assert.ok(!reihenfolge.pruefeFrage({ loesung: ["A", "B", "C"], werte: ["1"] })); // Werte passen nicht
 });
 
 // ---------------------------------------------------------------------------
@@ -183,7 +217,7 @@ test("zahlText: deutsche Anzeige", () => {
 // ---------------------------------------------------------------------------
 // SICHERHEIT: Die Handys dürfen die Lösung nie vorab bekommen
 // ---------------------------------------------------------------------------
-const MODI = { auswahl, schaetzen, grafik };
+const MODI = { auswahl, schaetzen, grafik, reihenfolge };
 
 // Alle Pakete aus docs/packs/index.json laden – jede neue Frage wird mitgeprüft
 function lesen(datei) {
@@ -206,7 +240,9 @@ test("oeffentlicheDaten enthält nie die Lösung (alle Pakete)", () => {
     assert.ok(!alsText.includes("erklaerung"), wo + ": Erklärung wird mitgeschickt!");
 
     // Genau nachsehen, ob die Lösung irgendwo in den Daten steckt
-    if (frage.modus === "schaetzen") {
+    if (frage.modus === "reihenfolge") {
+      assert.notDeepEqual(daten.elemente, frage.loesung, wo + ": Handys sehen die richtige Reihenfolge!");
+    } else if (frage.modus === "schaetzen") {
       assert.deepEqual(Object.keys(daten), ["einheit"], wo + ": schickt mehr als die Einheit!");
     } else if (frage.art === "balken") {
       assert.ok(daten.balken.every((b) => b.wert !== frage.loesung), wo + ": Lösung als Balkenwert!");
@@ -284,16 +320,19 @@ test("runde: 10 Fragen mit dem festen Modus-Mix, keine doppelt", () => {
 
 test("runde: ungespielte Fragen kommen zuerst", () => {
   const pool = testPool();
-  // Alles gespielt außer je 4/3/3 Fragen → genau diese müssen gezogen werden
-  const frei = new Set(["auswahl-0", "auswahl-1", "auswahl-2", "auswahl-3",
-    "schaetzen-0", "schaetzen-1", "schaetzen-2", "grafik-0", "grafik-1", "grafik-2"]);
+  // Alles gespielt außer genau so vielen Fragen pro Modus, wie MIX verlangt
+  // → genau diese müssen gezogen werden
+  const frei = new Set(
+    Object.entries(MIX).flatMap(([modus, anzahl]) =>
+      Array.from({ length: anzahl }, (_, i) => modus + "-" + i))
+  );
   const gespielt = new Set(pool.map(kennung).filter((k) => !frei.has(k)));
   const runde = rundeZusammenstellen(pool, gespielt);
   assert.deepEqual(new Set(runde.map(kennung)), frei);
 });
 
 test("runde: fehlt ein Modus, wird mit anderen aufgefüllt", () => {
-  const pool = testPool().filter((f) => f.modus !== "grafik");
+  const pool = testPool().filter((f) => f.modus !== "reihenfolge");
   const runde = rundeZusammenstellen(pool, new Set());
   assert.equal(runde.length, FRAGEN_PRO_RUNDE);
   // kleiner Pool → so viele wie da sind

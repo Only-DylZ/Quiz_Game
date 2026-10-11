@@ -17,9 +17,10 @@ import { rundeZusammenstellen, kennung } from "./engine/runde.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
+import * as reihenfolge from "./engine/reihenfolge.js";
 
 // Alle Modi, die wir können
-const MODI = { auswahl, schaetzen, grafik };
+const MODI = { auswahl, schaetzen, grafik, reihenfolge };
 
 // Welches Paket gespielt wird (Themenauswahl kommt in Phase 4).
 // Zum Testen: host.html?paket=geographie lädt packs/geographie.json.

@@ -186,6 +186,47 @@
         "titel": "NASA Science – Voyager 1",
         "url": "https://science.nasa.gov/mission/voyager/voyager-1/"
       }
+    },
+    {
+      "id": "rf-11",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Planeten nach ihrer Entfernung zur Sonne!",
+      "loesung": [
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptun"
+      ],
+      "oben": "sonnennächster",
+      "unten": "sonnenfernster",
+      "quelle": {
+        "titel": "Wikipedia – Sonnensystem",
+        "url": "https://de.wikipedia.org/wiki/Sonnensystem"
+      }
+    },
+    {
+      "id": "rf-12",
+      "modus": "reihenfolge",
+      "frage": "Was geschah zuerst? Ordne nach dem Jahr!",
+      "loesung": [
+        "Sputnik 1 im All",
+        "Erste Mondlandung",
+        "Erster Space-Shuttle-Flug",
+        "Erstes ISS-Modul im All"
+      ],
+      "oben": "frühestes",
+      "unten": "spätestes",
+      "werte": [
+        "1957",
+        "1969",
+        "1981",
+        "1998"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Geschichte der Raumfahrt",
+        "url": "https://de.wikipedia.org/wiki/Geschichte_der_Raumfahrt"
+      }
     }
   ],
   "stechfragen": [
