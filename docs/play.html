@@ -40,8 +40,16 @@
       <h2 id="themenwahlTitel"></h2>
       <p>Wähle deinen Kandidaten fürs Glücksrad:</p>
       <div class="themen-knoepfe" id="themenKnoepfe"></div>
-      <!-- Booster: jeder legt eine weitere Karte des eigenen Kandidaten aufs Rad -->
+      <!-- Booster: jeder legt eine weitere Karte des eigenen Kandidaten aufs Rad (Vorrat fürs ganze Spiel) -->
       <div class="booster-zeile" id="boosterZeile" hidden></div>
+      <!-- Themenjoker: eigenes Thema statt der 3 Vorschläge -->
+      <form class="joker" id="joker" hidden>
+        <label for="jokerFeld" id="jokerText"></label>
+        <div class="eingabezeile">
+          <input id="jokerFeld" maxlength="60" autocomplete="off" placeholder="z. B. Harry Potter">
+          <button type="submit" class="klein">Nehmen</button>
+        </div>
+      </form>
       <p id="kandidatStatus"></p>
     </section>
 

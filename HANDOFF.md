@@ -79,13 +79,43 @@ CLAUDE.md entsprechend angepasst.
 - Host prüft: Booster ganze Zahl 0 … erlaubt, sonst wird die Nachricht ignoriert.
   Liste zeigt „Anna ✓ 🚀×2“.
 
+## Phase 5 – fertig (eingerichtet und vom Nutzer getestet, 11.10.2026)
+
+- Gratis-Grenzen laut AI Studio (11.10.2026): 3.5 Flash-Lite 15 RPM / 500 RPD,
+  3.8 Flash 5 RPM / 20 RPD (2.5er gibt es für neue Konten nicht mehr). Früher notiert: 2.5 Flash-Lite 10 RPM / 20 RPD,
+  2.5 Flash 5 RPM / 20 RPD. Live-API-Modelle („Unbegrenzt“) passen nicht.
+- Secret `GEMINI_API_KEY` ist in Supabase hinterlegt (Nutzer, 11.10.2026).
+- `supabase/functions/themenjoker/index.ts` (reines JS, von pruefen.mjs mitgeprüft):
+  Host-im-Raum-Prüfung per Presence, Limits über Tabelle `themenjoker_aufrufe`
+  (RLS an, keine Policies, nur service_role), Gemini mit Google-Suche → bei
+  Fehler ohne Suche → bei 429 nächstes Modell. Antwort wird Frage für Frage
+  geprüft/umgebaut (zeitleiste/karte → grafik, Reihenfolge ggf. umgedreht,
+  nur https-Quellen). Immer Status 200 mit `{ ok, paket | fehler }`.
+- Website: Lobby „Themenjoker pro Spieler und Runde“ (0/1), Handy-Feld
+  „🃏 eigenes Thema“, Karte auf dem Rad (mit Booster kombinierbar), Erzeugung
+  erst nach dem Drehen, bei Fehler Karte raus + nochmal drehen (keine Karte
+  übrig → zufälliges festes Thema). KI-Fragen: Hinweis bei der Quelle.
+- 2.5-Modelle liefern 404 („no longer available to new users“) → umgestellt auf
+  gemini-3.5-flash-lite + gemini-3.8-flash, ohne thinkingConfig.
+- Mit Google-Suche kam 429 → jetzt bei 429 mit Suche erst ohne Suche probieren.
+  Seitdem funktioniert der Themenjoker (Test „Valorant“). Ob Suche im Gratis-Tarif
+  überhaupt geht: in den Supabase-Logs nachsehen (429 bei `true` = nein).
+- ~~Noch nicht live getestet~~ – vor allem die Presence-Prüfung in der Function
+  und ob Google-Suche im Gratis-Tarif klappt (Supabase-Logs ansehen).
+
+## Änderung 11.10.2026 (Wunsch des Nutzers)
+
+- Joker (Booster 0–5, Themenjoker 0–3) gelten **fürs ganze Spiel** statt pro Runde.
+  `spielstand` hat `booster`, `joker` (Vorrat) und `farbe`. Abgezogen wird beim
+  Drehen (`jokerVerbrauchen`, je Wahl einmal), bei Fehler zurück (`jokerZurueckgeben`).
+- Glücksrad: alle Karten eines Spielers in seiner Farbe (`FARBEN` aus rad.js),
+  dieselbe Farbe als Unterstrich in der Kandidatenliste.
+
 ## Nächster Schritt
 
-
-- Danach Phase 5 (Gemini + Themenjoker). Vorher: Nutzer prüft in Google AI
-  Studio die aktuellen Gratis-Grenzen (ohne Billing!). Key nie in den Chat –
-  direkt als Supabase-Secret.
-- Später: Pools in Blöcken à 30 erweitern (Ziel 150), Raumfahrt zuerst (nur 12).
+- Wichtig: Änderungen an `supabase/functions/themenjoker/index.ts` muss der Nutzer
+  selbst im Dashboard deployen (Code ersetzen → Deploy) – GitHub Actions macht das nicht.
+- Danach: Pools in Blöcken à 30 erweitern (Ziel 150), Raumfahrt zuerst (nur 12).
 
 ## Danach
 

@@ -96,6 +96,23 @@ export function raumBetreten(raumcode, ich, beiNachricht, beiTeilnehmern) {
   };
 }
 
+// Themenjoker (Phase 5): Bittet die Edge Function "themenjoker", zu einem
+// eigenen Thema ein Fragenpaket mit der KI zu erzeugen. Dauert ca. 10–30 s.
+// Der KI-Schlüssel liegt nur auf dem Server – der Browser schickt nur Raumcode + Thema.
+// Ergebnis: { ok: true, paket } oder { ok: false, fehler: "Text" }
+export async function themenjokerErzeugen(raumcode, thema) {
+  try {
+    const { data, error } = await supabase.functions.invoke("themenjoker", {
+      body: { raumcode, thema },
+    });
+    if (error || !data || typeof data !== "object") throw error || new Error("leere Antwort");
+    return data;
+  } catch (fehler) {
+    console.error(fehler);
+    return { ok: false, fehler: "Der Themenjoker ist gerade nicht erreichbar." };
+  }
+}
+
 // Erzeugt eine zufällige Kennung für diesen Teilnehmer, z. B. "3f9a0c1e7b2d4e68".
 // (Nicht crypto.randomUUID(), denn das fehlt auf Handys, die die Seite
 //  beim Testen über http://192.168.… im WLAN öffnen.)

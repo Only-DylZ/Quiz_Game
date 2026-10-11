@@ -121,6 +121,7 @@ function beiNachricht(nachricht) {
   if (nachricht.typ === "themenwahl") themenwahlAnzeigen(daten);
   else if (nachricht.typ === "rad") radDreht();
   else if (nachricht.typ === "radErgebnis") radErgebnisAnzeigen(daten);
+  else if (nachricht.typ === "radNochmal") radNochmalAnzeigen(daten);
   else if (nachricht.typ === "frage") frageAnzeigen(daten);
   else if (nachricht.typ === "aufloesung") ergebnisAnzeigen(daten);
   else if (nachricht.typ === "rundenende") rundenendeAnzeigen(daten);
@@ -149,15 +150,18 @@ function themenwahlAnzeigen(daten) {
   clearInterval(uhr);
   $("themenwahlTitel").textContent = "Runde " + daten.runde;
 
-  // Booster: so viele darf ich in dieser Runde einsetzen (höchstens 3)
-  const maxBooster = Number.isInteger(daten.booster) ? Math.min(Math.max(daten.booster, 0), 3) : 0;
+  // Joker gelten fürs ganze Spiel: so viele habe ich noch (schickt der Host mit)
+  const anzahl = (wert, max) => (Number.isInteger(wert) ? Math.min(Math.max(wert, 0), max) : 0);
+  const maxBooster = anzahl(meins.booster, 5);
+  const jokerUebrig = anzahl(meins.joker, 3);
   let gewaehlt = null; // { datei, name } meines Kandidaten
   let booster = 0;     // eingesetzte Booster
 
   // Wahl an den Host schicken und unten anzeigen
   function kandidatSenden() {
     if (!gewaehlt) return;
-    raum.senden("kandidat", { id: ich.id, runde: daten.runde, datei: gewaehlt.datei, booster });
+    const wahl = gewaehlt.eigenes ? { eigenes: gewaehlt.eigenes } : { datei: gewaehlt.datei };
+    raum.senden("kandidat", { id: ich.id, runde: daten.runde, ...wahl, booster });
     $("kandidatStatus").textContent = "Dein Kandidat: " + gewaehlt.name +
       (booster > 0 ? " – " + (booster + 1) + " Karten auf dem Rad 🚀" : "");
   }
@@ -193,13 +197,34 @@ function themenwahlAnzeigen(daten) {
     boosterZeichnen();
   });
   function boosterZeichnen() {
-    anzeige.textContent = "🚀 " + booster + " von " + maxBooster;
+    anzeige.textContent = "🚀 " + booster + " (noch " + maxBooster + " im Spiel)";
     minus.disabled = booster === 0;
     plus.disabled = booster === maxBooster || !gewaehlt; // erst Kandidat wählen
   }
   zeile.replaceChildren(minus, anzeige, plus);
   zeile.hidden = maxBooster === 0;
   boosterZeichnen();
+
+  // Themenjoker: eigenes Thema eintippen (die KI erzeugt die Fragen erst,
+  // wenn das Rad darauf stehen bleibt)
+  const joker = $("joker");
+  joker.hidden = jokerUebrig === 0;
+  $("jokerText").textContent = "🃏 Themenjoker (noch " + jokerUebrig + ") – oder ein eigenes Thema:";
+  $("jokerFeld").value = "";
+  $("jokerFeld").disabled = false;
+  joker.querySelector("button").disabled = false;
+  joker.onsubmit = (ereignis) => {
+    ereignis.preventDefault(); // Seite nicht neu laden
+    const eigenes = $("jokerFeld").value.replace(/\s+/g, " ").trim().slice(0, 60);
+    if (eigenes.length < 2) {
+      $("kandidatStatus").textContent = "Bitte ein Thema mit mindestens 2 Zeichen eingeben.";
+      return;
+    }
+    for (const k of knoepfe.children) k.classList.remove("gewaehlt");
+    gewaehlt = { eigenes, name: "🃏 " + eigenes };
+    kandidatSenden();
+    boosterZeichnen();
+  };
 
   $("kandidatStatus").textContent = "";
   zeige("themenwahl");
@@ -209,11 +234,21 @@ function themenwahlAnzeigen(daten) {
 function radDreht() {
   for (const knopf of $("themenKnoepfe").children) knopf.disabled = true;
   for (const knopf of $("boosterZeile").querySelectorAll("button")) knopf.disabled = true;
+  $("jokerFeld").disabled = true;
+  $("joker").querySelector("button").disabled = true;
   $("kandidatStatus").textContent = "Das Glücksrad dreht sich … 🎡";
 }
 
 function radErgebnisAnzeigen(daten) {
-  $("wartenText").textContent = "Gewählt: „" + text(daten.thema, 40) + "“ – gleich geht's los!";
+  $("wartenText").textContent = "Gewählt: „" + text(daten.thema, 60) + "“" +
+    (daten.eigenes ? " 🃏 – die KI schreibt gerade die Fragen …" : " – gleich geht's los!");
+  zeige("warten");
+}
+
+// Das gewählte Thema ließ sich nicht laden/erzeugen → es wird nochmal gedreht
+function radNochmalAnzeigen(daten) {
+  $("wartenText").textContent = "„" + text(daten.thema, 60) +
+    "“ ging leider nicht – das Glücksrad dreht gleich noch einmal …";
   zeige("warten");
 }
 

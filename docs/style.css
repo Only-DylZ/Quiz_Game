@@ -614,3 +614,8 @@ button.klein {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+/* Handy: Themenjoker-Feld unter den Themen */
+.joker {
+  margin-top: 16px;
+}

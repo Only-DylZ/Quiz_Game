@@ -44,8 +44,10 @@ bis hinten) ist der Stand von Phase 1–3; ab Phase 4 gilt:
 
 **Einstellungen des Hosts vor dem Start**
 - **GPs zum Sieg** (Gewinnpunkte), z. B. 3.
-- **Joker pro Spieler und Themenrunde** (werden jede Runde neu aufgefüllt):
-  Anzahl Themenjoker (0 oder 1 – mehr ist sinnlos) und Anzahl Booster (0 bis n).
+- **Joker pro Spieler fürs ganze Spiel** (geändert am 11.10.2026 – vorher pro
+  Runde): Anzahl Themenjoker (0–3) und Anzahl Booster (0–5). Verbraucht ist,
+  was beim Drehen auf dem Rad lag – auch wenn die Karte nicht gewinnt. Lässt
+  sich ein Thema nicht laden/erzeugen, gibt es die Joker dafür zurück.
 
 **Themenrunde**
 - Eine Themenrunde = ein Paket. Ein Paket ist ein **Fragen-Pool** (Ziel: 150
@@ -73,7 +75,8 @@ bis hinten) ist der Stand von Phase 1–3; ab Phase 4 gilt:
 4. **Booster:** Jeder eingesetzte Booster legt eine **weitere Karte** seines
    Kandidaten aufs Rad (1 Booster = 2 Karten, 2 Booster = 3 Karten).
    Booster und Themenjoker sind kombinierbar.
-5. Der Host zeigt das **Glücksrad** mit allen Kandidaten-Karten aller Spieler.
+5. Der Host zeigt das **Glücksrad** mit allen Kandidaten-Karten aller Spieler
+   (alle Karten eines Spielers in seiner Farbe).
    Es dreht sich und bleibt **zufällig** stehen – dieses Thema wird gespielt.
 
 **Eigene Themen (Themenjoker)**
@@ -169,8 +172,9 @@ Quiz_Game/
 │  ├─ bild_holen.py        Holt freie Bilder von Wikimedia Commons (mit Urheber + Lizenz).
 │  └─ requirements.txt     Python-Abhängigkeiten (keine Pflicht; Pillow optional für bild_holen.py).
 └─ supabase/
-   ├─ schema.sql           Tabellen rooms, players, answers für Supabase.
-   └─ functions/           (ab Phase 5) Edge Function, die mit Gemini Pakete erzeugt.
+   ├─ schema.sql           Tabelle themenjoker_aufrufe (Limits für die KI, RLS ohne Regeln).
+   └─ functions/themenjoker/index.ts
+                           Edge Function: erzeugt mit Gemini ein Paket zum eigenen Thema.
 ```
 
 ---
@@ -454,10 +458,11 @@ schicken nur ihre Antwort.
 Nachrichten:
 | typ          | von → an       | daten |
 |--------------|----------------|-------|
-| `themenwahl` | Host → Handys  | `runde, angebote: [{ id, themen: [{ datei, thema }] }], booster` – jeder Spieler bekommt eigene 3 Themen; `booster` = erlaubte Booster pro Spieler in dieser Runde |
-| `kandidat`   | Handy → Host   | `id, runde, datei, booster` – gewählter Kandidat (nur aus dem eigenen Angebot) und eingesetzte Booster (0 bis erlaubt); umentscheiden bis zum Drehen |
+| `themenwahl` | Host → Handys  | `runde, angebote: [{ id, themen: [{ datei, thema }], booster, joker }]` – jeder Spieler bekommt eigene 3 Themen und seinen Joker-Vorrat (noch übrige Booster/Themenjoker) |
+| `kandidat`   | Handy → Host   | `id, runde, datei` **oder** `eigenes` (Themenjoker-Text, Host bereinigt + kürzt auf 60), dazu `booster` (0 bis erlaubt); umentscheiden bis zum Drehen |
 | `rad`        | Host → Handys  | `{}` – das Glücksrad dreht sich, Wahl ist gesperrt |
-| `radErgebnis`| Host → Handys  | `thema` – dieses Thema wird gespielt |
+| `radErgebnis`| Host → Handys  | `thema, eigenes` – dieses Thema wird gespielt (`eigenes: true` = KI erzeugt gerade) |
+| `radNochmal` | Host → Handys  | `thema` – ließ sich nicht laden/erzeugen, es wird nochmal gedreht |
 | `frage`      | Host → Handys  | `nummer` (zählt im ganzen Spiel hoch), `titel` (z. B. „Sport · Frage 3 von 10“), `modus, text, restzeit, bild, daten` (daten = `oeffentlicheDaten()`, **ohne Lösung**), `teilnehmer` (nur bei der Stechfrage: ids der Spieler mit Gleichstand, sonst `null`) |
 | `antwort`    | Handy → Host   | `id, nummer, antwort` (endgültig, mit Zeitmessung) |
 | `entwurf`    | Handy → Host   | `id, nummer, antwort` – Zwischenstand beim Tippen (`null` = Feld leer). Zählt bei Zeitablauf, wenn nicht gesendet wurde, dann ohne Tempo-Bonus. Beendet die Frage nicht vorzeitig. |
@@ -495,7 +500,11 @@ wachsen später Richtung 150). Phase 4a ist fertig: Themenrunden, GP-Ziel
 (Einstellung in der Lobby), Stechfrage, Siegertreppchen nach GP. Phase 4b:
 Kandidatenwahl auf dem Handy + Glücksrad (`engine/rad.js`); `host.html?paket=<name>`
 spielt zum Testen in Runde 1 direkt dieses Thema. Phase 4c: Booster-Joker
-(Einstellung „Booster pro Spieler und Runde“ 0–3 in der Lobby). Als Nächstes: Phase 5.
+(Joker-Vorrat fürs ganze Spiel, Einstellung in der Lobby). Phase 5 ist gebaut:
+Themenjoker mit Edge Function `themenjoker` (Gemini 3.5 Flash-Lite, bei Limit 3.8 Flash;
+mit Google-Suche, falls im Gratis-Tarif erlaubt, sonst ohne). Limits: 10 pro Raum,
+100 pro Tag. Einrichtung: `supabase/schema.sql` im SQL-Editor, Function über das
+Dashboard (Edge Functions → Via Editor) deployen, Secret `GEMINI_API_KEY`.
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`

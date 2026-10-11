@@ -13,8 +13,8 @@ import { mischen } from "./runde.js";
 
 export const THEMEN_PRO_SPIELER = 3;
 
-// Farben der Felder auf dem Rad (wie die Antwortfarben, plus ein paar mehr)
-const FARBEN = ["#e21b3c", "#1368ce", "#d89e00", "#26890c", "#7c3aed", "#0891b2", "#db2777", "#65a30d"];
+// Farben auf dem Rad – jeder Spieler bekommt eine (wie die Antwortfarben, plus ein paar mehr)
+export const FARBEN = ["#e21b3c", "#1368ce", "#d89e00", "#26890c", "#7c3aed", "#0891b2", "#db2777", "#65a30d"];
 
 // Für jeden Spieler eigene zufällige Themen.
 //   spielerIds – Liste der ids
@@ -49,7 +49,8 @@ export function feldNachDrehung(anzahl, grad) {
   return Math.floor(stelle / breite);
 }
 
-// Zeichnet das Rad als SVG. karten = [{ thema }], eine Karte = ein Feld.
+// Zeichnet das Rad als SVG. karten = [{ thema, farbe }], eine Karte = ein Feld.
+// farbe ist freiwillig (sonst reihum); alle Karten eines Spielers haben dieselbe.
 // Texte nur über svgNeu (textContent) – Themen könnten später von Spielern kommen.
 export function radZeichnen(karten) {
   const svg = svgNeu("svg", { viewBox: "-105 -105 210 210", class: "rad" });
@@ -68,7 +69,7 @@ export function radZeichnen(karten) {
   };
 
   karten.forEach((karte, i) => {
-    const farbe = FARBEN[i % FARBEN.length];
+    const farbe = FARBEN.includes(karte.farbe) ? karte.farbe : FARBEN[i % FARBEN.length];
     if (n === 1) {
       svg.append(svgNeu("circle", { r: R, fill: farbe }));
     } else {

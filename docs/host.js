@@ -12,13 +12,13 @@
 // - erst nach Ablauf der Zeit schickt er die Auflösung,
 // - er rechnet die Punkte aus und führt Rangliste und Gewinnpunkte (GP).
 
-import { neuerRaumcode, raumBetreten, neueId } from "./realtime.js";
+import { neuerRaumcode, raumBetreten, neueId, themenjokerErzeugen } from "./realtime.js";
 import { neu, zahlText, bildGueltig, bildZeigen } from "./engine/hilfen.js";
 import {
   anteilRestzeit, ranglisteBerechnen, rundenSpitze, stechfrageSieger,
 } from "./engine/punkte.js";
 import { rundeZusammenstellen, kennung } from "./engine/runde.js";
-import { angeboteErstellen, radDrehung, radZeichnen } from "./engine/rad.js";
+import { angeboteErstellen, radDrehung, radZeichnen, FARBEN } from "./engine/rad.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
@@ -46,8 +46,12 @@ const ZWISCHENSTAND_PLAETZE = 10;
 const GP_ZIEL_MIN = 1;
 const GP_ZIEL_MAX = 10;
 
-// Höchstens so viele Booster pro Spieler und Runde (Einstellung in der Lobby)
-const BOOSTER_MAX = 3;
+// Joker gelten fürs ganze Spiel (Einstellung in der Lobby): höchstens so viele
+// Booster und Themenjoker pro Spieler. Verbraucht ist, was beim Drehen auf dem Rad lag.
+const BOOSTER_MAX = 5;
+const JOKER_MAX = 3;
+// Eigene Themen: so lang dürfen sie höchstens sein
+const EIGENES_THEMA_MAX = 60;
 
 // Kurzschreibweise, um Elemente per id zu finden
 const $ = (id) => document.getElementById(id);
@@ -69,15 +73,18 @@ let schritt = "lobby";      // "lobby" | "themenwahl" | "rad" | "frage" | "auflo
 let themen = [];            // alle Themen aus packs/index.json: [{ datei, thema }]
 let gespielteThemen = new Set(); // Dateien, die in diesem Spiel schon dran waren
 let gpZiel = 3;             // so viele GP braucht man zum Sieg
-let boosterProRunde = 1;    // so viele Booster hat jeder Spieler in jeder Runde
+let boosterProSpiel = 2;    // so viele Booster hat jeder Spieler fürs ganze Spiel
+let jokerProSpiel = 1;      // so viele Themenjoker hat jeder Spieler fürs ganze Spiel
+let farbZaehler = 0;        // jeder Spieler bekommt eine eigene Farbe auf dem Glücksrad
 let rundenNummer = 0;       // die wievielte Runde gerade läuft (1, 2, …)
 let aktuellesThema = null;  // { datei, thema } der laufenden Runde
 
 let themenOffen = [];       // Themen, die bei dieser Themenwahl angeboten werden dürfen
 let angebote = new Map();   // Spieler-id → seine 3 Themen [{ datei, thema }]
-let kandidaten = new Map(); // Spieler-id → { datei, booster } – sein Kandidat und eingesetzte Booster
-let ausgeschlossen = new Set(); // Themen, die sich nicht laden ließen (nur diese Themenwahl)
-let gewaehltesThema = null; // was das Glücksrad ausgewählt hat
+let kandidaten = new Map(); // Spieler-id → { datei, booster } oder { eigenes, booster }
+                            // (eigenes = selbst eingegebenes Thema per Themenjoker)
+let ausgeschlossen = new Set(); // Karten (schluessel), die sich nicht laden ließen (nur diese Themenwahl)
+let gewaehltesThema = null; // die Karte, auf der das Glücksrad stehen blieb
 
 let fragen = [];            // die 10 Fragen dieser Runde (zufällig aus dem Pool)
 let stechfragen = [];       // Stechfragen des Pakets (nur bei Gleichstand)
@@ -95,8 +102,9 @@ let startZeit = 0;          // wann die aktuelle Frage gestartet wurde (ms)
 let antworten = new Map();  // Spieler-id → { antwort, zeitMs }  (endgültig gesendet)
 let entwuerfe = new Map();  // Spieler-id → antwort  (getippt, aber noch nicht gesendet)
 let anwesend = [];          // Spieler, die gerade im Raum sind: [{ id, name }]
-let spielstand = new Map(); // Spieler-id → { id, name, punkte, gp } – alle, die je da waren
-                            // punkte = Punkte der laufenden Runde, gp = Gewinnpunkte
+let spielstand = new Map(); // Spieler-id → { id, name, punkte, gp, booster, joker, farbe }
+                            // – alle, die je da waren. punkte = Punkte der laufenden Runde,
+                            // gp = Gewinnpunkte, booster/joker = noch übrig, farbe = Index in FARBEN
 
 // ---------------------------------------------------------------------------
 // 1. Raum öffnen
@@ -151,15 +159,21 @@ async function themenLaden() {
 async function paketLaden(eintrag) {
   const antwort = await fetch("packs/" + eintrag.datei);
   if (!antwort.ok) throw new Error("Paket nicht gefunden (" + antwort.status + ")");
-  const paket = await antwort.json();
+  paketUebernehmen(await antwort.json(), eintrag.datei);
+}
 
+// Übernimmt ein Paket für die Runde – aus einer Datei oder von der KI (datei = null).
+// Auch KI-Pakete werden hier noch einmal mit denselben Regeln geprüft.
+function paketUebernehmen(paket, datei) {
   // Nur Fragen übernehmen, deren Modus wir kennen und die gültig sind
   const alle = Array.isArray(paket.fragen) ? paket.fragen : [];
   const pool = alle.filter(frageSpielbar);
   if (pool.length === 0) throw new Error("Das Paket enthält keine spielbaren Fragen.");
 
   // Aus dem Pool 10 zufällige Fragen ziehen – bisher ungespielte zuerst
-  fragen = rundeZusammenstellen(pool, gedaechtnisLaden(eintrag.datei, pool));
+  // (KI-Pakete gibt es nur einmal, die brauchen kein Gedächtnis)
+  const gespielt = datei ? gedaechtnisLaden(datei, pool) : new Set();
+  fragen = rundeZusammenstellen(pool, gespielt);
 
   // Stechfragen sind immer Schätzfragen
   const stech = Array.isArray(paket.stechfragen) ? paket.stechfragen : [];
@@ -232,7 +246,10 @@ function beiTeilnehmern(teilnehmer) {
   // Neue Spieler mit 0 Punkten und 0 GP in den Spielstand aufnehmen
   for (const s of anwesend) {
     if (!spielstand.has(s.id)) {
-      spielstand.set(s.id, { id: s.id, name: s.name, punkte: 0, gp: 0 });
+      spielstand.set(s.id, {
+        id: s.id, name: s.name, punkte: 0, gp: 0,
+        booster: boosterProSpiel, joker: jokerProSpiel, farbe: farbZaehler++,
+      });
     }
   }
 
@@ -273,7 +290,13 @@ function startKnopfAktualisieren() {
 $("start").addEventListener("click", () => {
   // Einstellungen prüfen: ganze Zahlen innerhalb der Grenzen
   gpZiel = ganzeZahl($("gpZiel").value, GP_ZIEL_MIN, GP_ZIEL_MAX, 3);
-  boosterProRunde = ganzeZahl($("boosterAnzahl").value, 0, BOOSTER_MAX, 1);
+  boosterProSpiel = ganzeZahl($("boosterAnzahl").value, 0, BOOSTER_MAX, 2);
+  jokerProSpiel = ganzeZahl($("jokerAnzahl").value, 0, JOKER_MAX, 1);
+  // Alle, die schon da sind, bekommen ihre Joker (wer später kommt, beim Beitreten)
+  for (const s of spielstand.values()) {
+    s.booster = boosterProSpiel;
+    s.joker = jokerProSpiel;
+  }
   themenwahlZeigen();
 });
 
@@ -341,7 +364,7 @@ function themenwahlZeigen() {
     $("themenwahlText").textContent = "Testmodus: Thema aus dem Link";
     $("kandidatenListe").replaceChildren();
     $("rad").replaceChildren();
-    themaFestlegen(ausLink);
+    themaFestlegen({ schluessel: ausLink.datei, thema: ausLink.thema, datei: ausLink.datei });
     return;
   }
 
@@ -355,8 +378,11 @@ function themenwahlZeigen() {
 function themenwahlSenden() {
   raum.senden("themenwahl", {
     runde: rundenNummer + 1,
-    angebote: [...angebote].map(([id, liste]) => ({ id, themen: liste })),
-    booster: boosterProRunde,
+    // Pro Spieler: seine Themen und wie viele Joker er noch hat
+    angebote: [...angebote].map(([id, liste]) => {
+      const s = spielstand.get(id);
+      return { id, themen: liste, booster: s ? s.booster : 0, joker: s ? s.joker : 0 };
+    }),
   });
 }
 
@@ -374,33 +400,93 @@ function angeboteErgaenzen() {
 }
 
 // Ein Handy hat einen Kandidaten gewählt (darf sich bis zum Drehen umentscheiden).
-// booster = wie viele Booster es einsetzt (jeder = eine Karte mehr auf dem Rad).
-function kandidatAnnehmen({ id, runde, datei, booster = 0 }) {
+//   datei   – eines der 3 angebotenen Themen, ODER
+//   eigenes – selbst eingegebenes Thema (Themenjoker, nur wenn erlaubt)
+//   booster – wie viele Booster es einsetzt (jeder = eine Karte mehr auf dem Rad)
+function kandidatAnnehmen({ id, runde, datei, eigenes, booster = 0 }) {
   if (schritt !== "themenwahl" || runde !== rundenNummer + 1) return;
   if (!anwesend.some((s) => s.id === id)) return;
-  // Nur Themen aus dem eigenen Angebot sind erlaubt
-  const angebot = angebote.get(id) || [];
-  if (!angebot.some((t) => t.datei === datei)) return;
+  const spieler = spielstand.get(id);
+  // Nicht mehr Booster, als der Spieler noch hat
+  if (!Number.isInteger(booster) || booster < 0 || booster > spieler.booster) return;
 
-  // Nicht mehr Booster als erlaubt
-  if (!Number.isInteger(booster) || booster < 0 || booster > boosterProRunde) return;
-
-  kandidaten.set(id, { datei, booster });
+  if (eigenes !== undefined) {
+    // Themenjoker: Spieler-Eingabe → bereinigen, nur mit textContent anzeigen
+    if (spieler.joker < 1) return;
+    const thema = themaBereinigen(eigenes);
+    if (thema.length < 2) return;
+    kandidaten.set(id, { eigenes: thema, booster });
+  } else {
+    // Nur Themen aus dem eigenen Angebot sind erlaubt
+    const angebot = angebote.get(id) || [];
+    if (!angebot.some((t) => t.datei === datei)) return;
+    kandidaten.set(id, { datei, booster });
+  }
   kandidatenAnzeigen();
 }
 
+// Eigenes Thema bereinigen: nur Text, ohne Steuerzeichen, Leerraum zusammenfassen, kürzen
+function themaBereinigen(wert) {
+  if (typeof wert !== "string") return "";
+  return wert.replace(/[\p{C}]/gu, " ").replace(/\s+/g, " ").trim().slice(0, EIGENES_THEMA_MAX);
+}
+
 // Die Karten auf dem Rad: pro anwesendem Spieler sein Kandidat –
-// einmal plus einmal für jeden Booster
+// einmal plus einmal für jeden Booster.
+// Jede Karte: { schluessel, thema, datei } oder { schluessel, thema, eigenes }
+// (schluessel = woran wir eine Karte wiedererkennen, falls sie rausfliegt)
+// Alle Karten eines Spielers haben seine Farbe.
 function radKarten() {
   const karten = [];
   for (const s of anwesend) {
     const wahl = kandidaten.get(s.id);
-    if (!wahl || ausgeschlossen.has(wahl.datei)) continue;
-    const eintrag = themen.find((t) => t.datei === wahl.datei);
-    if (!eintrag) continue;
-    for (let i = 0; i <= wahl.booster; i++) karten.push({ datei: wahl.datei, thema: eintrag.thema });
+    if (!wahl || ausgeschlossen.has(kartenSchluessel(s.id, wahl))) continue;
+
+    const farbe = spielerFarbe(s.id);
+    let karte;
+    if (wahl.eigenes) {
+      karte = { schluessel: kartenSchluessel(s.id, wahl), thema: wahl.eigenes, eigenes: wahl.eigenes, farbe };
+    } else {
+      const eintrag = themen.find((t) => t.datei === wahl.datei);
+      if (!eintrag) continue;
+      karte = { schluessel: wahl.datei, thema: eintrag.thema, datei: wahl.datei, farbe };
+    }
+    for (let i = 0; i <= wahl.booster; i++) karten.push(karte);
   }
   return karten;
+}
+
+// Woran wir eine Karte wiedererkennen: Datei des Themas bzw. "eigen:<Spieler>"
+function kartenSchluessel(id, wahl) {
+  return wahl.eigenes ? "eigen:" + id : wahl.datei;
+}
+
+function spielerFarbe(id) {
+  const s = spielstand.get(id);
+  return FARBEN[(s ? s.farbe : 0) % FARBEN.length];
+}
+
+// Beim Drehen: eingesetzte Joker vom Vorrat abziehen (jede Wahl nur einmal)
+function jokerVerbrauchen() {
+  for (const s of anwesend) {
+    const wahl = kandidaten.get(s.id);
+    if (!wahl || wahl.verbraucht || ausgeschlossen.has(kartenSchluessel(s.id, wahl))) continue;
+    const spieler = spielstand.get(s.id);
+    spieler.booster -= wahl.booster;
+    if (wahl.eigenes) spieler.joker -= 1;
+    wahl.verbraucht = true;
+  }
+}
+
+// Fliegt eine Karte raus (Thema ging nicht), bekommen ihre Spieler die Joker zurück
+function jokerZurueckgeben(schluessel) {
+  for (const [id, wahl] of kandidaten) {
+    if (!wahl.verbraucht || kartenSchluessel(id, wahl) !== schluessel) continue;
+    const spieler = spielstand.get(id);
+    spieler.booster += wahl.booster;
+    if (wahl.eigenes) spieler.joker += 1;
+    wahl.verbraucht = false;
+  }
 }
 
 // Host-Bildschirm: wer hat schon gewählt? Dazu das Rad mit den bisherigen Karten.
@@ -411,8 +497,12 @@ function kandidatenAnzeigen() {
   for (const s of anwesend) {
     const wahl = kandidaten.get(s.id);
     let text = s.name + " …";
-    if (wahl) text = s.name + " ✓" + (wahl.booster > 0 ? " 🚀×" + wahl.booster : "");
-    liste.append(neu("li", wahl ? "fertig" : "", text));
+    if (wahl) {
+      text = s.name + " ✓" + (wahl.eigenes ? " 🃏" : "") + (wahl.booster > 0 ? " 🚀×" + wahl.booster : "");
+    }
+    const eintrag = neu("li", wahl ? "fertig" : "", text);
+    eintrag.style.borderBottom = "6px solid " + spielerFarbe(s.id); // Farbe wie auf dem Rad
+    liste.append(eintrag);
   }
   const karten = radKarten();
   $("rad").replaceChildren(radZeichnen(karten));
@@ -427,6 +517,7 @@ $("drehen").addEventListener("click", () => {
   if (schritt !== "themenwahl" || karten.length === 0) return;
   schritt = "rad";
   $("drehen").disabled = true;
+  jokerVerbrauchen();
 
   // Zuerst wird zufällig gezogen – das Rad dreht sich dann genau dorthin
   const gewinner = Math.floor(Math.random() * karten.length);
@@ -442,41 +533,57 @@ $("drehen").addEventListener("click", () => {
   setTimeout(() => themaFestlegen(karten[gewinner]), DREHDAUER_MS + 300);
 });
 
-// Das Thema der Runde steht fest
+// Das Thema der Runde steht fest (karte wie in radKarten oder ein Eintrag aus themen)
 function themaFestlegen(karte) {
   schritt = "rad";
-  gewaehltesThema = themen.find((t) => t.datei === karte.datei);
-  $("radErgebnis").textContent = "Thema: " + gewaehltesThema.thema;
+  gewaehltesThema = karte;
+  $("radErgebnis").textContent = "Thema: " + karte.thema + (karte.eigenes ? " 🃏" : "");
   $("drehen").hidden = true;
   $("rundeStarten").hidden = false;
   $("rundeStarten").disabled = false;
-  raum.senden("radErgebnis", { thema: gewaehltesThema.thema });
+  raum.senden("radErgebnis", { thema: karte.thema, eigenes: Boolean(karte.eigenes) });
 }
 
 async function rundeStarten() {
   if (schritt !== "rad" || !gewaehltesThema) return;
-  const eintrag = gewaehltesThema;
+  const karte = gewaehltesThema;
 
   $("rundeStarten").disabled = true; // nicht doppelt klicken
   $("meldung").textContent = "";
   try {
-    await paketLaden(eintrag);
+    if (karte.eigenes) {
+      // Themenjoker: Fragen erst jetzt von der KI erzeugen lassen
+      $("radErgebnis").textContent = "„" + karte.eigenes + "“ – die KI schreibt Fragen … (10–30 s)";
+      const ergebnis = await themenjokerErzeugen(raumcode, karte.eigenes);
+      if (!ergebnis.ok || !ergebnis.paket) throw new Error(String(ergebnis.fehler || "Unbekannter Fehler"));
+      paketUebernehmen(ergebnis.paket, null);
+    } else {
+      await paketLaden({ datei: karte.datei });
+    }
   } catch (fehler) {
     // Thema nicht ladbar: Karte entfernen, Rad ohne sie noch einmal drehen
-    $("meldung").textContent = "Thema „" + eintrag.thema + "“ konnte nicht geladen werden (" +
-      fehler.message + ") – bitte das Rad noch einmal drehen.";
-    ausgeschlossen.add(eintrag.datei);
+    $("meldung").textContent = "„" + karte.thema + "“ geht leider nicht: " +
+      fehler.message + " Bitte das Rad noch einmal drehen.";
+    ausgeschlossen.add(karte.schluessel);
+    jokerZurueckgeben(karte.schluessel);
     schritt = "themenwahl";
     $("radErgebnis").textContent = "";
     $("rundeStarten").hidden = true;
     $("drehen").hidden = false;
     kandidatenAnzeigen();
+    raum.senden("radNochmal", { thema: karte.thema });
+
+    // Keine Karte mehr übrig? Dann ein zufälliges festes Thema nehmen
+    if (radKarten().length === 0 && themenOffen.length > 0) {
+      const t = zufaelligEiner(themenOffen);
+      themaFestlegen({ schluessel: t.datei, thema: t.thema, datei: t.datei });
+    }
     return;
   }
 
   // Neue Runde: Punkte aller Spieler zurück auf 0
-  aktuellesThema = eintrag;
-  gespielteThemen.add(eintrag.datei);
+  aktuellesThema = { datei: karte.datei || null, thema: karte.thema, ki: Boolean(karte.eigenes) };
+  if (karte.datei) gespielteThemen.add(karte.datei);
   rundenNummer++;
   for (const s of spielstand.values()) s.punkte = 0;
   nummer = -1;
@@ -491,7 +598,7 @@ async function rundeStarten() {
 function naechsteFrage() {
   nummer++;
   const frage = fragen[nummer];
-  alsGespieltMerken(aktuellesThema.datei, frage);
+  if (aktuellesThema.datei) alsGespieltMerken(aktuellesThema.datei, frage);
   $("fortschritt").textContent =
     aktuellesThema.thema + " · Frage " + (nummer + 1) + " von " + fragen.length;
   frageStellen(frage);
@@ -688,6 +795,8 @@ function quelleAnzeigen(quelle) {
   } else {
     ziel.append(quelle.titel);
   }
+  // KI-Fragen können Fehler enthalten – das soll jeder sehen
+  if (aktuellesThema && aktuellesThema.ki) ziel.append(" · von der KI erzeugt, kann Fehler enthalten");
 }
 
 // Bildnachweis – verlangen die Lizenzen freier Bilder (z. B. CC BY-SA)

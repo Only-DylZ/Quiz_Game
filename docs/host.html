@@ -36,10 +36,13 @@
         <input id="gpZiel" type="number" min="1" max="10" value="3">
       </div>
       <div class="einstellungen">
-        <label for="boosterAnzahl">Booster pro Spieler und Runde</label>
-        <input id="boosterAnzahl" type="number" min="0" max="3" value="1">
+        <label for="boosterAnzahl">Booster pro Spieler (fürs ganze Spiel)</label>
+        <input id="boosterAnzahl" type="number" min="0" max="5" value="2">
       </div>
-      <p class="hinweis">Themenjoker (eigenes Thema): kommt mit Phase 5.</p>
+      <div class="einstellungen">
+        <label for="jokerAnzahl">Themenjoker (eigenes Thema) pro Spieler (fürs ganze Spiel)</label>
+        <input id="jokerAnzahl" type="number" min="0" max="3" value="1">
+      </div>
 
       <p class="hinweis" id="themenInfo">Lade Themen …</p>
       <button id="start" disabled>Spiel starten</button>

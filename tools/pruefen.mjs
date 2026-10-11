@@ -2,13 +2,13 @@
 //
 //   node tools/pruefen.mjs
 //
-// 1. Syntax: Hat eine JavaScript-Datei in docs/ einen Tippfehler?
+// 1. Syntax: Hat eine JavaScript-Datei in docs/ (oder eine Edge Function) einen Tippfehler?
 // 2. Tests:  Stimmen Punkte, Zahlen-Eingabe und Lösungsschutz? (tools/*.test.mjs)
 // 3. Pakete: Sind alle Fragenpakete gültig? (ruft tools/validate.py mit Python auf)
 //
 // Läuft nur auf dem eigenen PC mit Node.js – gehört nicht zur Website.
 
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { spawnSync } from "node:child_process";
 
@@ -22,7 +22,10 @@ let fehler = 0;
 // Deshalb geben wir den Inhalt über die Eingabe mit --input-type=module weiter.
 console.log("1. Syntax prüfen …");
 
-for (const datei of jsDateien(join(projekt, "docs"))) {
+// Edge Functions sind in reinem JavaScript geschrieben (nur die Endung ist .ts)
+const edgeFunctions = jsDateien(join(projekt, "supabase", "functions"), ".ts");
+
+for (const datei of [...jsDateien(join(projekt, "docs")), ...edgeFunctions]) {
   if (datei.endsWith("config.js")) continue; // enthält Schlüssel – nicht anfassen
   const ergebnis = spawnSync(process.execPath, ["--input-type=module", "--check"], {
     input: readFileSync(datei),
@@ -68,13 +71,14 @@ if (python.error) {
 console.log(fehler === 0 ? "\nAlles in Ordnung ✔" : "\nEs gibt Fehler ✘");
 process.exit(fehler === 0 ? 0 : 1);
 
-// Findet alle .js-Dateien in einem Ordner und seinen Unterordnern
-function jsDateien(ordner) {
+// Findet alle Dateien mit dieser Endung in einem Ordner und seinen Unterordnern
+function jsDateien(ordner, endung = ".js") {
   const liste = [];
+  if (!existsSync(ordner)) return liste;
   for (const eintrag of readdirSync(ordner, { withFileTypes: true })) {
     const pfad = join(ordner, eintrag.name);
-    if (eintrag.isDirectory()) liste.push(...jsDateien(pfad));
-    else if (eintrag.name.endsWith(".js")) liste.push(pfad);
+    if (eintrag.isDirectory()) liste.push(...jsDateien(pfad, endung));
+    else if (eintrag.name.endsWith(endung)) liste.push(pfad);
   }
   return liste;
 }
