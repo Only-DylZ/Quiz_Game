@@ -10,10 +10,11 @@ import { readFileSync } from "node:fs";
 import {
   anteilRestzeit, punkteAuswahl, punkteSchaetzen, punkteZeitleiste, punkteKarte, entfernungKm, ranglisteBerechnen,
 } from "../docs/engine/punkte.js";
-import { zahlLesen, zahlText } from "../docs/engine/hilfen.js";
+import { zahlLesen, zahlText, bildPfadGueltig, bildGueltig } from "../docs/engine/hilfen.js";
 import * as auswahl from "../docs/engine/auswahl.js";
 import * as schaetzen from "../docs/engine/schaetzen.js";
 import * as grafik from "../docs/engine/grafik.js";
+import { rundeZusammenstellen, kennung, MIX, FRAGEN_PRO_RUNDE } from "../docs/engine/runde.js";
 
 // ---------------------------------------------------------------------------
 // Punkte: auswahl
@@ -183,45 +184,118 @@ test("zahlText: deutsche Anzeige", () => {
 // SICHERHEIT: Die Handys dürfen die Lösung nie vorab bekommen
 // ---------------------------------------------------------------------------
 const MODI = { auswahl, schaetzen, grafik };
-const paket = JSON.parse(readFileSync(new URL("../docs/packs/raumfahrt.json", import.meta.url), "utf8"));
 
-test("oeffentlicheDaten enthält nie die Lösung", () => {
-  for (const frage of paket.fragen) {
+// Alle Pakete aus docs/packs/index.json laden – jede neue Frage wird mitgeprüft
+function lesen(datei) {
+  return JSON.parse(readFileSync(new URL("../docs/packs/" + datei, import.meta.url), "utf8"));
+}
+const pakete = lesen("index.json").pakete.map((e) => ({ datei: e.datei, ...lesen(e.datei) }));
+
+// Alle Fragen + Stechfragen aller Pakete, mit Paketname für Fehlermeldungen
+const alleFragen = pakete.flatMap((p) =>
+  [...p.fragen, ...p.stechfragen].map((frage) => ({ frage, wo: p.datei + " " + frage.id }))
+);
+
+test("oeffentlicheDaten enthält nie die Lösung (alle Pakete)", () => {
+  for (const { frage, wo } of alleFragen) {
     const modul = MODI[frage.modus];
-    if (!modul) continue; // Modus kommt erst später
-
     const daten = modul.oeffentlicheDaten(frage);
     const alsText = JSON.stringify(daten);
 
-    assert.ok(!("loesung" in daten), frage.id + ": Feld 'loesung' wird mitgeschickt!");
-    assert.ok(!alsText.includes("erklaerung"), frage.id + ": Erklärung wird mitgeschickt!");
-    // Beim Schätzen und bei Grafiken darf auch die Zahl selbst nirgends auftauchen
-    if (frage.art === "karte") {
-      // Bei der Karte: weder Breite noch Länge der Lösung
-      assert.ok(!alsText.includes(String(frage.loesung.lat)), frage.id + ": Lösungs-Breite im Text!");
-      assert.ok(!alsText.includes(String(frage.loesung.lng)), frage.id + ": Lösungs-Länge im Text!");
-    } else if (frage.modus === "schaetzen" || frage.modus === "grafik") {
-      assert.ok(!alsText.includes(String(frage.loesung)), frage.id + ": Lösungszahl im Text!");
+    assert.ok(!alsText.includes("loesung"), wo + ": Feld 'loesung' wird mitgeschickt!");
+    assert.ok(!alsText.includes("erklaerung"), wo + ": Erklärung wird mitgeschickt!");
+
+    // Genau nachsehen, ob die Lösung irgendwo in den Daten steckt
+    if (frage.modus === "schaetzen") {
+      assert.deepEqual(Object.keys(daten), ["einheit"], wo + ": schickt mehr als die Einheit!");
+    } else if (frage.art === "balken") {
+      assert.ok(daten.balken.every((b) => b.wert !== frage.loesung), wo + ": Lösung als Balkenwert!");
+    } else if (frage.art === "karte") {
+      const [lat, lng] = daten.mitte;
+      assert.ok(!(lat === frage.loesung.lat && lng === frage.loesung.lng), wo + ": Kartenmitte = Lösung!");
     }
   }
 });
 
-test("Beispielpaket: alle Fragen der bekannten Modi sind gültig", () => {
-  for (const frage of paket.fragen) {
+test("Alle Pakete: jede Frage ist gültig und die Lösung bringt 1000 Punkte", () => {
+  for (const { frage, wo } of alleFragen) {
     const modul = MODI[frage.modus];
-    if (!modul) continue;
-    assert.ok(modul.pruefeFrage(frage), frage.id + " ist ungültig");
+    assert.ok(modul, wo + ": unbekannter Modus");
+    assert.ok(modul.pruefeFrage(frage), wo + " ist ungültig");
     // Die richtige Antwort muss selbst als gültige Antwort durchgehen
-    assert.ok(modul.antwortGueltig(modul.oeffentlicheDaten(frage), frage.loesung), frage.id);
+    assert.ok(modul.antwortGueltig(modul.oeffentlicheDaten(frage), frage.loesung), wo);
     // … und volle Punkte bringen (bei sofortiger Antwort)
-    assert.equal(modul.bewerte(frage, frage.loesung, 1), 1000, frage.id);
+    assert.equal(modul.bewerte(frage, frage.loesung, 1), 1000, wo);
   }
 });
 
-test("Beispielpaket: 10 Fragen + gültige Stechfrage ohne Lösung für die Handys", () => {
-  assert.equal(paket.fragen.length, 10);
-  const stech = paket.stechfrage;
-  assert.equal(stech.modus, "schaetzen");
-  assert.ok(schaetzen.pruefeFrage(stech));
-  assert.ok(!JSON.stringify(schaetzen.oeffentlicheDaten(stech)).includes(String(stech.loesung)));
+test("Alle Pakete: Stechfragen sind Schätzfragen", () => {
+  for (const p of pakete) {
+    assert.ok(p.stechfragen.length >= 1, p.datei);
+    for (const stech of p.stechfragen) assert.equal(stech.modus, "schaetzen", p.datei + " " + stech.id);
+  }
+});
+
+// ---------------------------------------------------------------------------
+// Bilder: nur neutrale Pfade im Ordner bilder/
+// ---------------------------------------------------------------------------
+test("bild: nur erlaubte Pfade werden angezeigt", () => {
+  assert.ok(bildPfadGueltig("bilder/dd-017.jpg"));
+  assert.ok(bildPfadGueltig("bilder/geo-031.svg"));
+  for (const pfad of ["https://boese.de/x.jpg", "bilder/../config.js", "bilder/x.html",
+    "javascript:alert(1)", "bilder/Sauerbraten.jpg", "", null, 42]) {
+    assert.ok(!bildPfadGueltig(pfad), "sollte verboten sein: " + pfad);
+  }
+});
+
+test("bild: Datei muss wie die Frage heißen und Lizenz haben", () => {
+  const gut = { id: "dd-017", bild: { datei: "bilder/dd-017.jpg", urheber: "X", lizenz: "CC0" } };
+  assert.ok(bildGueltig(gut));
+  assert.ok(!bildGueltig({ ...gut, bild: { ...gut.bild, datei: "bilder/sauerbraten.jpg" } }));
+  assert.ok(!bildGueltig({ ...gut, bild: { ...gut.bild, lizenz: "" } }));
+});
+
+test("Alle Pakete: Bilder folgen den Regeln", () => {
+  for (const { frage, wo } of alleFragen) {
+    if (frage.bild !== undefined) assert.ok(bildGueltig(frage), wo + ": Bild ungültig");
+  }
+});
+
+// ---------------------------------------------------------------------------
+// Runde aus dem Pool zusammenstellen
+// ---------------------------------------------------------------------------
+// Ein Test-Pool: je 20 Fragen pro Modus
+function testPool() {
+  const pool = [];
+  for (const modus of Object.keys(MIX)) {
+    for (let i = 0; i < 20; i++) pool.push({ id: modus + "-" + i, modus, frage: modus + " " + i });
+  }
+  return pool;
+}
+
+test("runde: 10 Fragen mit dem festen Modus-Mix, keine doppelt", () => {
+  const runde = rundeZusammenstellen(testPool(), new Set());
+  assert.equal(runde.length, FRAGEN_PRO_RUNDE);
+  for (const [modus, anzahl] of Object.entries(MIX)) {
+    assert.equal(runde.filter((f) => f.modus === modus).length, anzahl, modus);
+  }
+  assert.equal(new Set(runde.map(kennung)).size, runde.length);
+});
+
+test("runde: ungespielte Fragen kommen zuerst", () => {
+  const pool = testPool();
+  // Alles gespielt außer je 4/3/3 Fragen → genau diese müssen gezogen werden
+  const frei = new Set(["auswahl-0", "auswahl-1", "auswahl-2", "auswahl-3",
+    "schaetzen-0", "schaetzen-1", "schaetzen-2", "grafik-0", "grafik-1", "grafik-2"]);
+  const gespielt = new Set(pool.map(kennung).filter((k) => !frei.has(k)));
+  const runde = rundeZusammenstellen(pool, gespielt);
+  assert.deepEqual(new Set(runde.map(kennung)), frei);
+});
+
+test("runde: fehlt ein Modus, wird mit anderen aufgefüllt", () => {
+  const pool = testPool().filter((f) => f.modus !== "grafik");
+  const runde = rundeZusammenstellen(pool, new Set());
+  assert.equal(runde.length, FRAGEN_PRO_RUNDE);
+  // kleiner Pool → so viele wie da sind
+  assert.equal(rundeZusammenstellen(pool.slice(0, 5), new Set()).length, 5);
 });

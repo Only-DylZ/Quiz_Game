@@ -48,11 +48,17 @@ bis hinten) ist der Stand von Phase 1–3; ab Phase 4 gilt:
   Anzahl Themenjoker (0 oder 1 – mehr ist sinnlos) und Anzahl Booster (0 bis n).
 
 **Themenrunde**
-- Eine Themenrunde = ein Paket = **genau 10 Fragen**.
+- Eine Themenrunde = ein Paket. Ein Paket ist ein **Fragen-Pool** (Ziel: 150
+  Fragen). Pro Runde zieht der Host **zufällig 10 Fragen** mit festem Mix
+  (4 `auswahl`, 3 `schaetzen`, 3 `grafik`; `docs/engine/runde.js`).
+- **Gedächtnis:** Der Host-Browser merkt sich (localStorage) die ids gespielter
+  Fragen; ungespielte kommen zuerst dran, auch über mehrere Spielabende. Ist
+  der Pool aufgebraucht, beginnt das Gedächtnis von vorne. So kann auch der
+  Host mitspielen (zweites Fenster mit `play.html`), ohne die Fragen zu kennen.
 - Punkte zählen nur innerhalb der Runde und starten jede Runde bei 0.
 - Wer in der Runde die meisten Punkte hat, bekommt **1 GP**.
-- **Gleichstand** um Platz 1 → **Stechfrage** (die `stechfrage` aus dem Paket,
-  immer Modus `schaetzen`), nur für die Gleichstand-Spieler. Näher dran gewinnt;
+- **Gleichstand** um Platz 1 → **Stechfrage** (zufällig aus `stechfragen` des
+  Pakets, immer Modus `schaetzen`), nur für die Gleichstand-Spieler. Näher dran gewinnt;
   bei exakt gleicher Schätzung gewinnt, wer schneller geantwortet hat.
 - Pro Runde bekommt genau **ein** Spieler einen GP. Wer das GP-Ziel erreicht,
   hat sofort gewonnen → Siegertreppchen (nach GPs).
@@ -144,10 +150,14 @@ Quiz_Game/
 │  │  ├─ schaetzen.js      Anzeige und Auswertung von Schätzfragen.
 │  │  ├─ grafik.js         Anzeige und Auswertung von Grafikfragen (Balken, Zeitleiste, Karte).
 │  │  ├─ karte.js          Die Art „karte“: Leaflet-Karte anzeigen, Ort antippen, Auflösung.
+│  │  ├─ runde.js          Zieht pro Runde 10 zufällige Fragen aus dem Pool (ungespielte zuerst).
 │  │  └─ punkte.js         Alle Punkteregeln an einer Stelle.
-│  └─ packs/
-│     ├─ index.json        Liste aller verfügbaren Themenpakete.
-│     └─ raumfahrt.json    Beispielpaket mit je 2 Fragen pro Modus.
+│  ├─ packs/
+│  │  ├─ index.json        Liste aller verfügbaren Themenpakete.
+│  │  └─ <thema>.json      Ein Fragen-Pool pro Thema (raumfahrt, geographie, …).
+│  ├─ bilder/              Bilder zu Fragen, Name = id der Frage (z. B. geo-031.png).
+│  └─ karten/
+│     └─ welt.json         Weltkarte ohne Namen (Natural Earth, gemeinfrei) für Kartenfragen.
 ├─ tools/
 │  ├─ pruefen.mjs          Prüft alles mit einem Befehl: Syntax + Tests + Pakete (Node.js).
 │  ├─ spiel.test.mjs       Tests: Punkte, Zahlen-Eingabe, Lösungsschutz, Beispielpaket.
@@ -172,8 +182,8 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
 | `thema`        | ja      | Text   | Name des Themas, z. B. `"Raumfahrt"`        |
 | `version`      | ja      | Zahl   | Formatversion, aktuell `1`                  |
 | `beschreibung` | nein    | Text   | Ein Satz zum Paket                          |
-| `fragen`       | ja      | Liste  | **Genau 10 Fragen** (siehe unten)           |
-| `stechfrage`   | ja      | Objekt | Eine weitere Frage, **immer Modus `schaetzen`** – nur bei Gleichstand gespielt |
+| `fragen`       | ja      | Liste  | **Fragen-Pool** – mindestens 4 `auswahl`, 3 `schaetzen`, 3 `grafik`; Ziel: **150** |
+| `stechfragen`  | ja      | Liste  | Mindestens 1 (Ziel: 5) Fragen, **immer Modus `schaetzen`** – nur bei Gleichstand |
 
 ### Jede Frage (gemeinsame Felder)
 
@@ -183,9 +193,10 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
 | `frage`     | ja      | Text   | Der Fragetext                                                |
 | `loesung`   | ja      | je nach Modus | Die richtige Antwort (siehe unten)                    |
 | `quelle`    | ja      | Objekt | `{ "titel": "...", "url": "..." }` – `titel` Pflicht, `url` empfohlen |
-| `id`        | nein    | Text   | Eindeutige Kennung, z. B. `"rf-01"`                          |
+| `id`        | ja      | Text   | Eindeutige Kennung im Paket, z. B. `"rf-01"` (fürs Gedächtnis) |
 | `zeit`      | nein    | Zahl   | Antwortzeit in Sekunden (Standard: 20)                       |
 | `erklaerung`| nein    | Text   | Kurzer Satz, der nach der Auflösung gezeigt wird             |
+| `bild`      | nein    | Objekt | Bild zur Frage, siehe „Bildfragen“ unten                     |
 
 ### Modusabhängige Felder
 
@@ -204,8 +215,32 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
     – genau ein Balken hat `"wert": null`, den rät man. `loesung`: Zahl.
   - `zeitleiste`: `{ "von": 1950, "bis": 2000, "ereignisse": [ { "name": "Sputnik 1", "jahr": 1957 } ] }`
     – das gesuchte Ereignis steht in der Frage. `loesung`: Jahr (Zahl).
-  - `karte`: `{ "mitte": [lat, lng], "zoom": 3 }` – Startansicht der Karte.
-    `loesung`: `{ "lat": 45.96, "lng": 63.31 }`.
+  - `karte`: `{ "mitte": [lat, lng], "zoom": 3 }` – Startansicht der Karte
+    (`zoom` 1–8). `loesung`: `{ "lat": 45.96, "lng": 63.31 }`.
+    Während der Frage zeigen Host und Handy eine **Karte ohne Namen**
+    (`karten/welt.json`), erst die Auflösung nutzt OpenStreetMap mit Namen.
+    Fragetext darf den Ort nicht verraten (nicht „Reykjavík, Hauptstadt Islands“).
+
+### Bildfragen (`bild`, freiwillig, bei jedem Modus)
+
+```json
+"bild": {
+  "datei": "bilder/geo-031.png",
+  "urheber": "Shaken Niyazbekop",
+  "lizenz": "Public domain",
+  "quelle": { "titel": "Wikimedia Commons – Flag of Kazakhstan.svg", "url": "https://commons.wikimedia.org/…" }
+}
+```
+
+- Die Datei liegt **im Repo** in `docs/bilder/` (keine fremden Server im Spiel)
+  und heißt **genau wie die id der Frage** – ein Name wie `sauerbraten.jpg`
+  würde die Lösung an die Handys verraten. An die Handys geht nur der Pfad.
+- Nur freie Bilder (gemeinfrei, CC0, CC BY, CC BY-SA …); Urheber + Lizenz
+  werden bei der Auflösung angezeigt. Am besten von Wikimedia Commons, mit den
+  Lizenzangaben aus deren Datenbank. Maximal ca. 300 KB pro Bild (PNG/JPG, ~640 px).
+- Handy und Host zeigen nur Pfade nach dem Muster `bilder/<name>.<jpg|png|webp|svg>`
+  (`bildPfadGueltig` in `hilfen.js`) – keine beliebigen Adressen.
+- Bildfragen dürfen denselben Fragetext haben („Zu welchem Land gehört diese Flagge?“).
 
 Kurzes Beispiel:
 
@@ -344,23 +379,27 @@ Alles im Repo und alles im Browser-Code ist für jeden lesbar.
 1. **Grundspiel:** Host und Handy verbinden sich über einen Raumcode (Supabase
    Realtime). Modi `auswahl` und `schaetzen` spielbar, Punkte und Rangliste.
 2. **Grafik-Modus:** `balken`, `zeitleiste` (SVG) und `karte` (Leaflet).
-3. **Werkzeuge:** Python-Validator (`validate.py`, prüft auch „genau 10 Fragen +
-   Stechfrage“), `prompt.md` zum Erzeugen von Paketen, Raumfahrt-Paket auf
-   10 + Stechfrage bringen, weitere Pakete (mindestens ~6, damit jeder Spieler
-   3 Themen zur Wahl hat).
+3. **Werkzeuge:** Python-Validator (`validate.py`), `prompt.md` zum Erzeugen von
+   Paketen in Blöcken, Fragen-Pools mit Zufallsauswahl + Gedächtnis
+   (`runde.js`), weitere Pakete (mindestens ~6 Themen, damit jeder Spieler 3 zur
+   Wahl hat; Pools wachsen in Etappen Richtung 150 Fragen).
 4. **Themenrunden** (Regeln siehe Abschnitt 1, „Spielregeln“):
    4a Runden, GPs, Siegziel, Stechfrage · 4b Kandidatenwahl + Glücksrad
    (Themen aus `packs/index.json`) · 4c Booster-Joker.
    Gespeicherte Highscores: später, falls gewünscht.
 5. **Live-Themen mit Gemini:** Ein Spieler gibt per **Themenjoker** ein eigenes
    Thema ein, eine Supabase Edge Function erzeugt mit der Gemini API
-   ein Paket im normalen Format (10 Fragen + Stechfrage) – erst, sobald das
+   ein Paket im normalen Format (10 Fragen + 1 Stechfrage) – erst, sobald das
    Thema auf dem Glücksrad gewonnen hat (dauert ca. 10–30 s). Strikt nach Abschnitt 6a und 6b:
    Key nur als Supabase-Secret, Aufrufe begrenzt, Antwort validiert, nur
    Gratis-Tarif ohne Billing. KI-Fragen können Fehler enthalten – Quelle
    immer mit anzeigen.
 
    **Entscheidung (11.10.2026):** Gemini über Supabase Edge Function, wie oben.
+   - **Mischung:** Feste Themen kommen aus großen, vorab geprüften Pools
+     (Zufallsauswahl, siehe „Spielregeln“). Live erzeugt wird nur für den
+     Themenjoker. Pools dürfen später auch mit KI-Hilfe *vorab* wachsen
+     (geprüft mit `validate.py --links`), nie ungeprüft am Spielabend.
    - Standardmodell **Flash-Lite** (höhere Gratis-Grenze), Flash nur optional.
    - **Google-Suche (Grounding)** nutzen, wo sie im Gratis-Tarif ohne Billing
      erlaubt ist – damit Quellen echt sind statt erfunden.
@@ -414,9 +453,9 @@ Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
 - 2b: `karte` mit Leaflet + OpenStreetMap.
 
 **Aktueller Stand:** Phase 1 ist fertig und online (siehe „Online-Stellen“ unten).
-Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Phase 3: `validate.py` und
-`prompt.md` sind fertig, Raumfahrt hat 10 Fragen + Stechfrage. Als Nächstes:
-weitere Pakete (mindestens ~6), danach Phase 4.
+Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Phase 3: `validate.py`,
+`prompt.md`, Fragen-Pools mit Zufallsauswahl + Gedächtnis sind fertig. Als
+Nächstes: weitere Pakete (mindestens ~6 Themen), danach Phase 4.
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`

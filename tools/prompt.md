@@ -4,7 +4,9 @@ So geht's:
 1. In NotebookLM (oder Claude) die Quellen zum Thema hochladen
    (Artikel, PDFs, Wikipedia-Seiten …).
 2. Den Text unten ab „--- PROMPT ---“ kopieren und `[THEMA]` ersetzen.
-   Die Aufteilung auf die Modi darf man ändern – es müssen aber **genau 10** bleiben.
+   Ein Paket ist ein **Pool** (Ziel: 150 Fragen). Den erzeugt man in **Blöcken
+   von ca. 30 Fragen** – längere Antworten werden bei KIs oft schlechter.
+   Für jeden weiteren Block den Abschnitt „Weiterer Block“ unten benutzen.
 3. Die Antwort als `docs/packs/<thema>.json` speichern (Dateiname klein, ohne
    Umlaute und Leerzeichen, z. B. `antikes-rom.json`).
 4. Prüfen (im Projektordner):
@@ -23,14 +25,17 @@ Erstelle ein Quiz-Fragenpaket zum Thema **[THEMA]** ausschließlich auf Basis
 der bereitgestellten Quellen. Erfinde keine Fakten. Jede Frage braucht eine
 Quelle, aus der die Lösung eindeutig hervorgeht.
 
-Erzeuge **genau 10 Fragen** im Feld `fragen`:
-- 4 Fragen im Modus `auswahl`
-- 3 Fragen im Modus `schaetzen`
-- 3 Fragen im Modus `grafik` (möglichst verschiedene Arten: `balken`, `zeitleiste`, `karte`)
+Erzeuge **30 Fragen** im Feld `fragen`:
+- 12 Fragen im Modus `auswahl`
+- 9 Fragen im Modus `schaetzen`
+- 9 Fragen im Modus `grafik` (gemischt: `balken`, `zeitleiste`, `karte`)
 
-Dazu **eine Stechfrage** im Feld `stechfrage`: immer Modus `schaetzen`, mit einer
+Dazu **2 Stechfragen** im Feld `stechfragen`: immer Modus `schaetzen`, mit einer
 eindeutigen Zahl als Lösung (keine „ungefähr“-Werte, bei denen Quellen sich
-widersprechen). Sie wird nur bei Gleichstand gespielt.
+widersprechen). Sie werden nur bei Gleichstand gespielt.
+
+Die Fragen sollen das Thema **breit abdecken** (verschiedene Unterthemen,
+leichte und schwere Fragen gemischt) und sich nicht gegenseitig verraten.
 
 Gib **nur gültiges JSON** aus, ohne Erklärtext davor oder danach,
 in genau diesem Format:
@@ -96,14 +101,16 @@ in genau diesem Format:
       "quelle": { "titel": "...", "url": "https://..." }
     }
   ],
-  "stechfrage": {
-    "id": "kurz-s1",
-    "modus": "schaetzen",
-    "frage": "Wie viele ...?",
-    "einheit": "",
-    "loesung": 42,
-    "quelle": { "titel": "...", "url": "https://..." }
-  }
+  "stechfragen": [
+    {
+      "id": "kurz-s01",
+      "modus": "schaetzen",
+      "frage": "Wie viele ...?",
+      "einheit": "",
+      "loesung": 42,
+      "quelle": { "titel": "...", "url": "https://..." }
+    }
+  ]
 }
 ```
 
@@ -119,9 +126,29 @@ Regeln:
 - `grafik` / `karte`: `loesung` mit Breitengrad `lat` und Längengrad `lng`
   (Dezimalgrad, 2 Nachkommastellen). `mitte` zeigt die Region, aber nicht genau
   auf die Lösung; `zoom` 2–6.
-- Jede `id` nur einmal, z. B. `rom-01` … `rom-10` und `rom-s1` für die Stechfrage.
+- Jede `id` nur einmal: `<kürzel>-001`, `<kürzel>-002` … (dreistellig, weil der
+  Pool bis 150 wächst) und `<kürzel>-s01` … für Stechfragen.
 - Antworttexte kurz halten (höchstens ca. 60 Zeichen), Fragetexte unter 200 Zeichen.
+- Bilder kann die KI nicht liefern. Bildfragen (z. B. Flaggen, Gerichte) baut man
+  danach von Hand: freies Bild von Wikimedia Commons nach `docs/bilder/<id>.png`
+  und das Feld `bild` ergänzen (siehe CLAUDE.md, „Bildfragen“).
+- Bei Kartenfragen darf der Fragetext den Ort nicht verraten (also nicht
+  „Wo liegt Reykjavík, die Hauptstadt Islands?“) – die Karte zeigt keine Namen.
 - Fragen kurz und eindeutig formulieren, auf Deutsch, für Erwachsene ohne Vorwissen
   machbar.
 - Keine Frage, deren Antwort sich bald ändern könnte (z. B. „aktuell“, „bisher“),
   außer die Quelle nennt ein Datum.
+
+--- WEITERER BLOCK (zum Erweitern eines vorhandenen Pakets) ---
+
+Erstelle **30 weitere** Fragen und **2 weitere** Stechfragen zum Thema
+**[THEMA]** – gleiches Format und gleiche Regeln wie oben, gleiche Aufteilung
+auf die Modi. Gib nur die neuen Fragen aus, als JSON mit den Feldern `fragen`
+und `stechfragen`.
+- ids fortlaufend ab `[KÜRZEL]-[NÄCHSTE NUMMER]` bzw. `[KÜRZEL]-s[NÄCHSTE NUMMER]`.
+- **Keine** dieser vorhandenen Fragen wiederholen oder leicht umformulieren:
+  [HIER DIE LISTE DER VORHANDENEN FRAGETEXTE EINFÜGEN]
+
+Danach die neuen Fragen an die Listen `fragen` und `stechfragen` im Paket
+anhängen und erneut mit `validate.py --links` prüfen (er findet auch doppelte
+Fragen und ids).

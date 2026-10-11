@@ -214,6 +214,21 @@ input {
   font-weight: bold;
 }
 
+/* ---------- Bild zur Frage ---------- */
+
+.fragebild {
+  display: block;
+  max-width: 100%;
+  max-height: 40vh;
+  margin: 8px auto;
+  border-radius: 10px;
+  background: #fff; /* Flaggen mit Transparenz gut sichtbar */
+}
+
+.spieler .fragebild {
+  max-height: 28vh; /* auf dem Handy muss noch Platz für die Eingabe sein */
+}
+
 /* ---------- Grafik (Balken, Zeitleiste) ---------- */
 
 .grafik {
@@ -288,6 +303,11 @@ button.klein {
   min-height: 300px;
   margin: 8px 0;
   border-radius: 10px;
+}
+
+/* Karte ohne Beschriftung: Meer als Hintergrund, Länder werden darüber gezeichnet */
+.karte-ohne-namen {
+  background: #a8cbe6;
 }
 
 /* Auf dem Handy etwas kleiner, damit der Senden-Knopf noch sichtbar ist */

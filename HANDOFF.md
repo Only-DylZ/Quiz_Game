@@ -33,15 +33,37 @@ CLAUDE.md entsprechend angepasst.
 
 ## Phase 3 – Stand
 
-- ✅ `tools/validate.py` (nur Standardbibliothek, keine .venv nötig): prüft alle
-  Regeln aus CLAUDE.md Abschnitt 4 inkl. genau 10 Fragen + Stechfrage, doppelte
-  ids, unbekannte Felder, index.json. `--links` ruft alle Quellen-Links auf.
-  Läuft auch als Schritt 3 in `node tools/pruefen.mjs` (also auch in GitHub Actions).
-- ✅ `tools/prompt.md` auf 10 Fragen (4 auswahl, 3 schaetzen, 3 grafik) + Stechfrage.
-- ✅ Raumfahrt: 10 Fragen + Stechfrage (rf-s1, Mondradius 1740 km laut NASA).
-  `index.json` ohne `anzahl_fragen` (immer 10).
-- **Nächster Schritt:** weitere Pakete erzeugen – mindestens ~6 insgesamt, damit
-  jeder Spieler 3 Themen zur Wahl hat. Themen mit dem Nutzer absprechen.
+- ✅ `tools/validate.py` (nur Standardbibliothek): prüft Regeln aus CLAUDE.md
+  Abschnitt 4 – **Pool-Format**: `fragen` mind. 4/3/3 pro Modus (Ziel 150),
+  `stechfragen` Liste (Ziel 5), `id` Pflicht + eindeutig, doppelte Fragetexte,
+  unbekannte Felder, index.json. `--links` ruft alle Quellen-Links auf.
+  Läuft als Schritt 3 in `node tools/pruefen.mjs` (auch in GitHub Actions).
+- ✅ `docs/engine/runde.js`: zieht pro Runde 10 Fragen (Mix 4/3/3), ungespielte
+  zuerst. Host merkt sich gespielte ids in localStorage
+  (`quiz-gespielt:<paketdatei>`), Reset wenn Pool aufgebraucht. 20 Tests grün.
+- ✅ `tools/prompt.md`: Blöcke à 30 Fragen + 2 Stechfragen, Abschnitt
+  „Weiterer Block“ zum Erweitern. ids dreistellig (`kürzel-001`, `kürzel-s01`).
+- ✅ Raumfahrt: 10 Fragen + 1 Stechfrage (alte ids `rf-01` zweistellig – ok).
+- Entschieden (11.10.2026): **Mischung** – feste Themen als Pools (Ziel 150 pro
+  Thema, in Etappen), Live-Gemini nur für den Themenjoker. Host spielt im
+  zweiten Fenster mit.
+- ✅ Kartenfragen: während der Frage **Karte ohne Namen** (`docs/karten/welt.json`,
+  Natural Earth 1:50m, gemeinfrei, ~490 KB gezippt), Zoom 1–8. Auflösung mit OSM.
+  (CARTO-Karten ohne Namen brauchen inzwischen API-Key → verworfen.)
+- ✅ **Bildfragen** (`bild`-Feld, Bilder in `docs/bilder/<id>.png`, Lizenz-Anzeige).
+  Werkstatt-Skript zum Holen von Commons-Bildern mit Lizenzdaten lag im
+  Scratchpad (`commons.py`) – bei Bedarf neu schreiben: Commons-API
+  `prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=640`, PNG-Thumbnail laden.
+- ✅ Geographie: 35 Fragen (inkl. 5 Flaggen) + 2 Stechfragen, alle Zahlen geprüft.
+  Test-Schalter: `host.html?paket=geographie`.
+- **Themenliste des Nutzers (12):** Filme/Serien, Geographie, Videospiele,
+  Essen/Trinken, Tierwelt, Biologie, Chemie, Sport, Das ist Deutsch, Zurück in
+  die Vergangenheit (Geschichte), Physik, Mathe – gern an beliebten/aktuellen
+  Themen orientiert. **„Das ist Deutsch“** = Rechtschreibung schwieriger Wörter
+  + Fakten zu Kultur/Traditionen + wichtige deutsche Personen + Gerichte (mit Bild).
+  Feedback zu Geographie: Schwierigkeit passt, Fragen passen.
+- **Nächster Schritt:** nach Test durch den Nutzer committen, dann die übrigen
+  11 Themen in Blöcken à 30 erstellen (jede Zahl/Quelle prüfen, `validate.py --links`).
 
 ## Danach
 

@@ -3,6 +3,10 @@
     {
       "datei": "raumfahrt.json",
       "thema": "Raumfahrt"
+    },
+    {
+      "datei": "geographie.json",
+      "thema": "Geographie"
     }
   ]
 }

@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="style.css">
+  <!-- Weltkarte (ohne Namen) schon im Hintergrund laden, falls eine Kartenfrage kommt -->
+  <link rel="prefetch" href="karten/welt.json">
 </head>
 <body class="host">
   <!-- Host-Bildschirm (TV / Discord-Stream). Die Logik steht in host.js. -->
@@ -39,6 +41,8 @@
         <span class="countdown" id="countdown"></span>
       </p>
       <h2 class="fragetext" id="fragetext"></h2>
+      <!-- Bild zur Frage (falls vorhanden). Neutraler Alt-Text, damit er nichts verrät. -->
+      <img class="fragebild" id="bild" alt="Bild zur Frage" hidden>
 
       <!-- Hier zeichnet der jeweilige Modus seine Inhalte -->
       <div id="bereich"></div>
@@ -49,6 +53,7 @@
       <div id="infos" hidden>
         <p id="erklaerung"></p>
         <p class="hinweis" id="quelle"></p>
+        <p class="hinweis" id="bildQuelle"></p>
         <button id="weiter">Weiter</button>
       </div>
     </section>

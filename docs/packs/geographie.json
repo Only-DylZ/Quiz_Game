@@ -1,0 +1,672 @@
+{
+  "thema": "Geographie",
+  "version": 1,
+  "beschreibung": "Länder, Städte, Berge, Flüsse und Meere.",
+  "fragen": [
+    {
+      "id": "geo-001",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Australien?",
+      "optionen": [
+        "Sydney",
+        "Melbourne",
+        "Canberra",
+        "Perth"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Canberra",
+        "url": "https://de.wikipedia.org/wiki/Canberra"
+      },
+      "erklaerung": "Canberra wurde als Kompromiss zwischen Sydney und Melbourne gegründet."
+    },
+    {
+      "id": "geo-002",
+      "modus": "auswahl",
+      "frage": "Welcher ist der längste Fluss Europas?",
+      "optionen": [
+        "Donau",
+        "Wolga",
+        "Rhein",
+        "Dnepr"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Wolga",
+        "url": "https://de.wikipedia.org/wiki/Wolga"
+      }
+    },
+    {
+      "id": "geo-003",
+      "modus": "auswahl",
+      "frage": "In welchem Land liegt die Inka-Ruinenstadt Machu Picchu?",
+      "optionen": [
+        "Bolivien",
+        "Peru",
+        "Chile",
+        "Ecuador"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Machu Picchu",
+        "url": "https://de.wikipedia.org/wiki/Machu_Picchu"
+      }
+    },
+    {
+      "id": "geo-004",
+      "modus": "auswahl",
+      "frage": "Welcher ist der größte Ozean der Erde?",
+      "optionen": [
+        "Atlantischer Ozean",
+        "Indischer Ozean",
+        "Pazifischer Ozean",
+        "Arktischer Ozean"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Pazifischer Ozean",
+        "url": "https://de.wikipedia.org/wiki/Pazifischer_Ozean"
+      }
+    },
+    {
+      "id": "geo-005",
+      "modus": "auswahl",
+      "frage": "Welcher ist der höchste Berg Deutschlands?",
+      "optionen": [
+        "Watzmann",
+        "Zugspitze",
+        "Feldberg",
+        "Brocken"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Zugspitze",
+        "url": "https://de.wikipedia.org/wiki/Zugspitze"
+      }
+    },
+    {
+      "id": "geo-006",
+      "modus": "auswahl",
+      "frage": "Wie viele Bundesländer hat Deutschland?",
+      "optionen": [
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Land (Deutschland)",
+        "url": "https://de.wikipedia.org/wiki/Land_(Deutschland)"
+      }
+    },
+    {
+      "id": "geo-007",
+      "modus": "auswahl",
+      "frage": "Welches ist das flächenmäßig größte Land Afrikas?",
+      "optionen": [
+        "Algerien",
+        "DR Kongo",
+        "Sudan",
+        "Libyen"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Algerien",
+        "url": "https://de.wikipedia.org/wiki/Algerien"
+      },
+      "erklaerung": "Seit der Teilung des Sudan 2011 ist Algerien das größte Land Afrikas."
+    },
+    {
+      "id": "geo-008",
+      "modus": "auswahl",
+      "frage": "Welche ist die größte Heißwüste der Erde?",
+      "optionen": [
+        "Gobi",
+        "Kalahari",
+        "Sahara",
+        "Atacama"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Sahara",
+        "url": "https://de.wikipedia.org/wiki/Sahara"
+      }
+    },
+    {
+      "id": "geo-009",
+      "modus": "auswahl",
+      "frage": "In welchem Land liegt die Stadt Marrakesch?",
+      "optionen": [
+        "Algerien",
+        "Tunesien",
+        "Marokko",
+        "Ägypten"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Marrakesch",
+        "url": "https://de.wikipedia.org/wiki/Marrakesch"
+      }
+    },
+    {
+      "id": "geo-010",
+      "modus": "auswahl",
+      "frage": "Welcher dieser Staaten grenzt NICHT an Deutschland?",
+      "optionen": [
+        "Belgien",
+        "Luxemburg",
+        "Ungarn",
+        "Tschechien"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Deutschland"
+      },
+      "erklaerung": "Deutschland hat neun Nachbarstaaten – Ungarn gehört nicht dazu."
+    },
+    {
+      "id": "geo-011",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Kanada?",
+      "optionen": [
+        "Toronto",
+        "Ottawa",
+        "Vancouver",
+        "Montreal"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Ottawa",
+        "url": "https://de.wikipedia.org/wiki/Ottawa"
+      }
+    },
+    {
+      "id": "geo-012",
+      "modus": "auswahl",
+      "frage": "Durch welche Hauptstadt fließt die Moldau?",
+      "optionen": [
+        "Prag",
+        "Wien",
+        "Budapest",
+        "Bratislava"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Moldau (Fluss)",
+        "url": "https://de.wikipedia.org/wiki/Moldau_(Fluss)"
+      }
+    },
+    {
+      "id": "geo-013",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Mount Everest?",
+      "einheit": "m",
+      "loesung": 8849,
+      "quelle": {
+        "titel": "Wikipedia – Mount Everest",
+        "url": "https://de.wikipedia.org/wiki/Mount_Everest"
+      },
+      "erklaerung": "Diese Höhe ergab die gemeinsame Vermessung von China und Nepal im Jahr 2020."
+    },
+    {
+      "id": "geo-014",
+      "modus": "schaetzen",
+      "frage": "Wie viele Staaten sind Mitglied der Vereinten Nationen?",
+      "einheit": "Staaten",
+      "loesung": 193,
+      "quelle": {
+        "titel": "Wikipedia – Mitgliedstaaten der Vereinten Nationen",
+        "url": "https://de.wikipedia.org/wiki/Mitgliedstaaten_der_Vereinten_Nationen"
+      }
+    },
+    {
+      "id": "geo-015",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Rhein?",
+      "einheit": "km",
+      "loesung": 1233,
+      "quelle": {
+        "titel": "Wikipedia – Rhein",
+        "url": "https://de.wikipedia.org/wiki/Rhein"
+      }
+    },
+    {
+      "id": "geo-016",
+      "modus": "schaetzen",
+      "frage": "Wie tief ist der Baikalsee an seiner tiefsten Stelle?",
+      "einheit": "m",
+      "loesung": 1642,
+      "quelle": {
+        "titel": "Wikipedia – Baikalsee",
+        "url": "https://de.wikipedia.org/wiki/Baikalsee"
+      },
+      "erklaerung": "Der Baikalsee ist der tiefste See der Erde."
+    },
+    {
+      "id": "geo-017",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Erdumfang am Äquator?",
+      "einheit": "km",
+      "loesung": 40075,
+      "quelle": {
+        "titel": "Wikipedia – Erde",
+        "url": "https://de.wikipedia.org/wiki/Erde"
+      }
+    },
+    {
+      "id": "geo-018",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Kilimandscharo, der höchste Berg Afrikas?",
+      "einheit": "m",
+      "loesung": 5895,
+      "quelle": {
+        "titel": "Wikipedia – Kilimandscharo",
+        "url": "https://de.wikipedia.org/wiki/Kilimandscharo"
+      }
+    },
+    {
+      "id": "geo-019",
+      "modus": "schaetzen",
+      "frage": "Wie viele Staaten gibt es in Afrika (UN-Mitglieder)?",
+      "einheit": "Staaten",
+      "loesung": 54,
+      "quelle": {
+        "titel": "Wikipedia – Afrika",
+        "url": "https://de.wikipedia.org/wiki/Afrika"
+      }
+    },
+    {
+      "id": "geo-020",
+      "modus": "schaetzen",
+      "frage": "Über wie viele Zeitzonen erstreckt sich Russland?",
+      "einheit": "Zeitzonen",
+      "loesung": 11,
+      "quelle": {
+        "titel": "Wikipedia – Zeitzonen in Russland",
+        "url": "https://de.wikipedia.org/wiki/Zeitzonen_in_Russland"
+      }
+    },
+    {
+      "id": "geo-021",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist die Chinesische Mauer laut der Vermessung von 2012 insgesamt?",
+      "einheit": "km",
+      "loesung": 21196,
+      "quelle": {
+        "titel": "Wikipedia – Chinesische Mauer",
+        "url": "https://de.wikipedia.org/wiki/Chinesische_Mauer"
+      },
+      "erklaerung": "Mitgezählt sind alle Abschnitte aus verschiedenen Dynastien."
+    },
+    {
+      "id": "geo-022",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Reykjavík?",
+      "daten": {
+        "mitte": [
+          45,
+          -20
+        ],
+        "zoom": 2
+      },
+      "loesung": {
+        "lat": 64.15,
+        "lng": -21.94
+      },
+      "quelle": {
+        "titel": "Wikipedia – Reykjavík",
+        "url": "https://de.wikipedia.org/wiki/Reykjavík"
+      }
+    },
+    {
+      "id": "geo-023",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der Mount Everest?",
+      "daten": {
+        "mitte": [
+          30,
+          80
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 27.99,
+        "lng": 86.93
+      },
+      "quelle": {
+        "titel": "Wikipedia – Mount Everest",
+        "url": "https://de.wikipedia.org/wiki/Mount_Everest"
+      }
+    },
+    {
+      "id": "geo-024",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Osterinsel mit ihren berühmten Steinfiguren?",
+      "daten": {
+        "mitte": [
+          -20,
+          -90
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -27.12,
+        "lng": -109.35
+      },
+      "quelle": {
+        "titel": "Wikipedia – Osterinsel",
+        "url": "https://de.wikipedia.org/wiki/Osterinsel"
+      }
+    },
+    {
+      "id": "geo-025",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Wüstenstadt Timbuktu?",
+      "daten": {
+        "mitte": [
+          10,
+          10
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 16.77,
+        "lng": -3.01
+      },
+      "quelle": {
+        "titel": "Wikipedia – Timbuktu",
+        "url": "https://de.wikipedia.org/wiki/Timbuktu"
+      }
+    },
+    {
+      "id": "geo-026",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Kapstadt?",
+      "daten": {
+        "mitte": [
+          -10,
+          20
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -33.92,
+        "lng": 18.42
+      },
+      "quelle": {
+        "titel": "Wikipedia – Kapstadt",
+        "url": "https://de.wikipedia.org/wiki/Kapstadt"
+      }
+    },
+    {
+      "id": "geo-027",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie hoch ist der Aconcagua, der höchste Berg Südamerikas?",
+      "daten": {
+        "einheit": "m",
+        "balken": [
+          {
+            "name": "Mont Blanc",
+            "wert": 4805
+          },
+          {
+            "name": "Elbrus",
+            "wert": 5642
+          },
+          {
+            "name": "Denali",
+            "wert": 6190
+          },
+          {
+            "name": "Aconcagua",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 6961,
+      "quelle": {
+        "titel": "Wikipedia – Aconcagua",
+        "url": "https://de.wikipedia.org/wiki/Aconcagua"
+      }
+    },
+    {
+      "id": "geo-028",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie groß ist Brasilien (Fläche)?",
+      "daten": {
+        "einheit": "Mio. km²",
+        "balken": [
+          {
+            "name": "Russland",
+            "wert": 17.1
+          },
+          {
+            "name": "Kanada",
+            "wert": 10.0
+          },
+          {
+            "name": "China",
+            "wert": 9.6
+          },
+          {
+            "name": "Brasilien",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 8.5,
+      "quelle": {
+        "titel": "Wikipedia – Brasilien",
+        "url": "https://de.wikipedia.org/wiki/Brasilien"
+      }
+    },
+    {
+      "id": "geo-029",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Panamakanal eröffnet?",
+      "daten": {
+        "von": 1850,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Suezkanal",
+            "jahr": 1869
+          },
+          {
+            "name": "Nord-Ostsee-Kanal",
+            "jahr": 1895
+          }
+        ]
+      },
+      "loesung": 1914,
+      "quelle": {
+        "titel": "Wikipedia – Panamakanal",
+        "url": "https://de.wikipedia.org/wiki/Panamakanal"
+      }
+    },
+    {
+      "id": "geo-030",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Eurotunnel unter dem Ärmelkanal eröffnet?",
+      "daten": {
+        "von": 1950,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Öresundbrücke",
+            "jahr": 2000
+          },
+          {
+            "name": "Gotthard-Basistunnel",
+            "jahr": 2016
+          }
+        ]
+      },
+      "loesung": 1994,
+      "quelle": {
+        "titel": "Wikipedia – Eurotunnel",
+        "url": "https://de.wikipedia.org/wiki/Eurotunnel"
+      }
+    },
+    {
+      "id": "geo-031",
+      "modus": "auswahl",
+      "frage": "Zu welchem Land gehört diese Flagge?",
+      "optionen": [
+        "Kasachstan",
+        "Usbekistan",
+        "Kirgisistan",
+        "Turkmenistan"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Flagge Kasachstans",
+        "url": "https://de.wikipedia.org/wiki/Flagge_Kasachstans"
+      },
+      "bild": {
+        "datei": "bilder/geo-031.png",
+        "urheber": "Shaken Niyazbekop",
+        "lizenz": "Public domain",
+        "quelle": {
+          "titel": "Wikimedia Commons – Flag of Kazakhstan.svg",
+          "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Kazakhstan.svg"
+        }
+      }
+    },
+    {
+      "id": "geo-032",
+      "modus": "auswahl",
+      "frage": "Zu welchem Land gehört diese Flagge?",
+      "optionen": [
+        "Bhutan",
+        "Nepal",
+        "Sri Lanka",
+        "Bangladesch"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Flagge Nepals",
+        "url": "https://de.wikipedia.org/wiki/Flagge_Nepals"
+      },
+      "bild": {
+        "datei": "bilder/geo-032.png",
+        "urheber": "Drawn by Pumbaa80, Achim1999",
+        "lizenz": "Public domain",
+        "quelle": {
+          "titel": "Wikimedia Commons – Flag of Nepal.svg",
+          "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Nepal.svg"
+        }
+      }
+    },
+    {
+      "id": "geo-033",
+      "modus": "auswahl",
+      "frage": "Zu welchem Land gehört diese Flagge?",
+      "optionen": [
+        "Angola",
+        "Mosambik",
+        "Simbabwe",
+        "Sambia"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Flagge Mosambiks",
+        "url": "https://de.wikipedia.org/wiki/Flagge_Mosambiks"
+      },
+      "bild": {
+        "datei": "bilder/geo-033.png",
+        "urheber": "FRELIMO",
+        "lizenz": "Public domain",
+        "quelle": {
+          "titel": "Wikimedia Commons – Flag of Mozambique.svg",
+          "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Mozambique.svg"
+        }
+      }
+    },
+    {
+      "id": "geo-034",
+      "modus": "auswahl",
+      "frage": "Zu welchem Land gehört diese Flagge?",
+      "optionen": [
+        "Japan",
+        "Südkorea",
+        "Taiwan",
+        "Mongolei"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Flagge Südkoreas",
+        "url": "https://de.wikipedia.org/wiki/Flagge_Südkoreas"
+      },
+      "bild": {
+        "datei": "bilder/geo-034.png",
+        "urheber": "Original: Government of the Republic of Korea Vector:  Great Brightstar and o…",
+        "lizenz": "Public domain",
+        "quelle": {
+          "titel": "Wikimedia Commons – Flag of South Korea.svg",
+          "url": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Korea.svg"
+        }
+      }
+    },
+    {
+      "id": "geo-035",
+      "modus": "auswahl",
+      "frage": "Zu welchem Land gehört diese Flagge?",
+      "optionen": [
+        "Tadschikistan",
+        "Mongolei",
+        "Kirgisistan",
+        "Kasachstan"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Flagge Kirgisistans",
+        "url": "https://de.wikipedia.org/wiki/Flagge_Kirgisistans"
+      },
+      "bild": {
+        "datei": "bilder/geo-035.png",
+        "urheber": "Shakiev N.T., Primov U.B.",
+        "lizenz": "Public domain",
+        "quelle": {
+          "titel": "Wikimedia Commons – Flag of Kyrgyzstan.svg",
+          "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Kyrgyzstan.svg"
+        }
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "geo-s01",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Brocken, der höchste Berg im Harz?",
+      "einheit": "m",
+      "loesung": 1141,
+      "quelle": {
+        "titel": "Wikipedia – Brocken",
+        "url": "https://de.wikipedia.org/wiki/Brocken"
+      }
+    },
+    {
+      "id": "geo-s02",
+      "modus": "schaetzen",
+      "frage": "Wie tief ist der Bodensee an seiner tiefsten Stelle?",
+      "einheit": "m",
+      "loesung": 251,
+      "quelle": {
+        "titel": "Wikipedia – Bodensee",
+        "url": "https://de.wikipedia.org/wiki/Bodensee"
+      }
+    }
+  ]
+}

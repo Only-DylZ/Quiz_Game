@@ -11,17 +11,24 @@
 // - er rechnet die Punkte aus und führt die Rangliste.
 
 import { neuerRaumcode, raumBetreten, neueId } from "./realtime.js";
-import { neu } from "./engine/hilfen.js";
+import { neu, bildGueltig, bildZeigen } from "./engine/hilfen.js";
 import { anteilRestzeit, ranglisteBerechnen } from "./engine/punkte.js";
+import { rundeZusammenstellen, kennung } from "./engine/runde.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
 
-// Alle Modi, die wir schon können. In Phase 2 kommt "grafik" dazu.
+// Alle Modi, die wir können
 const MODI = { auswahl, schaetzen, grafik };
 
-// Welches Paket gespielt wird (Themenauswahl kommt in Phase 4)
-const PAKET_DATEI = "packs/raumfahrt.json";
+// Welches Paket gespielt wird (Themenauswahl kommt in Phase 4).
+// Zum Testen: host.html?paket=geographie lädt packs/geographie.json.
+// Nur Kleinbuchstaben, Ziffern und "-" erlaubt – so kann niemand über die
+// Adresse andere Dateien laden lassen (z. B. "../irgendwas").
+const PAKET_NAME = new URLSearchParams(location.search).get("paket") || "raumfahrt";
+const PAKET_DATEI = /^[a-z0-9-]{1,40}$/.test(PAKET_NAME)
+  ? "packs/" + PAKET_NAME + ".json"
+  : "packs/raumfahrt.json";
 
 // Antwortzeit in Sekunden, wenn die Frage keine eigene "zeit" hat
 const STANDARD_ZEIT = 20;
@@ -35,7 +42,7 @@ const $ = (id) => document.getElementById(id);
 // ---------------------------------------------------------------------------
 // Spielzustand
 // ---------------------------------------------------------------------------
-let fragen = [];            // die spielbaren Fragen aus dem Paket
+let fragen = [];            // die 10 Fragen dieser Runde (zufällig aus dem Pool)
 let nummer = -1;            // Index der aktuellen Frage (-1 = noch nicht gestartet)
 let schritt = "lobby";      // "lobby" | "frage" | "aufloesung" | "zwischenstand" | "ende"
 let restzeit = 0;           // Sekunden bis zur Auflösung
@@ -81,17 +88,61 @@ async function paketLaden() {
 
     // Nur Fragen übernehmen, deren Modus wir kennen und die gültig sind
     const alle = Array.isArray(paket.fragen) ? paket.fragen : [];
-    fragen = alle.filter(frageSpielbar);
+    const pool = alle.filter(frageSpielbar);
 
-    const uebersprungen = alle.length - fragen.length;
+    // Aus dem Pool 10 zufällige Fragen ziehen – bisher ungespielte zuerst
+    const gespielt = gedaechtnisLaden(pool);
+    fragen = rundeZusammenstellen(pool, gespielt);
+
+    const neue = pool.filter((f) => !gespielt.has(kennung(f))).length;
     $("paketInfo").textContent =
-      "Paket „" + paket.thema + "“: " + fragen.length + " Fragen spielbar" +
-      (uebersprungen > 0 ? " (" + uebersprungen + " kommen in späteren Schritten)" : "");
+      "Paket „" + paket.thema + "“: " + pool.length + " Fragen im Pool, " +
+      neue + " davon noch nie gespielt";
   } catch (fehler) {
     $("paketInfo").textContent = "Fragenpaket konnte nicht geladen werden.";
     console.error(fehler);
   }
   startKnopfAktualisieren();
+}
+
+// ---------------------------------------------------------------------------
+// Gedächtnis: welche Fragen dieses Pakets schon gespielt wurden
+// ---------------------------------------------------------------------------
+// Liegt im Browser des Hosts (localStorage), bleibt also auch über mehrere
+// Spielabende erhalten. Enthält nur Kennungen wie "rf-03", keine Lösungen.
+const GEDAECHTNIS_SCHLUESSEL = "quiz-gespielt:" + PAKET_DATEI;
+
+function gedaechtnisLaden(pool) {
+  let gespielt = new Set();
+  try {
+    const gespeichert = JSON.parse(localStorage.getItem(GEDAECHTNIS_SCHLUESSEL) || "[]");
+    if (Array.isArray(gespeichert)) gespielt = new Set(gespeichert.filter((k) => typeof k === "string"));
+  } catch {
+    // Kein Speicher verfügbar (z. B. privates Fenster) – dann eben ohne Gedächtnis
+  }
+
+  // Alle Fragen schon gespielt? Dann beginnt das Gedächtnis von vorne.
+  if (pool.every((f) => gespielt.has(kennung(f)))) {
+    gespielt = new Set();
+    try {
+      localStorage.removeItem(GEDAECHTNIS_SCHLUESSEL);
+    } catch {
+      // ohne Speicher geht es auch
+    }
+  }
+  return gespielt;
+}
+
+// Merkt sich eine Frage als gespielt (wird beim Zeigen der Frage aufgerufen)
+function alsGespieltMerken(frage) {
+  try {
+    const gespeichert = JSON.parse(localStorage.getItem(GEDAECHTNIS_SCHLUESSEL) || "[]");
+    const liste = Array.isArray(gespeichert) ? gespeichert : [];
+    if (!liste.includes(kennung(frage))) liste.push(kennung(frage));
+    localStorage.setItem(GEDAECHTNIS_SCHLUESSEL, JSON.stringify(liste));
+  } catch {
+    // ohne Speicher geht es auch
+  }
 }
 
 // Prüft eine Frage aus dem Paket: gemeinsame Pflichtfelder + Modus-Regeln
@@ -101,6 +152,7 @@ function frageSpielbar(frage) {
     modul !== undefined &&
     typeof frage.frage === "string" &&
     frage.quelle && typeof frage.quelle.titel === "string" &&
+    (frage.bild === undefined || bildGueltig(frage)) && // Bild ist freiwillig
     modul.pruefeFrage(frage)
   );
 }
@@ -172,6 +224,7 @@ function naechsteFrage() {
 
   const frage = fragen[nummer];
   const modul = MODI[frage.modus];
+  alsGespieltMerken(frage);
 
   antworten = new Map();
   entwuerfe = new Map();
@@ -181,6 +234,7 @@ function naechsteFrage() {
   // Anzeige auf dem großen Bildschirm
   $("fortschritt").textContent = "Frage " + (nummer + 1) + " von " + fragen.length;
   $("fragetext").textContent = frage.frage;
+  bildZeigen($("bild"), frage.bild ? frage.bild.datei : null);
   modul.zeigeFrage($("bereich"), modul.oeffentlicheDaten(frage));
   $("infos").hidden = true;
   $("antwortZaehler").hidden = false;
@@ -204,6 +258,7 @@ function frageSenden() {
     text: frage.frage,
     restzeit: restzeit,
     daten: MODI[frage.modus].oeffentlicheDaten(frage),
+    bild: frage.bild ? frage.bild.datei : null, // nur der neutrale Dateiname
   });
 }
 
@@ -324,6 +379,7 @@ function aufloesen() {
   $("antwortZaehler").hidden = true;
   $("erklaerung").textContent = frage.erklaerung || "";
   quelleAnzeigen(frage.quelle);
+  bildQuelleAnzeigen(frage.bild);
   $("weiter").textContent = "Zwischenstand";
   $("infos").hidden = false;
 }
@@ -344,6 +400,23 @@ function quelleAnzeigen(quelle) {
   }
 }
 
+// Bildnachweis – verlangen die Lizenzen freier Bilder (z. B. CC BY-SA)
+function bildQuelleAnzeigen(bild) {
+  const ziel = $("bildQuelle");
+  ziel.replaceChildren();
+  if (!bild) return;
+
+  ziel.append("Bild: " + bild.urheber + ", " + bild.lizenz + " – ");
+  const quelle = bild.quelle || {};
+  if (typeof quelle.url === "string" && /^https:\/\//.test(quelle.url)) {
+    const link = neu("a", "", quelle.titel || "Quelle");
+    link.href = quelle.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    ziel.append(link);
+  }
+}
+
 // ---------------------------------------------------------------------------
 // 7. Zwischenstand nach jeder Frage
 // ---------------------------------------------------------------------------
@@ -352,6 +425,8 @@ function zwischenstandZeigen() {
   $("fragetext").textContent = "Zwischenstand";
   $("erklaerung").textContent = "";
   $("quelle").replaceChildren();
+  $("bildQuelle").replaceChildren();
+  bildZeigen($("bild"), null);
 
   const rangliste = ranglisteBerechnen([...spielstand.values()]);
   $("bereich").replaceChildren(ranglisteElement(rangliste.slice(0, ZWISCHENSTAND_PLAETZE)));

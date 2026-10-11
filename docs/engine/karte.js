@@ -1,12 +1,15 @@
 // engine/karte.js – Die Art "karte" des Grafik-Modus (wird von grafik.js benutzt).
 //
-// Zeigt eine Landkarte mit Leaflet (Bibliothek) und OpenStreetMap (Kartenbilder).
-// Leaflet wird in host.html und play.html per <script> geladen und steht dann
-// als globales "L" bereit.
+// Zeigt eine Landkarte mit Leaflet (Bibliothek). Leaflet wird in host.html und
+// play.html per <script> geladen und steht dann als globales "L" bereit.
 //
-// OpenStreetMap ist kostenlos, verlangt aber:
-//   - sichtbare Namensnennung (macht die Karte unten rechts),
-//   - keine Massen-Downloads (wir laden nur, was gerade zu sehen ist).
+// Zwei Arten von Karte:
+//   - Während der Frage (Host + Handy): eine selbst gezeichnete Weltkarte
+//     OHNE Beschriftung aus karten/welt.json (Natural Earth, gemeinfrei).
+//     Sonst könnte man den gesuchten Ort einfach auf der Karte ablesen.
+//   - Bei der Auflösung (Host): OpenStreetMap MIT Beschriftung. OSM ist
+//     kostenlos, verlangt aber sichtbare Namensnennung und keine
+//     Massen-Downloads (wir laden nur, was gerade zu sehen ist).
 
 import { neu, zahlText } from "./hilfen.js";
 import { entfernungKm } from "./punkte.js";
@@ -14,6 +17,14 @@ import { entfernungKm } from "./punkte.js";
 const KACHELN = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 // Fester Text von uns (kein Spieler-Input) – darf deshalb HTML enthalten
 const NAMENSNENNUNG = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende';
+
+// Weltkarte ohne Namen (siehe oben). Wird nur einmal geladen und dann gemerkt.
+const WELT_DATEI = "karten/welt.json";
+let weltVersprechen = null;
+
+// Farben der selbst gezeichneten Karte
+const LAND = { color: "#8a8a8a", weight: 1, fillColor: "#f2efe9", fillOpacity: 1 };
+const WASSER = { color: "#8a8a8a", weight: 1, fillColor: "#a8cbe6", fillOpacity: 1 };
 
 // Höchstens so viele Spieler zeigt der Host bei der Auflösung in der Liste an
 const MAX_ANZEIGE = 10;
@@ -50,7 +61,8 @@ export function ortAlsText(ort) {
 
 // Legt eine neue Leaflet-Karte im Bereich an und gibt sie zurück.
 // klasse = "karte" (Host, groß) oder "karte karte-handy" (Handy)
-function neueKarte(bereich, daten, klasse) {
+// beschriftet = true → OpenStreetMap mit Namen (nur für die Auflösung!)
+function neueKarte(bereich, daten, klasse, beschriftet = false) {
   if (beobachter) beobachter.disconnect();
   if (aktiveKarte) aktiveKarte.remove();
   aktiveKarte = null;
@@ -65,9 +77,21 @@ function neueKarte(bereich, daten, klasse) {
   const behaelter = neu("div", klasse);
   bereich.replaceChildren(behaelter);
 
-  const karte = L.map(behaelter, { worldCopyJump: true, minZoom: 1, maxZoom: 18 })
-    .setView(daten.mitte, daten.zoom);
-  L.tileLayer(KACHELN, { maxZoom: 18, attribution: NAMENSNENNUNG }).addTo(karte);
+  let karte;
+  if (beschriftet) {
+    karte = L.map(behaelter, { worldCopyJump: true, minZoom: 1, maxZoom: 18 })
+      .setView(daten.mitte, daten.zoom);
+    L.tileLayer(KACHELN, { maxZoom: 18, attribution: NAMENSNENNUNG }).addTo(karte);
+  } else {
+    // Nur eine Welt (kein Weiterschieben über die Datumsgrenze), nicht zu nah
+    // heranzoomen – die Umrisse sind dafür zu grob.
+    karte = L.map(behaelter, {
+      minZoom: 1, maxZoom: 8, preferCanvas: true,
+      maxBounds: [[-90, -180], [90, 180]], maxBoundsViscosity: 1,
+    }).setView(daten.mitte, daten.zoom);
+    behaelter.classList.add("karte-ohne-namen"); // Meer-Farbe als Hintergrund
+    umrisseZeichnen(karte);
+  }
 
   // Leaflet muss die Größe neu messen, sobald der Bereich sichtbar wird
   // (auf dem Handy wird die Seite erst nach dem Aufbau eingeblendet).
@@ -76,6 +100,33 @@ function neueKarte(bereich, daten, klasse) {
 
   aktiveKarte = karte;
   return karte;
+}
+
+// Lädt die Weltkarte (nur beim ersten Mal wirklich, danach aus dem Gedächtnis)
+function weltLaden() {
+  if (!weltVersprechen) {
+    weltVersprechen = fetch(WELT_DATEI).then((antwort) => {
+      if (!antwort.ok) throw new Error("Weltkarte nicht gefunden");
+      return antwort.json();
+    });
+    weltVersprechen.catch(() => { weltVersprechen = null; }); // beim nächsten Mal neu versuchen
+  }
+  return weltVersprechen;
+}
+
+// Zeichnet Länder und Seen auf eine Karte ohne Beschriftung
+async function umrisseZeichnen(karte) {
+  karte.attributionControl.addAttribution("Natural Earth");
+  try {
+    const welt = await weltLaden();
+    if (karte !== aktiveKarte) return; // inzwischen schon eine andere Karte
+    const sammlung = (liste) => ({ type: "GeometryCollection", geometries: liste });
+    L.geoJSON(sammlung(welt.laender), { style: LAND, interactive: false }).addTo(karte);
+    L.geoJSON(sammlung(welt.seen), { style: WASSER, interactive: false }).addTo(karte);
+  } catch (fehler) {
+    console.error(fehler);
+    karte.attributionControl.addAttribution("⚠ Umrisse konnten nicht geladen werden");
+  }
 }
 
 // Ein farbiger Punkt auf der Karte (ohne Bilddateien, deshalb circleMarker)
@@ -168,7 +219,7 @@ export function zeigeAufloesung(bereich, frage, antworten) {
   bereich.replaceChildren(kartenBereich, loesungText, liste);
 
   const daten = { mitte: [frage.loesung.lat, frage.loesung.lng], zoom: frage.daten.zoom };
-  const karte = neueKarte(kartenBereich, daten, "karte");
+  const karte = neueKarte(kartenBereich, daten, "karte", true); // jetzt MIT Namen
   if (!karte) return;
 
   const alleOrte = [[frage.loesung.lat, frage.loesung.lng]];

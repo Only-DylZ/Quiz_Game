@@ -70,7 +70,7 @@ export function pruefeFrage(frage) {
       karte.ortGueltig({ lat: d.mitte[0], lng: d.mitte[1] }) &&
       Number.isInteger(d.zoom) &&
       d.zoom >= 1 &&
-      d.zoom <= 18 &&
+      d.zoom <= 8 && // Karte ohne Namen ist nur bis Zoom 8 genau genug
       karte.ortGueltig(frage.loesung)
     );
   }

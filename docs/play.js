@@ -6,7 +6,7 @@
 //   "ende"       → Spielende anzeigen
 
 import { raumBetreten, raumcodePruefen, neueId } from "./realtime.js";
-import { zahlText } from "./engine/hilfen.js";
+import { zahlText, bildZeigen } from "./engine/hilfen.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
@@ -132,6 +132,7 @@ function frageAnzeigen(daten) {
   $("meldung").textContent = "";
   $("fortschritt").textContent = "Frage " + (daten.nummer + 1) + " von " + daten.gesamt;
   $("fragetext").textContent = daten.text;
+  bildZeigen($("bild"), daten.bild); // prüft selbst, ob der Pfad erlaubt ist
   $("status").textContent = "";
 
   // Der Modus zeichnet die Eingabe.

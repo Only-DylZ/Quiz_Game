@@ -188,16 +188,18 @@
       }
     }
   ],
-  "stechfrage": {
-    "id": "rf-s1",
-    "modus": "schaetzen",
-    "frage": "Wie groß ist der Radius des Mondes – vom Mittelpunkt bis zur Oberfläche?",
-    "einheit": "km",
-    "loesung": 1740,
-    "erklaerung": "Der Mond ist damit weniger als ein Drittel so breit wie die Erde.",
-    "quelle": {
-      "titel": "NASA Science – Moon Facts",
-      "url": "https://science.nasa.gov/moon/facts/"
+  "stechfragen": [
+    {
+      "id": "rf-s1",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist der Radius des Mondes – vom Mittelpunkt bis zur Oberfläche?",
+      "einheit": "km",
+      "loesung": 1740,
+      "erklaerung": "Der Mond ist damit weniger als ein Drittel so breit wie die Erde.",
+      "quelle": {
+        "titel": "NASA Science – Moon Facts",
+        "url": "https://science.nasa.gov/moon/facts/"
+      }
     }
-  }
+  ]
 }

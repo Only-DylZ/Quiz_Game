@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="style.css">
+  <!-- Weltkarte (ohne Namen) schon im Hintergrund laden, falls eine Kartenfrage kommt -->
+  <link rel="prefetch" href="karten/welt.json">
 </head>
 <body class="spieler">
   <!-- Spieler-Seite fürs Handy. Die Logik steht in play.js. -->
@@ -40,6 +42,8 @@
         <span class="countdown" id="countdown"></span>
       </p>
       <p class="fragetext" id="fragetext"></p>
+      <!-- Bild zur Frage (falls vorhanden) -->
+      <img class="fragebild" id="bild" alt="Bild zur Frage" hidden>
       <!-- Hier zeichnet der jeweilige Modus die Eingabe -->
       <div id="eingabe"></div>
       <p id="status"></p>

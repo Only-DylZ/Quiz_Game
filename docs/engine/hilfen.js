@@ -48,3 +48,40 @@ export function svgNeu(tag, eigenschaften = {}, text = "") {
   if (text !== "") element.textContent = String(text);
   return element;
 }
+
+// ---------------------------------------------------------------------------
+// Bilder zu Fragen
+// ---------------------------------------------------------------------------
+// Bilder liegen im Ordner docs/bilder/ und heißen wie die Frage, z. B.
+// "bilder/dd-017.jpg". Ein Name wie "sauerbraten.jpg" würde die Lösung verraten!
+// Nur genau dieses Muster ist erlaubt – so kann auch niemand über eine
+// gefälschte Nachricht fremde Adressen auf den Handys laden lassen.
+const BILD_MUSTER = /^bilder\/[a-z0-9-]{1,40}\.(jpg|png|webp|svg)$/;
+
+export function bildPfadGueltig(pfad) {
+  return typeof pfad === "string" && BILD_MUSTER.test(pfad);
+}
+
+// Passt das Bild einer Frage zu den Regeln? (Datei heißt wie die id, Lizenz angegeben)
+export function bildGueltig(frage) {
+  const bild = frage.bild;
+  return (
+    bild !== null && typeof bild === "object" &&
+    bildPfadGueltig(bild.datei) &&
+    bild.datei.replace(/^bilder\//, "").replace(/\.[a-z]+$/, "") === frage.id &&
+    typeof bild.urheber === "string" && bild.urheber !== "" &&
+    typeof bild.lizenz === "string" && bild.lizenz !== ""
+  );
+}
+
+// Zeigt ein Bild im <img>-Element – oder versteckt es, wenn es keins gibt
+export function bildZeigen(element, pfad) {
+  if (bildPfadGueltig(pfad)) {
+    element.src = pfad;
+    element.hidden = false;
+  } else {
+    element.removeAttribute("src");
+    element.hidden = true;
+  }
+}
+

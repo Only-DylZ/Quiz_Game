@@ -19,25 +19,37 @@ Braucht nur Python 3 – keine zusätzlichen Pakete.
 
 import json
 import math
+import re
 import sys
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
 # Ordner mit den Paketen (relativ zu dieser Datei, damit es von überall klappt)
 PAKET_ORDNER = Path(__file__).resolve().parent.parent / "docs" / "packs"
 
-ANZAHL_FRAGEN = 10
+# Pool: so viele Fragen pro Modus braucht eine Runde mindestens (wie MIX in
+# docs/engine/runde.js). Das Ziel pro Thema sind ZIEL_POOL Fragen.
+MIX = {"auswahl": 4, "schaetzen": 3, "grafik": 3}
+ZIEL_POOL = 150
+ZIEL_STECHFRAGEN = 5
 MODI = ("auswahl", "schaetzen", "grafik")
 GRAFIK_ARTEN = ("balken", "zeitleiste", "karte")
 MAX_BALKEN = 8
 MAX_EREIGNISSE = 8
 
 # Erlaubte Felder – alles andere ist vermutlich ein Tippfehler (z. B. "loesungen")
-PAKET_FELDER = {"thema", "version", "beschreibung", "fragen", "stechfrage"}
+PAKET_FELDER = {"thema", "version", "beschreibung", "fragen", "stechfragen"}
 FRAGE_FELDER = {
     "id", "modus", "frage", "loesung", "quelle", "zeit", "erklaerung",
-    "optionen", "einheit", "art", "daten",
+    "optionen", "einheit", "art", "daten", "bild",
 }
+
+# Bilder: liegen in docs/bilder/ und heißen wie die Frage (z. B. bilder/dd-017.jpg),
+# damit der Dateiname die Lösung nicht verrät. Gleiche Regel wie in hilfen.js.
+DOCS_ORDNER = PAKET_ORDNER.parent
+BILD_MUSTER = re.compile(r"^bilder/[a-z0-9-]{1,40}\.(jpg|png|webp|svg)$")
+MAX_BILD_KB = 300
 
 # Grenzen für gut lesbare Texte (nur Hinweise, keine Fehler)
 MAX_FRAGETEXT = 200
@@ -109,34 +121,58 @@ def pruefe_paket(paket, bericht):
     for feld in sorted(set(paket) - PAKET_FELDER):
         bericht.hinweis_bei("Paket", f'unbekanntes Feld "{feld}" (Tippfehler?)')
 
-    # Genau 10 Fragen
+    # Fragen-Pool: genug Fragen pro Modus für mindestens eine Runde
     fragen = paket.get("fragen")
     if not isinstance(fragen, list):
         bericht.fehler_bei("Paket", '"fragen" fehlt oder ist keine Liste')
         fragen = []
-    elif len(fragen) != ANZAHL_FRAGEN:
-        bericht.fehler_bei("Paket", f"braucht genau {ANZAHL_FRAGEN} Fragen, hat aber {len(fragen)}")
+    for modus, mindestens in MIX.items():
+        anzahl = sum(1 for f in fragen if isinstance(f, dict) and f.get("modus") == modus)
+        if anzahl < mindestens:
+            bericht.fehler_bei("Paket", f'braucht mindestens {mindestens} Fragen im Modus "{modus}", hat {anzahl}')
+    if 0 < len(fragen) < ZIEL_POOL:
+        bericht.hinweis_bei("Paket", f"Pool hat {len(fragen)} Fragen (Ziel: {ZIEL_POOL})")
 
     for nummer, frage in enumerate(fragen, start=1):
         pruefe_frage(frage, f"Frage {nummer}{id_text(frage)}", bericht)
 
-    # Stechfrage: eine weitere Frage, immer "schaetzen"
-    stechfrage = paket.get("stechfrage")
-    if stechfrage is None:
-        bericht.fehler_bei("Paket", '"stechfrage" fehlt (eine Schätzfrage für Gleichstand)')
-    else:
-        ort = "Stechfrage" + id_text(stechfrage)
+    # Stechfragen: Liste mit mindestens einer Frage, immer "schaetzen"
+    stechfragen = paket.get("stechfragen")
+    if not (isinstance(stechfragen, list) and stechfragen):
+        bericht.fehler_bei("Paket", '"stechfragen" fehlt oder ist leer (Liste mit Schätzfragen für Gleichstand)')
+        stechfragen = []
+    elif len(stechfragen) < ZIEL_STECHFRAGEN:
+        bericht.hinweis_bei("Paket", f"nur {len(stechfragen)} Stechfragen (Ziel: {ZIEL_STECHFRAGEN})")
+    for nummer, stechfrage in enumerate(stechfragen, start=1):
+        ort = f"Stechfrage {nummer}{id_text(stechfrage)}"
         if isinstance(stechfrage, dict) and stechfrage.get("modus") != "schaetzen":
             bericht.fehler_bei(ort, 'muss Modus "schaetzen" haben')
         pruefe_frage(stechfrage, ort, bericht)
 
-    # Kennungen (id) dürfen nicht doppelt vorkommen
-    alle = [f for f in fragen + [stechfrage] if isinstance(f, dict) and "id" in f]
-    gesehen = set()
-    for frage in alle:
-        if frage["id"] in gesehen:
-            bericht.fehler_bei("Paket", f'id "{frage["id"]}" kommt mehrfach vor')
-        gesehen.add(frage["id"])
+    # Jede Frage braucht eine eindeutige id (das Spiel merkt sich damit,
+    # welche Fragen schon gespielt wurden). Gleiche Fragetexte = Doppelung
+    # (außer bei Bildfragen mit verschiedenen Bildern).
+    gesehen_ids = set()
+    gesehen_texte = {}
+    for nummer, frage in enumerate(fragen + stechfragen, start=1):
+        if not isinstance(frage, dict):
+            continue
+        fid = frage.get("id")
+        if fid in gesehen_ids:
+            bericht.fehler_bei("Paket", f'id "{fid}" kommt mehrfach vor')
+        elif isinstance(fid, str):
+            gesehen_ids.add(fid)
+        text = frage.get("frage")
+        if isinstance(text, str):
+            schluessel = " ".join(text.lower().split())
+            # Bildfragen dürfen denselben Text haben ("Zu welchem Land gehört diese
+            # Flagge?") – dort zählt Text + Bild zusammen
+            if isinstance(frage.get("bild"), dict):
+                schluessel += " | " + str(frage["bild"].get("datei"))
+            if schluessel in gesehen_texte:
+                bericht.fehler_bei("Paket", f'Frage "{text[:40]}…" kommt doppelt vor ({gesehen_texte[schluessel]} und {fid})')
+            else:
+                gesehen_texte[schluessel] = fid
 
 
 def id_text(frage):
@@ -158,8 +194,8 @@ def pruefe_frage(frage, ort, bericht):
     elif len(frage["frage"]) > MAX_FRAGETEXT:
         bericht.hinweis_bei(ort, f"Fragetext ist sehr lang ({len(frage['frage'])} Zeichen)")
 
-    if "id" in frage and not ist_text(frage["id"]):
-        bericht.fehler_bei(ort, '"id" muss Text sein')
+    if not ist_text(frage.get("id")):
+        bericht.fehler_bei(ort, '"id" fehlt (Pflicht, z. B. "rf-01")')
     if "zeit" in frage and not (ist_ganzzahl(frage["zeit"]) and 5 <= frage["zeit"] <= 120):
         bericht.fehler_bei(ort, '"zeit" muss eine ganze Zahl von 5 bis 120 (Sekunden) sein')
     if "erklaerung" in frage and not isinstance(frage["erklaerung"], str):
@@ -168,6 +204,8 @@ def pruefe_frage(frage, ort, bericht):
         bericht.hinweis_bei(ort, f'unbekanntes Feld "{feld}" (Tippfehler?)')
 
     pruefe_quelle(frage.get("quelle"), ort, bericht)
+    if "bild" in frage:
+        pruefe_bild(frage, ort, bericht)
 
     # --- Modus ---
     modus = frage.get("modus")
@@ -197,6 +235,35 @@ def pruefe_quelle(quelle, ort, bericht):
         bericht.fehler_bei(ort, 'Quellen-Link muss mit "https://" beginnen')
     elif url.startswith("http://"):
         bericht.hinweis_bei(ort, 'Quellen-Link sollte "https://" statt "http://" nutzen')
+
+
+def pruefe_bild(frage, ort, bericht):
+    """Bild zur Frage: neutraler Dateiname, Datei vorhanden, Lizenzangaben."""
+    bild = frage["bild"]
+    if not isinstance(bild, dict):
+        bericht.fehler_bei(ort, '"bild" muss ein Objekt sein: { "datei", "urheber", "lizenz", "quelle" }')
+        return
+    datei = bild.get("datei")
+    if not (isinstance(datei, str) and BILD_MUSTER.match(datei)):
+        bericht.fehler_bei(ort, 'bild."datei" muss so aussehen: "bilder/<id>.jpg" (jpg, png, webp oder svg)')
+        return
+    endung = datei.rsplit(".", 1)[1]
+    if datei != f"bilder/{frage.get('id')}.{endung}":
+        bericht.fehler_bei(ort, f'Bild muss wie die Frage heißen: "bilder/{frage.get("id")}.{endung}" '
+                                f'(ein sprechender Name würde die Lösung verraten)')
+    pfad = DOCS_ORDNER / datei
+    if not pfad.is_file():
+        bericht.fehler_bei(ort, f'Bilddatei "docs/{datei}" gibt es nicht')
+    elif pfad.stat().st_size > MAX_BILD_KB * 1024:
+        bericht.hinweis_bei(ort, f"Bild ist groß ({pfad.stat().st_size // 1024} KB) – lädt auf dem Handy langsam")
+    if not ist_text(bild.get("urheber")):
+        bericht.fehler_bei(ort, 'bild."urheber" fehlt (Lizenzen verlangen die Namensnennung)')
+    if not ist_text(bild.get("lizenz")):
+        bericht.fehler_bei(ort, 'bild."lizenz" fehlt, z. B. "gemeinfrei" oder "CC BY-SA 4.0"')
+    quelle = bild.get("quelle")
+    if not (isinstance(quelle, dict) and ist_text(quelle.get("titel"))
+            and isinstance(quelle.get("url"), str) and quelle["url"].startswith("https://")):
+        bericht.fehler_bei(ort, 'bild."quelle" braucht "titel" und "url" (https://) – woher das Bild stammt')
 
 
 def pruefe_auswahl(frage, ort, bericht):
@@ -287,8 +354,8 @@ def pruefe_grafik(frage, ort, bericht):
         if not (isinstance(mitte, list) and len(mitte) == 2 and ist_ort({"lat": mitte[0], "lng": mitte[1]})):
             bericht.fehler_bei(ort, 'daten."mitte" muss [Breite, Länge] sein, z. B. [50, 10]')
         zoom = daten.get("zoom")
-        if not (ist_ganzzahl(zoom) and 1 <= zoom <= 18):
-            bericht.fehler_bei(ort, 'daten."zoom" muss eine ganze Zahl von 1 bis 18 sein')
+        if not (ist_ganzzahl(zoom) and 1 <= zoom <= 8):
+            bericht.fehler_bei(ort, 'daten."zoom" muss eine ganze Zahl von 1 bis 8 sein')
         if not ist_ort(loesung):
             bericht.fehler_bei(ort, '"loesung" muss { "lat": Breite, "lng": Länge } sein (lat −90…90, lng −180…180)')
 
@@ -299,18 +366,19 @@ def pruefe_grafik(frage, ort, bericht):
 
 def pruefe_links(paket, bericht):
     """Ruft jeden Quellen-Link auf. Findet erfundene oder kaputte Links."""
-    fragen = paket.get("fragen") or []
-    stechfrage = paket.get("stechfrage")
+    fragen = paket.get("fragen") if isinstance(paket.get("fragen"), list) else []
+    stechfragen = paket.get("stechfragen") if isinstance(paket.get("stechfragen"), list) else []
     alle = [(f"Frage {n}{id_text(f)}", f) for n, f in enumerate(fragen, start=1)]
-    if stechfrage is not None:
-        alle.append(("Stechfrage" + id_text(stechfrage), stechfrage))
+    alle += [(f"Stechfrage {n}{id_text(f)}", f) for n, f in enumerate(stechfragen, start=1)]
 
     for ort, frage in alle:
         quelle = frage.get("quelle") if isinstance(frage, dict) else None
         url = quelle.get("url") if isinstance(quelle, dict) else None
         if not (isinstance(url, str) and url.startswith("https://")):
             continue
-        anfrage = urllib.request.Request(url, headers={"User-Agent": "Quiz-Abend-Paketpruefer/1.0"})
+        # Sonderzeichen (z. B. "í" in Reykjavík) für die Anfrage umwandeln
+        sichere_url = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%")
+        anfrage = urllib.request.Request(sichere_url, headers={"User-Agent": "Quiz-Abend-Paketpruefer/1.0"})
         try:
             with urllib.request.urlopen(anfrage, timeout=10) as antwort:
                 if antwort.status >= 400:
