@@ -111,6 +111,36 @@ CLAUDE.md entsprechend angepasst.
 - Glücksrad: alle Karten eines Spielers in seiner Farbe (`FARBEN` aus rad.js),
   dieselbe Farbe als Unterstrich in der Kandidatenliste.
 
+## Optik-Umbau (Pixel-Stil) – in Arbeit, noch nicht committet
+
+- Probe: `docs/probe.html/.js/.css`, Szenen per Code in `docs/engine/szenen.js`
+  (640×360, Licht oben links, Bayer-Dithering), Schrift `docs/schrift/` (Pixelify Sans, OFL).
+- Nutzer-Wünsche: Holz/Pergament-UI, Jahrmarkt-Rad neben Farm (Hauptmenü), pro Thema
+  eigener Hintergrund (Joker: Labor mit Fragezeichen), Tierwelt = Dschungel,
+  Antworten einheitlich mit A–D statt vier Farben.
+- Code-Szenen wirken dem Nutzer „zu perfekt“ → Plan: Hintergründe mit kostenloser
+  Bild-KI (Gemini-App / Microsoft Designer) erzeugen, mit `tools/pixel_bild.py`
+  (noch zu bauen) auf 640×360 + begrenzte Palette bringen. Rad bleibt SVG.
+- Beim Umbau der echten Seiten: Handy zeigt bei der Auflösung **eigene Antwort**
+  und **richtige Antwort** (z. B. „Deine Antwort: B – Giraffe ✗ / Richtig: D – Blauwal“).
+- Später: Avatare (LPC-Figuren vorgeschlagen, CC BY-SA → Credits nötig), laufen in
+  der Lobby, Sprechblasen mit Antworten bei der Auflösung.
+
+## Fragen-Pools erweitert (11.10.2026)
+
+- Alle 13 Themen um je 30 Fragen + 3 Stechfragen erweitert (Raumfahrt +30/+4):
+  jetzt 42–67 Fragen pro Thema und je 5 Stechfragen. Unsichere Zahlen per WebFetch
+  gegen Wikipedia geprüft, alle Links mit `validate.py --links` erreichbar.
+- Neue Prüfhilfe `tools/lecks.py` (auch Quellentitel, über alle Pakete). Damit
+  viele alte Lecks behoben (z. B. „Mauerfall 1989“/„Mondlandung 1969“ als
+  Zeitleisten-Ereignis, Everest-Höhe in `werte`, „Googol“, Blauwal/Haut/Gepard
+  in Reihenfolgen, Quellen „Scoville-Skala“/„Mojang“).
+- Doppelte Fragen über Paketgrenzen entfernt; Kartenansichten (Baikonur, Waterloo,
+  Singapur, …) starten nicht mehr an der Lösung.
+- Werkstatt-Skripte (`*2.py`, `erweitern.py`) liegen nur im Scratchpad – die Pakete
+  sind die Quelle der Wahrheit. Für den nächsten Block: `tools/prompt.md`
+  („Weiterer Block“) + `validate.py --links` + `lecks.py`.
+
 ## Nächster Schritt
 
 - Wichtig: Änderungen an `supabase/functions/themenjoker/index.ts` muss der Nutzer

@@ -170,6 +170,7 @@ Quiz_Game/
 │  ├─ prompt.md            Prompt-Vorlage, um mit NotebookLM/Claude neue Pakete zu erzeugen.
 │  ├─ validate.py          Prüft Fragenpakete (auch index.json); --links ruft Quellen-Links auf.
 │  ├─ bild_holen.py        Holt freie Bilder von Wikimedia Commons (mit Urheber + Lizenz).
+│  ├─ lecks.py            Sucht über alle Pakete, ob eine Frage die Antwort einer anderen zeigt.
 │  └─ requirements.txt     Python-Abhängigkeiten (keine Pflicht; Pillow optional für bild_holen.py).
 └─ supabase/
    ├─ schema.sql           Tabelle themenjoker_aufrufe (Limits für die KI, RLS ohne Regeln).
@@ -264,7 +265,15 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
 - **Keine Frage verrät eine andere**: weder im Fragetext („Reinheitsgebot von
   1516“, wenn 1516 Antwort einer Stechfrage ist) noch in Balken, Ereignissen der
   Zeitleiste oder `werte` einer Reihenfolge-Frage (die Auflösung ist für alle
-  sichtbar, bevor die nächste Frage kommt).
+  sichtbar, bevor die nächste Frage kommt). Das gilt **über alle Pakete**
+  hinweg (Themen wechseln im selben Spiel) und auch für den **Quellentitel**
+  (eine Quelle „Scoville-Skala“ verrät die Frage nach der Schärfe-Skala).
+  Prüfhilfe: `python tools/lecks.py` (Treffer von Hand bewerten).
+- **Keine doppelten Fragen** – auch nicht in einem anderen Paket (z. B.
+  Lichtgeschwindigkeit nur in Physik, nicht zusätzlich in Raumfahrt).
+- **Kartenfragen:** Die Startansicht (`mitte`, `zoom`) darf nicht schon auf
+  die Lösung zeigen – außer bei Fragen wie „Wo in Deutschland …?“, wo die
+  Karte bewusst das ganze Land zeigt.
 - Nur Fakten, die die Quelle **eindeutig** belegt. Bei umstrittenen oder
   schwankenden Zahlen (Gründungsjahr nach gefälschter Urkunde, „letzte Sichtung“,
   Geschwindigkeiten mit verschiedenen Messungen) lieber eine andere Frage nehmen.
