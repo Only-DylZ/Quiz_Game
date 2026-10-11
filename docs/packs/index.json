@@ -47,6 +47,10 @@
     {
       "datei": "videospiele.json",
       "thema": "Videospiele"
+    },
+    {
+      "datei": "sport.json",
+      "thema": "Sport"
     }
   ]
 }

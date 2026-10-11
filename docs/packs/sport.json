@@ -1,0 +1,590 @@
+{
+  "thema": "Sport",
+  "version": 1,
+  "beschreibung": "Fußball, Olympia, Tennis und mehr.",
+  "fragen": [
+    {
+      "id": "sport-001",
+      "modus": "auswahl",
+      "frage": "Welches Land wurde 2014 Fußball-Weltmeister?",
+      "optionen": [
+        "Brasilien",
+        "Spanien",
+        "Argentinien",
+        "Deutschland"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Fußball-Weltmeisterschaft 2014",
+        "url": "https://de.wikipedia.org/wiki/Fußball-Weltmeisterschaft_2014"
+      }
+    },
+    {
+      "id": "sport-002",
+      "modus": "auswahl",
+      "frage": "Welches Land gewann die Fußball-WM 2022 in Katar?",
+      "optionen": [
+        "Frankreich",
+        "Marokko",
+        "Kroatien",
+        "Argentinien"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Fußball-Weltmeisterschaft 2022",
+        "url": "https://de.wikipedia.org/wiki/Fußball-Weltmeisterschaft_2022"
+      }
+    },
+    {
+      "id": "sport-003",
+      "modus": "auswahl",
+      "frage": "Auf welchem Belag wird das Tennisturnier in Wimbledon gespielt?",
+      "optionen": [
+        "Sand",
+        "Hartplatz",
+        "Rasen",
+        "Teppich"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Wimbledon Championships",
+        "url": "https://de.wikipedia.org/wiki/Wimbledon_Championships"
+      }
+    },
+    {
+      "id": "sport-004",
+      "modus": "auswahl",
+      "frage": "Welche Farbe hat KEINER der olympischen Ringe?",
+      "optionen": [
+        "Schwarz",
+        "Gelb",
+        "Grün",
+        "Lila"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Olympische Ringe",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Ringe"
+      },
+      "erklaerung": "Die Ringe sind blau, gelb, schwarz, grün und rot."
+    },
+    {
+      "id": "sport-005",
+      "modus": "auswahl",
+      "frage": "Wer hält den Weltrekord im 100-Meter-Lauf der Männer?",
+      "optionen": [
+        "Carl Lewis",
+        "Justin Gatlin",
+        "Usain Bolt",
+        "Tyson Gay"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – 100-Meter-Lauf",
+        "url": "https://de.wikipedia.org/wiki/100-Meter-Lauf"
+      }
+    },
+    {
+      "id": "sport-006",
+      "modus": "auswahl",
+      "frage": "In welcher Sportart wird der Stanley Cup vergeben?",
+      "optionen": [
+        "Eishockey",
+        "Baseball",
+        "Basketball",
+        "American Football"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Stanley Cup",
+        "url": "https://de.wikipedia.org/wiki/Stanley_Cup"
+      }
+    },
+    {
+      "id": "sport-007",
+      "modus": "auswahl",
+      "frage": "Welcher deutsche Formel-1-Fahrer wurde siebenmal Weltmeister?",
+      "optionen": [
+        "Sebastian Vettel",
+        "Ralf Schumacher",
+        "Nico Rosberg",
+        "Michael Schumacher"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Michael Schumacher",
+        "url": "https://de.wikipedia.org/wiki/Michael_Schumacher"
+      }
+    },
+    {
+      "id": "sport-008",
+      "modus": "auswahl",
+      "frage": "Wo fanden die Olympischen Sommerspiele 2024 statt?",
+      "optionen": [
+        "Paris",
+        "Rom",
+        "Tokio",
+        "Los Angeles"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Olympische Sommerspiele 2024",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024"
+      }
+    },
+    {
+      "id": "sport-009",
+      "modus": "auswahl",
+      "frage": "Welche Sportart erfand James Naismith?",
+      "optionen": [
+        "Baseball",
+        "Handball",
+        "Basketball",
+        "Volleyball"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – James Naismith",
+        "url": "https://de.wikipedia.org/wiki/James_Naismith"
+      }
+    },
+    {
+      "id": "sport-010",
+      "modus": "auswahl",
+      "frage": "Wie nennt man beim Bowling drei Strikes hintereinander?",
+      "optionen": [
+        "Hattrick",
+        "Triple",
+        "Ace",
+        "Turkey"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Bowling",
+        "url": "https://de.wikipedia.org/wiki/Bowling"
+      }
+    },
+    {
+      "id": "sport-011",
+      "modus": "auswahl",
+      "frage": "Welcher Verein ist Rekordmeister der Fußball-Bundesliga?",
+      "optionen": [
+        "FC Bayern München",
+        "Borussia Dortmund",
+        "Hamburger SV",
+        "1. FC Nürnberg"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – FC Bayern München",
+        "url": "https://de.wikipedia.org/wiki/FC_Bayern_München"
+      }
+    },
+    {
+      "id": "sport-012",
+      "modus": "auswahl",
+      "frage": "Wie heißt es im Golf, wenn man ein Loch mit einem einzigen Schlag schafft?",
+      "optionen": [
+        "Birdie",
+        "Albatross",
+        "Hole-in-one",
+        "Eagle"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Hole-in-one",
+        "url": "https://de.wikipedia.org/wiki/Hole-in-one"
+      }
+    },
+    {
+      "id": "sport-013",
+      "modus": "schaetzen",
+      "frage": "Wie viele Ringe hat das olympische Symbol?",
+      "einheit": "Ringe",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Olympische Ringe",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Ringe"
+      }
+    },
+    {
+      "id": "sport-014",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist ein Marathon?",
+      "einheit": "km",
+      "loesung": 42.195,
+      "quelle": {
+        "titel": "Wikipedia – Marathonlauf",
+        "url": "https://de.wikipedia.org/wiki/Marathonlauf"
+      }
+    },
+    {
+      "id": "sport-015",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sekunden beträgt der Weltrekord der Männer über 100 Meter?",
+      "einheit": "s",
+      "loesung": 9.58,
+      "quelle": {
+        "titel": "Wikipedia – 100-Meter-Lauf",
+        "url": "https://de.wikipedia.org/wiki/100-Meter-Lauf"
+      }
+    },
+    {
+      "id": "sport-016",
+      "modus": "schaetzen",
+      "frage": "Wie breit ist ein Fußballtor?",
+      "einheit": "m",
+      "loesung": 7.32,
+      "quelle": {
+        "titel": "Wikipedia – Fußballtor",
+        "url": "https://de.wikipedia.org/wiki/Fußballtor"
+      }
+    },
+    {
+      "id": "sport-017",
+      "modus": "schaetzen",
+      "frage": "In welcher Höhe hängt ein Basketballkorb?",
+      "einheit": "m",
+      "loesung": 3.05,
+      "quelle": {
+        "titel": "Wikipedia – Basketball",
+        "url": "https://de.wikipedia.org/wiki/Basketball"
+      }
+    },
+    {
+      "id": "sport-018",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist ein Tennisnetz in der Mitte?",
+      "einheit": "cm",
+      "loesung": 91.4,
+      "quelle": {
+        "titel": "Wikipedia – Tennis",
+        "url": "https://de.wikipedia.org/wiki/Tennis"
+      }
+    },
+    {
+      "id": "sport-019",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler hat eine Rugby-Union-Mannschaft auf dem Feld?",
+      "einheit": "Spieler",
+      "loesung": 15,
+      "quelle": {
+        "titel": "Wikipedia – Rugby Union",
+        "url": "https://de.wikipedia.org/wiki/Rugby_Union"
+      }
+    },
+    {
+      "id": "sport-020",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler hat eine Volleyballmannschaft auf dem Feld?",
+      "einheit": "Spieler",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Volleyball",
+        "url": "https://de.wikipedia.org/wiki/Volleyball"
+      }
+    },
+    {
+      "id": "sport-021",
+      "modus": "schaetzen",
+      "frage": "Wie viele Löcher hat eine normale Golfrunde?",
+      "einheit": "Löcher",
+      "loesung": 18,
+      "quelle": {
+        "titel": "Wikipedia – Golf",
+        "url": "https://de.wikipedia.org/wiki/Golf"
+      }
+    },
+    {
+      "id": "sport-022",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie lang ist ein Fußballfeld laut FIFA-Empfehlung für Länderspiele?",
+      "daten": {
+        "einheit": "m",
+        "balken": [
+          {
+            "name": "Tennisplatz",
+            "wert": 23.77
+          },
+          {
+            "name": "Basketballfeld",
+            "wert": 28
+          },
+          {
+            "name": "Fußballfeld",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 105,
+      "quelle": {
+        "titel": "Wikipedia – Fußballregeln",
+        "url": "https://de.wikipedia.org/wiki/Fußballregeln"
+      }
+    },
+    {
+      "id": "sport-023",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr fanden die ersten Olympischen Spiele der Neuzeit statt?",
+      "daten": {
+        "von": 1850,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Olympia in München",
+            "jahr": 1972
+          }
+        ]
+      },
+      "loesung": 1896,
+      "quelle": {
+        "titel": "Wikipedia – Olympische Sommerspiele 1896",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_1896"
+      }
+    },
+    {
+      "id": "sport-024",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr startete die erste Saison der Fußball-Bundesliga?",
+      "daten": {
+        "von": 1900,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Wunder von Bern",
+            "jahr": 1954
+          },
+          {
+            "name": "WM-Sommermärchen in Deutschland",
+            "jahr": 2006
+          }
+        ]
+      },
+      "loesung": 1963,
+      "quelle": {
+        "titel": "Wikipedia – Fußball-Bundesliga",
+        "url": "https://de.wikipedia.org/wiki/Fußball-Bundesliga"
+      }
+    },
+    {
+      "id": "sport-025",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Olympia, der Ursprungsort der antiken Olympischen Spiele?",
+      "daten": {
+        "mitte": [
+          42,
+          15
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 37.64,
+        "lng": 21.63
+      },
+      "quelle": {
+        "titel": "Wikipedia – Olympia (Griechenland)",
+        "url": "https://de.wikipedia.org/wiki/Olympia_(Griechenland)"
+      }
+    },
+    {
+      "id": "sport-026",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Monaco mit seinem berühmten Formel-1-Stadtkurs?",
+      "daten": {
+        "mitte": [
+          48,
+          5
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 43.74,
+        "lng": 7.42
+      },
+      "quelle": {
+        "titel": "Wikipedia – Circuit de Monaco",
+        "url": "https://de.wikipedia.org/wiki/Circuit_de_Monaco"
+      }
+    },
+    {
+      "id": "sport-027",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Wimbledon?",
+      "daten": {
+        "mitte": [
+          50,
+          0
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 51.43,
+        "lng": -0.21
+      },
+      "quelle": {
+        "titel": "Wikipedia – Wimbledon (London)",
+        "url": "https://de.wikipedia.org/wiki/Wimbledon_(London)"
+      }
+    },
+    {
+      "id": "sport-028",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Bälle nach ihrer Größe!",
+      "loesung": [
+        "Basketball",
+        "Fußball",
+        "Tennisball",
+        "Golfball"
+      ],
+      "oben": "größter",
+      "unten": "kleinster",
+      "quelle": {
+        "titel": "Wikipedia – Ball",
+        "url": "https://de.wikipedia.org/wiki/Ball"
+      }
+    },
+    {
+      "id": "sport-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Laufstrecken nach ihrer Länge!",
+      "loesung": [
+        "Marathon",
+        "Halbmarathon",
+        "10.000 m",
+        "5.000 m"
+      ],
+      "oben": "längste",
+      "unten": "kürzeste",
+      "quelle": {
+        "titel": "Wikipedia – Langstreckenlauf",
+        "url": "https://de.wikipedia.org/wiki/Langstreckenlauf"
+      }
+    },
+    {
+      "id": "sport-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Grand-Slam-Turniere nach ihrem Termin im Jahr!",
+      "loesung": [
+        "Australian Open",
+        "French Open",
+        "Wimbledon",
+        "US Open"
+      ],
+      "oben": "früh im Jahr",
+      "unten": "spät im Jahr",
+      "quelle": {
+        "titel": "Wikipedia – Grand Slam (Tennis)",
+        "url": "https://de.wikipedia.org/wiki/Grand_Slam_(Tennis)"
+      }
+    },
+    {
+      "id": "sport-031",
+      "modus": "auswahl",
+      "frage": "Welcher Sportstar ist das?",
+      "optionen": [
+        "Cristiano Ronaldo",
+        "Lionel Messi",
+        "Luis Suárez",
+        "Neymar"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Lionel Messi",
+        "url": "https://de.wikipedia.org/wiki/Lionel_Messi"
+      },
+      "bild": {
+        "datei": "bilder/sport-031.jpg",
+        "urheber": "Bryan Berlin",
+        "lizenz": "CC BY-SA 4.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg"
+        }
+      }
+    },
+    {
+      "id": "sport-032",
+      "modus": "auswahl",
+      "frage": "Welcher Sportstar ist das?",
+      "optionen": [
+        "Serena Williams",
+        "Venus Williams",
+        "Naomi Osaka",
+        "Coco Gauff"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Serena Williams",
+        "url": "https://de.wikipedia.org/wiki/Serena_Williams"
+      },
+      "bild": {
+        "datei": "bilder/sport-032.jpg",
+        "urheber": "AndrewHenkelman",
+        "lizenz": "CC BY-SA 4.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Serena-Smiling-2020.png",
+          "url": "https://commons.wikimedia.org/wiki/File:Serena-Smiling-2020.png"
+        }
+      }
+    },
+    {
+      "id": "sport-033",
+      "modus": "auswahl",
+      "frage": "Welcher Sportstar ist das?",
+      "optionen": [
+        "Dirk Nowitzki",
+        "Franz Wagner",
+        "Detlef Schrempf",
+        "Dennis Schröder"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Dirk Nowitzki",
+        "url": "https://de.wikipedia.org/wiki/Dirk_Nowitzki"
+      },
+      "bild": {
+        "datei": "bilder/sport-033.jpg",
+        "urheber": "Sven Mandel",
+        "lizenz": "CC BY-SA 4.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Dirk_Nowitzki_-_2019202181209_2019-07-21_Champions_for_Charity_-_1829_-_B70I1864.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Dirk_Nowitzki_-_2019202181209_2019-07-21_Champions_for_Charity_-_1829_-_B70I1864.jpg"
+        }
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "sport-s01",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist eine Runde auf der Innenbahn einer Leichtathletik-Laufbahn?",
+      "einheit": "m",
+      "loesung": 400,
+      "quelle": {
+        "titel": "Wikipedia – Leichtathletikstadion",
+        "url": "https://de.wikipedia.org/wiki/Leichtathletikstadion"
+      }
+    },
+    {
+      "id": "sport-s02",
+      "modus": "schaetzen",
+      "frage": "Wie schwer ist die Kugel beim Kugelstoßen der Männer?",
+      "einheit": "kg",
+      "loesung": 7.26,
+      "quelle": {
+        "titel": "Wikipedia – Kugelstoßen",
+        "url": "https://de.wikipedia.org/wiki/Kugelstoßen"
+      }
+    }
+  ]
+}
