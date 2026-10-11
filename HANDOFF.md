@@ -22,19 +22,30 @@
   - Punkte: `punkteZeitleiste`, `punkteKarte`, `entfernungKm` (Haversine) in `punkte.js`.
   - Raumfahrt-Paket: alle 7 Fragen spielbar. 16 Tests grün.
 
+## Neu festgelegt: Spielregeln mit Themenrunden
+
+Mit dem Nutzer ausführlich besprochen, steht in CLAUDE.md Abschnitt 1
+(„Spielregeln“): Themenrunden à 10 Fragen, 1 GP pro Runde, Stechfrage bei
+Gleichstand, GP-Ziel einstellbar, Themenwahl per Kandidaten + Glücksrad,
+Joker pro Runde (Themenjoker = eigenes Thema via Gemini, Booster = Extra-Karte).
+Paketformat: **genau 10 Fragen + `stechfrage` (schaetzen)**. Bauphasen 3–5 in
+CLAUDE.md entsprechend angepasst.
+
 ## Nächster Schritt: Phase 3 – Werkzeuge
 
 - `tools/validate.py`: prüft Pakete auf das Format aus CLAUDE.md Abschnitt 4
+  (inkl. genau 10 Fragen + Stechfrage)
   (dieselben Regeln wie die `pruefeFrage`-Funktionen der Modi), läuft in `.venv`.
 - `tools/prompt.md`: Vorlage für NotebookLM/Claude, um neue Pakete zu erzeugen.
-- Danach ein zweites Themenpaket damit erzeugen und prüfen.
+- Raumfahrt-Paket auf 10 Fragen + Stechfrage bringen, dann weitere Pakete
+  erzeugen (mindestens ~6 für die Themenwahl).
 - **Weg für Phase 5 ist entschieden** (siehe CLAUDE.md, Phase 5): Gemini
   Flash-Lite über Supabase Edge Function, Anbieter austauschbar. Phase 3 zuerst,
   weil der Validator später auch die KI-Antworten prüfen soll.
 
 ## Danach
 
-- Phase 4 (Themenauswahl aus `packs/index.json`, Highscores), Phase 5 (Gemini).
+- Phase 4 (Themenrunden, Glücksrad, Joker), Phase 5 (Gemini + Themenjoker).
 - **Mögliche Verbesserung:** Spieler-Kennung in `sessionStorage` merken, damit
   ein Neuladen nicht alle Punkte kostet (siehe „Bekannte Grenze 2“ in CLAUDE.md).
 

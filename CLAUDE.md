@@ -37,6 +37,47 @@ ohne eigenen Server.
 Nur der Host lädt das komplette Fragenpaket. An die Handys schickt er pro Frage
 nur Fragetext, Modus und Antwortmöglichkeiten – die Lösung erst nach Zeitablauf.
 
+### Spielregeln: Themenrunden, Gewinnpunkte, Glücksrad (Ziel ab Phase 4)
+
+Mit dem Nutzer festgelegt am 11.10.2026. Der Ablauf oben (ein Paket von vorne
+bis hinten) ist der Stand von Phase 1–3; ab Phase 4 gilt:
+
+**Einstellungen des Hosts vor dem Start**
+- **GPs zum Sieg** (Gewinnpunkte), z. B. 3.
+- **Joker pro Spieler und Themenrunde** (werden jede Runde neu aufgefüllt):
+  Anzahl Themenjoker (0 oder 1 – mehr ist sinnlos) und Anzahl Booster (0 bis n).
+
+**Themenrunde**
+- Eine Themenrunde = ein Paket = **genau 10 Fragen**.
+- Punkte zählen nur innerhalb der Runde und starten jede Runde bei 0.
+- Wer in der Runde die meisten Punkte hat, bekommt **1 GP**.
+- **Gleichstand** um Platz 1 → **Stechfrage** (die `stechfrage` aus dem Paket,
+  immer Modus `schaetzen`), nur für die Gleichstand-Spieler. Näher dran gewinnt;
+  bei exakt gleicher Schätzung gewinnt, wer schneller geantwortet hat.
+- Pro Runde bekommt genau **ein** Spieler einen GP. Wer das GP-Ziel erreicht,
+  hat sofort gewonnen → Siegertreppchen (nach GPs).
+
+**Themenwahl vor jeder Runde (auch vor der ersten)**
+1. Jeder Spieler bekommt auf dem Handy **eigene 3 zufällige Themen** – nur
+   solche, die in diesem Spiel noch nicht gespielt wurden.
+2. Er wählt eines davon als **seinen Kandidaten**.
+3. **Themenjoker:** Statt der 3 Vorschläge schreibt er ein **eigenes Thema**
+   (wird mit Gemini erzeugt, siehe Phase 5 – vorher ist der Joker gesperrt).
+4. **Booster:** Jeder eingesetzte Booster legt eine **weitere Karte** seines
+   Kandidaten aufs Rad (1 Booster = 2 Karten, 2 Booster = 3 Karten).
+   Booster und Themenjoker sind kombinierbar.
+5. Der Host zeigt das **Glücksrad** mit allen Kandidaten-Karten aller Spieler.
+   Es dreht sich und bleibt **zufällig** stehen – dieses Thema wird gespielt.
+
+**Eigene Themen (Themenjoker)**
+- Fragen werden **erst erzeugt, wenn das Thema auf dem Rad gewonnen hat**
+  (spart Gemini-Aufrufe; ca. 10–30 s Wartezeit mit Anzeige).
+- Kein Host-Veto (vorerst). Trotzdem: Thementext ist Spieler-Eingabe →
+  kürzen (max. 60 Zeichen), prüfen, nur mit `textContent` anzeigen; das
+  erzeugte Paket wird vor dem Spielen gegen das Paketformat geprüft.
+- Schlägt die Erzeugung fehl (Limit, Fehler): freundliche Meldung, das Rad
+  wird ohne diese Karte noch einmal gedreht.
+
 ---
 
 ## 2. Architektur
@@ -131,7 +172,8 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
 | `thema`        | ja      | Text   | Name des Themas, z. B. `"Raumfahrt"`        |
 | `version`      | ja      | Zahl   | Formatversion, aktuell `1`                  |
 | `beschreibung` | nein    | Text   | Ein Satz zum Paket                          |
-| `fragen`       | ja      | Liste  | Mindestens 1 Frage (siehe unten)            |
+| `fragen`       | ja      | Liste  | **Genau 10 Fragen** (siehe unten)           |
+| `stechfrage`   | ja      | Objekt | Eine weitere Frage, **immer Modus `schaetzen`** – nur bei Gleichstand gespielt |
 
 ### Jede Frage (gemeinsame Felder)
 
@@ -298,12 +340,18 @@ Alles im Repo und alles im Browser-Code ist für jeden lesbar.
 1. **Grundspiel:** Host und Handy verbinden sich über einen Raumcode (Supabase
    Realtime). Modi `auswahl` und `schaetzen` spielbar, Punkte und Rangliste.
 2. **Grafik-Modus:** `balken`, `zeitleiste` (SVG) und `karte` (Leaflet).
-3. **Werkzeuge:** Python-Validator (`validate.py`) und Hilfen zum Erzeugen von Paketen.
-4. **Komfort:** Themenauswahl aus `packs/index.json` und gespeicherte Highscores.
-5. **Live-Themen mit Gemini:** Der Host (später evtl. per Abstimmung der Spieler)
-   gibt ein Thema ein, eine Supabase Edge Function erzeugt mit der Gemini API
-   ein Paket im normalen Format. Das nächste Thema wird schon während der
-   laufenden Runde erzeugt (dauert ca. 10–30 s). Strikt nach Abschnitt 6a und 6b:
+3. **Werkzeuge:** Python-Validator (`validate.py`, prüft auch „genau 10 Fragen +
+   Stechfrage“), `prompt.md` zum Erzeugen von Paketen, Raumfahrt-Paket auf
+   10 + Stechfrage bringen, weitere Pakete (mindestens ~6, damit jeder Spieler
+   3 Themen zur Wahl hat).
+4. **Themenrunden** (Regeln siehe Abschnitt 1, „Spielregeln“):
+   4a Runden, GPs, Siegziel, Stechfrage · 4b Kandidatenwahl + Glücksrad
+   (Themen aus `packs/index.json`) · 4c Booster-Joker.
+   Gespeicherte Highscores: später, falls gewünscht.
+5. **Live-Themen mit Gemini:** Ein Spieler gibt per **Themenjoker** ein eigenes
+   Thema ein, eine Supabase Edge Function erzeugt mit der Gemini API
+   ein Paket im normalen Format (10 Fragen + Stechfrage) – erst, sobald das
+   Thema auf dem Glücksrad gewonnen hat (dauert ca. 10–30 s). Strikt nach Abschnitt 6a und 6b:
    Key nur als Supabase-Secret, Aufrufe begrenzt, Antwort validiert, nur
    Gratis-Tarif ohne Billing. KI-Fragen können Fehler enthalten – Quelle
    immer mit anzeigen.
