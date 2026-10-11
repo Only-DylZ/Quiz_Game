@@ -23,6 +23,10 @@
     {
       "datei": "chemie.json",
       "thema": "Chemie"
+    },
+    {
+      "datei": "physik.json",
+      "thema": "Physik"
     }
   ]
 }

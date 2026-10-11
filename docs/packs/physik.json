@@ -1,0 +1,517 @@
+{
+  "thema": "Physik",
+  "version": 1,
+  "beschreibung": "Kräfte, Licht, Energie und berühmte Entdeckungen.",
+  "fragen": [
+    {
+      "id": "phys-001",
+      "modus": "auswahl",
+      "frage": "In welcher Einheit misst man Kraft?",
+      "optionen": [
+        "Watt",
+        "Newton",
+        "Pascal",
+        "Joule"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Newton (Einheit)",
+        "url": "https://de.wikipedia.org/wiki/Newton_(Einheit)"
+      }
+    },
+    {
+      "id": "phys-002",
+      "modus": "auswahl",
+      "frage": "Wer entwickelte die Relativitätstheorie?",
+      "optionen": [
+        "Albert Einstein",
+        "Isaac Newton",
+        "Max Planck",
+        "Niels Bohr"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Albert Einstein",
+        "url": "https://de.wikipedia.org/wiki/Albert_Einstein"
+      }
+    },
+    {
+      "id": "phys-003",
+      "modus": "auswahl",
+      "frage": "Was kann sich im Vakuum NICHT ausbreiten?",
+      "optionen": [
+        "Radiowellen",
+        "Röntgenstrahlung",
+        "Licht",
+        "Schall"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Schall",
+        "url": "https://de.wikipedia.org/wiki/Schall"
+      },
+      "erklaerung": "Schall braucht Teilchen (z. B. Luft), die schwingen können."
+    },
+    {
+      "id": "phys-004",
+      "modus": "auswahl",
+      "frage": "Welche Farbe hat sichtbares Licht mit der größten Wellenlänge?",
+      "optionen": [
+        "Grün",
+        "Rot",
+        "Blau",
+        "Violett"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Licht",
+        "url": "https://de.wikipedia.org/wiki/Licht"
+      }
+    },
+    {
+      "id": "phys-005",
+      "modus": "auswahl",
+      "frage": "In welcher Einheit misst man den elektrischen Widerstand?",
+      "optionen": [
+        "Ampere",
+        "Volt",
+        "Ohm",
+        "Watt"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Elektrischer Widerstand",
+        "url": "https://de.wikipedia.org/wiki/Elektrischer_Widerstand"
+      }
+    },
+    {
+      "id": "phys-006",
+      "modus": "auswahl",
+      "frage": "Welches Teilchen ist negativ geladen?",
+      "optionen": [
+        "Photon",
+        "Elektron",
+        "Proton",
+        "Neutron"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Elektron",
+        "url": "https://de.wikipedia.org/wiki/Elektron"
+      }
+    },
+    {
+      "id": "phys-007",
+      "modus": "auswahl",
+      "frage": "Welche Kraft hält den Mond auf seiner Bahn um die Erde?",
+      "optionen": [
+        "Gravitation",
+        "Reibung",
+        "Magnetismus",
+        "Elektrische Kraft"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Gravitation",
+        "url": "https://de.wikipedia.org/wiki/Gravitation"
+      }
+    },
+    {
+      "id": "phys-008",
+      "modus": "auswahl",
+      "frage": "Warum ist der Himmel blau?",
+      "optionen": [
+        "Blaues Licht wird stärker gestreut",
+        "Das Meer spiegelt sich",
+        "Die Ozonschicht ist blau",
+        "Wasserdampf färbt das Licht"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Rayleigh-Streuung",
+        "url": "https://de.wikipedia.org/wiki/Rayleigh-Streuung"
+      }
+    },
+    {
+      "id": "phys-009",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Teilchen des Lichts?",
+      "optionen": [
+        "Gluon",
+        "Elektron",
+        "Neutrino",
+        "Photon"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Photon",
+        "url": "https://de.wikipedia.org/wiki/Photon"
+      }
+    },
+    {
+      "id": "phys-010",
+      "modus": "auswahl",
+      "frage": "Was misst ein Barometer?",
+      "optionen": [
+        "Luftdruck",
+        "Windgeschwindigkeit",
+        "Temperatur",
+        "Luftfeuchtigkeit"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Barometer",
+        "url": "https://de.wikipedia.org/wiki/Barometer"
+      }
+    },
+    {
+      "id": "phys-011",
+      "modus": "auswahl",
+      "frage": "Nach wem ist die Temperatureinheit Kelvin benannt?",
+      "optionen": [
+        "Anders Celsius",
+        "James Watt",
+        "Daniel Fahrenheit",
+        "Lord Kelvin (William Thomson)"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – William Thomson, 1. Baron Kelvin",
+        "url": "https://de.wikipedia.org/wiki/William_Thomson,_1._Baron_Kelvin"
+      }
+    },
+    {
+      "id": "phys-012",
+      "modus": "auswahl",
+      "frage": "Was passiert mit Wasser, wenn es zu Eis gefriert?",
+      "optionen": [
+        "Es zieht sich zusammen",
+        "Sein Volumen bleibt gleich",
+        "Es dehnt sich aus",
+        "Es wird schwerer"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Dichteanomalie",
+        "url": "https://de.wikipedia.org/wiki/Dichteanomalie"
+      },
+      "erklaerung": "Deshalb schwimmt Eis – und Flaschen im Gefrierfach platzen."
+    },
+    {
+      "id": "phys-013",
+      "modus": "schaetzen",
+      "frage": "Wie schnell ist Licht im Vakuum?",
+      "einheit": "km/s",
+      "loesung": 299792,
+      "quelle": {
+        "titel": "Wikipedia – Lichtgeschwindigkeit",
+        "url": "https://de.wikipedia.org/wiki/Lichtgeschwindigkeit"
+      }
+    },
+    {
+      "id": "phys-014",
+      "modus": "schaetzen",
+      "frage": "Wie viele Meter fällt ein Gegenstand ohne Luftwiderstand in der ersten Sekunde?",
+      "einheit": "m",
+      "loesung": 4.9,
+      "quelle": {
+        "titel": "Wikipedia – Freier Fall",
+        "url": "https://de.wikipedia.org/wiki/Freier_Fall"
+      }
+    },
+    {
+      "id": "phys-015",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist die Erdbeschleunigung?",
+      "einheit": "m/s²",
+      "loesung": 9.81,
+      "quelle": {
+        "titel": "Wikipedia – Schwerefeld",
+        "url": "https://de.wikipedia.org/wiki/Schwerefeld"
+      }
+    },
+    {
+      "id": "phys-016",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten braucht das Sonnenlicht bis zur Erde?",
+      "einheit": "Minuten",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Sonne",
+        "url": "https://de.wikipedia.org/wiki/Sonne"
+      },
+      "erklaerung": "Genauer: etwa 8 Minuten und 20 Sekunden."
+    },
+    {
+      "id": "phys-017",
+      "modus": "schaetzen",
+      "frage": "Wie viel Volt liefert eine Haushaltssteckdose in Deutschland?",
+      "einheit": "Volt",
+      "loesung": 230,
+      "quelle": {
+        "titel": "Wikipedia – Netzspannung",
+        "url": "https://de.wikipedia.org/wiki/Netzspannung"
+      }
+    },
+    {
+      "id": "phys-018",
+      "modus": "schaetzen",
+      "frage": "Mit welcher Frequenz schwingt der Wechselstrom im europäischen Stromnetz?",
+      "einheit": "Hz",
+      "loesung": 50,
+      "quelle": {
+        "titel": "Wikipedia – Netzfrequenz",
+        "url": "https://de.wikipedia.org/wiki/Netzfrequenz"
+      }
+    },
+    {
+      "id": "phys-019",
+      "modus": "schaetzen",
+      "frage": "Wie viel Grad Fahrenheit sind 100 Grad Celsius?",
+      "einheit": "°F",
+      "loesung": 212,
+      "quelle": {
+        "titel": "Wikipedia – Grad Fahrenheit",
+        "url": "https://de.wikipedia.org/wiki/Grad_Fahrenheit"
+      }
+    },
+    {
+      "id": "phys-020",
+      "modus": "schaetzen",
+      "frage": "Wie viele Joule sind eine Kilowattstunde?",
+      "einheit": "Joule",
+      "loesung": 3600000,
+      "quelle": {
+        "titel": "Wikipedia – Kilowattstunde",
+        "url": "https://de.wikipedia.org/wiki/Kilowattstunde"
+      }
+    },
+    {
+      "id": "phys-021",
+      "modus": "schaetzen",
+      "frage": "Wie weit ist ein Lichtjahr?",
+      "einheit": "Billionen km",
+      "loesung": 9.46,
+      "quelle": {
+        "titel": "Wikipedia – Lichtjahr",
+        "url": "https://de.wikipedia.org/wiki/Lichtjahr"
+      }
+    },
+    {
+      "id": "phys-022",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie schnell breitet sich Schall in Wasser aus?",
+      "daten": {
+        "einheit": "m/s",
+        "balken": [
+          {
+            "name": "Luft",
+            "wert": 343
+          },
+          {
+            "name": "Wasser",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 1484,
+      "quelle": {
+        "titel": "Wikipedia – Schallgeschwindigkeit",
+        "url": "https://de.wikipedia.org/wiki/Schallgeschwindigkeit"
+      }
+    },
+    {
+      "id": "phys-023",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo steht das CERN mit dem größten Teilchenbeschleuniger der Welt?",
+      "daten": {
+        "mitte": [
+          50,
+          0
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 46.23,
+        "lng": 6.05
+      },
+      "quelle": {
+        "titel": "Wikipedia – CERN",
+        "url": "https://de.wikipedia.org/wiki/CERN"
+      }
+    },
+    {
+      "id": "phys-024",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "In welcher Stadt arbeitete Albert Einstein im Patentamt?",
+      "daten": {
+        "mitte": [
+          50,
+          0
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 46.95,
+        "lng": 7.45
+      },
+      "quelle": {
+        "titel": "Wikipedia – Albert Einstein",
+        "url": "https://de.wikipedia.org/wiki/Albert_Einstein"
+      }
+    },
+    {
+      "id": "phys-025",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr veröffentlichte Einstein die Spezielle Relativitätstheorie?",
+      "daten": {
+        "von": 1850,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Entdeckung der Röntgenstrahlen",
+            "jahr": 1895
+          },
+          {
+            "name": "Erste Kernspaltung",
+            "jahr": 1938
+          }
+        ]
+      },
+      "loesung": 1905,
+      "quelle": {
+        "titel": "Wikipedia – Spezielle Relativitätstheorie",
+        "url": "https://de.wikipedia.org/wiki/Spezielle_Relativitätstheorie"
+      }
+    },
+    {
+      "id": "phys-026",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien Newtons Hauptwerk „Principia“ mit dem Gravitationsgesetz?",
+      "daten": {
+        "von": 1500,
+        "bis": 1800,
+        "ereignisse": [
+          {
+            "name": "Galilei richtet sein Fernrohr auf den Himmel",
+            "jahr": 1609
+          },
+          {
+            "name": "Watts Dampfmaschinen-Patent",
+            "jahr": 1769
+          }
+        ]
+      },
+      "loesung": 1687,
+      "quelle": {
+        "titel": "Wikipedia – Philosophiae Naturalis Principia Mathematica",
+        "url": "https://de.wikipedia.org/wiki/Philosophiae_Naturalis_Principia_Mathematica"
+      }
+    },
+    {
+      "id": "phys-027",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde am CERN das Higgs-Boson nachgewiesen?",
+      "daten": {
+        "von": 1950,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste Mondlandung",
+            "jahr": 1969
+          },
+          {
+            "name": "Erste Messung von Gravitationswellen",
+            "jahr": 2015
+          }
+        ]
+      },
+      "loesung": 2012,
+      "quelle": {
+        "titel": "Wikipedia – Higgs-Boson",
+        "url": "https://de.wikipedia.org/wiki/Higgs-Boson"
+      }
+    },
+    {
+      "id": "phys-028",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Wellenlänge!",
+      "loesung": [
+        "Radiowellen",
+        "Mikrowellen",
+        "Sichtbares Licht",
+        "Röntgenstrahlung"
+      ],
+      "oben": "längste",
+      "unten": "kürzeste",
+      "quelle": {
+        "titel": "Wikipedia – Elektromagnetisches Spektrum",
+        "url": "https://de.wikipedia.org/wiki/Elektromagnetisches_Spektrum"
+      }
+    },
+    {
+      "id": "phys-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Geschwindigkeit!",
+      "loesung": [
+        "Licht im Vakuum",
+        "Erde auf ihrer Bahn um die Sonne",
+        "Raumstation ISS",
+        "Schall in Luft"
+      ],
+      "oben": "schnellstes",
+      "unten": "langsamstes",
+      "quelle": {
+        "titel": "Wikipedia – Geschwindigkeit",
+        "url": "https://de.wikipedia.org/wiki/Geschwindigkeit"
+      }
+    },
+    {
+      "id": "phys-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Temperatur!",
+      "loesung": [
+        "Sonnenoberfläche",
+        "Lava",
+        "Kochendes Wasser",
+        "Körpertemperatur"
+      ],
+      "oben": "heißestes",
+      "unten": "kältestes",
+      "quelle": {
+        "titel": "Wikipedia – Temperatur",
+        "url": "https://de.wikipedia.org/wiki/Temperatur"
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "phys-s01",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Celsius hat Wasser seine größte Dichte?",
+      "einheit": "°C",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Dichteanomalie",
+        "url": "https://de.wikipedia.org/wiki/Dichteanomalie"
+      }
+    },
+    {
+      "id": "phys-s02",
+      "modus": "schaetzen",
+      "frage": "Wie viele Pascal beträgt der Normaldruck der Atmosphäre?",
+      "einheit": "Pa",
+      "loesung": 101325,
+      "quelle": {
+        "titel": "Wikipedia – Normdruck",
+        "url": "https://de.wikipedia.org/wiki/Normdruck"
+      }
+    }
+  ]
+}
