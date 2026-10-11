@@ -1,0 +1,522 @@
+{
+  "thema": "Videospiele",
+  "version": 1,
+  "beschreibung": "Klassiker, Konsolen und Kultfiguren.",
+  "fragen": [
+    {
+      "id": "game-001",
+      "modus": "auswahl",
+      "frage": "Wie heißt der berühmte Klempner von Nintendo mit roter Mütze?",
+      "optionen": [
+        "Mario",
+        "Luigi",
+        "Toad",
+        "Wario"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Mario (Computerspielfigur)",
+        "url": "https://de.wikipedia.org/wiki/Mario_(Computerspielfigur)"
+      }
+    },
+    {
+      "id": "game-002",
+      "modus": "auswahl",
+      "frage": "Welches Studio hat Minecraft ursprünglich entwickelt?",
+      "optionen": [
+        "Valve",
+        "Microsoft",
+        "Mojang",
+        "Ubisoft"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Mojang Studios",
+        "url": "https://de.wikipedia.org/wiki/Mojang_Studios"
+      }
+    },
+    {
+      "id": "game-003",
+      "modus": "auswahl",
+      "frage": "Welches Pokémon hat im Pokédex die Nummer 25?",
+      "optionen": [
+        "Bisasam",
+        "Evoli",
+        "Pikachu",
+        "Glumanda"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Pikachu",
+        "url": "https://de.wikipedia.org/wiki/Pikachu"
+      }
+    },
+    {
+      "id": "game-004",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Held in „The Legend of Zelda“?",
+      "optionen": [
+        "Link",
+        "Zelda",
+        "Ganon",
+        "Epona"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Link (Computerspielfigur)",
+        "url": "https://de.wikipedia.org/wiki/Link_(Computerspielfigur)"
+      }
+    },
+    {
+      "id": "game-005",
+      "modus": "auswahl",
+      "frage": "Wer erfand das Spiel Tetris?",
+      "optionen": [
+        "Hideo Kojima",
+        "Alexei Paschitnow",
+        "Shigeru Miyamoto",
+        "Markus Persson"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Tetris",
+        "url": "https://de.wikipedia.org/wiki/Tetris"
+      }
+    },
+    {
+      "id": "game-006",
+      "modus": "auswahl",
+      "frage": "Wie heißt der blaue Igel von SEGA?",
+      "optionen": [
+        "Knuckles",
+        "Shadow",
+        "Sonic",
+        "Tails"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Sonic the Hedgehog",
+        "url": "https://de.wikipedia.org/wiki/Sonic_the_Hedgehog"
+      }
+    },
+    {
+      "id": "game-007",
+      "modus": "auswahl",
+      "frage": "In welchem Spiel kämpft man um den „Victory Royale“?",
+      "optionen": [
+        "PUBG",
+        "Fortnite",
+        "Apex Legends",
+        "Call of Duty: Warzone"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Fortnite",
+        "url": "https://de.wikipedia.org/wiki/Fortnite"
+      }
+    },
+    {
+      "id": "game-008",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land kommt das Studio CD Projekt, Entwickler von „The Witcher 3“?",
+      "optionen": [
+        "Polen",
+        "Tschechien",
+        "Ukraine",
+        "Ungarn"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – CD Projekt",
+        "url": "https://de.wikipedia.org/wiki/CD_Projekt"
+      }
+    },
+    {
+      "id": "game-009",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Schildkröten-König, der immer wieder Prinzessin Peach entführt?",
+      "optionen": [
+        "King K. Rool",
+        "Ganon",
+        "Bowser",
+        "Dr. Eggman"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Bowser",
+        "url": "https://de.wikipedia.org/wiki/Bowser"
+      }
+    },
+    {
+      "id": "game-010",
+      "modus": "auswahl",
+      "frage": "In welchem Spiel erkundet man die Stadt Los Santos?",
+      "optionen": [
+        "Grand Theft Auto V",
+        "Saints Row",
+        "Mafia",
+        "Watch Dogs"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Grand Theft Auto V",
+        "url": "https://de.wikipedia.org/wiki/Grand_Theft_Auto_V"
+      }
+    },
+    {
+      "id": "game-011",
+      "modus": "auswahl",
+      "frage": "Wie heißen in „Among Us“ die Spieler, die heimlich sabotieren?",
+      "optionen": [
+        "Impostor",
+        "Phantom",
+        "Creeper",
+        "Crewmate"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Among Us",
+        "url": "https://de.wikipedia.org/wiki/Among_Us"
+      }
+    },
+    {
+      "id": "game-012",
+      "modus": "auswahl",
+      "frage": "Welche Farbe hat Pac-Man?",
+      "optionen": [
+        "Blau",
+        "Gelb",
+        "Rot",
+        "Grün"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Pac-Man",
+        "url": "https://de.wikipedia.org/wiki/Pac-Man"
+      }
+    },
+    {
+      "id": "game-013",
+      "modus": "schaetzen",
+      "frage": "Wie viele Pokémon gab es in der ersten Generation?",
+      "einheit": "Pokémon",
+      "loesung": 151,
+      "quelle": {
+        "titel": "Wikipedia – Pokémon",
+        "url": "https://de.wikipedia.org/wiki/Pokémon"
+      }
+    },
+    {
+      "id": "game-014",
+      "modus": "schaetzen",
+      "frage": "Wie viele Blöcke breit ist das Spielfeld bei Tetris?",
+      "einheit": "Blöcke",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Tetris",
+        "url": "https://de.wikipedia.org/wiki/Tetris"
+      }
+    },
+    {
+      "id": "game-015",
+      "modus": "schaetzen",
+      "frage": "Wie viele Geister jagen Pac-Man?",
+      "einheit": "Geister",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Pac-Man",
+        "url": "https://de.wikipedia.org/wiki/Pac-Man"
+      }
+    },
+    {
+      "id": "game-016",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler starten in einer klassischen Fortnite-Battle-Royale-Runde?",
+      "einheit": "Spieler",
+      "loesung": 100,
+      "quelle": {
+        "titel": "Wikipedia – Fortnite",
+        "url": "https://de.wikipedia.org/wiki/Fortnite"
+      }
+    },
+    {
+      "id": "game-017",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler können höchstens in einer Runde „Among Us“ mitspielen?",
+      "einheit": "Spieler",
+      "loesung": 15,
+      "quelle": {
+        "titel": "Wikipedia – Among Us",
+        "url": "https://de.wikipedia.org/wiki/Among_Us"
+      }
+    },
+    {
+      "id": "game-018",
+      "modus": "schaetzen",
+      "frage": "Wie viele Herzen hat die volle Lebensleiste in Minecraft?",
+      "einheit": "Herzen",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      }
+    },
+    {
+      "id": "game-019",
+      "modus": "schaetzen",
+      "frage": "Wie viele Pixel breit ist der Bildschirm des ersten Game Boy?",
+      "einheit": "Pixel",
+      "loesung": 160,
+      "quelle": {
+        "titel": "Wikipedia – Game Boy",
+        "url": "https://de.wikipedia.org/wiki/Game_Boy"
+      }
+    },
+    {
+      "id": "game-020",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bit hatte die Konsole Super Nintendo (SNES)?",
+      "einheit": "Bit",
+      "loesung": 16,
+      "quelle": {
+        "titel": "Wikipedia – Super Nintendo Entertainment System",
+        "url": "https://de.wikipedia.org/wiki/Super_Nintendo_Entertainment_System"
+      }
+    },
+    {
+      "id": "game-021",
+      "modus": "schaetzen",
+      "frage": "Mit wie vielen Figuren beginnt jeder Spieler eine Schachpartie?",
+      "einheit": "Figuren",
+      "loesung": 16,
+      "quelle": {
+        "titel": "Wikipedia – Schach",
+        "url": "https://de.wikipedia.org/wiki/Schach"
+      }
+    },
+    {
+      "id": "game-022",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien das Automatenspiel „Pong“?",
+      "daten": {
+        "von": 1950,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Erste Mondlandung",
+            "jahr": 1969
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1972,
+      "quelle": {
+        "titel": "Wikipedia – Pong",
+        "url": "https://de.wikipedia.org/wiki/Pong"
+      }
+    },
+    {
+      "id": "game-023",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien die Vollversion von Minecraft?",
+      "daten": {
+        "von": 1990,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste PlayStation",
+            "jahr": 1994
+          },
+          {
+            "name": "Nintendo Switch",
+            "jahr": 2017
+          }
+        ]
+      },
+      "loesung": 2011,
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      }
+    },
+    {
+      "id": "game-024",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschienen die ersten Pokémon-Spiele (Rot und Grün) in Japan?",
+      "daten": {
+        "von": 1980,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          },
+          {
+            "name": "World of Warcraft",
+            "jahr": 2004
+          }
+        ]
+      },
+      "loesung": 1996,
+      "quelle": {
+        "titel": "Wikipedia – Pokémon Rote und Blaue Edition",
+        "url": "https://de.wikipedia.org/wiki/Pokémon_Rote_und_Blaue_Edition"
+      }
+    },
+    {
+      "id": "game-025",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "In welcher Stadt hat Nintendo seinen Hauptsitz?",
+      "daten": {
+        "mitte": [
+          35,
+          125
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 34.97,
+        "lng": 135.76
+      },
+      "quelle": {
+        "titel": "Wikipedia – Nintendo",
+        "url": "https://de.wikipedia.org/wiki/Nintendo"
+      }
+    },
+    {
+      "id": "game-026",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "In welcher Stadt findet die Spielemesse Gamescom statt?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 50.94,
+        "lng": 6.96
+      },
+      "quelle": {
+        "titel": "Wikipedia – Gamescom",
+        "url": "https://de.wikipedia.org/wiki/Gamescom"
+      }
+    },
+    {
+      "id": "game-027",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Redmond, der Firmensitz von Microsoft (Xbox)?",
+      "daten": {
+        "mitte": [
+          40,
+          -100
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 47.67,
+        "lng": -122.12
+      },
+      "quelle": {
+        "titel": "Wikipedia – Redmond (Washington)",
+        "url": "https://de.wikipedia.org/wiki/Redmond_(Washington)"
+      }
+    },
+    {
+      "id": "game-028",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Konsolen nach ihrem Erscheinungsjahr!",
+      "loesung": [
+        "Atari 2600",
+        "NES",
+        "PlayStation",
+        "Nintendo Switch"
+      ],
+      "oben": "älteste",
+      "unten": "neueste",
+      "werte": [
+        "1977",
+        "1983",
+        "1994",
+        "2017"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Spielkonsole",
+        "url": "https://de.wikipedia.org/wiki/Spielkonsole"
+      }
+    },
+    {
+      "id": "game-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Entwicklungsstufen dieses Pokémon!",
+      "loesung": [
+        "Glumanda",
+        "Glutexo",
+        "Glurak"
+      ],
+      "oben": "Basis",
+      "unten": "Endstufe",
+      "quelle": {
+        "titel": "Wikipedia – Glurak",
+        "url": "https://de.wikipedia.org/wiki/Glurak"
+      }
+    },
+    {
+      "id": "game-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Spiele nach ihrem Erscheinungsjahr!",
+      "loesung": [
+        "Pac-Man",
+        "Tetris",
+        "Doom",
+        "Fortnite"
+      ],
+      "oben": "ältestes",
+      "unten": "neuestes",
+      "werte": [
+        "1980",
+        "1984",
+        "1993",
+        "2017"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Geschichte der Videospiele",
+        "url": "https://de.wikipedia.org/wiki/Geschichte_der_Videospiele"
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "game-s01",
+      "modus": "schaetzen",
+      "frage": "Wie viele Felder hat ein Monopoly-Spielbrett?",
+      "einheit": "Felder",
+      "loesung": 40,
+      "quelle": {
+        "titel": "Wikipedia – Monopoly",
+        "url": "https://de.wikipedia.org/wiki/Monopoly"
+      }
+    },
+    {
+      "id": "game-s02",
+      "modus": "schaetzen",
+      "frage": "Wie viele Pixel hoch ist der Bildschirm des ersten Game Boy?",
+      "einheit": "Pixel",
+      "loesung": 144,
+      "quelle": {
+        "titel": "Wikipedia – Game Boy",
+        "url": "https://de.wikipedia.org/wiki/Game_Boy"
+      }
+    }
+  ]
+}

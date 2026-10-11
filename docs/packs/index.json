@@ -43,6 +43,10 @@
     {
       "datei": "filme-serien.json",
       "thema": "Filme & Serien"
+    },
+    {
+      "datei": "videospiele.json",
+      "thema": "Videospiele"
     }
   ]
 }
