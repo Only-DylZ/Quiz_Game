@@ -1,0 +1,578 @@
+{
+  "thema": "Chemie",
+  "version": 1,
+  "beschreibung": "Elemente, Stoffe und Reaktionen.",
+  "fragen": [
+    {
+      "id": "chem-001",
+      "modus": "auswahl",
+      "frage": "Welches chemische Symbol hat Gold?",
+      "optionen": [
+        "Gd",
+        "Ag",
+        "Go",
+        "Au"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Gold",
+        "url": "https://de.wikipedia.org/wiki/Gold"
+      }
+    },
+    {
+      "id": "chem-002",
+      "modus": "auswahl",
+      "frage": "Für welches Element steht das Symbol Na?",
+      "optionen": [
+        "Natrium",
+        "Nickel",
+        "Stickstoff",
+        "Neon"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Natrium",
+        "url": "https://de.wikipedia.org/wiki/Natrium"
+      }
+    },
+    {
+      "id": "chem-003",
+      "modus": "auswahl",
+      "frage": "Welches Gas macht den größten Teil unserer Luft aus?",
+      "optionen": [
+        "Argon",
+        "Sauerstoff",
+        "Stickstoff",
+        "Kohlendioxid"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Luft",
+        "url": "https://de.wikipedia.org/wiki/Luft"
+      }
+    },
+    {
+      "id": "chem-004",
+      "modus": "auswahl",
+      "frage": "Welches Element hat die Ordnungszahl 1?",
+      "optionen": [
+        "Lithium",
+        "Helium",
+        "Wasserstoff",
+        "Sauerstoff"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Wasserstoff",
+        "url": "https://de.wikipedia.org/wiki/Wasserstoff"
+      }
+    },
+    {
+      "id": "chem-005",
+      "modus": "auswahl",
+      "frage": "Welcher pH-Wert gilt als neutral?",
+      "optionen": [
+        "10",
+        "0",
+        "14",
+        "7"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – PH-Wert",
+        "url": "https://de.wikipedia.org/wiki/PH-Wert"
+      }
+    },
+    {
+      "id": "chem-006",
+      "modus": "auswahl",
+      "frage": "Wer stellte das erste Periodensystem der Elemente auf (zeitgleich mit Lothar Meyer)?",
+      "optionen": [
+        "Marie Curie",
+        "Dmitri Mendelejew",
+        "Niels Bohr",
+        "Antoine Lavoisier"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Dmitri Mendelejew",
+        "url": "https://de.wikipedia.org/wiki/Dmitri_Mendelejew"
+      }
+    },
+    {
+      "id": "chem-007",
+      "modus": "auswahl",
+      "frage": "Welches Metall ist bei Raumtemperatur flüssig?",
+      "optionen": [
+        "Quecksilber",
+        "Zinn",
+        "Blei",
+        "Zink"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Quecksilber",
+        "url": "https://de.wikipedia.org/wiki/Quecksilber"
+      }
+    },
+    {
+      "id": "chem-008",
+      "modus": "auswahl",
+      "frage": "Wie lautet die chemische Formel von Kochsalz?",
+      "optionen": [
+        "KCl",
+        "NaOH",
+        "CaCO₃",
+        "NaCl"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Natriumchlorid",
+        "url": "https://de.wikipedia.org/wiki/Natriumchlorid"
+      }
+    },
+    {
+      "id": "chem-009",
+      "modus": "auswahl",
+      "frage": "Welches ist das härteste natürliche Material?",
+      "optionen": [
+        "Quarz",
+        "Korund",
+        "Diamant",
+        "Granit"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Diamant",
+        "url": "https://de.wikipedia.org/wiki/Diamant"
+      }
+    },
+    {
+      "id": "chem-010",
+      "modus": "auswahl",
+      "frage": "Aus welchem Element bestehen Diamanten?",
+      "optionen": [
+        "Kohlenstoff",
+        "Silicium",
+        "Stickstoff",
+        "Bor"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Diamant",
+        "url": "https://de.wikipedia.org/wiki/Diamant"
+      }
+    },
+    {
+      "id": "chem-011",
+      "modus": "auswahl",
+      "frage": "Welche Wissenschaftlerin erhielt als erster Mensch zwei Nobelpreise?",
+      "optionen": [
+        "Marie Curie",
+        "Lise Meitner",
+        "Rosalind Franklin",
+        "Dorothy Hodgkin"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Marie Curie",
+        "url": "https://de.wikipedia.org/wiki/Marie_Curie"
+      }
+    },
+    {
+      "id": "chem-012",
+      "modus": "auswahl",
+      "frage": "Wie nennt man den Übergang von fest direkt zu gasförmig?",
+      "optionen": [
+        "Verdampfen",
+        "Resublimation",
+        "Sublimation",
+        "Kondensation"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Sublimation (Phasenübergang)",
+        "url": "https://de.wikipedia.org/wiki/Sublimation_(Phasenübergang)"
+      }
+    },
+    {
+      "id": "chem-013",
+      "modus": "schaetzen",
+      "frage": "Wie viele Elemente umfasst das Periodensystem heute?",
+      "einheit": "Elemente",
+      "loesung": 118,
+      "quelle": {
+        "titel": "Wikipedia – Periodensystem",
+        "url": "https://de.wikipedia.org/wiki/Periodensystem"
+      }
+    },
+    {
+      "id": "chem-014",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Kelvin siedet Wasser (bei Normaldruck)?",
+      "einheit": "K",
+      "loesung": 373,
+      "quelle": {
+        "titel": "Wikipedia – Wasser",
+        "url": "https://de.wikipedia.org/wiki/Wasser"
+      }
+    },
+    {
+      "id": "chem-015",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Celsius liegt der absolute Nullpunkt?",
+      "einheit": "°C",
+      "loesung": -273,
+      "quelle": {
+        "titel": "Wikipedia – Absoluter Nullpunkt",
+        "url": "https://de.wikipedia.org/wiki/Absoluter_Nullpunkt"
+      }
+    },
+    {
+      "id": "chem-016",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Celsius schmilzt Eisen?",
+      "einheit": "°C",
+      "loesung": 1538,
+      "quelle": {
+        "titel": "Wikipedia – Eisen",
+        "url": "https://de.wikipedia.org/wiki/Eisen"
+      }
+    },
+    {
+      "id": "chem-017",
+      "modus": "schaetzen",
+      "frage": "Wie dicht ist Gold? (Wasser hat 1 g/cm³)",
+      "einheit": "g/cm³",
+      "loesung": 19.3,
+      "quelle": {
+        "titel": "Wikipedia – Gold",
+        "url": "https://de.wikipedia.org/wiki/Gold"
+      }
+    },
+    {
+      "id": "chem-018",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent der Luft sind Sauerstoff?",
+      "einheit": "%",
+      "loesung": 21,
+      "quelle": {
+        "titel": "Wikipedia – Luft",
+        "url": "https://de.wikipedia.org/wiki/Luft"
+      }
+    },
+    {
+      "id": "chem-019",
+      "modus": "schaetzen",
+      "frage": "Welche Ordnungszahl hat Gold im Periodensystem?",
+      "einheit": "",
+      "loesung": 79,
+      "quelle": {
+        "titel": "Wikipedia – Gold",
+        "url": "https://de.wikipedia.org/wiki/Gold"
+      }
+    },
+    {
+      "id": "chem-020",
+      "modus": "schaetzen",
+      "frage": "Wie viele Wasserstoffatome hat ein Methanmolekül?",
+      "einheit": "Atome",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Methan",
+        "url": "https://de.wikipedia.org/wiki/Methan"
+      }
+    },
+    {
+      "id": "chem-021",
+      "modus": "schaetzen",
+      "frage": "Wie viel Karat hat reines Gold?",
+      "einheit": "Karat",
+      "loesung": 24,
+      "quelle": {
+        "titel": "Wikipedia – Feingehalt",
+        "url": "https://de.wikipedia.org/wiki/Feingehalt"
+      }
+    },
+    {
+      "id": "chem-022",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Bei wie viel Grad Celsius schmilzt Wolfram – das Metall mit dem höchsten Schmelzpunkt?",
+      "daten": {
+        "einheit": "°C",
+        "balken": [
+          {
+            "name": "Gold",
+            "wert": 1064
+          },
+          {
+            "name": "Kupfer",
+            "wert": 1085
+          },
+          {
+            "name": "Wolfram",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 3422,
+      "quelle": {
+        "titel": "Wikipedia – Wolfram",
+        "url": "https://de.wikipedia.org/wiki/Wolfram"
+      }
+    },
+    {
+      "id": "chem-023",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie dicht ist Blei?",
+      "daten": {
+        "einheit": "g/cm³",
+        "balken": [
+          {
+            "name": "Wasser",
+            "wert": 1
+          },
+          {
+            "name": "Eisen",
+            "wert": 7.87
+          },
+          {
+            "name": "Blei",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 11.34,
+      "quelle": {
+        "titel": "Wikipedia – Blei",
+        "url": "https://de.wikipedia.org/wiki/Blei"
+      }
+    },
+    {
+      "id": "chem-024",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Ytterby – das Dorf, nach dem gleich vier chemische Elemente benannt sind?",
+      "daten": {
+        "mitte": [
+          55,
+          15
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 59.43,
+        "lng": 18.35
+      },
+      "quelle": {
+        "titel": "Wikipedia – Ytterby",
+        "url": "https://de.wikipedia.org/wiki/Ytterby"
+      },
+      "erklaerung": "Yttrium, Ytterbium, Terbium und Erbium."
+    },
+    {
+      "id": "chem-025",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Darmstadt, Namensgeber des Elements Darmstadtium?",
+      "daten": {
+        "mitte": [
+          50,
+          0
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 49.87,
+        "lng": 8.65
+      },
+      "quelle": {
+        "titel": "Wikipedia – Darmstadt",
+        "url": "https://de.wikipedia.org/wiki/Darmstadt"
+      }
+    },
+    {
+      "id": "chem-026",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr veröffentlichte Mendelejew sein Periodensystem?",
+      "daten": {
+        "von": 1800,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Gründung der BASF",
+            "jahr": 1865
+          },
+          {
+            "name": "Entdeckung der Radioaktivität",
+            "jahr": 1896
+          }
+        ]
+      },
+      "loesung": 1869,
+      "quelle": {
+        "titel": "Wikipedia – Periodensystem",
+        "url": "https://de.wikipedia.org/wiki/Periodensystem"
+      }
+    },
+    {
+      "id": "chem-027",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr gelang Otto Hahn und Fritz Straßmann die erste Kernspaltung?",
+      "daten": {
+        "von": 1850,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Entdeckung der Radioaktivität",
+            "jahr": 1896
+          },
+          {
+            "name": "Erste Atombombe gezündet",
+            "jahr": 1945
+          }
+        ]
+      },
+      "loesung": 1938,
+      "quelle": {
+        "titel": "Wikipedia – Kernspaltung",
+        "url": "https://de.wikipedia.org/wiki/Kernspaltung"
+      }
+    },
+    {
+      "id": "chem-028",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Metalle nach ihrer Dichte!",
+      "loesung": [
+        "Gold",
+        "Blei",
+        "Eisen",
+        "Aluminium"
+      ],
+      "oben": "dichtestes",
+      "unten": "leichtestes",
+      "quelle": {
+        "titel": "Wikipedia – Dichte",
+        "url": "https://de.wikipedia.org/wiki/Dichte"
+      }
+    },
+    {
+      "id": "chem-029",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach dem Siedepunkt!",
+      "loesung": [
+        "Wasser",
+        "Ethanol",
+        "Aceton",
+        "Stickstoff"
+      ],
+      "oben": "höchster",
+      "unten": "niedrigster",
+      "werte": [
+        "100 °C",
+        "78 °C",
+        "56 °C",
+        "−196 °C"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Siedepunkt",
+        "url": "https://de.wikipedia.org/wiki/Siedepunkt"
+      }
+    },
+    {
+      "id": "chem-030",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach dem pH-Wert – vom sauersten zum basischsten!",
+      "loesung": [
+        "Magensäure",
+        "Zitronensaft",
+        "Kaffee",
+        "Seifenlauge"
+      ],
+      "oben": "am sauersten",
+      "unten": "am basischsten",
+      "quelle": {
+        "titel": "Wikipedia – PH-Wert",
+        "url": "https://de.wikipedia.org/wiki/PH-Wert"
+      }
+    },
+    {
+      "id": "chem-031",
+      "modus": "auswahl",
+      "frage": "Welches Element ist das?",
+      "optionen": [
+        "Bismut",
+        "Silber",
+        "Eisen",
+        "Blei"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Bismut",
+        "url": "https://de.wikipedia.org/wiki/Bismut"
+      },
+      "bild": {
+        "datei": "bilder/chem-031.jpg",
+        "urheber": "Alchemist-hp (talk) (www.pse-mendelejew.de)",
+        "lizenz": "FAL",
+        "quelle": {
+          "titel": "Wikimedia Commons – Bismuth_crystals_and_1cm3_cube.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Bismuth_crystals_and_1cm3_cube.jpg"
+        }
+      }
+    },
+    {
+      "id": "chem-032",
+      "modus": "auswahl",
+      "frage": "Welches Element ist das?",
+      "optionen": [
+        "Schwefel",
+        "Phosphor",
+        "Chlor",
+        "Gold"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Schwefel",
+        "url": "https://de.wikipedia.org/wiki/Schwefel"
+      },
+      "bild": {
+        "datei": "bilder/chem-032.jpg",
+        "urheber": "Ivar Leidus",
+        "lizenz": "CC BY-SA 4.0",
+        "quelle": {
+          "titel": "Wikimedia Commons – Sulfur_-_El_Desierto_mine,_San_Pablo_de_Napa,_Daniel_Campos_Province,_Potosí,_Bolivia.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Sulfur_-_El_Desierto_mine,_San_Pablo_de_Napa,_Daniel_Campos_Province,_Potos%C3%AD,_Bolivia.jpg"
+        }
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "chem-s01",
+      "modus": "schaetzen",
+      "frage": "Welche Ordnungszahl hat Uran?",
+      "einheit": "",
+      "loesung": 92,
+      "quelle": {
+        "titel": "Wikipedia – Uran",
+        "url": "https://de.wikipedia.org/wiki/Uran"
+      }
+    },
+    {
+      "id": "chem-s02",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Celsius schmilzt Aluminium?",
+      "einheit": "°C",
+      "loesung": 660,
+      "quelle": {
+        "titel": "Wikipedia – Aluminium",
+        "url": "https://de.wikipedia.org/wiki/Aluminium"
+      }
+    }
+  ]
+}
