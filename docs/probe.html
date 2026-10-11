@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz-Abend – Optik-Probe</title>
+  <link rel="stylesheet" href="probe.css">
+</head>
+<body>
+  <!-- Optik-Probe für den Pixel-Stil. Nur zum Anschauen – keine Spiellogik. -->
+
+  <!-- Hintergrund: Pixel-Szene, mit Code gezeichnet (engine/szenen.js) -->
+  <canvas id="szene" class="szene"></canvas>
+  <!-- Oder: fertiges Bild aus docs/bilder/szenen/ (KI-Bild, mit tools/pixel_bild.py umgewandelt) -->
+  <img id="szeneBild" class="szene" alt="" hidden>
+
+  <!-- Umschalter oben -->
+  <nav class="probe-leiste">
+    <button class="pixel-knopf klein" data-ansicht="menue">Hauptmenü</button>
+    <label class="pixel-knopf klein">Frage aus:
+      <select id="themaWahl"></select>
+    </label>
+  </nav>
+
+  <!-- Ansicht 1: Hauptmenü mit Jahrmarkt-Rad neben der Farm -->
+  <main id="menue" class="menue">
+    <section class="holz menue-tafel">
+      <h1 class="titel">Quiz-Abend</h1>
+      <p>Code für die Handys:</p>
+      <p class="raumcode">KXQ7</p>
+      <h2>Spieler</h2>
+      <ul class="spieler-schilder">
+        <li style="--farbe: #e21b3c">Anna ✓ 🚀×2</li>
+        <li style="--farbe: #1368ce">Ben ✓</li>
+        <li style="--farbe: #d89e00">Cem ✓ 🃏</li>
+        <li style="--farbe: #26890c">Dana …</li>
+      </ul>
+      <button class="pixel-knopf" id="drehen">Glücksrad drehen</button>
+      <p class="ergebnis" id="ergebnis"></p>
+    </section>
+
+    <!-- Jahrmarkt-Rad im Pixel-Stil (engine/jahrmarkt.js zeichnet es hier hinein) -->
+    <div class="jahrmarkt" id="jahrmarkt"></div>
+  </main>
+
+  <!-- Ansicht 2: Fragebildschirm -->
+  <main id="frage" class="frage" hidden>
+    <section class="holz frage-tafel">
+      <p class="kopf">
+        <span id="fortschritt"></span>
+        <span class="uhr" id="uhr">17</span>
+      </p>
+      <h2 class="fragetext" id="fragetext"></h2>
+    </section>
+    <div class="optionen" id="optionen"></div>
+  </main>
+
+  <script type="module" src="probe.js"></script>
+</body>
+</html>

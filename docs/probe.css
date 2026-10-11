@@ -1,0 +1,327 @@
+/* probe.css – Optik-Probe für den Pixel-Stil (angelehnt an Stardew Valley).
+   Wenn der Stil gefällt, wandert das in style.css. */
+
+/* Schrift liegt im Repo (SIL Open Font License, siehe schrift/OFL-Jersey15.txt).
+   Klar lesbar, aber mit Pixel-Charakter. Hat nur eine Strichstärke – deshalb
+   nirgends "bold" (sonst malt der Browser sie künstlich dicker und unscharf). */
+@font-face {
+  font-family: "Jersey 15";
+  src: url("schrift/Jersey15.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  /* Holz und Pergament */
+  --holz-dunkel: #4a2410;
+  --holz: #8a4b21;
+  --holz-hell: #c27a3b;
+  --pergament: #f7dfb0;
+  --pergament-hell: #fff0cc;
+  --tinte: #3b1f0a;
+  --pergament-schatten: #d9b77c;
+  --gold: #ffd166;
+  --akzent: #b33a2c;            /* Überschriften, Ergebnis */
+  --knopf: #e8a33d;
+  --knopf-hell: #ffd27a;
+  --knopf-dunkel: #b86e1f;
+  --knopf-schrift: #3b1f0a;
+  --rahmen-schrift: #ffd166;    /* Schrift auf dem Rahmen (Buchstabe A–D) */
+  --schatten: rgba(20, 8, 0, 0.45);
+  /* Diese Farben werden je nach Hintergrundbild überschrieben
+     (engine/uifarben.js) – die Werte hier sind der Standard (Holz). */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Grundgröße für alle rem-Angaben (Jersey 15 ist schmal, darf größer sein) */
+html {
+  font-size: 20px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #1b1b1b;
+  color: var(--tinte);
+  font-family: "Jersey 15", system-ui, sans-serif;
+  font-size: 24px;
+  font-synthesis: none;
+  letter-spacing: 0.02em;
+}
+
+/* Hintergrund-Szene füllt den ganzen Bildschirm, Pixel bleiben scharf */
+.szene {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  image-rendering: pixelated;
+  z-index: -1;
+}
+
+/* ---------- Bausteine ---------- */
+
+/* Holzrahmen mit Pergament innen – wie die Menüs in Stardew Valley */
+.holz {
+  position: relative;
+  padding: 22px 26px;
+  background: var(--pergament);
+  border: 4px solid var(--holz-dunkel);
+  box-shadow:
+    inset 0 0 0 4px var(--holz-hell),
+    inset 0 0 0 8px var(--holz),
+    inset 0 0 0 10px var(--holz-dunkel),
+    6px 6px 0 var(--schatten);
+}
+
+/* Pixel-Knopf: oben/links hell, unten/rechts dunkel → wirkt erhaben */
+.pixel-knopf {
+  padding: 12px 22px;
+  border: 4px solid var(--holz-dunkel);
+  background: var(--knopf);
+  color: var(--knopf-schrift);
+  font: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow:
+    inset -4px -4px 0 var(--knopf-dunkel),
+    inset 4px 4px 0 var(--knopf-hell),
+    4px 4px 0 var(--schatten);
+}
+
+.pixel-knopf:hover {
+  filter: brightness(1.08);
+}
+
+/* Gedrückt: nach unten rutschen, Schatten umdrehen */
+.pixel-knopf:active {
+  transform: translate(3px, 3px);
+  box-shadow:
+    inset 4px 4px 0 var(--knopf-dunkel),
+    inset -4px -4px 0 var(--knopf-hell),
+    1px 1px 0 var(--schatten);
+}
+
+.pixel-knopf:disabled {
+  filter: grayscale(0.6);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.pixel-knopf.klein {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+/* ---------- Umschalter oben ---------- */
+
+.probe-leiste {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+/* ---------- Hauptmenü ---------- */
+
+.menue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 24px;
+  min-height: calc(100vh - 70px);
+  padding: 16px;
+}
+
+.menue-tafel {
+  width: min(380px, 100%);
+  text-align: center;
+  align-self: center;
+}
+
+.titel {
+  margin: 0 0 8px;
+  font-size: 3.4rem;
+  color: var(--akzent);
+  text-shadow: 3px 3px 0 var(--gold), 5px 5px 0 var(--holz-dunkel);
+  letter-spacing: 2px;
+}
+
+.raumcode {
+  margin: 4px 0 12px;
+  padding: 6px;
+  background: var(--tinte);
+  color: var(--gold);
+  font-size: 4rem;
+  letter-spacing: 0.3em;
+  box-shadow: inset 0 0 0 3px var(--holz-hell);
+}
+
+h2 {
+  margin: 12px 0 6px;
+  font-size: 1.2rem;
+}
+
+/* Spieler als kleine Holzschilder, unten in ihrer Farbe */
+.spieler-schilder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.spieler-schilder li {
+  padding: 4px 10px;
+  background: var(--pergament-hell);
+  border: 3px solid var(--holz-dunkel);
+  box-shadow: inset 0 -5px 0 var(--farbe);
+  font-size: 0.95rem;
+}
+
+.ergebnis {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+  font-size: 1.4rem;
+  color: var(--akzent);
+}
+
+/* ---------- Jahrmarkt-Rad ---------- */
+
+.jahrmarkt {
+  position: relative;
+  width: min(420px, 44vw, 60vh);
+  aspect-ratio: 260 / 338;
+}
+
+/* Zwei Leinwände übereinander: grobe Pixel (Rad) und scharfe Schrift */
+.jahrmarkt canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.jahrmarkt-pixel {
+  image-rendering: pixelated;
+}
+
+/* ---------- Fragebildschirm ---------- */
+
+.frage {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.frage-tafel {
+  text-align: center;
+}
+
+.kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* Countdown als rundes Abzeichen */
+.uhr {
+  display: inline-block;
+  min-width: 2.4em;
+  padding: 4px 8px;
+  background: var(--tinte);
+  color: var(--gold);
+  font-size: 1.6rem;
+  box-shadow: inset 0 0 0 3px var(--holz-hell);
+}
+
+.fragetext {
+  margin: 14px 0 6px;
+  font-size: 2.6rem;
+  line-height: 1.25;
+}
+
+/* Antworten: alle gleich – Pergament im Holzrahmen, vorne ein Buchstabe */
+.optionen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.pixel-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 96px;
+  padding: 12px 18px 12px 12px;
+  border: 4px solid var(--holz-dunkel);
+  background: var(--pergament);
+  color: var(--tinte);
+  font: inherit;
+  font-size: 1.9rem;
+  text-align: left;
+  cursor: pointer;
+  box-shadow:
+    inset 0 0 0 3px var(--holz-hell),
+    inset -6px -6px 0 3px var(--pergament-schatten),
+    inset 6px 6px 0 3px var(--pergament-hell),
+    5px 5px 0 var(--schatten);
+}
+
+.pixel-option:hover {
+  background: var(--pergament-hell);
+}
+
+.pixel-option:active {
+  transform: translate(3px, 3px);
+  box-shadow: inset 0 0 0 3px var(--holz-hell), 2px 2px 0 var(--schatten);
+}
+
+/* Buchstabe A–D als kleines Holzschild */
+.buchstabe {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2em;
+  height: 2em;
+  background: var(--holz);
+  color: var(--rahmen-schrift);
+  font-size: 0.9em;
+  box-shadow:
+    inset -3px -3px 0 var(--holz-dunkel),
+    inset 3px 3px 0 var(--holz-hell);
+}
+
+/* Handy: alles untereinander */
+@media (max-width: 700px) {
+  .optionen { grid-template-columns: 1fr; }
+  .fragetext { font-size: 1.5rem; }
+  .pixel-option { min-height: 64px; font-size: 1.2rem; }
+  .jahrmarkt { width: min(320px, 80vw); }
+}
+
+/* Themenauswahl in der Probe-Leiste */
+.probe-leiste label select {
+  margin-left: 6px;
+  padding: 2px 6px;
+  font: inherit;
+  border: 2px solid var(--holz-dunkel);
+  background: var(--pergament-hell);
+  color: var(--tinte);
+}

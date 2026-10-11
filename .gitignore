@@ -20,3 +20,6 @@ __pycache__/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Rohbilder aus der Bild-KI (groß) – ins Repo kommen nur die umgewandelten in docs/bilder/szenen/
+ki-bilder/

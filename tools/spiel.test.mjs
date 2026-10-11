@@ -20,6 +20,9 @@ import { rundeZusammenstellen, kennung, MIX, FRAGEN_PRO_RUNDE } from "../docs/en
 import {
   angeboteErstellen, radDrehung, feldNachDrehung, THEMEN_PRO_SPIELER, VOLLE_RUNDEN,
 } from "../docs/engine/rad.js";
+import {
+  paletteAus, kontrast, hslZuHex, rgbZuHsl, KONTRAST_TEXT, KONTRAST_GROSS,
+} from "../docs/engine/uifarben.js";
 
 // ---------------------------------------------------------------------------
 // Punkte: auswahl
@@ -412,4 +415,31 @@ test("reihenfolge: Verschieben beim Ziehen", () => {
   assert.deepEqual(verschieben(["A", "B", "C", "D"], 3, 1), ["A", "D", "B", "C"]); // nach oben
   assert.deepEqual(verschieben(["A", "B", "C", "D"], 0, 2), ["B", "C", "A", "D"]); // nach unten
   assert.deepEqual(verschieben(["A", "B", "C"], 1, 1), ["A", "B", "C"]);           // gleicher Platz
+});
+
+// ---------------------------------------------------------------------------
+// UI-Farben passend zum Hintergrund (engine/uifarben.js)
+// ---------------------------------------------------------------------------
+test("uifarben: Umrechnung und Kontrast stimmen", () => {
+  assert.equal(hslZuHex(0, 1, 0.5), "#ff0000");
+  assert.equal(hslZuHex(120, 1, 0.25), "#008000");
+  const { h, s, l } = rgbZuHsl(0, 0, 255);
+  assert.deepEqual([Math.round(h), s, l], [240, 1, 0.5]);
+  assert.equal(Math.round(kontrast("#000000", "#ffffff")), 21);
+  assert.equal(kontrast("#777777", "#777777"), 1);
+});
+
+test("uifarben: jede Palette ist gut lesbar – bei jedem Farbton", () => {
+  for (let ton = 0; ton < 360; ton += 5) {
+    for (const saettigung of [0, 0.2, 0.5, 1]) {
+      const p = paletteAus(ton, saettigung);
+      const fall = ton + "° / " + saettigung;
+      assert.ok(kontrast(p["--tinte"], p["--pergament"]) >= KONTRAST_TEXT, "Tinte " + fall);
+      assert.ok(kontrast(p["--tinte"], p["--pergament-hell"]) >= KONTRAST_TEXT, "Tinte hell " + fall);
+      assert.ok(kontrast(p["--akzent"], p["--pergament"]) >= KONTRAST_GROSS, "Akzent " + fall);
+      assert.ok(kontrast(p["--knopf-schrift"], p["--knopf"]) >= KONTRAST_GROSS, "Knopf " + fall);
+      assert.ok(kontrast(p["--rahmen-schrift"], p["--holz"]) >= KONTRAST_GROSS, "Rahmen " + fall);
+      for (const wert of Object.values(p)) assert.match(wert, /^#[0-9a-f]{6}$/);
+    }
+  }
 });

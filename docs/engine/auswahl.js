@@ -16,14 +16,23 @@
 //   loesungAlsText(frage)            Host: Lösung als kurzer Text für die Handys
 //   zeigeAufloesung(bereich, frage, antworten)  Host: Lösung und Statistik zeigen.
 //                                    antworten = [{ name, antwort, punkte }, ...]
+//   antwortAlsText(daten, antwort)   Handy (freiwillig): eigene Antwort als kurzer Text
+//                                    für die Auflösung ("Deine Antwort: B – Giraffe")
 //
 // "daten" sind immer die öffentlichen Daten aus oeffentlicheDaten().
 
 import { neu } from "./hilfen.js";
 import { punkteAuswahl } from "./punkte.js";
 
-// Symbole für die Antworten – so sind sie auch ohne Farben unterscheidbar
-const SYMBOLE = ["▲", "◆", "●", "■"];
+// Alle Antworten sehen gleich aus – nur ein Buchstabe unterscheidet sie
+const BUCHSTABEN = ["A", "B", "C", "D"];
+
+// Eine Antwort-Kachel: Holzschild mit Buchstabe, daneben der Text
+function kachel(tag, index, text, klassen = "") {
+  const element = neu(tag, "pixel-option" + klassen);
+  element.append(neu("span", "buchstabe", BUCHSTABEN[index]), neu("span", "", text));
+  return element;
+}
 
 // Hat die Frage 2–4 Text-Optionen und zeigt die Lösung auf eine davon?
 export function pruefeFrage(frage) {
@@ -44,14 +53,10 @@ export function oeffentlicheDaten(frage) {
   return { optionen: frage.optionen.slice() };
 }
 
-// Host: die Antwortmöglichkeiten als farbige Kacheln zeigen
+// Host: die Antwortmöglichkeiten als Kacheln A–D zeigen
 export function zeigeFrage(bereich, daten) {
   const raster = neu("div", "optionen");
-  daten.optionen.forEach((text, index) => {
-    const kachel = neu("div", "option option-" + index);
-    kachel.append(neu("span", "symbol", SYMBOLE[index]), neu("span", "", text));
-    raster.append(kachel);
-  });
+  daten.optionen.forEach((text, index) => raster.append(kachel("div", index, text)));
   bereich.replaceChildren(raster);
 }
 
@@ -61,8 +66,7 @@ export function zeigeEingabe(bereich, daten, senden) {
   const tasten = [];
 
   daten.optionen.forEach((text, index) => {
-    const taste = neu("button", "option option-" + index);
-    taste.append(neu("span", "symbol", SYMBOLE[index]), neu("span", "", text));
+    const taste = kachel("button", index, text);
 
     taste.addEventListener("click", () => {
       for (const t of tasten) t.disabled = true; // nur eine Antwort erlaubt
@@ -87,7 +91,11 @@ export function bewerte(frage, antwort, anteil) {
 }
 
 export function loesungAlsText(frage) {
-  return SYMBOLE[frage.loesung] + " " + frage.optionen[frage.loesung];
+  return BUCHSTABEN[frage.loesung] + " – " + frage.optionen[frage.loesung];
+}
+
+export function antwortAlsText(daten, antwort) {
+  return BUCHSTABEN[antwort] + " – " + daten.optionen[antwort];
 }
 
 // Host: richtige Antwort hervorheben, falsche abdunkeln, Anzahl pro Option zeigen
@@ -98,13 +106,9 @@ export function zeigeAufloesung(bereich, frage, antworten) {
     const anzahl = antworten.filter((a) => a.antwort === index).length;
     const richtig = index === frage.loesung;
 
-    const kachel = neu("div", "option option-" + index + (richtig ? " richtig" : " falsch"));
-    kachel.append(
-      neu("span", "symbol", richtig ? "✔" : SYMBOLE[index]),
-      neu("span", "", text),
-      neu("span", "anzahl", anzahl)
-    );
-    raster.append(kachel);
+    const element = kachel("div", index, text, richtig ? " richtig" : " falsch");
+    element.append(neu("span", "anzahl", anzahl));
+    raster.append(element);
   });
 
   bereich.replaceChildren(raster);

@@ -219,6 +219,13 @@ export function loesungAlsText(frage) {
   return String(frage.loesung); // Jahr ohne Tausenderpunkt
 }
 
+// Handy: eigene Antwort für die Auflösung (bei der Karte nicht – Koordinaten sagen nichts)
+export function antwortAlsText(daten, antwort) {
+  if (daten.art === "balken") return (zahlText(antwort) + " " + (daten.einheit || "")).trim();
+  if (daten.art === "zeitleiste") return String(antwort);
+  return "";
+}
+
 // Host: Grafik mit eingetragener Lösung, darunter die besten Antworten
 export function zeigeAufloesung(bereich, frage, antworten) {
   if (frage.art === "karte") return karte.zeigeAufloesung(bereich, frage, antworten);

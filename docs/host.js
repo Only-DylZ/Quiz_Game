@@ -18,7 +18,9 @@ import {
   anteilRestzeit, ranglisteBerechnen, rundenSpitze, stechfrageSieger,
 } from "./engine/punkte.js";
 import { rundeZusammenstellen, kennung } from "./engine/runde.js";
-import { angeboteErstellen, radDrehung, radZeichnen, FARBEN } from "./engine/rad.js";
+import { angeboteErstellen, FARBEN } from "./engine/rad.js";
+import { jahrmarktErstellen } from "./engine/jahrmarkt.js";
+import { hintergrundSetzen, szeneZuDatei, STANDARD_SZENE } from "./engine/uifarben.js";
 import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
@@ -63,6 +65,14 @@ function zeige(name) {
   for (const abschnitt of ABSCHNITTE) {
     $(abschnitt).hidden = abschnitt !== name;
   }
+  // Während der Fragen das Bild zum Thema, sonst die Farm
+  hintergrundSetzen(name === "spiel" ? aktuelleSzene() : STANDARD_SZENE);
+}
+
+// Hintergrund der laufenden Runde: Paketname, bei KI-Themen "joker"
+function aktuelleSzene() {
+  if (!aktuellesThema) return STANDARD_SZENE;
+  return aktuellesThema.ki ? "joker" : szeneZuDatei(aktuellesThema.datei);
 }
 
 // ---------------------------------------------------------------------------
@@ -111,6 +121,7 @@ let spielstand = new Map(); // Spieler-id → { id, name, punkte, gp, booster, j
 // ---------------------------------------------------------------------------
 const raumcode = neuerRaumcode();
 $("raumcode").textContent = raumcode;
+hintergrundSetzen(STANDARD_SZENE); // Lobby: die Farm
 
 // Adresse der Spieler-Seite anzeigen (gleicher Ordner wie diese Seite)
 const spielerAdresse = new URL("play.html", location.href);
@@ -363,7 +374,7 @@ function themenwahlZeigen() {
   if (rundenNummer === 0 && ausLink) {
     $("themenwahlText").textContent = "Testmodus: Thema aus dem Link";
     $("kandidatenListe").replaceChildren();
-    $("rad").replaceChildren();
+    rad.kartenSetzen([]);
     themaFestlegen({ schluessel: ausLink.datei, thema: ausLink.thema, datei: ausLink.datei });
     return;
   }
@@ -501,18 +512,18 @@ function kandidatenAnzeigen() {
       text = s.name + " ✓" + (wahl.eigenes ? " 🃏" : "") + (wahl.booster > 0 ? " 🚀×" + wahl.booster : "");
     }
     const eintrag = neu("li", wahl ? "fertig" : "", text);
-    eintrag.style.borderBottom = "6px solid " + spielerFarbe(s.id); // Farbe wie auf dem Rad
+    eintrag.style.setProperty("--farbe", spielerFarbe(s.id)); // Farbe wie auf dem Rad
     liste.append(eintrag);
   }
   const karten = radKarten();
-  $("rad").replaceChildren(radZeichnen(karten));
+  rad.kartenSetzen(karten);
   $("drehen").disabled = karten.length === 0;
 }
 
-// So lange dreht sich das Rad (Millisekunden)
-const DREHDAUER_MS = 5000;
+// Das Glücksrad als Jahrmarkt-Rad im Pixel-Stil (engine/jahrmarkt.js)
+const rad = jahrmarktErstellen($("jahrmarkt"));
 
-$("drehen").addEventListener("click", () => {
+$("drehen").addEventListener("click", async () => {
   const karten = radKarten();
   if (schritt !== "themenwahl" || karten.length === 0) return;
   schritt = "rad";
@@ -521,16 +532,11 @@ $("drehen").addEventListener("click", () => {
 
   // Zuerst wird zufällig gezogen – das Rad dreht sich dann genau dorthin
   const gewinner = Math.floor(Math.random() * karten.length);
-  const svg = radZeichnen(karten);
-  $("rad").replaceChildren(svg);
   raum.senden("rad", {});
 
-  // Drehung erst im übernächsten Bild starten, sonst sieht man die Animation nicht
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    svg.style.transition = "transform " + DREHDAUER_MS + "ms cubic-bezier(0.15, 0.85, 0.25, 1)";
-    svg.style.transform = "rotate(" + radDrehung(karten.length, gewinner) + "deg)";
-  }));
-  setTimeout(() => themaFestlegen(karten[gewinner]), DREHDAUER_MS + 300);
+  await rad.kartenSetzen(karten); // von vorne losdrehen
+  await rad.drehen(gewinner);
+  setTimeout(() => themaFestlegen(karten[gewinner]), 300);
 });
 
 // Das Thema der Runde steht fest (karte wie in radKarten oder ein Eintrag aus themen)
@@ -642,6 +648,7 @@ function frageSenden() {
     restzeit: restzeit,
     daten: MODI[frage.modus].oeffentlicheDaten(frage),
     bild: frage.bild ? frage.bild.datei : null, // nur der neutrale Dateiname
+    szene: aktuelleSzene(),                     // Hintergrundbild zum Thema
     teilnehmer: stechen ? [...stechen] : null,  // bei der Stechfrage: wer antworten darf
   });
 }

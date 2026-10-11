@@ -14,11 +14,15 @@
 </head>
 <body class="spieler">
   <!-- Spieler-Seite fürs Handy. Die Logik steht in play.js. -->
+
+  <!-- Hintergrundbild (bilder/szenen/), wechselt je nach Thema – play.js setzt es -->
+  <img id="szene" class="szene" alt="" hidden>
+
   <main>
 
     <!-- 1. Beitreten -->
-    <form id="beitreten">
-      <h1>Mitspielen</h1>
+    <form id="beitreten" class="holz">
+      <h1 class="titel">Mitspielen</h1>
       <label for="code">Raumcode</label>
       <input id="code" maxlength="4" autocomplete="off" autocapitalize="characters"
              placeholder="z. B. KX7Q" required>
@@ -30,13 +34,13 @@
     </form>
 
     <!-- 2. Warten auf den Spielstart oder die nächste Frage -->
-    <section id="warten" hidden>
+    <section id="warten" class="holz" hidden>
       <p>Du bist drin, <strong id="meinName"></strong>!</p>
       <p id="wartenText">Warte auf den Spielstart …</p>
     </section>
 
     <!-- 3. Vor jeder Runde: Kandidaten fürs Glücksrad wählen -->
-    <section id="themenwahl" hidden>
+    <section id="themenwahl" class="holz" hidden>
       <h2 id="themenwahlTitel"></h2>
       <p>Wähle deinen Kandidaten fürs Glücksrad:</p>
       <div class="themen-knoepfe" id="themenKnoepfe"></div>
@@ -54,7 +58,7 @@
     </section>
 
     <!-- 4. Frage beantworten -->
-    <section id="frage" hidden>
+    <section id="frage" class="holz frage-tafel" hidden>
       <p class="kopf">
         <span id="fortschritt"></span>
         <span class="countdown" id="countdown"></span>
@@ -68,22 +72,24 @@
     </section>
 
     <!-- 4. Ergebnis der Frage -->
-    <section id="ergebnis" hidden>
+    <section id="ergebnis" class="holz" hidden>
       <p class="ergebnis-gross" id="ergebnisText"></p>
-      <p id="loesungText"></p>
+      <!-- "Deine Antwort: B – Giraffe ✗" und "Richtig: D – Blauwal" -->
+      <p class="antwort-vergleich" id="meineAntwortText"></p>
+      <p class="antwort-vergleich" id="loesungText"></p>
       <p id="standText"></p>
       <p class="hinweis">Warte auf die nächste Frage …</p>
     </section>
 
     <!-- 5. Ende einer Themenrunde: wer bekommt den Gewinnpunkt (GP)? -->
-    <section id="rundenende" hidden>
+    <section id="rundenende" class="holz" hidden>
       <p class="ergebnis-gross" id="rundenSieger"></p>
       <p id="meineGp"></p>
       <p class="hinweis" id="rundenHinweis"></p>
     </section>
 
     <!-- 6. Spielende -->
-    <section id="ende" hidden>
+    <section id="ende" class="holz" hidden>
       <h1>Ende!</h1>
       <p class="ergebnis-gross" id="endeText"></p>
       <p>Danke fürs Mitspielen.</p>

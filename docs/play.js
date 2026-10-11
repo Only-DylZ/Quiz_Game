@@ -15,6 +15,7 @@ import * as auswahl from "./engine/auswahl.js";
 import * as schaetzen from "./engine/schaetzen.js";
 import * as grafik from "./engine/grafik.js";
 import * as reihenfolge from "./engine/reihenfolge.js";
+import { hintergrundSetzen, STANDARD_SZENE } from "./engine/uifarben.js";
 
 // Alle Modi, die wir schon können (muss zu host.js passen)
 const MODI = { auswahl, schaetzen, grafik, reihenfolge };
@@ -31,6 +32,8 @@ let warteTimer = null;     // Zeitgeber für "Raum nicht gefunden"
 let aktuelleNummer = -1;   // welche Frage gerade angezeigt wird
 let themenRunde = 0;       // für welche Runde die Themenwahl gerade angezeigt wird
 let uhr = null;            // Countdown-Zeitgeber
+let meineAntwort = null;   // { modul, daten, antwort } – was ich zur aktuellen Frage geschickt habe
+let szene = STANDARD_SZENE; // Hintergrund der laufenden Runde (schickt der Host mit der Frage)
 
 // ---------------------------------------------------------------------------
 // Anzeige: immer nur einen Abschnitt zeigen
@@ -41,7 +44,10 @@ function zeige(name) {
   for (const abschnitt of ABSCHNITTE) {
     $(abschnitt).hidden = abschnitt !== name;
   }
+  // Bei Frage und Ergebnis das Bild zum Thema, sonst die Farm
+  hintergrundSetzen(name === "frage" || name === "ergebnis" ? szene : STANDARD_SZENE);
 }
+zeige("beitreten");
 
 // ---------------------------------------------------------------------------
 // 1. Beitreten
@@ -263,6 +269,9 @@ function frageAnzeigen(daten) {
   }
 
   aktuelleNummer = daten.nummer;
+  meineAntwort = null;
+  // Hintergrund zum Thema (hintergrundSetzen prüft den Namen selbst)
+  szene = typeof daten.szene === "string" ? daten.szene : STANDARD_SZENE;
   $("meldung").textContent = "";
 
   // Stechfrage, bei der wir nicht dabei sind: nur zuschauen
@@ -284,10 +293,15 @@ function frageAnzeigen(daten) {
   // - entwurfSenden(antwort): Zwischenstand, zählt bei Zeitablauf ohne Senden
   const senden = (antwort) => {
     raum.senden("antwort", { id: ich.id, nummer: daten.nummer, antwort });
+    meineAntwort = { modul, daten: daten.daten, antwort, endgueltig: true };
     $("status").textContent = "Antwort gesendet – warte auf die Auflösung …";
   };
   const entwurfSenden = (antwort) => {
     raum.senden("entwurf", { id: ich.id, nummer: daten.nummer, antwort });
+    // Ein Entwurf zählt, wenn nichts gesendet wurde – also auch hier merken
+    if (!meineAntwort || !meineAntwort.endgueltig) {
+      meineAntwort = antwort === null ? null : { modul, daten: daten.daten, antwort, endgueltig: false };
+    }
   };
   modul.zeigeEingabe($("eingabe"), daten.daten, senden, entwurfSenden);
 
@@ -312,7 +326,8 @@ function countdownStarten(sekunden) {
 function ergebnisAnzeigen(daten) {
   if (daten.nummer !== aktuelleNummer) return; // gehört nicht zu unserer Frage
   clearInterval(uhr);
-  $("loesungText").textContent = "Lösung: " + text(daten.loesungText);
+  $("loesungText").textContent = "Richtig: " + text(daten.loesungText);
+  $("meineAntwortText").textContent = "";
 
   // Stechfrage: keine Punkte – wer gewonnen hat, zeigt gleich das Rundenende
   if (daten.stechen) {
@@ -331,6 +346,13 @@ function ergebnisAnzeigen(daten) {
   else ergebnis = "Leider 0 Punkte";
 
   $("ergebnisText").textContent = ergebnis;
+
+  // Eigene Antwort zeigen (falls der Modus das kann), bei Multiple Choice mit ✓/✗
+  if (meins && meins.beantwortet && meineAntwort && meineAntwort.modul.antwortAlsText) {
+    const antwortText = meineAntwort.modul.antwortAlsText(meineAntwort.daten, meineAntwort.antwort);
+    const zeichen = meineAntwort.modul === auswahl ? (meins.punkte > 0 ? " ✓" : " ✗") : "";
+    if (antwortText) $("meineAntwortText").textContent = "Deine Antwort: " + antwortText + zeichen;
+  }
   $("standText").textContent = meins
     ? "In dieser Runde: " + zahlText(meins.gesamt) + " Punkte · Platz " + meins.platz
     : "";

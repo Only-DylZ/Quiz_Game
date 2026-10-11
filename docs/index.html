@@ -8,14 +8,25 @@
 </head>
 <body>
   <!-- Startseite: Hier entscheidet man, ob man das Spiel leitet oder mitspielt. -->
+  <!-- Hintergrundbild: die Farm -->
+  <img id="szene" class="szene" alt="" hidden>
+
   <main>
-    <h1>Quiz-Abend</h1>
+    <section class="holz tafel">
+      <h1 class="titel">Quiz-Abend</h1>
 
-    <!-- Der Host öffnet diese Seite auf dem Laptop / TV -->
-    <a href="host.html">Spiel leiten</a>
+      <!-- Der Host öffnet diese Seite auf dem Laptop / TV -->
+      <a class="pixel-knopf" href="host.html">Spiel leiten</a>
 
-    <!-- Die Spieler öffnen diese Seite auf dem Handy -->
-    <a href="play.html">Mitspielen</a>
+      <!-- Die Spieler öffnen diese Seite auf dem Handy -->
+      <a class="pixel-knopf" href="play.html">Mitspielen</a>
+    </section>
   </main>
+
+  <!-- Farben der Oberfläche passend zum Hintergrundbild -->
+  <script type="module">
+    import { hintergrundSetzen } from "./engine/uifarben.js";
+    hintergrundSetzen("farm");
+  </script>
 </body>
 </html>

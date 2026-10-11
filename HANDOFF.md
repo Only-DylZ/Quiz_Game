@@ -14,57 +14,47 @@
   Grundspiel, Grafik/Karte, Werkzeuge + 13 Themen, Themenrunden mit GP/Stechfrage/
   Glücksrad/Booster, Themenjoker mit Gemini (Supabase Edge Function).
 - **Fragen-Pools:** 13 Themen mit 42–67 Fragen und je 5 Stechfragen (Ziel 150).
-- **In Arbeit: Optik-Umbau im Pixel-Stil** (Stardew-Valley-artig). Probe-Seite und
-  alle Hintergrundbilder sind fertig, **noch nicht committet**. Nächster Schritt:
-  echte Seiten (host/play) umbauen.
+- **In Arbeit: Optik-Umbau im Pixel-Stil** (Stardew-Valley-artig). Probe war vom
+  Nutzer abgenommen. **Echte Seiten sind umgebaut und committet (11.10.2026), aber noch
+  nicht gepusht und noch nicht vom Nutzer im echten Spiel getestet.**
 
 ---
 
-## Jetzt dran: Optik-Umbau (Pixel-Stil)
+## Jetzt dran: Optik-Umbau im echten Spiel testen, dann pushen
 
-### Was schon da ist (lokal, nicht committet – `git status` zeigt es)
+### Stand (committet, noch nicht gepusht)
 
-| Datei | Inhalt |
+| Was | Wo |
 |---|---|
-| `docs/probe.html/.js/.css` | Optik-Probe: Hauptmenü (Farm + Jahrmarkt-Rad) und Fragebildschirm, oben „Frage aus: …“ für alle 13 Themen + Joker (echte Fragen aus den Paketen). Ansehen: Live Server → `docs/probe.html`, oder `probe.html#sport` |
-| `docs/bilder/szenen/*.png` | 15 Hintergründe (640×360, 64 Farben, je 52–109 KB): `farm` (Hauptmenü), 13 Themen (Name = Paketdatei ohne `.json`), `joker` (für eigene Themen) |
-| `docs/engine/jahrmarkt.js` | Glücksrad als Jahrmarkt-Rad im Pixel-Stil: wird bei jeder Drehung neu in groben Pixeln (passend zur Pixelgröße des Hintergrunds) auf `<canvas>` gezeichnet, Holzgestell, blinkende Birnen, scharfe Beschriftung auf zweiter Leinwand. API: `jahrmarktErstellen(behaelter)` → `kartenSetzen(karten)`, `drehen(gewinner)` (Promise). Für den echten Host gedacht. |
-| `docs/engine/rad.js` (geändert) | `FARBEN` jetzt erdige Töne; `radZeichnen(karten, mitText)`; Strichfarben direkt im SVG (CSS gilt in SVG-als-Bild nicht) |
-| `docs/engine/szenen.js` | Ältere, per Code gezeichnete Szenen (Farm, Raumfahrt, Dschungel, Joker). Wird nur noch als Ersatz genutzt, falls ein Bild fehlt – kann evtl. entfallen. |
-| `docs/schrift/Jersey15.ttf` + `OFL-Jersey15.txt` | Schrift „Jersey 15“ (SIL OFL), im Repo statt Google Fonts (keine Daten an Dritte). Nur eine Strichstärke → nie `bold` (`font-synthesis: none`). |
-| `tools/pixel_bild.py` | KI-Bild → 640×360, 16:9-Zuschnitt, begrenzte Palette: `python tools/pixel_bild.py ki-bilder/<datei> <name> --farben 64` (Pillow) |
-| `tools/bild_prompts.md` | Prompts (Grundteil ≤ 283 Zeichen + Szene, passt unter Fireflys 750-Zeichen-Grenze) |
-| `ki-bilder/` | Rohbilder der Bild-KI, steht in `.gitignore` (kommt nie ins Repo) |
+| Neuer Stil (Rahmen/Pergament, Jersey 15, Pixel-Knöpfe, A–D-Kacheln) | `docs/style.css` |
+| **UI-Farben passen sich dem Hintergrund an:** häufigster Farbton des Bildes (Canvas, graue/dunkle Pixel zählen nicht) → Palette mit garantiertem Kontrast (Tinte ≥ 7, Knöpfe/Akzent ≥ 4,5). Test über alle Farbtöne in `spiel.test.mjs` | `docs/engine/uifarben.js` (`hintergrundSetzen(name)`, `paletteAus`) |
+| Host: Hintergrund farm (Lobby, Themenwahl, Rundenende, Ende) bzw. Thema/joker (Fragen); Jahrmarkt-Rad statt SVG-Rad | `host.html`, `host.js` |
+| Handy: gleicher Stil, Themenbild bei Frage/Ergebnis (neues Feld `szene` in der `frage`-Nachricht), Auflösung zeigt „Deine Antwort: B – Giraffe ✗“ + „Richtig: …“ | `play.html`, `play.js`, `antwortAlsText` in auswahl/schaetzen/grafik |
+| Startseite mit Farm und Pixel-Knöpfen | `index.html` |
+| Layout: Host-Lobby und Themenwahl über volle Breite – Tafel ganz links, Rad ganz rechts, Mitte frei für spätere Avatare. Handy-Seite schmale Spalte (max. 480 px) | `style.css` (`.menue`, `.spieler main`) |
+| Bilder, Schrift, Jahrmarkt-Rad, Werkzeuge | `docs/bilder/szenen/`, `docs/schrift/`, `engine/jahrmarkt.js`, `tools/pixel_bild.py`, `tools/bild_prompts.md` |
+
+Selbst geprüft per Screenshot: Startseite, Lobby, Handy-Beitreten, Auswahl-Frage/
+-Auflösung, Zeitleiste, Reihenfolge, Schätzen am Handy, Ergebnis am Handy.
+**Nicht** per Screenshot geprüft (braucht echte Spieler): Themenwahl mit
+Jahrmarkt-Rad im Host, Karte, Stechfrage, Rundenende, Siegertreppchen.
+
+### Nächste Schritte
+1. Nutzer testet ein ganzes Spiel (PC + Handy): besonders Themenwahl/Rad,
+   Kartenfrage, Treppchen, Lesbarkeit bei allen Themen.
+2. Danach pushen (`git push` → GitHub Actions stellt online). Probe-Dateien
+   (`probe.*`) und `engine/szenen.js` sind vorerst als Vorschau mit committet –
+   später ggf. löschen (nur die Probe nutzt szenen.js).
+3. Kleinigkeit: Im Raumfahrt-Bild weht eine Piratenflagge – Nutzer entscheidet, ob neu erzeugen.
+4. Später: Avatare (Vorschlag LPC-Figuren, CC BY-SA → Credits-Seite nötig), die in
+   der Lobby herumlaufen; Sprechblasen mit Antworten bei der Auflösung.
 
 ### Vom Nutzer festgelegt
-- Holz-/Pergament-Oberfläche, klare Pixel-Schrift (Jersey 15 – Pixelify war zu schwer lesbar).
-- Hauptmenü = Jahrmarkt-Rad neben einer Farm; jedes Thema eigener Hintergrund,
-  eigene Themen (Joker) → `joker.png` (magisches Labor mit Fragezeichen).
-- Antworten **einheitlich** (Pergament-Knopf mit Holzschild A–D), keine vier Farben.
-  Das Handy zeigt dann ebenfalls A–D.
+- Holz-/Pergament-Oberfläche, Schrift Jersey 15 (Pixelify war zu schwer lesbar).
+- Jedes Thema eigener Hintergrund, KI-Themen → `joker.png`, Menü → `farm.png`.
+- Antworten einheitlich (Pergament-Knopf mit Schild A–D), Handy ebenfalls A–D.
 - Rad passend zum Hintergrund (grobe Pixel, Holzfarben, Spielerfarben erdig).
-- Bei der Auflösung zeigt das Handy **eigene Antwort und richtige Antwort**
-  (z. B. „Deine Antwort: B – Giraffe ✗ / Richtig: D – Blauwal“).
-- Kleinigkeit: Im Raumfahrt-Bild weht eine Piratenflagge – Nutzer entscheidet, ob neu erzeugen.
-
-### Nächste Schritte (Vorschlag)
-1. Nutzer bestätigen lassen, dass die Probe passt (letzter Stand: Schrift, Rad, alle Bilder).
-2. **`style.css` auf den neuen Stil umstellen** (Werte/Bausteine aus `probe.css`:
-   `.holz`, `.pixel-knopf`, `.pixel-option` + `.buchstabe`, Farben als Variablen,
-   `@font-face` Jersey 15, `html { font-size: 20px }`).
-3. **Host:** Hintergrund-`<img class="szene">` je Schritt: Lobby/Themenwahl/Rundenende/
-   Ende = `farm`, Frage = Thema der Runde (`aktuellesThema.datei` ohne `.json`),
-   KI-Thema = `joker`. Glücksrad in der Themenwahl durch `jahrmarktErstellen`
-   ersetzen (Karten mit `farbe` aus `spielerFarbe`). Antwort-Kacheln in `auswahl.js`
-   auf A–D umstellen (Host und Handy).
-4. **Handy:** gleicher Stil, einfarbiger/ruhiger Hintergrund oder das Themenbild
-   abgedunkelt; Auflösung mit eigener + richtiger Antwort (Handy merkt sich, was es
-   gesendet hat; `loesungText` kommt schon vom Host).
-5. Testen (PC + Handy), dann committen: Probe-Dateien entweder löschen oder als
-   Vorschau behalten, `szenen.js` ggf. entfernen. CLAUDE.md (Ordnerstruktur,
-   Bauphasen „6: Optik“) und diese Datei aktualisieren.
-6. Später: Avatare (Vorschlag LPC-Figuren, CC BY-SA → Credits-Seite nötig), die in
-   der Lobby herumlaufen; Sprechblasen mit Antworten bei der Auflösung.
+- UI-Farbe = dominierende Farbe des Hintergrunds, Schrift immer gut lesbar.
 
 ---
 

@@ -14,7 +14,8 @@ import { mischen } from "./runde.js";
 export const THEMEN_PRO_SPIELER = 3;
 
 // Farben auf dem Rad – jeder Spieler bekommt eine (wie die Antwortfarben, plus ein paar mehr)
-export const FARBEN = ["#e21b3c", "#1368ce", "#d89e00", "#26890c", "#7c3aed", "#0891b2", "#db2777", "#65a30d"];
+// Erdige Töne, passend zu den Pixel-Hintergründen
+export const FARBEN = ["#c8473a", "#3b7fb5", "#e0a83a", "#5a9a3c", "#9461b3", "#2f9c94", "#d9783f", "#c45c8a"];
 
 // Für jeden Spieler eigene zufällige Themen.
 //   spielerIds – Liste der ids
@@ -52,13 +53,14 @@ export function feldNachDrehung(anzahl, grad) {
 // Zeichnet das Rad als SVG. karten = [{ thema, farbe }], eine Karte = ein Feld.
 // farbe ist freiwillig (sonst reihum); alle Karten eines Spielers haben dieselbe.
 // Texte nur über svgNeu (textContent) – Themen könnten später von Spielern kommen.
-export function radZeichnen(karten) {
+// mitText = false: nur die Felder (die Beschriftung wird dann extra gezeichnet).
+export function radZeichnen(karten, mitText = true) {
   const svg = svgNeu("svg", { viewBox: "-105 -105 210 210", class: "rad" });
   const n = karten.length;
   const R = 100;
 
   if (n === 0) {
-    svg.append(svgNeu("circle", { r: R, class: "rad-leer" }));
+    svg.append(svgNeu("circle", { r: R, class: "rad-leer", fill: "#6b4220" }));
     return svg;
   }
 
@@ -79,7 +81,7 @@ export function radZeichnen(karten) {
       svg.append(svgNeu("path", {
         d: `M 0 0 L ${x1} ${y1} A ${R} ${R} 0 ${gross} 1 ${x2} ${y2} Z`,
         fill: farbe,
-        class: "rad-feld",
+        class: "rad-feld", stroke: "#3b230f", "stroke-width": 1.5, // direkt im SVG – auch als Bild gültig
       }));
     }
 
@@ -88,13 +90,13 @@ export function radZeichnen(karten) {
     const mitte = i * breite + breite / 2;
     const name = karte.thema.length > 18 ? karte.thema.slice(0, 17) + "…" : karte.thema;
     const umdrehen = mitte > 180 ? " rotate(180)" : "";
-    svg.append(svgNeu("text", {
+    if (mitText) svg.append(svgNeu("text", {
       transform: `rotate(${mitte - 90}) translate(55 0)${umdrehen}`,
       class: "rad-text",
       "dominant-baseline": "middle",
     }, name));
   });
 
-  svg.append(svgNeu("circle", { r: 8, class: "rad-mitte" }));
+  svg.append(svgNeu("circle", { r: 8, class: "rad-mitte", fill: "#e0a83a" }));
   return svg;
 }

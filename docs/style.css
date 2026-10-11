@@ -1,12 +1,39 @@
-/* style.css – Gemeinsames Aussehen für Startseite, Host- und Spieler-Seite. */
+/* style.css – Gemeinsames Aussehen für Startseite, Host- und Spieler-Seite.
+   Pixel-Stil (angelehnt an Stardew Valley): Rahmen und Pergament vor einem
+   Pixel-Hintergrundbild. Die Farben passen sich dem Bild an (engine/uifarben.js). */
 
-/* Farben an einer Stelle, damit man sie leicht ändern kann */
+/* Schrift liegt im Repo (SIL Open Font License, siehe schrift/OFL-Jersey15.txt).
+   Klar lesbar, aber mit Pixel-Charakter. Hat nur eine Strichstärke – deshalb
+   nirgends "bold" (sonst malt der Browser sie künstlich dicker und unscharf). */
+@font-face {
+  font-family: "Jersey 15";
+  src: url("schrift/Jersey15.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Farben an einer Stelle. Die Werte hier sind der Standard (Holz und Pergament);
+   engine/uifarben.js überschreibt sie passend zum Hintergrundbild – immer so,
+   dass die Schrift gut lesbar bleibt. */
 :root {
-  --hintergrund: #1e1b4b;
-  --flaeche: #312e81;
-  --text: #f5f5f5;
-  --akzent: #facc15;
-  --fehler: #fca5a5;
+  --holz-dunkel: #4a2410;
+  --holz: #8a4b21;
+  --holz-hell: #c27a3b;
+  --pergament: #f7dfb0;
+  --pergament-hell: #fff0cc;
+  --pergament-schatten: #d9b77c;
+  --tinte: #3b1f0a;             /* Schrift auf Pergament */
+  --akzent: #b33a2c;            /* Überschriften, Hervorhebungen */
+  --knopf: #e8a33d;
+  --knopf-hell: #ffd27a;
+  --knopf-dunkel: #b86e1f;
+  --knopf-schrift: #3b1f0a;
+  --rahmen-schrift: #ffd166;    /* Schrift auf dem Rahmen (Buchstabe A–D) */
+
+  /* Diese bleiben immer gleich */
+  --gold: #ffd166;
+  --richtig: #5a9a3c;
+  --fehler: #b3261e;
+  --schatten: rgba(20, 8, 0, 0.45);
 }
 
 * {
@@ -18,80 +45,163 @@
   display: none !important;
 }
 
+/* Grundgröße für alle rem-Angaben (Jersey 15 ist schmal, darf größer sein) */
+html {
+  font-size: 20px;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--hintergrund);
-  color: var(--text);
-  font-family: system-ui, sans-serif;
-  font-size: 18px;
+  overflow-x: hidden;
+  background: #1b1b1b;          /* falls das Hintergrundbild fehlt */
+  color: var(--tinte);
+  font-family: "Jersey 15", system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-synthesis: none;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 2.6rem;
+  color: var(--akzent);
+}
+
+h2 {
+  margin: 12px 0 6px;
+  font-size: 1.4rem;
+}
+
+a {
+  color: var(--akzent);
+}
+
+/* Hintergrund-Szene füllt den ganzen Bildschirm, Pixel bleiben scharf */
+.szene {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  image-rendering: pixelated;
+  z-index: -1;
 }
 
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 24px 16px;
+  padding: 16px;
   text-align: center;
 }
 
-/* Knöpfe und Links, die wie Knöpfe aussehen (Startseite) */
+/* Spieler-Seite: schmale Spalte – alles steht untereinander
+   (Code, Name, später Avatar-Einstellungen), auch auf Tablet oder PC */
+.spieler main {
+  max-width: 480px;
+}
+
+/* ---------- Bausteine ---------- */
+
+/* Rahmen mit Pergament innen – wie die Menüs in Stardew Valley */
+.holz {
+  position: relative;
+  margin: 0 0 16px;
+  padding: 22px 26px;
+  background: var(--pergament);
+  border: 4px solid var(--holz-dunkel);
+  box-shadow:
+    inset 0 0 0 4px var(--holz-hell),
+    inset 0 0 0 8px var(--holz),
+    inset 0 0 0 10px var(--holz-dunkel),
+    6px 6px 0 var(--schatten);
+}
+
+/* Knöpfe (und Links, die wie Knöpfe aussehen): oben/links hell,
+   unten/rechts dunkel → wirken erhaben */
 button,
-main > a {
+a.pixel-knopf {
   display: inline-block;
   margin: 8px;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 10px;
-  background: var(--akzent);
-  color: #111;
-  font-size: 1.1rem;
-  font-weight: bold;
+  padding: 12px 22px;
+  border: 4px solid var(--holz-dunkel);
+  background: var(--knopf);
+  color: var(--knopf-schrift);
+  font: inherit;
+  font-size: 1.2rem;
   text-decoration: none;
   cursor: pointer;
+  box-shadow:
+    inset -4px -4px 0 var(--knopf-dunkel),
+    inset 4px 4px 0 var(--knopf-hell),
+    4px 4px 0 var(--schatten);
+}
+
+button:hover,
+a.pixel-knopf:hover {
+  filter: brightness(1.08);
+}
+
+/* Gedrückt: nach unten rutschen, Schatten umdrehen */
+button:active,
+a.pixel-knopf:active {
+  transform: translate(3px, 3px);
+  box-shadow:
+    inset 4px 4px 0 var(--knopf-dunkel),
+    inset -4px -4px 0 var(--knopf-hell),
+    1px 1px 0 var(--schatten);
 }
 
 button:disabled {
-  opacity: 0.4;
+  filter: grayscale(0.6);
+  opacity: 0.6;
   cursor: not-allowed;
+  transform: none;
 }
 
-/* Formular auf dem Handy */
+button.klein {
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 1rem;
+}
+
+/* Eingabefelder */
+input,
+select {
+  padding: 10px 12px;
+  border: 3px solid var(--holz-dunkel);
+  background: var(--pergament-hell);
+  color: var(--tinte);
+  font: inherit;
+  font-size: 1.3rem;
+  box-shadow: inset 3px 3px 0 var(--pergament-schatten);
+}
+
+/* Nie breiter als der Platz (sonst ragt das Formular auf dem Handy heraus) */
+input {
+  min-width: 0;
+  max-width: 100%;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid var(--akzent);
+}
+
+/* Formular (Handy: Beitreten) */
 form {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  max-width: 360px;
-  margin: 0 auto;
   text-align: left;
 }
 
-input {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.2rem;
-}
-
-/* Host: Einstellungen (GPs zum Sieg) und Themenauswahl */
-.einstellungen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 16px 0;
-}
-
-.einstellungen input {
-  width: 5em;
+form h1 {
   text-align: center;
-}
-
-select {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.2rem;
 }
 
 #code {
@@ -99,123 +209,330 @@ select {
   letter-spacing: 0.3em;
 }
 
-/* Großer Raumcode auf dem Host-Bildschirm */
-.raumcode {
-  margin: 16px 0;
-  font-size: 5rem;
-  font-weight: bold;
-  letter-spacing: 0.2em;
-  color: var(--akzent);
+/* Kleine Schilder auf dem Hintergrund (z. B. "3 von 5 haben geantwortet") */
+.schild {
+  display: inline-block;
+  margin: 8px auto;
+  padding: 6px 14px;
+  background: var(--pergament-hell);
+  border: 3px solid var(--holz-dunkel);
+  box-shadow: 4px 4px 0 var(--schatten);
 }
 
-/* Spielerliste in der Lobby: Namen als Kärtchen */
+.schild:empty {
+  display: none;
+}
+
+.hinweis {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Fehlermeldungen: rotes Schild, nur wenn es etwas zu melden gibt */
+.meldung {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--pergament-hell);
+  border: 3px solid var(--fehler);
+  color: var(--fehler);
+}
+
+.meldung:empty {
+  display: none;
+}
+
+/* ---------- Startseite, Lobby, Themenwahl ---------- */
+
+/* Tafel ganz links, Glücksrad ganz rechts – in der Mitte bleibt die Farm frei
+   (dort sollen später die Avatare herumlaufen). Geht über die volle
+   Bildschirmbreite, nicht nur über die 1000px von <main>. */
+.menue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100vw;
+  min-height: calc(100vh - 32px);
+  margin-left: calc(50% - 50vw);
+  padding: 0 3vw;
+}
+
+.menue-tafel {
+  width: min(460px, 100%);
+}
+
+/* Lobby und Startseite: eine Tafel in der Mitte */
+.tafel {
+  width: min(560px, 100%);
+  margin: 4vh auto 16px;
+}
+
+/* Großer Titel mit Pixel-Schatten */
+.titel {
+  font-size: 3.4rem;
+  text-shadow: 3px 3px 0 var(--gold), 5px 5px 0 var(--holz-dunkel);
+  letter-spacing: 2px;
+}
+
+/* Großer Raumcode auf dem Host-Bildschirm */
+.raumcode {
+  margin: 4px 0 12px;
+  padding: 6px;
+  background: var(--tinte);
+  color: var(--gold);
+  font-size: 4.5rem;
+  letter-spacing: 0.3em;
+  box-shadow: inset 0 0 0 3px var(--holz-hell);
+}
+
+/* Host: Einstellungen fürs Spiel */
+.einstellungen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+  text-align: left;
+}
+
+.einstellungen input {
+  flex: none; /* alle Felder gleich breit, auch wenn der Text umbricht */
+  width: 4em;
+  text-align: center;
+}
+
+/* Spieler als kleine Schilder, unten in ihrer Farbe */
 .spielerliste {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+  margin: 0 0 14px;
   padding: 0;
   list-style: none;
 }
 
 .spielerliste li {
-  padding: 8px 16px;
-  border-radius: 8px;
-  background: var(--flaeche);
+  padding: 4px 10px;
+  background: var(--pergament-hell);
+  border: 3px solid var(--holz-dunkel);
+  box-shadow: inset 0 -5px 0 var(--farbe, var(--holz-hell));
+}
+
+/* Host: wer hat in der Themenwahl schon gewählt? */
+.spielerliste li.fertig {
+  background: var(--knopf-hell);
+}
+
+/* Jahrmarkt-Rad (engine/jahrmarkt.js zeichnet hier hinein) */
+.jahrmarkt {
+  position: relative;
+  width: min(440px, 44vw, 62vh);
+  aspect-ratio: 260 / 338;
+}
+
+/* Zwei Leinwände übereinander: grobe Pixel (Rad) und scharfe Schrift */
+.jahrmarkt canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.jahrmarkt-pixel {
+  image-rendering: pixelated;
+}
+
+/* Handy: die 3 Themen untereinander */
+.themen-knoepfe {
+  display: flex;
+  flex-direction: column;
+}
+
+.thema-knopf.gewaehlt {
+  background: var(--knopf-hell);
+  outline: 4px solid var(--tinte);
+}
+
+.thema-knopf.gewaehlt:disabled {
+  opacity: 1;
+  filter: none;
+}
+
+/* Handy: Booster-Zeile unter den Themen */
+.booster-zeile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  font-size: 1.2rem;
+}
+
+/* Handy: Themenjoker-Feld unter den Themen */
+.joker {
+  margin-top: 16px;
 }
 
 /* ---------- Während einer Frage ---------- */
 
-/* Kopfzeile: "Frage 1 von 6" links, Countdown rechts */
+.frage-tafel {
+  text-align: center;
+}
+
+/* Kopfzeile: "Sport · Frage 1 von 10" links, Countdown rechts */
 .kopf {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  opacity: 0.8;
+  gap: 12px;
+  margin: 0;
+  font-size: 1rem;
 }
 
+/* Countdown als dunkles Schild */
 .countdown {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--akzent);
+  display: inline-block;
+  min-width: 2.4em;
+  padding: 4px 8px;
+  background: var(--tinte);
+  color: var(--gold);
+  font-size: 1.6rem;
+  box-shadow: inset 0 0 0 3px var(--holz-hell);
+}
+
+.countdown:empty {
+  visibility: hidden;
 }
 
 .fragetext {
-  font-size: 1.4rem;
-  margin: 16px 0 24px;
+  margin: 14px 0 6px;
+  font-size: 1.5rem;
+  line-height: 1.25;
 }
 
 .host .fragetext {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 }
 
-/* Antwortmöglichkeiten im 2×2-Raster */
+/* Inhalt des Modus (Host): bei Multiple Choice stehen die Kacheln frei auf
+   dem Hintergrund, alles andere (Grafik, Karte, Listen …) auf Pergament */
+.bereich:not(:empty):not(:has(> .optionen)) {
+  margin: 0 0 16px;
+  padding: 18px 22px;
+  background: var(--pergament);
+  border: 4px solid var(--holz-dunkel);
+  box-shadow:
+    inset 0 0 0 4px var(--holz-hell),
+    inset 0 0 0 8px var(--holz),
+    inset 0 0 0 10px var(--holz-dunkel),
+    6px 6px 0 var(--schatten);
+}
+
+/* Antworten: alle gleich – Pergament im Rahmen, vorne ein Buchstabe A–D */
 .optionen {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 14px;
+  margin: 0 0 16px;
 }
 
-.option {
+.pixel-option {
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-height: 90px;
+  gap: 16px;
+  width: 100%;
+  min-height: 72px;
   margin: 0;
-  padding: 12px 16px;
-  border-radius: 10px;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
+  padding: 10px 16px 10px 10px;
+  border: 4px solid var(--holz-dunkel);
+  background: var(--pergament);
+  color: var(--tinte);
+  font: inherit;
+  font-size: 1.3rem;
   text-align: left;
+  box-shadow:
+    inset 0 0 0 3px var(--holz-hell),
+    inset -6px -6px 0 3px var(--pergament-schatten),
+    inset 6px 6px 0 3px var(--pergament-hell),
+    5px 5px 0 var(--schatten);
 }
 
-.host .option {
-  min-height: 120px;
-  font-size: 1.8rem;
+.host .pixel-option {
+  min-height: 104px;
+  font-size: 2rem;
 }
 
-/* Kahoot-ähnliche Farben, eine pro Antwort */
-.option-0 { background: #e21b3c; }
-.option-1 { background: #1368ce; }
-.option-2 { background: #d89e00; }
-.option-3 { background: #26890c; }
+button.pixel-option:hover {
+  background: var(--pergament-hell);
+  filter: none;
+}
 
-.option .symbol {
-  font-size: 1.5em;
+button.pixel-option:active {
+  transform: translate(3px, 3px);
+  box-shadow: inset 0 0 0 3px var(--holz-hell), 2px 2px 0 var(--schatten);
+}
+
+/* Buchstabe A–D als kleines Holzschild */
+.buchstabe {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2em;
+  height: 2em;
+  background: var(--holz);
+  color: var(--rahmen-schrift);
+  font-size: 0.9em;
+  box-shadow:
+    inset -3px -3px 0 var(--holz-dunkel),
+    inset 3px 3px 0 var(--holz-hell);
 }
 
 /* Anzahl der Stimmen bei der Auflösung, rechts in der Kachel */
-.option .anzahl {
+.pixel-option .anzahl {
   margin-left: auto;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
-/* Handy: gewählte Antwort hervorheben, die anderen ausgrauen */
-.option:disabled {
-  opacity: 0.35;
+/* Handy: gewählte Antwort hervorheben, die anderen grau
+   (nicht durchsichtig – sonst scheint das Hintergrundbild durch) */
+button.pixel-option:disabled {
+  opacity: 1;
+  filter: grayscale(0.8) brightness(0.8);
   cursor: default;
 }
 
-.option.gewaehlt:disabled {
-  opacity: 1;
-  outline: 4px solid white;
+button.pixel-option.gewaehlt:disabled {
+  filter: none;
+  background: var(--knopf-hell);
+  outline: 4px solid var(--tinte);
 }
 
-/* Host-Auflösung: richtig hell mit Rahmen, falsch abgedunkelt */
-.option.richtig {
-  outline: 6px solid white;
+/* Host-Auflösung: richtig grün umrandet, falsch blass */
+.pixel-option.richtig {
+  outline: 6px solid var(--richtig);
+  background: var(--pergament-hell);
 }
 
-.option.falsch {
-  opacity: 0.3;
+.pixel-option.richtig .buchstabe {
+  background: var(--richtig);
+  color: #ffffff;
+}
+
+.pixel-option.falsch {
+  filter: grayscale(0.8) brightness(0.75);
+}
+
+/* Erklärung, Quelle und Weiter-Knopf nach der Auflösung */
+.infos {
+  text-align: center;
 }
 
 /* ---------- Schätzen ---------- */
 
 .gross-hinweis {
   font-size: 2rem;
-  font-weight: bold;
   color: var(--akzent);
 }
 
@@ -232,8 +549,7 @@ select {
 }
 
 .einheit {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 /* ---------- Bild zur Frage ---------- */
@@ -243,7 +559,7 @@ select {
   max-width: 100%;
   max-height: 40vh;
   margin: 8px auto;
-  border-radius: 10px;
+  border: 4px solid var(--holz-dunkel);
   background: #fff; /* Flaggen mit Transparenz gut sichtbar */
 }
 
@@ -267,43 +583,42 @@ select {
 }
 
 .grafik text {
-  fill: var(--text);
-  font-family: system-ui, sans-serif;
+  fill: var(--tinte);
+  font-family: "Jersey 15", system-ui, sans-serif;
   text-anchor: middle; /* Text mittig über dem Punkt/Balken */
 }
 
-.grafik-name { font-size: 22px; }
-.grafik-rand { font-size: 20px; opacity: 0.7; } /* Anfang und Ende der Zeitleiste */
-.grafik-wert { font-size: 22px; font-weight: bold; }
-.grafik-einheit { font-size: 20px; text-anchor: start !important; opacity: 0.7; }
+.grafik-name { font-size: 24px; }
+.grafik-rand { font-size: 22px; opacity: 0.75; } /* Anfang und Ende der Zeitleiste */
+.grafik-wert { font-size: 24px; }
+.grafik-einheit { font-size: 22px; text-anchor: start !important; opacity: 0.75; }
 
 /* Auf dem schmalen Handy wird alles kleiner gerechnet – deshalb größere Schrift */
 .grafik-klein .grafik-name,
 .grafik-klein .grafik-wert,
-.grafik-klein .grafik-einheit { font-size: 30px; }
-.grafik-frage { font-size: 90px; font-weight: bold; fill: var(--akzent) !important; }
+.grafik-klein .grafik-einheit { font-size: 32px; }
+.grafik-frage { font-size: 90px; fill: var(--akzent) !important; }
 
 .grafik-linie {
-  stroke: var(--text);
+  stroke: var(--tinte);
   stroke-width: 3;
 }
 
 .balken,
-.punkt { fill: #818cf8; }
+.punkt { fill: var(--holz-hell); stroke: var(--holz-dunkel); stroke-width: 2; }
 .balken-loesung { fill: var(--akzent); }
 
 .grafik-loesung {
   stroke: var(--akzent);
   stroke-width: 6;
 }
-.grafik .grafik-loesung-text { fill: var(--akzent); font-size: 26px; }
+.grafik .grafik-loesung-text { fill: var(--akzent); font-size: 28px; }
 
 /* Handy: Jahr groß über dem Schieberegler */
 .jahr-anzeige {
   margin: 4px 0;
   text-align: center;
   font-size: 2.5rem;
-  font-weight: bold;
   color: var(--akzent);
 }
 
@@ -311,11 +626,11 @@ select {
   flex: 1;
   min-width: 0;
   height: 40px; /* gut mit dem Daumen zu treffen */
-}
-
-button.klein {
-  margin: 0;
-  padding: 10px 14px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  accent-color: var(--holz);
 }
 
 /* ---------- Karte (Leaflet) ---------- */
@@ -324,7 +639,7 @@ button.klein {
   height: 60vh;
   min-height: 300px;
   margin: 8px 0;
-  border-radius: 10px;
+  border: 4px solid var(--holz-dunkel);
 }
 
 /* Karte ohne Beschriftung: Meer als Hintergrund, Länder werden darüber gezeichnet */
@@ -340,8 +655,8 @@ button.klein {
 
 /* Namen der Spieler auf der Auflösungs-Karte */
 .karte .leaflet-tooltip {
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-family: "Jersey 15", system-ui, sans-serif;
+  font-size: 1rem;
 }
 
 /* ---------- Reihenfolge ---------- */
@@ -352,15 +667,15 @@ button.klein {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin: 16px 0;
+  margin: 8px 0;
 }
 
 .reihe-kachel {
-  padding: 14px 20px;
-  border-radius: 10px;
-  background: var(--flaeche);
-  font-size: 1.4rem;
-  font-weight: bold;
+  padding: 12px 18px;
+  background: var(--pergament-hell);
+  border: 3px solid var(--holz-dunkel);
+  box-shadow: 4px 4px 0 var(--schatten);
+  font-size: 1.6rem;
 }
 
 /* Liste mit Plätzen (Handy) bzw. der Lösung (Host) */
@@ -373,9 +688,8 @@ button.klein {
 .reihe-liste li {
   margin: 6px 0;
   padding: 8px 12px;
-  border-radius: 8px;
-  background: var(--flaeche);
-  font-weight: bold;
+  background: var(--pergament-hell);
+  border: 3px solid var(--holz-dunkel);
 }
 
 /* Handy: einsortierte Elemente lassen sich ziehen */
@@ -391,8 +705,8 @@ button.klein {
   z-index: 1;
   cursor: grabbing;
   transition: none; /* folgt direkt dem Finger */
-  background: #4f46e5;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  background: var(--knopf-hell);
+  box-shadow: 6px 6px 0 var(--schatten);
 }
 
 .griff {
@@ -401,14 +715,14 @@ button.klein {
 }
 
 .reihe-liste li.leer {
-  opacity: 0.4;
-  font-weight: normal;
+  opacity: 0.45;
+  border-style: dashed;
 }
 
 .reihe-loesung {
-  max-width: 600px;
+  max-width: 640px;
   margin: 8px auto;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .reihe-loesung li {
@@ -426,7 +740,6 @@ button.klein {
   margin: 2px 0;
   text-align: center;
   color: var(--akzent);
-  font-weight: bold;
 }
 
 /* Handy: noch nicht gewählte Elemente */
@@ -439,16 +752,15 @@ button.klein {
 .reihe-taste {
   flex: 1 1 40%;
   margin: 0;
-  padding: 12px 8px;
-  background: #e0e7ff;
+  padding: 10px 8px;
 }
 
 /* ---------- Listen: Schätzungen und Rangliste ---------- */
 
 .schaetzliste,
 .rangliste {
-  max-width: 600px;
-  margin: 16px auto;
+  max-width: 640px;
+  margin: 12px auto;
   padding: 0;
   list-style: none;
 }
@@ -458,17 +770,16 @@ button.klein {
   display: flex;
   gap: 16px;
   margin: 6px 0;
-  padding: 10px 16px;
-  border-radius: 8px;
-  background: var(--flaeche);
-  font-size: 1.3rem;
+  padding: 8px 16px;
+  background: var(--pergament-hell);
+  border: 3px solid var(--holz-dunkel);
+  font-size: 1.5rem;
 }
 
 /* Letzte Spalte (Punkte) rechtsbündig */
 .schaetzliste li span:last-child,
 .rangliste li span:last-child {
   margin-left: auto;
-  font-weight: bold;
 }
 
 .rangliste .platz {
@@ -488,7 +799,7 @@ button.klein {
   justify-content: center;
   align-items: flex-end;
   gap: 12px;
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .stufe {
@@ -499,123 +810,50 @@ button.klein {
   gap: 4px;
   width: 200px;
   padding: 12px;
-  border-radius: 10px 10px 0 0;
-  background: var(--flaeche);
+  border: 4px solid var(--holz-dunkel);
+  border-bottom: none;
+  color: #2a1608;
+  box-shadow: inset -6px 0 0 rgba(0, 0, 0, 0.2), inset 6px 6px 0 rgba(255, 255, 255, 0.35);
 }
 
 .stufe .name {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.6rem;
 }
 
 .stufe .platz {
   margin-top: auto;
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.4rem;
 }
 
-/* Unterschiedliche Höhen: 1. Platz am höchsten */
-.stufe-1 { height: 260px; background: #b8860b; }
-.stufe-2 { height: 200px; background: #6b7280; }
-.stufe-3 { height: 160px; background: #92400e; }
+/* Unterschiedliche Höhen: 1. Platz am höchsten – Gold, Silber, Bronze */
+.stufe-1 { height: 260px; background: #e0a83a; }
+.stufe-2 { height: 200px; background: #c4c4cc; }
+.stufe-3 { height: 160px; background: #c27a3b; }
 
-/* Großes "Richtig!" / "Leider falsch" auf dem Handy */
+/* Großes "+800 Punkte" / "Leider 0 Punkte" auf dem Handy */
 .ergebnis-gross {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.4rem;
+  color: var(--akzent);
 }
 
-.hinweis {
-  font-size: 0.9rem;
-  opacity: 0.7;
+/* Handy: eigene und richtige Antwort bei der Auflösung */
+.antwort-vergleich {
+  margin: 4px 0;
+  font-size: 1.3rem;
 }
 
-.meldung {
-  color: var(--fehler);
-}
+/* ---------- Handy und kleine Bildschirme ---------- */
 
-/* ---------- Themenwahl und Glücksrad ---------- */
-
-/* Handy: die 3 Themen untereinander */
-.themen-knoepfe {
-  display: flex;
-  flex-direction: column;
-  max-width: 360px;
-  margin: 0 auto;
-}
-
-.thema-knopf.gewaehlt {
-  outline: 4px solid white;
-  background: #fde68a;
-}
-
-.thema-knopf.gewaehlt:disabled {
-  opacity: 1;
-}
-
-/* Host: wer hat schon gewählt? */
-.spielerliste li.fertig {
-  background: #26890c;
-}
-
-/* Das Rad mit dem Zeiger oben in der Mitte */
-.rad-rahmen {
-  position: relative;
-  width: min(60vh, 90vw);
-  margin: 16px auto;
-}
-
-.rad {
-  display: block;
-  width: 100%;
-  height: auto;
-  transform-origin: 50% 50%;
-}
-
-.rad-zeiger {
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  z-index: 1;
-  transform: translateX(-50%);
-  border-left: 18px solid transparent;
-  border-right: 18px solid transparent;
-  border-top: 32px solid var(--akzent);
-}
-
-.rad-feld {
-  stroke: var(--hintergrund);
-  stroke-width: 1;
-}
-
-.rad-leer {
-  fill: var(--flaeche);
-}
-
-.rad-text {
-  fill: white;
-  font-family: system-ui, sans-serif;
-  font-size: 8px;
-  font-weight: bold;
-  text-anchor: middle;
-}
-
-.rad-mitte {
-  fill: var(--akzent);
-}
-
-/* Handy: Booster-Zeile unter den Themen */
-.booster-zeile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin: 12px 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-/* Handy: Themenjoker-Feld unter den Themen */
-.joker {
-  margin-top: 16px;
+@media (max-width: 700px) {
+  main { padding: 10px; }
+  .holz { padding: 18px 18px; }
+  h1 { font-size: 2rem; }
+  .titel { font-size: 2.6rem; }
+  .raumcode { font-size: 3rem; }
+  .optionen { grid-template-columns: 1fr; }
+  .host .fragetext { font-size: 1.6rem; }
+  .host .pixel-option { min-height: 64px; font-size: 1.3rem; }
+  .jahrmarkt { width: min(340px, 86vw); }
+  .menue { min-height: 0; justify-content: center; }
+  .stufe { width: 30vw; }
 }

@@ -145,7 +145,8 @@ Quiz_Game/
 │  ├─ host.js              Host-Logik: Raum öffnen, Paket laden, Fragen stellen, auflösen.
 │  ├─ play.html            Handy-Seite (nur Aufbau der Seite).
 │  ├─ play.js              Handy-Logik: beitreten, Fragen anzeigen, Antwort senden.
-│  ├─ style.css            Gemeinsames Aussehen aller Seiten.
+│  ├─ style.css            Gemeinsames Aussehen aller Seiten (Pixel-Stil, Farben als Variablen).
+│  ├─ probe.html/.js/.css  Optik-Probe (nur zum Anschauen, keine Spiellogik).
 │  ├─ config.example.js    Vorlage für Supabase-URL und anon key (kopieren nach config.js).
 │  ├─ realtime.js          Verbindung zu Supabase: Raum anlegen/beitreten, Nachrichten senden.
 │  ├─ engine/
@@ -157,11 +158,17 @@ Quiz_Game/
 │  │  ├─ karte.js          Die Art „karte“: Leaflet-Karte anzeigen, Ort antippen, Auflösung.
 │  │  ├─ runde.js          Zieht pro Runde 10 zufällige Fragen aus dem Pool (ungespielte zuerst).
 │  │  ├─ rad.js            Themenwahl: 3 Themen pro Spieler, Glücksrad (Rechnung + SVG).
+│  │  ├─ jahrmarkt.js      Glücksrad als Jahrmarkt-Rad im Pixel-Stil (Canvas, grobe Pixel).
+│  │  ├─ uifarben.js       Hintergrundbild wechseln; UI-Farben aus dessen Hauptfarbe (lesbar).
+│  │  ├─ szenen.js         Alte, per Code gezeichnete Szenen – nur noch Ersatz in der Probe.
 │  │  └─ punkte.js         Alle Punkteregeln an einer Stelle.
 │  ├─ packs/
 │  │  ├─ index.json        Liste aller verfügbaren Themenpakete.
 │  │  └─ <thema>.json      Ein Fragen-Pool pro Thema (raumfahrt, geographie, …).
 │  ├─ bilder/              Bilder zu Fragen, Name = id der Frage (z. B. geo-031.png).
+│  │  └─ szenen/           Pixel-Hintergründe 640×360: farm (Menü), joker (KI-Themen),
+│  │                       sonst Name = Paketdatei ohne .json (sport.png …).
+│  ├─ schrift/             Schrift „Jersey 15“ (SIL OFL) – im Repo statt Google Fonts.
 │  └─ karten/
 │     └─ welt.json         Weltkarte ohne Namen (Natural Earth, gemeinfrei) für Kartenfragen.
 ├─ tools/
@@ -171,6 +178,8 @@ Quiz_Game/
 │  ├─ validate.py          Prüft Fragenpakete (auch index.json); --links ruft Quellen-Links auf.
 │  ├─ bild_holen.py        Holt freie Bilder von Wikimedia Commons (mit Urheber + Lizenz).
 │  ├─ lecks.py            Sucht über alle Pakete, ob eine Frage die Antwort einer anderen zeigt.
+│  ├─ pixel_bild.py        KI-Bild → Pixel-Hintergrund 640×360 mit begrenzter Palette (Pillow).
+│  ├─ bild_prompts.md      Prompts für die Hintergrundbilder (Gemini-App / Adobe Firefly).
 │  └─ requirements.txt     Python-Abhängigkeiten (keine Pflicht; Pillow optional für bild_holen.py).
 └─ supabase/
    ├─ schema.sql           Tabelle themenjoker_aufrufe (Limits für die KI, RLS ohne Regeln).
@@ -472,7 +481,7 @@ Nachrichten:
 | `rad`        | Host → Handys  | `{}` – das Glücksrad dreht sich, Wahl ist gesperrt |
 | `radErgebnis`| Host → Handys  | `thema, eigenes` – dieses Thema wird gespielt (`eigenes: true` = KI erzeugt gerade) |
 | `radNochmal` | Host → Handys  | `thema` – ließ sich nicht laden/erzeugen, es wird nochmal gedreht |
-| `frage`      | Host → Handys  | `nummer` (zählt im ganzen Spiel hoch), `titel` (z. B. „Sport · Frage 3 von 10“), `modus, text, restzeit, bild, daten` (daten = `oeffentlicheDaten()`, **ohne Lösung**), `teilnehmer` (nur bei der Stechfrage: ids der Spieler mit Gleichstand, sonst `null`) |
+| `frage`      | Host → Handys  | `nummer` (zählt im ganzen Spiel hoch), `titel` (z. B. „Sport · Frage 3 von 10“), `modus, text, restzeit, bild, daten` (daten = `oeffentlicheDaten()`, **ohne Lösung**), `teilnehmer` (nur bei der Stechfrage: ids der Spieler mit Gleichstand, sonst `null`), `szene` (Hintergrundbild, z. B. `"sport"`, `"joker"`) |
 | `antwort`    | Handy → Host   | `id, nummer, antwort` (endgültig, mit Zeitmessung) |
 | `entwurf`    | Handy → Host   | `id, nummer, antwort` – Zwischenstand beim Tippen (`null` = Feld leer). Zählt bei Zeitablauf, wenn nicht gesendet wurde, dann ohne Tempo-Bonus. Beendet die Frage nicht vorzeitig. |
 | `aufloesung` | Host → Handys  | `nummer, loesungText, ergebnisse: [{ id, beantwortet, punkte, gesamt, platz }]` (gesamt = Punkte der Runde); bei der Stechfrage `stechen: true` und leere `ergebnisse` |
@@ -485,7 +494,8 @@ Die Regeln „wer bekommt den GP“ (`rundenSpitze`, `stechfrageSieger`) stehen 
 
 **Modus-Module** (`engine/*.js`) haben alle dieselben Funktionen:
 `pruefeFrage, oeffentlicheDaten, zeigeFrage, zeigeEingabe, antwortGueltig,
-bewerte, loesungAlsText, zeigeAufloesung` (Beschreibung oben in `auswahl.js`).
+bewerte, loesungAlsText, zeigeAufloesung` (Beschreibung oben in `auswahl.js`), freiwillig
+`antwortAlsText` (Handy zeigt bei der Auflösung „Deine Antwort: …“).
 `bewerte()` gibt Punkte zurück und ruft dafür die Regeln aus `punkte.js` auf.
 Ein neuer Modus wird in `MODI` in `host.js` **und** `play.js` eingetragen.
 
@@ -514,6 +524,8 @@ Themenjoker mit Edge Function `themenjoker` (Gemini 3.5 Flash-Lite, bei Limit 3.
 mit Google-Suche, falls im Gratis-Tarif erlaubt, sonst ohne). Limits: 10 pro Raum,
 100 pro Tag. Einrichtung: `supabase/schema.sql` im SQL-Editor, Function über das
 Dashboard (Edge Functions → Via Editor) deployen, Secret `GEMINI_API_KEY`.
+**Optik (Pixel-Stil)** ist umgebaut, siehe HANDOFF.md: Hintergrund je Thema,
+Rahmen-/Schriftfarben passen sich dem Bild an (Kontrast getestet), Antworten A–D.
 
 ### Online-Stellen (entschieden)
 `docs/config.js` bleibt in `.gitignore`. Der Workflow `.github/workflows/pages.yml`

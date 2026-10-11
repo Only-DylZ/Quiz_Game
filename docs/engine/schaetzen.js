@@ -102,6 +102,11 @@ export function loesungAlsText(frage) {
   return (zahlText(frage.loesung) + " " + frage.einheit).trim();
 }
 
+// Handy: eigene Schätzung für die Auflösung
+export function antwortAlsText(daten, antwort) {
+  return (zahlText(antwort) + " " + (daten.einheit || "")).trim();
+}
+
 // Host: Lösung groß, darunter die Schätzungen – die besten zuerst
 export function zeigeAufloesung(bereich, frage, antworten) {
   const loesung = neu("p", "gross-hinweis", "Lösung: " + loesungAlsText(frage));
