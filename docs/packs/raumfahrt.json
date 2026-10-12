@@ -1386,6 +1386,508 @@
         "titel": "Wikipedia – Space Launch System",
         "url": "https://de.wikipedia.org/wiki/Space_Launch_System"
       }
+    },
+    {
+      "id": "rf-83",
+      "modus": "auswahl",
+      "frage": "Welcher Saturnmond schleudert an seinem Südpol Fontänen aus Wasserdampf und Eis ins All?",
+      "optionen": [
+        "Enceladus",
+        "Mimas",
+        "Rhea",
+        "Iapetus"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Enceladus (Mond)",
+        "url": "https://de.wikipedia.org/wiki/Enceladus_(Mond)"
+      }
+    },
+    {
+      "id": "rf-84",
+      "modus": "auswahl",
+      "frage": "Wie hieß das erste Programm der USA, mit dem Astronauten ins All flogen?",
+      "optionen": [
+        "Gemini",
+        "Mercury",
+        "Apollo",
+        "Skylab"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Mercury-Programm",
+        "url": "https://de.wikipedia.org/wiki/Mercury-Programm"
+      }
+    },
+    {
+      "id": "rf-85",
+      "modus": "auswahl",
+      "frage": "Wer stieg 1965 als erster Mensch zu einem Weltraumspaziergang aus seinem Raumschiff?",
+      "optionen": [
+        "Neil Armstrong",
+        "German Titow",
+        "Alexei Leonow",
+        "John Glenn"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Alexei Archipowitsch Leonow",
+        "url": "https://de.wikipedia.org/wiki/Alexei_Archipowitsch_Leonow"
+      }
+    },
+    {
+      "id": "rf-86",
+      "modus": "auswahl",
+      "frage": "Wie heißt der hellste Stern am Nachthimmel?",
+      "optionen": [
+        "Wega",
+        "Beteigeuze",
+        "Polarstern",
+        "Sirius"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Sirius",
+        "url": "https://de.wikipedia.org/wiki/Sirius"
+      }
+    },
+    {
+      "id": "rf-87",
+      "modus": "auswahl",
+      "frage": "Welches Sternbild erkennt man im Winter an den drei Sternen seines „Gürtels“?",
+      "optionen": [
+        "Orion",
+        "Kassiopeia",
+        "Löwe",
+        "Schwan"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Orion (Sternbild)",
+        "url": "https://de.wikipedia.org/wiki/Orion_(Sternbild)"
+      }
+    },
+    {
+      "id": "rf-88",
+      "modus": "auswahl",
+      "frage": "Wie heißt der NASA-Rover, der 2012 im Gale-Krater auf dem Mars landete?",
+      "optionen": [
+        "Spirit",
+        "Curiosity",
+        "Sojourner",
+        "Opportunity"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Mars Science Laboratory",
+        "url": "https://de.wikipedia.org/wiki/Mars_Science_Laboratory"
+      }
+    },
+    {
+      "id": "rf-89",
+      "modus": "auswahl",
+      "frage": "Wie heißt ein Himmelskörper, dessen Schwerkraft so stark ist, dass nicht einmal Licht ihm entkommt?",
+      "optionen": [
+        "Neutronenstern",
+        "Weißer Zwerg",
+        "Schwarzes Loch",
+        "Quasar"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Schwarzes Loch",
+        "url": "https://de.wikipedia.org/wiki/Schwarzes_Loch"
+      }
+    },
+    {
+      "id": "rf-90",
+      "modus": "auswahl",
+      "frage": "Welche NASA-Sonde kam der Sonne näher als jedes andere von Menschen gebaute Objekt?",
+      "optionen": [
+        "SOHO",
+        "Helios 2",
+        "Solar Orbiter",
+        "Parker Solar Probe"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Parker Solar Probe",
+        "url": "https://de.wikipedia.org/wiki/Parker_Solar_Probe"
+      }
+    },
+    {
+      "id": "rf-91",
+      "modus": "auswahl",
+      "frage": "Wie heißt der größte Mond des Neptun?",
+      "optionen": [
+        "Triton",
+        "Charon",
+        "Oberon",
+        "Phoebe"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Triton (Mond)",
+        "url": "https://de.wikipedia.org/wiki/Triton_(Mond)"
+      }
+    },
+    {
+      "id": "rf-92",
+      "modus": "auswahl",
+      "frage": "Wie hieß der europäische Raumfrachter, der ab 2008 die Internationale Raumstation versorgte?",
+      "optionen": [
+        "Dragon",
+        "ATV",
+        "Progress",
+        "Cygnus"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Automated Transfer Vehicle",
+        "url": "https://de.wikipedia.org/wiki/Automated_Transfer_Vehicle"
+      }
+    },
+    {
+      "id": "rf-93",
+      "modus": "auswahl",
+      "frage": "Welche Mission landete 2023 als erste nahe dem Südpol des Mondes?",
+      "optionen": [
+        "Mangalyaan",
+        "Hayabusa",
+        "Chandrayaan-3",
+        "Gaganyaan"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Chandrayaan-3",
+        "url": "https://de.wikipedia.org/wiki/Chandrayaan-3"
+      }
+    },
+    {
+      "id": "rf-94",
+      "modus": "auswahl",
+      "frage": "Wie heißen die Polarlichter auf der Nordhalbkugel mit Fachnamen?",
+      "optionen": [
+        "Aurora australis",
+        "Zodiakallicht",
+        "Elmsfeuer",
+        "Aurora borealis"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Polarlicht",
+        "url": "https://de.wikipedia.org/wiki/Polarlicht"
+      }
+    },
+    {
+      "id": "rf-95",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sternbilder hat die Internationale Astronomische Union offiziell festgelegt?",
+      "einheit": "",
+      "loesung": 88,
+      "quelle": {
+        "titel": "Wikipedia – Sternbild",
+        "url": "https://de.wikipedia.org/wiki/Sternbild"
+      }
+    },
+    {
+      "id": "rf-96",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilogramm Mondgestein brachten die Apollo-Missionen insgesamt zur Erde?",
+      "einheit": "kg",
+      "loesung": 382,
+      "quelle": {
+        "titel": "Wikipedia – Mondgestein",
+        "url": "https://de.wikipedia.org/wiki/Mondgestein"
+      }
+    },
+    {
+      "id": "rf-97",
+      "modus": "schaetzen",
+      "frage": "Wie viele Stunden dauert ein Tag auf dem Saturn (eine Drehung um sich selbst)?",
+      "einheit": "Stunden",
+      "loesung": 10.5,
+      "erklaerung": "Genauer: etwa 10 Stunden und 33 Minuten.",
+      "quelle": {
+        "titel": "Wikipedia – Saturn (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Saturn_(Planet)"
+      }
+    },
+    {
+      "id": "rf-98",
+      "modus": "schaetzen",
+      "frage": "Wie viele Meter misst die Internationale Raumstation über ihre Solarflügel von Ende zu Ende?",
+      "einheit": "m",
+      "loesung": 109,
+      "quelle": {
+        "titel": "Wikipedia – Internationale Raumstation",
+        "url": "https://de.wikipedia.org/wiki/Internationale_Raumstation"
+      }
+    },
+    {
+      "id": "rf-99",
+      "modus": "schaetzen",
+      "frage": "Wie viele Astronauten kamen 1986 beim Unglück des Space Shuttle Challenger ums Leben?",
+      "einheit": "",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Challenger-Katastrophe",
+        "url": "https://de.wikipedia.org/wiki/Challenger-Katastrophe"
+      }
+    },
+    {
+      "id": "rf-100",
+      "modus": "schaetzen",
+      "frage": "Mit wie vielen km/h flog die Besatzung von Apollo 10 – so schnell wie nie Menschen zuvor oder danach?",
+      "einheit": "km/h",
+      "loesung": 39897,
+      "quelle": {
+        "titel": "Wikipedia – Apollo 10",
+        "url": "https://de.wikipedia.org/wiki/Apollo_10"
+      }
+    },
+    {
+      "id": "rf-101",
+      "modus": "schaetzen",
+      "frage": "Wie viele Meter Durchmesser hat der Hauptspiegel des Hubble-Weltraumteleskops?",
+      "einheit": "m",
+      "loesung": 2.4,
+      "quelle": {
+        "titel": "Wikipedia – Hubble-Weltraumteleskop",
+        "url": "https://de.wikipedia.org/wiki/Hubble-Weltraumteleskop"
+      }
+    },
+    {
+      "id": "rf-102",
+      "modus": "schaetzen",
+      "frage": "In wie vielen Kilometern Höhe über dem Äquator kreisen geostationäre Satelliten?",
+      "einheit": "km",
+      "loesung": 35786,
+      "quelle": {
+        "titel": "Wikipedia – Geostationäre Umlaufbahn",
+        "url": "https://de.wikipedia.org/wiki/Geostation%C3%A4re_Umlaufbahn"
+      }
+    },
+    {
+      "id": "rf-103",
+      "modus": "schaetzen",
+      "frage": "Wie viele Milliarden Jahre alt ist unser Sonnensystem ungefähr?",
+      "einheit": "Milliarden Jahre",
+      "loesung": 4.6,
+      "quelle": {
+        "titel": "Wikipedia – Sonnensystem",
+        "url": "https://de.wikipedia.org/wiki/Sonnensystem"
+      }
+    },
+    {
+      "id": "rf-104",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie schnell muss eine Rakete sein, um der Schwerkraft des Jupiter zu entkommen (Fluchtgeschwindigkeit)?",
+      "daten": {
+        "einheit": "km/s",
+        "balken": [
+          {
+            "name": "Mond",
+            "wert": 2.3
+          },
+          {
+            "name": "Mars",
+            "wert": 5.0
+          },
+          {
+            "name": "Saturn",
+            "wert": 36.1
+          },
+          {
+            "name": "Jupiter",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 60.2,
+      "quelle": {
+        "titel": "Wikipedia – Fluchtgeschwindigkeit (Raumfahrt)",
+        "url": "https://de.wikipedia.org/wiki/Fluchtgeschwindigkeit_(Raumfahrt)"
+      }
+    },
+    {
+      "id": "rf-105",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Astronomische Einheiten (AE) ist Saturn im Mittel von der Sonne entfernt?",
+      "daten": {
+        "einheit": "AE",
+        "balken": [
+          {
+            "name": "Erde",
+            "wert": 1
+          },
+          {
+            "name": "Mars",
+            "wert": 1.52
+          },
+          {
+            "name": "Jupiter",
+            "wert": 5.2
+          },
+          {
+            "name": "Saturn",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 9.57,
+      "erklaerung": "1 AE ist der mittlere Abstand der Erde von der Sonne.",
+      "quelle": {
+        "titel": "Wikipedia – Saturn (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Saturn_(Planet)"
+      }
+    },
+    {
+      "id": "rf-106",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr landete mit Luna 9 zum ersten Mal eine Sonde weich auf dem Mond?",
+      "daten": {
+        "von": 1950,
+        "bis": 1990,
+        "ereignisse": [
+          {
+            "name": "Bau der Berliner Mauer",
+            "jahr": 1961
+          },
+          {
+            "name": "Fußball-WM in Deutschland",
+            "jahr": 1974
+          }
+        ]
+      },
+      "loesung": 1966,
+      "quelle": {
+        "titel": "Wikipedia – Luna 9",
+        "url": "https://de.wikipedia.org/wiki/Luna_9"
+      }
+    },
+    {
+      "id": "rf-107",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr zog die erste Langzeitbesatzung in die Internationale Raumstation ein?",
+      "daten": {
+        "von": 1980,
+        "bis": 2020,
+        "ereignisse": [
+          {
+            "name": "Erste PlayStation",
+            "jahr": 1994
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 2000,
+      "quelle": {
+        "titel": "Wikipedia – Internationale Raumstation",
+        "url": "https://de.wikipedia.org/wiki/Internationale_Raumstation"
+      }
+    },
+    {
+      "id": "rf-108",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo explodierte 1908 über der sibirischen Taiga ein Himmelskörper und knickte Millionen Bäume um (Tunguska-Ereignis)?",
+      "daten": {
+        "mitte": [
+          55,
+          85
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 60.89,
+        "lng": 101.89
+      },
+      "quelle": {
+        "titel": "Wikipedia – Tunguska-Ereignis",
+        "url": "https://de.wikipedia.org/wiki/Tunguska-Ereignis"
+      }
+    },
+    {
+      "id": "rf-109",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland trainieren die europäischen Astronauten (Europäisches Astronautenzentrum)?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 50.87,
+        "lng": 7.13
+      },
+      "quelle": {
+        "titel": "Wikipedia – Europäisches Astronautenzentrum",
+        "url": "https://de.wikipedia.org/wiki/Europ%C3%A4isches_Astronautenzentrum"
+      }
+    },
+    {
+      "id": "rf-110",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Sterne nach ihrem Durchmesser!",
+      "loesung": [
+        "Roter Überriese",
+        "Sonne",
+        "Weißer Zwerg",
+        "Neutronenstern"
+      ],
+      "oben": "größter",
+      "unten": "kleinster",
+      "erklaerung": "Ein Weißer Zwerg ist etwa so groß wie die Erde, ein Neutronenstern nur rund 20 km.",
+      "quelle": {
+        "titel": "Wikipedia – Neutronenstern",
+        "url": "https://de.wikipedia.org/wiki/Neutronenstern"
+      }
+    },
+    {
+      "id": "rf-111",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Farben der Sterne nach ihrer Oberflächentemperatur!",
+      "loesung": [
+        "Blau",
+        "Weiß",
+        "Gelb",
+        "Orange",
+        "Rot"
+      ],
+      "oben": "am heißesten",
+      "unten": "am kühlsten",
+      "quelle": {
+        "titel": "Wikipedia – Spektralklasse",
+        "url": "https://de.wikipedia.org/wiki/Spektralklasse"
+      }
+    },
+    {
+      "id": "rf-112",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Mondphasen in der Reihenfolge, in der sie ab Neumond aufeinander folgen!",
+      "loesung": [
+        "Neumond",
+        "Zunehmender Halbmond",
+        "Vollmond",
+        "Abnehmender Halbmond"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Mondphase",
+        "url": "https://de.wikipedia.org/wiki/Mondphase"
+      }
     }
   ],
   "stechfragen": [
@@ -1476,6 +1978,28 @@
       "quelle": {
         "titel": "Wikipedia – Uranus (Planet)",
         "url": "https://de.wikipedia.org/wiki/Uranus_(Planet)"
+      }
+    },
+    {
+      "id": "rf-s9",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr schickte China zum ersten Mal einen eigenen Raumfahrer ins All?",
+      "einheit": "",
+      "loesung": 2003,
+      "quelle": {
+        "titel": "Wikipedia – Shenzhou 5",
+        "url": "https://de.wikipedia.org/wiki/Shenzhou_5"
+      }
+    },
+    {
+      "id": "rf-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde die Europäische Weltraumorganisation gegründet?",
+      "einheit": "",
+      "loesung": 1975,
+      "quelle": {
+        "titel": "Wikipedia – Europäische Weltraumorganisation",
+        "url": "https://de.wikipedia.org/wiki/Europ%C3%A4ische_Weltraumorganisation"
       }
     }
   ]
