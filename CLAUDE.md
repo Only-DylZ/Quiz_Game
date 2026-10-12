@@ -543,8 +543,8 @@ Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
 **Aktueller Stand:** Phase 1 ist fertig und online (siehe „Online-Stellen“ unten).
 Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Phase 3 ist fertig:
 `validate.py`, `prompt.md`, Fragen-Pools mit Zufallsauswahl + Gedächtnis,
-Bildfragen, Modus `reihenfolge` und 13 Themenpakete à 72–97 Fragen (Pools
-wachsen Richtung 150), dazu das Sonderpaket „Die 500-€-Frage“ (`jauch.json`, im Aufbau). Phase 4a ist fertig: Themenrunden, GP-Ziel
+Bildfragen, Modus `reihenfolge` und 13 Themenpakete à 112–137 Fragen (Pools
+wachsen Richtung 150), dazu das Sonderpaket „Die 500-€-Frage“ (`jauch.json`, 72 Fragen, im Aufbau). Phase 4a ist fertig: Themenrunden, GP-Ziel
 (Einstellung in der Lobby), Stechfrage, Siegertreppchen nach GP. Phase 4b:
 Kandidatenwahl auf dem Handy + Glücksrad (`engine/rad.js`); `host.html?paket=<name>`
 spielt zum Testen in Runde 1 direkt dieses Thema. Phase 4c: Booster-Joker

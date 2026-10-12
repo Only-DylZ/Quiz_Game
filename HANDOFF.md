@@ -4,7 +4,7 @@
 > am Ende jeder Sitzung aktualisieren. Sie beschreibt nur den **aktuellen Stand**
 > und die **nächsten Schritte** – alles Dauerhafte steht in CLAUDE.md.
 
-**Letzte Sitzung:** 12.10.2026
+**Letzte Sitzung:** 13.10.2026
 
 ---
 
@@ -13,8 +13,9 @@
 - **Alle 5 Bauphasen sind fertig, getestet und online** (https://only-dylz.github.io/Quiz_Game/):
   Grundspiel, Grafik/Karte, Werkzeuge + 13 Themen, Themenrunden mit GP/Stechfrage/
   Glücksrad/Booster, Themenjoker mit Gemini (Supabase Edge Function).
-- **Fragen-Pools:** 13 Themen mit 72–97 Fragen und je 7 Stechfragen (Ziel 150).
-  Am 12.10.2026 um je 30 Fragen + 2 Stechfragen erweitert und danach um je 10 + 1 (Test-Block) – alles online.
+- **Fragen-Pools:** 13 Themen mit 112–137 Fragen + „Die 500-€-Frage“ (72), je 10 Stechfragen (Ziel 150).
+  Am 13.10.2026 um je 30 Fragen + 2 Stechfragen erweitert – **lokal committet, noch nicht gepusht**
+  (erst testen, dann `git push`).
 - **Optik-Umbau im Pixel-Stil** ist committet und online (11.10.2026), im ganzen Spiel
   aber noch nicht getestet.
 - **Avatare** (LPC-Figuren, Farmleben, Sprüche, Credits-Seite) sind im Spiel und online (12.10.2026).
@@ -52,16 +53,35 @@ Jahrmarkt-Rad, Tafel links/Rad rechts, Handy schmale Spalte. Probe-Dateien (`pro
 
 | Thema | Fragen | | Thema | Fragen |
 |---|---|---|---|---|
-| Raumfahrt | 82 | | Mathe | 99 |
-| Geographie | 107 | | Zurück in die Vergangenheit | 104 |
-| Tierwelt | 104 | | Das ist Deutsch | 105 |
-| Essen & Trinken | 103 | | Filme & Serien | 100 |
-| Biologie | 100 | | Videospiele | 100 |
-| Chemie | 102 | | Sport | 103 |
-| Physik | 100 | | Die 500-€-Frage | 42 |
+| Raumfahrt | 112 | | Mathe | 129 |
+| Geographie | 137 | | Zurück in die Vergangenheit | 134 |
+| Tierwelt | 134 | | Das ist Deutsch | 135 |
+| Essen & Trinken | 133 | | Filme & Serien | 130 |
+| Biologie | 130 | | Videospiele | 130 |
+| Chemie | 132 | | Sport | 133 |
+| Physik | 130 | | Die 500-€-Frage | 72 |
 
-Alle mit 8 Stechfragen (Mathe 7, 500-€-Frage 4). Stand nach dem Test-Block vom 12.10.2026
-(10 Fragen + 1 Stechfrage pro Thema, mit der neuen Pipeline geprüft).
+Alle mit 10 Stechfragen (Mathe 9, 500-€-Frage 6). Stand nach dem Block vom 13.10.2026
+(30 Fragen + 2 Stechfragen pro Thema, ein Commit pro Thema). Bis 150 fehlen noch 13–38
+Fragen pro Thema (500-€-Frage: 78) – nächster Block also eher kleiner.
+
+**Erfahrung aus dem Block vom 13.10.2026:**
+- Vor dem Schreiben `grep` nach Fakt **und** Jahreszahl über *alle* Pakete hat viel gespart
+  (Treffer z. B. Hofbräuhaus 1589, Galilei 1610, Atmosphärenschichten, Main-Donau-Kanal).
+- Häufigste neue Falle: **Jahreszahlen im Fragetext** („Apollo 10 im Jahr 1969“, „1950 bis 1953“,
+  „von 1994“) und Hilfsereignisse wie „Mauerfall 1989“/„Gründung der BRD 1949“, die Antworten
+  anderer Fragen sind. Sichere Hilfsereignisse: „Erste Fußball-WM 1930“, „Erstes iPhone 2007“,
+  „Euro-Bargeld 2002“, „Gründung des Deutschen Reichs 1871“, „Fußball-WM in Katar 2022“.
+- Auch Namen im Fragetext verraten oft Antworten (Luke Skywalker, Fortnite, Halo, Link, FC Bayern).
+- **`doppelt.py` hat ein Duplikat nicht erkannt:** essen-128 (Hofbräuhaus-Gründung) war schon
+  Stechfrage dd-s08 – erst beim Lesen der Fragenliste aufgefallen und ersetzt. Stechfragen werden
+  mitgeprüft; der Text war nur anders formuliert („Münchner“/„München“ ergeben verschiedene
+  Wortstämme, dazu Zusatzwörter), sodass die Ähnlichkeit unter der Schwelle blieb. Deshalb vor dem
+  Schreiben immer `grep` nach Stichwort **und** Jahreszahl.
+- Bei Wikipedia-Zahlen lohnt WebFetch: Spezi gibt es seit **1965** (nicht 1956), „Konfitüre extra“
+  hat seit Juni 2026 neue Grenzwerte (Frage deshalb weggelassen), Kartoffelbefehl 1746/1756 unklar.
+- Nachträglich behoben: rf-106 hatte das Hilfsereignis „Bau der Berliner Mauer 1961“ – zusammen
+  mit gesch-022 (1989) verriet das gesch-014 (28 Jahre).
 
 **Erfahrung aus dem Test-Block (12.10.2026):** Die Pipeline fand 17 echte Probleme, die beim
 Schreiben übersehen wurden – meist stand die Antwort einer *neuen* Frage schon sichtbar in einer
