@@ -14,8 +14,7 @@
   Grundspiel, Grafik/Karte, Werkzeuge + 13 Themen, Themenrunden mit GP/Stechfrage/
   Glücksrad/Booster, Themenjoker mit Gemini (Supabase Edge Function).
 - **Fragen-Pools:** 13 Themen mit 112–137 Fragen + „Die 500-€-Frage“ (72), je 10 Stechfragen (Ziel 150).
-  Am 13.10.2026 um je 30 Fragen + 2 Stechfragen erweitert – **lokal committet, noch nicht gepusht**
-  (erst testen, dann `git push`).
+  Am 13.10.2026 um je 30 Fragen + 2 Stechfragen erweitert – gepusht und online.
 - **Optik-Umbau im Pixel-Stil** ist committet und online (11.10.2026), im ganzen Spiel
   aber noch nicht getestet.
 - **Avatare** (LPC-Figuren, Farmleben, Sprüche, Credits-Seite) sind im Spiel und online (12.10.2026).
