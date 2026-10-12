@@ -413,18 +413,18 @@
     {
       "id": "wwm-033",
       "modus": "auswahl",
-      "frage": "Bei einem Würfel sägt man eine Ecke ab. Wie viele Ecken hat er danach?",
+      "frage": "Bei einer Pyramide mit dreieckiger Grundfläche sägt man die Spitze ab. Wie viele Ecken hat sie danach?",
       "optionen": [
-        "10",
-        "7",
-        "8",
-        "9"
+        "6",
+        "3",
+        "4",
+        "5"
       ],
       "loesung": 0,
-      "erklaerung": "Ein Würfel hat 8 Ecken. Eine fällt weg, an der dreieckigen Schnittfläche entstehen 3 neue: 8 − 1 + 3 = 10.",
+      "erklaerung": "Vorher 4 Ecken. Die Spitze fällt weg, an der dreieckigen Schnittfläche entstehen 3 neue: 4 − 1 + 3 = 6.",
       "quelle": {
-        "titel": "Wikipedia – Würfel (Geometrie)",
-        "url": "https://de.wikipedia.org/wiki/Würfel_(Geometrie)"
+        "titel": "Wikipedia – Tetraeder",
+        "url": "https://de.wikipedia.org/wiki/Tetraeder"
       }
     },
     {

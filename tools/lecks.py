@@ -62,6 +62,17 @@ def antworten(f):
     return set()
 
 
+def kleine_zahl(f):
+    """Lösung als Text, wenn sie eine kleine Zahl ist (die antworten() überspringt)."""
+    z = f.get("loesung")
+    if f["modus"] == "auswahl":
+        z = f["optionen"][z]
+        return z if z.isdigit() and len(z) <= 2 else None
+    if isinstance(z, (int, float)) and not isinstance(z, bool) and abs(z) < 100:
+        return str(int(z)) if float(z).is_integer() else str(z).replace(".", ",")
+    return None
+
+
 def sichtbar_teile(f):
     """Alles, was Spieler von dieser Frage sehen (auch nach der Auflösung),
     aufgeteilt in (stark, text): stark=False nur für falsche Auswahl-Optionen."""
@@ -117,13 +128,31 @@ FUELLWOERTER = {
     "beste", "meiste", "größte", "kleins", "höchst", "länger", "längst", "insges",
     "quelle", "wiki", "wikipe", "welche", "werden", "worden", "seine", "seiner",
     "seinem", "seinen", "unter", "über", "nach", "wieder", "immer", "schon", "damit",
+    # kurze Allerweltswörter (4 Buchstaben)
+    "jahr", "viel", "wann", "wird", "sind", "eine", "beim", "auch", "noch", "oder",
+    "aber", "wenn", "dann", "denn", "sein", "ihre", "erst", "mehr", "sehr", "groß",
+    "hoch", "lang", "alle", "jede", "habe", "gibt", "etwa", "heut", "eins", "zwei",
+    "drei", "vier", "fünf", "acht", "neun", "zehn", "ganz", "kein", "nach",
 }
 
 
 def stichworte(text):
     """Wortstämme (erste 5 Buchstaben, also „Mauer“ = „Mauerfall“) der Inhaltswörter."""
-    worte = re.findall(r"[a-zäöüß]{5,}", str(text).lower())
-    return {w[:5] for w in worte if w[:6] not in FUELLWOERTER and w[:5] not in FUELLWOERTER}
+    worte = re.findall(r"[a-zäöüß]{4,}", str(text).lower())
+    ergebnis = set()
+    for w in worte:
+        if len(w) == 4:
+            if w not in FUELLWOERTER:  # „Mond“, „Gold“ – aber nicht „Jahr“
+                ergebnis.add(w)
+        elif w[:6] not in FUELLWOERTER and w[:5] not in FUELLWOERTER:
+            ergebnis.add(w[:5])
+    return ergebnis
+
+
+def gemeinsam(a, b):
+    """Haben zwei Stichwort-Mengen etwas gemeinsam? Auch Wortanfänge zählen:
+    „mond“ (Mond) passt zu „mondl“ (Mondlandung)."""
+    return any(x.startswith(y) or y.startswith(x) for x in a for y in b)
 
 
 def merkliste_laden():
@@ -167,7 +196,7 @@ def main():
                 if muster.search(stark):
                     # Gemeinsames Stichwort (außer der Antwort selbst) → wohl kein Zufall
                     p_worte = stichworte(stark) - stichworte(token)
-                    art = "stark" if q_worte & p_worte else "zufall"
+                    art = "stark" if gemeinsam(q_worte, p_worte) else "zufall"
                 elif muster.search(schwach):
                     art = "schwach"
                 else:
@@ -177,6 +206,26 @@ def main():
                     continue
                 stelle = fundstelle(p, muster) if kontext else ""
                 gruppen[art].setdefault((q["id"], token, q["frage"]), []).append((p["id"], stelle))
+
+        # Kleine Zahlen (z. B. 8) sind meist Zufall – außer direkt dahinter steht
+        # ein Wort aus der Frage: „8 Ecken“ verrät „Wie viele Ecken hat ein Würfel?“
+        zahl = kleine_zahl(q)
+        if zahl is None:
+            continue
+        muster = re.compile(r"(?<![\w.,])" + re.escape(zahl) + r"\s+([A-Za-zÄÖÜäöüß]{5,})")
+        for p in alle:
+            if p is q or not (auswahl_passt(q["id"], auswahl) or auswahl_passt(p["id"], auswahl)):
+                continue
+            for treffer in muster.finditer(teile[id(p)][0]):
+                wort = treffer.group(1)
+                if not gemeinsam(stichworte(wort), q_worte):
+                    continue
+                token = f"{zahl} {wort}"
+                if f"{p['id']} {q['id']} {token}" in bekannt:
+                    uebersprungen += 1
+                    continue
+                stelle = fundstelle(p, re.compile(re.escape(token))) if kontext else ""
+                gruppen["stark"].setdefault((q["id"], token, q["frage"]), []).append((p["id"], stelle))
 
     ueberschriften = {
         "stark": "STARK – Antwort steht in einer Frage mit gleichem Stichwort (genau prüfen):",

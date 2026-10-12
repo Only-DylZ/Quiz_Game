@@ -90,9 +90,16 @@ Behalten: wwm-007, wwm-010, wwm-s01; neu wwm-011 … wwm-040 + wwm-s02/s03 (32 F
   Quelle von essen-028), mathe-078 (verriet Stechfrage mathe-s04), mathe-s07 (Muster
   aus mathe-051). Grenzfall stehen gelassen: „Ende des Ersten Weltkriegs 1918“ als
   Hilfsereignis ↔ Stechfrage gesch-s07 Frauenwahlrecht 1918.
-- **Offen – Altlasten der schon committeten Fragen:** `lecks.py` (ohne `--neu`) noch
-  39 starke + 242 „ohne Stichwort“, `doppelt.py` (ohne `--neu`) 23 Kandidaten.
-  Einmal bewerten (mit `--kontext`), echte Probleme beheben, Rest mit `--merken`.
+- **Altlasten abgebaut (12.10.2026):** `lecks.py` und `doppelt.py` melden über alle
+  Pakete 0 offene Treffer (nur „schwache“ = falsche Optionen werden gezählt). Behoben:
+  dd-056 („der 16 Bundesländer“ verriet geo-006), game-016 („Battle Royale“ verriet
+  game-007), essen-013 (Erklärung „Gerste“ verriet essen-037), bio-027/tier-026
+  (Hilfsereignis „Mondlandung 1969“ verriet rf-07 → „Erste Farbfernsehsendung in
+  Deutschland 1967“), wwm-033 (Würfel verriet mathe-001 → Pyramide).
+  `lecks.py` erkennt jetzt auch kleine Zahlen mit passendem Wort („8 Ecken“) und
+  Wortanfänge („Mond“ ↔ „Mondlandung“).
+- Bewusst stehen gelassen: film-001/gesch-006 haben beide die Antwort „Titanic“;
+  game-042 „Mario Kart“ ist schon aus der eigenen Frage erratbar.
 
 ---
 
