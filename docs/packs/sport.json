@@ -1700,6 +1700,495 @@
         "titel": "Wikipedia – Gewichtsklasse",
         "url": "https://de.wikipedia.org/wiki/Gewichtsklasse"
       }
+    },
+    {
+      "id": "sport-104",
+      "modus": "auswahl",
+      "frage": "Welches Land gewann 1987 die allererste Rugby-Weltmeisterschaft?",
+      "optionen": [
+        "Australien",
+        "Neuseeland",
+        "Südafrika",
+        "England"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Rugby-Union-Weltmeisterschaft 1987",
+        "url": "https://de.wikipedia.org/wiki/Rugby-Union-Weltmeisterschaft_1987"
+      }
+    },
+    {
+      "id": "sport-105",
+      "modus": "auswahl",
+      "frage": "Welcher deutsche Fußballer wurde „der Kaiser“ genannt?",
+      "optionen": [
+        "Günter Netzer",
+        "Franz Beckenbauer",
+        "Uwe Seeler",
+        "Lothar Matthäus"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Franz Beckenbauer",
+        "url": "https://de.wikipedia.org/wiki/Franz_Beckenbauer"
+      }
+    },
+    {
+      "id": "sport-106",
+      "modus": "auswahl",
+      "frage": "Wie heißt die große Rundfahrt der Radprofis durch Italien?",
+      "optionen": [
+        "Giro d’Italia",
+        "Vuelta a España",
+        "Tour de Suisse",
+        "Paris–Roubaix"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Giro d’Italia",
+        "url": "https://de.wikipedia.org/wiki/Giro_d%E2%80%99Italia"
+      }
+    },
+    {
+      "id": "sport-107",
+      "modus": "auswahl",
+      "frage": "Welche Kampfsportart stammt aus Korea?",
+      "optionen": [
+        "Karate",
+        "Aikido",
+        "Taekwondo",
+        "Kung Fu"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Taekwondo",
+        "url": "https://de.wikipedia.org/wiki/Taekwondo"
+      }
+    },
+    {
+      "id": "sport-108",
+      "modus": "auswahl",
+      "frage": "Welche Stadt richtete als erste in Südamerika Olympische Sommerspiele aus?",
+      "optionen": [
+        "London",
+        "Tokio",
+        "Rio de Janeiro",
+        "Athen"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Olympische Sommerspiele 2016",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2016"
+      }
+    },
+    {
+      "id": "sport-109",
+      "modus": "auswahl",
+      "frage": "In welcher Sportart wurde Magdalena Neuner zwölfmal Weltmeisterin?",
+      "optionen": [
+        "Skilanglauf",
+        "Biathlon",
+        "Skispringen",
+        "Rodeln"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Magdalena Neuner",
+        "url": "https://de.wikipedia.org/wiki/Magdalena_Neuner"
+      }
+    },
+    {
+      "id": "sport-110",
+      "modus": "auswahl",
+      "frage": "Wie nennt man beim Tennis einen Aufschlag, den der Gegner gar nicht berührt?",
+      "optionen": [
+        "Ass",
+        "Break",
+        "Volley",
+        "Lob"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Aufschlag (Tennis)",
+        "url": "https://de.wikipedia.org/wiki/Aufschlag_(Tennis)"
+      }
+    },
+    {
+      "id": "sport-111",
+      "modus": "auswahl",
+      "frage": "Welcher Fußballer schoss die meisten Tore bei Weltmeisterschaften?",
+      "optionen": [
+        "Ronaldo",
+        "Gerd Müller",
+        "Pelé",
+        "Miroslav Klose"
+      ],
+      "loesung": 3,
+      "erklaerung": "Klose traf bei vier Weltmeisterschaften insgesamt 16-mal.",
+      "quelle": {
+        "titel": "Wikipedia – Miroslav Klose",
+        "url": "https://de.wikipedia.org/wiki/Miroslav_Klose"
+      }
+    },
+    {
+      "id": "sport-112",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Münchner Fußballstadion, dessen Außenhülle in Rot, Blau oder Weiß leuchten kann?",
+      "optionen": [
+        "Signal Iduna Park",
+        "Olympiastadion",
+        "Veltins-Arena",
+        "Allianz Arena"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Allianz Arena",
+        "url": "https://de.wikipedia.org/wiki/Allianz_Arena"
+      }
+    },
+    {
+      "id": "sport-113",
+      "modus": "auswahl",
+      "frage": "In welcher Sportart gibt es einen „Libero“, der ein andersfarbiges Trikot trägt und nur hinten spielen darf?",
+      "optionen": [
+        "Volleyball",
+        "Basketball",
+        "Handball",
+        "Wasserball"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Volleyball",
+        "url": "https://de.wikipedia.org/wiki/Volleyball"
+      }
+    },
+    {
+      "id": "sport-114",
+      "modus": "auswahl",
+      "frage": "In welcher Sportart wischt man mit Besen vor einem gleitenden Stein auf dem Eis her?",
+      "optionen": [
+        "Eisstockschießen",
+        "Bobfahren",
+        "Shuffleboard",
+        "Curling"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Curling",
+        "url": "https://de.wikipedia.org/wiki/Curling"
+      }
+    },
+    {
+      "id": "sport-115",
+      "modus": "auswahl",
+      "frage": "In welchem Land wurde Cricket erfunden?",
+      "optionen": [
+        "Indien",
+        "Australien",
+        "England",
+        "Südafrika"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Cricket",
+        "url": "https://de.wikipedia.org/wiki/Cricket"
+      }
+    },
+    {
+      "id": "sport-116",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler einer Wasserballmannschaft sind gleichzeitig im Wasser (mit Torwart)?",
+      "einheit": "Spieler",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Wasserball",
+        "url": "https://de.wikipedia.org/wiki/Wasserball"
+      }
+    },
+    {
+      "id": "sport-117",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten dauert eine Halbzeit beim Handball?",
+      "einheit": "Minuten",
+      "loesung": 30,
+      "quelle": {
+        "titel": "Wikipedia – Handball",
+        "url": "https://de.wikipedia.org/wiki/Handball"
+      }
+    },
+    {
+      "id": "sport-118",
+      "modus": "schaetzen",
+      "frage": "Über wie viele Runden geht ein Profi-Boxkampf um einen Weltmeistertitel?",
+      "einheit": "Runden",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Boxen",
+        "url": "https://de.wikipedia.org/wiki/Boxen"
+      }
+    },
+    {
+      "id": "sport-119",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilometer lang ist die Radstrecke beim Ironman-Triathlon?",
+      "einheit": "km",
+      "loesung": 180,
+      "quelle": {
+        "titel": "Wikipedia – Ironman",
+        "url": "https://de.wikipedia.org/wiki/Ironman"
+      }
+    },
+    {
+      "id": "sport-120",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm darf ein Fußball für Spiele der Erwachsenen höchstens wiegen?",
+      "einheit": "g",
+      "loesung": 450,
+      "quelle": {
+        "titel": "Wikipedia – Fußball (Sportgerät)",
+        "url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball_(Sportger%C3%A4t)"
+      }
+    },
+    {
+      "id": "sport-121",
+      "modus": "schaetzen",
+      "frage": "Wie viele Punkte braucht man beim Volleyball normalerweise, um einen Satz zu gewinnen?",
+      "einheit": "Punkte",
+      "loesung": 25,
+      "quelle": {
+        "titel": "Wikipedia – Volleyball",
+        "url": "https://de.wikipedia.org/wiki/Volleyball"
+      }
+    },
+    {
+      "id": "sport-122",
+      "modus": "schaetzen",
+      "frage": "Wie viele Punkte braucht man beim Tischtennis, um einen Satz zu gewinnen?",
+      "einheit": "Punkte",
+      "loesung": 11,
+      "quelle": {
+        "titel": "Wikipedia – Tischtennis",
+        "url": "https://de.wikipedia.org/wiki/Tischtennis"
+      }
+    },
+    {
+      "id": "sport-123",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten dauert ein Viertel beim Basketball nach den Regeln des Weltverbands FIBA?",
+      "einheit": "Minuten",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Basketball",
+        "url": "https://de.wikipedia.org/wiki/Basketball"
+      }
+    },
+    {
+      "id": "sport-124",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilogramm wiegt der Diskus der Männer?",
+      "einheit": "kg",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Diskuswurf",
+        "url": "https://de.wikipedia.org/wiki/Diskuswurf"
+      }
+    },
+    {
+      "id": "sport-125",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr fanden die ersten Olympischen Winterspiele statt?",
+      "daten": {
+        "von": 1850,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1924,
+      "quelle": {
+        "titel": "Wikipedia – Olympische Winterspiele 1924",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_1924"
+      }
+    },
+    {
+      "id": "sport-126",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde die erste Formel-1-Weltmeisterschaft ausgetragen?",
+      "daten": {
+        "von": 1850,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1950,
+      "quelle": {
+        "titel": "Wikipedia – Formel-1-Weltmeisterschaft 1950",
+        "url": "https://de.wikipedia.org/wiki/Formel-1-Weltmeisterschaft_1950"
+      }
+    },
+    {
+      "id": "sport-127",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Super Bowl zum ersten Mal gespielt?",
+      "daten": {
+        "von": 1920,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1967,
+      "quelle": {
+        "titel": "Wikipedia – Super Bowl I",
+        "url": "https://de.wikipedia.org/wiki/Super_Bowl_I"
+      }
+    },
+    {
+      "id": "sport-128",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Augusta, wo jedes Jahr das Golfturnier „The Masters“ stattfindet?",
+      "daten": {
+        "mitte": [
+          40,
+          -98
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 33.5,
+        "lng": -82.02
+      },
+      "quelle": {
+        "titel": "Wikipedia – Augusta National Golf Club",
+        "url": "https://de.wikipedia.org/wiki/Augusta_National_Golf_Club"
+      }
+    },
+    {
+      "id": "sport-129",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt der Hockenheimring?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 49.33,
+        "lng": 8.57
+      },
+      "quelle": {
+        "titel": "Wikipedia – Hockenheimring",
+        "url": "https://de.wikipedia.org/wiki/Hockenheimring"
+      }
+    },
+    {
+      "id": "sport-130",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Daytona Beach mit seinem berühmten 500-Meilen-Rennen der NASCAR?",
+      "daten": {
+        "mitte": [
+          40,
+          -98
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 29.19,
+        "lng": -81.07
+      },
+      "quelle": {
+        "titel": "Wikipedia – Daytona 500",
+        "url": "https://de.wikipedia.org/wiki/Daytona_500"
+      }
+    },
+    {
+      "id": "sport-131",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Ergebnisse im Golf an einem Loch – vom besten zum schlechtesten!",
+      "loesung": [
+        "Albatross",
+        "Eagle",
+        "Birdie",
+        "Par",
+        "Bogey"
+      ],
+      "oben": "bestes Ergebnis",
+      "unten": "schlechtestes Ergebnis",
+      "werte": [
+        "3 unter Par",
+        "2 unter Par",
+        "1 unter Par",
+        "Par",
+        "1 über Par"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Golf",
+        "url": "https://de.wikipedia.org/wiki/Golf"
+      }
+    },
+    {
+      "id": "sport-132",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Triathlon-Distanzen nach ihrer Länge!",
+      "loesung": [
+        "Sprintdistanz",
+        "Olympische Distanz",
+        "Mitteldistanz",
+        "Langdistanz"
+      ],
+      "oben": "kürzeste",
+      "unten": "längste",
+      "quelle": {
+        "titel": "Wikipedia – Triathlon",
+        "url": "https://de.wikipedia.org/wiki/Triathlon"
+      }
+    },
+    {
+      "id": "sport-133",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Orte der Vierschanzentournee in der Reihenfolge der Springen!",
+      "loesung": [
+        "Oberstdorf",
+        "Garmisch-Partenkirchen",
+        "Innsbruck",
+        "Bischofshofen"
+      ],
+      "oben": "erstes Springen",
+      "unten": "letztes Springen",
+      "quelle": {
+        "titel": "Wikipedia – Vierschanzentournee",
+        "url": "https://de.wikipedia.org/wiki/Vierschanzentournee"
+      }
     }
   ],
   "stechfragen": [
@@ -1789,6 +2278,28 @@
       "quelle": {
         "titel": "Wikipedia – Golfball",
         "url": "https://de.wikipedia.org/wiki/Golfball"
+      }
+    },
+    {
+      "id": "sport-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde der Hamburger SV gegründet?",
+      "einheit": "",
+      "loesung": 1887,
+      "quelle": {
+        "titel": "Wikipedia – Hamburger SV",
+        "url": "https://de.wikipedia.org/wiki/Hamburger_SV"
+      }
+    },
+    {
+      "id": "sport-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr fand der erste Ironman-Triathlon auf Hawaii statt?",
+      "einheit": "",
+      "loesung": 1978,
+      "quelle": {
+        "titel": "Wikipedia – Ironman Hawaii",
+        "url": "https://de.wikipedia.org/wiki/Ironman_Hawaii"
       }
     }
   ]
