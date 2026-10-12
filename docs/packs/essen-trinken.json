@@ -2071,25 +2071,25 @@
       "id": "essen-128",
       "modus": "grafik",
       "art": "zeitleiste",
-      "frage": "In welchem Jahr wurde in München die herzogliche Brauerei Hofbräuhaus gegründet?",
+      "frage": "In welchem Jahr brachte die Augsburger Brauerei Riegele das Cola-Orangen-Getränk Spezi auf den Markt?",
       "daten": {
-        "von": 1450,
-        "bis": 1750,
+        "von": 1920,
+        "bis": 2010,
         "ereignisse": [
           {
-            "name": "Erster Druck der Gutenberg-Bibel",
-            "jahr": 1454
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
           },
           {
-            "name": "Ende des Dreißigjährigen Kriegs",
-            "jahr": 1648
+            "name": "Erstes iPhone",
+            "jahr": 2007
           }
         ]
       },
-      "loesung": 1589,
+      "loesung": 1965,
       "quelle": {
-        "titel": "Wikipedia – Hofbräuhaus am Platzl",
-        "url": "https://de.wikipedia.org/wiki/Hofbr%C3%A4uhaus_am_Platzl"
+        "titel": "Wikipedia – Spezi (Getränk)",
+        "url": "https://de.wikipedia.org/wiki/Spezi_(Getr%C3%A4nk)"
       }
     },
     {
