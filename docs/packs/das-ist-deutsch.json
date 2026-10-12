@@ -1125,6 +1125,481 @@
         "titel": "Wikipedia – Land (Deutschland)",
         "url": "https://de.wikipedia.org/wiki/Land_(Deutschland)"
       }
+    },
+    {
+      "id": "dd-067",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man die Erlaubnis, etwas zu nutzen (z. B. für Software), richtig?",
+      "optionen": [
+        "Lizens",
+        "Litzenz",
+        "Lizenz",
+        "Lizentz"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Lizenz",
+        "url": "https://de.wikipedia.org/wiki/Lizenz"
+      }
+    },
+    {
+      "id": "dd-068",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das technische Gerät richtig?",
+      "optionen": [
+        "Maschine",
+        "Maschiene",
+        "Machine",
+        "Mashine"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Maschine",
+        "url": "https://de.wikipedia.org/wiki/Maschine"
+      }
+    },
+    {
+      "id": "dd-069",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das Wort für „abschließend, für immer“ richtig?",
+      "optionen": [
+        "entgültig",
+        "endgültich",
+        "entgültich",
+        "endgültig"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Duden – endgültig",
+        "url": "https://www.duden.de/rechtschreibung/endgueltig"
+      }
+    },
+    {
+      "id": "dd-070",
+      "modus": "auswahl",
+      "frage": "In welchem Satz stehen „das“ und „dass“ richtig?",
+      "optionen": [
+        "Ich hoffe, das das klappt.",
+        "Ich hoffe, dass das klappt.",
+        "Ich hoffe, dass dass klappt.",
+        "Ich hoffe das, dass klappt."
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Duden – dass oder das?",
+        "url": "https://www.duden.de/sprachwissen/sprachratgeber/das-oder-dass"
+      }
+    },
+    {
+      "id": "dd-071",
+      "modus": "auswahl",
+      "frage": "Welche Stadt ist berühmt für ihren Christstollen?",
+      "optionen": [
+        "Nürnberg",
+        "Dresden",
+        "Aachen",
+        "Lübeck"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Dresdner Christstollen",
+        "url": "https://de.wikipedia.org/wiki/Dresdner_Christstollen"
+      }
+    },
+    {
+      "id": "dd-072",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Nacht zum 1. Mai, in der der Sage nach Hexen auf dem Brocken tanzen?",
+      "optionen": [
+        "Rauhnacht",
+        "Johannisnacht",
+        "Thomasnacht",
+        "Walpurgisnacht"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Walpurgisnacht",
+        "url": "https://de.wikipedia.org/wiki/Walpurgisnacht"
+      }
+    },
+    {
+      "id": "dd-073",
+      "modus": "auswahl",
+      "frage": "Wer schrieb den Roman „Die Blechtrommel“?",
+      "optionen": [
+        "Günter Grass",
+        "Heinrich Böll",
+        "Thomas Mann",
+        "Hermann Hesse"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Die Blechtrommel",
+        "url": "https://de.wikipedia.org/wiki/Die_Blechtrommel"
+      }
+    },
+    {
+      "id": "dd-074",
+      "modus": "auswahl",
+      "frage": "Welcher Komponist schrieb das „Weihnachtsoratorium“?",
+      "optionen": [
+        "Georg Friedrich Händel",
+        "Ludwig van Beethoven",
+        "Johann Sebastian Bach",
+        "Joseph Haydn"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Weihnachtsoratorium",
+        "url": "https://de.wikipedia.org/wiki/Weihnachtsoratorium"
+      }
+    },
+    {
+      "id": "dd-075",
+      "modus": "auswahl",
+      "frage": "Welche deutsche Stadt wird wegen ihrer Hochhäuser „Mainhattan“ genannt?",
+      "optionen": [
+        "Offenbach",
+        "Würzburg",
+        "Mainz",
+        "Frankfurt am Main"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Frankfurt am Main",
+        "url": "https://de.wikipedia.org/wiki/Frankfurt_am_Main"
+      }
+    },
+    {
+      "id": "dd-076",
+      "modus": "auswahl",
+      "frage": "Wer erfand den nach ihm benannten Selbstzünder-Motor?",
+      "optionen": [
+        "Gottlieb Daimler",
+        "Rudolf Diesel",
+        "Nikolaus Otto",
+        "Wilhelm Maybach"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Rudolf Diesel",
+        "url": "https://de.wikipedia.org/wiki/Rudolf_Diesel"
+      }
+    },
+    {
+      "id": "dd-077",
+      "modus": "auswahl",
+      "frage": "Aus welchem Bundesland stammt die Weißwurst?",
+      "optionen": [
+        "Thüringen",
+        "Sachsen",
+        "Bayern",
+        "Hessen"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Weißwurst",
+        "url": "https://de.wikipedia.org/wiki/Weißwurst"
+      }
+    },
+    {
+      "id": "dd-078",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein Brötchen in Berlin?",
+      "optionen": [
+        "Schrippe",
+        "Weckle",
+        "Semmel",
+        "Rundstück"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Brötchen",
+        "url": "https://de.wikipedia.org/wiki/Brötchen"
+      }
+    },
+    {
+      "id": "dd-079",
+      "modus": "schaetzen",
+      "frage": "Wie viele Buchstaben hat das Wort „Kraftfahrzeughaftpflichtversicherung“?",
+      "einheit": "",
+      "loesung": 36,
+      "quelle": {
+        "titel": "Wikipedia – Kraftfahrzeug-Haftpflichtversicherung",
+        "url": "https://de.wikipedia.org/wiki/Kraftfahrzeug-Haftpflichtversicherung"
+      }
+    },
+    {
+      "id": "dd-080",
+      "modus": "schaetzen",
+      "frage": "Wie viele der Ostfriesischen Inseln sind bewohnt?",
+      "einheit": "",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Ostfriesische Inseln",
+        "url": "https://de.wikipedia.org/wiki/Ostfriesische_Inseln"
+      }
+    },
+    {
+      "id": "dd-081",
+      "modus": "schaetzen",
+      "frage": "Wie lang war die innerdeutsche Grenze zwischen BRD und DDR?",
+      "einheit": "km",
+      "loesung": 1393,
+      "quelle": {
+        "titel": "Wikipedia – Innerdeutsche Grenze",
+        "url": "https://de.wikipedia.org/wiki/Innerdeutsche_Grenze"
+      }
+    },
+    {
+      "id": "dd-082",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zeichen hat eine deutsche IBAN?",
+      "einheit": "",
+      "loesung": 22,
+      "quelle": {
+        "titel": "Wikipedia – Internationale Bankkontonummer",
+        "url": "https://de.wikipedia.org/wiki/Internationale_Bankkontonummer"
+      }
+    },
+    {
+      "id": "dd-083",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zentimeter ist ein DIN-A4-Blatt lang?",
+      "einheit": "cm",
+      "loesung": 29.7,
+      "quelle": {
+        "titel": "Wikipedia – Papierformat",
+        "url": "https://de.wikipedia.org/wiki/Papierformat"
+      }
+    },
+    {
+      "id": "dd-084",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Main-Donau-Kanal?",
+      "einheit": "km",
+      "loesung": 171,
+      "quelle": {
+        "titel": "Wikipedia – Main-Donau-Kanal",
+        "url": "https://de.wikipedia.org/wiki/Main-Donau-Kanal"
+      }
+    },
+    {
+      "id": "dd-085",
+      "modus": "schaetzen",
+      "frage": "Wie viele Stimmen hat man bei der Bundestagswahl?",
+      "einheit": "",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Bundestagswahl",
+        "url": "https://de.wikipedia.org/wiki/Bundestagswahl"
+      }
+    },
+    {
+      "id": "dd-086",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre dauert eine Wahlperiode des Deutschen Bundestags?",
+      "einheit": "Jahre",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Wahlperiode",
+        "url": "https://de.wikipedia.org/wiki/Wahlperiode"
+      }
+    },
+    {
+      "id": "dd-087",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Ziffern besteht die steuerliche Identifikationsnummer in Deutschland?",
+      "einheit": "",
+      "loesung": 11,
+      "quelle": {
+        "titel": "Wikipedia – Steuerliche Identifikationsnummer",
+        "url": "https://de.wikipedia.org/wiki/Steuerliche_Identifikationsnummer"
+      }
+    },
+    {
+      "id": "dd-088",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie hoch ist der Turm der Hamburger Hauptkirche St. Michaelis („Michel“)?",
+      "daten": {
+        "einheit": "m",
+        "balken": [
+          {
+            "name": "Siegessäule",
+            "wert": 67
+          },
+          {
+            "name": "Frauenkirche",
+            "wert": 91
+          },
+          {
+            "name": "Michel",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 132,
+      "quelle": {
+        "titel": "Wikipedia – Hauptkirche St. Michaelis (Hamburg)",
+        "url": "https://de.wikipedia.org/wiki/Hauptkirche_Sankt_Michaelis"
+      }
+    },
+    {
+      "id": "dd-089",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie groß ist die Insel Sylt?",
+      "daten": {
+        "einheit": "km²",
+        "balken": [
+          {
+            "name": "Rügen",
+            "wert": 926
+          },
+          {
+            "name": "Fehmarn",
+            "wert": 185
+          },
+          {
+            "name": "Sylt",
+            "wert": null
+          },
+          {
+            "name": "Föhr",
+            "wert": 82
+          }
+        ]
+      },
+      "loesung": 99,
+      "quelle": {
+        "titel": "Wikipedia – Sylt",
+        "url": "https://de.wikipedia.org/wiki/Sylt"
+      }
+    },
+    {
+      "id": "dd-091",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschienen die „Kinder- und Hausmärchen“ der Brüder Grimm zum ersten Mal?",
+      "daten": {
+        "von": 1750,
+        "bis": 1850,
+        "ereignisse": [
+          {
+            "name": "Geburt Beethovens",
+            "jahr": 1770
+          },
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          }
+        ]
+      },
+      "loesung": 1812,
+      "quelle": {
+        "titel": "Wikipedia – Grimms Märchen",
+        "url": "https://de.wikipedia.org/wiki/Grimms_Märchen"
+      }
+    },
+    {
+      "id": "dd-092",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo steht das Hermannsdenkmal?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 51.91,
+        "lng": 8.84
+      },
+      "quelle": {
+        "titel": "Wikipedia – Hermannsdenkmal",
+        "url": "https://de.wikipedia.org/wiki/Hermannsdenkmal"
+      }
+    },
+    {
+      "id": "dd-093",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Hochseeinsel Helgoland?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 54.18,
+        "lng": 7.89
+      },
+      "quelle": {
+        "titel": "Wikipedia – Helgoland",
+        "url": "https://de.wikipedia.org/wiki/Helgoland"
+      }
+    },
+    {
+      "id": "dd-094",
+      "modus": "reihenfolge",
+      "frage": "Ordne die vier Fälle in der üblichen Reihenfolge!",
+      "loesung": [
+        "Nominativ",
+        "Genitiv",
+        "Dativ",
+        "Akkusativ"
+      ],
+      "oben": "1. Fall",
+      "unten": "4. Fall",
+      "quelle": {
+        "titel": "Wikipedia – Kasus",
+        "url": "https://de.wikipedia.org/wiki/Kasus"
+      }
+    },
+    {
+      "id": "dd-095",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Bundesländer von Nord nach Süd!",
+      "loesung": [
+        "Mecklenburg-Vorpommern",
+        "Brandenburg",
+        "Sachsen",
+        "Bayern"
+      ],
+      "oben": "nördlichstes",
+      "unten": "südlichstes",
+      "quelle": {
+        "titel": "Wikipedia – Land (Deutschland)",
+        "url": "https://de.wikipedia.org/wiki/Land_(Deutschland)"
+      }
+    },
+    {
+      "id": "dd-096",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Werke nach ihrem Erscheinen!",
+      "loesung": [
+        "Die Räuber",
+        "Faust I",
+        "Buddenbrooks",
+        "Die Blechtrommel"
+      ],
+      "oben": "ältestes",
+      "unten": "jüngstes",
+      "werte": [
+        "1781",
+        "1808",
+        "1901",
+        "1959"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Deutsche Literatur",
+        "url": "https://de.wikipedia.org/wiki/Deutsche_Literatur"
+      }
     }
   ],
   "stechfragen": [
@@ -1181,6 +1656,28 @@
       "quelle": {
         "titel": "Wikipedia – Hafengeburtstag",
         "url": "https://de.wikipedia.org/wiki/Hafengeburtstag"
+      }
+    },
+    {
+      "id": "dd-s06",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde die Elbphilharmonie in Hamburg eröffnet?",
+      "einheit": "",
+      "loesung": 2017,
+      "quelle": {
+        "titel": "Wikipedia – Elbphilharmonie",
+        "url": "https://de.wikipedia.org/wiki/Elbphilharmonie"
+      }
+    },
+    {
+      "id": "dd-s07",
+      "modus": "schaetzen",
+      "frage": "Wie viele Stufen führen auf den Turm des Ulmer Münsters?",
+      "einheit": "",
+      "loesung": 768,
+      "quelle": {
+        "titel": "Wikipedia – Ulmer Münster",
+        "url": "https://de.wikipedia.org/wiki/Ulmer_Münster"
       }
     }
   ]

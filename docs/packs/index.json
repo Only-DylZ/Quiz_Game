@@ -51,6 +51,10 @@
     {
       "datei": "sport.json",
       "thema": "Sport"
+    },
+    {
+      "datei": "jauch.json",
+      "thema": "Die 500-€-Frage"
     }
   ]
 }

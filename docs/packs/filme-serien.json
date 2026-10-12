@@ -989,6 +989,506 @@
         "titel": "Wikipedia – Fernsehserie",
         "url": "https://de.wikipedia.org/wiki/Fernsehserie"
       }
+    },
+    {
+      "id": "film-061",
+      "modus": "auswahl",
+      "frage": "Wer spielte Forrest Gump?",
+      "optionen": [
+        "Tom Cruise",
+        "Kevin Costner",
+        "Tom Hanks",
+        "Robin Williams"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Forrest Gump",
+        "url": "https://de.wikipedia.org/wiki/Forrest_Gump"
+      }
+    },
+    {
+      "id": "film-062",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Schulleiter von Hogwarts in den ersten Harry-Potter-Bänden?",
+      "optionen": [
+        "Albus Dumbledore",
+        "Severus Snape",
+        "Rubeus Hagrid",
+        "Minerva McGonagall"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Albus Dumbledore",
+        "url": "https://de.wikipedia.org/wiki/Albus_Dumbledore"
+      }
+    },
+    {
+      "id": "film-063",
+      "modus": "auswahl",
+      "frage": "Wer spielte Hermine Granger in den Harry-Potter-Filmen?",
+      "optionen": [
+        "Emma Stone",
+        "Bonnie Wright",
+        "Keira Knightley",
+        "Emma Watson"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Emma Watson",
+        "url": "https://de.wikipedia.org/wiki/Emma_Watson"
+      }
+    },
+    {
+      "id": "film-064",
+      "modus": "auswahl",
+      "frage": "In welcher Stadt kämpft Batman gegen das Verbrechen?",
+      "optionen": [
+        "Metropolis",
+        "Gotham City",
+        "Star City",
+        "Central City"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Gotham City",
+        "url": "https://de.wikipedia.org/wiki/Gotham_City"
+      }
+    },
+    {
+      "id": "film-065",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Cowboy in „Toy Story“?",
+      "optionen": [
+        "Buzz",
+        "Woody",
+        "Jessie",
+        "Rex"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Toy Story",
+        "url": "https://de.wikipedia.org/wiki/Toy_Story"
+      }
+    },
+    {
+      "id": "film-066",
+      "modus": "auswahl",
+      "frage": "Wer spielte den Joker in „The Dark Knight“ (2008)?",
+      "optionen": [
+        "Joaquin Phoenix",
+        "Jared Leto",
+        "Jack Nicholson",
+        "Heath Ledger"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – The Dark Knight",
+        "url": "https://de.wikipedia.org/wiki/The_Dark_Knight"
+      }
+    },
+    {
+      "id": "film-067",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Königin in „Die Eiskönigin“, die Eis und Schnee erschaffen kann?",
+      "optionen": [
+        "Elsa",
+        "Anna",
+        "Ariel",
+        "Rapunzel"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Die Eiskönigin – Völlig unverfroren",
+        "url": "https://de.wikipedia.org/wiki/Die_Eiskönigin_–_Völlig_unverfroren"
+      }
+    },
+    {
+      "id": "film-068",
+      "modus": "auswahl",
+      "frage": "Welche Farbe hat das Lichtschwert von Darth Vader?",
+      "optionen": [
+        "Blau",
+        "Grün",
+        "Rot",
+        "Lila"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Darth Vader",
+        "url": "https://de.wikipedia.org/wiki/Darth_Vader"
+      }
+    },
+    {
+      "id": "film-069",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Gegenspieler von Harry Potter?",
+      "optionen": [
+        "Draco Malfoy",
+        "Gellert Grindelwald",
+        "Sirius Black",
+        "Lord Voldemort"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Figuren der Harry-Potter-Romane",
+        "url": "https://de.wikipedia.org/wiki/Figuren_der_Harry-Potter-Romane"
+      }
+    },
+    {
+      "id": "film-070",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Erfinder der Zeitmaschine in „Zurück in die Zukunft“?",
+      "optionen": [
+        "Doc Holliday",
+        "Doc Brown",
+        "Professor X",
+        "Dr. Who"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Zurück in die Zukunft",
+        "url": "https://de.wikipedia.org/wiki/Zurück_in_die_Zukunft"
+      }
+    },
+    {
+      "id": "film-071",
+      "modus": "auswahl",
+      "frage": "Wer führte Regie bei „Pulp Fiction“?",
+      "optionen": [
+        "Martin Scorsese",
+        "David Fincher",
+        "Quentin Tarantino",
+        "Guy Ritchie"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Pulp Fiction",
+        "url": "https://de.wikipedia.org/wiki/Pulp_Fiction"
+      }
+    },
+    {
+      "id": "film-072",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Androide in „Raumschiff Enterprise – Das nächste Jahrhundert“?",
+      "optionen": [
+        "Data",
+        "Spock",
+        "Worf",
+        "Q"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Star Trek: Das nächste Jahrhundert",
+        "url": "https://de.wikipedia.org/wiki/Star_Trek:_Das_nächste_Jahrhundert"
+      }
+    },
+    {
+      "id": "film-073",
+      "modus": "schaetzen",
+      "frage": "Wie viele Folgen hat die US-Serie „The Office“?",
+      "einheit": "",
+      "loesung": 201,
+      "quelle": {
+        "titel": "Wikipedia – The Office (US-Serie)",
+        "url": "https://de.wikipedia.org/wiki/The_Office_(US-amerikanische_Fernsehserie)"
+      }
+    },
+    {
+      "id": "film-074",
+      "modus": "schaetzen",
+      "frage": "In wie vielen offiziellen Bond-Filmen spielte Sean Connery den Agenten?",
+      "einheit": "",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – James Bond 007",
+        "url": "https://de.wikipedia.org/wiki/James_Bond_007"
+      }
+    },
+    {
+      "id": "film-075",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre liegen zwischen „Top Gun“ und „Top Gun: Maverick“?",
+      "einheit": "Jahre",
+      "loesung": 36,
+      "quelle": {
+        "titel": "Wikipedia – Top Gun: Maverick",
+        "url": "https://de.wikipedia.org/wiki/Top_Gun:_Maverick"
+      }
+    },
+    {
+      "id": "film-076",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Film „Avengers: Endgame“?",
+      "einheit": "Minuten",
+      "loesung": 181,
+      "quelle": {
+        "titel": "Wikipedia – Avengers: Endgame",
+        "url": "https://de.wikipedia.org/wiki/Avengers:_Endgame"
+      }
+    },
+    {
+      "id": "film-077",
+      "modus": "schaetzen",
+      "frage": "Wie viele Häuser gibt es in Hogwarts?",
+      "einheit": "",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Hogwarts",
+        "url": "https://de.wikipedia.org/wiki/Hogwarts"
+      }
+    },
+    {
+      "id": "film-078",
+      "modus": "schaetzen",
+      "frage": "Wie viele Oscars gewann „Everything Everywhere All at Once“?",
+      "einheit": "",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Everything Everywhere All at Once",
+        "url": "https://de.wikipedia.org/wiki/Everything_Everywhere_All_at_Once"
+      }
+    },
+    {
+      "id": "film-079",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kinder haben Molly und Arthur Weasley?",
+      "einheit": "",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Figuren der Harry-Potter-Romane",
+        "url": "https://de.wikipedia.org/wiki/Figuren_der_Harry-Potter-Romane"
+      }
+    },
+    {
+      "id": "film-080",
+      "modus": "schaetzen",
+      "frage": "Wie viele Ringe der Macht gibt es in „Der Herr der Ringe“ – den Einen Ring mitgezählt?",
+      "einheit": "",
+      "loesung": 20,
+      "erklaerung": "3 für die Elben, 7 für die Zwerge, 9 für die Menschen und der Eine Ring.",
+      "quelle": {
+        "titel": "Wikipedia – Ringe der Macht",
+        "url": "https://de.wikipedia.org/wiki/Ringe_der_Macht"
+      }
+    },
+    {
+      "id": "film-081",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Film „Interstellar“ (2014)?",
+      "einheit": "Minuten",
+      "loesung": 169,
+      "quelle": {
+        "titel": "Wikipedia – Interstellar",
+        "url": "https://de.wikipedia.org/wiki/Interstellar"
+      }
+    },
+    {
+      "id": "film-082",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "In wie vielen offiziellen Bond-Filmen spielte Roger Moore den Agenten?",
+      "daten": {
+        "einheit": "Filme",
+        "balken": [
+          {
+            "name": "G. Lazenby",
+            "wert": 1
+          },
+          {
+            "name": "T. Dalton",
+            "wert": 2
+          },
+          {
+            "name": "P. Brosnan",
+            "wert": 4
+          },
+          {
+            "name": "R. Moore",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Roger Moore",
+        "url": "https://de.wikipedia.org/wiki/Roger_Moore"
+      }
+    },
+    {
+      "id": "film-083",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam der Film „Ghostbusters – Die Geisterjäger“ ins Kino?",
+      "daten": {
+        "von": 1970,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Fußball-WM in Deutschland",
+            "jahr": 1974
+          },
+          {
+            "name": "Start des Musiksenders MTV",
+            "jahr": 1981
+          }
+        ]
+      },
+      "loesung": 1984,
+      "quelle": {
+        "titel": "Wikipedia – Ghostbusters – Die Geisterjäger",
+        "url": "https://de.wikipedia.org/wiki/Ghostbusters_–_Die_Geisterjäger"
+      }
+    },
+    {
+      "id": "film-084",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr startete Netflix sein Streaming-Angebot in Deutschland?",
+      "daten": {
+        "von": 2000,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          },
+          {
+            "name": "Beginn der Corona-Pandemie",
+            "jahr": 2020
+          }
+        ]
+      },
+      "loesung": 2014,
+      "quelle": {
+        "titel": "Wikipedia – Netflix",
+        "url": "https://de.wikipedia.org/wiki/Netflix"
+      }
+    },
+    {
+      "id": "film-085",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Cannes mit seinen berühmten Filmfestspielen?",
+      "daten": {
+        "mitte": [
+          46,
+          5
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 43.55,
+        "lng": 7.02
+      },
+      "quelle": {
+        "titel": "Wikipedia – Cannes",
+        "url": "https://de.wikipedia.org/wiki/Cannes"
+      }
+    },
+    {
+      "id": "film-086",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Dubrovnik, ein beliebter Drehort für Filme und Serien?",
+      "daten": {
+        "mitte": [
+          45,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 42.65,
+        "lng": 18.09
+      },
+      "quelle": {
+        "titel": "Wikipedia – Dubrovnik",
+        "url": "https://de.wikipedia.org/wiki/Dubrovnik"
+      }
+    },
+    {
+      "id": "film-087",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Venedig, wo das älteste Filmfestival der Welt stattfindet?",
+      "daten": {
+        "mitte": [
+          45,
+          5
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 45.44,
+        "lng": 12.33
+      },
+      "quelle": {
+        "titel": "Wikipedia – Internationale Filmfestspiele von Venedig",
+        "url": "https://de.wikipedia.org/wiki/Internationale_Filmfestspiele_von_Venedig"
+      }
+    },
+    {
+      "id": "film-088",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Pixar-Filme nach ihrem Erscheinungsjahr!",
+      "loesung": [
+        "Die Monster AG",
+        "Findet Nemo",
+        "Oben",
+        "Alles steht Kopf"
+      ],
+      "oben": "ältester",
+      "unten": "neuester",
+      "werte": [
+        "2001",
+        "2003",
+        "2009",
+        "2015"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Pixar",
+        "url": "https://de.wikipedia.org/wiki/Pixar"
+      }
+    },
+    {
+      "id": "film-089",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Marvel-Filme nach ihrem Erscheinungsjahr!",
+      "loesung": [
+        "Iron Man",
+        "The Avengers",
+        "Black Panther",
+        "Avengers: Endgame"
+      ],
+      "oben": "ältester",
+      "unten": "neuester",
+      "werte": [
+        "2008",
+        "2012",
+        "2018",
+        "2019"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Marvel Cinematic Universe",
+        "url": "https://de.wikipedia.org/wiki/Marvel_Cinematic_Universe"
+      }
+    },
+    {
+      "id": "film-090",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Star-Wars-Filme nach ihrer Episodennummer!",
+      "loesung": [
+        "Die dunkle Bedrohung",
+        "Angriff der Klonkrieger",
+        "Die Rache der Sith",
+        "Eine neue Hoffnung"
+      ],
+      "oben": "Episode I",
+      "unten": "Episode IV",
+      "quelle": {
+        "titel": "Wikipedia – Star Wars",
+        "url": "https://de.wikipedia.org/wiki/Star_Wars"
+      }
     }
   ],
   "stechfragen": [
@@ -1045,6 +1545,28 @@
       "quelle": {
         "titel": "Wikipedia – Internationale Filmfestspiele Berlin",
         "url": "https://de.wikipedia.org/wiki/Internationale_Filmfestspiele_Berlin"
+      }
+    },
+    {
+      "id": "film-s06",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr kam der erste „Indiana Jones“-Film („Jäger des verlorenen Schatzes“) ins Kino?",
+      "einheit": "",
+      "loesung": 1981,
+      "quelle": {
+        "titel": "Wikipedia – Jäger des verlorenen Schatzes",
+        "url": "https://de.wikipedia.org/wiki/Jäger_des_verlorenen_Schatzes"
+      }
+    },
+    {
+      "id": "film-s07",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr gründeten Walt und Roy Disney ihr Filmstudio?",
+      "einheit": "",
+      "loesung": 1923,
+      "quelle": {
+        "titel": "Wikipedia – The Walt Disney Company",
+        "url": "https://de.wikipedia.org/wiki/The_Walt_Disney_Company"
       }
     }
   ]

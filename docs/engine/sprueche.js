@@ -356,6 +356,21 @@ export const THEMEN_SPRUECHE = {
       "Sport ist Mord. Für meine Punkte.",
     ],
   },
+  jauch: {
+    gut: [
+      "Ich nehm das Geld und geh! 💰",
+      "Kein Joker gebraucht. Easy.",
+      "Die Million ruft schon an.",
+      "Ich bin mir zu 100 % sicher.",
+    ],
+    schlecht: [
+      "Mein Telefonjoker ging nicht ran.",
+      "50:50 und trotzdem daneben.",
+      "Ich fliege schon bei 500 € raus.",
+      "Das Publikum hat mich verraten!",
+      "Ich hätte aufhören sollen.",
+    ],
+  },
 };
 
 // Passt zu jedem Thema (auch zu eigenen Themen per Joker)

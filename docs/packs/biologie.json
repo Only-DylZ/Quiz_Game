@@ -427,8 +427,8 @@
         "bis": 2020,
         "ereignisse": [
           {
-            "name": "Erstes Retortenbaby",
-            "jahr": 1978
+            "name": "Erste Mondlandung",
+            "jahr": 1969
           },
           {
             "name": "Erster Game Boy",
@@ -610,8 +610,7 @@
       "quelle": {
         "titel": "Wikipedia – Galle",
         "url": "https://de.wikipedia.org/wiki/Galle"
-      },
-      "erklaerung": "Die Gallenblase speichert sie nur."
+      }
     },
     {
       "id": "bio-038",
@@ -989,6 +988,490 @@
         "titel": "Wikipedia – Schmetterlinge",
         "url": "https://de.wikipedia.org/wiki/Schmetterlinge"
       }
+    },
+    {
+      "id": "bio-061",
+      "modus": "auswahl",
+      "frage": "Wo werden beim Erwachsenen die roten Blutkörperchen gebildet?",
+      "optionen": [
+        "In der Leber",
+        "In der Milz",
+        "Im Knochenmark",
+        "Im Herzen"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Erythrozyt",
+        "url": "https://de.wikipedia.org/wiki/Erythrozyt"
+      }
+    },
+    {
+      "id": "bio-062",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Kontaktstelle, an der eine Nervenzelle Signale an die nächste weitergibt?",
+      "optionen": [
+        "Synapse",
+        "Axon",
+        "Dendrit",
+        "Myelinscheide"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Synapse",
+        "url": "https://de.wikipedia.org/wiki/Synapse"
+      }
+    },
+    {
+      "id": "bio-063",
+      "modus": "auswahl",
+      "frage": "Welche Krankheit übertragen Anopheles-Mücken?",
+      "optionen": [
+        "Pest",
+        "Cholera",
+        "Tollwut",
+        "Malaria"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Malaria",
+        "url": "https://de.wikipedia.org/wiki/Malaria"
+      }
+    },
+    {
+      "id": "bio-064",
+      "modus": "auswahl",
+      "frage": "Wie heißt der größte Teil des menschlichen Gehirns?",
+      "optionen": [
+        "Kleinhirn",
+        "Großhirn",
+        "Hirnstamm",
+        "Zwischenhirn"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Großhirn",
+        "url": "https://de.wikipedia.org/wiki/Großhirn"
+      }
+    },
+    {
+      "id": "bio-065",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Zellteilung, bei der zwei erbgleiche Tochterzellen entstehen?",
+      "optionen": [
+        "Meiose",
+        "Mitose",
+        "Osmose",
+        "Diffusion"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Mitose",
+        "url": "https://de.wikipedia.org/wiki/Mitose"
+      }
+    },
+    {
+      "id": "bio-066",
+      "modus": "auswahl",
+      "frage": "In welchem Zellbestandteil findet bei Pflanzen die Photosynthese statt?",
+      "optionen": [
+        "Zellkern",
+        "Vakuole",
+        "Ribosom",
+        "Chloroplast"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Chloroplast",
+        "url": "https://de.wikipedia.org/wiki/Chloroplast"
+      }
+    },
+    {
+      "id": "bio-067",
+      "modus": "auswahl",
+      "frage": "Welches Vitamin ist vor allem für die Blutgerinnung wichtig?",
+      "optionen": [
+        "Vitamin K",
+        "Vitamin A",
+        "Vitamin B12",
+        "Vitamin E"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Vitamin K",
+        "url": "https://de.wikipedia.org/wiki/Vitamin_K"
+      }
+    },
+    {
+      "id": "bio-068",
+      "modus": "auswahl",
+      "frage": "Welche Drüse am Hals steuert mit ihren Botenstoffen den Stoffwechsel?",
+      "optionen": [
+        "Speicheldrüse",
+        "Thymus",
+        "Schilddrüse",
+        "Mandeln"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Schilddrüse",
+        "url": "https://de.wikipedia.org/wiki/Schilddrüse"
+      }
+    },
+    {
+      "id": "bio-069",
+      "modus": "auswahl",
+      "frage": "Welches Organ speichert die Gallenflüssigkeit?",
+      "optionen": [
+        "Milz",
+        "Magen",
+        "Harnblase",
+        "Gallenblase"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Gallenblase",
+        "url": "https://de.wikipedia.org/wiki/Gallenblase"
+      }
+    },
+    {
+      "id": "bio-070",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein Lebewesen, das auf Kosten eines anderen lebt und ihm schadet?",
+      "optionen": [
+        "Symbiont",
+        "Parasit",
+        "Destruent",
+        "Produzent"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Parasitismus",
+        "url": "https://de.wikipedia.org/wiki/Parasitismus"
+      }
+    },
+    {
+      "id": "bio-071",
+      "modus": "auswahl",
+      "frage": "Welcher Forscher entwickelte gleichzeitig mit Charles Darwin die Evolutionstheorie?",
+      "optionen": [
+        "Jean-Baptiste de Lamarck",
+        "Thomas Henry Huxley",
+        "Alfred Russel Wallace",
+        "Ernst Haeckel"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Alfred Russel Wallace",
+        "url": "https://de.wikipedia.org/wiki/Alfred_Russel_Wallace"
+      }
+    },
+    {
+      "id": "bio-072",
+      "modus": "auswahl",
+      "frage": "Welche Blutgefäße führen das Blut vom Herzen weg?",
+      "optionen": [
+        "Arterien",
+        "Venen",
+        "Lymphgefäße",
+        "Kapillaren"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Arterie",
+        "url": "https://de.wikipedia.org/wiki/Arterie"
+      }
+    },
+    {
+      "id": "bio-073",
+      "modus": "schaetzen",
+      "frage": "Wie viele Paare Rückenmarksnerven (Spinalnerven) hat der Mensch?",
+      "einheit": "Paare",
+      "loesung": 31,
+      "quelle": {
+        "titel": "Wikipedia – Spinalnerv",
+        "url": "https://de.wikipedia.org/wiki/Spinalnerv"
+      }
+    },
+    {
+      "id": "bio-074",
+      "modus": "schaetzen",
+      "frage": "Wie viele Paare Hirnnerven hat der Mensch?",
+      "einheit": "Paare",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Hirnnerven",
+        "url": "https://de.wikipedia.org/wiki/Hirnnerven"
+      }
+    },
+    {
+      "id": "bio-075",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen verschiedenen Aminosäuren baut der genetische Code (Standard) Eiweiße auf?",
+      "einheit": "",
+      "loesung": 20,
+      "quelle": {
+        "titel": "Wikipedia – Aminosäuren",
+        "url": "https://de.wikipedia.org/wiki/Aminosäuren"
+      }
+    },
+    {
+      "id": "bio-076",
+      "modus": "schaetzen",
+      "frage": "Wie viele verschiedene Basentripletts (Codons) gibt es im genetischen Code?",
+      "einheit": "",
+      "loesung": 64,
+      "quelle": {
+        "titel": "Wikipedia – Genetischer Code",
+        "url": "https://de.wikipedia.org/wiki/Genetischer_Code"
+      }
+    },
+    {
+      "id": "bio-077",
+      "modus": "schaetzen",
+      "frage": "Welchen pH-Wert hat menschliches Blut normalerweise?",
+      "einheit": "",
+      "loesung": 7.4,
+      "quelle": {
+        "titel": "Wikipedia – Blut",
+        "url": "https://de.wikipedia.org/wiki/Blut"
+      }
+    },
+    {
+      "id": "bio-078",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Lappen besteht die linke Lunge?",
+      "einheit": "",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Lunge",
+        "url": "https://de.wikipedia.org/wiki/Lunge"
+      }
+    },
+    {
+      "id": "bio-079",
+      "modus": "schaetzen",
+      "frage": "Wie viele Milliarden Nervenzellen hat ein menschliches Gehirn ungefähr?",
+      "einheit": "Mrd.",
+      "loesung": 86,
+      "quelle": {
+        "titel": "Wikipedia – Gehirn",
+        "url": "https://de.wikipedia.org/wiki/Gehirn"
+      }
+    },
+    {
+      "id": "bio-080",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Kammern (Vorhöfe mitgezählt) besteht das Herz eines Frosches?",
+      "einheit": "",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Froschlurche",
+        "url": "https://de.wikipedia.org/wiki/Froschlurche"
+      }
+    },
+    {
+      "id": "bio-081",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten braucht das Darmbakterium E. coli unter idealen Bedingungen für eine Zellteilung?",
+      "einheit": "Minuten",
+      "loesung": 20,
+      "quelle": {
+        "titel": "Wikipedia – Escherichia coli",
+        "url": "https://de.wikipedia.org/wiki/Escherichia_coli"
+      }
+    },
+    {
+      "id": "bio-082",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Lendenwirbel hat der Mensch?",
+      "daten": {
+        "einheit": "",
+        "balken": [
+          {
+            "name": "Halswirbel",
+            "wert": 7
+          },
+          {
+            "name": "Brustwirbel",
+            "wert": 12
+          },
+          {
+            "name": "Lendenwirbel",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Wirbelsäule",
+        "url": "https://de.wikipedia.org/wiki/Wirbelsäule"
+      }
+    },
+    {
+      "id": "bio-083",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr beschrieb Robert Hooke als Erster „Zellen“ (in Kork, unter dem Mikroskop)?",
+      "daten": {
+        "von": 1600,
+        "bis": 1700,
+        "ereignisse": [
+          {
+            "name": "Gründung der Harvard University",
+            "jahr": 1636
+          },
+          {
+            "name": "Geburt von J. S. Bach",
+            "jahr": 1685
+          }
+        ]
+      },
+      "loesung": 1665,
+      "quelle": {
+        "titel": "Wikipedia – Robert Hooke",
+        "url": "https://de.wikipedia.org/wiki/Robert_Hooke"
+      }
+    },
+    {
+      "id": "bio-084",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde Louise Brown geboren – das erste „Retortenbaby“ der Welt?",
+      "daten": {
+        "von": 1960,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Fußball-WM in Deutschland",
+            "jahr": 1974
+          },
+          {
+            "name": "Reaktorunglück von Tschernobyl",
+            "jahr": 1986
+          }
+        ]
+      },
+      "loesung": 1978,
+      "quelle": {
+        "titel": "Wikipedia – Louise Brown",
+        "url": "https://de.wikipedia.org/wiki/Louise_Brown"
+      }
+    },
+    {
+      "id": "bio-085",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegen die Kew Gardens, einer der berühmtesten botanischen Gärten der Welt?",
+      "daten": {
+        "mitte": [
+          50,
+          5
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 51.48,
+        "lng": -0.29
+      },
+      "quelle": {
+        "titel": "Wikipedia – Royal Botanic Gardens (Kew)",
+        "url": "https://de.wikipedia.org/wiki/Royal_Botanic_Gardens"
+      }
+    },
+    {
+      "id": "bio-086",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Wien, wo Karl Landsteiner die Blutgruppen entdeckte?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 48.21,
+        "lng": 16.37
+      },
+      "quelle": {
+        "titel": "Wikipedia – Karl Landsteiner",
+        "url": "https://de.wikipedia.org/wiki/Karl_Landsteiner"
+      }
+    },
+    {
+      "id": "bio-087",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der weltweite Saatgut-Tresor, in dem Samen aus aller Welt lagern?",
+      "daten": {
+        "mitte": [
+          65,
+          15
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 78.24,
+        "lng": 15.49
+      },
+      "quelle": {
+        "titel": "Wikipedia – Svalbard Global Seed Vault",
+        "url": "https://de.wikipedia.org/wiki/Svalbard_Global_Seed_Vault"
+      }
+    },
+    {
+      "id": "bio-088",
+      "modus": "reihenfolge",
+      "frage": "In welcher Reihenfolge durchquert das Licht das Auge?",
+      "loesung": [
+        "Hornhaut",
+        "Linse",
+        "Glaskörper",
+        "Netzhaut"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Auge",
+        "url": "https://de.wikipedia.org/wiki/Auge"
+      }
+    },
+    {
+      "id": "bio-089",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach dem ersten Auftreten auf der Erde!",
+      "loesung": [
+        "Bakterien",
+        "Fische",
+        "Dinosaurier",
+        "Menschen"
+      ],
+      "oben": "frühestes",
+      "unten": "spätestes",
+      "quelle": {
+        "titel": "Wikipedia – Erdgeschichte",
+        "url": "https://de.wikipedia.org/wiki/Erdgeschichte"
+      }
+    },
+    {
+      "id": "bio-090",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Ebenen eines Lebewesens von groß nach klein!",
+      "loesung": [
+        "Organismus",
+        "Organ",
+        "Gewebe",
+        "Zelle",
+        "Molekül"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "quelle": {
+        "titel": "Wikipedia – Zelle (Biologie)",
+        "url": "https://de.wikipedia.org/wiki/Zelle_(Biologie)"
+      }
     }
   ],
   "stechfragen": [
@@ -1045,6 +1528,28 @@
       "quelle": {
         "titel": "Wikipedia – Jeanne Calment",
         "url": "https://de.wikipedia.org/wiki/Jeanne_Calment"
+      }
+    },
+    {
+      "id": "bio-s06",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde Charles Darwin geboren?",
+      "einheit": "",
+      "loesung": 1809,
+      "quelle": {
+        "titel": "Wikipedia – Charles Darwin",
+        "url": "https://de.wikipedia.org/wiki/Charles_Darwin"
+      }
+    },
+    {
+      "id": "bio-s07",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr erschienen die berühmten Erbsen-Versuche, mit denen die Vererbungslehre begann?",
+      "einheit": "",
+      "loesung": 1866,
+      "quelle": {
+        "titel": "Wikipedia – Vererbung (Biologie)",
+        "url": "https://de.wikipedia.org/wiki/Vererbung_(Biologie)"
       }
     }
   ]

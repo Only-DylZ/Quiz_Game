@@ -97,8 +97,7 @@
       "quelle": {
         "titel": "Wikipedia – Beere",
         "url": "https://de.wikipedia.org/wiki/Beere"
-      },
-      "erklaerung": "Die Erdbeere ist dagegen eine Sammelnussfrucht."
+      }
     },
     {
       "id": "essen-007",
@@ -406,8 +405,8 @@
             "jahr": 1810
           },
           {
-            "name": "Gründung von Haribo",
-            "jahr": 1920
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
           }
         ]
       },
@@ -1069,6 +1068,495 @@
         "titel": "Wikipedia – Latte macchiato",
         "url": "https://de.wikipedia.org/wiki/Latte_macchiato"
       }
+    },
+    {
+      "id": "essen-065",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land stammt Tzatziki?",
+      "optionen": [
+        "Türkei",
+        "Italien",
+        "Griechenland",
+        "Spanien"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Tzatziki",
+        "url": "https://de.wikipedia.org/wiki/Tzatziki"
+      }
+    },
+    {
+      "id": "essen-066",
+      "modus": "auswahl",
+      "frage": "Welche Nudelsorte heißt übersetzt „Würmchen“?",
+      "optionen": [
+        "Vermicelli",
+        "Farfalle",
+        "Linguine",
+        "Penne"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Vermicelli",
+        "url": "https://de.wikipedia.org/wiki/Vermicelli"
+      }
+    },
+    {
+      "id": "essen-067",
+      "modus": "auswahl",
+      "frage": "Was ist Halloumi?",
+      "optionen": [
+        "Eine Wurst",
+        "Ein Gebäck",
+        "Eine Soße",
+        "Ein Käse"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Halloumi",
+        "url": "https://de.wikipedia.org/wiki/Halloumi"
+      }
+    },
+    {
+      "id": "essen-068",
+      "modus": "auswahl",
+      "frage": "Welches Gewürz wird aus der Rinde eines Baumes gewonnen?",
+      "optionen": [
+        "Muskat",
+        "Zimt",
+        "Nelke",
+        "Vanille"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Zimt",
+        "url": "https://de.wikipedia.org/wiki/Zimt"
+      }
+    },
+    {
+      "id": "essen-069",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land stammt Kimchi?",
+      "optionen": [
+        "Japan",
+        "Korea",
+        "China",
+        "Vietnam"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Kimchi",
+        "url": "https://de.wikipedia.org/wiki/Kimchi"
+      }
+    },
+    {
+      "id": "essen-070",
+      "modus": "auswahl",
+      "frage": "Aus welchem Getreide wird Couscous traditionell gemacht?",
+      "optionen": [
+        "Reis",
+        "Mais",
+        "Roggen",
+        "Hartweizen"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Couscous",
+        "url": "https://de.wikipedia.org/wiki/Couscous"
+      }
+    },
+    {
+      "id": "essen-072",
+      "modus": "auswahl",
+      "frage": "Was ist Pumpernickel?",
+      "optionen": [
+        "Ein Kuchen",
+        "Eine Wurst",
+        "Ein Brot",
+        "Ein Schnaps"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Pumpernickel",
+        "url": "https://de.wikipedia.org/wiki/Pumpernickel"
+      }
+    },
+    {
+      "id": "essen-073",
+      "modus": "auswahl",
+      "frage": "Aus welcher Milch wird echter „Mozzarella di Bufala Campana“ gemacht?",
+      "optionen": [
+        "Ziegenmilch",
+        "Schafmilch",
+        "Kuhmilch",
+        "Büffelmilch"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Mozzarella",
+        "url": "https://de.wikipedia.org/wiki/Mozzarella"
+      }
+    },
+    {
+      "id": "essen-074",
+      "modus": "auswahl",
+      "frage": "Bei welcher Frucht sitzen die kleinen Nüsschen (Samen) außen?",
+      "optionen": [
+        "Himbeere",
+        "Erdbeere",
+        "Kiwi",
+        "Brombeere"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Erdbeeren",
+        "url": "https://de.wikipedia.org/wiki/Erdbeeren"
+      }
+    },
+    {
+      "id": "essen-075",
+      "modus": "auswahl",
+      "frage": "Woraus besteht Baiser (Meringue) hauptsächlich?",
+      "optionen": [
+        "Mehl und Butter",
+        "Sahne und Gelatine",
+        "Eiweiß und Zucker",
+        "Eigelb und Milch"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Baiser",
+        "url": "https://de.wikipedia.org/wiki/Baiser"
+      }
+    },
+    {
+      "id": "essen-076",
+      "modus": "auswahl",
+      "frage": "Welche Spirituose ist die Grundlage eines Caipirinha?",
+      "optionen": [
+        "Cachaça",
+        "Rum",
+        "Tequila",
+        "Gin"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Caipirinha",
+        "url": "https://de.wikipedia.org/wiki/Caipirinha"
+      }
+    },
+    {
+      "id": "essen-077",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilokalorien liefert ein Gramm Kohlenhydrate?",
+      "einheit": "kcal",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Physiologischer Brennwert",
+        "url": "https://de.wikipedia.org/wiki/Physiologischer_Brennwert"
+      }
+    },
+    {
+      "id": "essen-078",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilokalorien liefert ein Gramm Alkohol?",
+      "einheit": "kcal",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Physiologischer Brennwert",
+        "url": "https://de.wikipedia.org/wiki/Physiologischer_Brennwert"
+      }
+    },
+    {
+      "id": "essen-079",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Kakaobestandteile muss „Schokolade“ laut EU-Recht mindestens enthalten?",
+      "einheit": "%",
+      "loesung": 35,
+      "quelle": {
+        "titel": "Wikipedia – Schokolade",
+        "url": "https://de.wikipedia.org/wiki/Schokolade"
+      }
+    },
+    {
+      "id": "essen-080",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Milchfett muss Butter in Deutschland mindestens enthalten?",
+      "einheit": "%",
+      "loesung": 82,
+      "quelle": {
+        "titel": "Wikipedia – Butter",
+        "url": "https://de.wikipedia.org/wiki/Butter"
+      }
+    },
+    {
+      "id": "essen-081",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm wiegt ein Hühnerei der Größe M mindestens?",
+      "einheit": "g",
+      "loesung": 53,
+      "quelle": {
+        "titel": "Wikipedia – Hühnerei",
+        "url": "https://de.wikipedia.org/wiki/Hühnerei"
+      }
+    },
+    {
+      "id": "essen-082",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zentimeter Durchmesser darf eine echte „Pizza Napoletana“ höchstens haben?",
+      "einheit": "cm",
+      "loesung": 35,
+      "quelle": {
+        "titel": "Wikipedia – Pizza Napoletana",
+        "url": "https://de.wikipedia.org/wiki/Pizza_Napoletana"
+      }
+    },
+    {
+      "id": "essen-083",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Fruchtanteil muss Orangennektar mindestens haben?",
+      "einheit": "%",
+      "loesung": 50,
+      "quelle": {
+        "titel": "Wikipedia – Fruchtnektar",
+        "url": "https://de.wikipedia.org/wiki/Fruchtnektar"
+      }
+    },
+    {
+      "id": "essen-084",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Kräutern, Blüten, Wurzeln und Früchten wird Jägermeister hergestellt?",
+      "einheit": "",
+      "loesung": 56,
+      "quelle": {
+        "titel": "Wikipedia – Jägermeister",
+        "url": "https://de.wikipedia.org/wiki/Jägermeister"
+      }
+    },
+    {
+      "id": "essen-085",
+      "modus": "schaetzen",
+      "frage": "Wie viele Liter fasst eine „Stange“, das klassische Kölsch-Glas?",
+      "einheit": "l",
+      "loesung": 0.2,
+      "quelle": {
+        "titel": "Wikipedia – Kölsch (Bier)",
+        "url": "https://de.wikipedia.org/wiki/Kölsch_(Bier)"
+      }
+    },
+    {
+      "id": "essen-086",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Liter fasst eine Jeroboam-Flasche Champagner?",
+      "daten": {
+        "einheit": "l",
+        "balken": [
+          {
+            "name": "Halbe Flasche",
+            "wert": 0.375
+          },
+          {
+            "name": "Magnum",
+            "wert": 1.5
+          },
+          {
+            "name": "Jeroboam",
+            "wert": null
+          },
+          {
+            "name": "Methusalem",
+            "wert": 6
+          }
+        ]
+      },
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Weinflasche",
+        "url": "https://de.wikipedia.org/wiki/Weinflasche"
+      }
+    },
+    {
+      "id": "essen-087",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viel Prozent Alkohol muss Whisky in der EU mindestens haben?",
+      "daten": {
+        "einheit": "%",
+        "balken": [
+          {
+            "name": "Likör",
+            "wert": 15
+          },
+          {
+            "name": "Weinbrand",
+            "wert": 36
+          },
+          {
+            "name": "Gin",
+            "wert": 37.5
+          },
+          {
+            "name": "Whisky",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 40,
+      "quelle": {
+        "titel": "Wikipedia – Whisky",
+        "url": "https://de.wikipedia.org/wiki/Whisky"
+      }
+    },
+    {
+      "id": "essen-088",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr gründete Hans Riegel in Bonn die Firma Haribo?",
+      "daten": {
+        "von": 1900,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Ende des Ersten Weltkriegs",
+            "jahr": 1918
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1920,
+      "quelle": {
+        "titel": "Wikipedia – Haribo",
+        "url": "https://de.wikipedia.org/wiki/Haribo"
+      }
+    },
+    {
+      "id": "essen-089",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam der Energy-Drink Red Bull in Österreich auf den Markt?",
+      "daten": {
+        "von": 1970,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Fußball-WM in Deutschland",
+            "jahr": 1974
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1987,
+      "quelle": {
+        "titel": "Wikipedia – Red Bull",
+        "url": "https://de.wikipedia.org/wiki/Red_Bull"
+      }
+    },
+    {
+      "id": "essen-090",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Roquefort-sur-Soulzon, die Heimat des Roquefort-Käses?",
+      "daten": {
+        "mitte": [
+          47,
+          2
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 43.98,
+        "lng": 2.99
+      },
+      "quelle": {
+        "titel": "Wikipedia – Roquefort-sur-Soulzon",
+        "url": "https://de.wikipedia.org/wiki/Roquefort-sur-Soulzon"
+      }
+    },
+    {
+      "id": "essen-091",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Hafenstadt Mokka, die einer Kaffeesorte ihren Namen gab?",
+      "daten": {
+        "mitte": [
+          20,
+          40
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 13.32,
+        "lng": 43.25
+      },
+      "quelle": {
+        "titel": "Wikipedia – al-Mucha (Mokka)",
+        "url": "https://de.wikipedia.org/wiki/al-Mukha"
+      }
+    },
+    {
+      "id": "essen-092",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach dem Zuckergehalt pro 100 Gramm!",
+      "loesung": [
+        "Würfelzucker",
+        "Honig",
+        "Banane",
+        "Gurke"
+      ],
+      "oben": "am meisten",
+      "unten": "am wenigsten",
+      "quelle": {
+        "titel": "Wikipedia – Honig",
+        "url": "https://de.wikipedia.org/wiki/Honig"
+      }
+    },
+    {
+      "id": "essen-093",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach dem Eiweißgehalt pro 100 Gramm!",
+      "loesung": [
+        "Parmesan",
+        "Hähnchenbrust",
+        "Ei",
+        "Milch",
+        "Apfel"
+      ],
+      "oben": "am meisten",
+      "unten": "am wenigsten",
+      "quelle": {
+        "titel": "Wikipedia – Parmigiano Reggiano",
+        "url": "https://de.wikipedia.org/wiki/Parmigiano_Reggiano"
+      }
+    },
+    {
+      "id": "essen-094",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Süßigkeiten nach ihrem Erfindungsjahr!",
+      "loesung": [
+        "Toblerone",
+        "Mars-Riegel",
+        "Kinderschokolade",
+        "Überraschungsei"
+      ],
+      "oben": "älteste",
+      "unten": "jüngste",
+      "werte": [
+        "1908",
+        "1932",
+        "1967",
+        "1974"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Toblerone",
+        "url": "https://de.wikipedia.org/wiki/Toblerone"
+      }
     }
   ],
   "stechfragen": [
@@ -1127,6 +1615,28 @@
       "quelle": {
         "titel": "Wikipedia – Dr. Oetker",
         "url": "https://de.wikipedia.org/wiki/Dr._Oetker"
+      }
+    },
+    {
+      "id": "essen-s06",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr gründete Henri Nestlé in der Schweiz sein Unternehmen?",
+      "einheit": "",
+      "loesung": 1866,
+      "quelle": {
+        "titel": "Wikipedia – Nestlé",
+        "url": "https://de.wikipedia.org/wiki/Nestlé"
+      }
+    },
+    {
+      "id": "essen-s07",
+      "modus": "schaetzen",
+      "frage": "Wie viele „Zähne“ hat ein Leibniz-Butterkeks am Rand?",
+      "einheit": "",
+      "loesung": 52,
+      "quelle": {
+        "titel": "Wikipedia – Leibniz-Keks",
+        "url": "https://de.wikipedia.org/wiki/Leibniz-Keks"
       }
     }
   ]

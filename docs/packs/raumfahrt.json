@@ -553,10 +553,6 @@
             "wert": 1
           },
           {
-            "name": "Mars",
-            "wert": 1.03
-          },
-          {
             "name": "Venus",
             "wert": null
           }
@@ -718,13 +714,525 @@
         "titel": "Wikipedia – Raumsonde",
         "url": "https://de.wikipedia.org/wiki/Raumsonde"
       }
+    },
+    {
+      "id": "rf-43",
+      "modus": "auswahl",
+      "frage": "Welcher Planet wird wegen seiner Farbe „Roter Planet“ genannt?",
+      "optionen": [
+        "Venus",
+        "Jupiter",
+        "Mars",
+        "Merkur"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Mars (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Mars_(Planet)"
+      }
+    },
+    {
+      "id": "rf-44",
+      "modus": "auswahl",
+      "frage": "Wer betrat bei Apollo 11 als Zweiter den Mond?",
+      "optionen": [
+        "Buzz Aldrin",
+        "Michael Collins",
+        "John Glenn",
+        "Alan Shepard"
+      ],
+      "loesung": 0,
+      "erklaerung": "Michael Collins blieb in der Kommandokapsel im Mondorbit.",
+      "quelle": {
+        "titel": "Wikipedia – Buzz Aldrin",
+        "url": "https://de.wikipedia.org/wiki/Buzz_Aldrin"
+      }
+    },
+    {
+      "id": "rf-45",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Europäische Weltraumorganisation?",
+      "optionen": [
+        "NASA",
+        "JAXA",
+        "Roskosmos",
+        "ESA"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Europäische Weltraumorganisation",
+        "url": "https://de.wikipedia.org/wiki/Europäische_Weltraumorganisation"
+      }
+    },
+    {
+      "id": "rf-46",
+      "modus": "auswahl",
+      "frage": "Welcher Planet „rollt“ mit einer Achsneigung von rund 98° auf seiner Bahn um die Sonne?",
+      "optionen": [
+        "Neptun",
+        "Uranus",
+        "Saturn",
+        "Mars"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Uranus (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Uranus_(Planet)"
+      }
+    },
+    {
+      "id": "rf-47",
+      "modus": "auswahl",
+      "frage": "Welcher Komet kehrt etwa alle 75 bis 76 Jahre in Erdnähe zurück?",
+      "optionen": [
+        "Komet Hale-Bopp",
+        "Halleyscher Komet",
+        "Komet Tschurjumow-Gerassimenko",
+        "Komet Shoemaker-Levy 9"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – 1P/Halley",
+        "url": "https://de.wikipedia.org/wiki/1P/Halley"
+      }
+    },
+    {
+      "id": "rf-48",
+      "modus": "auswahl",
+      "frage": "Wie hieß die russische Raumstation, die 2001 kontrolliert zum Absturz gebracht wurde?",
+      "optionen": [
+        "Skylab",
+        "Tiangong 1",
+        "Saljut 1",
+        "Mir"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Mir (Raumstation)",
+        "url": "https://de.wikipedia.org/wiki/Mir_(Raumstation)"
+      }
+    },
+    {
+      "id": "rf-49",
+      "modus": "auswahl",
+      "frage": "Welche ESA-Mission setzte die Landeeinheit Philae auf einem Kometen ab?",
+      "optionen": [
+        "Rosetta",
+        "Huygens",
+        "Giotto",
+        "Gaia"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Rosetta (Sonde)",
+        "url": "https://de.wikipedia.org/wiki/Rosetta_(Sonde)"
+      }
+    },
+    {
+      "id": "rf-50",
+      "modus": "auswahl",
+      "frage": "Welchem Land gelang 2019 die erste weiche Landung auf der Rückseite des Mondes?",
+      "optionen": [
+        "USA",
+        "Russland",
+        "China",
+        "Indien"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Chang’e 4",
+        "url": "https://de.wikipedia.org/wiki/Chang’e_4"
+      }
+    },
+    {
+      "id": "rf-51",
+      "modus": "auswahl",
+      "frage": "Welcher Mond ist der größte im ganzen Sonnensystem?",
+      "optionen": [
+        "Titan",
+        "Kallisto",
+        "Io",
+        "Ganymed"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Ganymed (Mond)",
+        "url": "https://de.wikipedia.org/wiki/Ganymed_(Mond)"
+      }
+    },
+    {
+      "id": "rf-52",
+      "modus": "auswahl",
+      "frage": "Welche Apollo-Mission musste 1970 nach einer Explosion an Bord ohne Mondlandung umkehren?",
+      "optionen": [
+        "Apollo 12",
+        "Apollo 13",
+        "Apollo 14",
+        "Apollo 9"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Apollo 13",
+        "url": "https://de.wikipedia.org/wiki/Apollo_13"
+      }
+    },
+    {
+      "id": "rf-53",
+      "modus": "auswahl",
+      "frage": "Welcher deutsche Astronaut war 2018 Kommandant der Internationalen Raumstation?",
+      "optionen": [
+        "Thomas Reiter",
+        "Matthias Maurer",
+        "Alexander Gerst",
+        "Ulf Merbold"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Alexander Gerst",
+        "url": "https://de.wikipedia.org/wiki/Alexander_Gerst"
+      }
+    },
+    {
+      "id": "rf-54",
+      "modus": "auswahl",
+      "frage": "Wie heißt der größte Himmelskörper im Asteroidengürtel?",
+      "optionen": [
+        "Ceres",
+        "Vesta",
+        "Eris",
+        "Phobos"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Ceres (Zwergplanet)",
+        "url": "https://de.wikipedia.org/wiki/(1)_Ceres"
+      }
+    },
+    {
+      "id": "rf-55",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten dauerte der Flug von Wostok 1 – der erste Raumflug eines Menschen?",
+      "einheit": "Minuten",
+      "loesung": 108,
+      "quelle": {
+        "titel": "Wikipedia – Wostok 1",
+        "url": "https://de.wikipedia.org/wiki/Wostok_1"
+      }
+    },
+    {
+      "id": "rf-56",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauerte die Mission Apollo 11 vom Start bis zur Wasserung (abgerundet)?",
+      "einheit": "Tage",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Apollo 11",
+        "url": "https://de.wikipedia.org/wiki/Apollo_11"
+      }
+    },
+    {
+      "id": "rf-57",
+      "modus": "schaetzen",
+      "frage": "Wie viele verschiedene Astronauten flogen mit Apollo-Missionen zum Mond?",
+      "einheit": "",
+      "loesung": 24,
+      "quelle": {
+        "titel": "Wikipedia – Apollo-Programm",
+        "url": "https://de.wikipedia.org/wiki/Apollo-Programm"
+      }
+    },
+    {
+      "id": "rf-58",
+      "modus": "schaetzen",
+      "frage": "Wie heiß ist die sichtbare Oberfläche der Sonne ungefähr?",
+      "einheit": "°C",
+      "loesung": 5500,
+      "quelle": {
+        "titel": "NASA Science – Sun Facts",
+        "url": "https://science.nasa.gov/sun/facts/"
+      }
+    },
+    {
+      "id": "rf-59",
+      "modus": "schaetzen",
+      "frage": "Wie viele Lichtjahre ist Proxima Centauri, der nächste Stern nach der Sonne, entfernt?",
+      "einheit": "Lichtjahre",
+      "loesung": 4.24,
+      "quelle": {
+        "titel": "Wikipedia – Proxima Centauri",
+        "url": "https://de.wikipedia.org/wiki/Proxima_Centauri"
+      }
+    },
+    {
+      "id": "rf-60",
+      "modus": "schaetzen",
+      "frage": "Wie schnell muss ein Körper sein, um der Erdanziehung zu entkommen (Fluchtgeschwindigkeit)?",
+      "einheit": "km/s",
+      "loesung": 11.2,
+      "quelle": {
+        "titel": "Wikipedia – Fluchtgeschwindigkeit (Raumfahrt)",
+        "url": "https://de.wikipedia.org/wiki/Fluchtgeschwindigkeit_(Raumfahrt)"
+      }
+    },
+    {
+      "id": "rf-61",
+      "modus": "schaetzen",
+      "frage": "Wie viele Flüge machten die Space Shuttles der NASA von 1981 bis 2011 insgesamt?",
+      "einheit": "",
+      "loesung": 135,
+      "quelle": {
+        "titel": "Wikipedia – Space Shuttle",
+        "url": "https://de.wikipedia.org/wiki/Space_Shuttle"
+      }
+    },
+    {
+      "id": "rf-62",
+      "modus": "schaetzen",
+      "frage": "Wie viele volle Tage dauerte Apollo 17, die letzte Mondmission von Apollo?",
+      "einheit": "Tage",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Apollo 17",
+        "url": "https://de.wikipedia.org/wiki/Apollo_17"
+      }
+    },
+    {
+      "id": "rf-63",
+      "modus": "schaetzen",
+      "frage": "Wie viele Stunden dauert ein Tag auf dem Mars (eine Drehung um sich selbst)?",
+      "einheit": "Stunden",
+      "loesung": 24.6,
+      "quelle": {
+        "titel": "NASA Science – Mars Facts",
+        "url": "https://science.nasa.gov/mars/facts/"
+      }
+    },
+    {
+      "id": "rf-64",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Erdjahre braucht Jupiter für eine Runde um die Sonne?",
+      "daten": {
+        "einheit": "Jahre",
+        "balken": [
+          {
+            "name": "Erde",
+            "wert": 1
+          },
+          {
+            "name": "Mars",
+            "wert": 1.9
+          },
+          {
+            "name": "Jupiter",
+            "wert": null
+          },
+          {
+            "name": "Uranus",
+            "wert": 84
+          },
+          {
+            "name": "Neptun",
+            "wert": 165
+          }
+        ]
+      },
+      "loesung": 11.9,
+      "quelle": {
+        "titel": "NASA – Planetary Fact Sheet",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+      }
+    },
+    {
+      "id": "rf-65",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie groß ist der Durchmesser des Jupiter am Äquator?",
+      "daten": {
+        "einheit": "km",
+        "balken": [
+          {
+            "name": "Jupiter",
+            "wert": null
+          },
+          {
+            "name": "Saturn",
+            "wert": 120536
+          },
+          {
+            "name": "Uranus",
+            "wert": 51118
+          },
+          {
+            "name": "Neptun",
+            "wert": 49528
+          }
+        ]
+      },
+      "loesung": 142984,
+      "quelle": {
+        "titel": "NASA – Planetary Fact Sheet",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+      }
+    },
+    {
+      "id": "rf-66",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr startete Saljut 1, die erste Raumstation der Welt?",
+      "daten": {
+        "von": 1940,
+        "bis": 1990,
+        "ereignisse": [
+          {
+            "name": "Ende des Zweiten Weltkriegs",
+            "jahr": 1945
+          },
+          {
+            "name": "Erster Space-Shuttle-Flug",
+            "jahr": 1981
+          }
+        ]
+      },
+      "loesung": 1971,
+      "quelle": {
+        "titel": "Wikipedia – Saljut 1",
+        "url": "https://de.wikipedia.org/wiki/Saljut_1"
+      }
+    },
+    {
+      "id": "rf-67",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Planet Neptun entdeckt?",
+      "daten": {
+        "von": 1800,
+        "bis": 1900,
+        "ereignisse": [
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          },
+          {
+            "name": "Gründung des Deutschen Kaiserreichs",
+            "jahr": 1871
+          }
+        ]
+      },
+      "loesung": 1846,
+      "erklaerung": "Johann Gottfried Galle fand ihn in Berlin an der vorausberechneten Stelle.",
+      "quelle": {
+        "titel": "Wikipedia – Neptun (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Neptun_(Planet)"
+      }
+    },
+    {
+      "id": "rf-68",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der Weltraumbahnhof Tanegashima, Japans größter Startplatz für Raketen?",
+      "daten": {
+        "mitte": [
+          36,
+          138
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 30.4,
+        "lng": 130.97
+      },
+      "quelle": {
+        "titel": "Wikipedia – Tanegashima Space Center",
+        "url": "https://de.wikipedia.org/wiki/Tanegashima_Space_Center"
+      }
+    },
+    {
+      "id": "rf-69",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Houston mit der Missionskontrolle der NASA?",
+      "daten": {
+        "mitte": [
+          39,
+          -98
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 29.56,
+        "lng": -95.09
+      },
+      "quelle": {
+        "titel": "Wikipedia – Lyndon B. Johnson Space Center",
+        "url": "https://de.wikipedia.org/wiki/Lyndon_B._Johnson_Space_Center"
+      }
+    },
+    {
+      "id": "rf-70",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Mondflüge nach ihrem Jahr!",
+      "loesung": [
+        "Luna 2",
+        "Apollo 8",
+        "Apollo 17",
+        "Artemis I"
+      ],
+      "oben": "frühester",
+      "unten": "spätester",
+      "werte": [
+        "1959",
+        "1968",
+        "1972",
+        "2022"
+      ],
+      "erklaerung": "Luna 2 schlug als erstes Objekt auf dem Mond auf, Apollo 8 umkreiste ihn als erstes bemannt.",
+      "quelle": {
+        "titel": "Wikipedia – Mondlandung",
+        "url": "https://de.wikipedia.org/wiki/Mondlandung"
+      }
+    },
+    {
+      "id": "rf-71",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Planeten nach ihrer Masse!",
+      "loesung": [
+        "Jupiter",
+        "Saturn",
+        "Neptun",
+        "Uranus",
+        "Erde"
+      ],
+      "oben": "schwerster",
+      "unten": "leichtester",
+      "quelle": {
+        "titel": "NASA – Planetary Fact Sheet",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+      }
+    },
+    {
+      "id": "rf-72",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Entfernung von der Erdoberfläche!",
+      "loesung": [
+        "Mond",
+        "Geostationäre Satelliten",
+        "GPS-Satelliten",
+        "Raumstation ISS"
+      ],
+      "oben": "am weitesten weg",
+      "unten": "am nächsten",
+      "quelle": {
+        "titel": "Wikipedia – Geostationäre Umlaufbahn",
+        "url": "https://de.wikipedia.org/wiki/Geostationäre_Umlaufbahn"
+      }
     }
   ],
   "stechfragen": [
     {
       "id": "rf-s1",
       "modus": "schaetzen",
-      "frage": "Wie groß ist der Radius des Mondes – vom Mittelpunkt bis zur Oberfläche?",
+      "frage": "Wie groß ist der Radius des Mondes?",
       "einheit": "km",
       "loesung": 1740,
       "erklaerung": "Der Mond ist damit weniger als ein Drittel so breit wie die Erde.",
@@ -775,6 +1283,28 @@
       "quelle": {
         "titel": "Wikipedia – Venus (Planet)",
         "url": "https://de.wikipedia.org/wiki/Venus_(Planet)"
+      }
+    },
+    {
+      "id": "rf-s6",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde die US-Raumfahrtbehörde NASA gegründet?",
+      "einheit": "",
+      "loesung": 1958,
+      "quelle": {
+        "titel": "Wikipedia – NASA",
+        "url": "https://de.wikipedia.org/wiki/National_Aeronautics_and_Space_Administration"
+      }
+    },
+    {
+      "id": "rf-s7",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage verbrachte Waleri Poljakow am Stück im All – der Rekord für den längsten Raumflug?",
+      "einheit": "Tage",
+      "loesung": 437,
+      "quelle": {
+        "titel": "Wikipedia – Waleri Poljakow",
+        "url": "https://de.wikipedia.org/wiki/Waleri_Wladimirowitsch_Poljakow"
       }
     }
   ]

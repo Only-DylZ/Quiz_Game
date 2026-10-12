@@ -1043,6 +1043,502 @@
         "titel": "Wikipedia – Liste der Schwimmweltrekorde",
         "url": "https://de.wikipedia.org/wiki/Liste_der_Schwimmweltrekorde"
       }
+    },
+    {
+      "id": "sport-064",
+      "modus": "auswahl",
+      "frage": "Welche Stadt war 2022 Gastgeber der Olympischen Winterspiele?",
+      "optionen": [
+        "Sotschi",
+        "Pyeongchang",
+        "Peking",
+        "Vancouver"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Olympische Winterspiele 2022",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Winterspiele_2022"
+      }
+    },
+    {
+      "id": "sport-065",
+      "modus": "auswahl",
+      "frage": "Welcher Basketballer gewann mit den Chicago Bulls sechs NBA-Titel?",
+      "optionen": [
+        "Michael Jordan",
+        "LeBron James",
+        "Kobe Bryant",
+        "Magic Johnson"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Michael Jordan",
+        "url": "https://de.wikipedia.org/wiki/Michael_Jordan"
+      }
+    },
+    {
+      "id": "sport-066",
+      "modus": "auswahl",
+      "frage": "Wie heißt die höchste Spielklasse im englischen Fußball?",
+      "optionen": [
+        "Championship",
+        "Serie A",
+        "La Liga",
+        "Premier League"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Premier League",
+        "url": "https://de.wikipedia.org/wiki/Premier_League"
+      }
+    },
+    {
+      "id": "sport-067",
+      "modus": "auswahl",
+      "frage": "Welches Land gewann die Fußball-Europameisterschaft 2024 in Deutschland?",
+      "optionen": [
+        "England",
+        "Spanien",
+        "Frankreich",
+        "Italien"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Fußball-Europameisterschaft 2024",
+        "url": "https://de.wikipedia.org/wiki/Fußball-Europameisterschaft_2024"
+      }
+    },
+    {
+      "id": "sport-068",
+      "modus": "auswahl",
+      "frage": "In welcher Sportart sagt man „love“, wenn ein Spieler null Punkte hat?",
+      "optionen": [
+        "Golf",
+        "Tennis",
+        "Cricket",
+        "Badminton"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Tennis",
+        "url": "https://de.wikipedia.org/wiki/Tennis"
+      }
+    },
+    {
+      "id": "sport-069",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Weltfußballverband?",
+      "optionen": [
+        "UEFA",
+        "DFB",
+        "IOC",
+        "FIFA"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – FIFA",
+        "url": "https://de.wikipedia.org/wiki/Fédération_Internationale_de_Football_Association"
+      }
+    },
+    {
+      "id": "sport-070",
+      "modus": "auswahl",
+      "frage": "Welcher Schwimmer gewann die meisten olympischen Goldmedaillen aller Zeiten?",
+      "optionen": [
+        "Michael Phelps",
+        "Mark Spitz",
+        "Ian Thorpe",
+        "Caeleb Dressel"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Michael Phelps",
+        "url": "https://de.wikipedia.org/wiki/Michael_Phelps"
+      }
+    },
+    {
+      "id": "sport-071",
+      "modus": "auswahl",
+      "frage": "Welche Stadt richtet die Olympischen Sommerspiele 2028 aus?",
+      "optionen": [
+        "Brisbane",
+        "Madrid",
+        "Los Angeles",
+        "Tokio"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Olympische Sommerspiele 2028",
+        "url": "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2028"
+      }
+    },
+    {
+      "id": "sport-072",
+      "modus": "auswahl",
+      "frage": "In welchem Spiel ist der Norweger Magnus Carlsen weltberühmt?",
+      "optionen": [
+        "Poker",
+        "Go",
+        "Darts",
+        "Schach"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Magnus Carlsen",
+        "url": "https://de.wikipedia.org/wiki/Magnus_Carlsen"
+      }
+    },
+    {
+      "id": "sport-073",
+      "modus": "auswahl",
+      "frage": "Welchem Radprofi wurden wegen Dopings sieben Tour-de-France-Siege aberkannt?",
+      "optionen": [
+        "Jan Ullrich",
+        "Lance Armstrong",
+        "Marco Pantani",
+        "Alberto Contador"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Lance Armstrong",
+        "url": "https://de.wikipedia.org/wiki/Lance_Armstrong"
+      }
+    },
+    {
+      "id": "sport-074",
+      "modus": "auswahl",
+      "frage": "In welcher Sportart ist Mikaela Shiffrin eine der erfolgreichsten Athletinnen?",
+      "optionen": [
+        "Eiskunstlauf",
+        "Biathlon",
+        "Ski alpin",
+        "Snowboard"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Mikaela Shiffrin",
+        "url": "https://de.wikipedia.org/wiki/Mikaela_Shiffrin"
+      }
+    },
+    {
+      "id": "sport-075",
+      "modus": "auswahl",
+      "frage": "Welche deutsche Tennisspielerin gewann 1988 alle vier Grand Slams und Olympia-Gold?",
+      "optionen": [
+        "Steffi Graf",
+        "Angelique Kerber",
+        "Anke Huber",
+        "Andrea Petković"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Steffi Graf",
+        "url": "https://de.wikipedia.org/wiki/Steffi_Graf"
+      }
+    },
+    {
+      "id": "sport-076",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler einer Mannschaft stehen beim Eishockey gleichzeitig auf dem Eis (mit Torwart)?",
+      "einheit": "",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Eishockey",
+        "url": "https://de.wikipedia.org/wiki/Eishockey"
+      }
+    },
+    {
+      "id": "sport-077",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist eine Tischtennisplatte?",
+      "einheit": "m",
+      "loesung": 2.74,
+      "quelle": {
+        "titel": "Wikipedia – Tischtennis",
+        "url": "https://de.wikipedia.org/wiki/Tischtennis"
+      }
+    },
+    {
+      "id": "sport-078",
+      "modus": "schaetzen",
+      "frage": "Wie hoch hängt das Volleyballnetz bei den Männern?",
+      "einheit": "m",
+      "loesung": 2.43,
+      "quelle": {
+        "titel": "Wikipedia – Volleyball",
+        "url": "https://de.wikipedia.org/wiki/Volleyball"
+      }
+    },
+    {
+      "id": "sport-079",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sekunden hat eine Basketballmannschaft höchstens Zeit für einen Angriff?",
+      "einheit": "Sekunden",
+      "loesung": 24,
+      "quelle": {
+        "titel": "Wikipedia – Basketball",
+        "url": "https://de.wikipedia.org/wiki/Basketball"
+      }
+    },
+    {
+      "id": "sport-080",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist die Nordschleife des Nürburgrings?",
+      "einheit": "km",
+      "loesung": 20.8,
+      "quelle": {
+        "titel": "Wikipedia – Nordschleife",
+        "url": "https://de.wikipedia.org/wiki/Nordschleife"
+      }
+    },
+    {
+      "id": "sport-081",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kugeln liegen beim Snooker zu Beginn auf dem Tisch – die weiße mitgezählt?",
+      "einheit": "",
+      "loesung": 22,
+      "quelle": {
+        "titel": "Wikipedia – Snooker",
+        "url": "https://de.wikipedia.org/wiki/Snooker"
+      }
+    },
+    {
+      "id": "sport-082",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Etappen besteht die Tour de France normalerweise?",
+      "einheit": "",
+      "loesung": 21,
+      "quelle": {
+        "titel": "Wikipedia – Tour de France",
+        "url": "https://de.wikipedia.org/wiki/Tour_de_France"
+      }
+    },
+    {
+      "id": "sport-083",
+      "modus": "schaetzen",
+      "frage": "Wie viele Hürden muss man im 110-Meter-Hürdenlauf überspringen?",
+      "einheit": "",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – 110-Meter-Hürdenlauf",
+        "url": "https://de.wikipedia.org/wiki/110-Meter-Hürdenlauf"
+      }
+    },
+    {
+      "id": "sport-084",
+      "modus": "schaetzen",
+      "frage": "Wie viele Punkte zählt beim Darts das „Bull’s Eye“ in der Mitte?",
+      "einheit": "",
+      "loesung": 50,
+      "quelle": {
+        "titel": "Wikipedia – Darts",
+        "url": "https://de.wikipedia.org/wiki/Darts"
+      }
+    },
+    {
+      "id": "sport-085",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie lang ist ein Handballfeld?",
+      "daten": {
+        "einheit": "m",
+        "balken": [
+          {
+            "name": "Badminton",
+            "wert": 13.4
+          },
+          {
+            "name": "Volleyball",
+            "wert": 18
+          },
+          {
+            "name": "Basketball",
+            "wert": 28
+          },
+          {
+            "name": "Handball",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 40,
+      "quelle": {
+        "titel": "Wikipedia – Handball",
+        "url": "https://de.wikipedia.org/wiki/Handball"
+      }
+    },
+    {
+      "id": "sport-086",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurden die deutschen Fußballer zum ersten Mal Europameister?",
+      "daten": {
+        "von": 1950,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Olympische Spiele in Mexiko-Stadt",
+            "jahr": 1968
+          },
+          {
+            "name": "Fußball-WM in Italien",
+            "jahr": 1990
+          }
+        ]
+      },
+      "loesung": 1972,
+      "quelle": {
+        "titel": "Wikipedia – Fußball-Europameisterschaft 1972",
+        "url": "https://de.wikipedia.org/wiki/Fußball-Europameisterschaft_1972"
+      }
+    },
+    {
+      "id": "sport-087",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Deutsche Fußball-Bund (DFB) gegründet?",
+      "daten": {
+        "von": 1880,
+        "bis": 1940,
+        "ereignisse": [
+          {
+            "name": "Erste Tour de France",
+            "jahr": 1903
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1900,
+      "quelle": {
+        "titel": "Wikipedia – Deutscher Fußball-Bund",
+        "url": "https://de.wikipedia.org/wiki/Deutscher_Fußball-Bund"
+      }
+    },
+    {
+      "id": "sport-088",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Le Mans mit seinem berühmten 24-Stunden-Rennen?",
+      "daten": {
+        "mitte": [
+          46,
+          5
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 48.0,
+        "lng": 0.2
+      },
+      "quelle": {
+        "titel": "Wikipedia – 24-Stunden-Rennen von Le Mans",
+        "url": "https://de.wikipedia.org/wiki/24-Stunden-Rennen_von_Le_Mans"
+      }
+    },
+    {
+      "id": "sport-089",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Indianapolis mit seinem berühmten 500-Meilen-Rennen?",
+      "daten": {
+        "mitte": [
+          38,
+          -98
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 39.77,
+        "lng": -86.16
+      },
+      "quelle": {
+        "titel": "Wikipedia – Indianapolis 500",
+        "url": "https://de.wikipedia.org/wiki/Indianapolis_500"
+      }
+    },
+    {
+      "id": "sport-090",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo steht die Skisprungschanze am Holmenkollen?",
+      "daten": {
+        "mitte": [
+          55,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 59.96,
+        "lng": 10.67
+      },
+      "quelle": {
+        "titel": "Wikipedia – Holmenkollbakken",
+        "url": "https://de.wikipedia.org/wiki/Holmenkollbakken"
+      }
+    },
+    {
+      "id": "sport-091",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Judo-Gürtelfarben vom Anfänger zum Meister!",
+      "loesung": [
+        "Weiß",
+        "Gelb",
+        "Grün",
+        "Braun",
+        "Schwarz"
+      ],
+      "oben": "Anfänger",
+      "unten": "Meister",
+      "quelle": {
+        "titel": "Wikipedia – Judo",
+        "url": "https://de.wikipedia.org/wiki/Judo"
+      }
+    },
+    {
+      "id": "sport-092",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Gastgeber der Fußball-WM nach dem Jahr!",
+      "loesung": [
+        "Schweden",
+        "Chile",
+        "Spanien",
+        "Südafrika",
+        "Russland"
+      ],
+      "oben": "frühester",
+      "unten": "spätester",
+      "werte": [
+        "1958",
+        "1962",
+        "1982",
+        "2010",
+        "2018"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Fußball-Weltmeisterschaft",
+        "url": "https://de.wikipedia.org/wiki/Fußball-Weltmeisterschaft"
+      }
+    },
+    {
+      "id": "sport-093",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Schachfiguren nach ihrem üblichen Wert!",
+      "loesung": [
+        "Dame",
+        "Turm",
+        "Läufer",
+        "Bauer"
+      ],
+      "oben": "wertvollste",
+      "unten": "am wenigsten wert",
+      "quelle": {
+        "titel": "Wikipedia – Schachfigur",
+        "url": "https://de.wikipedia.org/wiki/Schachfigur"
+      }
     }
   ],
   "stechfragen": [
@@ -1099,6 +1595,28 @@
       "quelle": {
         "titel": "Wikipedia – Robert Lewandowski",
         "url": "https://de.wikipedia.org/wiki/Robert_Lewandowski"
+      }
+    },
+    {
+      "id": "sport-s06",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde der FC Schalke 04 gegründet?",
+      "einheit": "",
+      "loesung": 1904,
+      "quelle": {
+        "titel": "Wikipedia – FC Schalke 04",
+        "url": "https://de.wikipedia.org/wiki/FC_Schalke_04"
+      }
+    },
+    {
+      "id": "sport-s07",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bundesliga-Tore schoss Gerd Müller in der Saison 1971/72?",
+      "einheit": "",
+      "loesung": 40,
+      "quelle": {
+        "titel": "Wikipedia – Gerd Müller",
+        "url": "https://de.wikipedia.org/wiki/Gerd_Müller"
       }
     }
   ]

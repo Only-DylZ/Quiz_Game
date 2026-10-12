@@ -358,8 +358,8 @@
             "jahr": 1989
           },
           {
-            "name": "World of Warcraft",
-            "jahr": 2004
+            "name": "Erstes iPhone",
+            "jahr": 2007
           }
         ]
       },
@@ -978,6 +978,506 @@
         "titel": "Wikipedia – Spielkonsole",
         "url": "https://de.wikipedia.org/wiki/Spielkonsole"
       }
+    },
+    {
+      "id": "game-061",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Pferd des Helden in „The Legend of Zelda: Ocarina of Time“?",
+      "optionen": [
+        "Plötze",
+        "Rocinante",
+        "Epona",
+        "Agro"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – The Legend of Zelda: Ocarina of Time",
+        "url": "https://de.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time"
+      }
+    },
+    {
+      "id": "game-062",
+      "modus": "auswahl",
+      "frage": "Wie heißt das grüne Monster in Minecraft, das neben Spielern explodiert?",
+      "optionen": [
+        "Creeper",
+        "Enderman",
+        "Ghast",
+        "Zombie"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      }
+    },
+    {
+      "id": "game-063",
+      "modus": "auswahl",
+      "frage": "Welche Firma entwickelte die bekannte Spiele-Engine „Unreal Engine“?",
+      "optionen": [
+        "Valve",
+        "Blizzard",
+        "Riot Games",
+        "Epic Games"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Epic Games",
+        "url": "https://de.wikipedia.org/wiki/Epic_Games"
+      }
+    },
+    {
+      "id": "game-064",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Held der Spielereihe „God of War“?",
+      "optionen": [
+        "Atreus",
+        "Kratos",
+        "Dante",
+        "Geralt"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – God of War",
+        "url": "https://de.wikipedia.org/wiki/God_of_War"
+      }
+    },
+    {
+      "id": "game-065",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Professor, der in Pokémon Rot und Blau das erste Pokémon schenkt?",
+      "optionen": [
+        "Professor Lind",
+        "Professor Eich",
+        "Professor Birk",
+        "Professor Esche"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Pokémon Rote und Blaue Edition",
+        "url": "https://de.wikipedia.org/wiki/Pokémon_Rote_und_Blaue_Edition"
+      }
+    },
+    {
+      "id": "game-066",
+      "modus": "auswahl",
+      "frage": "In welcher Spielereihe ist Lara Croft die Heldin?",
+      "optionen": [
+        "Uncharted",
+        "Resident Evil",
+        "Assassin’s Creed",
+        "Tomb Raider"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Lara Croft",
+        "url": "https://de.wikipedia.org/wiki/Lara_Croft"
+      }
+    },
+    {
+      "id": "game-067",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Fantasywelt, in der „World of Warcraft“ spielt?",
+      "optionen": [
+        "Azeroth",
+        "Tamriel",
+        "Hyrule",
+        "Mittelerde"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – World of Warcraft",
+        "url": "https://de.wikipedia.org/wiki/World_of_Warcraft"
+      }
+    },
+    {
+      "id": "game-068",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Gorilla, der im Automatenspiel von 1981 Fässer auf den Helden „Jumpman“ rollt?",
+      "optionen": [
+        "King Kong",
+        "Diddy Kong",
+        "Donkey Kong",
+        "Funky Kong"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Donkey Kong",
+        "url": "https://de.wikipedia.org/wiki/Donkey_Kong"
+      }
+    },
+    {
+      "id": "game-069",
+      "modus": "auswahl",
+      "frage": "Was ist ein „NPC“ in Videospielen?",
+      "optionen": [
+        "Ein Cheat-Code",
+        "Ein Spielmodus",
+        "Ein Grafikfehler",
+        "Eine computergesteuerte Figur"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Nicht-Spieler-Charakter",
+        "url": "https://de.wikipedia.org/wiki/Nicht-Spieler-Charakter"
+      }
+    },
+    {
+      "id": "game-070",
+      "modus": "auswahl",
+      "frage": "Welches Studio entwickelte „The Elder Scrolls V: Skyrim“?",
+      "optionen": [
+        "BioWare",
+        "Bethesda",
+        "CD Projekt Red",
+        "Ubisoft"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – The Elder Scrolls V: Skyrim",
+        "url": "https://de.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim"
+      }
+    },
+    {
+      "id": "game-071",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Kopfgeldjägerin aus der Spielereihe „Metroid“?",
+      "optionen": [
+        "Lara Croft",
+        "Bayonetta",
+        "Samus Aran",
+        "Chun-Li"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Metroid",
+        "url": "https://de.wikipedia.org/wiki/Metroid"
+      }
+    },
+    {
+      "id": "game-072",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Bösewicht, gegen den der Held der „Zelda“-Reihe immer wieder kämpft?",
+      "optionen": [
+        "Ganon",
+        "Bowser",
+        "Ridley",
+        "Dr. Robotnik"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – The Legend of Zelda",
+        "url": "https://de.wikipedia.org/wiki/The_Legend_of_Zelda"
+      }
+    },
+    {
+      "id": "game-073",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler hat ein Team bei „League of Legends“ im Standardmodus?",
+      "einheit": "",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – League of Legends",
+        "url": "https://de.wikipedia.org/wiki/League_of_Legends"
+      }
+    },
+    {
+      "id": "game-074",
+      "modus": "schaetzen",
+      "frage": "Bei welchem Level stürzt das originale Automatenspiel „Pac-Man“ ab, weil der Bildschirm kaputtgeht?",
+      "einheit": "",
+      "loesung": 256,
+      "quelle": {
+        "titel": "Wikipedia – Pac-Man",
+        "url": "https://de.wikipedia.org/wiki/Pac-Man"
+      }
+    },
+    {
+      "id": "game-075",
+      "modus": "schaetzen",
+      "frage": "Wie viele Plätze hat das Inventar in Minecraft (ohne Rüstung und Zweithand)?",
+      "einheit": "",
+      "loesung": 36,
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      }
+    },
+    {
+      "id": "game-076",
+      "modus": "schaetzen",
+      "frage": "Wie viele Welten hat „Super Mario Bros.“ für das NES?",
+      "einheit": "",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Super Mario Bros.",
+        "url": "https://de.wikipedia.org/wiki/Super_Mario_Bros."
+      }
+    },
+    {
+      "id": "game-077",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten dauert ein ganzer Tag (Tag und Nacht) in Minecraft?",
+      "einheit": "Minuten",
+      "loesung": 20,
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      }
+    },
+    {
+      "id": "game-078",
+      "modus": "schaetzen",
+      "frage": "Wie viele Reihen muss man bei Tetris auf einmal abräumen, um einen „Tetris“ zu schaffen?",
+      "einheit": "",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Tetris",
+        "url": "https://de.wikipedia.org/wiki/Tetris"
+      }
+    },
+    {
+      "id": "game-079",
+      "modus": "schaetzen",
+      "frage": "Wie viele Blöcke breit ist ein „Chunk“ in Minecraft?",
+      "einheit": "",
+      "loesung": 16,
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      }
+    },
+    {
+      "id": "game-080",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zoll misst der Bildschirm der Nintendo Switch OLED?",
+      "einheit": "Zoll",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Nintendo Switch",
+        "url": "https://de.wikipedia.org/wiki/Nintendo_Switch"
+      }
+    },
+    {
+      "id": "game-081",
+      "modus": "schaetzen",
+      "frage": "Wie viele Arenaorden braucht man in Pokémon Rot und Blau für die Pokémon-Liga?",
+      "einheit": "",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Pokémon Rote und Blaue Edition",
+        "url": "https://de.wikipedia.org/wiki/Pokémon_Rote_und_Blaue_Edition"
+      }
+    },
+    {
+      "id": "game-082",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele neue Pokémon brachte die 2. Generation (Gold und Silber)?",
+      "daten": {
+        "einheit": "Pokémon",
+        "balken": [
+          {
+            "name": "Gen. 2",
+            "wert": null
+          },
+          {
+            "name": "Gen. 3",
+            "wert": 135
+          },
+          {
+            "name": "Gen. 4",
+            "wert": 107
+          },
+          {
+            "name": "Gen. 5",
+            "wert": 156
+          }
+        ]
+      },
+      "loesung": 100,
+      "quelle": {
+        "titel": "Wikipedia – Liste der Pokémon",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Pokémon"
+      }
+    },
+    {
+      "id": "game-083",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam die Konsole Sega Mega Drive in Japan heraus?",
+      "daten": {
+        "von": 1980,
+        "bis": 2005,
+        "ereignisse": [
+          {
+            "name": "Tetris erscheint",
+            "jahr": 1984
+          },
+          {
+            "name": "Erste Xbox erscheint",
+            "jahr": 2001
+          }
+        ]
+      },
+      "loesung": 1988,
+      "quelle": {
+        "titel": "Wikipedia – Sega Mega Drive",
+        "url": "https://de.wikipedia.org/wiki/Sega_Mega_Drive"
+      }
+    },
+    {
+      "id": "game-084",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien „World of Warcraft“?",
+      "daten": {
+        "von": 1995,
+        "bis": 2015,
+        "ereignisse": [
+          {
+            "name": "PlayStation 2 erscheint",
+            "jahr": 2000
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 2004,
+      "quelle": {
+        "titel": "Wikipedia – World of Warcraft",
+        "url": "https://de.wikipedia.org/wiki/World_of_Warcraft"
+      }
+    },
+    {
+      "id": "game-085",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Montreal, wo Ubisoft eines der größten Spielestudios der Welt betreibt?",
+      "daten": {
+        "mitte": [
+          40,
+          -90
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 45.5,
+        "lng": -73.57
+      },
+      "quelle": {
+        "titel": "Wikipedia – Ubisoft Montreal",
+        "url": "https://de.wikipedia.org/wiki/Ubisoft_Montreal"
+      }
+    },
+    {
+      "id": "game-086",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Katowice, Austragungsort eines der größten E-Sport-Turniere Europas?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 50.26,
+        "lng": 19.02
+      },
+      "quelle": {
+        "titel": "Wikipedia – Katowice",
+        "url": "https://de.wikipedia.org/wiki/Katowice"
+      }
+    },
+    {
+      "id": "game-087",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Leipzig, wo bis 2008 die Spielemesse „Games Convention“ stattfand?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 51.34,
+        "lng": 12.37
+      },
+      "quelle": {
+        "titel": "Wikipedia – Games Convention",
+        "url": "https://de.wikipedia.org/wiki/Games_Convention"
+      }
+    },
+    {
+      "id": "game-088",
+      "modus": "reihenfolge",
+      "frage": "Ordne die PlayStation-Konsolen nach ihrem Erscheinen!",
+      "loesung": [
+        "PlayStation Portable",
+        "PlayStation 3",
+        "PlayStation 4",
+        "PlayStation 5"
+      ],
+      "oben": "älteste",
+      "unten": "neueste",
+      "werte": [
+        "2004",
+        "2006",
+        "2013",
+        "2020"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – PlayStation",
+        "url": "https://de.wikipedia.org/wiki/PlayStation"
+      }
+    },
+    {
+      "id": "game-089",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Mario-Spiele nach ihrem Erscheinen!",
+      "loesung": [
+        "Super Mario World",
+        "Super Mario 64",
+        "Super Mario Sunshine",
+        "Super Mario Odyssey"
+      ],
+      "oben": "ältestes",
+      "unten": "neuestes",
+      "werte": [
+        "1990",
+        "1996",
+        "2002",
+        "2017"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Super Mario",
+        "url": "https://de.wikipedia.org/wiki/Super_Mario"
+      }
+    },
+    {
+      "id": "game-090",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Spitzhacken in Minecraft nach ihrer Haltbarkeit!",
+      "loesung": [
+        "Netherit",
+        "Diamant",
+        "Eisen",
+        "Stein",
+        "Holz"
+      ],
+      "oben": "hält am längsten",
+      "unten": "geht am schnellsten kaputt",
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      }
     }
   ],
   "stechfragen": [
@@ -1034,6 +1534,28 @@
       "quelle": {
         "titel": "Wikipedia – Gamescom",
         "url": "https://de.wikipedia.org/wiki/Gamescom"
+      }
+    },
+    {
+      "id": "game-s06",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr kam der Game Boy Color heraus?",
+      "einheit": "",
+      "loesung": 1998,
+      "quelle": {
+        "titel": "Wikipedia – Game Boy Color",
+        "url": "https://de.wikipedia.org/wiki/Game_Boy_Color"
+      }
+    },
+    {
+      "id": "game-s07",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr erschien das allererste „Grand Theft Auto“?",
+      "einheit": "",
+      "loesung": 1997,
+      "quelle": {
+        "titel": "Wikipedia – Grand Theft Auto",
+        "url": "https://de.wikipedia.org/wiki/Grand_Theft_Auto"
       }
     }
   ]

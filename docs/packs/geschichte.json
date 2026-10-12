@@ -1078,6 +1078,499 @@
         "titel": "Wikipedia – Bauwerk",
         "url": "https://de.wikipedia.org/wiki/Bauwerk"
       }
+    },
+    {
+      "id": "gesch-065",
+      "modus": "auswahl",
+      "frage": "Wer war der erste Bundespräsident der Bundesrepublik Deutschland?",
+      "optionen": [
+        "Heinrich Lübke",
+        "Walter Scheel",
+        "Theodor Heuss",
+        "Gustav Heinemann"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Theodor Heuss",
+        "url": "https://de.wikipedia.org/wiki/Theodor_Heuss"
+      }
+    },
+    {
+      "id": "gesch-066",
+      "modus": "auswahl",
+      "frage": "Welche Stadt war bis zur Wiedervereinigung Regierungssitz der Bundesrepublik?",
+      "optionen": [
+        "Bonn",
+        "Frankfurt am Main",
+        "Köln",
+        "Düsseldorf"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Bonn",
+        "url": "https://de.wikipedia.org/wiki/Bonn"
+      }
+    },
+    {
+      "id": "gesch-067",
+      "modus": "auswahl",
+      "frage": "Wie hieß die berühmte Ehefrau des ägyptischen Pharaos Echnaton?",
+      "optionen": [
+        "Hatschepsut",
+        "Nefertari",
+        "Kleopatra VII.",
+        "Nofretete"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Nofretete",
+        "url": "https://de.wikipedia.org/wiki/Nofretete"
+      }
+    },
+    {
+      "id": "gesch-068",
+      "modus": "auswahl",
+      "frage": "Welcher Staat zerfiel nach dem Ersten Weltkrieg und wurde von den Habsburgern regiert?",
+      "optionen": [
+        "Preußen",
+        "Österreich-Ungarn",
+        "Das Osmanische Reich",
+        "Das Russische Reich"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Österreich-Ungarn",
+        "url": "https://de.wikipedia.org/wiki/Österreich-Ungarn"
+      }
+    },
+    {
+      "id": "gesch-069",
+      "modus": "auswahl",
+      "frage": "Wie hieß die Geheimpolizei der DDR?",
+      "optionen": [
+        "Gestapo",
+        "Stasi",
+        "KGB",
+        "Securitate"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Ministerium für Staatssicherheit",
+        "url": "https://de.wikipedia.org/wiki/Ministerium_für_Staatssicherheit"
+      }
+    },
+    {
+      "id": "gesch-070",
+      "modus": "auswahl",
+      "frage": "Welcher Seefahrer erreichte 1498 als erster Europäer auf dem Seeweg Indien?",
+      "optionen": [
+        "Bartolomeu Dias",
+        "Amerigo Vespucci",
+        "James Cook",
+        "Vasco da Gama"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Vasco da Gama",
+        "url": "https://de.wikipedia.org/wiki/Vasco_da_Gama"
+      }
+    },
+    {
+      "id": "gesch-071",
+      "modus": "auswahl",
+      "frage": "Welches Reich eroberte 1453 Konstantinopel?",
+      "optionen": [
+        "Das Osmanische Reich",
+        "Das Mongolische Reich",
+        "Das Heilige Römische Reich",
+        "Das Perserreich"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Eroberung von Konstantinopel (1453)",
+        "url": "https://de.wikipedia.org/wiki/Eroberung_von_Konstantinopel_(1453)"
+      }
+    },
+    {
+      "id": "gesch-072",
+      "modus": "auswahl",
+      "frage": "Welche Seuche tötete Mitte des 14. Jahrhunderts etwa ein Drittel der Menschen in Europa?",
+      "optionen": [
+        "Cholera",
+        "Pocken",
+        "Pest",
+        "Grippe"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Schwarzer Tod",
+        "url": "https://de.wikipedia.org/wiki/Schwarzer_Tod"
+      }
+    },
+    {
+      "id": "gesch-073",
+      "modus": "auswahl",
+      "frage": "Mit welchem Friedensschluss endete der Dreißigjährige Krieg?",
+      "optionen": [
+        "Frieden von Versailles",
+        "Augsburger Religionsfrieden",
+        "Wiener Kongress",
+        "Westfälischer Friede"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Westfälischer Friede",
+        "url": "https://de.wikipedia.org/wiki/Westfälischer_Friede"
+      }
+    },
+    {
+      "id": "gesch-074",
+      "modus": "auswahl",
+      "frage": "Wer verfasste den Großteil der Unabhängigkeitserklärung der USA?",
+      "optionen": [
+        "Benjamin Franklin",
+        "Thomas Jefferson",
+        "John Adams",
+        "Alexander Hamilton"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Unabhängigkeitserklärung der Vereinigten Staaten",
+        "url": "https://de.wikipedia.org/wiki/Unabhängigkeitserklärung_der_Vereinigten_Staaten"
+      }
+    },
+    {
+      "id": "gesch-075",
+      "modus": "auswahl",
+      "frage": "Welches Land machte Brasilien zu seiner Kolonie?",
+      "optionen": [
+        "Spanien",
+        "Frankreich",
+        "Portugal",
+        "Niederlande"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Geschichte Brasiliens",
+        "url": "https://de.wikipedia.org/wiki/Geschichte_Brasiliens"
+      }
+    },
+    {
+      "id": "gesch-076",
+      "modus": "auswahl",
+      "frage": "Wer war Präsident der USA beim japanischen Angriff auf Pearl Harbor 1941?",
+      "optionen": [
+        "Franklin D. Roosevelt",
+        "Harry S. Truman",
+        "Herbert Hoover",
+        "Dwight D. Eisenhower"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Angriff auf Pearl Harbor",
+        "url": "https://de.wikipedia.org/wiki/Angriff_auf_Pearl_Harbor"
+      }
+    },
+    {
+      "id": "gesch-077",
+      "modus": "schaetzen",
+      "frage": "Wie alt wurde Julius Caesar?",
+      "einheit": "Jahre",
+      "loesung": 55,
+      "quelle": {
+        "titel": "Wikipedia – Gaius Iulius Caesar",
+        "url": "https://de.wikipedia.org/wiki/Gaius_Iulius_Caesar"
+      }
+    },
+    {
+      "id": "gesch-078",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist die Freiheitsstatue in New York – ohne Sockel?",
+      "einheit": "m",
+      "loesung": 46,
+      "quelle": {
+        "titel": "Wikipedia – Freiheitsstatue",
+        "url": "https://de.wikipedia.org/wiki/Freiheitsstatue"
+      }
+    },
+    {
+      "id": "gesch-079",
+      "modus": "schaetzen",
+      "frage": "Der wievielte Präsident der USA war John F. Kennedy?",
+      "einheit": "",
+      "loesung": 35,
+      "quelle": {
+        "titel": "Wikipedia – John F. Kennedy",
+        "url": "https://de.wikipedia.org/wiki/John_F._Kennedy"
+      }
+    },
+    {
+      "id": "gesch-080",
+      "modus": "schaetzen",
+      "frage": "Wie viele Staaten gründeten 1957 die Europäische Wirtschaftsgemeinschaft (EWG)?",
+      "einheit": "",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Europäische Wirtschaftsgemeinschaft",
+        "url": "https://de.wikipedia.org/wiki/Europäische_Wirtschaftsgemeinschaft"
+      }
+    },
+    {
+      "id": "gesch-081",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre bestand die Weimarer Republik?",
+      "einheit": "Jahre",
+      "loesung": 14,
+      "quelle": {
+        "titel": "Wikipedia – Weimarer Republik",
+        "url": "https://de.wikipedia.org/wiki/Weimarer_Republik"
+      }
+    },
+    {
+      "id": "gesch-082",
+      "modus": "schaetzen",
+      "frage": "Wie viele Staaten unterzeichneten ursprünglich den Nordatlantikvertrag?",
+      "einheit": "",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Nordatlantikvertrag",
+        "url": "https://de.wikipedia.org/wiki/Nordatlantikvertrag"
+      }
+    },
+    {
+      "id": "gesch-083",
+      "modus": "schaetzen",
+      "frage": "Wie viele Männer unterzeichneten die Unabhängigkeitserklärung der USA?",
+      "einheit": "",
+      "loesung": 56,
+      "quelle": {
+        "titel": "Wikipedia – Unabhängigkeitserklärung der Vereinigten Staaten",
+        "url": "https://de.wikipedia.org/wiki/Unabhängigkeitserklärung_der_Vereinigten_Staaten"
+      }
+    },
+    {
+      "id": "gesch-084",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauerte die Kubakrise 1962?",
+      "einheit": "Tage",
+      "loesung": 13,
+      "quelle": {
+        "titel": "Wikipedia – Kubakrise",
+        "url": "https://de.wikipedia.org/wiki/Kubakrise"
+      }
+    },
+    {
+      "id": "gesch-085",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre regierte Kaiser Wilhelm II.?",
+      "einheit": "Jahre",
+      "loesung": 30,
+      "quelle": {
+        "titel": "Wikipedia – Wilhelm II.",
+        "url": "https://de.wikipedia.org/wiki/Wilhelm_II._(Deutsches_Reich)"
+      }
+    },
+    {
+      "id": "gesch-086",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Jahre war Helmut Kohl Bundeskanzler?",
+      "daten": {
+        "einheit": "Jahre",
+        "balken": [
+          {
+            "name": "Adenauer",
+            "wert": 14
+          },
+          {
+            "name": "Schmidt",
+            "wert": 8
+          },
+          {
+            "name": "Schröder",
+            "wert": 7
+          },
+          {
+            "name": "Kohl",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 16,
+      "quelle": {
+        "titel": "Wikipedia – Helmut Kohl",
+        "url": "https://de.wikipedia.org/wiki/Helmut_Kohl"
+      }
+    },
+    {
+      "id": "gesch-087",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr landeten die Pilgerväter mit der „Mayflower“ in Nordamerika?",
+      "daten": {
+        "von": 1550,
+        "bis": 1700,
+        "ereignisse": [
+          {
+            "name": "Tod von Königin Elisabeth I.",
+            "jahr": 1603
+          },
+          {
+            "name": "Ende des Dreißigjährigen Kriegs",
+            "jahr": 1648
+          }
+        ]
+      },
+      "loesung": 1620,
+      "quelle": {
+        "titel": "Wikipedia – Mayflower",
+        "url": "https://de.wikipedia.org/wiki/Mayflower"
+      }
+    },
+    {
+      "id": "gesch-088",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde Otto der Große in Rom zum Kaiser gekrönt?",
+      "daten": {
+        "von": 600,
+        "bis": 1100,
+        "ereignisse": [
+          {
+            "name": "Tod Mohammeds",
+            "jahr": 632
+          },
+          {
+            "name": "Wikinger überfallen Lindisfarne",
+            "jahr": 793
+          }
+        ]
+      },
+      "loesung": 962,
+      "quelle": {
+        "titel": "Wikipedia – Otto I. (HRR)",
+        "url": "https://de.wikipedia.org/wiki/Otto_I._(HRR)"
+      }
+    },
+    {
+      "id": "gesch-089",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Verdun, Schauplatz einer der längsten Schlachten des Ersten Weltkriegs?",
+      "daten": {
+        "mitte": [
+          48,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 49.16,
+        "lng": 5.38
+      },
+      "quelle": {
+        "titel": "Wikipedia – Schlacht um Verdun",
+        "url": "https://de.wikipedia.org/wiki/Schlacht_um_Verdun"
+      }
+    },
+    {
+      "id": "gesch-090",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo lag Tenochtitlan, die Hauptstadt der Azteken?",
+      "daten": {
+        "mitte": [
+          20,
+          -90
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 19.43,
+        "lng": -99.13
+      },
+      "quelle": {
+        "titel": "Wikipedia – Tenochtitlan",
+        "url": "https://de.wikipedia.org/wiki/Tenochtitlan"
+      }
+    },
+    {
+      "id": "gesch-091",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Persepolis, die alte Hauptstadt des Perserreichs?",
+      "daten": {
+        "mitte": [
+          32,
+          45
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 29.94,
+        "lng": 52.89
+      },
+      "quelle": {
+        "titel": "Wikipedia – Persepolis",
+        "url": "https://de.wikipedia.org/wiki/Persepolis"
+      }
+    },
+    {
+      "id": "gesch-092",
+      "modus": "reihenfolge",
+      "frage": "Ordne die deutschen Staaten nach ihrer Zeit!",
+      "loesung": [
+        "Heiliges Römisches Reich",
+        "Deutscher Bund",
+        "Deutsches Kaiserreich",
+        "Weimarer Republik"
+      ],
+      "oben": "frühester",
+      "unten": "spätester",
+      "quelle": {
+        "titel": "Wikipedia – Deutsche Geschichte",
+        "url": "https://de.wikipedia.org/wiki/Deutsche_Geschichte"
+      }
+    },
+    {
+      "id": "gesch-093",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Entdecker nach ihrer berühmtesten Reise!",
+      "loesung": [
+        "Leif Eriksson",
+        "Marco Polo",
+        "James Cook",
+        "Roald Amundsen"
+      ],
+      "oben": "frühester",
+      "unten": "spätester",
+      "werte": [
+        "um 1000",
+        "ab 1271",
+        "ab 1768",
+        "1911"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Entdeckungsreise",
+        "url": "https://de.wikipedia.org/wiki/Entdeckungsreise"
+      }
+    },
+    {
+      "id": "gesch-094",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Kriege nach ihrem Beginn!",
+      "loesung": [
+        "Dreißigjähriger Krieg",
+        "Siebenjähriger Krieg",
+        "Deutsch-Französischer Krieg",
+        "Erster Weltkrieg"
+      ],
+      "oben": "frühester",
+      "unten": "spätester",
+      "quelle": {
+        "titel": "Wikipedia – Liste von Kriegen",
+        "url": "https://de.wikipedia.org/wiki/Liste_von_Kriegen"
+      }
     }
   ],
   "stechfragen": [
@@ -1134,6 +1627,28 @@
       "quelle": {
         "titel": "Wikipedia – Plünderung Roms (410)",
         "url": "https://de.wikipedia.org/wiki/Plünderung_Roms_(410)"
+      }
+    },
+    {
+      "id": "gesch-s06",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde US-Präsident John F. Kennedy ermordet?",
+      "einheit": "",
+      "loesung": 1963,
+      "quelle": {
+        "titel": "Wikipedia – Attentat auf John F. Kennedy",
+        "url": "https://de.wikipedia.org/wiki/Attentat_auf_John_F._Kennedy"
+      }
+    },
+    {
+      "id": "gesch-s07",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr erhielten Frauen in Deutschland das Wahlrecht?",
+      "einheit": "",
+      "loesung": 1918,
+      "quelle": {
+        "titel": "Wikipedia – Frauenwahlrecht",
+        "url": "https://de.wikipedia.org/wiki/Frauenwahlrecht"
       }
     }
   ]

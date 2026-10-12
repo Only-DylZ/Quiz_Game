@@ -1031,6 +1031,504 @@
         "titel": "Wikipedia – Mohshärte",
         "url": "https://de.wikipedia.org/wiki/Mohshärte"
       }
+    },
+    {
+      "id": "chem-063",
+      "modus": "auswahl",
+      "frage": "Welches chemische Symbol hat Silber?",
+      "optionen": [
+        "Si",
+        "Sb",
+        "Ag",
+        "Sn"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Silber",
+        "url": "https://de.wikipedia.org/wiki/Silber"
+      }
+    },
+    {
+      "id": "chem-064",
+      "modus": "auswahl",
+      "frage": "Für welches Element steht das Symbol Pb?",
+      "optionen": [
+        "Blei",
+        "Phosphor",
+        "Platin",
+        "Palladium"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Blei",
+        "url": "https://de.wikipedia.org/wiki/Blei"
+      }
+    },
+    {
+      "id": "chem-065",
+      "modus": "auswahl",
+      "frage": "Welches Gas riecht nach faulen Eiern?",
+      "optionen": [
+        "Ammoniak",
+        "Methan",
+        "Kohlenmonoxid",
+        "Schwefelwasserstoff"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Schwefelwasserstoff",
+        "url": "https://de.wikipedia.org/wiki/Schwefelwasserstoff"
+      }
+    },
+    {
+      "id": "chem-066",
+      "modus": "auswahl",
+      "frage": "Welche Formel hat Ozon?",
+      "optionen": [
+        "O₂",
+        "O₃",
+        "CO",
+        "H₂O₂"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Ozon",
+        "url": "https://de.wikipedia.org/wiki/Ozon"
+      }
+    },
+    {
+      "id": "chem-067",
+      "modus": "auswahl",
+      "frage": "Welche Säure ist in unserem Magensaft enthalten?",
+      "optionen": [
+        "Schwefelsäure",
+        "Salzsäure",
+        "Zitronensäure",
+        "Essigsäure"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Magensaft",
+        "url": "https://de.wikipedia.org/wiki/Magensaft"
+      }
+    },
+    {
+      "id": "chem-068",
+      "modus": "auswahl",
+      "frage": "Zu welcher Gruppe gehören Krypton und Xenon?",
+      "optionen": [
+        "Halogene",
+        "Alkalimetalle",
+        "Schwermetalle",
+        "Edelgase"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Edelgase",
+        "url": "https://de.wikipedia.org/wiki/Edelgase"
+      }
+    },
+    {
+      "id": "chem-069",
+      "modus": "auswahl",
+      "frage": "Welches dieser Elemente ist ein Alkalimetall?",
+      "optionen": [
+        "Lithium",
+        "Calcium",
+        "Aluminium",
+        "Kohlenstoff"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Alkalimetalle",
+        "url": "https://de.wikipedia.org/wiki/Alkalimetalle"
+      }
+    },
+    {
+      "id": "chem-070",
+      "modus": "auswahl",
+      "frage": "Was entsteht, wenn eine Säure mit einer Base reagiert (Neutralisation)?",
+      "optionen": [
+        "Zucker und Sauerstoff",
+        "Gas und Rauch",
+        "Salz und Wasser",
+        "Metall und Säure"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Neutralisation (Chemie)",
+        "url": "https://de.wikipedia.org/wiki/Neutralisation_(Chemie)"
+      }
+    },
+    {
+      "id": "chem-071",
+      "modus": "auswahl",
+      "frage": "Für welches Element steht das Symbol W?",
+      "optionen": [
+        "Wasserstoff",
+        "Wismut",
+        "Vanadium",
+        "Wolfram"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Wolfram",
+        "url": "https://de.wikipedia.org/wiki/Wolfram"
+      }
+    },
+    {
+      "id": "chem-072",
+      "modus": "auswahl",
+      "frage": "Was ist der wichtigste Rohstoff für normales Glas?",
+      "optionen": [
+        "Kalkstein",
+        "Quarzsand",
+        "Ton",
+        "Granit"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Glas",
+        "url": "https://de.wikipedia.org/wiki/Glas"
+      }
+    },
+    {
+      "id": "chem-073",
+      "modus": "auswahl",
+      "frage": "Wer entwickelte mit Carl Bosch das Verfahren zur Herstellung von Ammoniak?",
+      "optionen": [
+        "Otto Hahn",
+        "Justus von Liebig",
+        "Fritz Haber",
+        "Robert Bunsen"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Haber-Bosch-Verfahren",
+        "url": "https://de.wikipedia.org/wiki/Haber-Bosch-Verfahren"
+      }
+    },
+    {
+      "id": "chem-074",
+      "modus": "auswahl",
+      "frage": "Welches Element steckt in der Reibfläche einer Streichholzschachtel?",
+      "optionen": [
+        "Phosphor",
+        "Schwefel",
+        "Magnesium",
+        "Natrium"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Streichholz",
+        "url": "https://de.wikipedia.org/wiki/Streichholz"
+      }
+    },
+    {
+      "id": "chem-075",
+      "modus": "schaetzen",
+      "frage": "Welche Ordnungszahl hat Stickstoff?",
+      "einheit": "",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Stickstoff",
+        "url": "https://de.wikipedia.org/wiki/Stickstoff"
+      }
+    },
+    {
+      "id": "chem-076",
+      "modus": "schaetzen",
+      "frage": "Wie viele Elektronen hat ein Natriumatom?",
+      "einheit": "",
+      "loesung": 11,
+      "quelle": {
+        "titel": "Wikipedia – Natrium",
+        "url": "https://de.wikipedia.org/wiki/Natrium"
+      }
+    },
+    {
+      "id": "chem-077",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Celsius siedet flüssiger Stickstoff?",
+      "einheit": "°C",
+      "loesung": -196,
+      "quelle": {
+        "titel": "Wikipedia – Flüssigstickstoff",
+        "url": "https://de.wikipedia.org/wiki/Flüssigstickstoff"
+      }
+    },
+    {
+      "id": "chem-078",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm wiegt ein Mol Wasser?",
+      "einheit": "g",
+      "loesung": 18,
+      "quelle": {
+        "titel": "Wikipedia – Wasser",
+        "url": "https://de.wikipedia.org/wiki/Wasser"
+      }
+    },
+    {
+      "id": "chem-079",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gruppen (Spalten) hat das heutige Periodensystem?",
+      "einheit": "",
+      "loesung": 18,
+      "quelle": {
+        "titel": "Wikipedia – Periodensystem",
+        "url": "https://de.wikipedia.org/wiki/Periodensystem"
+      }
+    },
+    {
+      "id": "chem-080",
+      "modus": "schaetzen",
+      "frage": "Welche Ordnungszahl hat Blei?",
+      "einheit": "",
+      "loesung": 82,
+      "quelle": {
+        "titel": "Wikipedia – Blei",
+        "url": "https://de.wikipedia.org/wiki/Blei"
+      }
+    },
+    {
+      "id": "chem-081",
+      "modus": "schaetzen",
+      "frage": "Wie dicht ist Platin? (Wasser hat 1 g/cm³)",
+      "einheit": "g/cm³",
+      "loesung": 21.45,
+      "quelle": {
+        "titel": "Wikipedia – Platin",
+        "url": "https://de.wikipedia.org/wiki/Platin"
+      }
+    },
+    {
+      "id": "chem-082",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Atomen besteht ein Molekül Traubenzucker (C₆H₁₂O₆)?",
+      "einheit": "",
+      "loesung": 24,
+      "quelle": {
+        "titel": "Wikipedia – Glucose",
+        "url": "https://de.wikipedia.org/wiki/Glucose"
+      }
+    },
+    {
+      "id": "chem-083",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Celsius schmilzt Kochsalz?",
+      "einheit": "°C",
+      "loesung": 801,
+      "quelle": {
+        "titel": "Wikipedia – Natriumchlorid",
+        "url": "https://de.wikipedia.org/wiki/Natriumchlorid"
+      }
+    },
+    {
+      "id": "chem-084",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Bei wie viel Grad Celsius schmilzt Nickel?",
+      "daten": {
+        "einheit": "°C",
+        "balken": [
+          {
+            "name": "Blei",
+            "wert": 327
+          },
+          {
+            "name": "Zink",
+            "wert": 420
+          },
+          {
+            "name": "Nickel",
+            "wert": null
+          },
+          {
+            "name": "Titan",
+            "wert": 1668
+          }
+        ]
+      },
+      "loesung": 1455,
+      "quelle": {
+        "titel": "Wikipedia – Nickel",
+        "url": "https://de.wikipedia.org/wiki/Nickel"
+      }
+    },
+    {
+      "id": "chem-085",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viel Prozent der Erdkruste (nach Masse) besteht aus Aluminium?",
+      "daten": {
+        "einheit": "%",
+        "balken": [
+          {
+            "name": "Sauerstoff",
+            "wert": 46
+          },
+          {
+            "name": "Silicium",
+            "wert": 28
+          },
+          {
+            "name": "Aluminium",
+            "wert": null
+          },
+          {
+            "name": "Eisen",
+            "wert": 5
+          }
+        ]
+      },
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Erdkruste",
+        "url": "https://de.wikipedia.org/wiki/Erdkruste"
+      }
+    },
+    {
+      "id": "chem-086",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr entdeckten Marie und Pierre Curie das Element Radium?",
+      "daten": {
+        "von": 1850,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Kaiserreichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Ende des Ersten Weltkriegs",
+            "jahr": 1918
+          }
+        ]
+      },
+      "loesung": 1898,
+      "quelle": {
+        "titel": "Wikipedia – Radium",
+        "url": "https://de.wikipedia.org/wiki/Radium"
+      }
+    },
+    {
+      "id": "chem-087",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr beschrieb Henry Cavendish den Wasserstoff als eigenes Element („brennbare Luft“)?",
+      "daten": {
+        "von": 1700,
+        "bis": 1800,
+        "ereignisse": [
+          {
+            "name": "Geburt Mozarts",
+            "jahr": 1756
+          },
+          {
+            "name": "Tod Friedrichs des Großen",
+            "jahr": 1786
+          }
+        ]
+      },
+      "loesung": 1766,
+      "quelle": {
+        "titel": "Wikipedia – Henry Cavendish",
+        "url": "https://de.wikipedia.org/wiki/Henry_Cavendish"
+      }
+    },
+    {
+      "id": "chem-088",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Leverkusen, der Hauptsitz des Chemiekonzerns Bayer?",
+      "daten": {
+        "mitte": [
+          51,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 51.03,
+        "lng": 6.98
+      },
+      "quelle": {
+        "titel": "Wikipedia – Leverkusen",
+        "url": "https://de.wikipedia.org/wiki/Leverkusen"
+      }
+    },
+    {
+      "id": "chem-089",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Dorf Strontian, nach dem das Element Strontium benannt ist?",
+      "daten": {
+        "mitte": [
+          55,
+          0
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 56.69,
+        "lng": -5.57
+      },
+      "quelle": {
+        "titel": "Wikipedia – Strontian",
+        "url": "https://de.wikipedia.org/wiki/Strontian"
+      }
+    },
+    {
+      "id": "chem-090",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Halogene so, wie sie im Periodensystem von oben nach unten stehen!",
+      "loesung": [
+        "Fluor",
+        "Chlor",
+        "Brom",
+        "Iod"
+      ],
+      "oben": "oben",
+      "unten": "unten",
+      "quelle": {
+        "titel": "Wikipedia – Halogene",
+        "url": "https://de.wikipedia.org/wiki/Halogene"
+      }
+    },
+    {
+      "id": "chem-091",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Dichte bei Raumtemperatur!",
+      "loesung": [
+        "Quecksilber",
+        "Eisen",
+        "Wasser",
+        "Luft"
+      ],
+      "oben": "dichteste",
+      "unten": "am wenigsten dicht",
+      "quelle": {
+        "titel": "Wikipedia – Dichte",
+        "url": "https://de.wikipedia.org/wiki/Dichte"
+      }
+    },
+    {
+      "id": "chem-092",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Elemente nach dem Zeitpunkt ihrer Entdeckung!",
+      "loesung": [
+        "Gold",
+        "Phosphor",
+        "Sauerstoff",
+        "Helium"
+      ],
+      "oben": "zuerst bekannt",
+      "unten": "zuletzt entdeckt",
+      "quelle": {
+        "titel": "Wikipedia – Chemisches Element",
+        "url": "https://de.wikipedia.org/wiki/Chemisches_Element"
+      }
     }
   ],
   "stechfragen": [
@@ -1088,6 +1586,28 @@
       "quelle": {
         "titel": "Wikipedia – Silber",
         "url": "https://de.wikipedia.org/wiki/Silber"
+      }
+    },
+    {
+      "id": "chem-s06",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde Helium im Licht der Sonne entdeckt?",
+      "einheit": "",
+      "loesung": 1868,
+      "quelle": {
+        "titel": "Wikipedia – Helium",
+        "url": "https://de.wikipedia.org/wiki/Helium"
+      }
+    },
+    {
+      "id": "chem-s07",
+      "modus": "schaetzen",
+      "frage": "Welche Ordnungszahl hat Plutonium?",
+      "einheit": "",
+      "loesung": 94,
+      "quelle": {
+        "titel": "Wikipedia – Plutonium",
+        "url": "https://de.wikipedia.org/wiki/Plutonium"
       }
     }
   ]

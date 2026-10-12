@@ -977,6 +977,504 @@
         "titel": "Wikipedia – Leistung (Physik)",
         "url": "https://de.wikipedia.org/wiki/Leistung_(Physik)"
       }
+    },
+    {
+      "id": "phys-061",
+      "modus": "auswahl",
+      "frage": "In welcher Einheit misst man die Frequenz?",
+      "optionen": [
+        "Watt",
+        "Joule",
+        "Hertz",
+        "Tesla"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Hertz (Einheit)",
+        "url": "https://de.wikipedia.org/wiki/Hertz_(Einheit)"
+      }
+    },
+    {
+      "id": "phys-062",
+      "modus": "auswahl",
+      "frage": "In welcher Einheit misst man die elektrische Ladung?",
+      "optionen": [
+        "Coulomb",
+        "Volt",
+        "Ampere",
+        "Farad"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Coulomb",
+        "url": "https://de.wikipedia.org/wiki/Coulomb"
+      }
+    },
+    {
+      "id": "phys-063",
+      "modus": "auswahl",
+      "frage": "Welcher Physiker begründete im Jahr 1900 die Quantentheorie?",
+      "optionen": [
+        "Werner Heisenberg",
+        "Niels Bohr",
+        "Erwin Schrödinger",
+        "Max Planck"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Max Planck",
+        "url": "https://de.wikipedia.org/wiki/Max_Planck"
+      }
+    },
+    {
+      "id": "phys-064",
+      "modus": "auswahl",
+      "frage": "Welche Größe gibt man in Pascal an?",
+      "optionen": [
+        "Energie",
+        "Druck",
+        "Leistung",
+        "Temperatur"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Pascal (Einheit)",
+        "url": "https://de.wikipedia.org/wiki/Pascal_(Einheit)"
+      }
+    },
+    {
+      "id": "phys-065",
+      "modus": "auswahl",
+      "frage": "Wer formulierte die drei grundlegenden Bewegungsgesetze der Mechanik?",
+      "optionen": [
+        "Galileo Galilei",
+        "Isaac Newton",
+        "Johannes Kepler",
+        "René Descartes"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Newtonsche Gesetze",
+        "url": "https://de.wikipedia.org/wiki/Newtonsche_Gesetze"
+      }
+    },
+    {
+      "id": "phys-066",
+      "modus": "auswahl",
+      "frage": "Welches Material leitet elektrischen Strom so gut wie gar nicht?",
+      "optionen": [
+        "Kupfer",
+        "Graphit",
+        "Salzwasser",
+        "Gummi"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Isolator",
+        "url": "https://de.wikipedia.org/wiki/Isolator"
+      }
+    },
+    {
+      "id": "phys-067",
+      "modus": "auswahl",
+      "frage": "Welche Farbe sieht man, wenn man rotes und grünes Licht mischt?",
+      "optionen": [
+        "Gelb",
+        "Braun",
+        "Lila",
+        "Türkis"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Additive Farbmischung",
+        "url": "https://de.wikipedia.org/wiki/Additive_Farbmischung"
+      }
+    },
+    {
+      "id": "phys-068",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Punkt, in dem eine Sammellinse parallele Lichtstrahlen vereinigt?",
+      "optionen": [
+        "Scheitelpunkt",
+        "Fluchtpunkt",
+        "Brennpunkt",
+        "Schwerpunkt"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Brennpunkt",
+        "url": "https://de.wikipedia.org/wiki/Brennpunkt_(Geometrie)"
+      }
+    },
+    {
+      "id": "phys-069",
+      "modus": "auswahl",
+      "frage": "Wie nennt man die Energie, die ein Körper wegen seiner Bewegung hat?",
+      "optionen": [
+        "Potenzielle Energie",
+        "Chemische Energie",
+        "Wärmeenergie",
+        "Kinetische Energie"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Kinetische Energie",
+        "url": "https://de.wikipedia.org/wiki/Kinetische_Energie"
+      }
+    },
+    {
+      "id": "phys-070",
+      "modus": "auswahl",
+      "frage": "Wer entdeckte 1896 die Radioaktivität?",
+      "optionen": [
+        "Wilhelm Conrad Röntgen",
+        "Henri Becquerel",
+        "Ernest Rutherford",
+        "Enrico Fermi"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Henri Becquerel",
+        "url": "https://de.wikipedia.org/wiki/Henri_Becquerel"
+      }
+    },
+    {
+      "id": "phys-071",
+      "modus": "auswahl",
+      "frage": "Was beschreibt das Ohmsche Gesetz?",
+      "optionen": [
+        "E = m · c²",
+        "F = m · a",
+        "U = R · I",
+        "p = F / A"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Ohmsches Gesetz",
+        "url": "https://de.wikipedia.org/wiki/Ohmsches_Gesetz"
+      }
+    },
+    {
+      "id": "phys-072",
+      "modus": "auswahl",
+      "frage": "Warum sieht man bei einem Gewitter den Blitz, bevor man den Donner hört?",
+      "optionen": [
+        "Licht ist viel schneller als Schall",
+        "Der Donner entsteht später",
+        "Schall wird von Wolken gebremst",
+        "Das Auge reagiert schneller als das Ohr"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Donner",
+        "url": "https://de.wikipedia.org/wiki/Donner"
+      }
+    },
+    {
+      "id": "phys-073",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Fahrenheit gefriert Wasser?",
+      "einheit": "°F",
+      "loesung": 32,
+      "quelle": {
+        "titel": "Wikipedia – Grad Fahrenheit",
+        "url": "https://de.wikipedia.org/wiki/Grad_Fahrenheit"
+      }
+    },
+    {
+      "id": "phys-074",
+      "modus": "schaetzen",
+      "frage": "Wie viele Millimeter sind ein Zoll?",
+      "einheit": "mm",
+      "loesung": 25.4,
+      "quelle": {
+        "titel": "Wikipedia – Zoll (Einheit)",
+        "url": "https://de.wikipedia.org/wiki/Zoll_(Einheit)"
+      }
+    },
+    {
+      "id": "phys-075",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Quarks besteht ein Proton?",
+      "einheit": "",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Proton",
+        "url": "https://de.wikipedia.org/wiki/Proton"
+      }
+    },
+    {
+      "id": "phys-076",
+      "modus": "schaetzen",
+      "frage": "Wie viele Grundkräfte (fundamentale Wechselwirkungen) kennt die Physik?",
+      "einheit": "",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Grundkräfte der Physik",
+        "url": "https://de.wikipedia.org/wiki/Grundkräfte_der_Physik"
+      }
+    },
+    {
+      "id": "phys-077",
+      "modus": "schaetzen",
+      "frage": "Wie viele Basiseinheiten hat das internationale Einheitensystem (SI)?",
+      "einheit": "",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Internationales Einheitensystem",
+        "url": "https://de.wikipedia.org/wiki/Internationales_Einheitensystem"
+      }
+    },
+    {
+      "id": "phys-078",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre beträgt die Halbwertszeit von Kohlenstoff-14 (Radiokarbon-Methode)?",
+      "einheit": "Jahre",
+      "loesung": 5730,
+      "quelle": {
+        "titel": "Wikipedia – Radiokarbonmethode",
+        "url": "https://de.wikipedia.org/wiki/Radiokarbonmethode"
+      }
+    },
+    {
+      "id": "phys-079",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Ring des Teilchenbeschleunigers LHC am CERN?",
+      "einheit": "km",
+      "loesung": 26.7,
+      "quelle": {
+        "titel": "Wikipedia – Large Hadron Collider",
+        "url": "https://de.wikipedia.org/wiki/Large_Hadron_Collider"
+      }
+    },
+    {
+      "id": "phys-080",
+      "modus": "schaetzen",
+      "frage": "Wie heiß ist es im Kern der Sonne?",
+      "einheit": "Mio. °C",
+      "loesung": 15,
+      "quelle": {
+        "titel": "NASA Science – Sun Facts",
+        "url": "https://science.nasa.gov/sun/facts/"
+      }
+    },
+    {
+      "id": "phys-081",
+      "modus": "schaetzen",
+      "frage": "Mit welcher Frequenz schwingt der Kammerton a¹, auf den Orchester stimmen?",
+      "einheit": "Hz",
+      "loesung": 440,
+      "quelle": {
+        "titel": "Wikipedia – Kammerton",
+        "url": "https://de.wikipedia.org/wiki/Kammerton"
+      }
+    },
+    {
+      "id": "phys-082",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie groß ist die Fallbeschleunigung auf dem Jupiter?",
+      "daten": {
+        "einheit": "m/s²",
+        "balken": [
+          {
+            "name": "Merkur",
+            "wert": 3.7
+          },
+          {
+            "name": "Mars",
+            "wert": 3.7
+          },
+          {
+            "name": "Venus",
+            "wert": 8.9
+          },
+          {
+            "name": "Jupiter",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 24.8,
+      "quelle": {
+        "titel": "NASA – Planetary Fact Sheet",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+      }
+    },
+    {
+      "id": "phys-083",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie groß ist die Brechzahl von Diamant?",
+      "daten": {
+        "einheit": "",
+        "balken": [
+          {
+            "name": "Luft",
+            "wert": 1.0
+          },
+          {
+            "name": "Wasser",
+            "wert": 1.33
+          },
+          {
+            "name": "Glas",
+            "wert": 1.5
+          },
+          {
+            "name": "Diamant",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 2.42,
+      "quelle": {
+        "titel": "Wikipedia – Brechzahl",
+        "url": "https://de.wikipedia.org/wiki/Brechzahl"
+      }
+    },
+    {
+      "id": "phys-084",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr entdeckte Michael Faraday die elektromagnetische Induktion?",
+      "daten": {
+        "von": 1780,
+        "bis": 1880,
+        "ereignisse": [
+          {
+            "name": "Wiener Kongress",
+            "jahr": 1815
+          },
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          }
+        ]
+      },
+      "loesung": 1831,
+      "quelle": {
+        "titel": "Wikipedia – Elektromagnetische Induktion",
+        "url": "https://de.wikipedia.org/wiki/Elektromagnetische_Induktion"
+      }
+    },
+    {
+      "id": "phys-085",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Transistor erfunden?",
+      "daten": {
+        "von": 1900,
+        "bis": 1970,
+        "ereignisse": [
+          {
+            "name": "Ende des Ersten Weltkriegs",
+            "jahr": 1918
+          },
+          {
+            "name": "Erster Satellit im All",
+            "jahr": 1957
+          }
+        ]
+      },
+      "loesung": 1947,
+      "quelle": {
+        "titel": "Wikipedia – Transistor",
+        "url": "https://de.wikipedia.org/wiki/Transistor"
+      }
+    },
+    {
+      "id": "phys-086",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Kopenhagen, wo Niels Bohr sein berühmtes Institut leitete?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 55.68,
+        "lng": 12.57
+      },
+      "quelle": {
+        "titel": "Wikipedia – Niels Bohr",
+        "url": "https://de.wikipedia.org/wiki/Niels_Bohr"
+      }
+    },
+    {
+      "id": "phys-087",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Los Alamos, wo im Zweiten Weltkrieg die ersten Atombomben entwickelt wurden?",
+      "daten": {
+        "mitte": [
+          39,
+          -98
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 35.88,
+        "lng": -106.3
+      },
+      "quelle": {
+        "titel": "Wikipedia – Los Alamos National Laboratory",
+        "url": "https://de.wikipedia.org/wiki/Los_Alamos_National_Laboratory"
+      }
+    },
+    {
+      "id": "phys-088",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Erfindungen nach ihrem Alter!",
+      "loesung": [
+        "Fernrohr",
+        "Batterie",
+        "Glühlampe",
+        "Mikrowellenherd"
+      ],
+      "oben": "älteste",
+      "unten": "jüngste",
+      "quelle": {
+        "titel": "Wikipedia – Erfindung",
+        "url": "https://de.wikipedia.org/wiki/Erfindung"
+      }
+    },
+    {
+      "id": "phys-089",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Physiker nach ihrem Geburtsjahr!",
+      "loesung": [
+        "Galileo Galilei",
+        "Isaac Newton",
+        "Albert Einstein",
+        "Stephen Hawking"
+      ],
+      "oben": "früheste Geburt",
+      "unten": "späteste Geburt",
+      "quelle": {
+        "titel": "Wikipedia – Geschichte der Physik",
+        "url": "https://de.wikipedia.org/wiki/Geschichte_der_Physik"
+      }
+    },
+    {
+      "id": "phys-090",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Schichten der Atmosphäre von unten nach oben!",
+      "loesung": [
+        "Troposphäre",
+        "Stratosphäre",
+        "Mesosphäre",
+        "Thermosphäre"
+      ],
+      "oben": "unten (am Boden)",
+      "unten": "oben",
+      "quelle": {
+        "titel": "Wikipedia – Erdatmosphäre",
+        "url": "https://de.wikipedia.org/wiki/Erdatmosphäre"
+      }
     }
   ],
   "stechfragen": [
@@ -1033,6 +1531,28 @@
       "quelle": {
         "titel": "Wikipedia – Laser",
         "url": "https://de.wikipedia.org/wiki/Laser"
+      }
+    },
+    {
+      "id": "phys-s06",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilometer pro Stunde schnell ist Schall in Luft bei 20 °C?",
+      "einheit": "km/h",
+      "loesung": 1235,
+      "quelle": {
+        "titel": "Wikipedia – Schallgeschwindigkeit",
+        "url": "https://de.wikipedia.org/wiki/Schallgeschwindigkeit"
+      }
+    },
+    {
+      "id": "phys-s07",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr trat die neue Definition des Kilogramms über die Planck-Konstante in Kraft?",
+      "einheit": "",
+      "loesung": 2019,
+      "quelle": {
+        "titel": "Wikipedia – Kilogramm",
+        "url": "https://de.wikipedia.org/wiki/Kilogramm"
       }
     }
   ]

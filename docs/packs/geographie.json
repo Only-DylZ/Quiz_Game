@@ -1166,6 +1166,507 @@
         "titel": "Wikipedia – Liste von Flüssen in Deutschland",
         "url": "https://de.wikipedia.org/wiki/Liste_von_Flüssen_in_Deutschland"
       }
+    },
+    {
+      "id": "geo-068",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Nigeria?",
+      "optionen": [
+        "Lagos",
+        "Kano",
+        "Abuja",
+        "Ibadan"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Abuja",
+        "url": "https://de.wikipedia.org/wiki/Abuja"
+      }
+    },
+    {
+      "id": "geo-069",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Vietnam?",
+      "optionen": [
+        "Hanoi",
+        "Ho-Chi-Minh-Stadt",
+        "Da Nang",
+        "Huế"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Hanoi",
+        "url": "https://de.wikipedia.org/wiki/Hanoi"
+      }
+    },
+    {
+      "id": "geo-070",
+      "modus": "auswahl",
+      "frage": "Welcher Fluss führt das meiste Wasser der Erde?",
+      "optionen": [
+        "Nil",
+        "Jangtse",
+        "Kongo",
+        "Amazonas"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Amazonas",
+        "url": "https://de.wikipedia.org/wiki/Amazonas"
+      }
+    },
+    {
+      "id": "geo-071",
+      "modus": "auswahl",
+      "frage": "Welches Gebirge bildet die Grenze zwischen Spanien und Frankreich?",
+      "optionen": [
+        "Alpen",
+        "Pyrenäen",
+        "Apenninen",
+        "Karpaten"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Pyrenäen",
+        "url": "https://de.wikipedia.org/wiki/Pyrenäen"
+      }
+    },
+    {
+      "id": "geo-072",
+      "modus": "auswahl",
+      "frage": "Welches ist die größte Insel der Erde (Australien als Kontinent nicht mitgezählt)?",
+      "optionen": [
+        "Neuguinea",
+        "Grönland",
+        "Borneo",
+        "Madagaskar"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Grönland",
+        "url": "https://de.wikipedia.org/wiki/Grönland"
+      }
+    },
+    {
+      "id": "geo-073",
+      "modus": "auswahl",
+      "frage": "In welchem Land liegt die Tempelanlage Angkor Wat?",
+      "optionen": [
+        "Thailand",
+        "Laos",
+        "Vietnam",
+        "Kambodscha"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Angkor Wat",
+        "url": "https://de.wikipedia.org/wiki/Angkor_Wat"
+      }
+    },
+    {
+      "id": "geo-074",
+      "modus": "auswahl",
+      "frage": "Welches Land hat die längste Küstenlinie der Welt?",
+      "optionen": [
+        "Kanada",
+        "Russland",
+        "Australien",
+        "Norwegen"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kanada",
+        "url": "https://de.wikipedia.org/wiki/Kanada"
+      }
+    },
+    {
+      "id": "geo-075",
+      "modus": "auswahl",
+      "frage": "An welchem Fluss liegt Budapest?",
+      "optionen": [
+        "Theiß",
+        "Weichsel",
+        "Donau",
+        "Drau"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Budapest",
+        "url": "https://de.wikipedia.org/wiki/Budapest"
+      }
+    },
+    {
+      "id": "geo-076",
+      "modus": "auswahl",
+      "frage": "Welcher Staat liegt vollständig innerhalb von Südafrika?",
+      "optionen": [
+        "Eswatini",
+        "Botswana",
+        "Namibia",
+        "Lesotho"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Lesotho",
+        "url": "https://de.wikipedia.org/wiki/Lesotho"
+      }
+    },
+    {
+      "id": "geo-077",
+      "modus": "auswahl",
+      "frage": "Welche Meerenge trennt Europa und Afrika?",
+      "optionen": [
+        "Bosporus",
+        "Straße von Gibraltar",
+        "Dardanellen",
+        "Ärmelkanal"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Straße von Gibraltar",
+        "url": "https://de.wikipedia.org/wiki/Straße_von_Gibraltar"
+      }
+    },
+    {
+      "id": "geo-078",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Peru?",
+      "optionen": [
+        "Cusco",
+        "Arequipa",
+        "Lima",
+        "Quito"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Lima",
+        "url": "https://de.wikipedia.org/wiki/Lima"
+      }
+    },
+    {
+      "id": "geo-079",
+      "modus": "auswahl",
+      "frage": "Welcher Ozean ist der kleinste?",
+      "optionen": [
+        "Arktischer Ozean",
+        "Indischer Ozean",
+        "Atlantischer Ozean",
+        "Südlicher Ozean"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Arktischer Ozean",
+        "url": "https://de.wikipedia.org/wiki/Arktischer_Ozean"
+      }
+    },
+    {
+      "id": "geo-080",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Mount Kosciuszko, der höchste Berg Australiens?",
+      "einheit": "m",
+      "loesung": 2228,
+      "quelle": {
+        "titel": "Wikipedia – Mount Kosciuszko",
+        "url": "https://de.wikipedia.org/wiki/Mount_Kosciuszko"
+      }
+    },
+    {
+      "id": "geo-081",
+      "modus": "schaetzen",
+      "frage": "Wie viele Mitgliedstaaten hat die Europäische Union seit dem Austritt Großbritanniens 2020?",
+      "einheit": "",
+      "loesung": 27,
+      "quelle": {
+        "titel": "Wikipedia – Mitgliedstaaten der Europäischen Union",
+        "url": "https://de.wikipedia.org/wiki/Mitgliedstaaten_der_Europäischen_Union"
+      }
+    },
+    {
+      "id": "geo-082",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist die Fläche von Australien?",
+      "einheit": "Mio. km²",
+      "loesung": 7.69,
+      "quelle": {
+        "titel": "Wikipedia – Australien",
+        "url": "https://de.wikipedia.org/wiki/Australien"
+      }
+    },
+    {
+      "id": "geo-083",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kantone hat die Schweiz?",
+      "einheit": "",
+      "loesung": 26,
+      "quelle": {
+        "titel": "Wikipedia – Kanton (Schweiz)",
+        "url": "https://de.wikipedia.org/wiki/Kanton_(Schweiz)"
+      }
+    },
+    {
+      "id": "geo-084",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bundesstaaten hat Australien (ohne Territorien)?",
+      "einheit": "",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Australien",
+        "url": "https://de.wikipedia.org/wiki/Australien"
+      }
+    },
+    {
+      "id": "geo-085",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist die Fläche von Island?",
+      "einheit": "km²",
+      "loesung": 103000,
+      "quelle": {
+        "titel": "Wikipedia – Island",
+        "url": "https://de.wikipedia.org/wiki/Island"
+      }
+    },
+    {
+      "id": "geo-086",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Hauptinseln besteht Japan?",
+      "einheit": "",
+      "loesung": 4,
+      "erklaerung": "Honshū, Hokkaidō, Kyūshū und Shikoku.",
+      "quelle": {
+        "titel": "Wikipedia – Japanische Inseln",
+        "url": "https://de.wikipedia.org/wiki/Japanische_Inseln"
+      }
+    },
+    {
+      "id": "geo-087",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Panamakanal?",
+      "einheit": "km",
+      "loesung": 82,
+      "quelle": {
+        "titel": "Wikipedia – Panamakanal",
+        "url": "https://de.wikipedia.org/wiki/Panamakanal"
+      }
+    },
+    {
+      "id": "geo-088",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Fuji, der höchste Berg Japans?",
+      "einheit": "m",
+      "loesung": 3776,
+      "quelle": {
+        "titel": "Wikipedia – Fuji (Vulkan)",
+        "url": "https://de.wikipedia.org/wiki/Fuji_(Vulkan)"
+      }
+    },
+    {
+      "id": "geo-089",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie hoch ist der Salto Ángel in Venezuela, der höchste Wasserfall der Erde?",
+      "daten": {
+        "einheit": "m",
+        "balken": [
+          {
+            "name": "Rheinfall",
+            "wert": 23
+          },
+          {
+            "name": "Victoriafälle",
+            "wert": 108
+          },
+          {
+            "name": "Salto Ángel",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 979,
+      "quelle": {
+        "titel": "Wikipedia – Salto Ángel",
+        "url": "https://de.wikipedia.org/wiki/Salto_Ángel"
+      }
+    },
+    {
+      "id": "geo-090",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie hoch ist das Matterhorn?",
+      "daten": {
+        "einheit": "m",
+        "balken": [
+          {
+            "name": "Eiger",
+            "wert": 3967
+          },
+          {
+            "name": "Jungfrau",
+            "wert": 4158
+          },
+          {
+            "name": "Matterhorn",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 4478,
+      "quelle": {
+        "titel": "Wikipedia – Matterhorn",
+        "url": "https://de.wikipedia.org/wiki/Matterhorn"
+      }
+    },
+    {
+      "id": "geo-091",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde die Freiheitsstatue in New York eingeweiht?",
+      "daten": {
+        "von": 1800,
+        "bis": 1900,
+        "ereignisse": [
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          },
+          {
+            "name": "Gründung des Deutschen Kaiserreichs",
+            "jahr": 1871
+          }
+        ]
+      },
+      "loesung": 1886,
+      "quelle": {
+        "titel": "Wikipedia – Freiheitsstatue",
+        "url": "https://de.wikipedia.org/wiki/Freiheitsstatue"
+      }
+    },
+    {
+      "id": "geo-092",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde Hawaii der 50. Bundesstaat der USA?",
+      "daten": {
+        "von": 1940,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Gründung der Vereinten Nationen",
+            "jahr": 1945
+          },
+          {
+            "name": "Ende der Sowjetunion",
+            "jahr": 1991
+          }
+        ]
+      },
+      "loesung": 1959,
+      "quelle": {
+        "titel": "Wikipedia – Hawaii",
+        "url": "https://de.wikipedia.org/wiki/Hawaii"
+      }
+    },
+    {
+      "id": "geo-093",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Ulaanbaatar, die Hauptstadt der Mongolei?",
+      "daten": {
+        "mitte": [
+          40,
+          90
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 47.92,
+        "lng": 106.92
+      },
+      "quelle": {
+        "titel": "Wikipedia – Ulaanbaatar",
+        "url": "https://de.wikipedia.org/wiki/Ulaanbaatar"
+      }
+    },
+    {
+      "id": "geo-094",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Ushuaia, eine der südlichsten Städte der Welt?",
+      "daten": {
+        "mitte": [
+          -30,
+          -60
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -54.8,
+        "lng": -68.3
+      },
+      "quelle": {
+        "titel": "Wikipedia – Ushuaia",
+        "url": "https://de.wikipedia.org/wiki/Ushuaia"
+      }
+    },
+    {
+      "id": "geo-095",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Städte von West nach Ost!",
+      "loesung": [
+        "Lissabon",
+        "Paris",
+        "Berlin",
+        "Warschau",
+        "Moskau"
+      ],
+      "oben": "westlichste",
+      "unten": "östlichste",
+      "quelle": {
+        "titel": "Wikipedia – Europa",
+        "url": "https://de.wikipedia.org/wiki/Europa"
+      }
+    },
+    {
+      "id": "geo-096",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Länder nach ihrer Einwohnerzahl!",
+      "loesung": [
+        "USA",
+        "Indonesien",
+        "Brasilien",
+        "Russland",
+        "Japan"
+      ],
+      "oben": "die meisten",
+      "unten": "die wenigsten",
+      "quelle": {
+        "titel": "Wikipedia – Liste der Staaten der Erde",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Staaten_der_Erde"
+      }
+    },
+    {
+      "id": "geo-097",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Städte nach ihrer Höhe über dem Meer!",
+      "loesung": [
+        "La Paz",
+        "Quito",
+        "Bogotá",
+        "Mexiko-Stadt",
+        "Madrid"
+      ],
+      "oben": "am höchsten",
+      "unten": "am niedrigsten",
+      "werte": [
+        "ca. 3640 m",
+        "ca. 2850 m",
+        "ca. 2640 m",
+        "ca. 2240 m",
+        "ca. 650 m"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – La Paz",
+        "url": "https://de.wikipedia.org/wiki/La_Paz"
+      }
     }
   ],
   "stechfragen": [
@@ -1222,6 +1723,28 @@
       "quelle": {
         "titel": "Wikipedia – Suezkanal",
         "url": "https://de.wikipedia.org/wiki/Suezkanal"
+      }
+    },
+    {
+      "id": "geo-s06",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist der Gotthard-Basistunnel, der längste Eisenbahntunnel der Welt?",
+      "einheit": "km",
+      "loesung": 57.1,
+      "quelle": {
+        "titel": "Wikipedia – Gotthard-Basistunnel",
+        "url": "https://de.wikipedia.org/wiki/Gotthard-Basistunnel"
+      }
+    },
+    {
+      "id": "geo-s07",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist die Öresundbrücke zwischen Dänemark und Schweden?",
+      "einheit": "m",
+      "loesung": 7845,
+      "quelle": {
+        "titel": "Wikipedia – Öresundbrücke",
+        "url": "https://de.wikipedia.org/wiki/Öresundbrücke"
       }
     }
   ]

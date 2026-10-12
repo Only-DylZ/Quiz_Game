@@ -15,7 +15,8 @@ const THEMEN = [
   ["essen-trinken", "Essen & Trinken"], ["biologie", "Biologie"], ["chemie", "Chemie"],
   ["physik", "Physik"], ["mathe", "Mathe"], ["geschichte", "Zurück in die Vergangenheit"],
   ["das-ist-deutsch", "Das ist Deutsch"], ["filme-serien", "Filme & Serien"],
-  ["videospiele", "Videospiele"], ["sport", "Sport"], ["joker", "🃏 Eigenes Thema (Joker)"],
+  ["videospiele", "Videospiele"], ["sport", "Sport"], ["jauch", "Die 500-€-Frage"],
+  ["joker", "🃏 Eigenes Thema (Joker)"],
 ];
 
 // Beispiel für den Joker (eigene Themen haben kein Paket)

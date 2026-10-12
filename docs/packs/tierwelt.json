@@ -415,8 +415,8 @@
         "bis": 2020,
         "ereignisse": [
           {
-            "name": "Erstes Retortenbaby",
-            "jahr": 1978
+            "name": "Erste Mondlandung",
+            "jahr": 1969
           },
           {
             "name": "Erster Game Boy",
@@ -1095,6 +1095,502 @@
         "titel": "Wikipedia – Tragzeit",
         "url": "https://de.wikipedia.org/wiki/Tragzeit"
       }
+    },
+    {
+      "id": "tier-065",
+      "modus": "auswahl",
+      "frage": "Wie nennt man eine Gruppe von Löwen?",
+      "optionen": [
+        "Herde",
+        "Schwarm",
+        "Rudel",
+        "Rotte"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Löwe",
+        "url": "https://de.wikipedia.org/wiki/Löwe"
+      }
+    },
+    {
+      "id": "tier-066",
+      "modus": "auswahl",
+      "frage": "Welches ist neben dem Kodiakbären das größte an Land lebende Raubtier?",
+      "optionen": [
+        "Eisbär",
+        "Sibirischer Tiger",
+        "Löwe",
+        "Grizzlybär"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Eisbär",
+        "url": "https://de.wikipedia.org/wiki/Eisbär"
+      }
+    },
+    {
+      "id": "tier-067",
+      "modus": "auswahl",
+      "frage": "Welcher dieser Vögel kann nicht fliegen?",
+      "optionen": [
+        "Albatros",
+        "Storch",
+        "Möwe",
+        "Pinguin"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Pinguine",
+        "url": "https://de.wikipedia.org/wiki/Pinguine"
+      }
+    },
+    {
+      "id": "tier-068",
+      "modus": "auswahl",
+      "frage": "Wie nennt man das Junge eines Schafs?",
+      "optionen": [
+        "Fohlen",
+        "Lamm",
+        "Ferkel",
+        "Zicklein"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Hausschaf",
+        "url": "https://de.wikipedia.org/wiki/Hausschaf"
+      }
+    },
+    {
+      "id": "tier-069",
+      "modus": "auswahl",
+      "frage": "Wovon ernährt sich ein Koala fast ausschließlich?",
+      "optionen": [
+        "Bambus",
+        "Eukalyptusblätter",
+        "Insekten",
+        "Gräser"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Koala",
+        "url": "https://de.wikipedia.org/wiki/Koala"
+      }
+    },
+    {
+      "id": "tier-070",
+      "modus": "auswahl",
+      "frage": "Welches dieser Tiere hält einen echten Winterschlaf?",
+      "optionen": [
+        "Eichhörnchen",
+        "Fuchs",
+        "Reh",
+        "Igel"
+      ],
+      "loesung": 3,
+      "erklaerung": "Eichhörnchen halten nur Winterruhe und wachen oft auf.",
+      "quelle": {
+        "titel": "Wikipedia – Winterschlaf",
+        "url": "https://de.wikipedia.org/wiki/Winterschlaf"
+      }
+    },
+    {
+      "id": "tier-071",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Bau eines Bibers?",
+      "optionen": [
+        "Burg",
+        "Horst",
+        "Kobel",
+        "Höhle"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Europäischer Biber",
+        "url": "https://de.wikipedia.org/wiki/Europäischer_Biber"
+      }
+    },
+    {
+      "id": "tier-072",
+      "modus": "auswahl",
+      "frage": "Welches dieser Tiere ist ein Insekt?",
+      "optionen": [
+        "Spinne",
+        "Skorpion",
+        "Ameise",
+        "Zecke"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Insekten",
+        "url": "https://de.wikipedia.org/wiki/Insekten"
+      }
+    },
+    {
+      "id": "tier-073",
+      "modus": "auswahl",
+      "frage": "Welcher Hai gilt als größter Raubfisch der Erde?",
+      "optionen": [
+        "Hammerhai",
+        "Tigerhai",
+        "Zitronenhai",
+        "Weißer Hai"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Weißer Hai",
+        "url": "https://de.wikipedia.org/wiki/Weißer_Hai"
+      }
+    },
+    {
+      "id": "tier-074",
+      "modus": "auswahl",
+      "frage": "Welches Säugetier gilt als besonders langsam und hängt fast den ganzen Tag kopfüber im Baum?",
+      "optionen": [
+        "Koala",
+        "Faultier",
+        "Lemur",
+        "Gürteltier"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Faultiere",
+        "url": "https://de.wikipedia.org/wiki/Faultiere"
+      }
+    },
+    {
+      "id": "tier-075",
+      "modus": "auswahl",
+      "frage": "Welcher Vogel legt seine Eier in die Nester anderer Vögel?",
+      "optionen": [
+        "Specht",
+        "Amsel",
+        "Kuckuck",
+        "Elster"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Kuckuck",
+        "url": "https://de.wikipedia.org/wiki/Kuckuck"
+      }
+    },
+    {
+      "id": "tier-076",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein männliches Reh?",
+      "optionen": [
+        "Bock",
+        "Hirsch",
+        "Keiler",
+        "Widder"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Reh",
+        "url": "https://de.wikipedia.org/wiki/Reh"
+      }
+    },
+    {
+      "id": "tier-077",
+      "modus": "schaetzen",
+      "frage": "Wie viele Beine hat ein Insekt?",
+      "einheit": "",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Insekten",
+        "url": "https://de.wikipedia.org/wiki/Insekten"
+      }
+    },
+    {
+      "id": "tier-078",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Kammern (Vorhof und Kammer) besteht das Herz eines Fisches?",
+      "einheit": "",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Fische",
+        "url": "https://de.wikipedia.org/wiki/Fische"
+      }
+    },
+    {
+      "id": "tier-079",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zehen hat ein Strauß an jedem Fuß?",
+      "einheit": "",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Afrikanischer Strauß",
+        "url": "https://de.wikipedia.org/wiki/Afrikanischer_Strauß"
+      }
+    },
+    {
+      "id": "tier-080",
+      "modus": "schaetzen",
+      "frage": "Wie viele Arme hat ein Krake?",
+      "einheit": "",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Kraken",
+        "url": "https://de.wikipedia.org/wiki/Kraken"
+      }
+    },
+    {
+      "id": "tier-081",
+      "modus": "schaetzen",
+      "frage": "Wie viele Ecken hat eine einzelne Zelle in einer Bienenwabe?",
+      "einheit": "",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Bienenwabe",
+        "url": "https://de.wikipedia.org/wiki/Bienenwabe"
+      }
+    },
+    {
+      "id": "tier-082",
+      "modus": "schaetzen",
+      "frage": "Wie viele Halswirbel haben Eulen – sie können den Kopf deshalb sehr weit drehen?",
+      "einheit": "",
+      "loesung": 14,
+      "quelle": {
+        "titel": "Wikipedia – Eulen",
+        "url": "https://de.wikipedia.org/wiki/Eulen"
+      }
+    },
+    {
+      "id": "tier-083",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauert es vom Ei bis zum Schlüpfen einer Arbeiterin der Honigbiene?",
+      "einheit": "Tage",
+      "loesung": 21,
+      "quelle": {
+        "titel": "Wikipedia – Westliche Honigbiene",
+        "url": "https://de.wikipedia.org/wiki/Westliche_Honigbiene"
+      }
+    },
+    {
+      "id": "tier-084",
+      "modus": "schaetzen",
+      "frage": "Wie viele Beine hat ein Skorpion?",
+      "einheit": "",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Skorpione",
+        "url": "https://de.wikipedia.org/wiki/Skorpione"
+      }
+    },
+    {
+      "id": "tier-085",
+      "modus": "schaetzen",
+      "frage": "Wie viele Elefantenarten gibt es heute?",
+      "einheit": "",
+      "loesung": 3,
+      "erklaerung": "Afrikanischer Steppenelefant, Afrikanischer Waldelefant und Asiatischer Elefant.",
+      "quelle": {
+        "titel": "Wikipedia – Elefanten",
+        "url": "https://de.wikipedia.org/wiki/Elefanten"
+      }
+    },
+    {
+      "id": "tier-086",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Chromosomen hat eine Körperzelle des Pferdes?",
+      "daten": {
+        "einheit": "",
+        "balken": [
+          {
+            "name": "Hauskatze",
+            "wert": 38
+          },
+          {
+            "name": "Hausschwein",
+            "wert": 38
+          },
+          {
+            "name": "Hausrind",
+            "wert": 60
+          },
+          {
+            "name": "Pferd",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 64,
+      "quelle": {
+        "titel": "Wikipedia – Hauspferd",
+        "url": "https://de.wikipedia.org/wiki/Hauspferd"
+      }
+    },
+    {
+      "id": "tier-087",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde vor Südafrika ein lebender Quastenflosser gefangen – ein Fisch, den man für ausgestorben hielt?",
+      "daten": {
+        "von": 1900,
+        "bis": 1960,
+        "ereignisse": [
+          {
+            "name": "Ende des Ersten Weltkriegs",
+            "jahr": 1918
+          },
+          {
+            "name": "Ende des Zweiten Weltkriegs",
+            "jahr": 1945
+          }
+        ]
+      },
+      "loesung": 1938,
+      "quelle": {
+        "titel": "Wikipedia – Quastenflosser",
+        "url": "https://de.wikipedia.org/wiki/Quastenflosser"
+      }
+    },
+    {
+      "id": "tier-088",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Komodowaran wissenschaftlich beschrieben?",
+      "daten": {
+        "von": 1880,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Eiffelturm fertiggestellt",
+            "jahr": 1889
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1912,
+      "quelle": {
+        "titel": "Wikipedia – Komodowaran",
+        "url": "https://de.wikipedia.org/wiki/Komodowaran"
+      }
+    },
+    {
+      "id": "tier-089",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Serengeti mit ihren riesigen Tierwanderungen?",
+      "daten": {
+        "mitte": [
+          0,
+          20
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -2.33,
+        "lng": 34.83
+      },
+      "quelle": {
+        "titel": "Wikipedia – Serengeti",
+        "url": "https://de.wikipedia.org/wiki/Serengeti"
+      }
+    },
+    {
+      "id": "tier-090",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Churchill, die „Eisbärenhauptstadt der Welt“?",
+      "daten": {
+        "mitte": [
+          50,
+          -80
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 58.77,
+        "lng": -94.17
+      },
+      "quelle": {
+        "titel": "Wikipedia – Churchill (Manitoba)",
+        "url": "https://de.wikipedia.org/wiki/Churchill_(Manitoba)"
+      }
+    },
+    {
+      "id": "tier-091",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Okavango-Delta, ein Paradies für Elefanten und Flusspferde?",
+      "daten": {
+        "mitte": [
+          -10,
+          25
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -19.3,
+        "lng": 22.9
+      },
+      "quelle": {
+        "titel": "Wikipedia – Okavango-Delta",
+        "url": "https://de.wikipedia.org/wiki/Okavango-Delta"
+      }
+    },
+    {
+      "id": "tier-092",
+      "modus": "reihenfolge",
+      "frage": "Wer ist am schwersten? Ordne die Tiere!",
+      "loesung": [
+        "Breitmaulnashorn",
+        "Giraffe",
+        "Löwe",
+        "Wolf",
+        "Hauskatze"
+      ],
+      "oben": "schwerstes",
+      "unten": "leichtestes",
+      "quelle": {
+        "titel": "Wikipedia – Breitmaulnashorn",
+        "url": "https://de.wikipedia.org/wiki/Breitmaulnashorn"
+      }
+    },
+    {
+      "id": "tier-093",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Gruppen von der größten zur kleinsten!",
+      "loesung": [
+        "Säugetiere",
+        "Raubtiere",
+        "Katzen",
+        "Hauskatze"
+      ],
+      "oben": "größte Gruppe",
+      "unten": "kleinste Gruppe",
+      "quelle": {
+        "titel": "Wikipedia – Hauskatze",
+        "url": "https://de.wikipedia.org/wiki/Hauskatze"
+      }
+    },
+    {
+      "id": "tier-094",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Vögel nach ihrer Flügelspannweite!",
+      "loesung": [
+        "Wanderalbatros",
+        "Andenkondor",
+        "Weißstorch",
+        "Amsel"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "werte": [
+        "bis 3,5 m",
+        "bis 3,2 m",
+        "ca. 2 m",
+        "ca. 35 cm"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Wanderalbatros",
+        "url": "https://de.wikipedia.org/wiki/Wanderalbatros"
+      }
     }
   ],
   "stechfragen": [
@@ -1151,6 +1647,28 @@
       "quelle": {
         "titel": "Wikipedia – Nationalpark Bayerischer Wald",
         "url": "https://de.wikipedia.org/wiki/Nationalpark_Bayerischer_Wald"
+      }
+    },
+    {
+      "id": "tier-s06",
+      "modus": "schaetzen",
+      "frage": "Wie viele Beine hat der Tausendfüßer Eumillipes persephone – das Tier mit den meisten Beinen?",
+      "einheit": "",
+      "loesung": 1306,
+      "quelle": {
+        "titel": "Wikipedia – Eumillipes persephone",
+        "url": "https://de.wikipedia.org/wiki/Eumillipes_persephone"
+      }
+    },
+    {
+      "id": "tier-s07",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr eröffnete Carl Hagenbeck seinen Tierpark in Hamburg-Stellingen?",
+      "einheit": "",
+      "loesung": 1907,
+      "quelle": {
+        "titel": "Wikipedia – Tierpark Hagenbeck",
+        "url": "https://de.wikipedia.org/wiki/Tierpark_Hagenbeck"
       }
     }
   ]

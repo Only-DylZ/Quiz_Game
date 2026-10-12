@@ -43,6 +43,7 @@ Kurz gehalten (283 Zeichen), damit Grundteil + Szene unter 750 Zeichen bleiben (
 | `filme-serien` | Filme & Serien |
 | `videospiele` | Videospiele |
 | `sport` | Sport |
+| `jauch` | Die 500-€-Frage – **fertig** |
 | `joker` | eigene Themen (Themenjoker) |
 
 ### raumfahrt
@@ -148,6 +149,15 @@ Scene: a sunny sports stadium. A green football field with white lines at the bo
 stadium stands with a colorful crowd (tiny pixel people, no faces in detail) in the back,
 floodlights, on the left a running track and a high-jump mat, on the right a basketball
 hoop, a tennis net and a trophy on a podium, flags waving.
+```
+
+### jauch
+```
+Scene: a big TV quiz show studio at night. A round stage with a glowing blue circle on the
+floor in the middle, two black leather chairs facing each other with small screens on
+stands, a huge round glowing blue screen in the background, rows of spotlights at the top,
+audience seats on the left and right and in the front (tiny pixel people, no faces in
+detail), blue neon lines everywhere. No logos, no text, no host.
 ```
 
 ### joker

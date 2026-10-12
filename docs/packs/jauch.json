@@ -1,0 +1,587 @@
+{
+  "thema": "Die 500-€-Frage",
+  "version": 1,
+  "beschreibung": "Fragen wie auf der 500-Euro-Stufe einer Quizshow – aber mit Haken: Denkfallen, Wortspiele und kleine Logik.",
+  "fragen": [
+    {
+      "id": "wwm-007",
+      "modus": "auswahl",
+      "frage": "Ein Bauer hat 17 Schafe. Alle bis auf 9 laufen weg. Wie viele bleiben ihm?",
+      "optionen": [
+        "9",
+        "8",
+        "17",
+        "0"
+      ],
+      "loesung": 0,
+      "erklaerung": "„Alle bis auf 9“ heißt: 9 bleiben da.",
+      "quelle": {
+        "titel": "Wikipedia – Scherzfrage",
+        "url": "https://de.wikipedia.org/wiki/Scherzfrage"
+      }
+    },
+    {
+      "id": "wwm-010",
+      "modus": "auswahl",
+      "frage": "Was gehört dir, wird aber von anderen viel öfter benutzt als von dir?",
+      "optionen": [
+        "Dein Handy",
+        "Dein Name",
+        "Deine Zahnbürste",
+        "Dein Fahrrad"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Scherzfrage",
+        "url": "https://de.wikipedia.org/wiki/Scherzfrage"
+      }
+    },
+    {
+      "id": "wwm-011",
+      "modus": "auswahl",
+      "frage": "Ein Schläger und ein Ball kosten zusammen 1,10 €. Der Schläger kostet 1 € mehr als der Ball. Was kostet der Ball?",
+      "optionen": [
+        "10 Cent",
+        "1 Cent",
+        "5 Cent",
+        "55 Cent"
+      ],
+      "loesung": 2,
+      "erklaerung": "Bei 10 Cent würde der Schläger 1,10 € kosten – zusammen 1,20 €. Richtig: 0,05 € + 1,05 € = 1,10 €.",
+      "quelle": {
+        "titel": "Wikipedia (englisch) – Cognitive reflection test",
+        "url": "https://en.wikipedia.org/wiki/Cognitive_reflection_test"
+      }
+    },
+    {
+      "id": "wwm-012",
+      "modus": "auswahl",
+      "frage": "Seerosen auf einem Teich verdoppeln jeden Tag ihre Fläche. Nach 48 Tagen ist der Teich ganz bedeckt. Wann war er halb bedeckt?",
+      "optionen": [
+        "Nach 24 Tagen",
+        "Nach 46 Tagen",
+        "Nach 12 Tagen",
+        "Nach 47 Tagen"
+      ],
+      "loesung": 3,
+      "erklaerung": "Einen Tag vor dem Ende: Von halb bedeckt verdoppelt sich die Fläche in einem Tag auf ganz.",
+      "quelle": {
+        "titel": "Wikipedia (englisch) – Cognitive reflection test",
+        "url": "https://en.wikipedia.org/wiki/Cognitive_reflection_test"
+      }
+    },
+    {
+      "id": "wwm-013",
+      "modus": "auswahl",
+      "frage": "5 Drucker brauchen 5 Minuten für 5 Seiten. Wie lange brauchen 100 Drucker für 100 Seiten?",
+      "optionen": [
+        "5 Minuten",
+        "100 Minuten",
+        "20 Minuten",
+        "1 Minute"
+      ],
+      "loesung": 0,
+      "erklaerung": "Jeder Drucker braucht 5 Minuten für eine Seite – egal, wie viele gleichzeitig drucken.",
+      "quelle": {
+        "titel": "Wikipedia (englisch) – Cognitive reflection test",
+        "url": "https://en.wikipedia.org/wiki/Cognitive_reflection_test"
+      }
+    },
+    {
+      "id": "wwm-014",
+      "modus": "auswahl",
+      "frage": "Lisas Mutter hat drei Kinder: Tick, Trick und …?",
+      "optionen": [
+        "Track",
+        "Lisa",
+        "Donald",
+        "Tack"
+      ],
+      "loesung": 1,
+      "erklaerung": "Es ist ja Lisas Mutter – also ist Lisa das dritte Kind.",
+      "quelle": {
+        "titel": "Wikipedia – Verwandtschaftsbeziehung",
+        "url": "https://de.wikipedia.org/wiki/Verwandtschaftsbeziehung"
+      }
+    },
+    {
+      "id": "wwm-015",
+      "modus": "auswahl",
+      "frage": "Ein Mann ohne Geschwister zeigt auf ein Foto: „Der Vater dieses Mannes ist der Sohn meines Vaters.“ Wen zeigt das Foto?",
+      "optionen": [
+        "Ihn selbst",
+        "Seinen Vater",
+        "Seinen Sohn",
+        "Seinen Onkel"
+      ],
+      "loesung": 2,
+      "erklaerung": "Der Sohn seines Vaters ist er selbst (keine Geschwister). Also ist er der Vater des Mannes auf dem Foto.",
+      "quelle": {
+        "titel": "Wikipedia – Verwandtschaftsbeziehung",
+        "url": "https://de.wikipedia.org/wiki/Verwandtschaftsbeziehung"
+      }
+    },
+    {
+      "id": "wwm-016",
+      "modus": "auswahl",
+      "frage": "Wenn gestern Donnerstag war – welcher Tag ist dann übermorgen?",
+      "optionen": [
+        "Samstag",
+        "Montag",
+        "Freitag",
+        "Sonntag"
+      ],
+      "loesung": 3,
+      "erklaerung": "Gestern Donnerstag → heute Freitag → morgen Samstag → übermorgen Sonntag.",
+      "quelle": {
+        "titel": "Wikipedia – Logikrätsel",
+        "url": "https://de.wikipedia.org/wiki/Logikrätsel"
+      }
+    },
+    {
+      "id": "wwm-017",
+      "modus": "auswahl",
+      "frage": "Ein Arzt hat einen Bruder. Dieser Bruder hat aber keinen Bruder. Wie kann das sein?",
+      "optionen": [
+        "Der Arzt ist eine Frau",
+        "Sie sind Halbbrüder",
+        "Der Bruder lügt",
+        "Einer ist adoptiert"
+      ],
+      "loesung": 0,
+      "erklaerung": "Die Ärztin ist seine Schwester – Brüder hat er also keine.",
+      "quelle": {
+        "titel": "Wikipedia – Logikrätsel",
+        "url": "https://de.wikipedia.org/wiki/Logikrätsel"
+      }
+    },
+    {
+      "id": "wwm-018",
+      "modus": "auswahl",
+      "frage": "Ein Flugzeug stürzt genau auf der Grenze zwischen Deutschland und Österreich ab. Wo werden die Überlebenden begraben?",
+      "optionen": [
+        "In Deutschland",
+        "Gar nicht",
+        "In Österreich",
+        "In ihrem Heimatland"
+      ],
+      "loesung": 1,
+      "erklaerung": "Überlebende begräbt man nicht – wer zu schnell liest, übersieht das.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-019",
+      "modus": "auswahl",
+      "frage": "Wie viele Tiere jeder Art nahm Mose mit auf die Arche?",
+      "optionen": [
+        "Zwei",
+        "Eins",
+        "Keine – das war Noah",
+        "Sieben"
+      ],
+      "loesung": 2,
+      "erklaerung": "Die Arche baute laut Bibel Noah. Viele überlesen den falschen Namen („Moses-Illusion“).",
+      "quelle": {
+        "titel": "Wikipedia – Arche Noah",
+        "url": "https://de.wikipedia.org/wiki/Arche_Noah"
+      }
+    },
+    {
+      "id": "wwm-020",
+      "modus": "auswahl",
+      "frage": "Wie viele Monate eines Jahres haben 31 Tage?",
+      "optionen": [
+        "Sechs",
+        "Acht",
+        "Fünf",
+        "Sieben"
+      ],
+      "loesung": 3,
+      "erklaerung": "Januar, März, Mai, Juli, August, Oktober und Dezember.",
+      "quelle": {
+        "titel": "Wikipedia – Monat",
+        "url": "https://de.wikipedia.org/wiki/Monat"
+      }
+    },
+    {
+      "id": "wwm-021",
+      "modus": "auswahl",
+      "frage": "Ein Ziegelstein wiegt 1 kg plus einen halben Ziegelstein. Wie schwer ist ein Ziegelstein?",
+      "optionen": [
+        "2 kg",
+        "1,5 kg",
+        "1 kg",
+        "3 kg"
+      ],
+      "loesung": 0,
+      "erklaerung": "Der halbe Ziegelstein wiegt 1 kg – also wiegt der ganze 2 kg.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-022",
+      "modus": "auswahl",
+      "frage": "Welcher Buchstabe kommt als Nächstes: E, Z, D, V, F, S, S, A, …?",
+      "optionen": [
+        "B",
+        "N",
+        "Z",
+        "E"
+      ],
+      "loesung": 1,
+      "erklaerung": "Die Anfangsbuchstaben der Zahlen: Eins, Zwei, Drei, Vier, Fünf, Sechs, Sieben, Acht – Neun.",
+      "quelle": {
+        "titel": "Wikipedia – Zahlwort",
+        "url": "https://de.wikipedia.org/wiki/Zahlwort"
+      }
+    },
+    {
+      "id": "wwm-023",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt vor alle drei: …ball, …weg, …note?",
+      "optionen": [
+        "Hand",
+        "Kopf",
+        "Fuß",
+        "Feder"
+      ],
+      "loesung": 2,
+      "erklaerung": "Fußball, Fußweg, Fußnote. Die anderen Wörter passen jeweils nur zu einem der drei.",
+      "quelle": {
+        "titel": "Wiktionary – Fußnote",
+        "url": "https://de.wiktionary.org/wiki/Fußnote"
+      }
+    },
+    {
+      "id": "wwm-024",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt hinter alle drei: Haus…, Auto…, Schrauben…?",
+      "optionen": [
+        "Tür",
+        "Nummer",
+        "Dach",
+        "Schlüssel"
+      ],
+      "loesung": 3,
+      "erklaerung": "Hausschlüssel, Autoschlüssel, Schraubenschlüssel. Haustür und Autotür gibt es – eine Schraubentür nicht.",
+      "quelle": {
+        "titel": "Wiktionary – Schraubenschlüssel",
+        "url": "https://de.wiktionary.org/wiki/Schraubenschlüssel"
+      }
+    },
+    {
+      "id": "wwm-025",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt vor alle drei: …licht, …landung, …finsternis?",
+      "optionen": [
+        "Mond",
+        "Sonnen",
+        "Kerzen",
+        "Stern"
+      ],
+      "loesung": 0,
+      "erklaerung": "Mondlicht, Mondlandung, Mondfinsternis. Sonnenlicht und Sonnenfinsternis gibt es – eine Sonnenlandung nicht.",
+      "quelle": {
+        "titel": "Wiktionary – Mondfinsternis",
+        "url": "https://de.wiktionary.org/wiki/Mondfinsternis"
+      }
+    },
+    {
+      "id": "wwm-026",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt hinter alle drei: Apfel…, Kirsch…, Tannen…?",
+      "optionen": [
+        "Kuchen",
+        "Baum",
+        "Saft",
+        "Zapfen"
+      ],
+      "loesung": 1,
+      "erklaerung": "Apfelbaum, Kirschbaum, Tannenbaum. Apfel- und Kirschkuchen gibt es – einen Tannenkuchen nicht.",
+      "quelle": {
+        "titel": "Wiktionary – Tannenbaum",
+        "url": "https://de.wiktionary.org/wiki/Tannenbaum"
+      }
+    },
+    {
+      "id": "wwm-027",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt vor alle drei: …mann, …ball, …flocke?",
+      "optionen": [
+        "Hafer",
+        "Feder",
+        "Schnee",
+        "Seifen"
+      ],
+      "loesung": 2,
+      "erklaerung": "Schneemann, Schneeball, Schneeflocke. Hafer- und Seifenflocken gibt es – einen Hafermann nicht.",
+      "quelle": {
+        "titel": "Wiktionary – Schneeflocke",
+        "url": "https://de.wiktionary.org/wiki/Schneeflocke"
+      }
+    },
+    {
+      "id": "wwm-028",
+      "modus": "auswahl",
+      "frage": "Wer „die Katze im Sack kauft“, …",
+      "optionen": [
+        "verrät ein Geheimnis",
+        "macht ein Schnäppchen",
+        "kauft ein Haustier",
+        "kauft etwas ungeprüft"
+      ],
+      "loesung": 3,
+      "erklaerung": "„Ein Geheimnis verraten“ wäre „die Katze aus dem Sack lassen“ – eine andere Redewendung.",
+      "quelle": {
+        "titel": "Wiktionary – die Katze im Sack kaufen",
+        "url": "https://de.wiktionary.org/wiki/die_Katze_im_Sack_kaufen"
+      }
+    },
+    {
+      "id": "wwm-029",
+      "modus": "auswahl",
+      "frage": "Wer „jemandem einen Bären aufbindet“, …",
+      "optionen": [
+        "erzählt ihm eine Lüge",
+        "schadet ihm, obwohl er helfen will",
+        "lädt ihm schwere Arbeit auf",
+        "bringt ihn zum Lachen"
+      ],
+      "loesung": 0,
+      "erklaerung": "Schaden trotz guter Absicht ist ein „Bärendienst“ – eine andere Redewendung mit Bär.",
+      "quelle": {
+        "titel": "Wiktionary – jemandem einen Bären aufbinden",
+        "url": "https://de.wiktionary.org/wiki/jemandem_einen_Bären_aufbinden"
+      }
+    },
+    {
+      "id": "wwm-030",
+      "modus": "auswahl",
+      "frage": "Was bedeutet es, wenn etwas „unter aller Kanone“ ist?",
+      "optionen": [
+        "Es ist sehr laut",
+        "Es ist sehr schlecht",
+        "Es ist sehr gefährlich",
+        "Es ist streng geheim"
+      ],
+      "loesung": 1,
+      "erklaerung": "Aus der Schülersprache: scherzhaft umgedeutet aus dem lateinischen „sub omni canone“ – unter jedem Maßstab.",
+      "quelle": {
+        "titel": "Wiktionary – unter aller Kanone",
+        "url": "https://de.wiktionary.org/wiki/unter_aller_Kanone"
+      }
+    },
+    {
+      "id": "wwm-031",
+      "modus": "auswahl",
+      "frage": "Wie viele Löcher hat ein normales T-Shirt?",
+      "optionen": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "loesung": 2,
+      "erklaerung": "Eins für den Kopf, zwei für die Arme und eins unten für den Körper.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-032",
+      "modus": "auswahl",
+      "frage": "Was steht am Ende von jedem Regenbogen?",
+      "optionen": [
+        "Ein Topf voll Gold",
+        "Die Farbe Violett",
+        "Ein Kobold",
+        "Der Buchstabe n"
+      ],
+      "loesung": 3,
+      "erklaerung": "Wortspiel: „Regenbogen“ endet auf n.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-033",
+      "modus": "auswahl",
+      "frage": "Bei einem Würfel sägt man eine Ecke ab. Wie viele Ecken hat er danach?",
+      "optionen": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "loesung": 0,
+      "erklaerung": "Ein Würfel hat 8 Ecken. Eine fällt weg, an der dreieckigen Schnittfläche entstehen 3 neue: 8 − 1 + 3 = 10.",
+      "quelle": {
+        "titel": "Wikipedia – Würfel (Geometrie)",
+        "url": "https://de.wikipedia.org/wiki/Würfel_(Geometrie)"
+      }
+    },
+    {
+      "id": "wwm-034",
+      "modus": "auswahl",
+      "frage": "Ein Frosch sitzt in einem 10 m tiefen Brunnen. Tags klettert er 3 m hoch, nachts rutscht er 2 m ab. An welchem Tag ist er oben?",
+      "optionen": [
+        "Am 10. Tag",
+        "Am 8. Tag",
+        "Am 7. Tag",
+        "Am 9. Tag"
+      ],
+      "loesung": 1,
+      "erklaerung": "Nach 7 Tagen und Nächten ist er auf 7 m. Am 8. Tag klettert er die letzten 3 m – und ist draußen, bevor er abrutscht.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-035",
+      "modus": "auswahl",
+      "frage": "Anna ist älter als Ben. Clara ist jünger als Ben, aber älter als David. Wer ist am zweitjüngsten?",
+      "optionen": [
+        "Anna",
+        "Ben",
+        "Clara",
+        "David"
+      ],
+      "loesung": 2,
+      "erklaerung": "Von alt nach jung: Anna, Ben, Clara, David.",
+      "quelle": {
+        "titel": "Wikipedia – Logikrätsel",
+        "url": "https://de.wikipedia.org/wiki/Logikrätsel"
+      }
+    },
+    {
+      "id": "wwm-036",
+      "modus": "auswahl",
+      "frage": "Wie oft kommt die Ziffer 9 in den Zahlen von 1 bis 100 vor?",
+      "optionen": [
+        "10-mal",
+        "11-mal",
+        "19-mal",
+        "20-mal"
+      ],
+      "loesung": 3,
+      "erklaerung": "10-mal als Einer (9, 19 … 99) und 10-mal als Zehner (90 … 99) – die 99 zählt doppelt.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-037",
+      "modus": "auswahl",
+      "frage": "Vater und Sohn sind zusammen 36 Jahre alt. Der Vater ist 30 Jahre älter. Wie alt ist der Sohn?",
+      "optionen": [
+        "3 Jahre",
+        "6 Jahre",
+        "4 Jahre",
+        "30 Jahre"
+      ],
+      "loesung": 0,
+      "erklaerung": "Sohn 3 + Vater 33 = 36. Bei 6 wäre der Vater 36 – zusammen 42.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-038",
+      "modus": "auswahl",
+      "frage": "Ein Elektrozug fährt nach Norden, der Wind weht nach Süden. In welche Richtung zieht der Rauch?",
+      "optionen": [
+        "Nach Norden",
+        "Es gibt keinen Rauch",
+        "Nach Süden",
+        "Senkrecht nach oben"
+      ],
+      "loesung": 1,
+      "erklaerung": "Ein Elektrozug fährt mit Strom – er macht keinen Rauch.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-039",
+      "modus": "auswahl",
+      "frage": "Welches Wort wird kürzer, wenn man „er“ anhängt?",
+      "optionen": [
+        "lang",
+        "klein",
+        "kurz",
+        "eng"
+      ],
+      "loesung": 2,
+      "erklaerung": "Wortspiel: kurz + er = kürzer.",
+      "quelle": {
+        "titel": "Wiktionary – kurz",
+        "url": "https://de.wiktionary.org/wiki/kurz"
+      }
+    },
+    {
+      "id": "wwm-040",
+      "modus": "auswahl",
+      "frage": "Du überholst beim Rennen den Zweiten. Auf welchem Platz bist du jetzt?",
+      "optionen": [
+        "Erster",
+        "Dritter",
+        "Letzter",
+        "Zweiter"
+      ],
+      "loesung": 3,
+      "erklaerung": "Du nimmst den Platz des Überholten ein – der Erste ist ja noch vor dir.",
+      "quelle": {
+        "titel": "Wikipedia – Logikrätsel",
+        "url": "https://de.wikipedia.org/wiki/Logikrätsel"
+      }
+    }
+  ],
+  "stechfragen": [
+    {
+      "id": "wwm-s01",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gewinnstufen hat die klassische Gewinnleiter von „Wer wird Millionär?“ bis zur Million?",
+      "einheit": "",
+      "loesung": 15,
+      "quelle": {
+        "titel": "Wikipedia – Wer wird Millionär?",
+        "url": "https://de.wikipedia.org/wiki/Wer_wird_Millionär%3F"
+      }
+    },
+    {
+      "id": "wwm-s02",
+      "modus": "schaetzen",
+      "frage": "Wie viele Augen hat ein normaler Spielwürfel auf allen sechs Seiten zusammen?",
+      "einheit": "Augen",
+      "loesung": 21,
+      "erklaerung": "Gegenüberliegende Seiten ergeben immer 7 – drei Paare: 3 × 7 = 21.",
+      "quelle": {
+        "titel": "Wikipedia – Spielwürfel",
+        "url": "https://de.wikipedia.org/wiki/Spielwürfel"
+      }
+    },
+    {
+      "id": "wwm-s03",
+      "modus": "schaetzen",
+      "frage": "Wie viele Quadrate aller Größen (1×1 bis 8×8) gibt es auf einem Schachbrett?",
+      "einheit": "Quadrate",
+      "loesung": 204,
+      "erklaerung": "64 + 49 + 36 + 25 + 16 + 9 + 4 + 1 = 204 (eine quadratische Pyramidalzahl).",
+      "quelle": {
+        "titel": "Wikipedia – Quadratische Pyramidalzahl",
+        "url": "https://de.wikipedia.org/wiki/Quadratische_Pyramidalzahl"
+      }
+    }
+  ]
+}

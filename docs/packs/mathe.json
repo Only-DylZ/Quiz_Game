@@ -1011,6 +1011,508 @@
         "titel": "Wikipedia – Potenz (Mathematik)",
         "url": "https://de.wikipedia.org/wiki/Potenz_(Mathematik)"
       }
+    },
+    {
+      "id": "mathe-061",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein Dreieck mit einem 90°-Winkel?",
+      "optionen": [
+        "Spitzwinklig",
+        "Stumpfwinklig",
+        "Rechtwinklig",
+        "Gleichschenklig"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Rechtwinkliges Dreieck",
+        "url": "https://de.wikipedia.org/wiki/Rechtwinkliges_Dreieck"
+      }
+    },
+    {
+      "id": "mathe-062",
+      "modus": "auswahl",
+      "frage": "Wie lautet die Kreiszahl π auf zwei Nachkommastellen?",
+      "optionen": [
+        "3,14",
+        "3,41",
+        "3,12",
+        "3,16"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kreiszahl",
+        "url": "https://de.wikipedia.org/wiki/Kreiszahl"
+      }
+    },
+    {
+      "id": "mathe-063",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Strecke vom Mittelpunkt eines Kreises zu seinem Rand?",
+      "optionen": [
+        "Durchmesser",
+        "Sehne",
+        "Tangente",
+        "Radius"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Radius",
+        "url": "https://de.wikipedia.org/wiki/Radius"
+      }
+    },
+    {
+      "id": "mathe-064",
+      "modus": "auswahl",
+      "frage": "Welche dieser Zahlen ist KEINE Primzahl?",
+      "optionen": [
+        "89",
+        "91",
+        "83",
+        "79"
+      ],
+      "loesung": 1,
+      "erklaerung": "91 = 7 × 13.",
+      "quelle": {
+        "titel": "Wikipedia – Primzahl",
+        "url": "https://de.wikipedia.org/wiki/Primzahl"
+      }
+    },
+    {
+      "id": "mathe-065",
+      "modus": "auswahl",
+      "frage": "Wie viel Prozent sind 3/8?",
+      "optionen": [
+        "38 %",
+        "37,5 %",
+        "33,3 %",
+        "35 %"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Prozent",
+        "url": "https://de.wikipedia.org/wiki/Prozent"
+      }
+    },
+    {
+      "id": "mathe-066",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Zahlenfolge 1, 1, 2, 3, 5, 8, 13 …?",
+      "optionen": [
+        "Pascal-Folge",
+        "Euler-Folge",
+        "Collatz-Folge",
+        "Fibonacci-Folge"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Fibonacci-Folge",
+        "url": "https://de.wikipedia.org/wiki/Fibonacci-Folge"
+      }
+    },
+    {
+      "id": "mathe-067",
+      "modus": "auswahl",
+      "frage": "Welcher Gelehrte beschrieb um 1700 das Dualsystem mit nur 0 und 1?",
+      "optionen": [
+        "Gottfried Wilhelm Leibniz",
+        "Blaise Pascal",
+        "René Descartes",
+        "Johannes Kepler"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Dualsystem",
+        "url": "https://de.wikipedia.org/wiki/Dualsystem"
+      }
+    },
+    {
+      "id": "mathe-068",
+      "modus": "auswahl",
+      "frage": "Welche römische Zahl steht für 500?",
+      "optionen": [
+        "L",
+        "C",
+        "D",
+        "M"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Römische Zahlschrift",
+        "url": "https://de.wikipedia.org/wiki/Römische_Zahlschrift"
+      }
+    },
+    {
+      "id": "mathe-069",
+      "modus": "auswahl",
+      "frage": "Was ergibt eine negative Zahl mal eine negative Zahl?",
+      "optionen": [
+        "Eine negative Zahl",
+        "Immer null",
+        "Immer eins",
+        "Eine positive Zahl"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Multiplikation",
+        "url": "https://de.wikipedia.org/wiki/Multiplikation"
+      }
+    },
+    {
+      "id": "mathe-070",
+      "modus": "auswahl",
+      "frage": "Wie heißt im rechtwinkligen Dreieck die Seite gegenüber dem rechten Winkel?",
+      "optionen": [
+        "Kathete",
+        "Hypotenuse",
+        "Höhe",
+        "Winkelhalbierende"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Hypotenuse",
+        "url": "https://de.wikipedia.org/wiki/Hypotenuse"
+      }
+    },
+    {
+      "id": "mathe-071",
+      "modus": "auswahl",
+      "frage": "Welche Form haben die Flächen eines Dodekaeders?",
+      "optionen": [
+        "Dreiecke",
+        "Quadrate",
+        "Fünfecke",
+        "Sechsecke"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Dodekaeder",
+        "url": "https://de.wikipedia.org/wiki/Dodekaeder"
+      }
+    },
+    {
+      "id": "mathe-072",
+      "modus": "auswahl",
+      "frage": "Welches Zeichen steht in der Mathematik für „unendlich“?",
+      "optionen": [
+        "∞",
+        "∑",
+        "∫",
+        "∂"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Unendlichkeit",
+        "url": "https://de.wikipedia.org/wiki/Unendlichkeit"
+      }
+    },
+    {
+      "id": "mathe-073",
+      "modus": "schaetzen",
+      "frage": "Kopfrechnen: Wie viel ist 13 × 13?",
+      "einheit": "",
+      "loesung": 169,
+      "quelle": {
+        "titel": "Wikipedia – Quadratzahl",
+        "url": "https://de.wikipedia.org/wiki/Quadratzahl"
+      }
+    },
+    {
+      "id": "mathe-074",
+      "modus": "schaetzen",
+      "frage": "Wie viel ist 12 × 12 × 12?",
+      "einheit": "",
+      "loesung": 1728,
+      "quelle": {
+        "titel": "Wikipedia – Kubikzahl",
+        "url": "https://de.wikipedia.org/wiki/Kubikzahl"
+      }
+    },
+    {
+      "id": "mathe-075",
+      "modus": "schaetzen",
+      "frage": "Wie viele Ecken hat ein Ikosaeder?",
+      "einheit": "",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Ikosaeder",
+        "url": "https://de.wikipedia.org/wiki/Ikosaeder"
+      }
+    },
+    {
+      "id": "mathe-076",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent sind 7 von 28?",
+      "einheit": "%",
+      "loesung": 25,
+      "quelle": {
+        "titel": "Wikipedia – Prozent",
+        "url": "https://de.wikipedia.org/wiki/Prozent"
+      }
+    },
+    {
+      "id": "mathe-077",
+      "modus": "schaetzen",
+      "frage": "Auf wie viele Arten kann man mit zwei Würfeln die Summe 7 werfen?",
+      "einheit": "",
+      "loesung": 6,
+      "erklaerung": "1+6, 2+5, 3+4, 4+3, 5+2, 6+1.",
+      "quelle": {
+        "titel": "Wikipedia – Spielwürfel",
+        "url": "https://de.wikipedia.org/wiki/Spielwürfel"
+      }
+    },
+    {
+      "id": "mathe-079",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist die Summe der Innenwinkel eines Sechsecks?",
+      "einheit": "°",
+      "loesung": 720,
+      "quelle": {
+        "titel": "Wikipedia – Sechseck",
+        "url": "https://de.wikipedia.org/wiki/Sechseck"
+      }
+    },
+    {
+      "id": "mathe-080",
+      "modus": "schaetzen",
+      "frage": "Wie viele Primzahlen gibt es, die kleiner als 20 sind?",
+      "einheit": "",
+      "loesung": 8,
+      "erklaerung": "2, 3, 5, 7, 11, 13, 17 und 19.",
+      "quelle": {
+        "titel": "Wikipedia – Primzahl",
+        "url": "https://de.wikipedia.org/wiki/Primzahl"
+      }
+    },
+    {
+      "id": "mathe-081",
+      "modus": "schaetzen",
+      "frage": "Wie viel ist 2 hoch 12?",
+      "einheit": "",
+      "loesung": 4096,
+      "quelle": {
+        "titel": "Wikipedia – Zweierpotenz",
+        "url": "https://de.wikipedia.org/wiki/Zweierpotenz"
+      }
+    },
+    {
+      "id": "mathe-082",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Flächen hat ein Dodekaeder?",
+      "daten": {
+        "einheit": "",
+        "balken": [
+          {
+            "name": "Tetraeder",
+            "wert": 4
+          },
+          {
+            "name": "Würfel",
+            "wert": 6
+          },
+          {
+            "name": "Oktaeder",
+            "wert": 8
+          },
+          {
+            "name": "Dodekaeder",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Platonischer Körper",
+        "url": "https://de.wikipedia.org/wiki/Platonischer_Körper"
+      }
+    },
+    {
+      "id": "mathe-083",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viel ist 3 hoch 4?",
+      "daten": {
+        "einheit": "",
+        "balken": [
+          {
+            "name": "3 hoch 1",
+            "wert": 3
+          },
+          {
+            "name": "3 hoch 2",
+            "wert": 9
+          },
+          {
+            "name": "3 hoch 3",
+            "wert": 27
+          },
+          {
+            "name": "3 hoch 4",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 81,
+      "quelle": {
+        "titel": "Wikipedia – Potenz (Mathematik)",
+        "url": "https://de.wikipedia.org/wiki/Potenz_(Mathematik)"
+      }
+    },
+    {
+      "id": "mathe-084",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Mathematiker Leonhard Euler geboren?",
+      "daten": {
+        "von": 1650,
+        "bis": 1800,
+        "ereignisse": [
+          {
+            "name": "Gründung von Sankt Petersburg",
+            "jahr": 1703
+          },
+          {
+            "name": "Geburt von Goethe",
+            "jahr": 1749
+          }
+        ]
+      },
+      "loesung": 1707,
+      "quelle": {
+        "titel": "Wikipedia – Leonhard Euler",
+        "url": "https://de.wikipedia.org/wiki/Leonhard_Euler"
+      }
+    },
+    {
+      "id": "mathe-085",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr beschrieb Alan Turing die nach ihm benannte „Turingmaschine“?",
+      "daten": {
+        "von": 1900,
+        "bis": 1960,
+        "ereignisse": [
+          {
+            "name": "Ende des Ersten Weltkriegs",
+            "jahr": 1918
+          },
+          {
+            "name": "Ende des Zweiten Weltkriegs",
+            "jahr": 1945
+          }
+        ]
+      },
+      "loesung": 1936,
+      "quelle": {
+        "titel": "Wikipedia – Turingmaschine",
+        "url": "https://de.wikipedia.org/wiki/Turingmaschine"
+      }
+    },
+    {
+      "id": "mathe-086",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Basel, die Geburtsstadt von Leonhard Euler?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 47.56,
+        "lng": 7.59
+      },
+      "quelle": {
+        "titel": "Wikipedia – Basel",
+        "url": "https://de.wikipedia.org/wiki/Basel"
+      }
+    },
+    {
+      "id": "mathe-087",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Bletchley Park, wo Alan Turing half, den Enigma-Code zu knacken?",
+      "daten": {
+        "mitte": [
+          48,
+          0
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 52.0,
+        "lng": -0.74
+      },
+      "quelle": {
+        "titel": "Wikipedia – Bletchley Park",
+        "url": "https://de.wikipedia.org/wiki/Bletchley_Park"
+      }
+    },
+    {
+      "id": "mathe-088",
+      "modus": "reihenfolge",
+      "frage": "Welche Zahl ist größer? Ordne von groß nach klein!",
+      "loesung": [
+        "0,5",
+        "0,45",
+        "2/5",
+        "3/8"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "werte": [
+        "0,5",
+        "0,45",
+        "0,4",
+        "0,375"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Bruchrechnung",
+        "url": "https://de.wikipedia.org/wiki/Bruchrechnung"
+      }
+    },
+    {
+      "id": "mathe-089",
+      "modus": "reihenfolge",
+      "frage": "Ordne die römischen Zahlen nach ihrem Wert!",
+      "loesung": [
+        "MCM",
+        "MD",
+        "CD",
+        "XC"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "werte": [
+        "1900",
+        "1500",
+        "400",
+        "90"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Römische Zahlschrift",
+        "url": "https://de.wikipedia.org/wiki/Römische_Zahlschrift"
+      }
+    },
+    {
+      "id": "mathe-090",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Mathematiker nach ihrer Lebenszeit!",
+      "loesung": [
+        "Pythagoras",
+        "Adam Ries",
+        "Leonhard Euler",
+        "Emmy Noether"
+      ],
+      "oben": "frühester",
+      "unten": "spätester",
+      "quelle": {
+        "titel": "Wikipedia – Geschichte der Mathematik",
+        "url": "https://de.wikipedia.org/wiki/Geschichte_der_Mathematik"
+      }
     }
   ],
   "stechfragen": [
@@ -1067,6 +1569,17 @@
       "quelle": {
         "titel": "Wikipedia – Fakultät (Mathematik)",
         "url": "https://de.wikipedia.org/wiki/Fakultät_(Mathematik)"
+      }
+    },
+    {
+      "id": "mathe-s06",
+      "modus": "schaetzen",
+      "frage": "Wie viel ist 2 hoch 15?",
+      "einheit": "",
+      "loesung": 32768,
+      "quelle": {
+        "titel": "Wikipedia – Zweierpotenz",
+        "url": "https://de.wikipedia.org/wiki/Zweierpotenz"
       }
     }
   ]
