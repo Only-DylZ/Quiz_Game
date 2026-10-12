@@ -1634,6 +1634,488 @@
         "titel": "Wikipedia – Ohr",
         "url": "https://de.wikipedia.org/wiki/Ohr"
       }
+    },
+    {
+      "id": "bio-101",
+      "modus": "auswahl",
+      "frage": "Wie heißt der längste und dickste Nerv des Menschen?",
+      "optionen": [
+        "Vagusnerv",
+        "Ischiasnerv",
+        "Sehnerv",
+        "Speichennerv"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Nervus ischiadicus",
+        "url": "https://de.wikipedia.org/wiki/Nervus_ischiadicus"
+      }
+    },
+    {
+      "id": "bio-102",
+      "modus": "auswahl",
+      "frage": "Welcher Teil des Gehirns steuert vor allem Gleichgewicht und fein abgestimmte Bewegungen?",
+      "optionen": [
+        "Kleinhirn",
+        "Hypophyse",
+        "Thalamus",
+        "Hippocampus"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kleinhirn",
+        "url": "https://de.wikipedia.org/wiki/Kleinhirn"
+      }
+    },
+    {
+      "id": "bio-103",
+      "modus": "auswahl",
+      "frage": "Woraus besteht die Zellwand von Pflanzen hauptsächlich?",
+      "optionen": [
+        "Chitin",
+        "Stärke",
+        "Cellulose",
+        "Kollagen"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Cellulose",
+        "url": "https://de.wikipedia.org/wiki/Cellulose"
+      }
+    },
+    {
+      "id": "bio-104",
+      "modus": "auswahl",
+      "frage": "Welches Hormon steuert den Schlaf-wach-Rhythmus und wird vor allem bei Dunkelheit ausgeschüttet?",
+      "optionen": [
+        "Insulin",
+        "Östrogen",
+        "Thyroxin",
+        "Melatonin"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Melatonin",
+        "url": "https://de.wikipedia.org/wiki/Melatonin"
+      }
+    },
+    {
+      "id": "bio-105",
+      "modus": "auswahl",
+      "frage": "Wie heißen Eiweiße, die chemische Reaktionen im Körper beschleunigen, zum Beispiel bei der Verdauung?",
+      "optionen": [
+        "Enzyme",
+        "Lipide",
+        "Vitamine",
+        "Antikörper"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Enzym",
+        "url": "https://de.wikipedia.org/wiki/Enzym"
+      }
+    },
+    {
+      "id": "bio-106",
+      "modus": "auswahl",
+      "frage": "Wie heißt das größte Blutgefäß des Menschen?",
+      "optionen": [
+        "Hohlvene",
+        "Aorta",
+        "Halsschlagader",
+        "Pfortader"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Aorta",
+        "url": "https://de.wikipedia.org/wiki/Aorta"
+      }
+    },
+    {
+      "id": "bio-107",
+      "modus": "auswahl",
+      "frage": "Aus welchem Stoff bestehen Haare und Fingernägel vor allem?",
+      "optionen": [
+        "Kollagen",
+        "Kalzium",
+        "Keratin",
+        "Elastin"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Keratin",
+        "url": "https://de.wikipedia.org/wiki/Keratin"
+      }
+    },
+    {
+      "id": "bio-108",
+      "modus": "auswahl",
+      "frage": "Wodurch werden Masern ausgelöst?",
+      "optionen": [
+        "Durch Bakterien",
+        "Durch Pilze",
+        "Durch Einzeller",
+        "Durch ein Virus"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Masern",
+        "url": "https://de.wikipedia.org/wiki/Masern"
+      }
+    },
+    {
+      "id": "bio-109",
+      "modus": "auswahl",
+      "frage": "Was ist bei einer „Blinddarmentzündung“ eigentlich entzündet?",
+      "optionen": [
+        "Der Wurmfortsatz",
+        "Der Dünndarm",
+        "Der Magen",
+        "Die Milz"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Appendizitis",
+        "url": "https://de.wikipedia.org/wiki/Appendizitis"
+      }
+    },
+    {
+      "id": "bio-110",
+      "modus": "auswahl",
+      "frage": "Zu welcher Pflanzengruppe gehören Nadelbäume, deren Samen offen auf Zapfenschuppen liegen?",
+      "optionen": [
+        "Bedecktsamer",
+        "Nacktsamer",
+        "Farne",
+        "Moose"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Nacktsamer",
+        "url": "https://de.wikipedia.org/wiki/Nacktsamer"
+      }
+    },
+    {
+      "id": "bio-111",
+      "modus": "auswahl",
+      "frage": "Wie nennt man es, wenn Pflanzen über ihre Blätter Wasser verdunsten?",
+      "optionen": [
+        "Osmose",
+        "Diffusion",
+        "Transpiration",
+        "Fermentation"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Transpiration",
+        "url": "https://de.wikipedia.org/wiki/Transpiration"
+      }
+    },
+    {
+      "id": "bio-112",
+      "modus": "auswahl",
+      "frage": "Wer entwickelte 1885 den ersten Impfstoff gegen Tollwut?",
+      "optionen": [
+        "Robert Koch",
+        "Paul Ehrlich",
+        "Emil von Behring",
+        "Louis Pasteur"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Louis Pasteur",
+        "url": "https://de.wikipedia.org/wiki/Louis_Pasteur"
+      }
+    },
+    {
+      "id": "bio-113",
+      "modus": "schaetzen",
+      "frage": "Wie viele Chromosomen hat eine Körperzelle des Schimpansen?",
+      "einheit": "Chromosomen",
+      "loesung": 48,
+      "quelle": {
+        "titel": "Wikipedia – Schimpansen",
+        "url": "https://de.wikipedia.org/wiki/Schimpansen"
+      }
+    },
+    {
+      "id": "bio-114",
+      "modus": "schaetzen",
+      "frage": "Ab wie viel Grad Körpertemperatur spricht man beim Menschen von Fieber?",
+      "einheit": "°C",
+      "loesung": 38,
+      "quelle": {
+        "titel": "Wikipedia – Fieber",
+        "url": "https://de.wikipedia.org/wiki/Fieber"
+      }
+    },
+    {
+      "id": "bio-115",
+      "modus": "schaetzen",
+      "frage": "Wie viele Backenzähne (Molaren) hat ein vollständiges Erwachsenengebiss mit Weisheitszähnen?",
+      "einheit": "Zähne",
+      "loesung": 12,
+      "quelle": {
+        "titel": "Wikipedia – Gebiss",
+        "url": "https://de.wikipedia.org/wiki/Gebiss"
+      }
+    },
+    {
+      "id": "bio-116",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauert ein Menstruationszyklus im Durchschnitt?",
+      "einheit": "Tage",
+      "loesung": 28,
+      "quelle": {
+        "titel": "Wikipedia – Menstruationszyklus",
+        "url": "https://de.wikipedia.org/wiki/Menstruationszyklus"
+      }
+    },
+    {
+      "id": "bio-117",
+      "modus": "schaetzen",
+      "frage": "Unter wie viel Grad Körpertemperatur spricht man von einer Unterkühlung?",
+      "einheit": "°C",
+      "loesung": 35,
+      "quelle": {
+        "titel": "Wikipedia – Unterkühlung",
+        "url": "https://de.wikipedia.org/wiki/Unterk%C3%BChlung"
+      }
+    },
+    {
+      "id": "bio-118",
+      "modus": "schaetzen",
+      "frage": "Wie viele Fingerknochen (Fingerglieder) hat eine menschliche Hand?",
+      "einheit": "Knochen",
+      "loesung": 14,
+      "erklaerung": "Drei pro Finger, nur zwei beim Daumen.",
+      "quelle": {
+        "titel": "Wikipedia – Fingerknochen",
+        "url": "https://de.wikipedia.org/wiki/Fingerknochen"
+      }
+    },
+    {
+      "id": "bio-119",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Körperzellen besteht der winzige Fadenwurm C. elegans (Zwitter) – ein beliebtes Forschungstier?",
+      "einheit": "Zellen",
+      "loesung": 959,
+      "quelle": {
+        "titel": "Wikipedia – Caenorhabditis elegans",
+        "url": "https://de.wikipedia.org/wiki/Caenorhabditis_elegans"
+      }
+    },
+    {
+      "id": "bio-120",
+      "modus": "schaetzen",
+      "frage": "Wie viel Gramm Eiweiß pro Kilogramm Körpergewicht sollen Erwachsene unter 65 laut DGE täglich essen?",
+      "einheit": "g",
+      "loesung": 0.8,
+      "quelle": {
+        "titel": "Wikipedia – Protein",
+        "url": "https://de.wikipedia.org/wiki/Protein"
+      }
+    },
+    {
+      "id": "bio-121",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zentimeter wachsen Kopfhaare ungefähr pro Monat?",
+      "einheit": "cm",
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Haar",
+        "url": "https://de.wikipedia.org/wiki/Haar"
+      }
+    },
+    {
+      "id": "bio-122",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erklärte die Weltgesundheitsorganisation die Pocken für ausgerottet?",
+      "daten": {
+        "von": 1900,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1980,
+      "quelle": {
+        "titel": "Wikipedia – Pocken",
+        "url": "https://de.wikipedia.org/wiki/Pocken"
+      }
+    },
+    {
+      "id": "bio-123",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr bauten Ernst Ruska und Max Knoll das erste Elektronenmikroskop?",
+      "daten": {
+        "von": 1850,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1931,
+      "quelle": {
+        "titel": "Wikipedia – Elektronenmikroskop",
+        "url": "https://de.wikipedia.org/wiki/Elektronenmikroskop"
+      }
+    },
+    {
+      "id": "bio-124",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde in Deutschland die Pflicht zur Masern-Impfung für Kita- und Schulkinder eingeführt?",
+      "daten": {
+        "von": 1990,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 2020,
+      "quelle": {
+        "titel": "Wikipedia – Masernschutzgesetz",
+        "url": "https://de.wikipedia.org/wiki/Masernschutzgesetz"
+      }
+    },
+    {
+      "id": "bio-125",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt Jena, wo Carl Zeiss seine berühmten Mikroskope baute?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 50.93,
+        "lng": 11.59
+      },
+      "quelle": {
+        "titel": "Wikipedia – Carl Zeiss",
+        "url": "https://de.wikipedia.org/wiki/Carl_Zeiss"
+      }
+    },
+    {
+      "id": "bio-126",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo wurde 1974 „Lucy“ gefunden, das berühmte Skelett eines Vormenschen?",
+      "daten": {
+        "mitte": [
+          5,
+          25
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 11.1,
+        "lng": 40.58
+      },
+      "quelle": {
+        "titel": "Wikipedia – AL 288-1",
+        "url": "https://de.wikipedia.org/wiki/AL_288-1"
+      }
+    },
+    {
+      "id": "bio-127",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der Białowieża-Urwald, einer der letzten Tieflandurwälder Europas?",
+      "daten": {
+        "mitte": [
+          50,
+          15
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 52.73,
+        "lng": 23.85
+      },
+      "quelle": {
+        "titel": "Wikipedia – Białowieża-Urwald",
+        "url": "https://de.wikipedia.org/wiki/Bia%C5%82owie%C5%BCa-Urwald"
+      }
+    },
+    {
+      "id": "bio-128",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Phasen der Kernteilung!",
+      "loesung": [
+        "Prophase",
+        "Metaphase",
+        "Anaphase",
+        "Telophase"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Zellzyklus",
+        "url": "https://de.wikipedia.org/wiki/Zellzyklus"
+      }
+    },
+    {
+      "id": "bio-129",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Erdzeitalter von alt nach jung!",
+      "loesung": [
+        "Kambrium",
+        "Perm",
+        "Jura",
+        "Kreide"
+      ],
+      "oben": "am ältesten",
+      "unten": "am jüngsten",
+      "quelle": {
+        "titel": "Wikipedia – Geologische Zeitskala",
+        "url": "https://de.wikipedia.org/wiki/Geologische_Zeitskala"
+      }
+    },
+    {
+      "id": "bio-130",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Abschnitte der Wirbelsäule von oben nach unten!",
+      "loesung": [
+        "Halswirbelsäule",
+        "Brustwirbelsäule",
+        "Lendenwirbelsäule",
+        "Kreuzbein",
+        "Steißbein"
+      ],
+      "oben": "oben",
+      "unten": "unten",
+      "quelle": {
+        "titel": "Wikipedia – Wirbelsäule",
+        "url": "https://de.wikipedia.org/wiki/Wirbels%C3%A4ule"
+      }
     }
   ],
   "stechfragen": [
@@ -1723,6 +2205,28 @@
       "quelle": {
         "titel": "Wikipedia – Insulin",
         "url": "https://de.wikipedia.org/wiki/Insulin"
+      }
+    },
+    {
+      "id": "bio-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde der Naturforscher Alexander von Humboldt geboren?",
+      "einheit": "",
+      "loesung": 1769,
+      "quelle": {
+        "titel": "Wikipedia – Alexander von Humboldt",
+        "url": "https://de.wikipedia.org/wiki/Alexander_von_Humboldt"
+      }
+    },
+    {
+      "id": "bio-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde Carl von Linné geboren, der Begründer der modernen Pflanzen- und Tiernamen?",
+      "einheit": "",
+      "loesung": 1707,
+      "quelle": {
+        "titel": "Wikipedia – Carl von Linné",
+        "url": "https://de.wikipedia.org/wiki/Carl_von_Linn%C3%A9"
       }
     }
   ]

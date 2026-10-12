@@ -810,3 +810,16 @@ essen-117 game-016 100
 essen-134 game-016 100
 essen-117 game-082 100
 essen-134 game-082 100
+film-084 bio-124 2020
+phys-026 bio-s09 1769
+game-030 bio-122 1980
+geo-013 bio-124 2020
+geo-081 bio-124 2020
+sport-s05 bio-124 2020
+game-038 bio-124 2020
+game-088 bio-124 2020
+bio-111 chem-042 Wasser
+bio-104 dd-001 Rhythmus
+bio-126 mathe-054 1974
+bio-124 sport-001 Deutschland
+bio-125 sport-001 Deutschland
