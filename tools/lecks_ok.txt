@@ -864,3 +864,21 @@ mathe-120 game-016 100
 mathe-s09 game-016 100
 mathe-120 game-082 100
 mathe-s09 game-082 100
+gesch-111 sport-064 Peking
+gesch-134 game-008 Polen
+gesch-128 bio-025 1953
+gesch-109 essen-001 Japan
+gesch-130 essen-001 Japan
+gesch-116 geo-046 Mittelmeer
+gesch-128 geo-132 1953
+gesch-110 gesch-022 1989
+gesch-126 gesch-032 Napoleon Bonaparte
+gesch-112 gesch-097 Frankreich
+film-025 gesch-127 1999
+gesch-134 wwm-040 Zweiter
+gesch-110 rf-36 1990
+gesch-116 rf-50 China
+gesch-122 sport-001 Deutschland
+gesch-129 sport-001 Deutschland
+gesch-109 sport-038 Japan
+gesch-130 sport-038 Japan

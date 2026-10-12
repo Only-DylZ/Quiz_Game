@@ -1731,6 +1731,486 @@
         "titel": "Wikipedia – Liste der Präsidenten der Vereinigten Staaten",
         "url": "https://de.wikipedia.org/wiki/Liste_der_Präsidenten_der_Vereinigten_Staaten"
       }
+    },
+    {
+      "id": "gesch-105",
+      "modus": "auswahl",
+      "frage": "Wer war der erste Reichspräsident der Weimarer Republik?",
+      "optionen": [
+        "Paul von Hindenburg",
+        "Friedrich Ebert",
+        "Gustav Stresemann",
+        "Walther Rathenau"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Friedrich Ebert",
+        "url": "https://de.wikipedia.org/wiki/Friedrich_Ebert"
+      }
+    },
+    {
+      "id": "gesch-106",
+      "modus": "auswahl",
+      "frage": "Welches Ereignis löste den Ersten Weltkrieg aus?",
+      "optionen": [
+        "Das Attentat von Sarajevo",
+        "Der Kieler Matrosenaufstand",
+        "Die Emser Depesche",
+        "Die Oktoberrevolution"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Attentat von Sarajevo",
+        "url": "https://de.wikipedia.org/wiki/Attentat_von_Sarajevo"
+      }
+    },
+    {
+      "id": "gesch-107",
+      "modus": "auswahl",
+      "frage": "Wie hieß das Hilfsprogramm der USA für den Wiederaufbau Europas nach dem Zweiten Weltkrieg?",
+      "optionen": [
+        "Morgenthau-Plan",
+        "Schuman-Plan",
+        "Dawes-Plan",
+        "Marshallplan"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Marshallplan",
+        "url": "https://de.wikipedia.org/wiki/Marshallplan"
+      }
+    },
+    {
+      "id": "gesch-108",
+      "modus": "auswahl",
+      "frage": "Wie nannten die Berliner die Flugzeuge der Luftbrücke 1948/49?",
+      "optionen": [
+        "Kaffeeflieger",
+        "Brotvögel",
+        "Rosinenbomber",
+        "Tante Ju"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Berliner Luftbrücke",
+        "url": "https://de.wikipedia.org/wiki/Berliner_Luftbr%C3%BCcke"
+      }
+    },
+    {
+      "id": "gesch-109",
+      "modus": "auswahl",
+      "frage": "Wie hießen die Krieger des Schwertadels im alten Japan?",
+      "optionen": [
+        "Ninja",
+        "Samurai",
+        "Mandarine",
+        "Janitscharen"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Samurai",
+        "url": "https://de.wikipedia.org/wiki/Samurai"
+      }
+    },
+    {
+      "id": "gesch-110",
+      "modus": "auswahl",
+      "frage": "Welcher Ruf wurde bei den Montagsdemonstrationen in der DDR berühmt?",
+      "optionen": [
+        "„Wir sind das Volk!“",
+        "„Freiheit für alle!“",
+        "„Nieder mit der Mauer!“",
+        "„Brot und Frieden!“"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Montagsdemonstrationen 1989/1990 in der DDR",
+        "url": "https://de.wikipedia.org/wiki/Montagsdemonstrationen_1989/1990_in_der_DDR"
+      }
+    },
+    {
+      "id": "gesch-111",
+      "modus": "auswahl",
+      "frage": "Unter welcher Kaiserdynastie wurde die Verbotene Stadt in Peking gebaut?",
+      "optionen": [
+        "Han",
+        "Qing",
+        "Ming",
+        "Tang"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Verbotene Stadt",
+        "url": "https://de.wikipedia.org/wiki/Verbotene_Stadt"
+      }
+    },
+    {
+      "id": "gesch-112",
+      "modus": "auswahl",
+      "frage": "Welche Königin von Frankreich wurde 1793 während der Revolution hingerichtet?",
+      "optionen": [
+        "Katharina von Medici",
+        "Anna von Österreich",
+        "Joséphine de Beauharnais",
+        "Marie Antoinette"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Marie Antoinette",
+        "url": "https://de.wikipedia.org/wiki/Marie_Antoinette"
+      }
+    },
+    {
+      "id": "gesch-113",
+      "modus": "auswahl",
+      "frage": "Welche Stadt war die Hauptstadt des Inkareichs?",
+      "optionen": [
+        "Quito",
+        "Cusco",
+        "Bogotá",
+        "Tenochtitlan"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Cusco",
+        "url": "https://de.wikipedia.org/wiki/Cusco"
+      }
+    },
+    {
+      "id": "gesch-114",
+      "modus": "auswahl",
+      "frage": "Welcher Krieg in Asien endete mit einem Waffenstillstand nahe dem 38. Breitengrad?",
+      "optionen": [
+        "Vietnamkrieg",
+        "Golfkrieg",
+        "Koreakrieg",
+        "Sechstagekrieg"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Koreakrieg",
+        "url": "https://de.wikipedia.org/wiki/Koreakrieg"
+      }
+    },
+    {
+      "id": "gesch-115",
+      "modus": "auswahl",
+      "frage": "Wer war bei den Wikingern der oberste Gott, der Göttervater?",
+      "optionen": [
+        "Thor",
+        "Loki",
+        "Freyr",
+        "Odin"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Odin",
+        "url": "https://de.wikipedia.org/wiki/Odin"
+      }
+    },
+    {
+      "id": "gesch-116",
+      "modus": "auswahl",
+      "frage": "Wie heißt das alte Netz von Handelswegen zwischen China und dem Mittelmeer?",
+      "optionen": [
+        "Seidenstraße",
+        "Bernsteinstraße",
+        "Via Appia",
+        "Salzstraße"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Seidenstraße",
+        "url": "https://de.wikipedia.org/wiki/Seidenstra%C3%9Fe"
+      }
+    },
+    {
+      "id": "gesch-117",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauerte die Schlacht um Verdun im Jahr 1916 ungefähr?",
+      "einheit": "Tage",
+      "loesung": 300,
+      "erklaerung": "Vom 21. Februar bis zum 19. Dezember 1916.",
+      "quelle": {
+        "titel": "Wikipedia – Schlacht um Verdun",
+        "url": "https://de.wikipedia.org/wiki/Schlacht_um_Verdun"
+      }
+    },
+    {
+      "id": "gesch-118",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre gab es zwei deutsche Staaten nebeneinander (BRD und DDR)?",
+      "einheit": "Jahre",
+      "loesung": 41,
+      "quelle": {
+        "titel": "Wikipedia – Deutsche Teilung",
+        "url": "https://de.wikipedia.org/wiki/Deutsche_Teilung"
+      }
+    },
+    {
+      "id": "gesch-119",
+      "modus": "schaetzen",
+      "frage": "Wie viele Länder traten bei der Wiedervereinigung der Bundesrepublik bei (ohne Berlin)?",
+      "einheit": "Länder",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Neue Länder",
+        "url": "https://de.wikipedia.org/wiki/Neue_L%C3%A4nder"
+      }
+    },
+    {
+      "id": "gesch-120",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauerte die sowjetische Blockade West-Berlins 1948/49?",
+      "einheit": "Tage",
+      "loesung": 322,
+      "quelle": {
+        "titel": "Wikipedia – Berlin-Blockade",
+        "url": "https://de.wikipedia.org/wiki/Berlin-Blockade"
+      }
+    },
+    {
+      "id": "gesch-121",
+      "modus": "schaetzen",
+      "frage": "Wie viele Millionen Tonnen Güter flogen die Alliierten während der Luftbrücke nach West-Berlin?",
+      "einheit": "Mio. t",
+      "loesung": 2.1,
+      "quelle": {
+        "titel": "Wikipedia – Berliner Luftbrücke",
+        "url": "https://de.wikipedia.org/wiki/Berliner_Luftbr%C3%BCcke"
+      }
+    },
+    {
+      "id": "gesch-122",
+      "modus": "schaetzen",
+      "frage": "In wie viele Besatzungszonen teilten die Siegermächte Deutschland 1945 auf?",
+      "einheit": "Zonen",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Besatzungszone",
+        "url": "https://de.wikipedia.org/wiki/Besatzungszone"
+      }
+    },
+    {
+      "id": "gesch-123",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre bestand das Deutsche Kaiserreich?",
+      "einheit": "Jahre",
+      "loesung": 47,
+      "quelle": {
+        "titel": "Wikipedia – Deutsches Kaiserreich",
+        "url": "https://de.wikipedia.org/wiki/Deutsches_Kaiserreich"
+      }
+    },
+    {
+      "id": "gesch-124",
+      "modus": "schaetzen",
+      "frage": "Wie alt wurde Mahatma Gandhi?",
+      "einheit": "Jahre",
+      "loesung": 78,
+      "quelle": {
+        "titel": "Wikipedia – Mahatma Gandhi",
+        "url": "https://de.wikipedia.org/wiki/Mahatma_Gandhi"
+      }
+    },
+    {
+      "id": "gesch-125",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre saß Nelson Mandela im Gefängnis?",
+      "einheit": "Jahre",
+      "loesung": 27,
+      "quelle": {
+        "titel": "Wikipedia – Nelson Mandela",
+        "url": "https://de.wikipedia.org/wiki/Nelson_Mandela"
+      }
+    },
+    {
+      "id": "gesch-126",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr krönte sich Napoleon Bonaparte zum Kaiser der Franzosen?",
+      "daten": {
+        "von": 1700,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Unabhängigkeit der USA",
+            "jahr": 1776
+          },
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          }
+        ]
+      },
+      "loesung": 1804,
+      "quelle": {
+        "titel": "Wikipedia – Napoleon Bonaparte",
+        "url": "https://de.wikipedia.org/wiki/Napoleon_Bonaparte"
+      }
+    },
+    {
+      "id": "gesch-127",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Euro als Buchgeld (für Überweisungen) eingeführt?",
+      "daten": {
+        "von": 1920,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1999,
+      "quelle": {
+        "titel": "Wikipedia – Euro",
+        "url": "https://de.wikipedia.org/wiki/Euro"
+      }
+    },
+    {
+      "id": "gesch-128",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam es am 17. Juni zum Volksaufstand in der DDR?",
+      "daten": {
+        "von": 1920,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1953,
+      "quelle": {
+        "titel": "Wikipedia – Aufstand vom 17. Juni 1953",
+        "url": "https://de.wikipedia.org/wiki/Aufstand_vom_17._Juni_1953"
+      }
+    },
+    {
+      "id": "gesch-129",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt Wittenberg, die Stadt der Reformation?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 51.87,
+        "lng": 12.65
+      },
+      "quelle": {
+        "titel": "Wikipedia – Lutherstadt Wittenberg",
+        "url": "https://de.wikipedia.org/wiki/Lutherstadt_Wittenberg"
+      }
+    },
+    {
+      "id": "gesch-130",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Pearl Harbor, wo Japan 1941 die US-Flotte angriff?",
+      "daten": {
+        "mitte": [
+          25,
+          -170
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 21.35,
+        "lng": -157.97
+      },
+      "quelle": {
+        "titel": "Wikipedia – Angriff auf Pearl Harbor",
+        "url": "https://de.wikipedia.org/wiki/Angriff_auf_Pearl_Harbor"
+      }
+    },
+    {
+      "id": "gesch-131",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Hiroshima, auf das die erste Atombombe in einem Krieg fiel?",
+      "daten": {
+        "mitte": [
+          35,
+          125
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 34.39,
+        "lng": 132.45
+      },
+      "quelle": {
+        "titel": "Wikipedia – Hiroshima",
+        "url": "https://de.wikipedia.org/wiki/Hiroshima"
+      }
+    },
+    {
+      "id": "gesch-132",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Ereignisse der deutschen Einheit!",
+      "loesung": [
+        "Mauerfall",
+        "Währungsunion",
+        "Tag der Deutschen Einheit"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Deutsche Wiedervereinigung",
+        "url": "https://de.wikipedia.org/wiki/Deutsche_Wiedervereinigung"
+      }
+    },
+    {
+      "id": "gesch-133",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Revolutionen nach ihrem Beginn!",
+      "loesung": [
+        "Amerikanische Revolution",
+        "Französische Revolution",
+        "Oktoberrevolution",
+        "Friedliche Revolution in der DDR"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Revolution",
+        "url": "https://de.wikipedia.org/wiki/Revolution"
+      }
+    },
+    {
+      "id": "gesch-134",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Ereignisse des Zweiten Weltkriegs!",
+      "loesung": [
+        "Überfall auf Polen",
+        "Angriff auf Pearl Harbor",
+        "Landung in der Normandie",
+        "Kapitulation Deutschlands"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Zweiter Weltkrieg",
+        "url": "https://de.wikipedia.org/wiki/Zweiter_Weltkrieg"
+      }
     }
   ],
   "stechfragen": [
@@ -1820,6 +2300,28 @@
       "quelle": {
         "titel": "Wikipedia – Dreißigjähriger Krieg",
         "url": "https://de.wikipedia.org/wiki/Dreißigjähriger_Krieg"
+      }
+    },
+    {
+      "id": "gesch-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr fand die Völkerschlacht bei Leipzig statt?",
+      "einheit": "",
+      "loesung": 1813,
+      "quelle": {
+        "titel": "Wikipedia – Völkerschlacht bei Leipzig",
+        "url": "https://de.wikipedia.org/wiki/V%C3%B6lkerschlacht_bei_Leipzig"
+      }
+    },
+    {
+      "id": "gesch-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde Berlin zum ersten Mal in einer Urkunde erwähnt?",
+      "einheit": "",
+      "loesung": 1237,
+      "quelle": {
+        "titel": "Wikipedia – Berlin",
+        "url": "https://de.wikipedia.org/wiki/Berlin"
       }
     }
   ]

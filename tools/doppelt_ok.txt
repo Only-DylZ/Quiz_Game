@@ -74,3 +74,4 @@ chem-131 chem-028
 phys-114 phys-020
 mathe-114 mathe-096
 mathe-114 mathe-s06
+gesch-s10 essen-s09
