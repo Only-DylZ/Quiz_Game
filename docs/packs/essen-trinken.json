@@ -1717,6 +1717,496 @@
         "titel": "Wikipedia – Garstufe",
         "url": "https://de.wikipedia.org/wiki/Garstufe"
       }
+    },
+    {
+      "id": "essen-105",
+      "modus": "auswahl",
+      "frage": "Woraus wird die Paste Tahini gemacht?",
+      "optionen": [
+        "Sesam",
+        "Kichererbsen",
+        "Erdnüssen",
+        "Sonnenblumenkernen"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Tahin",
+        "url": "https://de.wikipedia.org/wiki/Tahin"
+      }
+    },
+    {
+      "id": "essen-106",
+      "modus": "auswahl",
+      "frage": "Woraus bestehen italienische Gnocchi hauptsächlich?",
+      "optionen": [
+        "Reis",
+        "Kartoffeln",
+        "Grieß",
+        "Quark"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Gnocchi",
+        "url": "https://de.wikipedia.org/wiki/Gnocchi"
+      }
+    },
+    {
+      "id": "essen-107",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land stammt Bourbon-Whiskey?",
+      "optionen": [
+        "Schottland",
+        "Irland",
+        "USA",
+        "Kanada"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Bourbon Whiskey",
+        "url": "https://de.wikipedia.org/wiki/Bourbon_Whiskey"
+      }
+    },
+    {
+      "id": "essen-108",
+      "modus": "auswahl",
+      "frage": "Was bedeutet es, wenn Nudeln „al dente“ gekocht sind?",
+      "optionen": [
+        "Sehr weich",
+        "Mit Soße serviert",
+        "Scharf gewürzt",
+        "Bissfest"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Al dente",
+        "url": "https://de.wikipedia.org/wiki/Al_dente"
+      }
+    },
+    {
+      "id": "essen-109",
+      "modus": "auswahl",
+      "frage": "Welches Gewürz ist die getrocknete Blütenknospe eines Baumes?",
+      "optionen": [
+        "Gewürznelke",
+        "Kardamom",
+        "Muskatnuss",
+        "Pfeffer"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Gewürznelke",
+        "url": "https://de.wikipedia.org/wiki/Gew%C3%BCrznelke"
+      }
+    },
+    {
+      "id": "essen-110",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land stammt der Schafskäse Manchego?",
+      "optionen": [
+        "Italien",
+        "Spanien",
+        "Portugal",
+        "Frankreich"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Manchego",
+        "url": "https://de.wikipedia.org/wiki/Manchego"
+      }
+    },
+    {
+      "id": "essen-111",
+      "modus": "auswahl",
+      "frage": "Was ist Prosecco?",
+      "optionen": [
+        "Ein Kräuterlikör",
+        "Ein Rotwein",
+        "Ein Schaumwein aus Italien",
+        "Ein Obstbrand"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Prosecco",
+        "url": "https://de.wikipedia.org/wiki/Prosecco"
+      }
+    },
+    {
+      "id": "essen-112",
+      "modus": "auswahl",
+      "frage": "Aus welchem Obst wird der französische Brand Calvados gemacht?",
+      "optionen": [
+        "Birnen",
+        "Pflaumen",
+        "Kirschen",
+        "Äpfeln"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Calvados",
+        "url": "https://de.wikipedia.org/wiki/Calvados"
+      }
+    },
+    {
+      "id": "essen-113",
+      "modus": "auswahl",
+      "frage": "Welcher Fisch wird zu Matjes verarbeitet?",
+      "optionen": [
+        "Hering",
+        "Makrele",
+        "Sardine",
+        "Lachs"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Matjes",
+        "url": "https://de.wikipedia.org/wiki/Matjes"
+      }
+    },
+    {
+      "id": "essen-114",
+      "modus": "auswahl",
+      "frage": "Welchen Teil der Ingwerpflanze benutzt man als Gewürz?",
+      "optionen": [
+        "Die Blätter",
+        "Den Wurzelstock",
+        "Die Samen",
+        "Die Blüten"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Ingwer",
+        "url": "https://de.wikipedia.org/wiki/Ingwer"
+      }
+    },
+    {
+      "id": "essen-115",
+      "modus": "auswahl",
+      "frage": "Welche Nuss steckt im Brotaufstrich Nutella?",
+      "optionen": [
+        "Walnuss",
+        "Mandel",
+        "Haselnuss",
+        "Cashew"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Nutella",
+        "url": "https://de.wikipedia.org/wiki/Nutella"
+      }
+    },
+    {
+      "id": "essen-116",
+      "modus": "auswahl",
+      "frage": "Welche Spirituose wird mit Wacholderbeeren aromatisiert?",
+      "optionen": [
+        "Rum",
+        "Wodka",
+        "Tequila",
+        "Gin"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Gin",
+        "url": "https://de.wikipedia.org/wiki/Gin"
+      }
+    },
+    {
+      "id": "essen-117",
+      "modus": "schaetzen",
+      "frage": "Wie viel Gramm Zucker stecken in 100 Gramm Nutella?",
+      "einheit": "g",
+      "loesung": 56.3,
+      "quelle": {
+        "titel": "Wikipedia – Nutella",
+        "url": "https://de.wikipedia.org/wiki/Nutella"
+      }
+    },
+    {
+      "id": "essen-118",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Alkohol hat Jägermeister?",
+      "einheit": "%",
+      "loesung": 35,
+      "quelle": {
+        "titel": "Wikipedia – Jägermeister",
+        "url": "https://de.wikipedia.org/wiki/J%C3%A4germeister"
+      }
+    },
+    {
+      "id": "essen-119",
+      "modus": "schaetzen",
+      "frage": "Wie viele Liter fasst ein klassisches Bordeaux-Barrique, das Eichenfass für Wein?",
+      "einheit": "Liter",
+      "loesung": 225,
+      "quelle": {
+        "titel": "Wikipedia – Barrique",
+        "url": "https://de.wikipedia.org/wiki/Barrique"
+      }
+    },
+    {
+      "id": "essen-120",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Fett in der Trockenmasse muss Käse der „Doppelrahmstufe“ mindestens haben?",
+      "einheit": "%",
+      "loesung": 60,
+      "quelle": {
+        "titel": "Wikipedia – Fett in der Trockenmasse",
+        "url": "https://de.wikipedia.org/wiki/Fett_in_der_Trockenmasse"
+      }
+    },
+    {
+      "id": "essen-121",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Fett hat fettarme Milch in Deutschland mindestens?",
+      "einheit": "%",
+      "loesung": 1.5,
+      "quelle": {
+        "titel": "Wikipedia – Milch",
+        "url": "https://de.wikipedia.org/wiki/Milch"
+      }
+    },
+    {
+      "id": "essen-122",
+      "modus": "schaetzen",
+      "frage": "Wie viele Portionen Obst und Gemüse am Tag empfiehlt die Kampagne der Deutschen Gesellschaft für Ernährung?",
+      "einheit": "Portionen",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – 5 am Tag",
+        "url": "https://de.wikipedia.org/wiki/5_am_Tag"
+      }
+    },
+    {
+      "id": "essen-123",
+      "modus": "schaetzen",
+      "frage": "Auf wie viel Grad Celsius wird Milch beim Pasteurisieren (Kurzzeiterhitzung) mindestens erhitzt?",
+      "einheit": "°C",
+      "loesung": 72,
+      "erklaerung": "Für 15 bis 30 Sekunden auf 72 bis 75 °C.",
+      "quelle": {
+        "titel": "Wikipedia – Pasteurisierung",
+        "url": "https://de.wikipedia.org/wiki/Pasteurisierung"
+      }
+    },
+    {
+      "id": "essen-124",
+      "modus": "schaetzen",
+      "frage": "Wie viel Prozent Alkohol muss Glühwein in Deutschland mindestens haben?",
+      "einheit": "%",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Glühwein",
+        "url": "https://de.wikipedia.org/wiki/Gl%C3%BChwein"
+      }
+    },
+    {
+      "id": "essen-125",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zentimeter lang muss eine echte Thüringer Rostbratwurst mindestens sein?",
+      "einheit": "cm",
+      "loesung": 15,
+      "quelle": {
+        "titel": "Wikipedia – Thüringer Rostbratwurst",
+        "url": "https://de.wikipedia.org/wiki/Th%C3%BCringer_Rostbratwurst"
+      }
+    },
+    {
+      "id": "essen-126",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie viele Liter Wasser stecken im Mittel in einem Kilogramm Hühnerfleisch (virtuelles Wasser)?",
+      "daten": {
+        "einheit": "Liter",
+        "balken": [
+          {
+            "name": "Kartoffeln",
+            "wert": 133
+          },
+          {
+            "name": "Weizen",
+            "wert": 1437
+          },
+          {
+            "name": "Reis",
+            "wert": 2552
+          },
+          {
+            "name": "Hühnerfleisch",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 3809,
+      "quelle": {
+        "titel": "Wikipedia – Virtuelles Wasser",
+        "url": "https://de.wikipedia.org/wiki/Virtuelles_Wasser"
+      }
+    },
+    {
+      "id": "essen-127",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde Coca-Cola zum ersten Mal in Deutschland abgefüllt?",
+      "daten": {
+        "von": 1880,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1929,
+      "quelle": {
+        "titel": "Wikipedia – Coca-Cola",
+        "url": "https://de.wikipedia.org/wiki/Coca-Cola"
+      }
+    },
+    {
+      "id": "essen-128",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde in München die herzogliche Brauerei Hofbräuhaus gegründet?",
+      "daten": {
+        "von": 1450,
+        "bis": 1750,
+        "ereignisse": [
+          {
+            "name": "Erster Druck der Gutenberg-Bibel",
+            "jahr": 1454
+          },
+          {
+            "name": "Ende des Dreißigjährigen Kriegs",
+            "jahr": 1648
+          }
+        ]
+      },
+      "loesung": 1589,
+      "quelle": {
+        "titel": "Wikipedia – Hofbräuhaus am Platzl",
+        "url": "https://de.wikipedia.org/wiki/Hofbr%C3%A4uhaus_am_Platzl"
+      }
+    },
+    {
+      "id": "essen-129",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Kobe, die Namensgeberin eines berühmten Rindfleischs?",
+      "daten": {
+        "mitte": [
+          35,
+          122
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 34.69,
+        "lng": 135.2
+      },
+      "quelle": {
+        "titel": "Wikipedia – Kōbe",
+        "url": "https://de.wikipedia.org/wiki/K%C5%8Dbe"
+      }
+    },
+    {
+      "id": "essen-130",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Darjeeling, berühmt für seinen Tee?",
+      "daten": {
+        "mitte": [
+          22,
+          80
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 27.04,
+        "lng": 88.26
+      },
+      "quelle": {
+        "titel": "Wikipedia – Darjeeling",
+        "url": "https://de.wikipedia.org/wiki/Darjeeling"
+      }
+    },
+    {
+      "id": "essen-131",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt Lübeck, berühmt für sein Marzipan?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 53.87,
+        "lng": 10.69
+      },
+      "quelle": {
+        "titel": "Wikipedia – Lübecker Marzipan",
+        "url": "https://de.wikipedia.org/wiki/L%C3%BCbecker_Marzipan"
+      }
+    },
+    {
+      "id": "essen-132",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Schritte beim Bierbrauen!",
+      "loesung": [
+        "Mälzen",
+        "Maischen",
+        "Würzekochen",
+        "Gären"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Bierherstellung",
+        "url": "https://de.wikipedia.org/wiki/Bierherstellung"
+      }
+    },
+    {
+      "id": "essen-133",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Teile eines festlichen Menüs in der Reihenfolge, in der sie serviert werden!",
+      "loesung": [
+        "Aperitif",
+        "Vorspeise",
+        "Hauptgang",
+        "Dessert",
+        "Digestif"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Menü (Speisenfolge)",
+        "url": "https://de.wikipedia.org/wiki/Men%C3%BC_(Speisenfolge)"
+      }
+    },
+    {
+      "id": "essen-134",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Getränke nach ihrem Koffeingehalt pro 100 ml!",
+      "loesung": [
+        "Espresso",
+        "Filterkaffee",
+        "Energydrink",
+        "Cola",
+        "Kräutertee"
+      ],
+      "oben": "am meisten Koffein",
+      "unten": "am wenigsten Koffein",
+      "quelle": {
+        "titel": "Wikipedia – Koffein",
+        "url": "https://de.wikipedia.org/wiki/Koffein"
+      }
     }
   ],
   "stechfragen": [
@@ -1808,6 +2298,28 @@
       "quelle": {
         "titel": "Wikipedia – Alfred Ritter (Unternehmen)",
         "url": "https://de.wikipedia.org/wiki/Alfred_Ritter_(Unternehmen)"
+      }
+    },
+    {
+      "id": "essen-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde die Thüringer Rostbratwurst zum ersten Mal in einer Urkunde erwähnt?",
+      "einheit": "",
+      "loesung": 1404,
+      "quelle": {
+        "titel": "Wikipedia – Thüringer Rostbratwurst",
+        "url": "https://de.wikipedia.org/wiki/Th%C3%BCringer_Rostbratwurst"
+      }
+    },
+    {
+      "id": "essen-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr gründete Will Keith Kellogg die Firma, die später Kellogg's hieß?",
+      "einheit": "",
+      "loesung": 1906,
+      "quelle": {
+        "titel": "Wikipedia – Kellogg Company",
+        "url": "https://de.wikipedia.org/wiki/Kellogg_Company"
       }
     }
   ]
