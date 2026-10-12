@@ -9,15 +9,28 @@ So geht's:
    Für jeden weiteren Block den Abschnitt „Weiterer Block“ unten benutzen.
 3. Die Antwort als `docs/packs/<thema>.json` speichern (Dateiname klein, ohne
    Umlaute und Leerzeichen, z. B. `antikes-rom.json`).
-4. Prüfen (im Projektordner):
-   `python tools/validate.py docs/packs/<thema>.json --links`
-   Fehler korrigieren – oder die Fehlermeldung an die KI zurückgeben
-   („Korrigiere bitte: …“). `--links` ruft alle Quellen-Links auf und findet
-   erfundene Links.
-5. Das Paket in `docs/packs/index.json` eintragen:
+4. Das Paket in `docs/packs/index.json` eintragen:
    `{ "datei": "<thema>.json", "thema": "<Thema>" }`
+5. Prüfen (im Projektordner) – **ein Befehl für alles**:
+   `python tools/block_pruefen.py docs/packs/<thema>.json`
+   Er prüft nur die **neuen** (noch nicht committeten) Fragen: Format, Links
+   (findet erfundene Links), ähnliche Fragen in allen Paketen (`doppelt.py`),
+   Lecks (`lecks.py`) und zum Schluss `node tools/pruefen.mjs`.
+   Fehler korrigieren – oder die Fehlermeldung an die KI zurückgeben
+   („Korrigiere bitte: …“). Treffer von `doppelt.py`/`lecks.py` von Hand
+   bewerten; echte Probleme ändern, harmlose Treffer mit
+   `python tools/doppelt.py --neu --merken` bzw. `python tools/lecks.py --neu --merken`
+   speichern (erscheinen dann nie wieder). Achtung: `--merken` speichert *alles*,
+   was gerade angezeigt würde – nach jeder Änderung an Fragen erst ohne
+   `--merken` neu prüfen. `lecks.py --kontext` zeigt, wo genau ein Treffer steht.
 6. Fakten stichprobenartig selbst nachprüfen – auch KI-Antworten können falsch sein.
-7. Zum Schluss `node tools/pruefen.mjs` – muss „Alles in Ordnung“ melden.
+7. **Nach jedem fertigen Block committen** – sonst gelten die Fragen beim
+   nächsten Block weiter als „neu“ und werden noch einmal geprüft.
+
+**Sparsam arbeiten (für Claude):** Nicht die ganzen Pakete lesen. Überblick über
+ein Paket (Unterthemen, nächste freie ids):
+`python tools/fragenliste.py docs/packs/<thema>.json` – eine Zeile pro Frage.
+Doppelte Fragen über alle Pakete findet `doppelt.py`, nicht das Durchlesen.
 
 --- PROMPT ---
 
@@ -169,6 +182,45 @@ und `stechfragen`.
 - **Keine** dieser vorhandenen Fragen wiederholen oder leicht umformulieren:
   [HIER DIE LISTE DER VORHANDENEN FRAGETEXTE EINFÜGEN]
 
+Die Liste für den Platzhalter (und die nächsten freien ids) liefert
+`python tools/fragenliste.py docs/packs/<thema>.json --kurz` bzw. ohne `--kurz`.
+
 Danach die neuen Fragen an die Listen `fragen` und `stechfragen` im Paket
-anhängen und erneut mit `validate.py --links` prüfen (er findet auch doppelte
-Fragen und ids).
+anhängen und mit `python tools/block_pruefen.py docs/packs/<thema>.json` prüfen
+(findet auch doppelte ids und ähnliche Fragen in anderen Paketen).
+
+--- SONDERPAKET „DIE 500-€-FRAGE“ (jauch.json, Kürzel wwm) ---
+
+Dieses Paket ist anders als die übrigen: **nur Modus `auswahl`** mit genau 4 Optionen,
+im Stil der leichten Stufen einer bekannten Quizshow (500-Euro-Frage). Die Runde füllt
+die fehlenden Modi automatisch mit Auswahlfragen auf; die Hinweise von `validate.py`
+zu fehlenden Modi sind hier also in Ordnung. Stechfragen bleiben `schaetzen`.
+
+Erstelle **30 weitere** Fragen im Modus `auswahl` und **2 Stechfragen** (Modus
+`schaetzen`) im Stil der 500-Euro-Frage einer Quizshow. **Jede Frage braucht einen
+kleinen Denkschritt** (in 20–30 Sekunden lösbar, kein Spezialwissen). Gemischt aus:
+- **Denkfalle:** Die naheliegende Antwort ist falsch, man muss nachrechnen
+  („Schläger und Ball kosten zusammen 1,10 € …“).
+- **Gemeinsames Wort:** Welches Wort passt vor/hinter alle drei („…ball, …weg,
+  …note“)? Jede falsche Option passt zu mindestens einem der drei, aber nicht zu allen.
+- **Verwechslungsgefahr:** Bedeutung einer Redewendung, eine falsche Option ist die
+  einer ähnlichen Redewendung („Katze im Sack kaufen“ ↔ „Katze aus dem Sack lassen“).
+- **Genau lesen:** Die Frage enthält einen Fehler oder Haken („Wie viele Tiere nahm
+  Mose mit auf die Arche?“ – es war Noah).
+- **Kleine Logik:** Reihenfolgen, Verwandtschaft, Tage, Zählen.
+
+Verboten:
+- Reiner Lückentext zu Redewendungen („Da steppt der …?“) – das ist nur Auswendigwissen.
+- Scherzfragen, die fast jeder schon kennt (Kilo Federn/Eisen, Handtuch trocknet,
+  „Welcher Monat hat 28 Tage?“).
+
+Weitere Regeln:
+- Genau 4 Optionen; die falschen sollen verlockend oder lustig sein, aber eindeutig falsch.
+- Pro Frage höchstens ein bis zwei Sätze, Antworten kurz (max. ca. 40 Zeichen).
+- **Immer eine `erklaerung`**, die den Denkschritt auflöst (Rechenweg, Haken).
+- Quelle konkret: bei Redewendungen und Wörtern der Wiktionary-Eintrag, bei
+  Rechen-/Logikrätseln ein passender Wikipedia-Artikel (z. B. „Cognitive Reflection
+  Test“, „Moses-Illusion“, „Denksportaufgabe“); der Lösungsweg steht in der Erklärung.
+- ids fortlaufend ab `wwm-[NÄCHSTE NUMMER]` bzw. `wwm-s[NÄCHSTE NUMMER]`.
+- **Keine** dieser vorhandenen Fragen wiederholen oder leicht umformulieren:
+  [HIER DIE LISTE DER VORHANDENEN FRAGETEXTE EINFÜGEN]

@@ -1,0 +1,29 @@
+# Von Hand als „kein Duplikat“ bewertete Paare von tools/doppelt.py – werden nicht mehr gezeigt.
+# Eine Zeile pro Paar: <id> <id>  # optional: Grund
+# Eintragen mit: python tools/doppelt.py --neu --merken (erst bewerten!)
+bio-078 bio-050
+bio-086 bio-052
+chem-081 chem-017
+chem-081 chem-051
+dd-089 dd-029
+essen-077 essen-078
+essen-077 essen-022
+essen-078 essen-022
+film-090 film-019
+mathe-074 mathe-081
+mathe-075 mathe-023
+mathe-081 mathe-083
+mathe-083 mathe-s03
+mathe-083 mathe-s01
+mathe-083 mathe-s06
+rf-63 rf-35
+rf-64 rf-30
+rf-71 rf-11
+rf-71 rf-40
+sport-076 sport-048
+tier-080 tier-002
+tier-086 bio-014
+tier-092 tier-062
+game-073 game-049
+game-073 game-046
+game-076 game-052

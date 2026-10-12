@@ -170,10 +170,11 @@ Quiz_Game/
 │  │  └─ punkte.js         Alle Punkteregeln an einer Stelle.
 │  ├─ packs/
 │  │  ├─ index.json        Liste aller verfügbaren Themenpakete.
-│  │  └─ <thema>.json      Ein Fragen-Pool pro Thema (raumfahrt, geographie, …).
+│  │  ├─ <thema>.json      Ein Fragen-Pool pro Thema (raumfahrt, geographie, …).
+│  │  └─ jauch.json        Sonderpaket „Die 500-€-Frage“: nur `auswahl` (Wortspiele, Logik).
 │  ├─ bilder/              Bilder zu Fragen, Name = id der Frage (z. B. geo-031.png).
 │  │  └─ szenen/           Pixel-Hintergründe 640×360: farm (Menü), joker (KI-Themen),
-│  │                       sonst Name = Paketdatei ohne .json (sport.png …).
+│  │                       sonst Name = Paketdatei ohne .json (sport.png, jauch.png …).
 │  ├─ schrift/             Schrift „Jersey 15“ (SIL OFL) – im Repo statt Google Fonts.
 │  ├─ avatare/             LPC-Figurenteile (erzeugt von tools/avatar_teile.py), teile.json,
 │  │                       CREDITS.txt (Urheber – Pflicht laut CC-BY-SA/OGA-BY, nie löschen).
@@ -185,7 +186,13 @@ Quiz_Game/
 │  ├─ prompt.md            Prompt-Vorlage, um mit NotebookLM/Claude neue Pakete zu erzeugen.
 │  ├─ validate.py          Prüft Fragenpakete (auch index.json); --links ruft Quellen-Links auf.
 │  ├─ bild_holen.py        Holt freie Bilder von Wikimedia Commons (mit Urheber + Lizenz).
-│  ├─ lecks.py            Sucht über alle Pakete, ob eine Frage die Antwort einer anderen zeigt.
+│  ├─ block_pruefen.py     Prüft einen neuen Fragen-Block mit einem Befehl (alle Schritte unten).
+│  ├─ lecks.py             Sucht über alle Pakete, ob eine Frage die Antwort einer anderen zeigt.
+│  ├─ lecks_ok.txt         Als harmlos bewertete Lecks-Treffer (werden nicht mehr gezeigt).
+│  ├─ doppelt.py           Sucht ähnliche Fragen über alle Pakete (Text, Lösung, Kartenort).
+│  ├─ doppelt_ok.txt       Als „kein Duplikat“ bewertete Paare.
+│  ├─ fragenliste.py       Eine Zeile pro Frage eines Pakets + nächste freie ids.
+│  ├─ neue_ids.py          Gemeinsame Hilfe: welche Fragen sind neu (noch nicht committet)?
 │  ├─ pixel_bild.py        KI-Bild → Pixel-Hintergrund 640×360 mit begrenzter Palette (Pillow).
 │  ├─ bild_prompts.md      Prompts für die Hintergrundbilder (Gemini-App / Adobe Firefly).
 │  ├─ avatar_teile.py      Holt Avatar-Teile aus dem LPC-Generator (nur freie Lizenzen) → docs/avatare/.
@@ -287,6 +294,11 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
   hinweg (Themen wechseln im selben Spiel) und auch für den **Quellentitel**
   (eine Quelle „Scoville-Skala“ verrät die Frage nach der Schärfe-Skala).
   Prüfhilfe: `python tools/lecks.py` (Treffer von Hand bewerten).
+- **Prüfen eines neuen Blocks:** `python tools/block_pruefen.py docs/packs/<datei>`
+  prüft nur noch nicht committete Fragen (Format, Links, `doppelt.py`, `lecks.py`,
+  `pruefen.mjs`). Harmlose Treffer mit `--merken` speichern, nach jedem Block
+  committen. **Nicht** alle Pakete durchlesen, um Duplikate zu finden – dafür ist
+  `doppelt.py` da; Überblick über ein Paket mit `tools/fragenliste.py`.
 - **Keine doppelten Fragen** – auch nicht in einem anderen Paket (z. B.
   Lichtgeschwindigkeit nur in Physik, nicht zusätzlich in Raumfahrt).
 - **Kartenfragen:** Die Startansicht (`mitte`, `zoom`) darf nicht schon auf
@@ -297,6 +309,10 @@ Jedes Paket ist eine JSON-Datei in `docs/packs/` (UTF-8). Beispiel: `raumfahrt.j
   Geschwindigkeiten mit verschiedenen Messungen) lieber eine andere Frage nehmen.
 - Die richtige Antwort bei `auswahl` gleichmäßig auf die Plätze verteilen
   (`validate.py` gibt sonst einen Hinweis).
+- **Ausnahme `jauch.json` („Die 500-€-Frage“):** nur Modus `auswahl` mit 4 Optionen
+  (Wortspiele, Redewendungen, Scherz- und Logikfragen wie auf der 500-€-Stufe einer
+  Quizshow). `runde.js` füllt die fehlenden Modi mit Auswahlfragen auf; die Hinweise
+  von `validate.py` zu fehlenden Modi sind dort gewollt. Vorlage: `tools/prompt.md`.
 
 Kurzes Beispiel:
 
@@ -527,8 +543,8 @@ Kennung und startet mit 0 Punkten (der alte Eintrag bleibt in der Rangliste).
 **Aktueller Stand:** Phase 1 ist fertig und online (siehe „Online-Stellen“ unten).
 Phase 2 (2a Balken + Zeitleiste, 2b Karte) ist fertig. Phase 3 ist fertig:
 `validate.py`, `prompt.md`, Fragen-Pools mit Zufallsauswahl + Gedächtnis,
-Bildfragen, Modus `reihenfolge` und 13 Themenpakete à ca. 30 Fragen (Pools
-wachsen später Richtung 150). Phase 4a ist fertig: Themenrunden, GP-Ziel
+Bildfragen, Modus `reihenfolge` und 13 Themenpakete à 72–97 Fragen (Pools
+wachsen Richtung 150), dazu das Sonderpaket „Die 500-€-Frage“ (`jauch.json`, im Aufbau). Phase 4a ist fertig: Themenrunden, GP-Ziel
 (Einstellung in der Lobby), Stechfrage, Siegertreppchen nach GP. Phase 4b:
 Kandidatenwahl auf dem Handy + Glücksrad (`engine/rad.js`); `host.html?paket=<name>`
 spielt zum Testen in Runde 1 direkt dieses Thema. Phase 4c: Booster-Joker

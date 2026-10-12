@@ -8,6 +8,9 @@ Benutzung (im Projektordner):
     python tools/validate.py                         alle Pakete in docs/packs/ prüfen
     python tools/validate.py docs/packs/kunst.json   nur dieses Paket prüfen
     python tools/validate.py --links                 zusätzlich alle Quellen-Links aufrufen
+    python tools/validate.py docs/packs/kunst.json --neu
+                                                     Links nur der neuen (noch nicht
+                                                     committeten) Fragen aufrufen
 
 Ergebnis:
     FEHLER  – das Paket ist so nicht spielbar und muss korrigiert werden.
@@ -23,7 +26,10 @@ import re
 import sys
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+
+from neue_ids import neue_ids
 
 # Ordner mit den Paketen (relativ zu dieser Datei, damit es von überall klappt)
 PAKET_ORDNER = Path(__file__).resolve().parent.parent / "docs" / "packs"
@@ -410,27 +416,46 @@ def pruefe_grafik(frage, ort, bericht):
 # Links prüfen (nur mit --links)
 # ---------------------------------------------------------------------------
 
-def pruefe_links(paket, bericht):
-    """Ruft jeden Quellen-Link auf. Findet erfundene oder kaputte Links."""
+def link_problem(url):
+    """Ruft einen Link auf. Gibt None zurück, wenn er geht, sonst den Grund."""
+    # Sonderzeichen (z. B. "í" in Reykjavík) für die Anfrage umwandeln
+    sichere_url = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%")
+    anfrage = urllib.request.Request(sichere_url, headers={"User-Agent": "Quiz-Abend-Paketpruefer/1.0"})
+    try:
+        with urllib.request.urlopen(anfrage, timeout=10) as antwort:
+            if antwort.status >= 400:
+                return f"Link antwortet mit Status {antwort.status}: {url}"
+    except Exception as fehler:  # noqa: BLE001 – jede Art von Fehler nur melden
+        return f"Link nicht erreichbar ({fehler}): {url}"
+    return None
+
+
+def pruefe_links(paket, bericht, nur_ids=None):
+    """Ruft jeden Quellen-Link auf. Findet erfundene oder kaputte Links.
+    nur_ids: nur Links dieser Fragen prüfen (z. B. der neuen, mit --neu).
+    Mehrere Links gleichzeitig, jeder Link nur einmal – das geht viel schneller."""
     fragen = paket.get("fragen") if isinstance(paket.get("fragen"), list) else []
     stechfragen = paket.get("stechfragen") if isinstance(paket.get("stechfragen"), list) else []
     alle = [(f"Frage {n}{id_text(f)}", f) for n, f in enumerate(fragen, start=1)]
     alle += [(f"Stechfrage {n}{id_text(f)}", f) for n, f in enumerate(stechfragen, start=1)]
 
+    zu_pruefen = []  # (ort, url)
     for ort, frage in alle:
-        quelle = frage.get("quelle") if isinstance(frage, dict) else None
-        url = quelle.get("url") if isinstance(quelle, dict) else None
-        if not (isinstance(url, str) and url.startswith("https://")):
+        if not isinstance(frage, dict):
             continue
-        # Sonderzeichen (z. B. "í" in Reykjavík) für die Anfrage umwandeln
-        sichere_url = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%")
-        anfrage = urllib.request.Request(sichere_url, headers={"User-Agent": "Quiz-Abend-Paketpruefer/1.0"})
-        try:
-            with urllib.request.urlopen(anfrage, timeout=10) as antwort:
-                if antwort.status >= 400:
-                    bericht.hinweis_bei(ort, f"Link antwortet mit Status {antwort.status}: {url}")
-        except Exception as fehler:  # noqa: BLE001 – jede Art von Fehler nur melden
-            bericht.hinweis_bei(ort, f"Link nicht erreichbar ({fehler}): {url}")
+        if nur_ids is not None and frage.get("id") not in nur_ids:
+            continue
+        quelle = frage.get("quelle")
+        url = quelle.get("url") if isinstance(quelle, dict) else None
+        if isinstance(url, str) and url.startswith("https://"):
+            zu_pruefen.append((ort, url))
+
+    urls = sorted({url for _, url in zu_pruefen})
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        ergebnis = dict(zip(urls, pool.map(link_problem, urls)))
+    for ort, url in zu_pruefen:
+        if ergebnis[url]:
+            bericht.hinweis_bei(ort, ergebnis[url])
 
 
 # ---------------------------------------------------------------------------
@@ -472,7 +497,7 @@ def pruefe_index(bericht):
 # Hauptprogramm
 # ---------------------------------------------------------------------------
 
-def pruefe_datei(pfad, links):
+def pruefe_datei(pfad, links, nur_neue_links=False):
     """Prüft eine Paketdatei und gibt den Bericht zurück."""
     bericht = Bericht()
     try:
@@ -486,7 +511,8 @@ def pruefe_datei(pfad, links):
 
     pruefe_paket(paket, bericht)
     if links and isinstance(paket, dict):
-        pruefe_links(paket, bericht)
+        nur_ids = neue_ids([Path(pfad)]) if nur_neue_links else None
+        pruefe_links(paket, bericht, nur_ids)
     return bericht
 
 
@@ -508,8 +534,9 @@ def main():
         sys.stdout.reconfigure(encoding="utf-8")
 
     argumente = sys.argv[1:]
-    links = "--links" in argumente
-    dateien = [a for a in argumente if a != "--links"]
+    nur_neue_links = "--neu" in argumente
+    links = "--links" in argumente or nur_neue_links
+    dateien = [a for a in argumente if not a.startswith("--")]
 
     alle_pakete = not dateien
     if alle_pakete:
@@ -517,7 +544,7 @@ def main():
 
     fehler_gesamt = 0
     for datei in dateien:
-        bericht = pruefe_datei(datei, links)
+        bericht = pruefe_datei(datei, links, nur_neue_links)
         ausgeben(Path(datei).name, bericht)
         fehler_gesamt += len(bericht.fehler)
 

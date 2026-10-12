@@ -13,7 +13,8 @@
 - **Alle 5 Bauphasen sind fertig, getestet und online** (https://only-dylz.github.io/Quiz_Game/):
   Grundspiel, Grafik/Karte, Werkzeuge + 13 Themen, Themenrunden mit GP/Stechfrage/
   Glücksrad/Booster, Themenjoker mit Gemini (Supabase Edge Function).
-- **Fragen-Pools:** 13 Themen mit 42–67 Fragen und je 5 Stechfragen (Ziel 150).
+- **Fragen-Pools:** 13 Themen mit 72–97 Fragen und je 7 Stechfragen (Ziel 150).
+  Am 12.10.2026 um je 30 Fragen + 2 Stechfragen erweitert (noch nicht committet).
 - **Optik-Umbau im Pixel-Stil** ist committet und online (11.10.2026), im ganzen Spiel
   aber noch nicht getestet.
 - **Avatare** (LPC-Figuren, Farmleben, Sprüche, Credits-Seite) sind im Spiel und online (12.10.2026).
@@ -51,19 +52,47 @@ Jahrmarkt-Rad, Tafel links/Rad rechts, Handy schmale Spalte. Probe-Dateien (`pro
 
 | Thema | Fragen | | Thema | Fragen |
 |---|---|---|---|---|
-| Raumfahrt | 42 | | Mathe | 60 |
-| Geographie | 67 | | Zurück in die Vergangenheit | 64 |
-| Tierwelt | 64 | | Das ist Deutsch | 66 |
-| Essen & Trinken | 64 | | Filme & Serien | 60 |
-| Biologie | 60 | | Videospiele | 60 |
-| Chemie | 62 | | Sport | 63 |
-| Physik | 60 | | | |
+| Raumfahrt | 72 | | Mathe | 89 |
+| Geographie | 97 | | Zurück in die Vergangenheit | 94 |
+| Tierwelt | 94 | | Das ist Deutsch | 95 |
+| Essen & Trinken | 93 | | Filme & Serien | 90 |
+| Biologie | 90 | | Videospiele | 90 |
+| Chemie | 92 | | Sport | 93 |
+| Physik | 90 | | | |
 
-Alle mit 5 Stechfragen. Weitere Blöcke à 30 (Ziel 150): `tools/prompt.md`
-(„Weiterer Block“), dann `python tools/validate.py docs/packs/<datei> --links`
-und `python tools/lecks.py <id-präfix>` (Lecks auch über Paketgrenzen und in
-Quellentiteln – Treffer von Hand bewerten, viele sind harmlos). Unsichere Zahlen
-immer per WebFetch gegen die Quelle prüfen. Keine doppelten Fragen über Pakete hinweg.
+Alle mit 7 Stechfragen (Mathe 6).
+
+**Neu (12.10.2026, noch nicht committet): Thema „Die 500-€-Frage“** (`jauch.json`, Kürzel `wwm`,
+Hintergrund `bilder/szenen/jauch.png` aus `ki-bilder/Jauch.png`). Nutzer fand die ersten 10
+Fragen zu leicht (reine Sprichwort-Lückentexte, bekannte Scherzfragen) → neue Regeln in
+`tools/prompt.md` („Sonderpaket“): jede Frage braucht einen Denkschritt (Denkfalle, gemeinsames
+Wort, Verwechslungsgefahr bei Redewendungen, genau lesen, kleine Logik), immer mit `erklaerung`.
+Behalten: wwm-007, wwm-010, wwm-s01; neu wwm-011 … wwm-040 + wwm-s02/s03 (32 Fragen,
+3 Stechfragen, geprüft, noch nicht vom Nutzer getestet). Weiter in 30er-Blöcken. Sprüche: `THEMEN_SPRUECHE.jauch`. Weitere Blöcke à 30 (Ziel 150): `tools/prompt.md`
+(„Weiterer Block“).
+
+**Sparsame Prüf-Pipeline (neu 12.10.2026, noch nicht committet):**
+- Überblick statt ganze Pakete lesen: `python tools/fragenliste.py docs/packs/<datei>`.
+- Prüfen: `python tools/block_pruefen.py docs/packs/<datei>` (nur neue = nicht
+  committete Fragen; Format, Links parallel, `doppelt.py`, `lecks.py`, `pruefen.mjs`).
+- Harmlose Treffer: `doppelt.py --neu --merken` / `lecks.py --neu --merken` →
+  `tools/doppelt_ok.txt` / `tools/lecks_ok.txt`. Nach jedem Block committen.
+- Unsichere Zahlen weiter per WebFetch gegen die Quelle prüfen.
+- `--merken` speichert alles, was gerade angezeigt würde – nach Änderungen erst ohne
+  `--merken` neu prüfen. `lecks.py --kontext` zeigt die Fundstelle.
+- **Erweiterung vom 12.10. ist geprüft** (`--neu`: 0 offene Treffer). Behoben:
+  Zeitleisten-Hilfsereignisse, die Antworten verrieten (Retortenbaby 1978 in bio-027/
+  tier-026 → Mondlandung 1969; Haribo 1920 in essen-026 → Erste Fußball-WM 1930;
+  WoW 2004 in game-024 → Erstes iPhone 2007), Mars-Balken aus rf-35 entfernt (verriet
+  rf-63), Erklärungen gekürzt (bio-037, essen-006), bio-068/gesch-082/rf-s1 umformuliert
+  (gesch-082 Quelle jetzt „Nordatlantikvertrag“, 12 Staaten per WebFetch geprüft).
+  Herausgenommen: dd-090 (Euro 2002 steht in 9 Zeitleisten), essen-071 (Capsaicin =
+  Quelle von essen-028), mathe-078 (verriet Stechfrage mathe-s04), mathe-s07 (Muster
+  aus mathe-051). Grenzfall stehen gelassen: „Ende des Ersten Weltkriegs 1918“ als
+  Hilfsereignis ↔ Stechfrage gesch-s07 Frauenwahlrecht 1918.
+- **Offen – Altlasten der schon committeten Fragen:** `lecks.py` (ohne `--neu`) noch
+  39 starke + 242 „ohne Stichwort“, `doppelt.py` (ohne `--neu`) 23 Kandidaten.
+  Einmal bewerten (mit `--kontext`), echte Probleme beheben, Rest mit `--merken`.
 
 ---
 
