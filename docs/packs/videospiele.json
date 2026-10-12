@@ -1638,6 +1638,488 @@
         "titel": "Wikipedia – Xbox",
         "url": "https://de.wikipedia.org/wiki/Xbox"
       }
+    },
+    {
+      "id": "game-101",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Physiker mit Brecheisen, der Held der „Half-Life“-Reihe?",
+      "optionen": [
+        "Master Chief",
+        "Marcus Fenix",
+        "Duke Nukem",
+        "Gordon Freeman"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Half-Life",
+        "url": "https://de.wikipedia.org/wiki/Half-Life"
+      }
+    },
+    {
+      "id": "game-102",
+      "modus": "auswahl",
+      "frage": "In welchem Spiel baut man einen Freizeitpark mit eigenen Achterbahnen?",
+      "optionen": [
+        "SimCity",
+        "RollerCoaster Tycoon",
+        "Planet Zoo",
+        "Theme Hospital"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – RollerCoaster Tycoon",
+        "url": "https://de.wikipedia.org/wiki/RollerCoaster_Tycoon"
+      }
+    },
+    {
+      "id": "game-103",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Spielwährung in „Die Sims“?",
+      "optionen": [
+        "Rubine",
+        "Gil",
+        "Simoleons",
+        "V-Bucks"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Die Sims (Computerspiel)",
+        "url": "https://de.wikipedia.org/wiki/Die_Sims_(Computerspiel)"
+      }
+    },
+    {
+      "id": "game-104",
+      "modus": "auswahl",
+      "frage": "Auf welcher Spieleplattform bezahlt man mit „Robux“?",
+      "optionen": [
+        "Clash of Clans",
+        "Roblox",
+        "Minecraft",
+        "Brawl Stars"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Roblox",
+        "url": "https://de.wikipedia.org/wiki/Roblox"
+      }
+    },
+    {
+      "id": "game-105",
+      "modus": "auswahl",
+      "frage": "Wie heißt der weißhaarige Monsterjäger aus „The Witcher“?",
+      "optionen": [
+        "Geralt von Riva",
+        "Ezio Auditore",
+        "Nathan Drake",
+        "Aloy"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – The Witcher 3: Wild Hunt",
+        "url": "https://de.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt"
+      }
+    },
+    {
+      "id": "game-106",
+      "modus": "auswahl",
+      "frage": "In welchem Western-Spiel ist der Gesetzlose Arthur Morgan die Hauptfigur?",
+      "optionen": [
+        "Mafia",
+        "L.A. Noire",
+        "Max Payne",
+        "Red Dead Redemption 2"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Red Dead Redemption 2",
+        "url": "https://de.wikipedia.org/wiki/Red_Dead_Redemption_2"
+      }
+    },
+    {
+      "id": "game-107",
+      "modus": "auswahl",
+      "frage": "Welches Studio entwickelte „League of Legends“?",
+      "optionen": [
+        "Blizzard",
+        "Valve",
+        "Riot Games",
+        "Ubisoft"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – League of Legends",
+        "url": "https://de.wikipedia.org/wiki/League_of_Legends"
+      }
+    },
+    {
+      "id": "game-108",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Fee, die den Helden in „Ocarina of Time“ begleitet und „Hey, listen!“ ruft?",
+      "optionen": [
+        "Midna",
+        "Navi",
+        "Impa",
+        "Zelda"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – The Legend of Zelda: Ocarina of Time",
+        "url": "https://de.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time"
+      }
+    },
+    {
+      "id": "game-109",
+      "modus": "auswahl",
+      "frage": "Wer erfand die Pokémon-Spiele?",
+      "optionen": [
+        "Satoshi Tajiri",
+        "Masahiro Sakurai",
+        "Hideo Kojima",
+        "Yuji Naka"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Satoshi Tajiri",
+        "url": "https://de.wikipedia.org/wiki/Satoshi_Tajiri"
+      }
+    },
+    {
+      "id": "game-110",
+      "modus": "auswahl",
+      "frage": "In welchem Spiel ziehen Joel und Ellie durch ein von Pilz-Infizierten verwüstetes Amerika?",
+      "optionen": [
+        "Resident Evil",
+        "Dying Light",
+        "Days Gone",
+        "The Last of Us"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – The Last of Us",
+        "url": "https://de.wikipedia.org/wiki/The_Last_of_Us"
+      }
+    },
+    {
+      "id": "game-111",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Rennspiel-Reihe von Sony, die sich „The Real Driving Simulator“ nennt?",
+      "optionen": [
+        "Forza Motorsport",
+        "Need for Speed",
+        "Gran Turismo",
+        "Burnout"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Gran Turismo (Computerspielreihe)",
+        "url": "https://de.wikipedia.org/wiki/Gran_Turismo_(Computerspielreihe)"
+      }
+    },
+    {
+      "id": "game-112",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Kartenspiel, das man in „The Witcher 3“ in Tavernen spielen kann?",
+      "optionen": [
+        "Gwint",
+        "Hearthstone",
+        "Pazaak",
+        "Triple Triad"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Gwent: The Witcher Card Game",
+        "url": "https://de.wikipedia.org/wiki/Gwent:_The_Witcher_Card_Game"
+      }
+    },
+    {
+      "id": "game-113",
+      "modus": "schaetzen",
+      "frage": "Mit wie vielen Karten auf der Hand startet jeder Spieler bei UNO?",
+      "einheit": "Karten",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Uno (Kartenspiel)",
+        "url": "https://de.wikipedia.org/wiki/Uno_(Kartenspiel)"
+      }
+    },
+    {
+      "id": "game-114",
+      "modus": "schaetzen",
+      "frage": "Wie viele Diamanten braucht man in Minecraft für eine komplette Diamantrüstung (Helm, Brustpanzer, Hose, Stiefel)?",
+      "einheit": "Diamanten",
+      "loesung": 24,
+      "erklaerung": "5 + 8 + 7 + 4 = 24.",
+      "quelle": {
+        "titel": "Minecraft Wiki – Rüstung",
+        "url": "https://de.minecraft.wiki/w/R%C3%BCstung"
+      }
+    },
+    {
+      "id": "game-115",
+      "modus": "schaetzen",
+      "frage": "Wie viele Obsidianblöcke braucht man in Minecraft mindestens für ein Netherportal?",
+      "einheit": "Blöcke",
+      "loesung": 10,
+      "erklaerung": "Die vier Ecken des Rahmens dürfen fehlen.",
+      "quelle": {
+        "titel": "Minecraft Wiki – Netherportal",
+        "url": "https://de.minecraft.wiki/w/Netherportal"
+      }
+    },
+    {
+      "id": "game-116",
+      "modus": "schaetzen",
+      "frage": "Wie viele Pokémon darf man in den Hauptspielen höchstens gleichzeitig im Team dabeihaben?",
+      "einheit": "Pokémon",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Pokémon (Computerspielreihe)",
+        "url": "https://de.wikipedia.org/wiki/Pok%C3%A9mon_(Computerspielreihe)"
+      }
+    },
+    {
+      "id": "game-117",
+      "modus": "schaetzen",
+      "frage": "Wie viele Personen können beim Brettspiel „Catan“ (Grundspiel) höchstens mitspielen?",
+      "einheit": "Spieler",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Die Siedler von Catan",
+        "url": "https://de.wikipedia.org/wiki/Die_Siedler_von_Catan"
+      }
+    },
+    {
+      "id": "game-118",
+      "modus": "schaetzen",
+      "frage": "Wie viele Stapel-Plätze hat eine einfache Truhe in Minecraft?",
+      "einheit": "Plätze",
+      "loesung": 27,
+      "quelle": {
+        "titel": "Minecraft Wiki – Truhe",
+        "url": "https://de.minecraft.wiki/w/Truhe"
+      }
+    },
+    {
+      "id": "game-119",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler können in „Super Smash Bros. Ultimate“ höchstens gleichzeitig kämpfen?",
+      "einheit": "Spieler",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Super Smash Bros. Ultimate",
+        "url": "https://de.wikipedia.org/wiki/Super_Smash_Bros._Ultimate"
+      }
+    },
+    {
+      "id": "game-120",
+      "modus": "schaetzen",
+      "frage": "Wie viele Ringe muss Sonic in den klassischen Spielen sammeln, um ein Extraleben zu bekommen?",
+      "einheit": "Ringe",
+      "loesung": 100,
+      "quelle": {
+        "titel": "Wikipedia – Sonic the Hedgehog (1991)",
+        "url": "https://de.wikipedia.org/wiki/Sonic_the_Hedgehog_(1991)"
+      }
+    },
+    {
+      "id": "game-121",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Karten besteht ein Deck beim Pokémon-Sammelkartenspiel im Turnier?",
+      "einheit": "Karten",
+      "loesung": 60,
+      "quelle": {
+        "titel": "Wikipedia – Pokémon-Sammelkartenspiel",
+        "url": "https://de.wikipedia.org/wiki/Pok%C3%A9mon-Sammelkartenspiel"
+      }
+    },
+    {
+      "id": "game-122",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien das Fantasy-Rollenspiel „Elden Ring“?",
+      "daten": {
+        "von": 1920,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 2022,
+      "quelle": {
+        "titel": "Wikipedia – Elden Ring",
+        "url": "https://de.wikipedia.org/wiki/Elden_Ring"
+      }
+    },
+    {
+      "id": "game-123",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien „The Witcher 3: Wild Hunt“?",
+      "daten": {
+        "von": 1920,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 2015,
+      "quelle": {
+        "titel": "Wikipedia – The Witcher 3: Wild Hunt",
+        "url": "https://de.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt"
+      }
+    },
+    {
+      "id": "game-124",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien das allererste „Call of Duty“?",
+      "daten": {
+        "von": 1850,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 2003,
+      "quelle": {
+        "titel": "Wikipedia – Call of Duty (Computerspiel)",
+        "url": "https://de.wikipedia.org/wiki/Call_of_Duty_(Computerspiel)"
+      }
+    },
+    {
+      "id": "game-125",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Shenzhen, Sitz von Tencent, dem umsatzstärksten Videospielkonzern der Welt?",
+      "daten": {
+        "mitte": [
+          32,
+          105
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 22.54,
+        "lng": 114.06
+      },
+      "quelle": {
+        "titel": "Wikipedia – Tencent",
+        "url": "https://de.wikipedia.org/wiki/Tencent"
+      }
+    },
+    {
+      "id": "game-126",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Tokio mit dem bekannten Elektronik- und Spieleviertel Akihabara?",
+      "daten": {
+        "mitte": [
+          36,
+          125
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 35.7,
+        "lng": 139.77
+      },
+      "quelle": {
+        "titel": "Wikipedia – Akihabara",
+        "url": "https://de.wikipedia.org/wiki/Akihabara"
+      }
+    },
+    {
+      "id": "game-127",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Edinburgh, Sitz des Spielestudios Rockstar North?",
+      "daten": {
+        "mitte": [
+          50,
+          0
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 55.95,
+        "lng": -3.19
+      },
+      "quelle": {
+        "titel": "Wikipedia – Rockstar North",
+        "url": "https://de.wikipedia.org/wiki/Rockstar_North"
+      }
+    },
+    {
+      "id": "game-128",
+      "modus": "reihenfolge",
+      "frage": "Ordne die „Zelda“-Spiele nach ihrem Erscheinen!",
+      "loesung": [
+        "Ocarina of Time",
+        "Twilight Princess",
+        "Breath of the Wild",
+        "Tears of the Kingdom"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – The Legend of Zelda",
+        "url": "https://de.wikipedia.org/wiki/The_Legend_of_Zelda"
+      }
+    },
+    {
+      "id": "game-129",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Pokémon-Editionen nach ihrem Erscheinen!",
+      "loesung": [
+        "Rot und Grün",
+        "Gold und Silber",
+        "Rubin und Saphir",
+        "Diamant und Perl"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Pokémon (Computerspielreihe)",
+        "url": "https://de.wikipedia.org/wiki/Pok%C3%A9mon_(Computerspielreihe)"
+      }
+    },
+    {
+      "id": "game-130",
+      "modus": "reihenfolge",
+      "frage": "Ordne die tragbaren Nintendo-Konsolen nach ihrem Erscheinen!",
+      "loesung": [
+        "Game Boy",
+        "Game Boy Advance",
+        "Nintendo DS",
+        "Nintendo 3DS"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Nintendo",
+        "url": "https://de.wikipedia.org/wiki/Nintendo"
+      }
     }
   ],
   "stechfragen": [
@@ -1727,6 +2209,28 @@
       "quelle": {
         "titel": "Wikipedia – Scrabble",
         "url": "https://de.wikipedia.org/wiki/Scrabble"
+      }
+    },
+    {
+      "id": "game-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr zeigte der Physiker William Higinbotham „Tennis for Two“, eines der ersten Videospiele?",
+      "einheit": "",
+      "loesung": 1958,
+      "quelle": {
+        "titel": "Wikipedia – Tennis for Two",
+        "url": "https://de.wikipedia.org/wiki/Tennis_for_Two"
+      }
+    },
+    {
+      "id": "game-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde der Spielekonzern Electronic Arts (EA) gegründet?",
+      "einheit": "",
+      "loesung": 1982,
+      "quelle": {
+        "titel": "Wikipedia – Electronic Arts",
+        "url": "https://de.wikipedia.org/wiki/Electronic_Arts"
       }
     }
   ]
