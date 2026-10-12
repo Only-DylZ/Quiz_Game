@@ -713,6 +713,516 @@
         "url": "https://de.wiktionary.org/wiki/Sonnenschirm"
       },
       "loesung": 0
+    },
+    {
+      "id": "wwm-051",
+      "modus": "auswahl",
+      "frage": "Auf dem Tisch liegen 3 Äpfel. Du nimmst 2 davon weg. Wie viele Äpfel hast du jetzt?",
+      "optionen": [
+        "1",
+        "2",
+        "3",
+        "Keinen"
+      ],
+      "loesung": 1,
+      "erklaerung": "Auf dem Tisch bleibt einer – aber du hast die 2, die du genommen hast.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-052",
+      "modus": "auswahl",
+      "frage": "Ein Zug fährt um 9:50 Uhr ab und ist 1 Stunde und 25 Minuten unterwegs. Wann kommt er an?",
+      "optionen": [
+        "10:75 Uhr",
+        "11:25 Uhr",
+        "11:15 Uhr",
+        "10:15 Uhr"
+      ],
+      "loesung": 2,
+      "erklaerung": "9:50 Uhr plus 1 Stunde ist 10:50 Uhr, plus 25 Minuten ist 11:15 Uhr.",
+      "quelle": {
+        "titel": "Wikipedia – Uhrzeit",
+        "url": "https://de.wikipedia.org/wiki/Uhrzeit"
+      }
+    },
+    {
+      "id": "wwm-053",
+      "modus": "auswahl",
+      "frage": "Wie viele Minuten sind eine Dreiviertelstunde plus eine halbe Stunde?",
+      "optionen": [
+        "65",
+        "70",
+        "90",
+        "75"
+      ],
+      "loesung": 3,
+      "erklaerung": "45 + 30 = 75 Minuten.",
+      "quelle": {
+        "titel": "Wiktionary – Dreiviertelstunde",
+        "url": "https://de.wiktionary.org/wiki/Dreiviertelstunde"
+      }
+    },
+    {
+      "id": "wwm-054",
+      "modus": "auswahl",
+      "frage": "Teile 30 durch ein Halb und zähle dann 10 dazu. Was kommt heraus?",
+      "optionen": [
+        "70",
+        "25",
+        "40",
+        "35"
+      ],
+      "loesung": 0,
+      "erklaerung": "Durch ein Halb teilen heißt verdoppeln: 30 : ½ = 60, plus 10 = 70. Die Falle: „halbieren“.",
+      "quelle": {
+        "titel": "Wikipedia – Kehrwert",
+        "url": "https://de.wikipedia.org/wiki/Kehrwert"
+      }
+    },
+    {
+      "id": "wwm-055",
+      "modus": "auswahl",
+      "frage": "Ein Seil hat zwei Enden. Du schneidest es zweimal durch. Wie viele Enden gibt es jetzt?",
+      "optionen": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "loesung": 2,
+      "erklaerung": "Zwei Schnitte ergeben drei Stücke – jedes hat zwei Enden, also 6.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-056",
+      "modus": "auswahl",
+      "frage": "Ein Zaun ist 10 Meter lang. Jeden Meter steht ein Pfosten – auch an beiden Enden. Wie viele Pfosten sind es?",
+      "optionen": [
+        "9",
+        "10",
+        "12",
+        "11"
+      ],
+      "loesung": 3,
+      "erklaerung": "10 Abstände brauchen 11 Pfosten – der Anfangspfosten kommt dazu.",
+      "quelle": {
+        "titel": "Wikipedia – Zaunpfahlproblem",
+        "url": "https://de.wikipedia.org/wiki/Zaunpfahlproblem"
+      }
+    },
+    {
+      "id": "wwm-057",
+      "modus": "auswahl",
+      "frage": "Du schneidest eine runde Pizza mit 3 geraden Schnitten, die alle durch die Mitte gehen. Wie viele Stücke hast du?",
+      "optionen": [
+        "6",
+        "3",
+        "8",
+        "9"
+      ],
+      "loesung": 0,
+      "erklaerung": "Jeder Schnitt durch die Mitte teilt zwei Hälften: 3 Schnitte ergeben 6 Stücke.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-058",
+      "modus": "auswahl",
+      "frage": "Ein Heft hat die Seitenzahlen 1 bis 100, jedes Blatt ist vorne und hinten bedruckt. Wie viele Blätter hat das Heft?",
+      "optionen": [
+        "100",
+        "50",
+        "25",
+        "200"
+      ],
+      "loesung": 1,
+      "erklaerung": "Jedes Blatt hat zwei Seiten: 100 Seiten sind 50 Blätter.",
+      "quelle": {
+        "titel": "Wikipedia – Seitenzahl",
+        "url": "https://de.wikipedia.org/wiki/Seitenzahl"
+      }
+    },
+    {
+      "id": "wwm-059",
+      "modus": "auswahl",
+      "frage": "Eine Familie hat 4 Töchter. Jede Tochter hat genau einen Bruder. Wie viele Kinder hat die Familie?",
+      "optionen": [
+        "8",
+        "6",
+        "5",
+        "4"
+      ],
+      "loesung": 2,
+      "erklaerung": "Alle Töchter haben denselben Bruder: 4 Töchter + 1 Sohn = 5 Kinder.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-060",
+      "modus": "auswahl",
+      "frage": "Wie oft kann man 10 von 100 abziehen?",
+      "optionen": [
+        "Zehnmal",
+        "Neunmal",
+        "Elfmal",
+        "Einmal"
+      ],
+      "loesung": 3,
+      "erklaerung": "Nach dem ersten Mal zieht man die 10 nicht mehr von 100 ab, sondern von 90.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-061",
+      "modus": "auswahl",
+      "frage": "Was ist am meisten?",
+      "optionen": [
+        "Ein Drittel von 90",
+        "Ein Viertel von 100",
+        "Ein Fünftel von 120",
+        "Die Hälfte von 50"
+      ],
+      "loesung": 0,
+      "erklaerung": "Ein Drittel von 90 = 30. Die anderen ergeben 25, 24 und 25.",
+      "quelle": {
+        "titel": "Wikipedia – Bruchrechnung",
+        "url": "https://de.wikipedia.org/wiki/Bruchrechnung"
+      }
+    },
+    {
+      "id": "wwm-062",
+      "modus": "auswahl",
+      "frage": "Der 1. Mai ist ein Montag. Welcher Wochentag ist dann der 1. Juni?",
+      "optionen": [
+        "Mittwoch",
+        "Donnerstag",
+        "Freitag",
+        "Montag"
+      ],
+      "loesung": 1,
+      "erklaerung": "Der Mai hat 31 Tage = 4 Wochen und 3 Tage. Montag + 3 Tage = Donnerstag.",
+      "quelle": {
+        "titel": "Wikipedia – Kalender",
+        "url": "https://de.wikipedia.org/wiki/Kalender"
+      }
+    },
+    {
+      "id": "wwm-063",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt vor alle drei: …zeug, …rad, …stuhl?",
+      "optionen": [
+        "Flug",
+        "Roll",
+        "Fahr",
+        "Spiel"
+      ],
+      "loesung": 2,
+      "erklaerung": "Fahrzeug, Fahrrad, Fahrstuhl. Flugzeug, Rollstuhl und Spielzeug gibt es auch – aber kein Flugrad.",
+      "quelle": {
+        "titel": "Wiktionary – Fahrstuhl",
+        "url": "https://de.wiktionary.org/wiki/Fahrstuhl"
+      }
+    },
+    {
+      "id": "wwm-064",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt hinter alle drei: Apfel…, Orangen…, Tomaten…?",
+      "optionen": [
+        "baum",
+        "kuchen",
+        "mark",
+        "saft"
+      ],
+      "loesung": 3,
+      "erklaerung": "Apfelsaft, Orangensaft, Tomatensaft. Einen Tomatenbaum oder Orangenmark gibt es nicht.",
+      "quelle": {
+        "titel": "Wiktionary – Tomatensaft",
+        "url": "https://de.wiktionary.org/wiki/Tomatensaft"
+      }
+    },
+    {
+      "id": "wwm-065",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt vor alle drei: …zimmer, …tisch, …stuhl?",
+      "optionen": [
+        "Kinder",
+        "Wohn",
+        "Schreib",
+        "Schaukel"
+      ],
+      "loesung": 0,
+      "erklaerung": "Kinderzimmer, Kindertisch, Kinderstuhl. Wohnzimmer, Schreibtisch und Schaukelstuhl passen nur einmal.",
+      "quelle": {
+        "titel": "Wiktionary – Kinderstuhl",
+        "url": "https://de.wiktionary.org/wiki/Kinderstuhl"
+      }
+    },
+    {
+      "id": "wwm-066",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt vor alle drei: …stern, …kerze, …lied?",
+      "optionen": [
+        "Volks",
+        "Weihnachts",
+        "Abend",
+        "Geburtstags"
+      ],
+      "loesung": 1,
+      "erklaerung": "Weihnachtsstern, Weihnachtskerze, Weihnachtslied. Abendstern und Abendlied gibt es, aber keine Abendkerze; Geburtstagskerze und Geburtstagslied, aber keinen Geburtstagsstern.",
+      "quelle": {
+        "titel": "Wiktionary – Weihnachtsstern",
+        "url": "https://de.wiktionary.org/wiki/Weihnachtsstern"
+      }
+    },
+    {
+      "id": "wwm-067",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt hinter alle drei: Kopf…, Bauch…, Zahn…?",
+      "optionen": [
+        "tuch",
+        "nabel",
+        "schmerzen",
+        "arzt"
+      ],
+      "loesung": 2,
+      "erklaerung": "Kopfschmerzen, Bauchschmerzen, Zahnschmerzen. Kopftuch, Bauchnabel und Zahnarzt passen nur einmal.",
+      "quelle": {
+        "titel": "Wiktionary – Zahnschmerzen",
+        "url": "https://de.wiktionary.org/wiki/Zahnschmerzen"
+      }
+    },
+    {
+      "id": "wwm-068",
+      "modus": "auswahl",
+      "frage": "Wer „den Löffel abgibt“, …",
+      "optionen": [
+        "… stirbt",
+        "… hört auf zu essen",
+        "… gibt auf",
+        "… verschenkt etwas"
+      ],
+      "loesung": 0,
+      "erklaerung": "„Den Löffel abgeben“ heißt sterben. Wer aufgibt, „wirft die Flinte ins Korn“.",
+      "quelle": {
+        "titel": "Wiktionary – den Löffel abgeben",
+        "url": "https://de.wiktionary.org/wiki/den_L%C3%B6ffel_abgeben"
+      }
+    },
+    {
+      "id": "wwm-069",
+      "modus": "auswahl",
+      "frage": "Wer „auf dem Holzweg ist“, …",
+      "optionen": [
+        "… wandert durch den Wald",
+        "… ist besonders fleißig",
+        "… hat Glück gehabt",
+        "… irrt sich"
+      ],
+      "loesung": 3,
+      "erklaerung": "Holzwege führten früher nur zum Holzfällen in den Wald – und nicht ans Ziel.",
+      "quelle": {
+        "titel": "Wiktionary – auf dem Holzweg sein",
+        "url": "https://de.wiktionary.org/wiki/auf_dem_Holzweg_sein"
+      }
+    },
+    {
+      "id": "wwm-070",
+      "modus": "auswahl",
+      "frage": "Wer jemandem „reinen Wein einschenkt“, …",
+      "optionen": [
+        "… macht ihn betrunken",
+        "… sagt ihm die Wahrheit",
+        "… schmeichelt ihm",
+        "… lädt ihn ein"
+      ],
+      "loesung": 1,
+      "erklaerung": "„Reiner“ Wein ist nicht gepanscht – man sagt ehrlich, wie es ist.",
+      "quelle": {
+        "titel": "Wiktionary – jemandem reinen Wein einschenken",
+        "url": "https://de.wiktionary.org/wiki/jemandem_reinen_Wein_einschenken"
+      }
+    },
+    {
+      "id": "wwm-071",
+      "modus": "auswahl",
+      "frage": "Wer „die Kurve kratzt“, …",
+      "optionen": [
+        "… fährt zu schnell",
+        "… schafft es gerade noch",
+        "… verschwindet schnell",
+        "… fängt Streit an"
+      ],
+      "loesung": 2,
+      "erklaerung": "„Die Kurve kratzen“ heißt abhauen. Wer es gerade noch schafft, „kriegt die Kurve“.",
+      "quelle": {
+        "titel": "Wiktionary – die Kurve kratzen",
+        "url": "https://de.wiktionary.org/wiki/die_Kurve_kratzen"
+      }
+    },
+    {
+      "id": "wwm-072",
+      "modus": "auswahl",
+      "frage": "Wer „kalte Füße bekommt“, …",
+      "optionen": [
+        "… bekommt Angst und macht einen Rückzieher",
+        "… hat sich erkältet",
+        "… wird wütend",
+        "… schläft schlecht"
+      ],
+      "loesung": 0,
+      "erklaerung": "Die Redewendung meint plötzliche Bedenken kurz vor einem Vorhaben.",
+      "quelle": {
+        "titel": "Wiktionary – kalte Füße bekommen",
+        "url": "https://de.wiktionary.org/wiki/kalte_F%C3%BC%C3%9Fe_bekommen"
+      }
+    },
+    {
+      "id": "wwm-073",
+      "modus": "auswahl",
+      "frage": "Wie viele Buchstaben hat das Wort „Alphabet“?",
+      "optionen": [
+        "8",
+        "26",
+        "30",
+        "7"
+      ],
+      "loesung": 0,
+      "erklaerung": "Gefragt ist nach dem Wort selbst: A-l-p-h-a-b-e-t.",
+      "quelle": {
+        "titel": "Wiktionary – Alphabet",
+        "url": "https://de.wiktionary.org/wiki/Alphabet"
+      }
+    },
+    {
+      "id": "wwm-074",
+      "modus": "auswahl",
+      "frage": "Welche Farbe hat die „Blackbox“ (der Flugschreiber) in einem Flugzeug?",
+      "optionen": [
+        "Schwarz",
+        "Grau",
+        "Weiß",
+        "Orange"
+      ],
+      "loesung": 3,
+      "erklaerung": "Damit man ihn nach einem Absturz leichter findet, ist der Flugschreiber knallorange.",
+      "quelle": {
+        "titel": "Wikipedia – Flugschreiber",
+        "url": "https://de.wikipedia.org/wiki/Flugschreiber"
+      }
+    },
+    {
+      "id": "wwm-075",
+      "modus": "auswahl",
+      "frage": "Aus welchem Land stammen die echten Panamahüte?",
+      "optionen": [
+        "Panama",
+        "Ecuador",
+        "Kolumbien",
+        "Mexiko"
+      ],
+      "loesung": 1,
+      "erklaerung": "Sie kommen aus Ecuador – berühmt wurden sie, weil sie über Panama verkauft und beim Kanalbau getragen wurden.",
+      "quelle": {
+        "titel": "Wikipedia – Panamahut",
+        "url": "https://de.wikipedia.org/wiki/Panamahut"
+      }
+    },
+    {
+      "id": "wwm-076",
+      "modus": "auswahl",
+      "frage": "Wonach sind die Kanarischen Inseln benannt?",
+      "optionen": [
+        "Nach den Kanarienvögeln",
+        "Nach einem Seefahrer namens Kanar",
+        "Nach Hunden",
+        "Nach dem Zuckerrohr"
+      ],
+      "loesung": 2,
+      "erklaerung": "Der Name kommt vom lateinischen „canis“ (Hund). Die Vögel sind umgekehrt nach den Inseln benannt.",
+      "quelle": {
+        "titel": "Wikipedia – Kanarische Inseln",
+        "url": "https://de.wikipedia.org/wiki/Kanarische_Inseln"
+      }
+    },
+    {
+      "id": "wwm-077",
+      "modus": "auswahl",
+      "frage": "Welcher Tag ist der Tag nach vorgestern?",
+      "optionen": [
+        "Heute",
+        "Morgen",
+        "Vorgestern",
+        "Gestern"
+      ],
+      "loesung": 3,
+      "erklaerung": "Vorgestern plus ein Tag ist gestern.",
+      "quelle": {
+        "titel": "Wiktionary – vorgestern",
+        "url": "https://de.wiktionary.org/wiki/vorgestern"
+      }
+    },
+    {
+      "id": "wwm-078",
+      "modus": "auswahl",
+      "frage": "In einer Schublade liegen lose schwarze und weiße Socken. Wie viele musst du im Dunkeln mindestens herausnehmen, um sicher zwei gleichfarbige zu haben?",
+      "optionen": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "loesung": 1,
+      "erklaerung": "Bei nur zwei Farben sind unter drei Socken immer zwei gleiche.",
+      "quelle": {
+        "titel": "Wikipedia – Schubfachprinzip",
+        "url": "https://de.wikipedia.org/wiki/Schubfachprinzip"
+      }
+    },
+    {
+      "id": "wwm-079",
+      "modus": "auswahl",
+      "frage": "Eine Uhr mit Zeigern zeigt genau 3 Uhr. Wie spät scheint es, wenn man sie im Spiegel betrachtet?",
+      "optionen": [
+        "9 Uhr",
+        "3 Uhr",
+        "6 Uhr",
+        "12 Uhr"
+      ],
+      "loesung": 0,
+      "erklaerung": "Der Spiegel vertauscht links und rechts: Der Stundenzeiger zeigt dann auf die 9.",
+      "quelle": {
+        "titel": "Wikipedia – Spiegelschrift",
+        "url": "https://de.wikipedia.org/wiki/Spiegelschrift"
+      }
+    },
+    {
+      "id": "wwm-080",
+      "modus": "auswahl",
+      "frage": "Wie oft stehen der Stunden- und der Minutenzeiger einer Uhr an einem ganzen Tag genau übereinander?",
+      "optionen": [
+        "24-mal",
+        "12-mal",
+        "48-mal",
+        "22-mal"
+      ],
+      "loesung": 3,
+      "erklaerung": "In 12 Stunden nur 11-mal – zwischen 11 und 1 Uhr treffen sie sich nur einmal (um 12). Am Tag also 22-mal.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
     }
   ],
   "stechfragen": [
@@ -761,6 +1271,29 @@
       "quelle": {
         "titel": "Wikipedia – Denksportaufgabe",
         "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      }
+    },
+    {
+      "id": "wwm-s05",
+      "modus": "schaetzen",
+      "frage": "Wie viele Punkte haben alle Steine eines Dominospiels (Doppel-Sechs) zusammen?",
+      "einheit": "Punkte",
+      "loesung": 168,
+      "erklaerung": "Jede Zahl von 0 bis 6 kommt achtmal vor: 8 × (0+1+…+6) = 8 × 21 = 168.",
+      "quelle": {
+        "titel": "Wikipedia – Domino",
+        "url": "https://de.wikipedia.org/wiki/Domino"
+      }
+    },
+    {
+      "id": "wwm-s06",
+      "modus": "schaetzen",
+      "frage": "Wie viele Nullen hat eine Trillion (deutsche Zählweise)?",
+      "einheit": "Nullen",
+      "loesung": 18,
+      "quelle": {
+        "titel": "Wikipedia – Zahlennamen",
+        "url": "https://de.wikipedia.org/wiki/Zahlennamen"
       }
     }
   ]
