@@ -14,7 +14,7 @@
   Grundspiel, Grafik/Karte, Werkzeuge + 13 Themen, Themenrunden mit GP/Stechfrage/
   Glücksrad/Booster, Themenjoker mit Gemini (Supabase Edge Function).
 - **Fragen-Pools:** 13 Themen mit 72–97 Fragen und je 7 Stechfragen (Ziel 150).
-  Am 12.10.2026 um je 30 Fragen + 2 Stechfragen erweitert (noch nicht committet).
+  Am 12.10.2026 um je 30 Fragen + 2 Stechfragen erweitert und danach um je 10 + 1 (Test-Block) – alles online.
 - **Optik-Umbau im Pixel-Stil** ist committet und online (11.10.2026), im ganzen Spiel
   aber noch nicht getestet.
 - **Avatare** (LPC-Figuren, Farmleben, Sprüche, Credits-Seite) sind im Spiel und online (12.10.2026).
@@ -70,16 +70,16 @@ alten (Balken „Fernsehturm Berlin 368“, Reihenfolge-`werte` „Jurassic Park
 `grep` nach dem geplanten Fakt bzw. der Jahreszahl im Paket machen. Wikipedia-Suche per API
 sperrt bei schnellen Anfragen (429) – Links lieber direkt mit `validate.link_problem` prüfen.
 
-**Neu (12.10.2026, noch nicht committet): Thema „Die 500-€-Frage“** (`jauch.json`, Kürzel `wwm`,
+**Neu (12.10.2026, online): Thema „Die 500-€-Frage“** (`jauch.json`, Kürzel `wwm`,
 Hintergrund `bilder/szenen/jauch.png` aus `ki-bilder/Jauch.png`). Nutzer fand die ersten 10
 Fragen zu leicht (reine Sprichwort-Lückentexte, bekannte Scherzfragen) → neue Regeln in
 `tools/prompt.md` („Sonderpaket“): jede Frage braucht einen Denkschritt (Denkfalle, gemeinsames
 Wort, Verwechslungsgefahr bei Redewendungen, genau lesen, kleine Logik), immer mit `erklaerung`.
 Behalten: wwm-007, wwm-010, wwm-s01; neu wwm-011 … wwm-040 + wwm-s02/s03 (32 Fragen,
-3 Stechfragen, geprüft, noch nicht vom Nutzer getestet). Weiter in 30er-Blöcken. Sprüche: `THEMEN_SPRUECHE.jauch`. Weitere Blöcke à 30 (Ziel 150): `tools/prompt.md`
+3 Stechfragen, geprüft und vom Nutzer getestet; inzwischen 42 Fragen). Weiter in 30er-Blöcken. Sprüche: `THEMEN_SPRUECHE.jauch`. Weitere Blöcke à 30 (Ziel 150): `tools/prompt.md`
 („Weiterer Block“).
 
-**Sparsame Prüf-Pipeline (neu 12.10.2026, noch nicht committet):**
+**Sparsame Prüf-Pipeline (seit 12.10.2026, online):**
 - Überblick statt ganze Pakete lesen: `python tools/fragenliste.py docs/packs/<datei>`.
 - Prüfen: `python tools/block_pruefen.py docs/packs/<datei>` (nur neue = nicht
   committete Fragen; Format, Links parallel, `doppelt.py`, `lecks.py`, `pruefen.mjs`).
