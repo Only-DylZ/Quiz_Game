@@ -823,3 +823,13 @@ bio-104 dd-001 Rhythmus
 bio-126 mathe-054 1974
 bio-124 sport-001 Deutschland
 bio-125 sport-001 Deutschland
+chem-106 rf-46 Uranus
+chem-109 game-008 Polen
+chem-119 chem-003 Stickstoff
+chem-132 chem-004 Wasserstoff
+chem-131 chem-034 Kalium
+chem-132 chem-038 Wasserstoff
+chem-115 chem-040 Silber
+chem-130 chem-071 Wolfram
+chem-s01 chem-106 Uran
+chem-124 phys-066 Gummi

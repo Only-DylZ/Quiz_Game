@@ -66,3 +66,8 @@ geo-126 geo-102
 bio-113 bio-014
 bio-115 bio-015
 bio-118 bio-s01
+chem-117 chem-047
+chem-119 chem-046
+chem-120 chem-s03
+chem-130 chem-028
+chem-131 chem-028

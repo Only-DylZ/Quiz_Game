@@ -1699,6 +1699,490 @@
         "titel": "Wikipedia – Alkane",
         "url": "https://de.wikipedia.org/wiki/Alkane"
       }
+    },
+    {
+      "id": "chem-103",
+      "modus": "auswahl",
+      "frage": "Welches chemische Symbol hat Zinn?",
+      "optionen": [
+        "Zn",
+        "Ti",
+        "Sn",
+        "Zi"
+      ],
+      "loesung": 2,
+      "erklaerung": "Sn kommt vom lateinischen „stannum“. Zn ist Zink.",
+      "quelle": {
+        "titel": "Wikipedia – Zinn",
+        "url": "https://de.wikipedia.org/wiki/Zinn"
+      }
+    },
+    {
+      "id": "chem-104",
+      "modus": "auswahl",
+      "frage": "Für welches Element steht das Symbol Sb?",
+      "optionen": [
+        "Strontium",
+        "Antimon",
+        "Selen",
+        "Samarium"
+      ],
+      "loesung": 1,
+      "erklaerung": "Sb kommt vom lateinischen „stibium“.",
+      "quelle": {
+        "titel": "Wikipedia – Antimon",
+        "url": "https://de.wikipedia.org/wiki/Antimon"
+      }
+    },
+    {
+      "id": "chem-105",
+      "modus": "auswahl",
+      "frage": "Welches giftige, geruchlose Gas entsteht bei unvollständiger Verbrennung?",
+      "optionen": [
+        "Kohlenmonoxid",
+        "Ozon",
+        "Lachgas",
+        "Methan"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kohlenstoffmonoxid",
+        "url": "https://de.wikipedia.org/wiki/Kohlenstoffmonoxid"
+      }
+    },
+    {
+      "id": "chem-106",
+      "modus": "auswahl",
+      "frage": "Welches Element ist nach dem Planeten Uranus benannt?",
+      "optionen": [
+        "Plutonium",
+        "Neptunium",
+        "Uran",
+        "Cer"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Uran",
+        "url": "https://de.wikipedia.org/wiki/Uran"
+      }
+    },
+    {
+      "id": "chem-107",
+      "modus": "auswahl",
+      "frage": "Wie nennt man einen Stoff, der eine Reaktion beschleunigt, ohne dabei selbst verbraucht zu werden?",
+      "optionen": [
+        "Katalysator",
+        "Indikator",
+        "Inhibitor",
+        "Lösungsmittel"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Katalysator",
+        "url": "https://de.wikipedia.org/wiki/Katalysator"
+      }
+    },
+    {
+      "id": "chem-108",
+      "modus": "auswahl",
+      "frage": "Welche Farbe nimmt blaues Lackmuspapier in einer Säure an?",
+      "optionen": [
+        "Grün",
+        "Rot",
+        "Gelb",
+        "Schwarz"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Lackmus",
+        "url": "https://de.wikipedia.org/wiki/Lackmus"
+      }
+    },
+    {
+      "id": "chem-109",
+      "modus": "auswahl",
+      "frage": "Welches Element ist nach dem Land Polen benannt?",
+      "optionen": [
+        "Plutonium",
+        "Promethium",
+        "Palladium",
+        "Polonium"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Polonium",
+        "url": "https://de.wikipedia.org/wiki/Polonium"
+      }
+    },
+    {
+      "id": "chem-110",
+      "modus": "auswahl",
+      "frage": "Woraus besteht die „Mine“ eines Bleistifts?",
+      "optionen": [
+        "Aus Blei",
+        "Aus Holzkohle",
+        "Aus Zinn",
+        "Aus Graphit und Ton"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Bleistift",
+        "url": "https://de.wikipedia.org/wiki/Bleistift"
+      }
+    },
+    {
+      "id": "chem-111",
+      "modus": "auswahl",
+      "frage": "Mit welchem Verfahren trennt man Stoffe anhand ihrer unterschiedlichen Siedepunkte?",
+      "optionen": [
+        "Filtration",
+        "Destillation",
+        "Chromatografie",
+        "Zentrifugation"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Destillation",
+        "url": "https://de.wikipedia.org/wiki/Destillation"
+      }
+    },
+    {
+      "id": "chem-112",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Verbindung mit der Formel H₂O₂, die zum Bleichen benutzt wird?",
+      "optionen": [
+        "Wasserstoffperoxid",
+        "Natronlauge",
+        "Schweres Wasser",
+        "Kalkwasser"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Wasserstoffperoxid",
+        "url": "https://de.wikipedia.org/wiki/Wasserstoffperoxid"
+      }
+    },
+    {
+      "id": "chem-113",
+      "modus": "auswahl",
+      "frage": "Welches Metall verbrennt mit grellweißem Licht und steckt in Wunderkerzen?",
+      "optionen": [
+        "Natrium",
+        "Kalium",
+        "Magnesium",
+        "Calcium"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Magnesium",
+        "url": "https://de.wikipedia.org/wiki/Magnesium"
+      }
+    },
+    {
+      "id": "chem-114",
+      "modus": "auswahl",
+      "frage": "Welches radioaktive Edelgas kann sich aus dem Boden in Kellern ansammeln?",
+      "optionen": [
+        "Argon",
+        "Xenon",
+        "Krypton",
+        "Radon"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Radon",
+        "url": "https://de.wikipedia.org/wiki/Radon"
+      }
+    },
+    {
+      "id": "chem-115",
+      "modus": "schaetzen",
+      "frage": "Welche Ordnungszahl hat Silber?",
+      "einheit": "",
+      "loesung": 47,
+      "quelle": {
+        "titel": "Wikipedia – Silber",
+        "url": "https://de.wikipedia.org/wiki/Silber"
+      }
+    },
+    {
+      "id": "chem-116",
+      "modus": "schaetzen",
+      "frage": "Wie viele Elemente ordnete Mendelejew in seinem ersten Periodensystem an?",
+      "einheit": "Elemente",
+      "loesung": 63,
+      "quelle": {
+        "titel": "Wikipedia – Periodensystem",
+        "url": "https://de.wikipedia.org/wiki/Periodensystem"
+      }
+    },
+    {
+      "id": "chem-117",
+      "modus": "schaetzen",
+      "frage": "Wie viele Elektronen passen auf die zweite Schale eines Atoms?",
+      "einheit": "Elektronen",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Schalenmodell (Atomphysik)",
+        "url": "https://de.wikipedia.org/wiki/Schalenmodell_(Atomphysik)"
+      }
+    },
+    {
+      "id": "chem-118",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Atomen besteht ein Molekül Ethanol (C₂H₅OH)?",
+      "einheit": "Atome",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Ethanol",
+        "url": "https://de.wikipedia.org/wiki/Ethanol"
+      }
+    },
+    {
+      "id": "chem-119",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Atomen besteht ein Molekül Ammoniak?",
+      "einheit": "Atome",
+      "loesung": 4,
+      "erklaerung": "NH₃: ein Stickstoff- und drei Wasserstoffatome.",
+      "quelle": {
+        "titel": "Wikipedia – Ammoniak",
+        "url": "https://de.wikipedia.org/wiki/Ammoniak"
+      }
+    },
+    {
+      "id": "chem-120",
+      "modus": "schaetzen",
+      "frage": "Wie viele chemische Elemente sind bei Raumtemperatur flüssig?",
+      "einheit": "Elemente",
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Brom",
+        "url": "https://de.wikipedia.org/wiki/Brom"
+      }
+    },
+    {
+      "id": "chem-121",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kohlenstoffatome bilden den Ring eines Benzolmoleküls?",
+      "einheit": "Atome",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Benzol",
+        "url": "https://de.wikipedia.org/wiki/Benzol"
+      }
+    },
+    {
+      "id": "chem-122",
+      "modus": "schaetzen",
+      "frage": "Wie viele Perioden (Zeilen) hat das heutige Periodensystem?",
+      "einheit": "Perioden",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Periode des Periodensystems",
+        "url": "https://de.wikipedia.org/wiki/Periode_des_Periodensystems"
+      }
+    },
+    {
+      "id": "chem-123",
+      "modus": "schaetzen",
+      "frage": "Bei wie viel Grad Celsius siedet Aceton, das Lösungsmittel im Nagellackentferner?",
+      "einheit": "°C",
+      "loesung": 56,
+      "quelle": {
+        "titel": "Wikipedia – Aceton",
+        "url": "https://de.wikipedia.org/wiki/Aceton"
+      }
+    },
+    {
+      "id": "chem-124",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr entdeckte Charles Goodyear die Vulkanisation, die Gummi haltbar macht?",
+      "daten": {
+        "von": 1750,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1839,
+      "quelle": {
+        "titel": "Wikipedia – Vulkanisation",
+        "url": "https://de.wikipedia.org/wiki/Vulkanisation"
+      }
+    },
+    {
+      "id": "chem-125",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erfand Leo Baekeland Bakelit, den ersten vollsynthetischen Kunststoff?",
+      "daten": {
+        "von": 1850,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1907,
+      "quelle": {
+        "titel": "Wikipedia – Bakelit",
+        "url": "https://de.wikipedia.org/wiki/Bakelit"
+      }
+    },
+    {
+      "id": "chem-126",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr stellte Wallace Carothers zum ersten Mal Nylon her?",
+      "daten": {
+        "von": 1850,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1935,
+      "quelle": {
+        "titel": "Wikipedia – Nylon",
+        "url": "https://de.wikipedia.org/wiki/Nylon"
+      }
+    },
+    {
+      "id": "chem-127",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Kiruna, wo in einer riesigen Mine Eisenerz abgebaut wird?",
+      "daten": {
+        "mitte": [
+          58,
+          12
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 67.86,
+        "lng": 20.23
+      },
+      "quelle": {
+        "titel": "Wikipedia – Kiruna",
+        "url": "https://de.wikipedia.org/wiki/Kiruna"
+      }
+    },
+    {
+      "id": "chem-128",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Kolwezi, ein Zentrum des Kobalt-Bergbaus?",
+      "daten": {
+        "mitte": [
+          0,
+          20
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -10.71,
+        "lng": 25.47
+      },
+      "quelle": {
+        "titel": "Wikipedia – Kolwezi",
+        "url": "https://de.wikipedia.org/wiki/Kolwezi"
+      }
+    },
+    {
+      "id": "chem-129",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Hallstatt, wo seit Jahrtausenden Salz abgebaut wird?",
+      "daten": {
+        "mitte": [
+          49,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 47.56,
+        "lng": 13.65
+      },
+      "quelle": {
+        "titel": "Wikipedia – Salzbergwerk Hallstatt",
+        "url": "https://de.wikipedia.org/wiki/Salzbergwerk_Hallstatt"
+      }
+    },
+    {
+      "id": "chem-130",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Metalle nach ihrem Schmelzpunkt!",
+      "loesung": [
+        "Wolfram",
+        "Eisen",
+        "Gold",
+        "Zinn"
+      ],
+      "oben": "höchster",
+      "unten": "niedrigster",
+      "quelle": {
+        "titel": "Wikipedia – Schmelzpunkt",
+        "url": "https://de.wikipedia.org/wiki/Schmelzpunkt"
+      }
+    },
+    {
+      "id": "chem-131",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Metalle von unedel (sehr reaktionsfreudig) bis edel!",
+      "loesung": [
+        "Kalium",
+        "Aluminium",
+        "Zink",
+        "Platin",
+        "Gold"
+      ],
+      "oben": "am unedelsten",
+      "unten": "am edelsten",
+      "quelle": {
+        "titel": "Wikipedia – Elektrochemische Spannungsreihe",
+        "url": "https://de.wikipedia.org/wiki/Elektrochemische_Spannungsreihe"
+      }
+    },
+    {
+      "id": "chem-132",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Brennstoffe nach ihrem Heizwert pro Kilogramm!",
+      "loesung": [
+        "Wasserstoff",
+        "Erdgas",
+        "Benzin",
+        "Holz"
+      ],
+      "oben": "meiste Energie",
+      "unten": "wenigste Energie",
+      "quelle": {
+        "titel": "Wikipedia – Heizwert",
+        "url": "https://de.wikipedia.org/wiki/Heizwert"
+      }
     }
   ],
   "stechfragen": [
@@ -1789,6 +2273,28 @@
       "quelle": {
         "titel": "Wikipedia – Natriumchlorid",
         "url": "https://de.wikipedia.org/wiki/Natriumchlorid"
+      }
+    },
+    {
+      "id": "chem-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr gründete Friedrich Bayer die Farbenfabrik, aus der der Bayer-Konzern wurde?",
+      "einheit": "",
+      "loesung": 1863,
+      "quelle": {
+        "titel": "Wikipedia – Bayer AG",
+        "url": "https://de.wikipedia.org/wiki/Bayer_AG"
+      }
+    },
+    {
+      "id": "chem-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde der Chemiker Justus von Liebig geboren?",
+      "einheit": "",
+      "loesung": 1803,
+      "quelle": {
+        "titel": "Wikipedia – Justus von Liebig",
+        "url": "https://de.wikipedia.org/wiki/Justus_von_Liebig"
       }
     }
   ]
