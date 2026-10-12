@@ -1762,6 +1762,510 @@
         "titel": "Wikipedia – Hanse",
         "url": "https://de.wikipedia.org/wiki/Hanse"
       }
+    },
+    {
+      "id": "dd-107",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das Fahrgeschäft auf dem Jahrmarkt richtig?",
+      "optionen": [
+        "Karussell",
+        "Karrussel",
+        "Karussel",
+        "Karrusell"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wiktionary – Karussell",
+        "url": "https://de.wiktionary.org/wiki/Karussell"
+      }
+    },
+    {
+      "id": "dd-108",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man den künstlichen Himmelskörper, der um die Erde kreist, richtig?",
+      "optionen": [
+        "Sattelit",
+        "Satellit",
+        "Satelit",
+        "Sattellit"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wiktionary – Satellit",
+        "url": "https://de.wiktionary.org/wiki/Satellit"
+      }
+    },
+    {
+      "id": "dd-109",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das Wort für „glänzend, hervorragend“ richtig?",
+      "optionen": [
+        "brilliant",
+        "briliant",
+        "brillant",
+        "brilljant"
+      ],
+      "loesung": 2,
+      "erklaerung": "Auf Englisch heißt es „brilliant“, auf Deutsch „brillant“.",
+      "quelle": {
+        "titel": "Wiktionary – brillant",
+        "url": "https://de.wiktionary.org/wiki/brillant"
+      }
+    },
+    {
+      "id": "dd-110",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man das Wort für „feiner Unterschied, Abstufung“ richtig?",
+      "optionen": [
+        "Nüance",
+        "Nuanze",
+        "Nuangse",
+        "Nuance"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wiktionary – Nuance",
+        "url": "https://de.wiktionary.org/wiki/Nuance"
+      }
+    },
+    {
+      "id": "dd-111",
+      "modus": "auswahl",
+      "frage": "Wann beginnt die Adventszeit?",
+      "optionen": [
+        "Immer am 1. Dezember",
+        "Am vierten Sonntag vor dem 1. Weihnachtstag",
+        "Am 11. November",
+        "Am Totensonntag"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Advent",
+        "url": "https://de.wikipedia.org/wiki/Advent"
+      }
+    },
+    {
+      "id": "dd-112",
+      "modus": "auswahl",
+      "frage": "Wie heißt der letzte Tag des Karnevals, direkt vor Aschermittwoch?",
+      "optionen": [
+        "Weiberfastnacht",
+        "Gründonnerstag",
+        "Fastnachtsdienstag",
+        "Fastensonntag"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Fastnachtsdienstag",
+        "url": "https://de.wikipedia.org/wiki/Fastnachtsdienstag"
+      }
+    },
+    {
+      "id": "dd-113",
+      "modus": "auswahl",
+      "frage": "Was meint man, wenn jemand „Tomaten auf den Augen“ hat?",
+      "optionen": [
+        "Er übersieht etwas Offensichtliches",
+        "Er ist sehr müde",
+        "Er hat geweint",
+        "Er ist verliebt"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wiktionary – Tomaten auf den Augen haben",
+        "url": "https://de.wiktionary.org/wiki/Tomaten_auf_den_Augen_haben"
+      }
+    },
+    {
+      "id": "dd-114",
+      "modus": "auswahl",
+      "frage": "Was ist in Norddeutschland ein „Feudel“?",
+      "optionen": [
+        "Ein Regenschirm",
+        "Ein Hausschuh",
+        "Ein Fischbrötchen",
+        "Ein Putzlappen"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wiktionary – Feudel",
+        "url": "https://de.wiktionary.org/wiki/Feudel"
+      }
+    },
+    {
+      "id": "dd-115",
+      "modus": "auswahl",
+      "frage": "An welcher deutschen Forschungsgesellschaft wurde das Musikformat MP3 entwickelt?",
+      "optionen": [
+        "Fraunhofer-Gesellschaft",
+        "Max-Planck-Gesellschaft",
+        "Helmholtz-Gemeinschaft",
+        "Deutsche Forschungsgemeinschaft"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – MP3",
+        "url": "https://de.wikipedia.org/wiki/MP3"
+      }
+    },
+    {
+      "id": "dd-116",
+      "modus": "auswahl",
+      "frage": "Von welchem Komponisten stammt die Melodie der deutschen Nationalhymne?",
+      "optionen": [
+        "Richard Wagner",
+        "Joseph Haydn",
+        "Robert Schumann",
+        "Felix Mendelssohn Bartholdy"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Das Lied der Deutschen",
+        "url": "https://de.wikipedia.org/wiki/Das_Lied_der_Deutschen"
+      }
+    },
+    {
+      "id": "dd-117",
+      "modus": "auswahl",
+      "frage": "Von welchem Bundesland ist Mainz die Hauptstadt?",
+      "optionen": [
+        "Hessen",
+        "Saarland",
+        "Rheinland-Pfalz",
+        "Baden-Württemberg"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Mainz",
+        "url": "https://de.wikipedia.org/wiki/Mainz"
+      }
+    },
+    {
+      "id": "dd-118",
+      "modus": "auswahl",
+      "frage": "Welche Stadt ist die Landeshauptstadt von Niedersachsen?",
+      "optionen": [
+        "Braunschweig",
+        "Osnabrück",
+        "Oldenburg",
+        "Hannover"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Niedersachsen",
+        "url": "https://de.wikipedia.org/wiki/Niedersachsen"
+      }
+    },
+    {
+      "id": "dd-119",
+      "modus": "schaetzen",
+      "frage": "Wie viele gesetzliche Feiertage gelten in ganz Deutschland (bundesweit)?",
+      "einheit": "Feiertage",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Gesetzliche Feiertage in Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Gesetzliche_Feiertage_in_Deutschland"
+      }
+    },
+    {
+      "id": "dd-120",
+      "modus": "schaetzen",
+      "frage": "Für wie viele Jahre wird der Bundespräsident gewählt?",
+      "einheit": "Jahre",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Bundespräsident (Deutschland)",
+        "url": "https://de.wikipedia.org/wiki/Bundespr%C3%A4sident_(Deutschland)"
+      }
+    },
+    {
+      "id": "dd-121",
+      "modus": "schaetzen",
+      "frage": "Welche Telefonnummer wählt man in Deutschland für Feuerwehr und Rettungsdienst?",
+      "einheit": "",
+      "loesung": 112,
+      "quelle": {
+        "titel": "Wikipedia – Notruf 112",
+        "url": "https://de.wikipedia.org/wiki/Notruf_112"
+      }
+    },
+    {
+      "id": "dd-122",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Karten besteht ein Skatblatt?",
+      "einheit": "Karten",
+      "loesung": 32,
+      "quelle": {
+        "titel": "Wikipedia – Skat",
+        "url": "https://de.wikipedia.org/wiki/Skat"
+      }
+    },
+    {
+      "id": "dd-123",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spieler sind bei einem Skatspiel gleichzeitig aktiv beteiligt?",
+      "einheit": "Spieler",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Skat",
+        "url": "https://de.wikipedia.org/wiki/Skat"
+      }
+    },
+    {
+      "id": "dd-124",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kegel stehen beim klassischen Kegeln auf der Bahn?",
+      "einheit": "Kegel",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Kegeln",
+        "url": "https://de.wikipedia.org/wiki/Kegeln"
+      }
+    },
+    {
+      "id": "dd-125",
+      "modus": "schaetzen",
+      "frage": "Wie viele Sitze hat der Bundesrat?",
+      "einheit": "Sitze",
+      "loesung": 69,
+      "quelle": {
+        "titel": "Wikipedia – Bundesrat (Deutschland)",
+        "url": "https://de.wikipedia.org/wiki/Bundesrat_(Deutschland)"
+      }
+    },
+    {
+      "id": "dd-126",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Turm des Ulmer Münsters, der höchste Kirchturm der Welt?",
+      "einheit": "m",
+      "loesung": 161.5,
+      "quelle": {
+        "titel": "Wikipedia – Ulmer Münster",
+        "url": "https://de.wikipedia.org/wiki/Ulmer_M%C3%BCnster"
+      }
+    },
+    {
+      "id": "dd-127",
+      "modus": "schaetzen",
+      "frage": "Wie viele Euro ist der größte Euro-Geldschein wert, der heute noch neu gedruckt wird?",
+      "einheit": "€",
+      "loesung": 200,
+      "erklaerung": "Der 500-Euro-Schein wird nicht mehr ausgegeben, bleibt aber gültig.",
+      "quelle": {
+        "titel": "Wikipedia – Eurobanknoten",
+        "url": "https://de.wikipedia.org/wiki/Eurobanknoten"
+      }
+    },
+    {
+      "id": "dd-128",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie groß ist die Müritz, der größte See, der ganz in Deutschland liegt?",
+      "daten": {
+        "einheit": "km²",
+        "balken": [
+          {
+            "name": "Chiemsee",
+            "wert": 79.9
+          },
+          {
+            "name": "Schweriner See",
+            "wert": 61.54
+          },
+          {
+            "name": "Starnberger See",
+            "wert": 56.36
+          },
+          {
+            "name": "Müritz",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 112.6,
+      "quelle": {
+        "titel": "Wikipedia – Liste der größten Seen in Deutschland",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Seen_in_Deutschland"
+      }
+    },
+    {
+      "id": "dd-129",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurden in Deutschland die fünfstelligen Postleitzahlen eingeführt?",
+      "daten": {
+        "von": 1920,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1993,
+      "quelle": {
+        "titel": "Wikipedia – Postleitzahl (Deutschland)",
+        "url": "https://de.wikipedia.org/wiki/Postleitzahl_(Deutschland)"
+      }
+    },
+    {
+      "id": "dd-130",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr fuhr der ICE zum ersten Mal im Linienbetrieb?",
+      "daten": {
+        "von": 1920,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1991,
+      "quelle": {
+        "titel": "Wikipedia – Intercity-Express",
+        "url": "https://de.wikipedia.org/wiki/Intercity-Express"
+      }
+    },
+    {
+      "id": "dd-131",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien das Kinderbuch von Heinrich Hoffmann, das später „Struwwelpeter“ hieß?",
+      "daten": {
+        "von": 1750,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Unabhängigkeit der USA",
+            "jahr": 1776
+          },
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          }
+        ]
+      },
+      "loesung": 1845,
+      "quelle": {
+        "titel": "Wikipedia – Struwwelpeter",
+        "url": "https://de.wikipedia.org/wiki/Struwwelpeter"
+      }
+    },
+    {
+      "id": "dd-132",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt Hameln, die Stadt des Rattenfängers?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 52.1,
+        "lng": 9.36
+      },
+      "quelle": {
+        "titel": "Wikipedia – Hameln",
+        "url": "https://de.wikipedia.org/wiki/Hameln"
+      }
+    },
+    {
+      "id": "dd-133",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland ragt der Loreley-Felsen über den Rhein?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 50.14,
+        "lng": 7.73
+      },
+      "quelle": {
+        "titel": "Wikipedia – Loreley",
+        "url": "https://de.wikipedia.org/wiki/Loreley"
+      }
+    },
+    {
+      "id": "dd-134",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Schulnoten von der besten zur schlechtesten!",
+      "loesung": [
+        "sehr gut",
+        "gut",
+        "befriedigend",
+        "ausreichend",
+        "mangelhaft",
+        "ungenügend"
+      ],
+      "oben": "beste Note",
+      "unten": "schlechteste Note",
+      "quelle": {
+        "titel": "Wikipedia – Schulnote",
+        "url": "https://de.wikipedia.org/wiki/Schulnote"
+      }
+    },
+    {
+      "id": "dd-135",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Skatkarten nach ihren Augen (Punkten)!",
+      "loesung": [
+        "Ass",
+        "Zehn",
+        "König",
+        "Dame",
+        "Bube"
+      ],
+      "oben": "meiste Augen",
+      "unten": "wenigste Augen",
+      "werte": [
+        "11",
+        "10",
+        "4",
+        "3",
+        "2"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Skat",
+        "url": "https://de.wikipedia.org/wiki/Skat"
+      }
+    },
+    {
+      "id": "dd-136",
+      "modus": "reihenfolge",
+      "frage": "Ordne die deutschen Städte von West nach Ost!",
+      "loesung": [
+        "Aachen",
+        "Köln",
+        "Kassel",
+        "Leipzig",
+        "Görlitz"
+      ],
+      "oben": "westlichste",
+      "unten": "östlichste",
+      "quelle": {
+        "titel": "Wikipedia – Görlitz",
+        "url": "https://de.wikipedia.org/wiki/G%C3%B6rlitz"
+      }
     }
   ],
   "stechfragen": [
@@ -1851,6 +2355,28 @@
       "quelle": {
         "titel": "Wikipedia – Hofbräu München",
         "url": "https://de.wikipedia.org/wiki/Hofbräu_München"
+      }
+    },
+    {
+      "id": "dd-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr gründete Friedrich Fröbel den ersten Kindergarten?",
+      "einheit": "",
+      "loesung": 1840,
+      "quelle": {
+        "titel": "Wikipedia – Friedrich Fröbel",
+        "url": "https://de.wikipedia.org/wiki/Friedrich_Fr%C3%B6bel"
+      }
+    },
+    {
+      "id": "dd-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr zog in Köln der erste organisierte Rosenmontagszug durch die Stadt?",
+      "einheit": "",
+      "loesung": 1823,
+      "quelle": {
+        "titel": "Wikipedia – Kölner Karneval",
+        "url": "https://de.wikipedia.org/wiki/K%C3%B6lner_Karneval"
       }
     }
   ]
