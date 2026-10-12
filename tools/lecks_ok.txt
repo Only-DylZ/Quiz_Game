@@ -833,3 +833,15 @@ chem-115 chem-040 Silber
 chem-130 chem-071 Wolfram
 chem-s01 chem-106 Uran
 chem-124 phys-066 Gummi
+rf-106 phys-s10 1961
+phys-119 chem-042 Wasser
+phys-110 film-s04 1927
+phys-115 phys-064 Druck
+phys-075 phys-103 Proton
+gesch-093 phys-119 1000
+mathe-059 phys-119 1000
+mathe-s07 phys-119 1000
+dd-096 phys-s09 1901
+rf-02 phys-s10 1961
+phys-117 sport-001 Deutschland
+phys-126 sport-001 Deutschland

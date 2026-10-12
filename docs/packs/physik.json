@@ -1637,6 +1637,488 @@
         "titel": "Wikipedia – Schallgeschwindigkeit",
         "url": "https://de.wikipedia.org/wiki/Schallgeschwindigkeit"
       }
+    },
+    {
+      "id": "phys-101",
+      "modus": "auswahl",
+      "frage": "In welcher Einheit misst man die magnetische Flussdichte?",
+      "optionen": [
+        "Volt",
+        "Tesla",
+        "Farad",
+        "Lux"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Tesla (Einheit)",
+        "url": "https://de.wikipedia.org/wiki/Tesla_(Einheit)"
+      }
+    },
+    {
+      "id": "phys-102",
+      "modus": "auswahl",
+      "frage": "Welche SI-Basiseinheit gibt die Lichtstärke an?",
+      "optionen": [
+        "Lux",
+        "Lumen",
+        "Candela",
+        "Watt"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Candela",
+        "url": "https://de.wikipedia.org/wiki/Candela"
+      }
+    },
+    {
+      "id": "phys-103",
+      "modus": "auswahl",
+      "frage": "Welches Teilchen im Atomkern ist positiv geladen?",
+      "optionen": [
+        "Elektron",
+        "Neutron",
+        "Photon",
+        "Proton"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Proton",
+        "url": "https://de.wikipedia.org/wiki/Proton"
+      }
+    },
+    {
+      "id": "phys-104",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Kraft, die man in einem Karussell spürt und die nach außen zu ziehen scheint?",
+      "optionen": [
+        "Zentrifugalkraft",
+        "Corioliskraft",
+        "Reibungskraft",
+        "Auftriebskraft"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Zentrifugalkraft",
+        "url": "https://de.wikipedia.org/wiki/Zentrifugalkraft"
+      }
+    },
+    {
+      "id": "phys-105",
+      "modus": "auswahl",
+      "frage": "Was zeichnet ein Seismograf auf?",
+      "optionen": [
+        "Windstärke",
+        "Erdbebenwellen",
+        "Radioaktivität",
+        "Sonnenstrahlung"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Seismometer",
+        "url": "https://de.wikipedia.org/wiki/Seismometer"
+      }
+    },
+    {
+      "id": "phys-106",
+      "modus": "auswahl",
+      "frage": "Mit welchem Gerät misst man Radioaktivität – es knackt bei jedem Treffer?",
+      "optionen": [
+        "Oszilloskop",
+        "Spektrometer",
+        "Geigerzähler",
+        "Voltmeter"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Geiger-Müller-Zählrohr",
+        "url": "https://de.wikipedia.org/wiki/Geiger-M%C3%BCller-Z%C3%A4hlrohr"
+      }
+    },
+    {
+      "id": "phys-107",
+      "modus": "auswahl",
+      "frage": "Welches elektronische Bauteil lässt Strom nur in eine Richtung durch?",
+      "optionen": [
+        "Widerstand",
+        "Kondensator",
+        "Spule",
+        "Diode"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Diode",
+        "url": "https://de.wikipedia.org/wiki/Diode"
+      }
+    },
+    {
+      "id": "phys-108",
+      "modus": "auswahl",
+      "frage": "Was sagt die berühmte Formel E = mc² aus?",
+      "optionen": [
+        "Masse und Energie sind gleichwertig",
+        "Kraft ist Masse mal Beschleunigung",
+        "Energie ist Kraft mal Weg",
+        "Licht ist schneller als Schall"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Äquivalenz von Masse und Energie",
+        "url": "https://de.wikipedia.org/wiki/%C3%84quivalenz_von_Masse_und_Energie"
+      }
+    },
+    {
+      "id": "phys-109",
+      "modus": "auswahl",
+      "frage": "Wie nennt man es, wenn ein Material bei sehr tiefer Temperatur Strom ganz ohne Widerstand leitet?",
+      "optionen": [
+        "Halbleitung",
+        "Supraleitung",
+        "Induktion",
+        "Isolation"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Supraleiter",
+        "url": "https://de.wikipedia.org/wiki/Supraleiter"
+      }
+    },
+    {
+      "id": "phys-110",
+      "modus": "auswahl",
+      "frage": "Welcher Physiker formulierte 1927 die Unschärferelation?",
+      "optionen": [
+        "Niels Bohr",
+        "Erwin Schrödinger",
+        "Werner Heisenberg",
+        "Paul Dirac"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Heisenbergsche Unschärferelation",
+        "url": "https://de.wikipedia.org/wiki/Heisenbergsche_Unsch%C3%A4rferelation"
+      }
+    },
+    {
+      "id": "phys-111",
+      "modus": "auswahl",
+      "frage": "Welcher Satz besagt, dass Energie weder erzeugt noch vernichtet, sondern nur umgewandelt werden kann?",
+      "optionen": [
+        "Energieerhaltungssatz",
+        "Trägheitsgesetz",
+        "Hebelgesetz",
+        "Gravitationsgesetz"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Energieerhaltungssatz",
+        "url": "https://de.wikipedia.org/wiki/Energieerhaltungssatz"
+      }
+    },
+    {
+      "id": "phys-112",
+      "modus": "auswahl",
+      "frage": "Welche Linse steckt in der Brille eines kurzsichtigen Menschen?",
+      "optionen": [
+        "Sammellinse",
+        "Prisma",
+        "Lupe",
+        "Zerstreuungslinse"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Kurzsichtigkeit",
+        "url": "https://de.wikipedia.org/wiki/Kurzsichtigkeit"
+      }
+    },
+    {
+      "id": "phys-113",
+      "modus": "schaetzen",
+      "frage": "Bis zu welcher Frequenz kann ein junger Mensch Töne hören?",
+      "einheit": "Hz",
+      "loesung": 20000,
+      "quelle": {
+        "titel": "Wikipedia – Hörschwelle",
+        "url": "https://de.wikipedia.org/wiki/H%C3%B6rschwelle"
+      }
+    },
+    {
+      "id": "phys-114",
+      "modus": "schaetzen",
+      "frage": "Wie viele Joule sind eine Kalorie?",
+      "einheit": "Joule",
+      "loesung": 4.184,
+      "quelle": {
+        "titel": "Wikipedia – Kalorie",
+        "url": "https://de.wikipedia.org/wiki/Kalorie"
+      }
+    },
+    {
+      "id": "phys-115",
+      "modus": "schaetzen",
+      "frage": "Alle wie viele Meter Wassertiefe steigt der Druck beim Tauchen um etwa 1 bar?",
+      "einheit": "m",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Hydrostatischer Druck",
+        "url": "https://de.wikipedia.org/wiki/Hydrostatischer_Druck"
+      }
+    },
+    {
+      "id": "phys-116",
+      "modus": "schaetzen",
+      "frage": "Wie schnell fuhr der französische TGV beim Weltrekord 2007 für Züge auf Rädern und Schienen?",
+      "einheit": "km/h",
+      "loesung": 574.8,
+      "quelle": {
+        "titel": "Wikipedia – TGV",
+        "url": "https://de.wikipedia.org/wiki/TGV"
+      }
+    },
+    {
+      "id": "phys-117",
+      "modus": "schaetzen",
+      "frage": "Für wie viel Ampere ist eine übliche Haushaltssicherung in Deutschland ausgelegt?",
+      "einheit": "A",
+      "loesung": 16,
+      "quelle": {
+        "titel": "Wikipedia – Leitungsschutzschalter",
+        "url": "https://de.wikipedia.org/wiki/Leitungsschutzschalter"
+      }
+    },
+    {
+      "id": "phys-118",
+      "modus": "schaetzen",
+      "frage": "Mit wie vielen Umdrehungen pro Minute dreht sich eine Langspielplatte?",
+      "einheit": "U/min",
+      "loesung": 33.3,
+      "erklaerung": "Genau 33⅓ Umdrehungen pro Minute.",
+      "quelle": {
+        "titel": "Wikipedia – Schallplatte",
+        "url": "https://de.wikipedia.org/wiki/Schallplatte"
+      }
+    },
+    {
+      "id": "phys-119",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilogramm wiegt ein Kubikmeter Wasser?",
+      "einheit": "kg",
+      "loesung": 1000,
+      "quelle": {
+        "titel": "Wikipedia – Wasser",
+        "url": "https://de.wikipedia.org/wiki/Wasser"
+      }
+    },
+    {
+      "id": "phys-120",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kelvin hat die kosmische Hintergrundstrahlung, das „Nachglühen“ des Urknalls?",
+      "einheit": "K",
+      "loesung": 2.7,
+      "quelle": {
+        "titel": "Wikipedia – Hintergrundstrahlung",
+        "url": "https://de.wikipedia.org/wiki/Hintergrundstrahlung"
+      }
+    },
+    {
+      "id": "phys-121",
+      "modus": "schaetzen",
+      "frage": "Um wie viel Grad dreht sich die Erde pro Stunde?",
+      "einheit": "Grad",
+      "loesung": 15,
+      "erklaerung": "Eine ganze Drehung dauert 24 Stunden – deshalb sind Zeitzonen meist 15 Grad breit.",
+      "quelle": {
+        "titel": "Wikipedia – Erdrotation",
+        "url": "https://de.wikipedia.org/wiki/Erdrotation"
+      }
+    },
+    {
+      "id": "phys-122",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr baute Alessandro Volta die erste Batterie (Voltasche Säule)?",
+      "daten": {
+        "von": 1700,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Unabhängigkeit der USA",
+            "jahr": 1776
+          },
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          }
+        ]
+      },
+      "loesung": 1800,
+      "quelle": {
+        "titel": "Wikipedia – Voltasche Säule",
+        "url": "https://de.wikipedia.org/wiki/Voltasche_S%C3%A4ule"
+      }
+    },
+    {
+      "id": "phys-123",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr entdeckte Hans Christian Ørsted, dass elektrischer Strom eine Kompassnadel ablenkt?",
+      "daten": {
+        "von": 1700,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Unabhängigkeit der USA",
+            "jahr": 1776
+          },
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          }
+        ]
+      },
+      "loesung": 1820,
+      "quelle": {
+        "titel": "Wikipedia – Hans Christian Ørsted",
+        "url": "https://de.wikipedia.org/wiki/Hans_Christian_%C3%98rsted"
+      }
+    },
+    {
+      "id": "phys-124",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr stellte Niels Bohr sein Atommodell mit Elektronen auf festen Bahnen vor?",
+      "daten": {
+        "von": 1850,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1913,
+      "quelle": {
+        "titel": "Wikipedia – Bohrsches Atommodell",
+        "url": "https://de.wikipedia.org/wiki/Bohrsches_Atommodell"
+      }
+    },
+    {
+      "id": "phys-125",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Kernkraftwerk Tschernobyl, in dem ein Reaktor explodierte?",
+      "daten": {
+        "mitte": [
+          50,
+          20
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 51.39,
+        "lng": 30.1
+      },
+      "quelle": {
+        "titel": "Wikipedia – Kernkraftwerk Tschernobyl",
+        "url": "https://de.wikipedia.org/wiki/Kernkraftwerk_Tschernobyl"
+      }
+    },
+    {
+      "id": "phys-126",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland steht die Kernfusions-Versuchsanlage Wendelstein 7-X?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 54.07,
+        "lng": 13.42
+      },
+      "quelle": {
+        "titel": "Wikipedia – Wendelstein 7-X",
+        "url": "https://de.wikipedia.org/wiki/Wendelstein_7-X"
+      }
+    },
+    {
+      "id": "phys-127",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo wird der internationale Fusionsreaktor ITER gebaut?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 43.71,
+        "lng": 5.76
+      },
+      "quelle": {
+        "titel": "Wikipedia – ITER",
+        "url": "https://de.wikipedia.org/wiki/ITER"
+      }
+    },
+    {
+      "id": "phys-128",
+      "modus": "reihenfolge",
+      "frage": "Ordne die radioaktiven Strahlungsarten danach, wie gut sie Materie durchdringen!",
+      "loesung": [
+        "Gammastrahlung",
+        "Betastrahlung",
+        "Alphastrahlung"
+      ],
+      "oben": "durchdringt am besten",
+      "unten": "durchdringt am schlechtesten",
+      "erklaerung": "Alphastrahlung hält schon ein Blatt Papier auf.",
+      "quelle": {
+        "titel": "Wikipedia – Radioaktivität",
+        "url": "https://de.wikipedia.org/wiki/Radioaktivit%C3%A4t"
+      }
+    },
+    {
+      "id": "phys-129",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Schichten der Erde von außen nach innen!",
+      "loesung": [
+        "Erdkruste",
+        "Erdmantel",
+        "Äußerer Kern",
+        "Innerer Kern"
+      ],
+      "oben": "außen",
+      "unten": "innen",
+      "quelle": {
+        "titel": "Wikipedia – Schalenbau der Erde",
+        "url": "https://de.wikipedia.org/wiki/Schalenbau_der_Erde"
+      }
+    },
+    {
+      "id": "phys-130",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Winde nach ihrer Stärke auf der Beaufortskala!",
+      "loesung": [
+        "Orkan",
+        "Sturm",
+        "Frische Brise",
+        "Windstille"
+      ],
+      "oben": "am stärksten",
+      "unten": "am schwächsten",
+      "quelle": {
+        "titel": "Wikipedia – Beaufortskala",
+        "url": "https://de.wikipedia.org/wiki/Beaufortskala"
+      }
     }
   ],
   "stechfragen": [
@@ -1726,6 +2208,28 @@
       "quelle": {
         "titel": "Wikipedia – Ole Rømer",
         "url": "https://de.wikipedia.org/wiki/Ole_Rømer"
+      }
+    },
+    {
+      "id": "phys-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde zum ersten Mal der Nobelpreis für Physik verliehen?",
+      "einheit": "",
+      "loesung": 1901,
+      "quelle": {
+        "titel": "Wikipedia – Nobelpreis für Physik",
+        "url": "https://de.wikipedia.org/wiki/Nobelpreis_f%C3%BCr_Physik"
+      }
+    },
+    {
+      "id": "phys-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr lieferte mit dem Versuchsatomkraftwerk Kahl zum ersten Mal ein deutsches Kernkraftwerk Strom?",
+      "einheit": "",
+      "loesung": 1961,
+      "quelle": {
+        "titel": "Wikipedia – Versuchsatomkraftwerk Kahl",
+        "url": "https://de.wikipedia.org/wiki/Versuchsatomkraftwerk_Kahl"
       }
     }
   ]
