@@ -1649,6 +1649,487 @@
         "titel": "Wikipedia – DreamWorks Animation",
         "url": "https://de.wikipedia.org/wiki/DreamWorks_Animation"
       }
+    },
+    {
+      "id": "film-101",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Hund von Charlie Brown in den „Peanuts“?",
+      "optionen": [
+        "Snoopy",
+        "Pluto",
+        "Scooby-Doo",
+        "Odie"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Snoopy",
+        "url": "https://de.wikipedia.org/wiki/Snoopy"
+      }
+    },
+    {
+      "id": "film-102",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Prinzessin, die sich in „Shrek“ in den Oger verliebt?",
+      "optionen": [
+        "Aurora",
+        "Fiona",
+        "Merida",
+        "Jasmin"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Shrek – Der tollkühne Held",
+        "url": "https://de.wikipedia.org/wiki/Shrek_%E2%80%93_Der_tollk%C3%BChne_Held"
+      }
+    },
+    {
+      "id": "film-103",
+      "modus": "auswahl",
+      "frage": "In welcher Serie werden die Familien Dunphy, Pritchett und Tucker-Pritchett begleitet?",
+      "optionen": [
+        "How I Met Your Mother",
+        "Two and a Half Men",
+        "Modern Family",
+        "The Middle"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Modern Family",
+        "url": "https://de.wikipedia.org/wiki/Modern_Family"
+      }
+    },
+    {
+      "id": "film-104",
+      "modus": "auswahl",
+      "frage": "Wer spielte Neo in „Matrix“?",
+      "optionen": [
+        "Brad Pitt",
+        "Tom Cruise",
+        "Will Smith",
+        "Keanu Reeves"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Matrix (Film)",
+        "url": "https://de.wikipedia.org/wiki/Matrix_(Film)"
+      }
+    },
+    {
+      "id": "film-105",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Königreich, in dem „Die Eiskönigin“ spielt?",
+      "optionen": [
+        "Arendelle",
+        "Corona",
+        "Atlantica",
+        "Agrabah"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Die Eiskönigin – Völlig unverfroren",
+        "url": "https://de.wikipedia.org/wiki/Die_Eisk%C3%B6nigin_%E2%80%93_V%C3%B6llig_unverfroren"
+      }
+    },
+    {
+      "id": "film-106",
+      "modus": "auswahl",
+      "frage": "Wer spielte in den „X-Men“-Filmen den Mutanten Wolverine?",
+      "optionen": [
+        "Chris Hemsworth",
+        "Hugh Jackman",
+        "Ryan Reynolds",
+        "Chris Evans"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Hugh Jackman",
+        "url": "https://de.wikipedia.org/wiki/Hugh_Jackman"
+      }
+    },
+    {
+      "id": "film-107",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Wüstenplanet in „Dune“?",
+      "optionen": [
+        "Tatooine",
+        "Krypton",
+        "Arrakis",
+        "Vulkan"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Dune: Part One",
+        "url": "https://de.wikipedia.org/wiki/Dune:_Part_One"
+      }
+    },
+    {
+      "id": "film-108",
+      "modus": "auswahl",
+      "frage": "Mit welchem Zauberspruch ruft man in „Harry Potter“ einen silbrigen Schutzgeist gegen Dementoren herbei?",
+      "optionen": [
+        "Avada Kedavra",
+        "Lumos",
+        "Accio",
+        "Expecto Patronum"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Begriffe der Harry-Potter-Romane",
+        "url": "https://de.wikipedia.org/wiki/Begriffe_der_Harry-Potter-Romane"
+      }
+    },
+    {
+      "id": "film-109",
+      "modus": "auswahl",
+      "frage": "Von welchem Gleis am Bahnhof King's Cross fährt der Hogwarts-Express ab?",
+      "optionen": [
+        "Gleis 7½",
+        "Gleis 9¾",
+        "Gleis 10¼",
+        "Gleis 3¾"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Bahnhof King’s Cross",
+        "url": "https://de.wikipedia.org/wiki/Bahnhof_King%E2%80%99s_Cross"
+      }
+    },
+    {
+      "id": "film-110",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Netflix-Serie von 2020 über eine junge Schachspielerin?",
+      "optionen": [
+        "Das Damengambit",
+        "The Crown",
+        "Bridgerton",
+        "Emily in Paris"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Das Damengambit",
+        "url": "https://de.wikipedia.org/wiki/Das_Damengambit"
+      }
+    },
+    {
+      "id": "film-111",
+      "modus": "auswahl",
+      "frage": "Wer führte Regie bei „Der Pate“?",
+      "optionen": [
+        "Martin Scorsese",
+        "Brian De Palma",
+        "Francis Ford Coppola",
+        "Ridley Scott"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Der Pate",
+        "url": "https://de.wikipedia.org/wiki/Der_Pate"
+      }
+    },
+    {
+      "id": "film-112",
+      "modus": "auswahl",
+      "frage": "Was für ein Tier ist Balu im „Dschungelbuch“?",
+      "optionen": [
+        "Ein Panther",
+        "Ein Tiger",
+        "Ein Affe",
+        "Ein Bär"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Das Dschungelbuch (1967)",
+        "url": "https://de.wikipedia.org/wiki/Das_Dschungelbuch_(1967)"
+      }
+    },
+    {
+      "id": "film-113",
+      "modus": "schaetzen",
+      "frage": "Wie alt ist Harry Potter, als er erfährt, dass er ein Zauberer ist?",
+      "einheit": "Jahre",
+      "loesung": 11,
+      "quelle": {
+        "titel": "Wikipedia – Harry Potter und der Stein der Weisen",
+        "url": "https://de.wikipedia.org/wiki/Harry_Potter_und_der_Stein_der_Weisen"
+      }
+    },
+    {
+      "id": "film-114",
+      "modus": "schaetzen",
+      "frage": "Wie viele Oscars gewann der südkoreanische Film „Parasite“?",
+      "einheit": "Oscars",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Parasite (Film)",
+        "url": "https://de.wikipedia.org/wiki/Parasite_(Film)"
+      }
+    },
+    {
+      "id": "film-115",
+      "modus": "schaetzen",
+      "frage": "Wie viele Oscars gewann „Schindlers Liste“?",
+      "einheit": "Oscars",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Schindlers Liste",
+        "url": "https://de.wikipedia.org/wiki/Schindlers_Liste"
+      }
+    },
+    {
+      "id": "film-116",
+      "modus": "schaetzen",
+      "frage": "Wie viele Folgen hat die erste Staffel von „Squid Game“?",
+      "einheit": "Folgen",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Squid Game",
+        "url": "https://de.wikipedia.org/wiki/Squid_Game"
+      }
+    },
+    {
+      "id": "film-117",
+      "modus": "schaetzen",
+      "frage": "Wie viele Jahre liegen zwischen „Blade Runner“ und „Blade Runner 2049“?",
+      "einheit": "Jahre",
+      "loesung": 35,
+      "quelle": {
+        "titel": "Wikipedia – Blade Runner 2049",
+        "url": "https://de.wikipedia.org/wiki/Blade_Runner_2049"
+      }
+    },
+    {
+      "id": "film-118",
+      "modus": "schaetzen",
+      "frage": "Wie viele Staffeln hat die Arztserie „Dr. House“?",
+      "einheit": "Staffeln",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Dr. House",
+        "url": "https://de.wikipedia.org/wiki/Dr._House"
+      }
+    },
+    {
+      "id": "film-119",
+      "modus": "schaetzen",
+      "frage": "Wie viele Staffeln hat die Netflix-Serie „The Crown“ über die britische Königsfamilie?",
+      "einheit": "Staffeln",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – The Crown",
+        "url": "https://de.wikipedia.org/wiki/The_Crown"
+      }
+    },
+    {
+      "id": "film-120",
+      "modus": "schaetzen",
+      "frage": "Wie viele Folgen hat die Serie „Sex and the City“?",
+      "einheit": "Folgen",
+      "loesung": 94,
+      "quelle": {
+        "titel": "Wikipedia – Sex and the City",
+        "url": "https://de.wikipedia.org/wiki/Sex_and_the_City"
+      }
+    },
+    {
+      "id": "film-121",
+      "modus": "schaetzen",
+      "frage": "Wie viele Oscars gewann der Zeichentrickfilm „Der König der Löwen“?",
+      "einheit": "Oscars",
+      "loesung": 2,
+      "erklaerung": "Für die Filmmusik und den Song „Can You Feel the Love Tonight“.",
+      "quelle": {
+        "titel": "Wikipedia – Der König der Löwen",
+        "url": "https://de.wikipedia.org/wiki/Der_K%C3%B6nig_der_L%C3%B6wen"
+      }
+    },
+    {
+      "id": "film-122",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam der erste „King Kong“-Film ins Kino?",
+      "daten": {
+        "von": 1850,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1933,
+      "quelle": {
+        "titel": "Wikipedia – King Kong und die weiße Frau",
+        "url": "https://de.wikipedia.org/wiki/King_Kong_und_die_wei%C3%9Fe_Frau"
+      }
+    },
+    {
+      "id": "film-123",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr ging die Videoplattform YouTube online?",
+      "daten": {
+        "von": 1920,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Fußball-WM in Katar",
+            "jahr": 2022
+          }
+        ]
+      },
+      "loesung": 2005,
+      "quelle": {
+        "titel": "Wikipedia – YouTube",
+        "url": "https://de.wikipedia.org/wiki/YouTube"
+      }
+    },
+    {
+      "id": "film-124",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde der Oscar für den besten Animationsfilm zum ersten Mal verliehen?",
+      "daten": {
+        "von": 1920,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Fußball-WM in Katar",
+            "jahr": 2022
+          }
+        ]
+      },
+      "loesung": 2002,
+      "quelle": {
+        "titel": "Wikipedia – Oscar/Bester animierter Spielfilm",
+        "url": "https://de.wikipedia.org/wiki/Oscar/Bester_animierter_Spielfilm"
+      }
+    },
+    {
+      "id": "film-125",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Matmata, wo Szenen auf dem Wüstenplaneten Tatooine aus „Star Wars“ gedreht wurden?",
+      "daten": {
+        "mitte": [
+          38,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 33.54,
+        "lng": 9.97
+      },
+      "quelle": {
+        "titel": "Wikipedia – Matmata",
+        "url": "https://de.wikipedia.org/wiki/Matmata"
+      }
+    },
+    {
+      "id": "film-126",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Salzburg, Drehort von „Meine Lieder – meine Träume“?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 47.8,
+        "lng": 13.04
+      },
+      "quelle": {
+        "titel": "Wikipedia – Meine Lieder – meine Träume",
+        "url": "https://de.wikipedia.org/wiki/Meine_Lieder_%E2%80%93_meine_Tr%C3%A4ume"
+      }
+    },
+    {
+      "id": "film-127",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt das Monument Valley mit seinen roten Tafelbergen, Kulisse vieler Western?",
+      "daten": {
+        "mitte": [
+          40,
+          -98
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 36.98,
+        "lng": -110.1
+      },
+      "quelle": {
+        "titel": "Wikipedia – Monument Valley",
+        "url": "https://de.wikipedia.org/wiki/Monument_Valley"
+      }
+    },
+    {
+      "id": "film-128",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Filme der „Herr der Ringe“-Trilogie in der richtigen Reihenfolge!",
+      "loesung": [
+        "Die Gefährten",
+        "Die zwei Türme",
+        "Die Rückkehr des Königs"
+      ],
+      "oben": "erster Teil",
+      "unten": "letzter Teil",
+      "quelle": {
+        "titel": "Wikipedia – Der Herr der Ringe (Filmtrilogie)",
+        "url": "https://de.wikipedia.org/wiki/Der_Herr_der_Ringe_(Filmtrilogie)"
+      }
+    },
+    {
+      "id": "film-129",
+      "modus": "reihenfolge",
+      "frage": "Ordne die „Indiana Jones“-Filme nach ihrem Erscheinen!",
+      "loesung": [
+        "Jäger des verlorenen Schatzes",
+        "Der Tempel des Todes",
+        "Der letzte Kreuzzug",
+        "Das Königreich des Kristallschädels"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Indiana Jones",
+        "url": "https://de.wikipedia.org/wiki/Indiana_Jones"
+      }
+    },
+    {
+      "id": "film-130",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Schauspieler nach ihrem Geburtsjahr!",
+      "loesung": [
+        "Clint Eastwood",
+        "Meryl Streep",
+        "Brad Pitt",
+        "Leonardo DiCaprio",
+        "Zendaya"
+      ],
+      "oben": "am ältesten",
+      "unten": "am jüngsten",
+      "quelle": {
+        "titel": "Wikipedia – Meryl Streep",
+        "url": "https://de.wikipedia.org/wiki/Meryl_Streep"
+      }
     }
   ],
   "stechfragen": [
@@ -1738,6 +2219,28 @@
       "quelle": {
         "titel": "Wikipedia – Psycho (1960)",
         "url": "https://de.wikipedia.org/wiki/Psycho_(1960)"
+      }
+    },
+    {
+      "id": "film-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr kam Friedrich Wilhelm Murnaus Stummfilm „Nosferatu“ ins Kino?",
+      "einheit": "",
+      "loesung": 1922,
+      "quelle": {
+        "titel": "Wikipedia – Nosferatu – Eine Symphonie des Grauens",
+        "url": "https://de.wikipedia.org/wiki/Nosferatu_%E2%80%93_Eine_Symphonie_des_Grauens"
+      }
+    },
+    {
+      "id": "film-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr zeigten die Brüder Lumière in Paris zum ersten Mal öffentlich Filme gegen Eintritt?",
+      "einheit": "",
+      "loesung": 1895,
+      "quelle": {
+        "titel": "Wikipedia – Auguste und Louis Lumière",
+        "url": "https://de.wikipedia.org/wiki/Auguste_und_Louis_Lumi%C3%A8re"
       }
     }
   ]
