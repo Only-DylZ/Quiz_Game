@@ -1828,6 +1828,505 @@
         "titel": "Wikipedia – Liste der tiefsten Seen",
         "url": "https://de.wikipedia.org/wiki/Liste_der_tiefsten_Seen"
       }
+    },
+    {
+      "id": "geo-108",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Kenia?",
+      "optionen": [
+        "Nairobi",
+        "Mombasa",
+        "Addis Abeba",
+        "Kampala"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Kenia",
+        "url": "https://de.wikipedia.org/wiki/Kenia"
+      }
+    },
+    {
+      "id": "geo-109",
+      "modus": "auswahl",
+      "frage": "Welche Stadt ist der Sitz von Regierung und Parlament der Schweiz?",
+      "optionen": [
+        "Zürich",
+        "Bern",
+        "Genf",
+        "Basel"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Bern",
+        "url": "https://de.wikipedia.org/wiki/Bern"
+      }
+    },
+    {
+      "id": "geo-110",
+      "modus": "auswahl",
+      "frage": "Welcher Fluss bildet einen großen Teil der Grenze zwischen den USA und Mexiko?",
+      "optionen": [
+        "Colorado",
+        "Mississippi",
+        "Rio Grande",
+        "Missouri"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Rio Grande",
+        "url": "https://de.wikipedia.org/wiki/Rio_Grande"
+      }
+    },
+    {
+      "id": "geo-111",
+      "modus": "auswahl",
+      "frage": "In welchem Land liegt die Ha-Long-Bucht mit ihren Tausenden Kalksteinfelsen?",
+      "optionen": [
+        "Thailand",
+        "Philippinen",
+        "Malaysia",
+        "Vietnam"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Ha-Long-Bucht",
+        "url": "https://de.wikipedia.org/wiki/Ha-Long-Bucht"
+      }
+    },
+    {
+      "id": "geo-112",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Pakistan?",
+      "optionen": [
+        "Islamabad",
+        "Karatschi",
+        "Lahore",
+        "Kabul"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Pakistan",
+        "url": "https://de.wikipedia.org/wiki/Pakistan"
+      }
+    },
+    {
+      "id": "geo-113",
+      "modus": "auswahl",
+      "frage": "Welches Gebirge gilt traditionell als Grenze zwischen Europa und Asien?",
+      "optionen": [
+        "Karpaten",
+        "Ural",
+        "Altai",
+        "Tatra"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Ural",
+        "url": "https://de.wikipedia.org/wiki/Ural"
+      }
+    },
+    {
+      "id": "geo-114",
+      "modus": "auswahl",
+      "frage": "In welchem Land liegt die Hafenstadt Valparaíso?",
+      "optionen": [
+        "Peru",
+        "Argentinien",
+        "Chile",
+        "Uruguay"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Valparaíso",
+        "url": "https://de.wikipedia.org/wiki/Valpara%C3%ADso"
+      }
+    },
+    {
+      "id": "geo-115",
+      "modus": "auswahl",
+      "frage": "In welchem europäischen Kleinstaat ist Katalanisch die einzige Amtssprache?",
+      "optionen": [
+        "Monaco",
+        "San Marino",
+        "Liechtenstein",
+        "Andorra"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Andorra",
+        "url": "https://de.wikipedia.org/wiki/Andorra"
+      }
+    },
+    {
+      "id": "geo-116",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Tiefseegraben mit der tiefsten bekannten Stelle der Weltmeere?",
+      "optionen": [
+        "Tongagraben",
+        "Marianengraben",
+        "Atacamagraben",
+        "Kurilengraben"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Marianengraben",
+        "url": "https://de.wikipedia.org/wiki/Marianengraben"
+      }
+    },
+    {
+      "id": "geo-117",
+      "modus": "auswahl",
+      "frage": "Welcher Fluss fließt durch London?",
+      "optionen": [
+        "Severn",
+        "Mersey",
+        "Themse",
+        "Tyne"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Themse",
+        "url": "https://de.wikipedia.org/wiki/Themse"
+      }
+    },
+    {
+      "id": "geo-118",
+      "modus": "auswahl",
+      "frage": "In welchem Land liegt die Region Transsilvanien (Siebenbürgen)?",
+      "optionen": [
+        "Ungarn",
+        "Bulgarien",
+        "Serbien",
+        "Rumänien"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Siebenbürgen",
+        "url": "https://de.wikipedia.org/wiki/Siebenb%C3%BCrgen"
+      }
+    },
+    {
+      "id": "geo-119",
+      "modus": "auswahl",
+      "frage": "Welcher Ozean liegt zwischen Afrika und Australien?",
+      "optionen": [
+        "Indischer Ozean",
+        "Atlantischer Ozean",
+        "Pazifischer Ozean",
+        "Arktischer Ozean"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Indischer Ozean",
+        "url": "https://de.wikipedia.org/wiki/Indischer_Ozean"
+      }
+    },
+    {
+      "id": "geo-120",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Olymp, der höchste Berg Griechenlands?",
+      "einheit": "m",
+      "loesung": 2918,
+      "quelle": {
+        "titel": "Wikipedia – Olymp",
+        "url": "https://de.wikipedia.org/wiki/Olymp"
+      }
+    },
+    {
+      "id": "geo-121",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Hauptinseln besteht der US-Bundesstaat Hawaii?",
+      "einheit": "Inseln",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Hawaii",
+        "url": "https://de.wikipedia.org/wiki/Hawaii"
+      }
+    },
+    {
+      "id": "geo-122",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Feldberg, der höchste Berg im Schwarzwald?",
+      "einheit": "m",
+      "loesung": 1493,
+      "quelle": {
+        "titel": "Wikipedia – Feldberg (Schwarzwald)",
+        "url": "https://de.wikipedia.org/wiki/Feldberg_(Schwarzwald)"
+      }
+    },
+    {
+      "id": "geo-123",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bundesländer hat Österreich?",
+      "einheit": "Bundesländer",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Österreich",
+        "url": "https://de.wikipedia.org/wiki/%C3%96sterreich"
+      }
+    },
+    {
+      "id": "geo-124",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Tafelberg über Kapstadt?",
+      "einheit": "m",
+      "loesung": 1085,
+      "quelle": {
+        "titel": "Wikipedia – Tafelberg (Südafrika)",
+        "url": "https://de.wikipedia.org/wiki/Tafelberg_(S%C3%BCdafrika)"
+      }
+    },
+    {
+      "id": "geo-125",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Vesuv bei Neapel?",
+      "einheit": "m",
+      "loesung": 1281,
+      "quelle": {
+        "titel": "Wikipedia – Vesuv",
+        "url": "https://de.wikipedia.org/wiki/Vesuv"
+      }
+    },
+    {
+      "id": "geo-126",
+      "modus": "schaetzen",
+      "frage": "An wie viele Staaten grenzt das europäische Festland von Frankreich?",
+      "einheit": "Staaten",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Frankreich",
+        "url": "https://de.wikipedia.org/wiki/Frankreich"
+      }
+    },
+    {
+      "id": "geo-127",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Vaalserberg, der höchste Punkt der Niederlande auf dem europäischen Festland?",
+      "einheit": "m",
+      "loesung": 322,
+      "quelle": {
+        "titel": "Wikipedia – Vaalserberg",
+        "url": "https://de.wikipedia.org/wiki/Vaalserberg"
+      }
+    },
+    {
+      "id": "geo-128",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist die Fläche des Saarlands, des kleinsten Flächenlandes Deutschlands?",
+      "einheit": "km²",
+      "loesung": 2570,
+      "quelle": {
+        "titel": "Wikipedia – Saarland",
+        "url": "https://de.wikipedia.org/wiki/Saarland"
+      }
+    },
+    {
+      "id": "geo-129",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie groß ist die Fläche des Eriesees?",
+      "daten": {
+        "einheit": "km²",
+        "balken": [
+          {
+            "name": "Oberer See",
+            "wert": 82100
+          },
+          {
+            "name": "Huronsee",
+            "wert": 59600
+          },
+          {
+            "name": "Michigansee",
+            "wert": 58000
+          },
+          {
+            "name": "Eriesee",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 25700,
+      "quelle": {
+        "titel": "Wikipedia – Große Seen",
+        "url": "https://de.wikipedia.org/wiki/Gro%C3%9Fe_Seen"
+      }
+    },
+    {
+      "id": "geo-130",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Wie groß ist die Fläche von Tschechien?",
+      "daten": {
+        "einheit": "km²",
+        "balken": [
+          {
+            "name": "Polen",
+            "wert": 312696
+          },
+          {
+            "name": "Österreich",
+            "wert": 83879
+          },
+          {
+            "name": "Schweiz",
+            "wert": 41285
+          },
+          {
+            "name": "Tschechien",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 78871,
+      "quelle": {
+        "titel": "Wikipedia – Tschechien",
+        "url": "https://de.wikipedia.org/wiki/Tschechien"
+      }
+    },
+    {
+      "id": "geo-131",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr verkaufte Russland Alaska an die USA?",
+      "daten": {
+        "von": 1750,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Unabhängigkeit der USA",
+            "jahr": 1776
+          },
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          }
+        ]
+      },
+      "loesung": 1867,
+      "quelle": {
+        "titel": "Wikipedia – Alaska Purchase",
+        "url": "https://de.wikipedia.org/wiki/Alaska_Purchase"
+      }
+    },
+    {
+      "id": "geo-132",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr standen zum ersten Mal Menschen auf dem Gipfel des Mount Everest?",
+      "daten": {
+        "von": 1900,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1953,
+      "quelle": {
+        "titel": "Wikipedia – Mount Everest",
+        "url": "https://de.wikipedia.org/wiki/Mount_Everest"
+      }
+    },
+    {
+      "id": "geo-133",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Lhasa, die Hauptstadt Tibets?",
+      "daten": {
+        "mitte": [
+          35,
+          100
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 29.65,
+        "lng": 91.13
+      },
+      "quelle": {
+        "titel": "Wikipedia – Lhasa",
+        "url": "https://de.wikipedia.org/wiki/Lhasa"
+      }
+    },
+    {
+      "id": "geo-134",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Insel Sansibar?",
+      "daten": {
+        "mitte": [
+          0,
+          25
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -6.16,
+        "lng": 39.19
+      },
+      "quelle": {
+        "titel": "Wikipedia – Unguja",
+        "url": "https://de.wikipedia.org/wiki/Unguja"
+      }
+    },
+    {
+      "id": "geo-135",
+      "modus": "reihenfolge",
+      "frage": "Ordne diese Länder nach ihrer Fläche – vom größten zum kleinsten!",
+      "loesung": [
+        "Kanada",
+        "Argentinien",
+        "Mexiko",
+        "Japan"
+      ],
+      "oben": "größtes",
+      "unten": "kleinstes",
+      "quelle": {
+        "titel": "Wikipedia – Liste der Staaten der Erde",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Staaten_der_Erde"
+      }
+    },
+    {
+      "id": "geo-136",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Gebirge nach der Höhe ihres höchsten Berges!",
+      "loesung": [
+        "Himalaya",
+        "Anden",
+        "Alpen",
+        "Schwarzwald"
+      ],
+      "oben": "höchster Gipfel",
+      "unten": "niedrigster Gipfel",
+      "quelle": {
+        "titel": "Wikipedia – Liste der höchsten Berge der Erde",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_h%C3%B6chsten_Berge_der_Erde"
+      }
+    },
+    {
+      "id": "geo-137",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Hauptstädte von West nach Ost!",
+      "loesung": [
+        "Dublin",
+        "Brüssel",
+        "Wien",
+        "Budapest",
+        "Bukarest"
+      ],
+      "oben": "westlichste",
+      "unten": "östlichste",
+      "quelle": {
+        "titel": "Wikipedia – Liste der Hauptstädte Europas",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Hauptst%C3%A4dte_Europas"
+      }
     }
   ],
   "stechfragen": [
@@ -1917,6 +2416,28 @@
       "quelle": {
         "titel": "Wikipedia – Grenze zwischen Kanada und den Vereinigten Staaten",
         "url": "https://de.wikipedia.org/wiki/Grenze_zwischen_Kanada_und_den_Vereinigten_Staaten"
+      }
+    },
+    {
+      "id": "geo-s09",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist die Seine in Frankreich?",
+      "einheit": "km",
+      "loesung": 777,
+      "quelle": {
+        "titel": "Wikipedia – Seine",
+        "url": "https://de.wikipedia.org/wiki/Seine"
+      }
+    },
+    {
+      "id": "geo-s10",
+      "modus": "schaetzen",
+      "frage": "Wie hoch ist der Watzmann in den Berchtesgadener Alpen?",
+      "einheit": "m",
+      "loesung": 2713,
+      "quelle": {
+        "titel": "Wikipedia – Watzmann",
+        "url": "https://de.wikipedia.org/wiki/Watzmann"
       }
     }
   ]
