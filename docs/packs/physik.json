@@ -1475,6 +1475,168 @@
         "titel": "Wikipedia – Erdatmosphäre",
         "url": "https://de.wikipedia.org/wiki/Erdatmosphäre"
       }
+    },
+    {
+      "id": "phys-091",
+      "modus": "auswahl",
+      "frage": "Mit welchem Gerät misst man die Luftfeuchtigkeit?",
+      "optionen": [
+        "Barometer",
+        "Hygrometer",
+        "Tachometer",
+        "Seismograf"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Hygrometer",
+        "url": "https://de.wikipedia.org/wiki/Hygrometer"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "phys-092",
+      "modus": "auswahl",
+      "frage": "Warum fühlt sich Metall kälter an als Holz, obwohl beide gleich warm sind?",
+      "optionen": [
+        "Metall ist wirklich kälter",
+        "Metall ist schwerer",
+        "Metall leitet Wärme besser ab",
+        "Metall ist glatter"
+      ],
+      "erklaerung": "Metall zieht die Wärme schneller aus der Hand – das fühlt sich kalt an.",
+      "quelle": {
+        "titel": "Wikipedia – Wärmeleitfähigkeit",
+        "url": "https://de.wikipedia.org/wiki/Wärmeleitfähigkeit"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "phys-093",
+      "modus": "auswahl",
+      "frage": "Was passiert mit dem Siedepunkt von Wasser auf einem hohen Berg?",
+      "optionen": [
+        "Er sinkt",
+        "Er steigt",
+        "Er bleibt gleich",
+        "Wasser kann dort nicht sieden"
+      ],
+      "erklaerung": "Der Luftdruck ist niedriger – Wasser siedet schon unter 100 °C.",
+      "quelle": {
+        "titel": "Wikipedia – Siedepunkt",
+        "url": "https://de.wikipedia.org/wiki/Siedepunkt"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "phys-094",
+      "modus": "auswahl",
+      "frage": "Wie nennt man die direkte Umwandlung von Sonnenlicht in elektrischen Strom?",
+      "optionen": [
+        "Elektrolyse",
+        "Photosynthese",
+        "Induktion",
+        "Photovoltaik"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Photovoltaik",
+        "url": "https://de.wikipedia.org/wiki/Photovoltaik"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "phys-095",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zentimeter beträgt die Wellenlänge der Strahlung in einem Haushalts-Mikrowellenherd?",
+      "einheit": "cm",
+      "loesung": 12.2,
+      "erklaerung": "Bei einer Frequenz von 2,45 GHz.",
+      "quelle": {
+        "titel": "Wikipedia – Mikrowellenherd",
+        "url": "https://de.wikipedia.org/wiki/Mikrowellenherd"
+      }
+    },
+    {
+      "id": "phys-096",
+      "modus": "schaetzen",
+      "frage": "Welche Frequenz hat der tiefste Ton eines normalen Klaviers (Subkontra-A)?",
+      "einheit": "Hz",
+      "loesung": 27.5,
+      "quelle": {
+        "titel": "Wikipedia – Frequenzen der gleichstufigen Stimmung",
+        "url": "https://de.wikipedia.org/wiki/Frequenzen_der_gleichstufigen_Stimmung"
+      }
+    },
+    {
+      "id": "phys-097",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilometer pro Sekunde legt die Erde auf ihrer Bahn um die Sonne zurück?",
+      "einheit": "km/s",
+      "loesung": 29.8,
+      "quelle": {
+        "titel": "Wikipedia – Erde",
+        "url": "https://de.wikipedia.org/wiki/Erde"
+      }
+    },
+    {
+      "id": "phys-098",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr entdeckte Galileo Galilei die vier großen Jupitermonde?",
+      "daten": {
+        "von": 1500,
+        "bis": 1850,
+        "ereignisse": [
+          {
+            "name": "Tod von Isaac Newton",
+            "jahr": 1727
+          },
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          }
+        ]
+      },
+      "loesung": 1610,
+      "quelle": {
+        "titel": "Wikipedia – Galileische Monde",
+        "url": "https://de.wikipedia.org/wiki/Galileische_Monde"
+      }
+    },
+    {
+      "id": "phys-099",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt Würzburg, wo Wilhelm Conrad Röntgen die nach ihm benannten Strahlen entdeckte?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 49.79,
+        "lng": 9.95
+      },
+      "quelle": {
+        "titel": "Wikipedia – Wilhelm Conrad Röntgen",
+        "url": "https://de.wikipedia.org/wiki/Wilhelm_Conrad_Röntgen"
+      }
+    },
+    {
+      "id": "phys-100",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Stoffe danach, wie schnell sich Schall in ihnen ausbreitet!",
+      "loesung": [
+        "Stahl",
+        "Wasser",
+        "Luft"
+      ],
+      "oben": "am schnellsten",
+      "unten": "am langsamsten",
+      "quelle": {
+        "titel": "Wikipedia – Schallgeschwindigkeit",
+        "url": "https://de.wikipedia.org/wiki/Schallgeschwindigkeit"
+      }
     }
   ],
   "stechfragen": [
@@ -1553,6 +1715,17 @@
       "quelle": {
         "titel": "Wikipedia – Kilogramm",
         "url": "https://de.wikipedia.org/wiki/Kilogramm"
+      }
+    },
+    {
+      "id": "phys-s08",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr bestimmte Ole Rømer als Erster die Lichtgeschwindigkeit?",
+      "einheit": "",
+      "loesung": 1676,
+      "quelle": {
+        "titel": "Wikipedia – Ole Rømer",
+        "url": "https://de.wikipedia.org/wiki/Ole_Rømer"
       }
     }
   ]

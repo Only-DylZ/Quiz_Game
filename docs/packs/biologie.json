@@ -1472,6 +1472,168 @@
         "titel": "Wikipedia – Zelle (Biologie)",
         "url": "https://de.wikipedia.org/wiki/Zelle_(Biologie)"
       }
+    },
+    {
+      "id": "bio-091",
+      "modus": "auswahl",
+      "frage": "Welches innere Organ kann nachwachsen, wenn ein Teil davon entfernt wurde?",
+      "optionen": [
+        "Herz",
+        "Leber",
+        "Gehirn",
+        "Niere"
+      ],
+      "erklaerung": "Schon ein Viertel der Leber kann wieder zur vollen Größe heranwachsen.",
+      "quelle": {
+        "titel": "Wikipedia – Leber",
+        "url": "https://de.wikipedia.org/wiki/Leber"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "bio-092",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Vorgang, bei dem Hefe Zucker zu Alkohol abbaut?",
+      "optionen": [
+        "Osmose",
+        "Photosynthese",
+        "Gärung",
+        "Verdauung"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Alkoholische Gärung",
+        "url": "https://de.wikipedia.org/wiki/Alkoholische_Gärung"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "bio-093",
+      "modus": "auswahl",
+      "frage": "Welche Tiere übertragen in Deutschland vor allem die Borreliose?",
+      "optionen": [
+        "Stechmücken",
+        "Flöhe",
+        "Bremsen",
+        "Zecken"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Lyme-Borreliose",
+        "url": "https://de.wikipedia.org/wiki/Lyme-Borreliose"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "bio-094",
+      "modus": "auswahl",
+      "frage": "Welches Molekül bringt die Bauanleitung für Proteine vom Zellkern zu den Ribosomen?",
+      "optionen": [
+        "mRNA",
+        "ATP",
+        "Glucose",
+        "Cholesterin"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – mRNA",
+        "url": "https://de.wikipedia.org/wiki/MRNA"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "bio-095",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gehörknöchelchen hat jedes menschliche Ohr?",
+      "einheit": "Knochen",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Gehörknöchelchen",
+        "url": "https://de.wikipedia.org/wiki/Gehörknöchelchen"
+      }
+    },
+    {
+      "id": "bio-096",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen verwachsenen Wirbeln besteht das Kreuzbein des Menschen?",
+      "einheit": "Wirbel",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Kreuzbein",
+        "url": "https://de.wikipedia.org/wiki/Kreuzbein"
+      }
+    },
+    {
+      "id": "bio-097",
+      "modus": "schaetzen",
+      "frage": "Wie viele Schneidezähne hat ein vollständiges Erwachsenengebiss?",
+      "einheit": "Zähne",
+      "loesung": 8,
+      "erklaerung": "Je vier oben und unten.",
+      "quelle": {
+        "titel": "Wikipedia – Zahnformel",
+        "url": "https://de.wikipedia.org/wiki/Zahnformel"
+      }
+    },
+    {
+      "id": "bio-098",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr bekam zum ersten Mal ein Mensch Insulin gegen Diabetes gespritzt?",
+      "daten": {
+        "von": 1850,
+        "bis": 1980,
+        "ereignisse": [
+          {
+            "name": "Ende des Ersten Weltkriegs",
+            "jahr": 1918
+          },
+          {
+            "name": "Wunder von Bern",
+            "jahr": 1954
+          }
+        ]
+      },
+      "loesung": 1922,
+      "quelle": {
+        "titel": "Wikipedia – Insulin",
+        "url": "https://de.wikipedia.org/wiki/Insulin"
+      }
+    },
+    {
+      "id": "bio-099",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt Tübingen, wo Friedrich Miescher die Nukleinsäuren entdeckte?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 48.52,
+        "lng": 9.06
+      },
+      "quelle": {
+        "titel": "Wikipedia – Friedrich Miescher",
+        "url": "https://de.wikipedia.org/wiki/Friedrich_Miescher"
+      }
+    },
+    {
+      "id": "bio-100",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Teile des Ohrs in der Reihenfolge, in der der Schall sie erreicht!",
+      "loesung": [
+        "Ohrmuschel",
+        "Trommelfell",
+        "Gehörknöchelchen",
+        "Hörschnecke"
+      ],
+      "oben": "zuerst",
+      "unten": "zuletzt",
+      "quelle": {
+        "titel": "Wikipedia – Ohr",
+        "url": "https://de.wikipedia.org/wiki/Ohr"
+      }
     }
   ],
   "stechfragen": [
@@ -1550,6 +1712,17 @@
       "quelle": {
         "titel": "Wikipedia – Vererbung (Biologie)",
         "url": "https://de.wikipedia.org/wiki/Vererbung_(Biologie)"
+      }
+    },
+    {
+      "id": "bio-s08",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen Aminosäuren besteht das menschliche Insulin?",
+      "einheit": "Aminosäuren",
+      "loesung": 51,
+      "quelle": {
+        "titel": "Wikipedia – Insulin",
+        "url": "https://de.wikipedia.org/wiki/Insulin"
       }
     }
   ]

@@ -1513,6 +1513,169 @@
         "titel": "Wikipedia – Geschichte der Mathematik",
         "url": "https://de.wikipedia.org/wiki/Geschichte_der_Mathematik"
       }
+    },
+    {
+      "id": "mathe-091",
+      "modus": "auswahl",
+      "frage": "Wie nennt man einen Winkel, der größer als ein rechter, aber kleiner als ein gestreckter Winkel ist?",
+      "optionen": [
+        "Spitzer Winkel",
+        "Gestreckter Winkel",
+        "Überstumpfer Winkel",
+        "Stumpfer Winkel"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Winkel",
+        "url": "https://de.wikipedia.org/wiki/Winkel"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "mathe-092",
+      "modus": "auswahl",
+      "frage": "Wie heißt der Mittelwert, bei dem man alle Werte addiert und durch ihre Anzahl teilt?",
+      "optionen": [
+        "Arithmetisches Mittel",
+        "Median",
+        "Modus",
+        "Spannweite"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Arithmetisches Mittel",
+        "url": "https://de.wikipedia.org/wiki/Arithmetisches_Mittel"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "mathe-093",
+      "modus": "auswahl",
+      "frage": "Welcher Körper hat weder Ecken noch Kanten?",
+      "optionen": [
+        "Kegel",
+        "Kugel",
+        "Zylinder",
+        "Würfel"
+      ],
+      "erklaerung": "Der Kegel hat eine Spitze und eine Kante, der Zylinder zwei Kanten.",
+      "quelle": {
+        "titel": "Wikipedia – Kugel",
+        "url": "https://de.wikipedia.org/wiki/Kugel"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "mathe-094",
+      "modus": "auswahl",
+      "frage": "Welches Zeichen bedeutet „ungefähr gleich“?",
+      "optionen": [
+        "≠",
+        "≡",
+        "≈",
+        "±"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Gleichheitszeichen",
+        "url": "https://de.wikipedia.org/wiki/Gleichheitszeichen"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "mathe-095",
+      "modus": "schaetzen",
+      "frage": "Wie viele Ecken hat ein Oktaeder?",
+      "einheit": "Ecken",
+      "loesung": 6,
+      "quelle": {
+        "titel": "Wikipedia – Oktaeder",
+        "url": "https://de.wikipedia.org/wiki/Oktaeder"
+      }
+    },
+    {
+      "id": "mathe-096",
+      "modus": "schaetzen",
+      "frage": "Kopfrechnen: Wie viel ist 7 × 8 × 9?",
+      "einheit": "",
+      "loesung": 504,
+      "erklaerung": "7 × 8 = 56, 56 × 9 = 504.",
+      "quelle": {
+        "titel": "Wikipedia – Multiplikation",
+        "url": "https://de.wikipedia.org/wiki/Multiplikation"
+      }
+    },
+    {
+      "id": "mathe-097",
+      "modus": "schaetzen",
+      "frage": "Man wirft dreimal eine Münze. Wie viele verschiedene Kopf-Zahl-Folgen sind möglich?",
+      "einheit": "Folgen",
+      "loesung": 8,
+      "erklaerung": "Pro Wurf 2 Möglichkeiten: 2 × 2 × 2 = 8.",
+      "quelle": {
+        "titel": "Wikipedia – Kombinatorik",
+        "url": "https://de.wikipedia.org/wiki/Kombinatorik"
+      }
+    },
+    {
+      "id": "mathe-098",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr baute Blaise Pascal seine Rechenmaschine „Pascaline“?",
+      "daten": {
+        "von": 1500,
+        "bis": 1850,
+        "ereignisse": [
+          {
+            "name": "Tod von Isaac Newton",
+            "jahr": 1727
+          },
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          }
+        ]
+      },
+      "loesung": 1642,
+      "quelle": {
+        "titel": "Wikipedia – Pascaline",
+        "url": "https://de.wikipedia.org/wiki/Pascaline"
+      }
+    },
+    {
+      "id": "mathe-099",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo lag Milet, die Heimat des Mathematikers Thales?",
+      "daten": {
+        "mitte": [
+          40,
+          18
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 37.53,
+        "lng": 27.28
+      },
+      "quelle": {
+        "titel": "Wikipedia – Milet",
+        "url": "https://de.wikipedia.org/wiki/Milet"
+      }
+    },
+    {
+      "id": "mathe-100",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Körper nach der Zahl ihrer Flächen!",
+      "loesung": [
+        "Ikosaeder",
+        "Dodekaeder",
+        "Würfel",
+        "Tetraeder"
+      ],
+      "oben": "meiste Flächen",
+      "unten": "wenigste Flächen",
+      "quelle": {
+        "titel": "Wikipedia – Platonischer Körper",
+        "url": "https://de.wikipedia.org/wiki/Platonischer_Körper"
+      }
     }
   ],
   "stechfragen": [
@@ -1580,6 +1743,17 @@
       "quelle": {
         "titel": "Wikipedia – Zweierpotenz",
         "url": "https://de.wikipedia.org/wiki/Zweierpotenz"
+      }
+    },
+    {
+      "id": "mathe-s07",
+      "modus": "schaetzen",
+      "frage": "Wie viele Primzahlen gibt es zwischen 1 und 1000?",
+      "einheit": "Primzahlen",
+      "loesung": 168,
+      "quelle": {
+        "titel": "Wikipedia – Primzahlfunktion",
+        "url": "https://de.wikipedia.org/wiki/Primzahlfunktion"
       }
     }
   ]

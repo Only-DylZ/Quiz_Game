@@ -1226,6 +1226,166 @@
         "titel": "Wikipedia – Geostationäre Umlaufbahn",
         "url": "https://de.wikipedia.org/wiki/Geostationäre_Umlaufbahn"
       }
+    },
+    {
+      "id": "rf-73",
+      "modus": "auswahl",
+      "frage": "Welches Space Shuttle flog 1981 als erstes ins All?",
+      "optionen": [
+        "Challenger",
+        "Discovery",
+        "Columbia",
+        "Atlantis"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Columbia (Raumfähre)",
+        "url": "https://de.wikipedia.org/wiki/Columbia_(Raumfähre)"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "rf-74",
+      "modus": "auswahl",
+      "frage": "Wie heißt der höchste Vulkan des Mars – einer der höchsten Berge im Sonnensystem?",
+      "optionen": [
+        "Olympus Mons",
+        "Mauna Kea",
+        "Valles Marineris",
+        "Tharsis"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Olympus Mons",
+        "url": "https://de.wikipedia.org/wiki/Olympus_Mons"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "rf-75",
+      "modus": "auswahl",
+      "frage": "Wie heißt die chinesische Raumstation?",
+      "optionen": [
+        "Skylab",
+        "Saljut",
+        "Freedom",
+        "Tiangong"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Chinesische Raumstation",
+        "url": "https://de.wikipedia.org/wiki/Chinesische_Raumstation"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "rf-76",
+      "modus": "auswahl",
+      "frage": "Wie nennt man die gewaltige Explosion eines großen Sterns am Ende seines Lebens?",
+      "optionen": [
+        "Roter Riese",
+        "Supernova",
+        "Pulsar",
+        "Sonnenwind"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Supernova",
+        "url": "https://de.wikipedia.org/wiki/Supernova"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "rf-77",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauert ein Jahr auf dem Merkur?",
+      "einheit": "Tage",
+      "loesung": 88,
+      "quelle": {
+        "titel": "Wikipedia – Merkur (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Merkur_(Planet)"
+      }
+    },
+    {
+      "id": "rf-78",
+      "modus": "schaetzen",
+      "frage": "Mit wie vielen km/h rast die ISS um die Erde?",
+      "einheit": "km/h",
+      "loesung": 28000,
+      "quelle": {
+        "titel": "Wikipedia – Internationale Raumstation",
+        "url": "https://de.wikipedia.org/wiki/Internationale_Raumstation"
+      }
+    },
+    {
+      "id": "rf-79",
+      "modus": "schaetzen",
+      "frage": "Aus wie vielen hellen Sternen besteht der „Große Wagen“?",
+      "einheit": "Sterne",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Großer Wagen",
+        "url": "https://de.wikipedia.org/wiki/Großer_Wagen"
+      }
+    },
+    {
+      "id": "rf-80",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr landete die Sonde Philae auf einem Kometen?",
+      "daten": {
+        "von": 1990,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Erste PlayStation",
+            "jahr": 1994
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 2014,
+      "quelle": {
+        "titel": "Wikipedia – Philae (Sonde)",
+        "url": "https://de.wikipedia.org/wiki/Philae_(Sonde)"
+      }
+    },
+    {
+      "id": "rf-81",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo steht das Very Large Telescope der ESO auf dem Berg Cerro Paranal?",
+      "daten": {
+        "mitte": [
+          -15,
+          -60
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -24.63,
+        "lng": -70.4
+      },
+      "quelle": {
+        "titel": "Wikipedia – Very Large Telescope",
+        "url": "https://de.wikipedia.org/wiki/Very_Large_Telescope"
+      }
+    },
+    {
+      "id": "rf-82",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Raketen nach ihrer Höhe!",
+      "loesung": [
+        "Saturn V",
+        "SLS",
+        "Falcon 9",
+        "Ariane 5"
+      ],
+      "oben": "höchste",
+      "unten": "niedrigste",
+      "quelle": {
+        "titel": "Wikipedia – Space Launch System",
+        "url": "https://de.wikipedia.org/wiki/Space_Launch_System"
+      }
     }
   ],
   "stechfragen": [
@@ -1305,6 +1465,17 @@
       "quelle": {
         "titel": "Wikipedia – Waleri Poljakow",
         "url": "https://de.wikipedia.org/wiki/Waleri_Wladimirowitsch_Poljakow"
+      }
+    },
+    {
+      "id": "rf-s8",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr entdeckte Wilhelm Herschel den Planeten Uranus?",
+      "einheit": "",
+      "loesung": 1781,
+      "quelle": {
+        "titel": "Wikipedia – Uranus (Planet)",
+        "url": "https://de.wikipedia.org/wiki/Uranus_(Planet)"
       }
     }
   ]

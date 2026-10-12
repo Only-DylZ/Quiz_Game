@@ -1591,6 +1591,169 @@
         "titel": "Wikipedia – Wanderalbatros",
         "url": "https://de.wikipedia.org/wiki/Wanderalbatros"
       }
+    },
+    {
+      "id": "tier-095",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein weibliches Reh?",
+      "optionen": [
+        "Bache",
+        "Ricke",
+        "Fähe",
+        "Hindin"
+      ],
+      "erklaerung": "Bache ist die Wildschwein-Mutter, Fähe die Füchsin.",
+      "quelle": {
+        "titel": "Wikipedia – Reh",
+        "url": "https://de.wikipedia.org/wiki/Reh"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "tier-096",
+      "modus": "auswahl",
+      "frage": "Welches Tier hat blaues Blut?",
+      "optionen": [
+        "Hai",
+        "Frosch",
+        "Pfeilschwanzkrebs",
+        "Pinguin"
+      ],
+      "erklaerung": "Sein Blutfarbstoff enthält Kupfer statt Eisen.",
+      "quelle": {
+        "titel": "Wikipedia – Pfeilschwanzkrebse",
+        "url": "https://de.wikipedia.org/wiki/Pfeilschwanzkrebse"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "tier-097",
+      "modus": "auswahl",
+      "frage": "Welches ist das größte Nagetier der Welt?",
+      "optionen": [
+        "Biber",
+        "Stachelschwein",
+        "Murmeltier",
+        "Wasserschwein"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Wasserschwein",
+        "url": "https://de.wikipedia.org/wiki/Wasserschwein"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "tier-098",
+      "modus": "auswahl",
+      "frage": "Welches dieser Tiere kann bei Gefahr seinen Schwanz abwerfen?",
+      "optionen": [
+        "Eidechse",
+        "Maus",
+        "Schlange",
+        "Frosch"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Autotomie",
+        "url": "https://de.wikipedia.org/wiki/Autotomie"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "tier-099",
+      "modus": "schaetzen",
+      "frage": "Auf wie vielen Zehen läuft ein Nashorn an jedem Fuß?",
+      "einheit": "Zehen",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Nashörner",
+        "url": "https://de.wikipedia.org/wiki/Nashörner"
+      }
+    },
+    {
+      "id": "tier-100",
+      "modus": "schaetzen",
+      "frage": "Wie viele Flügel hat eine Libelle?",
+      "einheit": "Flügel",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Libellen",
+        "url": "https://de.wikipedia.org/wiki/Libellen"
+      }
+    },
+    {
+      "id": "tier-101",
+      "modus": "schaetzen",
+      "frage": "Wie viele Höcker hat ein Trampeltier?",
+      "einheit": "Höcker",
+      "loesung": 2,
+      "erklaerung": "Das Dromedar hat dagegen nur einen.",
+      "quelle": {
+        "titel": "Wikipedia – Trampeltier",
+        "url": "https://de.wikipedia.org/wiki/Trampeltier"
+      }
+    },
+    {
+      "id": "tier-102",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr beschrieb der Missionar Armand David den Großen Panda für die westliche Wissenschaft?",
+      "daten": {
+        "von": 1800,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Patent auf die Konservendose",
+            "jahr": 1810
+          },
+          {
+            "name": "Ende des Ersten Weltkriegs",
+            "jahr": 1918
+          }
+        ]
+      },
+      "loesung": 1869,
+      "quelle": {
+        "titel": "Wikipedia – Großer Panda",
+        "url": "https://de.wikipedia.org/wiki/Großer_Panda"
+      }
+    },
+    {
+      "id": "tier-103",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Insel Komodo, Heimat der größten Echsen der Welt?",
+      "daten": {
+        "mitte": [
+          5,
+          100
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -8.55,
+        "lng": 119.45
+      },
+      "quelle": {
+        "titel": "Wikipedia – Komodo (Insel)",
+        "url": "https://de.wikipedia.org/wiki/Komodo_(Insel)"
+      }
+    },
+    {
+      "id": "tier-104",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Katzen nach ihrem Gewicht!",
+      "loesung": [
+        "Tiger",
+        "Löwe",
+        "Leopard",
+        "Luchs"
+      ],
+      "oben": "schwerste",
+      "unten": "leichteste",
+      "quelle": {
+        "titel": "Wikipedia – Tiger",
+        "url": "https://de.wikipedia.org/wiki/Tiger"
+      }
     }
   ],
   "stechfragen": [
@@ -1669,6 +1832,17 @@
       "quelle": {
         "titel": "Wikipedia – Tierpark Hagenbeck",
         "url": "https://de.wikipedia.org/wiki/Tierpark_Hagenbeck"
+      }
+    },
+    {
+      "id": "tier-s08",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr starb „Martha“, die letzte Wandertaube der Welt, im Zoo von Cincinnati?",
+      "einheit": "",
+      "loesung": 1914,
+      "quelle": {
+        "titel": "Wikipedia – Wandertaube",
+        "url": "https://de.wikipedia.org/wiki/Wandertaube"
       }
     }
   ]

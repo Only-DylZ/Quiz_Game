@@ -50,3 +50,10 @@ tier-030 tier-064
 tier-062 tier-064
 game-014 game-043
 game-019 game-s02
+chem-s08 chem-078
+geo-102 dd-022
+geo-102 geo-053
+mathe-096 mathe-073
+mathe-096 mathe-043
+mathe-s07 mathe-014
+phys-100 chem-091

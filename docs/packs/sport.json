@@ -1539,6 +1539,167 @@
         "titel": "Wikipedia – Schachfigur",
         "url": "https://de.wikipedia.org/wiki/Schachfigur"
       }
+    },
+    {
+      "id": "sport-094",
+      "modus": "auswahl",
+      "frage": "Welches Land wurde 2010 in Südafrika Fußball-Weltmeister?",
+      "optionen": [
+        "Niederlande",
+        "Spanien",
+        "Deutschland",
+        "Italien"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Fußball-Weltmeisterschaft 2010",
+        "url": "https://de.wikipedia.org/wiki/Fußball-Weltmeisterschaft_2010"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "sport-095",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Trophäe, die der Sieger des Super Bowl bekommt?",
+      "optionen": [
+        "Larry O’Brien Trophy",
+        "Commissioner’s Trophy",
+        "Vince Lombardi Trophy",
+        "Grey Cup"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Vince Lombardi Trophy",
+        "url": "https://de.wikipedia.org/wiki/Vince_Lombardi_Trophy"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "sport-096",
+      "modus": "auswahl",
+      "frage": "Welcher Boxer nannte sich selbst „The Greatest“?",
+      "optionen": [
+        "Muhammad Ali",
+        "Mike Tyson",
+        "Joe Frazier",
+        "Wladimir Klitschko"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Muhammad Ali",
+        "url": "https://de.wikipedia.org/wiki/Muhammad_Ali"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "sport-097",
+      "modus": "auswahl",
+      "frage": "Wie heißt die höchste Spielklasse im spanischen Fußball?",
+      "optionen": [
+        "Serie A",
+        "Ligue 1",
+        "Eredivisie",
+        "La Liga"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – La Liga",
+        "url": "https://de.wikipedia.org/wiki/La_Liga"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "sport-098",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist eine Bowlingbahn (bis zum ersten Pin)?",
+      "einheit": "m",
+      "loesung": 18.29,
+      "quelle": {
+        "titel": "Wikipedia – Bowling",
+        "url": "https://de.wikipedia.org/wiki/Bowling"
+      }
+    },
+    {
+      "id": "sport-099",
+      "modus": "schaetzen",
+      "frage": "Wie viele Meter ist der Elfmeterpunkt von der Torlinie entfernt?",
+      "einheit": "m",
+      "loesung": 11,
+      "quelle": {
+        "titel": "Wikipedia – Strafstoß",
+        "url": "https://de.wikipedia.org/wiki/Strafstoß"
+      }
+    },
+    {
+      "id": "sport-100",
+      "modus": "schaetzen",
+      "frage": "Wie viele Minuten reine Spielzeit hat ein Eishockeyspiel (ohne Verlängerung)?",
+      "einheit": "Minuten",
+      "loesung": 60,
+      "erklaerung": "Drei Drittel zu je 20 Minuten.",
+      "quelle": {
+        "titel": "Wikipedia – Eishockey",
+        "url": "https://de.wikipedia.org/wiki/Eishockey"
+      }
+    },
+    {
+      "id": "sport-101",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr fand das erste Tennisturnier in Wimbledon statt?",
+      "daten": {
+        "von": 1820,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          },
+          {
+            "name": "Ende des Ersten Weltkriegs",
+            "jahr": 1918
+          }
+        ]
+      },
+      "loesung": 1877,
+      "quelle": {
+        "titel": "Wikipedia – Wimbledon Championships",
+        "url": "https://de.wikipedia.org/wiki/Wimbledon_Championships"
+      }
+    },
+    {
+      "id": "sport-102",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Lausanne, der Sitz des Internationalen Olympischen Komitees?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 46.52,
+        "lng": 6.63
+      },
+      "quelle": {
+        "titel": "Wikipedia – Internationales Olympisches Komitee",
+        "url": "https://de.wikipedia.org/wiki/Internationales_Olympisches_Komitee"
+      }
+    },
+    {
+      "id": "sport-103",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Gewichtsklassen im Boxen!",
+      "loesung": [
+        "Schwergewicht",
+        "Mittelgewicht",
+        "Weltergewicht",
+        "Fliegengewicht"
+      ],
+      "oben": "schwerste",
+      "unten": "leichteste",
+      "quelle": {
+        "titel": "Wikipedia – Gewichtsklasse",
+        "url": "https://de.wikipedia.org/wiki/Gewichtsklasse"
+      }
     }
   ],
   "stechfragen": [
@@ -1617,6 +1778,17 @@
       "quelle": {
         "titel": "Wikipedia – Gerd Müller",
         "url": "https://de.wikipedia.org/wiki/Gerd_Müller"
+      }
+    },
+    {
+      "id": "sport-s08",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm darf ein Golfball höchstens wiegen?",
+      "einheit": "g",
+      "loesung": 45.93,
+      "quelle": {
+        "titel": "Wikipedia – Golfball",
+        "url": "https://de.wikipedia.org/wiki/Golfball"
       }
     }
   ]

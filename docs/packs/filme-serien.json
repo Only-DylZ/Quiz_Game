@@ -1489,6 +1489,166 @@
         "titel": "Wikipedia – Star Wars",
         "url": "https://de.wikipedia.org/wiki/Star_Wars"
       }
+    },
+    {
+      "id": "film-091",
+      "modus": "auswahl",
+      "frage": "Wie heißen die kleinen gelben Helfer des Superschurken Gru?",
+      "optionen": [
+        "Schlümpfe",
+        "Gremlins",
+        "Ewoks",
+        "Minions"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Ich – Einfach unverbesserlich",
+        "url": "https://de.wikipedia.org/wiki/Ich_–_Einfach_unverbesserlich"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "film-092",
+      "modus": "auswahl",
+      "frage": "In welchen Roboter verliebt sich der Müllroboter WALL·E?",
+      "optionen": [
+        "EVE",
+        "R2-D2",
+        "Baymax",
+        "BB-8"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – WALL·E",
+        "url": "https://de.wikipedia.org/wiki/WALL·E_–_Der_Letzte_räumt_die_Erde_auf"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "film-093",
+      "modus": "auswahl",
+      "frage": "In welcher fiktiven Kleinstadt spielt die Netflix-Serie „Dark“?",
+      "optionen": [
+        "Hawkins",
+        "Winden",
+        "Twin Peaks",
+        "Springfield"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Dark (Fernsehserie)",
+        "url": "https://de.wikipedia.org/wiki/Dark_(Fernsehserie)"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "film-094",
+      "modus": "auswahl",
+      "frage": "Wer führte Regie bei „Avatar – Aufbruch nach Pandora“?",
+      "optionen": [
+        "Ridley Scott",
+        "Christopher Nolan",
+        "Peter Jackson",
+        "James Cameron"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – James Cameron",
+        "url": "https://de.wikipedia.org/wiki/James_Cameron"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "film-095",
+      "modus": "schaetzen",
+      "frage": "Wie viele Folgen hat die Serie „The Walking Dead“ insgesamt?",
+      "einheit": "Folgen",
+      "loesung": 177,
+      "quelle": {
+        "titel": "Wikipedia – The Walking Dead (Fernsehserie)",
+        "url": "https://de.wikipedia.org/wiki/The_Walking_Dead_(Fernsehserie)"
+      }
+    },
+    {
+      "id": "film-096",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kinder hat Kapitän von Trapp im Film „Meine Lieder – meine Träume“?",
+      "einheit": "Kinder",
+      "loesung": 7,
+      "quelle": {
+        "titel": "Wikipedia – Meine Lieder – meine Träume",
+        "url": "https://de.wikipedia.org/wiki/Meine_Lieder_–_meine_Träume"
+      }
+    },
+    {
+      "id": "film-097",
+      "modus": "schaetzen",
+      "frage": "Wie viele Oscars gewann der Film „Ben Hur“ von 1959?",
+      "einheit": "Oscars",
+      "loesung": 11,
+      "quelle": {
+        "titel": "Wikipedia – Ben Hur (1959)",
+        "url": "https://de.wikipedia.org/wiki/Ben_Hur_(1959)"
+      }
+    },
+    {
+      "id": "film-098",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr kam der Film „Inception“ ins Kino?",
+      "daten": {
+        "von": 1995,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Euro wird Bargeld",
+            "jahr": 2002
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 2010,
+      "quelle": {
+        "titel": "Wikipedia – Inception",
+        "url": "https://de.wikipedia.org/wiki/Inception"
+      }
+    },
+    {
+      "id": "film-099",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Felsenstadt Petra, ein Drehort von „Indiana Jones und der letzte Kreuzzug“?",
+      "daten": {
+        "mitte": [
+          33,
+          20
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 30.33,
+        "lng": 35.44
+      },
+      "quelle": {
+        "titel": "Wikipedia – Petra (Jordanien)",
+        "url": "https://de.wikipedia.org/wiki/Petra_(Jordanien)"
+      }
+    },
+    {
+      "id": "film-100",
+      "modus": "reihenfolge",
+      "frage": "Ordne die DreamWorks-Animationsfilme nach ihrem Erscheinungsjahr!",
+      "loesung": [
+        "Shrek",
+        "Madagascar",
+        "Kung Fu Panda",
+        "Drachenzähmen leicht gemacht"
+      ],
+      "oben": "ältester",
+      "unten": "neuester",
+      "quelle": {
+        "titel": "Wikipedia – DreamWorks Animation",
+        "url": "https://de.wikipedia.org/wiki/DreamWorks_Animation"
+      }
     }
   ],
   "stechfragen": [
@@ -1567,6 +1727,17 @@
       "quelle": {
         "titel": "Wikipedia – The Walt Disney Company",
         "url": "https://de.wikipedia.org/wiki/The_Walt_Disney_Company"
+      }
+    },
+    {
+      "id": "film-s08",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr kam Alfred Hitchcocks „Psycho“ ins Kino?",
+      "einheit": "",
+      "loesung": 1960,
+      "quelle": {
+        "titel": "Wikipedia – Psycho (1960)",
+        "url": "https://de.wikipedia.org/wiki/Psycho_(1960)"
       }
     }
   ]

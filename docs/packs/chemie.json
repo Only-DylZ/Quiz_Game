@@ -1529,6 +1529,176 @@
         "titel": "Wikipedia – Chemisches Element",
         "url": "https://de.wikipedia.org/wiki/Chemisches_Element"
       }
+    },
+    {
+      "id": "chem-093",
+      "modus": "auswahl",
+      "frage": "Welches Gas sprudelt, wenn man Backpulver mit Essig mischt?",
+      "optionen": [
+        "Kohlendioxid",
+        "Sauerstoff",
+        "Wasserstoff",
+        "Stickstoff"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Natriumhydrogencarbonat",
+        "url": "https://de.wikipedia.org/wiki/Natriumhydrogencarbonat"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "chem-094",
+      "modus": "auswahl",
+      "frage": "Welches Metall ist neben Zinn der Hauptbestandteil von Bronze?",
+      "optionen": [
+        "Zink",
+        "Kupfer",
+        "Eisen",
+        "Aluminium"
+      ],
+      "erklaerung": "Kupfer mit Zink ergibt dagegen Messing.",
+      "quelle": {
+        "titel": "Wikipedia – Bronze",
+        "url": "https://de.wikipedia.org/wiki/Bronze"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "chem-095",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein fein verteiltes Gemisch aus zwei Flüssigkeiten, die sich nicht lösen – zum Beispiel Milch?",
+      "optionen": [
+        "Legierung",
+        "Suspension",
+        "Emulsion",
+        "Lösung"
+      ],
+      "erklaerung": "In Milch schweben winzige Fetttröpfchen im Wasser.",
+      "quelle": {
+        "titel": "Wikipedia – Emulsion",
+        "url": "https://de.wikipedia.org/wiki/Emulsion"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "chem-096",
+      "modus": "auswahl",
+      "frage": "In welcher Farbe leuchtet eine Flamme, wenn man Kochsalz hineinstreut?",
+      "optionen": [
+        "Grün",
+        "Violett",
+        "Rot",
+        "Gelb"
+      ],
+      "erklaerung": "Das Natrium im Kochsalz färbt die Flamme kräftig gelb.",
+      "quelle": {
+        "titel": "Wikipedia – Flammenfärbung",
+        "url": "https://de.wikipedia.org/wiki/Flammenfärbung"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "chem-097",
+      "modus": "schaetzen",
+      "frage": "Wie viele Liter nimmt ein Mol eines idealen Gases bei 0 °C und Normaldruck ein?",
+      "einheit": "Liter",
+      "loesung": 22.4,
+      "quelle": {
+        "titel": "Wikipedia – Molares Volumen",
+        "url": "https://de.wikipedia.org/wiki/Molares_Volumen"
+      }
+    },
+    {
+      "id": "chem-098",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilogramm wiegt ein Liter Quecksilber?",
+      "einheit": "kg",
+      "loesung": 13.5,
+      "erklaerung": "Quecksilber hat eine Dichte von rund 13,5 g/cm³.",
+      "quelle": {
+        "titel": "Wikipedia – Quecksilber",
+        "url": "https://de.wikipedia.org/wiki/Quecksilber"
+      }
+    },
+    {
+      "id": "chem-099",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm wiegt ein Liter Luft bei 0 °C und Normaldruck?",
+      "einheit": "g",
+      "loesung": 1.29,
+      "quelle": {
+        "titel": "Wikipedia – Luftdichte",
+        "url": "https://de.wikipedia.org/wiki/Luftdichte"
+      }
+    },
+    {
+      "id": "chem-100",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr gelang Henri Moissan erstmals die Herstellung von reinem Fluor?",
+      "daten": {
+        "von": 1800,
+        "bis": 1950,
+        "ereignisse": [
+          {
+            "name": "Erste Eisenbahn in Deutschland",
+            "jahr": 1835
+          },
+          {
+            "name": "Ende des Ersten Weltkriegs",
+            "jahr": 1918
+          }
+        ]
+      },
+      "loesung": 1886,
+      "quelle": {
+        "titel": "Wikipedia – Fluor",
+        "url": "https://de.wikipedia.org/wiki/Fluor"
+      }
+    },
+    {
+      "id": "chem-101",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt Ludwigshafen, der Stammsitz des Chemiekonzerns BASF?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 49.48,
+        "lng": 8.44
+      },
+      "quelle": {
+        "titel": "Wikipedia – Ludwigshafen am Rhein",
+        "url": "https://de.wikipedia.org/wiki/Ludwigshafen_am_Rhein"
+      }
+    },
+    {
+      "id": "chem-102",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Gase nach der Zahl ihrer Kohlenstoffatome!",
+      "loesung": [
+        "Methan",
+        "Ethan",
+        "Propan",
+        "Butan"
+      ],
+      "oben": "wenigste",
+      "unten": "meiste",
+      "werte": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Alkane",
+        "url": "https://de.wikipedia.org/wiki/Alkane"
+      }
     }
   ],
   "stechfragen": [
@@ -1608,6 +1778,17 @@
       "quelle": {
         "titel": "Wikipedia – Plutonium",
         "url": "https://de.wikipedia.org/wiki/Plutonium"
+      }
+    },
+    {
+      "id": "chem-s08",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm wiegt ein Mol Kochsalz?",
+      "einheit": "g",
+      "loesung": 58.44,
+      "quelle": {
+        "titel": "Wikipedia – Natriumchlorid",
+        "url": "https://de.wikipedia.org/wiki/Natriumchlorid"
       }
     }
   ]

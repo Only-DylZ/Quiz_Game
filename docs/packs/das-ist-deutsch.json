@@ -1600,6 +1600,168 @@
         "titel": "Wikipedia – Deutsche Literatur",
         "url": "https://de.wikipedia.org/wiki/Deutsche_Literatur"
       }
+    },
+    {
+      "id": "dd-097",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man den Platz am Haus zum Draußensitzen richtig?",
+      "optionen": [
+        "Terasse",
+        "Terrase",
+        "Terrasse",
+        "Teraße"
+      ],
+      "quelle": {
+        "titel": "Wiktionary – Terrasse",
+        "url": "https://de.wiktionary.org/wiki/Terrasse"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "dd-098",
+      "modus": "auswahl",
+      "frage": "Wie nennt man im Rheinland einen Kiosk?",
+      "optionen": [
+        "Späti",
+        "Büdchen",
+        "Lädle",
+        "Kaufhalle"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Kiosk",
+        "url": "https://de.wikipedia.org/wiki/Kiosk"
+      },
+      "erklaerung": "In Berlin sagt man „Späti“, im Ruhrgebiet „Trinkhalle“."
+    },
+    {
+      "id": "dd-099",
+      "modus": "auswahl",
+      "frage": "Wer schrieb und zeichnete die Bildergeschichte „Max und Moritz“?",
+      "optionen": [
+        "Heinrich Hoffmann",
+        "Erich Kästner",
+        "Wilhelm Busch",
+        "Die Brüder Grimm"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Max und Moritz",
+        "url": "https://de.wikipedia.org/wiki/Max_und_Moritz"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "dd-100",
+      "modus": "auswahl",
+      "frage": "Was ist „Kummerspeck“?",
+      "optionen": [
+        "Ein Gericht für Trauerfeiern",
+        "Ein Wurstrest",
+        "Ein altes Wort für Fett",
+        "Gewicht, das man aus Frust anfuttert"
+      ],
+      "quelle": {
+        "titel": "Wiktionary – Kummerspeck",
+        "url": "https://de.wiktionary.org/wiki/Kummerspeck"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "dd-101",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm wiegt eine 1-Euro-Münze?",
+      "einheit": "g",
+      "loesung": 7.5,
+      "quelle": {
+        "titel": "Wikipedia – Euromünzen",
+        "url": "https://de.wikipedia.org/wiki/Euromünzen"
+      }
+    },
+    {
+      "id": "dd-102",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kilometer lang ist die Strecke der Wuppertaler Schwebebahn?",
+      "einheit": "km",
+      "loesung": 13.2,
+      "quelle": {
+        "titel": "Wikipedia – Wuppertaler Schwebebahn",
+        "url": "https://de.wikipedia.org/wiki/Wuppertaler_Schwebebahn"
+      }
+    },
+    {
+      "id": "dd-103",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tonnen wiegt die Petersglocke, die größte Glocke des Kölner Doms?",
+      "einheit": "t",
+      "loesung": 24,
+      "quelle": {
+        "titel": "Wikipedia – Petersglocke",
+        "url": "https://de.wikipedia.org/wiki/Petersglocke"
+      }
+    },
+    {
+      "id": "dd-104",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr lief die erste Sendung von „Wetten, dass..?“?",
+      "daten": {
+        "von": 1960,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Farbfernsehsendung in Deutschland",
+            "jahr": 1967
+          },
+          {
+            "name": "WM-Sommermärchen in Deutschland",
+            "jahr": 2006
+          }
+        ]
+      },
+      "loesung": 1981,
+      "quelle": {
+        "titel": "Wikipedia – Wetten, dass..?",
+        "url": "https://de.wikipedia.org/wiki/Wetten,_dass..%3F"
+      }
+    },
+    {
+      "id": "dd-105",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo steht die Porta Nigra, ein Stadttor aus der Römerzeit?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 49.76,
+        "lng": 6.64
+      },
+      "quelle": {
+        "titel": "Wikipedia – Porta Nigra",
+        "url": "https://de.wikipedia.org/wiki/Porta_Nigra"
+      }
+    },
+    {
+      "id": "dd-106",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Hansestädte von Ost nach West!",
+      "loesung": [
+        "Stralsund",
+        "Rostock",
+        "Lübeck",
+        "Hamburg",
+        "Bremen"
+      ],
+      "oben": "östlichste",
+      "unten": "westlichste",
+      "quelle": {
+        "titel": "Wikipedia – Hanse",
+        "url": "https://de.wikipedia.org/wiki/Hanse"
+      }
     }
   ],
   "stechfragen": [
@@ -1678,6 +1840,17 @@
       "quelle": {
         "titel": "Wikipedia – Ulmer Münster",
         "url": "https://de.wikipedia.org/wiki/Ulmer_Münster"
+      }
+    },
+    {
+      "id": "dd-s08",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde das Münchner Hofbräuhaus gegründet?",
+      "einheit": "",
+      "loesung": 1589,
+      "quelle": {
+        "titel": "Wikipedia – Hofbräu München",
+        "url": "https://de.wikipedia.org/wiki/Hofbräu_München"
       }
     }
   ]

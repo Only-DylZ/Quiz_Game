@@ -1478,6 +1478,166 @@
         "titel": "Wikipedia – Minecraft",
         "url": "https://de.wikipedia.org/wiki/Minecraft"
       }
+    },
+    {
+      "id": "game-091",
+      "modus": "auswahl",
+      "frage": "Welches Tier ist die Spielfigur Crash Bandicoot?",
+      "optionen": [
+        "Fuchs",
+        "Waschbär",
+        "Beuteldachs",
+        "Opossum"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Crash Bandicoot",
+        "url": "https://de.wikipedia.org/wiki/Crash_Bandicoot"
+      }
+    },
+    {
+      "id": "game-092",
+      "modus": "auswahl",
+      "frage": "In welchem Spiel löst man Rätsel mit einer Waffe, die zwei verbundene Durchgänge erzeugt?",
+      "optionen": [
+        "Half-Life",
+        "Portal",
+        "Prey",
+        "Myst"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Portal (Computerspiel)",
+        "url": "https://de.wikipedia.org/wiki/Portal_(Computerspiel)"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "game-093",
+      "modus": "auswahl",
+      "frage": "Welches Studio entwickelte die Lebenssimulation „Die Sims“?",
+      "optionen": [
+        "Ubisoft",
+        "Rockstar Games",
+        "Blizzard",
+        "Maxis"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Die Sims",
+        "url": "https://de.wikipedia.org/wiki/Die_Sims"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "game-094",
+      "modus": "auswahl",
+      "frage": "Wie heißt der verrückte Wissenschaftler, gegen den der blaue SEGA-Igel kämpft?",
+      "optionen": [
+        "Dr. Eggman",
+        "Dr. Wily",
+        "Dr. Light",
+        "Dr. Neo Cortex"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Doctor Eggman",
+        "url": "https://de.wikipedia.org/wiki/Doctor_Eggman"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "game-095",
+      "modus": "schaetzen",
+      "frage": "Mit wie vielen Leben startet man im originalen „Super Mario Bros.“ (NES)?",
+      "einheit": "Leben",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Super Mario Bros.",
+        "url": "https://de.wikipedia.org/wiki/Super_Mario_Bros."
+      }
+    },
+    {
+      "id": "game-096",
+      "modus": "schaetzen",
+      "frage": "Wie viele Karten hat ein klassisches UNO-Spiel?",
+      "einheit": "Karten",
+      "loesung": 108,
+      "quelle": {
+        "titel": "Wikipedia – Uno (Kartenspiel)",
+        "url": "https://de.wikipedia.org/wiki/Uno_(Kartenspiel)"
+      }
+    },
+    {
+      "id": "game-097",
+      "modus": "schaetzen",
+      "frage": "Wie viele Steine hat ein klassisches Dominospiel (Doppel-Sechs)?",
+      "einheit": "Steine",
+      "loesung": 28,
+      "quelle": {
+        "titel": "Wikipedia – Domino",
+        "url": "https://de.wikipedia.org/wiki/Domino"
+      }
+    },
+    {
+      "id": "game-098",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr erschien das Automatenspiel „Street Fighter II“?",
+      "daten": {
+        "von": 1975,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Start des Musiksenders MTV",
+            "jahr": 1981
+          },
+          {
+            "name": "Erste PlayStation",
+            "jahr": 1994
+          }
+        ]
+      },
+      "loesung": 1991,
+      "quelle": {
+        "titel": "Wikipedia – Street Fighter II",
+        "url": "https://de.wikipedia.org/wiki/Street_Fighter_II"
+      }
+    },
+    {
+      "id": "game-099",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Stockholm, wo Minecraft entwickelt wurde?",
+      "daten": {
+        "mitte": [
+          50,
+          10
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 59.33,
+        "lng": 18.07
+      },
+      "quelle": {
+        "titel": "Wikipedia – Minecraft",
+        "url": "https://de.wikipedia.org/wiki/Minecraft"
+      }
+    },
+    {
+      "id": "game-100",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Xbox-Konsolen nach ihrem Erscheinen!",
+      "loesung": [
+        "Xbox Series X",
+        "Xbox One",
+        "Xbox 360",
+        "Xbox"
+      ],
+      "oben": "neueste",
+      "unten": "älteste",
+      "quelle": {
+        "titel": "Wikipedia – Xbox",
+        "url": "https://de.wikipedia.org/wiki/Xbox"
+      }
     }
   ],
   "stechfragen": [
@@ -1556,6 +1716,17 @@
       "quelle": {
         "titel": "Wikipedia – Grand Theft Auto",
         "url": "https://de.wikipedia.org/wiki/Grand_Theft_Auto"
+      }
+    },
+    {
+      "id": "game-s08",
+      "modus": "schaetzen",
+      "frage": "Wie viele Spielsteine enthält die deutsche Ausgabe von „Scrabble“?",
+      "einheit": "Steine",
+      "loesung": 102,
+      "quelle": {
+        "titel": "Wikipedia – Scrabble",
+        "url": "https://de.wikipedia.org/wiki/Scrabble"
       }
     }
   ]

@@ -52,15 +52,23 @@ Jahrmarkt-Rad, Tafel links/Rad rechts, Handy schmale Spalte. Probe-Dateien (`pro
 
 | Thema | Fragen | | Thema | Fragen |
 |---|---|---|---|---|
-| Raumfahrt | 72 | | Mathe | 89 |
-| Geographie | 97 | | Zurück in die Vergangenheit | 94 |
-| Tierwelt | 94 | | Das ist Deutsch | 95 |
-| Essen & Trinken | 93 | | Filme & Serien | 90 |
-| Biologie | 90 | | Videospiele | 90 |
-| Chemie | 92 | | Sport | 93 |
-| Physik | 90 | | | |
+| Raumfahrt | 82 | | Mathe | 99 |
+| Geographie | 107 | | Zurück in die Vergangenheit | 104 |
+| Tierwelt | 104 | | Das ist Deutsch | 105 |
+| Essen & Trinken | 103 | | Filme & Serien | 100 |
+| Biologie | 100 | | Videospiele | 100 |
+| Chemie | 102 | | Sport | 103 |
+| Physik | 100 | | Die 500-€-Frage | 42 |
 
-Alle mit 7 Stechfragen (Mathe 6).
+Alle mit 8 Stechfragen (Mathe 7, 500-€-Frage 4). Stand nach dem Test-Block vom 12.10.2026
+(10 Fragen + 1 Stechfrage pro Thema, mit der neuen Pipeline geprüft).
+
+**Erfahrung aus dem Test-Block (12.10.2026):** Die Pipeline fand 17 echte Probleme, die beim
+Schreiben übersehen wurden – meist stand die Antwort einer *neuen* Frage schon sichtbar in einer
+alten (Balken „Fernsehturm Berlin 368“, Reihenfolge-`werte` „Jurassic Park 1993“, Hilfsereignis
+„Erste Tour de France 1903“), dazu 8 tote Links. Tipp: Vor dem Schreiben eines Themas
+`grep` nach dem geplanten Fakt bzw. der Jahreszahl im Paket machen. Wikipedia-Suche per API
+sperrt bei schnellen Anfragen (429) – Links lieber direkt mit `validate.link_problem` prüfen.
 
 **Neu (12.10.2026, noch nicht committet): Thema „Die 500-€-Frage“** (`jauch.json`, Kürzel `wwm`,
 Hintergrund `bilder/szenen/jauch.png` aus `ki-bilder/Jauch.png`). Nutzer fand die ersten 10

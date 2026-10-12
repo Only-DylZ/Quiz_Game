@@ -1667,6 +1667,167 @@
         "titel": "Wikipedia – La Paz",
         "url": "https://de.wikipedia.org/wiki/La_Paz"
       }
+    },
+    {
+      "id": "geo-098",
+      "modus": "auswahl",
+      "frage": "Wie heißt die Hauptstadt von Myanmar?",
+      "optionen": [
+        "Yangon",
+        "Naypyidaw",
+        "Mandalay",
+        "Bangkok"
+      ],
+      "erklaerung": "Yangon war bis 2005 Hauptstadt und ist bis heute die größte Stadt.",
+      "quelle": {
+        "titel": "Wikipedia – Naypyidaw",
+        "url": "https://de.wikipedia.org/wiki/Naypyidaw"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "geo-099",
+      "modus": "auswahl",
+      "frage": "Welcher Fluss fließt durch Bagdad?",
+      "optionen": [
+        "Euphrat",
+        "Nil",
+        "Tigris",
+        "Jordan"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Tigris",
+        "url": "https://de.wikipedia.org/wiki/Tigris"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "geo-100",
+      "modus": "auswahl",
+      "frage": "In welchem Land liegt der Kilimandscharo?",
+      "optionen": [
+        "Kenia",
+        "Uganda",
+        "Äthiopien",
+        "Tansania"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Kilimandscharo",
+        "url": "https://de.wikipedia.org/wiki/Kilimandscharo"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "geo-101",
+      "modus": "auswahl",
+      "frage": "Welcher Staat ist der am dichtesten besiedelte der Welt?",
+      "optionen": [
+        "Monaco",
+        "Bangladesch",
+        "Malta",
+        "Niederlande"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Monaco",
+        "url": "https://de.wikipedia.org/wiki/Monaco"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "geo-102",
+      "modus": "schaetzen",
+      "frage": "An wie viele Staaten grenzt Österreich?",
+      "einheit": "Staaten",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Österreich",
+        "url": "https://de.wikipedia.org/wiki/Österreich"
+      }
+    },
+    {
+      "id": "geo-103",
+      "modus": "schaetzen",
+      "frage": "Wie groß ist die Fläche von Liechtenstein?",
+      "einheit": "km²",
+      "loesung": 160,
+      "quelle": {
+        "titel": "Wikipedia – Liechtenstein",
+        "url": "https://de.wikipedia.org/wiki/Liechtenstein"
+      }
+    },
+    {
+      "id": "geo-104",
+      "modus": "schaetzen",
+      "frage": "Wie viele Bundesstaaten hat Brasilien (ohne den Hauptstadtbezirk)?",
+      "einheit": "Bundesstaaten",
+      "loesung": 26,
+      "quelle": {
+        "titel": "Wikipedia – Liste der Bundesstaaten Brasiliens",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Bundesstaaten_Brasiliens"
+      }
+    },
+    {
+      "id": "geo-105",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde Singapur ein unabhängiger Staat?",
+      "daten": {
+        "von": 1940,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Wunder von Bern",
+            "jahr": 1954
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1965,
+      "quelle": {
+        "titel": "Wikipedia – Singapur",
+        "url": "https://de.wikipedia.org/wiki/Singapur"
+      }
+    },
+    {
+      "id": "geo-106",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt die Insel Tasmanien?",
+      "daten": {
+        "mitte": [
+          -10,
+          120
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -42.0,
+        "lng": 146.6
+      },
+      "quelle": {
+        "titel": "Wikipedia – Tasmanien",
+        "url": "https://de.wikipedia.org/wiki/Tasmanien"
+      }
+    },
+    {
+      "id": "geo-107",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Seen nach ihrer größten Tiefe!",
+      "loesung": [
+        "Baikalsee",
+        "Tanganjikasee",
+        "Kaspisches Meer",
+        "Bodensee"
+      ],
+      "oben": "tiefster",
+      "unten": "flachster",
+      "quelle": {
+        "titel": "Wikipedia – Liste der tiefsten Seen",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_tiefsten_Seen"
+      }
     }
   ],
   "stechfragen": [
@@ -1745,6 +1906,17 @@
       "quelle": {
         "titel": "Wikipedia – Öresundbrücke",
         "url": "https://de.wikipedia.org/wiki/Öresundbrücke"
+      }
+    },
+    {
+      "id": "geo-s08",
+      "modus": "schaetzen",
+      "frage": "Wie lang ist die Grenze zwischen Kanada und den USA (mit Alaska)?",
+      "einheit": "km",
+      "loesung": 8891,
+      "quelle": {
+        "titel": "Wikipedia – Grenze zwischen Kanada und den Vereinigten Staaten",
+        "url": "https://de.wikipedia.org/wiki/Grenze_zwischen_Kanada_und_den_Vereinigten_Staaten"
       }
     }
   ]

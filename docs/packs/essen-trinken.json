@@ -1557,6 +1557,166 @@
         "titel": "Wikipedia – Toblerone",
         "url": "https://de.wikipedia.org/wiki/Toblerone"
       }
+    },
+    {
+      "id": "essen-095",
+      "modus": "auswahl",
+      "frage": "Woraus wird Rum gebrannt?",
+      "optionen": [
+        "Kartoffeln",
+        "Zuckerrohr",
+        "Agave",
+        "Gerste"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Rum",
+        "url": "https://de.wikipedia.org/wiki/Rum"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "essen-096",
+      "modus": "auswahl",
+      "frage": "Was ist Mascarpone?",
+      "optionen": [
+        "Ein Frischkäse",
+        "Eine Nudelsorte",
+        "Eine Wurst",
+        "Ein Gewürz"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Mascarpone",
+        "url": "https://de.wikipedia.org/wiki/Mascarpone"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "essen-097",
+      "modus": "auswahl",
+      "frage": "Welches Gemüse gibt dem osteuropäischen Borschtsch seine rote Farbe?",
+      "optionen": [
+        "Kürbis",
+        "Karotte",
+        "Paprika",
+        "Rote Bete"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Borschtsch",
+        "url": "https://de.wikipedia.org/wiki/Borschtsch"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "essen-098",
+      "modus": "auswahl",
+      "frage": "Wie heißt der japanische grüne Tee, der als feines Pulver aufgeschlagen wird?",
+      "optionen": [
+        "Chai",
+        "Rooibos",
+        "Matcha",
+        "Earl Grey"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Matcha",
+        "url": "https://de.wikipedia.org/wiki/Matcha"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "essen-099",
+      "modus": "schaetzen",
+      "frage": "Wie viele Liter Kölsch fasst ein „Pittermännchen“-Fass?",
+      "einheit": "Liter",
+      "loesung": 10,
+      "quelle": {
+        "titel": "Wikipedia – Pittermännchen",
+        "url": "https://de.wikipedia.org/wiki/Pittermännchen"
+      }
+    },
+    {
+      "id": "essen-100",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zentimeter lang darf eine echte Nürnberger Rostbratwurst höchstens sein?",
+      "einheit": "cm",
+      "loesung": 9,
+      "quelle": {
+        "titel": "Wikipedia – Nürnberger Rostbratwurst",
+        "url": "https://de.wikipedia.org/wiki/Nürnberger_Rostbratwurst"
+      }
+    },
+    {
+      "id": "essen-101",
+      "modus": "schaetzen",
+      "frage": "Wie viele Gramm wiegt eine normale Tafel Schokolade in Deutschland?",
+      "einheit": "g",
+      "loesung": 100,
+      "quelle": {
+        "titel": "Wikipedia – Tafelschokolade",
+        "url": "https://de.wikipedia.org/wiki/Tafelschokolade"
+      }
+    },
+    {
+      "id": "essen-102",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr eröffnete Starbucks sein erstes Geschäft in Seattle?",
+      "daten": {
+        "von": 1950,
+        "bis": 2000,
+        "ereignisse": [
+          {
+            "name": "Erste Farbfernsehsendung in Deutschland",
+            "jahr": 1967
+          },
+          {
+            "name": "Erster Game Boy",
+            "jahr": 1989
+          }
+        ]
+      },
+      "loesung": 1971,
+      "quelle": {
+        "titel": "Wikipedia – Starbucks",
+        "url": "https://de.wikipedia.org/wiki/Starbucks"
+      }
+    },
+    {
+      "id": "essen-103",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt Nürnberg, berühmt für seine Lebkuchen?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 49.45,
+        "lng": 11.08
+      },
+      "quelle": {
+        "titel": "Wikipedia – Nürnberger Lebkuchen",
+        "url": "https://de.wikipedia.org/wiki/Nürnberger_Lebkuchen"
+      }
+    },
+    {
+      "id": "essen-104",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Garstufen eines Steaks!",
+      "loesung": [
+        "Rare",
+        "Medium rare",
+        "Medium",
+        "Well done"
+      ],
+      "oben": "am wenigsten gegart",
+      "unten": "durchgebraten",
+      "quelle": {
+        "titel": "Wikipedia – Garstufe",
+        "url": "https://de.wikipedia.org/wiki/Garstufe"
+      }
     }
   ],
   "stechfragen": [
@@ -1637,6 +1797,17 @@
       "quelle": {
         "titel": "Wikipedia – Leibniz-Keks",
         "url": "https://de.wikipedia.org/wiki/Leibniz-Keks"
+      }
+    },
+    {
+      "id": "essen-s08",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr gründeten Alfred und Clara Ritter die Schokoladenfirma Ritter Sport?",
+      "einheit": "",
+      "loesung": 1912,
+      "quelle": {
+        "titel": "Wikipedia – Alfred Ritter (Unternehmen)",
+        "url": "https://de.wikipedia.org/wiki/Alfred_Ritter_(Unternehmen)"
       }
     }
   ]

@@ -27,6 +27,11 @@ So geht's:
 7. **Nach jedem fertigen Block committen** – sonst gelten die Fragen beim
    nächsten Block weiter als „neu“ und werden noch einmal geprüft.
 
+**Häufigste Falle:** Die Antwort einer *neuen* Frage steht schon sichtbar in einer alten –
+als Balken, als `werte` einer Reihenfolge oder als Hilfsereignis einer Zeitleiste (z. B.
+„Erste Tour de France 1903“). Vor dem Schreiben kurz im Paket nach dem Fakt suchen;
+`lecks.py --neu --kontext` findet den Rest.
+
 **Sparsam arbeiten (für Claude):** Nicht die ganzen Pakete lesen. Überblick über
 ein Paket (Unterthemen, nächste freie ids):
 `python tools/fragenliste.py docs/packs/<thema>.json` – eine Zeile pro Frage.

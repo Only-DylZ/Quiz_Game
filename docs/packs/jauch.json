@@ -545,6 +545,174 @@
         "titel": "Wikipedia – Logikrätsel",
         "url": "https://de.wikipedia.org/wiki/Logikrätsel"
       }
+    },
+    {
+      "id": "wwm-041",
+      "modus": "auswahl",
+      "frage": "Eine Uhr schlägt um 6 Uhr sechsmal – das dauert 5 Sekunden. Wie lange dauern die 12 Schläge um 12 Uhr?",
+      "optionen": [
+        "10 Sekunden",
+        "11 Sekunden",
+        "12 Sekunden",
+        "6 Sekunden"
+      ],
+      "erklaerung": "Zwischen 6 Schlägen liegen 5 Pausen à 1 Sekunde. Zwischen 12 Schlägen liegen 11 Pausen.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "wwm-042",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt hinter alle drei: Zahn…, Klo…, Haar…?",
+      "optionen": [
+        "Creme",
+        "Spange",
+        "Bürste",
+        "Pasta"
+      ],
+      "erklaerung": "Zahnbürste, Klobürste, Haarbürste. Zahn- und Haarcreme gibt es – eine Klocreme nicht.",
+      "quelle": {
+        "titel": "Wiktionary – Klobürste",
+        "url": "https://de.wiktionary.org/wiki/Klobürste"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "wwm-043",
+      "modus": "auswahl",
+      "frage": "Wer „sich ins Fäustchen lacht“, …",
+      "optionen": [
+        "freut sich heimlich",
+        "lacht sich halb tot",
+        "versteckt seine Wut",
+        "droht mit der Faust"
+      ],
+      "erklaerung": "Meist über einen Vorteil oder den Schaden anderer. „Halb totlachen“ wäre „sich einen Ast lachen“.",
+      "quelle": {
+        "titel": "Wiktionary – sich ins Fäustchen lachen",
+        "url": "https://de.wiktionary.org/wiki/sich_ins_Fäustchen_lachen"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "wwm-044",
+      "modus": "auswahl",
+      "frage": "Ein Mädchen ist 4 Jahre alt, ihr Bruder halb so alt. Wie alt ist der Bruder, wenn sie 100 wird?",
+      "optionen": [
+        "50",
+        "52",
+        "98",
+        "96"
+      ],
+      "erklaerung": "Er ist 2 Jahre jünger – das bleibt immer so.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "wwm-045",
+      "modus": "auswahl",
+      "frage": "Wie viel Erde steckt in einem Loch, das 3 cm tief, 3 cm breit und 3 cm lang ist?",
+      "optionen": [
+        "27 cm³",
+        "9 cm³",
+        "Gar keine",
+        "3 cm³"
+      ],
+      "erklaerung": "In einem Loch ist keine Erde – sonst wäre es kein Loch.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "wwm-046",
+      "modus": "auswahl",
+      "frage": "Heute ist Montag. Welcher Wochentag ist in 100 Tagen?",
+      "optionen": [
+        "Dienstag",
+        "Donnerstag",
+        "Montag",
+        "Mittwoch"
+      ],
+      "erklaerung": "100 Tage sind 14 Wochen und 2 Tage – Montag plus 2 Tage.",
+      "quelle": {
+        "titel": "Wikipedia – Logikrätsel",
+        "url": "https://de.wikipedia.org/wiki/Logikrätsel"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "wwm-047",
+      "modus": "auswahl",
+      "frage": "Ein Auto fährt 60 km mit 30 km/h und dieselbe Strecke zurück mit 90 km/h. Wie schnell war es im Durchschnitt?",
+      "optionen": [
+        "45 km/h",
+        "60 km/h",
+        "50 km/h",
+        "55 km/h"
+      ],
+      "erklaerung": "120 km in 2 h + 40 min = 2⅔ Stunden. 120 : 2⅔ = 45 km/h – nicht der Mittelwert 60.",
+      "quelle": {
+        "titel": "Wikipedia – Durchschnittsgeschwindigkeit",
+        "url": "https://de.wikipedia.org/wiki/Durchschnittsgeschwindigkeit"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "wwm-048",
+      "modus": "auswahl",
+      "frage": "Ein Korb mit 5 Äpfeln. Fünf Kinder bekommen je einen Apfel – trotzdem bleibt einer im Korb. Wie geht das?",
+      "optionen": [
+        "Ein Kind isst nichts",
+        "Ein Apfel war doppelt",
+        "Ein Kind bekommt den Korb mit Apfel",
+        "Ein Kind ist zu spät"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "wwm-049",
+      "modus": "auswahl",
+      "frage": "Welches Wort entsteht, wenn man „Regal“ rückwärts liest?",
+      "optionen": [
+        "Lagre",
+        "Glare",
+        "Ragel",
+        "Lager"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Anadrom",
+        "url": "https://de.wikipedia.org/wiki/Anadrom"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "wwm-050",
+      "modus": "auswahl",
+      "frage": "Welches Wort passt vor alle drei: …stunde, …schein, …schirm?",
+      "optionen": [
+        "Sonnen",
+        "Regen",
+        "Mond",
+        "Fall"
+      ],
+      "erklaerung": "Sonnenstunde, Sonnenschein, Sonnenschirm. Regen- und Fallschirm gibt es – einen Regenschein nicht.",
+      "quelle": {
+        "titel": "Wiktionary – Sonnenschirm",
+        "url": "https://de.wiktionary.org/wiki/Sonnenschirm"
+      },
+      "loesung": 0
     }
   ],
   "stechfragen": [
@@ -581,6 +749,18 @@
       "quelle": {
         "titel": "Wikipedia – Quadratische Pyramidalzahl",
         "url": "https://de.wikipedia.org/wiki/Quadratische_Pyramidalzahl"
+      }
+    },
+    {
+      "id": "wwm-s04",
+      "modus": "schaetzen",
+      "frage": "Eine Uhr schlägt zu jeder vollen Stunde so oft, wie es Uhr ist (1 bis 12). Wie viele Schläge sind das an einem ganzen Tag?",
+      "einheit": "Schläge",
+      "loesung": 156,
+      "erklaerung": "1 + 2 + … + 12 = 78, und das zweimal am Tag: 156.",
+      "quelle": {
+        "titel": "Wikipedia – Denksportaufgabe",
+        "url": "https://de.wikipedia.org/wiki/Denksportaufgabe"
       }
     }
   ]

@@ -1571,6 +1571,166 @@
         "titel": "Wikipedia – Liste von Kriegen",
         "url": "https://de.wikipedia.org/wiki/Liste_von_Kriegen"
       }
+    },
+    {
+      "id": "gesch-095",
+      "modus": "auswahl",
+      "frage": "Unter welchem Kaiser begann in Rom der Bau des Kolosseums?",
+      "optionen": [
+        "Nero",
+        "Vespasian",
+        "Caesar",
+        "Augustus"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Kolosseum",
+        "url": "https://de.wikipedia.org/wiki/Kolosseum"
+      },
+      "loesung": 1
+    },
+    {
+      "id": "gesch-096",
+      "modus": "auswahl",
+      "frage": "Welcher preußische König wurde „der Alte Fritz“ genannt?",
+      "optionen": [
+        "Friedrich II.",
+        "Wilhelm I.",
+        "Friedrich Wilhelm I.",
+        "Ludwig II."
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Friedrich II. (Preußen)",
+        "url": "https://de.wikipedia.org/wiki/Friedrich_II._(Preußen)"
+      },
+      "loesung": 0
+    },
+    {
+      "id": "gesch-097",
+      "modus": "auswahl",
+      "frage": "Welches Land schenkte den USA die Freiheitsstatue?",
+      "optionen": [
+        "Großbritannien",
+        "Spanien",
+        "Deutschland",
+        "Frankreich"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Freiheitsstatue",
+        "url": "https://de.wikipedia.org/wiki/Freiheitsstatue"
+      },
+      "loesung": 3
+    },
+    {
+      "id": "gesch-098",
+      "modus": "auswahl",
+      "frage": "Wie hieß der letzte Zar Russlands?",
+      "optionen": [
+        "Peter der Große",
+        "Alexander III.",
+        "Nikolaus II.",
+        "Iwan der Schreckliche"
+      ],
+      "quelle": {
+        "titel": "Wikipedia – Nikolaus II. (Russland)",
+        "url": "https://de.wikipedia.org/wiki/Nikolaus_II._(Russland)"
+      },
+      "loesung": 2
+    },
+    {
+      "id": "gesch-099",
+      "modus": "schaetzen",
+      "frage": "Wie alt wurde Napoleon Bonaparte?",
+      "einheit": "Jahre",
+      "loesung": 51,
+      "quelle": {
+        "titel": "Wikipedia – Napoleon Bonaparte",
+        "url": "https://de.wikipedia.org/wiki/Napoleon_Bonaparte"
+      }
+    },
+    {
+      "id": "gesch-100",
+      "modus": "schaetzen",
+      "frage": "Wie lang war der Obergermanisch-Raetische Limes, die römische Grenzbefestigung in Deutschland?",
+      "einheit": "km",
+      "loesung": 550,
+      "quelle": {
+        "titel": "Wikipedia – Obergermanisch-Raetischer Limes",
+        "url": "https://de.wikipedia.org/wiki/Obergermanisch-Raetischer_Limes"
+      }
+    },
+    {
+      "id": "gesch-101",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kaiser hatte das Deutsche Kaiserreich insgesamt?",
+      "einheit": "Kaiser",
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Deutscher Kaiser",
+        "url": "https://de.wikipedia.org/wiki/Deutscher_Kaiser"
+      }
+    },
+    {
+      "id": "gesch-102",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr nach Christus begann der Bau des Hadrianswalls in Britannien?",
+      "daten": {
+        "von": 0,
+        "bis": 700,
+        "ereignisse": [
+          {
+            "name": "Ausbruch des Vesuvs",
+            "jahr": 79
+          },
+          {
+            "name": "Tod Mohammeds",
+            "jahr": 632
+          }
+        ]
+      },
+      "loesung": 122,
+      "quelle": {
+        "titel": "Wikipedia – Hadrianswall",
+        "url": "https://de.wikipedia.org/wiki/Hadrianswall"
+      }
+    },
+    {
+      "id": "gesch-103",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo lag die antike Stadt Babylon?",
+      "daten": {
+        "mitte": [
+          33,
+          25
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 32.54,
+        "lng": 44.42
+      },
+      "quelle": {
+        "titel": "Wikipedia – Babylon",
+        "url": "https://de.wikipedia.org/wiki/Babylon"
+      }
+    },
+    {
+      "id": "gesch-104",
+      "modus": "reihenfolge",
+      "frage": "Ordne die US-Präsidenten nach ihrer Amtszeit!",
+      "loesung": [
+        "Abraham Lincoln",
+        "Theodore Roosevelt",
+        "John F. Kennedy",
+        "Barack Obama"
+      ],
+      "oben": "frühester",
+      "unten": "spätester",
+      "quelle": {
+        "titel": "Wikipedia – Liste der Präsidenten der Vereinigten Staaten",
+        "url": "https://de.wikipedia.org/wiki/Liste_der_Präsidenten_der_Vereinigten_Staaten"
+      }
     }
   ],
   "stechfragen": [
@@ -1649,6 +1809,17 @@
       "quelle": {
         "titel": "Wikipedia – Frauenwahlrecht",
         "url": "https://de.wikipedia.org/wiki/Frauenwahlrecht"
+      }
+    },
+    {
+      "id": "gesch-s08",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr begann der Dreißigjährige Krieg?",
+      "einheit": "",
+      "loesung": 1618,
+      "quelle": {
+        "titel": "Wikipedia – Dreißigjähriger Krieg",
+        "url": "https://de.wikipedia.org/wiki/Dreißigjähriger_Krieg"
       }
     }
   ]
