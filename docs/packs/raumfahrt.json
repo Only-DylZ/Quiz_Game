@@ -1750,16 +1750,16 @@
       "art": "zeitleiste",
       "frage": "In welchem Jahr landete mit Luna 9 zum ersten Mal eine Sonde weich auf dem Mond?",
       "daten": {
-        "von": 1950,
-        "bis": 1990,
+        "von": 1920,
+        "bis": 2010,
         "ereignisse": [
           {
-            "name": "Bau der Berliner Mauer",
-            "jahr": 1961
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
           },
           {
-            "name": "Fußball-WM in Deutschland",
-            "jahr": 1974
+            "name": "Erstes iPhone",
+            "jahr": 2007
           }
         ]
       },
