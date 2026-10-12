@@ -1676,6 +1676,511 @@
         "titel": "Wikipedia – Platonischer Körper",
         "url": "https://de.wikipedia.org/wiki/Platonischer_Körper"
       }
+    },
+    {
+      "id": "mathe-101",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein Vieleck mit acht Ecken?",
+      "optionen": [
+        "Pentagon",
+        "Oktagon",
+        "Dekagon",
+        "Heptagon"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Achteck",
+        "url": "https://de.wikipedia.org/wiki/Achteck"
+      }
+    },
+    {
+      "id": "mathe-102",
+      "modus": "auswahl",
+      "frage": "Wie schreibt man die Zahl 9 in römischen Zahlen?",
+      "optionen": [
+        "IX",
+        "XI",
+        "VIIII",
+        "IIX"
+      ],
+      "loesung": 0,
+      "erklaerung": "Ein kleineres Zeichen vor einem größeren wird abgezogen: X − I = 9.",
+      "quelle": {
+        "titel": "Wikipedia – Römische Zahlschrift",
+        "url": "https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift"
+      }
+    },
+    {
+      "id": "mathe-103",
+      "modus": "auswahl",
+      "frage": "Wie heißt ein Viereck mit genau einem Paar paralleler Seiten?",
+      "optionen": [
+        "Raute",
+        "Drachenviereck",
+        "Trapez",
+        "Parallelogramm"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Trapez (Geometrie)",
+        "url": "https://de.wikipedia.org/wiki/Trapez_(Geometrie)"
+      }
+    },
+    {
+      "id": "mathe-104",
+      "modus": "auswahl",
+      "frage": "Wie heißt das Ergebnis einer Division?",
+      "optionen": [
+        "Summe",
+        "Differenz",
+        "Faktor",
+        "Quotient"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Division (Mathematik)",
+        "url": "https://de.wikipedia.org/wiki/Division_(Mathematik)"
+      }
+    },
+    {
+      "id": "mathe-105",
+      "modus": "auswahl",
+      "frage": "Welche dieser Zahlen ist gleichzeitig eine Quadratzahl und eine Kubikzahl?",
+      "optionen": [
+        "512",
+        "256",
+        "343",
+        "729"
+      ],
+      "loesung": 3,
+      "erklaerung": "729 = 27 · 27 = 9 · 9 · 9.",
+      "quelle": {
+        "titel": "Wikipedia – Kubikzahl",
+        "url": "https://de.wikipedia.org/wiki/Kubikzahl"
+      }
+    },
+    {
+      "id": "mathe-106",
+      "modus": "auswahl",
+      "frage": "Wie nennt man zwei Winkel an einer Geraden, die zusammen einen gestreckten Winkel ergeben?",
+      "optionen": [
+        "Nebenwinkel",
+        "Scheitelwinkel",
+        "Stufenwinkel",
+        "Wechselwinkel"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Nebenwinkel",
+        "url": "https://de.wikipedia.org/wiki/Nebenwinkel"
+      }
+    },
+    {
+      "id": "mathe-107",
+      "modus": "auswahl",
+      "frage": "Was ist der Kehrwert von 4?",
+      "optionen": [
+        "−4",
+        "0,4",
+        "1/4",
+        "16"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Kehrwert",
+        "url": "https://de.wikipedia.org/wiki/Kehrwert"
+      }
+    },
+    {
+      "id": "mathe-108",
+      "modus": "auswahl",
+      "frage": "Wie heißt eine Gerade, die einen Kreis in genau einem Punkt berührt?",
+      "optionen": [
+        "Sekante",
+        "Sehne",
+        "Passante",
+        "Tangente"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Tangente",
+        "url": "https://de.wikipedia.org/wiki/Tangente"
+      }
+    },
+    {
+      "id": "mathe-109",
+      "modus": "auswahl",
+      "frage": "Was ergibt 2 + 3 × 4?",
+      "optionen": [
+        "20",
+        "14",
+        "24",
+        "9"
+      ],
+      "loesung": 1,
+      "erklaerung": "Punkt vor Strich: erst 3 × 4 = 12, dann 2 + 12.",
+      "quelle": {
+        "titel": "Wikipedia – Operatorrangfolge",
+        "url": "https://de.wikipedia.org/wiki/Operatorrangfolge"
+      }
+    },
+    {
+      "id": "mathe-110",
+      "modus": "auswahl",
+      "frage": "Wie geht die Zahlenfolge weiter: 2, 6, 12, 20, 30, …?",
+      "optionen": [
+        "40",
+        "44",
+        "42",
+        "36"
+      ],
+      "loesung": 2,
+      "erklaerung": "Die Abstände wachsen um je 2: +4, +6, +8, +10, +12.",
+      "quelle": {
+        "titel": "Wikipedia – Rechteckszahl",
+        "url": "https://de.wikipedia.org/wiki/Rechteckszahl"
+      }
+    },
+    {
+      "id": "mathe-111",
+      "modus": "auswahl",
+      "frage": "Wie viel ist ein Drittel von einem Drittel?",
+      "optionen": [
+        "1/9",
+        "1/6",
+        "2/3",
+        "1/3"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Bruchrechnung",
+        "url": "https://de.wikipedia.org/wiki/Bruchrechnung"
+      }
+    },
+    {
+      "id": "mathe-112",
+      "modus": "auswahl",
+      "frage": "Nach welchem Gelehrten ist das „kartesische“ Koordinatensystem benannt?",
+      "optionen": [
+        "Blaise Pascal",
+        "René Descartes",
+        "Isaac Newton",
+        "Pierre de Fermat"
+      ],
+      "loesung": 1,
+      "erklaerung": "Descartes nannte sich auf Latein „Cartesius“.",
+      "quelle": {
+        "titel": "Wikipedia – Kartesisches Koordinatensystem",
+        "url": "https://de.wikipedia.org/wiki/Kartesisches_Koordinatensystem"
+      }
+    },
+    {
+      "id": "mathe-113",
+      "modus": "schaetzen",
+      "frage": "Kopfrechnen: Wie viel ist 19 × 21?",
+      "einheit": "",
+      "loesung": 399,
+      "erklaerung": "Trick: 20 × 20 − 1 = 399.",
+      "quelle": {
+        "titel": "Wikipedia – Binomische Formeln",
+        "url": "https://de.wikipedia.org/wiki/Binomische_Formeln"
+      }
+    },
+    {
+      "id": "mathe-114",
+      "modus": "schaetzen",
+      "frage": "Kopfrechnen: Wie viel ist 15 × 15?",
+      "einheit": "",
+      "loesung": 225,
+      "quelle": {
+        "titel": "Wikipedia – Quadratzahl",
+        "url": "https://de.wikipedia.org/wiki/Quadratzahl"
+      }
+    },
+    {
+      "id": "mathe-115",
+      "modus": "schaetzen",
+      "frage": "Wie viel ist 1000 geteilt durch 8?",
+      "einheit": "",
+      "loesung": 125,
+      "quelle": {
+        "titel": "Wikipedia – Division (Mathematik)",
+        "url": "https://de.wikipedia.org/wiki/Division_(Mathematik)"
+      }
+    },
+    {
+      "id": "mathe-116",
+      "modus": "schaetzen",
+      "frage": "Wie viel sind 20 % von 80?",
+      "einheit": "",
+      "loesung": 16,
+      "quelle": {
+        "titel": "Wikipedia – Prozent",
+        "url": "https://de.wikipedia.org/wiki/Prozent"
+      }
+    },
+    {
+      "id": "mathe-117",
+      "modus": "schaetzen",
+      "frage": "In einer Liga mit 18 Mannschaften spielt jede zweimal gegen jede andere. Wie viele Spiele gibt es in einer Saison?",
+      "einheit": "Spiele",
+      "loesung": 306,
+      "erklaerung": "18 × 17 = 306 – so viele Spiele hat eine Bundesliga-Saison.",
+      "quelle": {
+        "titel": "Wikipedia – Rundenturnier",
+        "url": "https://de.wikipedia.org/wiki/Rundenturnier"
+      }
+    },
+    {
+      "id": "mathe-118",
+      "modus": "schaetzen",
+      "frage": "Zehn Personen geben sich alle gegenseitig einmal die Hand. Wie viele Händedrücke sind das?",
+      "einheit": "Händedrücke",
+      "loesung": 45,
+      "erklaerung": "10 × 9 : 2 = 45.",
+      "quelle": {
+        "titel": "Wikipedia – Kombination (Kombinatorik)",
+        "url": "https://de.wikipedia.org/wiki/Kombination_(Kombinatorik)"
+      }
+    },
+    {
+      "id": "mathe-119",
+      "modus": "schaetzen",
+      "frage": "Wie viel Grad hat jeder Innenwinkel eines regelmäßigen Fünfecks?",
+      "einheit": "°",
+      "loesung": 108,
+      "quelle": {
+        "titel": "Wikipedia – Fünfeck",
+        "url": "https://de.wikipedia.org/wiki/F%C3%BCnfeck"
+      }
+    },
+    {
+      "id": "mathe-120",
+      "modus": "schaetzen",
+      "frage": "Wie viele dreistellige Zahlen gibt es (von 100 bis 999)?",
+      "einheit": "Zahlen",
+      "loesung": 900,
+      "quelle": {
+        "titel": "Wikipedia – Stellenwertsystem",
+        "url": "https://de.wikipedia.org/wiki/Stellenwertsystem"
+      }
+    },
+    {
+      "id": "mathe-121",
+      "modus": "schaetzen",
+      "frage": "Wie viele Kubikzentimeter sind ein Liter?",
+      "einheit": "cm³",
+      "loesung": 1000,
+      "quelle": {
+        "titel": "Wikipedia – Liter",
+        "url": "https://de.wikipedia.org/wiki/Liter"
+      }
+    },
+    {
+      "id": "mathe-122",
+      "modus": "grafik",
+      "art": "balken",
+      "frage": "Die Balken zeigen die Dreieckszahlen. Wie heißt die fünfte?",
+      "daten": {
+        "einheit": "",
+        "balken": [
+          {
+            "name": "1. Zahl",
+            "wert": 1
+          },
+          {
+            "name": "2. Zahl",
+            "wert": 3
+          },
+          {
+            "name": "3. Zahl",
+            "wert": 6
+          },
+          {
+            "name": "4. Zahl",
+            "wert": 10
+          },
+          {
+            "name": "5. Zahl",
+            "wert": null
+          }
+        ]
+      },
+      "loesung": 15,
+      "erklaerung": "Man legt jedes Mal eine Reihe mehr dazu: +2, +3, +4, +5.",
+      "quelle": {
+        "titel": "Wikipedia – Dreieckszahl",
+        "url": "https://de.wikipedia.org/wiki/Dreieckszahl"
+      }
+    },
+    {
+      "id": "mathe-123",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr veröffentlichte Kurt Gödel seinen berühmten Unvollständigkeitssatz?",
+      "daten": {
+        "von": 1850,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Gründung des Deutschen Reichs",
+            "jahr": 1871
+          },
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          }
+        ]
+      },
+      "loesung": 1931,
+      "quelle": {
+        "titel": "Wikipedia – Gödelscher Unvollständigkeitssatz",
+        "url": "https://de.wikipedia.org/wiki/G%C3%B6delscher_Unvollst%C3%A4ndigkeitssatz"
+      }
+    },
+    {
+      "id": "mathe-124",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr fand in Deutschland die erste Ziehung von „Lotto 6 aus 49“ statt?",
+      "daten": {
+        "von": 1900,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1955,
+      "quelle": {
+        "titel": "Wikipedia – Lotto",
+        "url": "https://de.wikipedia.org/wiki/Lotto"
+      }
+    },
+    {
+      "id": "mathe-125",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr bekam mit Maryam Mirzakhani zum ersten Mal eine Frau die Fields-Medaille, den „Nobelpreis der Mathematik“?",
+      "daten": {
+        "von": 1930,
+        "bis": 2025,
+        "ereignisse": [
+          {
+            "name": "Euro-Bargeld",
+            "jahr": 2002
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 2014,
+      "quelle": {
+        "titel": "Wikipedia – Maryam Mirzakhani",
+        "url": "https://de.wikipedia.org/wiki/Maryam_Mirzakhani"
+      }
+    },
+    {
+      "id": "mathe-126",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo in Deutschland liegt Annaberg-Buchholz, wo der Rechenmeister Adam Ries lebte?",
+      "daten": {
+        "mitte": [
+          51.2,
+          10.4
+        ],
+        "zoom": 5
+      },
+      "loesung": {
+        "lat": 50.58,
+        "lng": 13.0
+      },
+      "quelle": {
+        "titel": "Wikipedia – Adam Ries",
+        "url": "https://de.wikipedia.org/wiki/Adam_Ries"
+      }
+    },
+    {
+      "id": "mathe-127",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt Toruń (Thorn), die Geburtsstadt von Nikolaus Kopernikus?",
+      "daten": {
+        "mitte": [
+          50,
+          12
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 53.01,
+        "lng": 18.6
+      },
+      "quelle": {
+        "titel": "Wikipedia – Toruń",
+        "url": "https://de.wikipedia.org/wiki/Toru%C5%84"
+      }
+    },
+    {
+      "id": "mathe-128",
+      "modus": "reihenfolge",
+      "frage": "Welche Potenz ist am größten? Ordne nach dem Wert!",
+      "loesung": [
+        "3 hoch 5",
+        "2 hoch 7",
+        "5 hoch 3",
+        "10 hoch 2"
+      ],
+      "oben": "größter Wert",
+      "unten": "kleinster Wert",
+      "quelle": {
+        "titel": "Wikipedia – Potenz (Mathematik)",
+        "url": "https://de.wikipedia.org/wiki/Potenz_(Mathematik)"
+      }
+    },
+    {
+      "id": "mathe-129",
+      "modus": "reihenfolge",
+      "frage": "Ordne nach der Wahrscheinlichkeit!",
+      "loesung": [
+        "Zahl beim Münzwurf",
+        "Rot beim Roulette",
+        "Sechs beim Würfeln",
+        "Sechs Richtige im Lotto"
+      ],
+      "oben": "am wahrscheinlichsten",
+      "unten": "am unwahrscheinlichsten",
+      "erklaerung": "Beim Roulette gibt es neben 18 roten und 18 schwarzen Zahlen auch die grüne Null.",
+      "quelle": {
+        "titel": "Wikipedia – Roulette",
+        "url": "https://de.wikipedia.org/wiki/Roulette"
+      }
+    },
+    {
+      "id": "mathe-130",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Flächeneinheiten nach ihrer Größe!",
+      "loesung": [
+        "Quadratkilometer",
+        "Hektar",
+        "Ar",
+        "Quadratmeter"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "quelle": {
+        "titel": "Wikipedia – Hektar",
+        "url": "https://de.wikipedia.org/wiki/Hektar"
+      }
     }
   ],
   "stechfragen": [
@@ -1754,6 +2259,28 @@
       "quelle": {
         "titel": "Wikipedia – Primzahlfunktion",
         "url": "https://de.wikipedia.org/wiki/Primzahlfunktion"
+      }
+    },
+    {
+      "id": "mathe-s08",
+      "modus": "schaetzen",
+      "frage": "Wie viele mögliche Tipps gibt es beim Eurojackpot (5 aus 50 und 2 aus 12)?",
+      "einheit": "Tipps",
+      "loesung": 139838160,
+      "quelle": {
+        "titel": "Wikipedia – Eurojackpot",
+        "url": "https://de.wikipedia.org/wiki/Eurojackpot"
+      }
+    },
+    {
+      "id": "mathe-s09",
+      "modus": "schaetzen",
+      "frage": "Wie viele Ziffern hat die Zahl 2 hoch 100?",
+      "einheit": "Ziffern",
+      "loesung": 31,
+      "quelle": {
+        "titel": "Wikipedia – Zweierpotenz",
+        "url": "https://de.wikipedia.org/wiki/Zweierpotenz"
       }
     }
   ]
