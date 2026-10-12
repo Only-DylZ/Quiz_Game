@@ -1754,6 +1754,484 @@
         "titel": "Wikipedia – Tiger",
         "url": "https://de.wikipedia.org/wiki/Tiger"
       }
+    },
+    {
+      "id": "tier-105",
+      "modus": "auswahl",
+      "frage": "Wie nennt man ein junges Wildschwein?",
+      "optionen": [
+        "Kitz",
+        "Frischling",
+        "Welpe",
+        "Zicklein"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Wildschwein",
+        "url": "https://de.wikipedia.org/wiki/Wildschwein"
+      }
+    },
+    {
+      "id": "tier-106",
+      "modus": "auswahl",
+      "frage": "Wie nennt man das Weibchen des Rothirschs?",
+      "optionen": [
+        "Hirschkuh",
+        "Bache",
+        "Fähe",
+        "Zibbe"
+      ],
+      "loesung": 0,
+      "erklaerung": "Bache heißt das Wildschwein-Weibchen, Fähe die Füchsin, Zibbe das Kaninchen-Weibchen.",
+      "quelle": {
+        "titel": "Wikipedia – Rothirsch",
+        "url": "https://de.wikipedia.org/wiki/Rothirsch"
+      }
+    },
+    {
+      "id": "tier-107",
+      "modus": "auswahl",
+      "frage": "Zu welcher Gruppe gehört der Pottwal?",
+      "optionen": [
+        "Bartenwale",
+        "Robben",
+        "Haie",
+        "Zahnwale"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Pottwal",
+        "url": "https://de.wikipedia.org/wiki/Pottwal"
+      }
+    },
+    {
+      "id": "tier-108",
+      "modus": "auswahl",
+      "frage": "Welches dieser Tiere ist ein Amphibium (Lurch)?",
+      "optionen": [
+        "Eidechse",
+        "Gecko",
+        "Feuersalamander",
+        "Leguan"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Feuersalamander",
+        "url": "https://de.wikipedia.org/wiki/Feuersalamander"
+      }
+    },
+    {
+      "id": "tier-109",
+      "modus": "auswahl",
+      "frage": "Welcher schwarz-weiße Meeressäuger wird auch „Killerwal“ genannt?",
+      "optionen": [
+        "Orca",
+        "Beluga",
+        "Grindwal",
+        "Seeleopard"
+      ],
+      "loesung": 0,
+      "quelle": {
+        "titel": "Wikipedia – Schwertwal",
+        "url": "https://de.wikipedia.org/wiki/Schwertwal"
+      }
+    },
+    {
+      "id": "tier-110",
+      "modus": "auswahl",
+      "frage": "Welcher flugunfähige Vogel ist das Nationalsymbol Neuseelands?",
+      "optionen": [
+        "Kakapo",
+        "Emu",
+        "Kea",
+        "Kiwi"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Kiwis",
+        "url": "https://de.wikipedia.org/wiki/Kiwis"
+      }
+    },
+    {
+      "id": "tier-111",
+      "modus": "auswahl",
+      "frage": "Welches dieser Tiere hat einen kurzen Rüssel, ist aber kein Elefant?",
+      "optionen": [
+        "Gürteltier",
+        "Wombat",
+        "Tapir",
+        "Erdferkel"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Tapire",
+        "url": "https://de.wikipedia.org/wiki/Tapire"
+      }
+    },
+    {
+      "id": "tier-112",
+      "modus": "auswahl",
+      "frage": "Welches Tier hat auf seiner Zunge Tausende winzige Zähnchen (Raspelzunge)?",
+      "optionen": [
+        "Hai",
+        "Weinbergschnecke",
+        "Krokodil",
+        "Delfin"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Radula",
+        "url": "https://de.wikipedia.org/wiki/Radula"
+      }
+    },
+    {
+      "id": "tier-113",
+      "modus": "auswahl",
+      "frage": "Welche ist die längste Schlange der Welt?",
+      "optionen": [
+        "Anakonda",
+        "Netzpython",
+        "Königskobra",
+        "Schwarze Mamba"
+      ],
+      "loesung": 1,
+      "quelle": {
+        "titel": "Wikipedia – Netzpython",
+        "url": "https://de.wikipedia.org/wiki/Netzpython"
+      }
+    },
+    {
+      "id": "tier-114",
+      "modus": "auswahl",
+      "frage": "Wie nennt man die Wohnhöhle eines Fuchses?",
+      "optionen": [
+        "Bau",
+        "Horst",
+        "Kobel",
+        "Suhle"
+      ],
+      "loesung": 0,
+      "erklaerung": "Ein Horst ist das Nest großer Vögel, ein Kobel das Nest des Eichhörnchens, eine Suhle ein Schlammloch.",
+      "quelle": {
+        "titel": "Wikipedia – Rotfuchs",
+        "url": "https://de.wikipedia.org/wiki/Rotfuchs"
+      }
+    },
+    {
+      "id": "tier-115",
+      "modus": "auswahl",
+      "frage": "Bei welchem Tier wird das Männchen „schwanger“ und bringt die Jungen zur Welt?",
+      "optionen": [
+        "Kaiserpinguin",
+        "Känguru",
+        "Strauß",
+        "Seepferdchen"
+      ],
+      "loesung": 3,
+      "quelle": {
+        "titel": "Wikipedia – Seepferdchen",
+        "url": "https://de.wikipedia.org/wiki/Seepferdchen"
+      }
+    },
+    {
+      "id": "tier-116",
+      "modus": "auswahl",
+      "frage": "Was für ein Tier ist ein Dingo?",
+      "optionen": [
+        "Ein Beuteltier",
+        "Eine Wildkatze",
+        "Ein Wildhund",
+        "Eine Hyäne"
+      ],
+      "loesung": 2,
+      "quelle": {
+        "titel": "Wikipedia – Dingo",
+        "url": "https://de.wikipedia.org/wiki/Dingo"
+      }
+    },
+    {
+      "id": "tier-117",
+      "modus": "schaetzen",
+      "frage": "Wie viele Arten von Nashörnern gibt es heute?",
+      "einheit": "Arten",
+      "loesung": 5,
+      "quelle": {
+        "titel": "Wikipedia – Nashörner",
+        "url": "https://de.wikipedia.org/wiki/Nash%C3%B6rner"
+      }
+    },
+    {
+      "id": "tier-118",
+      "modus": "schaetzen",
+      "frage": "Wie viele Rippenpaare hat ein Pferd?",
+      "einheit": "Paare",
+      "loesung": 18,
+      "quelle": {
+        "titel": "Wikipedia – Hauspferd",
+        "url": "https://de.wikipedia.org/wiki/Hauspferd"
+      }
+    },
+    {
+      "id": "tier-119",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zähne hat ein ausgewachsenes Hausschwein?",
+      "einheit": "Zähne",
+      "loesung": 44,
+      "quelle": {
+        "titel": "Wikipedia – Hausschwein",
+        "url": "https://de.wikipedia.org/wiki/Hausschwein"
+      }
+    },
+    {
+      "id": "tier-120",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zehen hat ein Hund an jeder Hinterpfote?",
+      "einheit": "Zehen",
+      "loesung": 4,
+      "quelle": {
+        "titel": "Wikipedia – Haushund",
+        "url": "https://de.wikipedia.org/wiki/Haushund"
+      }
+    },
+    {
+      "id": "tier-121",
+      "modus": "schaetzen",
+      "frage": "Wie viele Tage dauert die Tragzeit beim Kaninchen?",
+      "einheit": "Tage",
+      "loesung": 31,
+      "quelle": {
+        "titel": "Wikipedia – Hauskaninchen",
+        "url": "https://de.wikipedia.org/wiki/Hauskaninchen"
+      }
+    },
+    {
+      "id": "tier-122",
+      "modus": "schaetzen",
+      "frage": "Wie viele Arten von Bären gibt es heute?",
+      "einheit": "Arten",
+      "loesung": 8,
+      "quelle": {
+        "titel": "Wikipedia – Bären",
+        "url": "https://de.wikipedia.org/wiki/B%C3%A4ren"
+      }
+    },
+    {
+      "id": "tier-123",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zähne hat ein Biber?",
+      "einheit": "Zähne",
+      "loesung": 20,
+      "quelle": {
+        "titel": "Wikipedia – Europäischer Biber",
+        "url": "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Biber"
+      }
+    },
+    {
+      "id": "tier-124",
+      "modus": "schaetzen",
+      "frage": "Wie viele Zentimeter lang kann die Zunge des Großen Ameisenbären werden?",
+      "einheit": "cm",
+      "loesung": 60,
+      "quelle": {
+        "titel": "Wikipedia – Großer Ameisenbär",
+        "url": "https://de.wikipedia.org/wiki/Gro%C3%9Fer_Ameisenb%C3%A4r"
+      }
+    },
+    {
+      "id": "tier-125",
+      "modus": "schaetzen",
+      "frage": "Wie viele Beinpaare hat ein Hundertfüßer mindestens?",
+      "einheit": "Beinpaare",
+      "loesung": 15,
+      "quelle": {
+        "titel": "Wikipedia – Hundertfüßer",
+        "url": "https://de.wikipedia.org/wiki/Hundertf%C3%BC%C3%9Fer"
+      }
+    },
+    {
+      "id": "tier-126",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr starb in Polen der letzte Auerochse der Welt?",
+      "daten": {
+        "von": 1450,
+        "bis": 1750,
+        "ereignisse": [
+          {
+            "name": "Erster Druck der Gutenberg-Bibel",
+            "jahr": 1454
+          },
+          {
+            "name": "Ende des Dreißigjährigen Kriegs",
+            "jahr": 1648
+          }
+        ]
+      },
+      "loesung": 1627,
+      "quelle": {
+        "titel": "Wikipedia – Auerochse",
+        "url": "https://de.wikipedia.org/wiki/Auerochse"
+      }
+    },
+    {
+      "id": "tier-127",
+      "modus": "grafik",
+      "art": "zeitleiste",
+      "frage": "In welchem Jahr wurde das Washingtoner Artenschutzübereinkommen unterzeichnet, das den Handel mit bedrohten Tieren regelt?",
+      "daten": {
+        "von": 1920,
+        "bis": 2010,
+        "ereignisse": [
+          {
+            "name": "Erste Fußball-WM",
+            "jahr": 1930
+          },
+          {
+            "name": "Erstes iPhone",
+            "jahr": 2007
+          }
+        ]
+      },
+      "loesung": 1973,
+      "quelle": {
+        "titel": "Wikipedia – Washingtoner Artenschutzübereinkommen",
+        "url": "https://de.wikipedia.org/wiki/Washingtoner_Artenschutz%C3%BCbereinkommen"
+      }
+    },
+    {
+      "id": "tier-128",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo leben die Berggorillas in den Virunga-Vulkanen?",
+      "daten": {
+        "mitte": [
+          5,
+          20
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -1.43,
+        "lng": 29.5
+      },
+      "quelle": {
+        "titel": "Wikipedia – Virunga-Vulkane",
+        "url": "https://de.wikipedia.org/wiki/Virunga-Vulkane"
+      }
+    },
+    {
+      "id": "tier-129",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der Etosha-Nationalpark mit seiner riesigen Salzpfanne?",
+      "daten": {
+        "mitte": [
+          -5,
+          20
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": -18.86,
+        "lng": 16.33
+      },
+      "quelle": {
+        "titel": "Wikipedia – Etosha-Nationalpark",
+        "url": "https://de.wikipedia.org/wiki/Etosha-Nationalpark"
+      }
+    },
+    {
+      "id": "tier-130",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der Kaziranga-Nationalpark, in dem die meisten Panzernashörner der Welt leben?",
+      "daten": {
+        "mitte": [
+          22,
+          80
+        ],
+        "zoom": 4
+      },
+      "loesung": {
+        "lat": 26.58,
+        "lng": 93.17
+      },
+      "quelle": {
+        "titel": "Wikipedia – Kaziranga-Nationalpark",
+        "url": "https://de.wikipedia.org/wiki/Kaziranga-Nationalpark"
+      }
+    },
+    {
+      "id": "tier-131",
+      "modus": "grafik",
+      "art": "karte",
+      "frage": "Wo liegt der Yellowstone-Nationalpark mit seinen Bisons und Grizzlybären?",
+      "daten": {
+        "mitte": [
+          40,
+          -98
+        ],
+        "zoom": 3
+      },
+      "loesung": {
+        "lat": 44.6,
+        "lng": -110.5
+      },
+      "quelle": {
+        "titel": "Wikipedia – Yellowstone-Nationalpark",
+        "url": "https://de.wikipedia.org/wiki/Yellowstone-Nationalpark"
+      }
+    },
+    {
+      "id": "tier-132",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Pinguine nach ihrer Größe!",
+      "loesung": [
+        "Kaiserpinguin",
+        "Königspinguin",
+        "Eselspinguin",
+        "Zwergpinguin"
+      ],
+      "oben": "größter",
+      "unten": "kleinster",
+      "quelle": {
+        "titel": "Wikipedia – Pinguine",
+        "url": "https://de.wikipedia.org/wiki/Pinguine"
+      }
+    },
+    {
+      "id": "tier-133",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Hunderassen nach ihrer Schulterhöhe!",
+      "loesung": [
+        "Deutsche Dogge",
+        "Deutscher Schäferhund",
+        "Dackel",
+        "Chihuahua"
+      ],
+      "oben": "größte",
+      "unten": "kleinste",
+      "quelle": {
+        "titel": "Wikipedia – Deutsche Dogge",
+        "url": "https://de.wikipedia.org/wiki/Deutsche_Dogge"
+      }
+    },
+    {
+      "id": "tier-134",
+      "modus": "reihenfolge",
+      "frage": "Ordne die Wildtiere nach ihrem Gewicht!",
+      "loesung": [
+        "Elch",
+        "Rothirsch",
+        "Reh",
+        "Feldhase"
+      ],
+      "oben": "schwerstes",
+      "unten": "leichtestes",
+      "quelle": {
+        "titel": "Wikipedia – Elch",
+        "url": "https://de.wikipedia.org/wiki/Elch"
+      }
     }
   ],
   "stechfragen": [
@@ -1843,6 +2321,28 @@
       "quelle": {
         "titel": "Wikipedia – Wandertaube",
         "url": "https://de.wikipedia.org/wiki/Wandertaube"
+      }
+    },
+    {
+      "id": "tier-s09",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde der Tierpark Hellabrunn in München eröffnet?",
+      "einheit": "",
+      "loesung": 1911,
+      "quelle": {
+        "titel": "Wikipedia – Tierpark Hellabrunn",
+        "url": "https://de.wikipedia.org/wiki/Tierpark_Hellabrunn"
+      }
+    },
+    {
+      "id": "tier-s10",
+      "modus": "schaetzen",
+      "frage": "In welchem Jahr wurde die Umweltorganisation Greenpeace gegründet?",
+      "einheit": "",
+      "loesung": 1971,
+      "quelle": {
+        "titel": "Wikipedia – Greenpeace",
+        "url": "https://de.wikipedia.org/wiki/Greenpeace"
       }
     }
   ]
